@@ -7,6 +7,7 @@
   ![OpenBCI Contents](assets/images/Contents8bit.png)
 
 You should have:
+
  * OpenBCI 8-Bit Board w/Headers
  * Open BCI Programmable USB Dongle w/Headers
  * Touch Proof Electrode Adapter
@@ -16,6 +17,7 @@ You should have:
 ![Electrode Starter Kit](assets/images/electrodeStarterKit.png)
 
 If you ordered an Open BCI Electrode Starter Kit, it should come with:
+
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 4oz Jar of Ten20 Conductive Electrode Paste
 
