@@ -1,6 +1,6 @@
 # Open BCI Getting Started
 
-### 8 Bit Board
+## 8 Bit Board
 
 ### Contents
 
