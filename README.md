@@ -2,7 +2,7 @@
 
 ### Attribution
 
-This is documentation code forked for OpenBCI documentation. This code was derived using Flatdoc and ideas from Spark.io's documentation stie.  Thanks to Rico Sta. Cruz, author of Flatdoc, and  Zach and co from Spark Labs for developing this resource.
+This is code for the OpenBCI documentation application. This code was derived using Flatdoc and ideas from Spark.io's documentation stie.  Thanks to Rico Sta. Cruz, author of Flatdoc, and  Zach and co from Spark Labs for developing this resource.
 
 ### License
 
