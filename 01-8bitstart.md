@@ -2,25 +2,25 @@
 
 ## 8 Bit Board
 
-### Contents
+### 1. Contents
 
   ![OpenBCI Contents](assets/images/Contents8bit.png)
 
 You should have:
-- OpenBCI 8-Bit Board w/Headers
-- Open BCI Programmable USB Dongle w/Headers
-- Touch Proof Electrode Adapter
-- 6V AA Battery Pack (Batteries Not Included)
-- 4 Plastic Feet for Board Stabilization
+* OpenBCI 8-Bit Board w/Headers
+* Open BCI Programmable USB Dongle w/Headers
+* Touch Proof Electrode Adapter
+* 6V AA Battery Pack (Batteries Not Included)
+* 4 Plastic Feet for Board Stabilization
 
 ![Electrode Starter Kit](assets/images/electrodeStarterKit.png)
 
 If you ordered an Open BCI Electrode Starter Kit, it should come with:
-- 10 passive, gold cup electrodes on a color-coded ribbon cable
-- 4oz Jar of Ten20 Conductive Electrode Paste
+* 10 passive, gold cup electrodes on a color-coded ribbon cable
+* 4oz Jar of Ten20 Conductive Electrode Paste
 
 
-### Hardware Setup
+### 2. Hardware Setup
 
 ![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
 ![Battery Connection](assets/images/batteryConnection.png)
@@ -35,7 +35,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 5. Connect the USB Dongle to your computer
 
 
-### Software Setup
+### 3. Software Setup
 ![Processing Libaries](assets/images/processing_libraries.png)
 
 1. Download Processing
@@ -44,7 +44,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 4. Download the OpenBCI_Processing Github Repository:
 `git clone https://github.com/OpenBCI/OpenBCI_Processing.git`
 
-### Headware Setup
+### 4. Headware Setup
 ![Electrode Paste](assets/images/electrodePaste.png)
 
 1. Apply electrode paste to the 3 electrodes. Make sure to add enough paste so that it forms a convex shape on the electrode cavity, allowing for a strong seal with the skin.
@@ -52,7 +52,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 3. Connect 1 reference electrode to the earlobe
 4. Connect 1 EEG channel electrode (any location on the head from where you want to sample EEG)
 
-### Test It
+### 5. Test It
 ![Testing](assets/images/testing_screenshot.png)
 
 1. Open the file OpenBCI_GUI.pde in Processing and run the program.
