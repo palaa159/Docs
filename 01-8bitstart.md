@@ -4,7 +4,7 @@
 
 ### Contents
 
-  ![OpenBCI Contents](../assets/images/Contents8bit.png)
+  ![OpenBCI Contents](assets/images/Contents8bit.png)
 
 You should have:
 - OpenBCI 8-Bit Board w/Headers
@@ -13,7 +13,7 @@ You should have:
 - 6V AA Battery Pack (Batteries Not Included)
 - 4 Plastic Feet for Board Stabilization
 
-![Electrode Starter Kit](../assets/images/electrodeStarterKit.png)
+![Electrode Starter Kit](assets/images/electrodeStarterKit.png)
 
 If you ordered an Open BCI Electrode Starter Kit, it should come with:
 - 10 passive, gold cup electrodes on a color-coded ribbon cable
@@ -22,11 +22,11 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 
 ### Hardware Setup
 
-![Plastic Feet](../assets/images/8bitboard_wPlasticFeet.png)
-![Battery Connection](../assets/images/batteryConnection.png)
-![Pin Connections](../assets/images/PinConnections.png)
-![Dongle Connection](../assets/images/dongleConnection.png)
-![Test Setup](../assets/images/TestSetup.png)
+![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
+![Battery Connection](assets/images/batteryConnection.png)
+![Pin Connections](assets/images/PinConnections.png)
+![Dongle Connection](assets/images/dongleConnection.png)
+![Test Setup](assets/images/TestSetup.png)
 
 1. Attach the 4 plastic feet to your OpenBCI board
 2. Buy 4 AA batteries and put them in your battery pack
@@ -36,7 +36,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 
 
 ### Software Setup
-![Processing Libaries](../assets/images/processing_libraries.png)
+![Processing Libaries](assets/images/processing_libraries.png)
 
 1. Download Processing
 2. Download GWOptics and ControlP5 Libraries
@@ -45,7 +45,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 `git clone https://github.com/OpenBCI/OpenBCI_Processing.git`
 
 ### Headware Setup
-![Electrode Paste](../assets/images/electrodePaste.png)
+![Electrode Paste](assets/images/electrodePaste.png)
 
 1. Apply electrode paste to the 3 electrodes. Make sure to add enough paste so that it forms a convex shape on the electrode cavity, allowing for a strong seal with the skin.
 2. Connect 1 ground electrode (typically to the mastoid behind the ear)
@@ -53,7 +53,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 4. Connect 1 EEG channel electrode (any location on the head from where you want to sample EEG)
 
 ### Test It
-![Testing](../assets/images/testing_screenshot.png)
+![Testing](assets/images/testing_screenshot.png)
 
 1. Open the file OpenBCI_GUI.pde in Processing and run the program.
 2. Select your serial/COM port in the left hand menu and click Initialize System.
