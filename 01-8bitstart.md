@@ -1,4 +1,4 @@
-# Open BCI Getting Started
+# OpenBCI Getting Started
 
 ## 8 Bit Board
 
