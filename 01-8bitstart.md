@@ -1,6 +1,6 @@
 # OpenBCI Getting Started
 
-## 8 Bit Board
+## 8Bit Board
 
 ### 1. Contents
 
