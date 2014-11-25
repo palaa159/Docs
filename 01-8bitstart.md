@@ -25,7 +25,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 ### 2. Hardware Setup
 ![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
 
-1. Attach the 4 plastic feet to your OpenBCI board
+1. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
 
 ![Battery Connection](assets/images/batteryConnection.png)
 
