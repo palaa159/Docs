@@ -25,23 +25,23 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
 ### 2. Hardware Setup
 ![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
 
-1. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
+ 1. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
 
 ![Battery Connection](assets/images/batteryConnection.png)
 
-2. Buy 4 AA batteries and put them in your battery pack
+ 2. Buy 4 AA batteries and put them in your battery pack
 
 ![Pin Connections](assets/images/PinConnections.png)
 
-3. Connnect the battery pack to the OpenBCI board
+ 3. Connnect the battery pack to the OpenBCI board
 
 ![Dongle Connection](assets/images/dongleConnection.png)
 
-4. Connect your electrodes to the OpenBCI board: Black->BIAS; White->SRB; Gray->N1P
+ 4. Connect your electrodes to the OpenBCI board: Black->BIAS; White->SRB; Gray->N1P
 
 ![Test Setup](assets/images/TestSetup.png)
 
-5. Connect the USB Dongle to your computer
+ 5. Connect the USB Dongle to your computer
 
 ### 3. Software Setup
 ![Processing Libaries](assets/images/processing_libraries.png)
