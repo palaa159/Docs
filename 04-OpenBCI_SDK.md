@@ -6,11 +6,11 @@ The OpenBCI boards communicate using an ASCII command protocol. This Doc covers 
 OpenBCI boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (ATmega328P or PIC32MX250F128B) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer) and RFduino (Radio module). The user, or PC, controls the board by sending ASCII character commands over wireless serial connection. You should have received a Dongle with the OpenBCI 8bit board. The Dongle has an RFduino running Gazelle configured as a HOST, and interfaces your computer as a Virtual Com Port (FTDI). (See the Radios portion for more info on the RFduino link).
 On startup, the OpenBCI board sends the following text over the radio:
 
-    OpenBCI V3 8bit Board
-    Setting ADS1299 Channel Values
-    ADS1299 Device ID: 0x3E
-    LIS3DH Device ID: 0x33
-    $$$
+	OpenBCI V3 8bit Board
+	Setting ADS1299 Channel Values
+	ADS1299 Device ID: 0x3E
+	LIS3DH Device ID: 0x33
+	$$$
 
 Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling PC that the message is complete and the OpenBCI board is ready to receive commands.
 
@@ -25,7 +25,7 @@ These ASCII characters turn the respective channels [1-8] on. The channel will c
 
 ###Test Signal Control Commands  
 **0 - = p [ ]**  
-Turn *all* channels on and connect to internal test signal. These are useful for self test and calibration. For example, you can measure the internal noise by connecting to internal GND. **Note: Not all of the internal test connections are implemented here **
+Turn **all** available channels on and connect to internal test signal. These are useful for self test and calibration. For example, you can measure the internal noise by connecting to internal GND. **Note: Not all of the internal test connections are implemented here **
  
 * **0**  Connect to internal GND (VDD - VSS)  
 * **-**  Connect to test signal 1xAmplitude, slow pulse  
@@ -39,7 +39,7 @@ Turn *all* channels on and connect to internal test signal. These are useful for
 ** x (CHANNEL, POWER_DOWN, GAIN_SET, INPUT_TYPE_SET, BIAS_SET, SRB2_SET, SRB1_SET) X **  
 Channel Settings commands have six parameters for each ADS channel. To access Channel Settings, first send **x**. Now the OpenBCI board is expecting the next 7 bytes to be channel settings specific commands. The first byte is the channel number. (If you have the Daisy Module, you can select up to 16 channels to set). The following six ASCII characters are accepted as parameters. Lastly, sending **X** will latch the settings to the ADS channel. It is required that you allow a time delay (>10mS)when sending the commands and parameters in order for the radios to pass the characters through with the correct OpenBCI protocol.
 
-**CHANNEL:**
+**CHANNEL**
 
 * **1 2 3 4 5 6 7 8**  for single board channel select
 * **Q W E R T Y U I**  for selecting channels on the Daisy Module
@@ -95,13 +95,13 @@ Select to connect all channels' N inputs to SRB1. This effects all pins, and dis
 
 User sends **x  3  0  2  0  0  0  0  X** 
 
-'x' enters Channel Settings mode. Channel 3 is set up to be enabled, with gain of 2, normal input, removed from BIAS generation, removed from SRB2, removed from SRB1. The final 'X' latches the settings to the ADS1299 channel settings register.
+'x' enters Channel Settings mode. Channel 3 is set up to be powered up, with gain of 2, normal input, removed from BIAS generation, removed from SRB2, removed from SRB1. The final 'X' latches the settings to the ADS1299 channel settings register.
 
 ###Default Channel Settings
 **d** To set all channels to default  
 **D** To get a report of the default settings send.
 
-When you query the default settings, expect to get 6 ASCII characters followed by **$$$**  
+When you query the default settings, expect to get 6 ASCII characters followed by **$$$**  *Note: Users can change the default channel settings in the initialization function inside the OpenBCI library. Requires re-programming the board*
 
 ###LeadOff Impedance Commands  
 **z (CHANNEL, PCHAN, NCHAN) Z**  
