@@ -43,15 +43,15 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 ### OpenBCI 8bit Board Circuit Schematic
 
-![OpenBCI 8bit Schematic](assets/images/OBCI_V3_8bit - Schematic.pdf)
+![OpenBCI 8bit Schematic](assets/images/OBCI_V3_8bit-Schematic.jpg)
 
 
 ### 8bit Board PCB Layer Images
 
-![8bit PCB LayerTOP](assets/images/OBCI_8bit_layerTop.pdf)
-![8bit PCB Layer2](assets/images/OBCI_8bit_layerTwo.pdf)
-![8bit PCB Layer3](assets/images/OBCI_8bit_layerThree.pdf)
-![8bit PCB LayerBOTTOM](assets/images/OBCI_8bit_layerBottom_noMirror.pdf)
+![8bit PCB LayerTOP](assets/images/OBCI_8bit_layerTop.jpg)
+![8bit PCB Layer2](assets/images/OBCI_8bit_layerTwo.jpg)
+![8bit PCB Layer3](assets/images/OBCI_8bit_layerThree.jpg)
+![8bit PCB LayerBOTTOM](assets/images/OBCI_8bit_layerBottom_noMirror.jpg)
 
 
 
@@ -104,15 +104,15 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 ### OpenBCI 32bit Board Circuit Schematic
 
-![OpenBCI 32bit Schematic](assets/images/OBCI_V3_32bit - Schematic.pdf)
+![OpenBCI 32bit Schematic](assets/images/OBCI_V3_32bit-Schematic.jpg)
 
 
 ### 32 bit Board PCB Layer Images
 
-![32bit LayerTop](assets/images/OBCI_32bit_layerTop.pdf)
-![32bit Layer2](assets/images/OBCI_32bit_layerTwo.pdf)
-![32bit Layer3](assets/images/OBCI_32bit_layerThree.pdf)
-![32bit LayerBottom](assets/images/OBCI_32bit_layerBottom_noMirror.pdf)
+![32bit LayerTop](assets/images/OBCI_32bit_layerTop.jpg)
+![32bit Layer2](assets/images/OBCI_32bit_layerTwo.jpg)
+![32bit Layer3](assets/images/OBCI_32bit_layerThree.jpg)
+![32bit LayerBottom](assets/images/OBCI_32bit_layerBottom_noMirror.jpg)
 
 
 
@@ -135,13 +135,13 @@ RFduio pins are broken out in the same order and layout as the RFduino radio and
 The slide switch on the Dongle has two positions (noted on the bottom silkscreen). When the switch is on the GPIO6 side, the FTDI DTR pin is routed to RFduino pin 6 and ready to pass data to-from the OpenBCI board. This configuration is 'normal' mode, and also allows for programming the OpenBCI board over air. When the switch is on the RESET side, the FTDI DTR pin is routed to the RFduino RESET pin. This mode allows for re-programming the RFduino on the Dongle. 
 ### OpenBCI Dongle Circuit Schematic
 
-![OpenBCI Dongle Schematic](assets/images/OBCI_DONGLE - Schematic.pdf)
+![OpenBCI Dongle Schematic](assets/images/OBCI_DONGLE-Schematic.jpg)
 
 
 ### Dongle PCB Layer Images
 
-![Dongle LayerTop](assets/images/OBCI_DONGLE_layerTop.pdf)
-![Dongle LayerBottom](assets/images/OBCI_DONGLE_layerBottom.pdf)
+![Dongle LayerTop](assets/images/OBCI_DONGLE_layerTop.jpg)
+![Dongle LayerBottom](assets/images/OBCI_DONGLE_layerBottom.jpg)
 
 
 
@@ -165,11 +165,11 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
  	
 The OpenBCI Daisy Module should be used as an expansion card for the OpenBCI Board ONLY. Daisy Modyle requires an external clock signal (2.048MHz) to be applied to the CLK pin.
 ###OpenBCI Daisy Module Circuit Schematic
-![OpenBCI Dongle Schematic](assets/images/OBCI_V3_Daisy - Schematic.pdf)
+![OpenBCI Dongle Schematic](assets/images/OBCI_V3_Daisy-Schematic.jpg)
 ###Daisy Module PCB Layer Images
-![Daisy LayerTop](assets/images/OBCI_DaisyModule_layerTop.pdf)
-![Daisy Layer2](assets/images/OBCI_DaisyModule_layerTwo.pdf)
-![Daisy Layer3](assets/images/OBCI_DaisyModule_layerThree.pdf)
-![Daisy LayerBottom](assets/images/OBCI_DaisyModule_layerBottom_noMirror.pdf)
+![Daisy LayerTop](assets/images/OBCI_DaisyModule_layerTop.jpg)
+![Daisy Layer2](assets/images/OBCI_DaisyModule_layerTwo.jpg)
+![Daisy Layer3](assets/images/OBCI_DaisyModule_layerThree.jpg)
+![Daisy LayerBottom](assets/images/OBCI_DaisyModule_layerBottom_noMirror.jpg)
 ###Daisy Module PCB Files
 [OpenBCI Daisy Module gerber & BOM (532K zip)](http://ultracortex.com/downloads/hardware/OpenBCI_DaisyModule.zip)
