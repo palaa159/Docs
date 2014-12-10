@@ -48,10 +48,10 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 ### 8bit Board PCB Layer Images
 
-![Processing Libaries](assets/images/OBCI_8bit_layerTop.pdf)
-![Processing Libaries](assets/images/OBCI_8bit_layerTwo.pdf)
-![Processing Libaries](assets/images/OBCI_8bit_layerThree.pdf)
-![Processing Libaries](assets/images/OBCI_8bit_layerBottom_noMirror.pdf)
+![8bit PCB LayerTOP](assets/images/OBCI_8bit_layerTop.pdf)
+![8bit PCB Layer2](assets/images/OBCI_8bit_layerTwo.pdf)
+![8bit PCB Layer3](assets/images/OBCI_8bit_layerThree.pdf)
+![8bit PCB LayerBOTTOM](assets/images/OBCI_8bit_layerBottom_noMirror.pdf)
 
 
 
