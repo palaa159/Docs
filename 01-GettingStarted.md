@@ -1,33 +1,54 @@
-# OpenBCI Getting Started
+# Getting Started w/ OpenBCI
 
-## 8Bit Board
+## I. What You Need
 
-### 1. Contents
+![OpenBCI Contents](assets/images/Contents8bit.png)
 
-  ![OpenBCI Contents](assets/images/Contents8bit.png)
+ 1. OpenBCI board
+ 2. OpenBCI Dongle
+ 3. OpenBCI Electrode Starter Kit (ESK) or your own electrodes
+ 4. 6V AA battery pack & (x4) AA batteries (batteries not included)
+ 5. (x4) plastic feet for board stabilization
 
-You should have:
+### 1. Your Board
 
- * OpenBCI 8-Bit Board w/Headers
- * Open BCI Programmable USB Dongle w/Headers
- * Touch Proof Electrode Adapter
- * 6V AA Battery Pack (Batteries Not Included)
- * 4 Plastic Feet for Board Stabilization
+![OpenBCI Contents](assets/images/8.jpg)
+
+This tutorial can be followed if you are working with any OpenBCI board (8bit, 32bit, or 32bit with Daisy). I'll be working with the 8bit board.
+
+### 2. Your OpenBCI USB Dongle
+
+![OpenBCI Contents](assets/images/dongle.png)
+
+The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial (if you're working on a MAC) or COM (if you're on PC or Linux) connection with your computer with its on-board FTDI chip. You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
+
+### 3. Your Electrode Starter Kit (ESK)
 
 ![Electrode Starter Kit](assets/images/electrodeStarterKit.png)
 
 If you ordered an Open BCI Electrode Starter Kit, it should come with:
 
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
- * 4oz Jar of Ten20 Conductive Electrode Paste
+ * 4oz Jar of Ten20 conductive electrode paste
+ 
+If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into OpenBCI!
 
+### 4. Your 6V AA Battery Pack & 4 AA Batteries
 
-### 2. Hardware Setup
+![Battery Connection](assets/images/batteryConnection.png)
+
+Both the 8bit board and the 32 bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit.
+
+### 5. (x4) Plastic Feet
+
 ![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
+
+### II. Hardware Setup
+
 
 a. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
 
-![Battery Connection](assets/images/batteryConnection.png)
+
 
 b. Buy 4 AA batteries and put them in your battery pack
 
