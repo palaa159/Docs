@@ -50,6 +50,13 @@ Your OpenBCI kit comes with 4 plastic feet that can be snapped into the wholes o
 
 ## II. Download & Install the OpenBCI GUI
 
+### Download OpenBCI GUI App or run it from Processing
+
+![Plastic Feet](assets/images/GUI.jpg)
+
+From the links below or from our [downloads page], get the latest version of the OpenBCI GUI]. There are versions for Mac OS X, Win32, Win64, Linux32, and Linux64. If you’re having issues installing or launching the app, check out (or start) the Forum section on this.
+
+You can also launch the application (and check out all of the code that makes it work) from the Processing IDE. The latest version of the code is always kept in our Github [OpenBCI_Processing] repository. You can also check out other branches of the code, where we’ll be trying out new features. For more information on working with the code, check out the [Up & Running w/ The OpenBCI GUI] docs page.
 
 
 
