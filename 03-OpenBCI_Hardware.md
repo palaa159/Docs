@@ -128,12 +128,12 @@ Swtiching either BLE or PC will produce the same result. The option is available
 ##OpenBCI DONGLE
 
 ###Dongle Specs
+![OpenBCI Dongle](assets/images/OBCI_Dongle.jpg)
+
 * Power via USB connector ONLY
 * RFduino BLE radio module
 * FTDI USB<>Serial IC (FT231XQ-R)
 * Resettable fuse
-
-![OpenBCI Dongle](assets/images/OBCI_Dongle.jpg)
 
 ###Breakout Pins
 RFduio pins are broken out in the same order and layout as the RFduino radio and shields. The TXD (red) and RXD (greed) LEDs are connected to outputs from the FTDI chip. The blue LED is connected to RFduino GPIO2.
@@ -157,10 +157,10 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
 ##OpenBCI Daisy Module
 ###Daisy Module Specs:
 
+  ![Daisy Module](assets/images/OBCI_Daisy_Top.jpg)
+  
  * Power via pass-thru from OpenBCI Board pins ONLY
  * ADS1299 Analog Front End 
-
-  ![Daisy Module](assets/images/OBCI_Daisy_Top.jpg)
 
 ###Breakout pins:
  
