@@ -31,6 +31,8 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 4oz Jar of Ten20 conductive electrode paste
  
+![Electrode Starter Kit](assets/images/touch_proof.jpg)
+ 
 If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into OpenBCI!
 
 ### 4. Your 6V AA Battery Pack & 4 AA Batteries
@@ -43,7 +45,25 @@ Both the 8bit board and the 32 bit boards have specific input voltage ranges. Th
 
 ![Plastic Feet](assets/images/8bitboard_wPlasticFeet.png)
 
-### II. Hardware Setup
+Your OpenBCI kit comes with (x4) plastic feet that can be snapped into the wholes of your board to provide extra stability while you are working.
+
+<br>
+
+## II. Download & Install the OpenBCI GUI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
