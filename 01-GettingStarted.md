@@ -1,8 +1,8 @@
 # Getting Started w/ OpenBCI
 
-## I. What You Need
-
 ![OpenBCI Contents](assets/images/Contents8bit.png)
+
+## I. What You Need
 
  1. OpenBCI board
  2. OpenBCI Dongle
@@ -10,21 +10,21 @@
  4. 6V AA battery pack & (x4) AA batteries (batteries not included)
  5. (x4) plastic feet for board stabilization
 
-### 1. Your Board
-
 ![OpenBCI Contents](assets/images/8.jpg)
+
+### 1. Your Board
 
 This tutorial can be followed if you are working with any OpenBCI board (8bit, 32bit, or 32bit with Daisy). I'll be working with the 8bit board.
 
-### 2. Your OpenBCI USB Dongle
-
 ![OpenBCI Contents](assets/images/dongle.png)
+
+### 2. Your OpenBCI USB Dongle
 
 The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial (if you're working on a MAC) or COM (if you're on PC or Linux) connection with your computer with its on-board FTDI chip. You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
 
-### 3. Your Electrode Starter Kit (ESK)
-
 ![Electrode Starter Kit](assets/images/electrodeStarterKit.png)
+
+### 3. Your Electrode Starter Kit (ESK)
 
 If you ordered an Open BCI Electrode Starter Kit, it should come with:
 
@@ -35,9 +35,9 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
  
 If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into OpenBCI!
 
-### 4. Your 6V AA Battery Pack & 4 AA Batteries
-
 ![Battery Connection](assets/images/batteryConnection.png)
+
+### 4. Your 6V AA Battery Pack & 4 AA Batteries
 
 Both the 8bit board and the 32 bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit.
 
