@@ -156,7 +156,7 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
  * Power via pass-thru from OpenBCI Board pins ONLY
  * ADS1299 Analog Front End 
 
-  ![Daisy Module](assets/images/OBCI_Daisy_top.jpg)
+  ![Daisy Module](assets/images/OBCI_Daisy_Top.jpg)
 
 ###Breakout pins:
  
