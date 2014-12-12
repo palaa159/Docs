@@ -13,9 +13,7 @@
  * SN74LVCC3245A Level Shifter
  * Board Dimensions 2.41" x 2.41" (octogon has 1" edges)
  * Mount holes are 1/16" ID, 0.8" x 2.166" on center
-
-  ![OpenBCI 8bit top](assets/images/OBCI_8bit_top.jpg)
-  ![OpenBCI 8bit bottom](assets/images/OBCI_8bit_bottom.jpg)
+ 
 
 ###Breakout pins:
  
@@ -76,10 +74,7 @@ Swtiching either BLE or PC will produce the same result. The option is available
  * Voltage Regulation (3V3, +2.5V, -2.5V)
  * Board Dimensions 2.41" x 2.41" (octogon has 1" edges)
  * Mount holes are 1/16" ID, 0.8" x 2.166" on center
-
-  ![OpenBCI 32bit top](assets/images/OBCI_32bit_top.jpg)
-  ![OpenBCI 32bit bottom](assets/images/OBCI_32bit_bottom.jpg)
-
+ 
 ###Breakout pins:
  
  * Program pins for bootloading PIC 
@@ -128,7 +123,6 @@ Swtiching either BLE or PC will produce the same result. The option is available
 ##OpenBCI DONGLE
 
 ###Dongle Specs
-![OpenBCI Dongle](assets/images/OBCI_Dongle.jpg)
 
 * Power via USB connector ONLY
 * RFduino BLE radio module
@@ -157,7 +151,6 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
 ##OpenBCI Daisy Module
 ###Daisy Module Specs:
 
-  ![Daisy Module](assets/images/OBCI_Daisy_Top.jpg)
   
  * Power via pass-thru from OpenBCI Board pins ONLY
  * ADS1299 Analog Front End 
