@@ -32,7 +32,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 4oz Jar of Ten20 conductive electrode paste
  
-![touch-proof adapter](assets/images/touch_proof.jpg)
+![TouchProof Adapter](assets/images/touch_proof.jpg)
  
 If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into OpenBCI!
 
