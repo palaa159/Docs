@@ -13,13 +13,13 @@
 
 ### 1. Your Board
 
-![OpenBCI Contents](assets/images/8.jpg)
+![OpenBCI 8bit Top](assets/images/8.jpg)
 
 This tutorial can be followed if you are working with any OpenBCI board (8bit, 32bit, or 32bit with Daisy). I'll be working with the 8bit board.
 
 ### 2. Your OpenBCI USB Dongle
 
-![OpenBCI Contents](assets/images/dongle.png)
+![OpenBCI Dongle](assets/images/dongle.png)
 
 The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial (if you're working on a MAC) or COM (if you're on PC or Linux) connection with your computer with its on-board FTDI chip. You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
 
@@ -32,7 +32,7 @@ If you ordered an Open BCI Electrode Starter Kit, it should come with:
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 4oz Jar of Ten20 conductive electrode paste
  
-![Electrode Starter Kit](assets/images/touch_proof.jpg)
+![touch-proof adapter](assets/images/touch_proof.jpg)
  
 If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into OpenBCI!
 
@@ -52,11 +52,13 @@ Your OpenBCI kit comes with 4 plastic feet that can be snapped into the wholes o
 
 ### Download the OpenBCI GUI App or run it from Processing
 
-![Plastic Feet](assets/images/GUI.jpg)
+![OpenBCI GUI](assets/images/GUI.jpg)
 
 From the links below or from our [downloads page], get the latest version of the OpenBCI GUI]. There are versions for [Mac OS X](http://ultracortex.com/downloads/application.macosx.zip), [Win32](http://ultracortex.com/downloads/application.windows32.zip), [Win64](http://ultracortex.com/downloads/application.windows64.zip), [Linux32](http://ultracortex.com/downloads/application.linux32.zip), and [Linux64](http://ultracortex.com/downloads/application.linux64.zip). If you’re having issues installing or launching the app, check out (or start) the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
 
-You can also launch the application (and check out all of the code that makes it work) from the Processing IDE. The latest version of the code is always kept in our Github [OpenBCI_Processing] repository. You can also check out other branches of the code, where we’ll be trying out new features. For more information on working with the code, check out the [Up & Running w/ The OpenBCI GUI] docs page.
+![Processing IDE](assets/images/Processing.png)
+
+You can also launch the application (and check out all of the code that makes it work) from the [Processing IDE](https://processing.org/). The latest version of the code is always kept in our [OpenBCI_Processing](https://github.com/OpenBCI/OpenBCI_Processing) Github repo. You can also check out other branches of the code, where we’ll be trying out new features. For more information on working with the code, check out the [Up & Running w/ The OpenBCI GUI](http://docs.openbci.com/03-OpenBCI_GUI) docs page.
 
 
 
