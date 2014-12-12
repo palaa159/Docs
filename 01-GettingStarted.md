@@ -75,16 +75,40 @@ b. Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START 
 
 ![Start Data Stream](assets/images/StartDataStream.png)
 
-c. Click the dark overlay on top of the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
+c. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
-## III. Make sure your FTDI drivers are installed and up-to-date
+## III. Prepare your OpenBCI Hardware!
+
+
+### 1. Make sure your FTDI drivers are installed and up-to-date
 
 ![FTDI Install](assets/images/FTDI.png)
 
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
 
-### 1. Connect to your hardware from the OpenBCI GUI
+### 2. Plug in your OpenBCI USB Dongle
 
+![Dongle Connection](assets/images/dongleConnection.png)
+
+Plug this in (facing upwards!) and you should see a blue LED light up.
+
+**Note:** make sure your USB Dongle is switched to GPIO 6 and not RESET. The switch should be set closer to your computer as seen in the picture to the right.
+
+### 3. Plug in your 6V AA batter pack (with batteries)
+
+![Battery Connection](assets/images/batteryConnection.png)
+
+Both the 8bit board and the 32 bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit. There's a good reason we put this notice in here twice!
+
+### 4. Switch your OpenBCI board to PC (not OFF or BLE)
+
+![Power Up Board](assets/images/PowerUpBoard.JPG)
+
+Make sure to move the small switch on the right side of the board from "OFF" to "PC". As soon as you do, you should see a blue LED blink 3 times. You don't press the reset button just to the left of the switch. If the LED still does not blink 3 times, make sure you have full battery. If you're sure your batteries are fully charged, consult the [hardware section](http://openbci.com/index.php/forum#/categories/hardware) of our Forum.
+
+**Note:** it's important to plug in your Dongle before you turn on your OpenBCI board. Sometimes, if the data stream seems broken, you may need to unplug your USB Dongle and power down your OpenBCI board. Make sure to plug your USB Dongle in first, then power up your board afterwards.
+
+## IV. Connect to your OpenBCI board from the GUI
 
 
 
@@ -106,7 +130,7 @@ b. Buy 4 AA batteries and put them in your battery pack
 
 c. Connnect the battery pack to the OpenBCI board
 
-![Dongle Connection](assets/images/dongleConnection.png)
+
 
 d. Connect your electrodes to the OpenBCI board: Black->BIAS; White->SRB; Gray->N1P
 
