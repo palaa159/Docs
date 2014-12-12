@@ -69,7 +69,13 @@ You can also launch the application (and check out all of the code that makes it
 
 Double-click the **OpenBCI_GUI app** icon (or run the .exe file if you're on Windows) and the GUI should launch without any issues. If you're encountering an error here, please refer to the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
 
+## III. Make sure your FTDI drivers are installed and up-to-date
 
+![FTDI Install](assets/images/FTDI.png)
+
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers [here](http://www.ftdichip.com/Drivers/VCP.htm).
+
+### 1. Download the OpenBCI GUI App
 
 
 
