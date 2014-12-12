@@ -139,7 +139,7 @@ Make sure to move the small switch on the right side of the board from "OFF" to 
 
 
 
-# ------- CRUDE BELOW THIS POINT ---------
+# -- CRUDE BELOW THIS POINT --
 
 
 
