@@ -67,15 +67,25 @@ You can also launch the application (and check out all of the code that makes it
 
 ![Launch GUI](assets/images/LaunchGUI.png)
 
-Double-click the **OpenBCI_GUI app** icon (or run the .exe file if you're on Windows) and the GUI should launch without any issues. If you're encountering an error here, please refer to the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
+a. Double-click the **OpenBCI_GUI app** icon (or run the .exe file if you're on Windows) and the GUI should launch without any issues. If you're encountering an error here, please refer to the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
+
+![Synthetic](assets/images/Synthetic.png)
+
+b. Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator.
+
+![Start Data Stream](assets/images/StartDataStream.png)
+
+c. Click the dark overlay on top of the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
 ## III. Make sure your FTDI drivers are installed and up-to-date
 
 ![FTDI Install](assets/images/FTDI.png)
 
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers [here](http://www.ftdichip.com/Drivers/VCP.htm).
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
 
-### 1. Download the OpenBCI GUI App
+### 1. Connect to your hardware from the OpenBCI GUI
+
+
 
 
 
