@@ -50,11 +50,13 @@ Your OpenBCI kit comes with 4 plastic feet that can be snapped into the wholes o
 
 ## II. Download & Install the OpenBCI GUI
 
-### Download the OpenBCI GUI App or run it from Processing
+### 1. Download the OpenBCI GUI App
 
 ![OpenBCI GUI](assets/images/GUI.jpg)
 
 From the links below or from our [downloads page], get the latest version of the OpenBCI GUI]. There are versions for [Mac OS X](http://ultracortex.com/downloads/application.macosx.zip), [Win32](http://ultracortex.com/downloads/application.windows32.zip), [Win64](http://ultracortex.com/downloads/application.windows64.zip), [Linux32](http://ultracortex.com/downloads/application.linux32.zip), and [Linux64](http://ultracortex.com/downloads/application.linux64.zip). If you’re having issues installing or launching the app, check out (or start) the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
+
+###. Or run it from Processing (for developers)
 
 ![Processing IDE](assets/images/Processing.png)
 
