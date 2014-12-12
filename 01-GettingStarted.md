@@ -77,7 +77,7 @@ b. Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START 
 
 c. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
-## III. Prepare your OpenBCI Hardware!
+## III. Prepare your OpenBCI Hardware
 
 
 ### 1. Make sure your FTDI drivers are installed and up-to-date
@@ -110,10 +110,36 @@ Make sure to move the small switch on the right side of the board from "OFF" to 
 
 ## IV. Connect to your OpenBCI board from the GUI
 
+### 1. Relaunch your OpenBCI GUI
+
+### 2. Select LIVE (from OpenBCI)
+
+### 3. Find your USB Dongle's Serial/COM port 
+
+### 4.(optional) Edit the Playback file name
+
+### 5 Select your channel count (8 or 16)
+
+### 6. Select your SD setting
+
+### 7. Press "START SYSTEM"
+
+## V. Connect yourself to OpenBCI
+
+### 1. asdf
+
+### 2. asdf
+
+### 3. asdf
 
 
 
 
+
+
+
+
+# ------- CRUDE BELOW THIS POINT ---------
 
 
 
