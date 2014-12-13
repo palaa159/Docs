@@ -106,4 +106,4 @@ Note that 2^23 might be an unexpected term in this equation considering that the
 * Bytes 29-30: Data value for accelerometer channel Y  
 * Bytes 31-32: Data value for accelerometer channel Z 
 
-Our Host code removes the Packet Counter and adds the header and footer. This could be modified to meet other protocol specs for other signal processing software. 
+Our Host code removes the Packet Counter and adds the header and footer. It could be modified to work natively with other protocol specs for other signal processing software....
