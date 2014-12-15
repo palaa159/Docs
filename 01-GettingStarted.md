@@ -112,11 +112,51 @@ Make sure to move the small switch on the right side of the board from "OFF" to 
 
 ### 1. Relaunch your OpenBCI GUI
 
+You may need to relaunch the OpenBCI GUI after installing the FTDI drivers.
+
 ### 2. Select LIVE (from OpenBCI)
+
+![Select Live](assets/images/selectLIVE.png)
+
+In order to connect to your OpenBCI, you must specify the data source to be "LIVE (from OpenBCI)" in the first section of the SYSTEM CONTROL PANEL. Before hitting the START SYSTEM button, you need to configure your OpenBCI board (follow the steps below).
 
 ### 3. Find your USB Dongle's Serial/COM port 
 
+![Select Serial](assets/images/selectSerial.png)
+
+In the first section of the LIVE (from OpenBCI) sub-panel, find your Dongle's Serial/COM port name. If you're using a MAC, it's name will be in the following format:
+
+**/dev/tty.usbserial-DNxxxxxx**
+
+If you're using Windows or Linux, it will appear as:
+
+**COM#**
+
+Your USB Dongle's port name will likely be at the top of the list. If you don't see it:
+
+1) Make sure your dongle is plugged in and switched to GPIO 6 (not RESET)
+2) Click the REFRESH LIST button in the SERIAL/COM PORT section of the sub-panel
+3) Make sure you've installed the latest FTDI drivers, as described in section III.1
+
+If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum#/categories/hardware) about debugging your hardware connection.
+
 ### 4.(optional) Edit the Playback file name
+
+![Select Serial](assets/images/fileName.png)
+
+In the DATA LOG FIlE section of the LIVE (from OpenBCI) sub-panel you can specify the name of your playback file. This file name is automatically defaulted to:
+
+**SavedData\OpenBCI-RAW- + date/time**
+
+You can edit the the name of this file by clicking in the "File Name" text field.
+
+If you're running the OpenBCI GUI from Processing. This file will be saved at the root of your OpenBCI_GUI directory. 
+
+If you're running the OpenBCI GUI as a standalone application, this file will be saved in /Contents/Java/Data/EEG_Data/
+
+If working from a Mac, you'll need to right-click on the OpenBCI_GUI application and then select "show package contents" to see the /Contents directory where your playback files are saved.
+
+After creating a Playback file, it can be replayed by running the OpenBCI GUI with the Plaback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
 ### 5 Select your channel count (8 or 16)
 
