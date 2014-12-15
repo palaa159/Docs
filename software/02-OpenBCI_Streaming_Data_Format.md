@@ -1,4 +1,4 @@
-### OpenBCI V3 Data Format
+# OpenBCI V3 Data Format
 
 This discussion of the OpenBCI data format only applies to OpenBCI V3 (2014). For OpenBCI V3, the OpenBCI board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE and Microchip's MPIDE, respectively. The OpenBCI board also contains an RFDuino acting as a "Device". The OpenBCI system also includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
 
