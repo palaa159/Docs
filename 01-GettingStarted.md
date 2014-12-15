@@ -189,15 +189,24 @@ If the initialization fails, try the following steps in order:
 1. Making sure you've selected the correct serial/COM port
 2. Power down your OpenBCI board and unplug your USB Dongle. Then, plug back in your USB Dongle and power up your OpenBCI board in that order. Then try restarting the system, but pressing the START SYSTEM button again.
 3. If this does not work, try relaunching the OpenBCI GUI application and redo step 2 above. Then reconfigure the SYSTEM CONTROL PANEL settings, and retry START SYSTEM.
-4. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
+4. Make sure that your batteries are fully charged and then retry the steps above.
+5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
 
 ### 8. Your OpenBCI is now live!
+
+![Start Stream](assets/images/startStream.png)
 
 Once the GUI successfully connects to your OpenBCI Board, click anywhere outside of the SYSTEM CONTROL PANEL to access the rest of the features of the GUI.
 
 You can now press the bright green Start Data Stream button (located at the top middle of the GUI) to begin streaming live data from your OpenBCI board.
 
-To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the bottom of your board. You should see the channels 8-16 channels on the EEG DATA montage behave chaotically in response to you touching the pins.
+![Touch](assets/images/touch.JPG)
+
+To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the bottom of your board. 
+
+![Chaos](assets/images/chaos.png)
+
+You should see the channels 8-16 channels on the EEG DATA montage behave chaotically in response to you touching the pins. The headplot on the right side of the GUI should become fully saturated (turning bright red) when you do this.
 
 ## V. Connect yourself to OpenBCI
 
