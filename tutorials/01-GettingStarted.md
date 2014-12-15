@@ -1,5 +1,6 @@
 # Getting Started w/ OpenBCI
 
+
 ## I. What You Need
 
 ![OpenBCI Contents](../assets/images/Contents8bit.png)
@@ -201,25 +202,89 @@ You can now press the bright green Start Data Stream button (located at the top 
 
 ![Touch](../assets/images/touch.JPG)
 
-To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the bottom of your board. 
+To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the top of your board. 
 
 ![Chaos](../assets/images/chaos.png)
 
-You should see the channels 8-16 channels on the EEG DATA montage behave chaotically in response to you touching the pins. The headplot on the right side of the GUI should become fully saturated (turning bright red) when you do this.
+You should see the 8 (or 16 if you're using a Daisy module) channels on the EEG DATA montage behave chaotically in response to you touching the pins. The headplot on the right side of the GUI should become fully saturated (turning bright red) when you do this. And all the tracess of the FFT graph on the lower right should instantly shift upwards.
 
-Congratulations, you are now connected to your OpenBCI board. It's time to see some brain waves!
+If this is the case, congratulations; you are now connected to your OpenBCI board. It's time to see some brain waves!
 
 ## V. Connect yourself to OpenBCI
 
-### 1. asdf
+In this quick demo, we'll be showing you how to set up 3 channels of electrophysiological data that reveal your heart activity (EKG or ECG), muscle activity (EMG), and brain activity (EEG)!
 
-### 2. asdf
+For more information on these three signals, refer to wikipedia:
 
-### 3. asdf
+ * [Heart Acitivity - Electrocardiography (EKG or ECG)](http://en.wikipedia.org/wiki/Electrocardiography)
+ * [Muscle Acitivity - Electromyiography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
+ * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
 
+### 1. What you need
 
-### MORE COMING SOON...
+ * asdf 
+ * asdf
+
+### 2. Connect your electrodes to OpenBCI
+
+asdf
+
+### 3. Connect your electrodes to your head and body
+
+![Electrode Paste](../assets/images/electrodePaste.png)
+
+a) We're going to start with the electrodes on your head. Begin by scooping Ten20 electrode paste into your white gold cup electrode. This is going to be your reference (or SRB2) electrode for the other electrodes on your head. Fill the electrode so there is a little extra electrode paste spilling over the top of the gold cup, as seen in the picture to the right. 
+ 
+**Note:** Use a paper towl or napkin to remove excess electrode paste as you are applying your electrodes.
+
+![SRB2](../assets/images/earlobe.JPG)
+ 
+b) Now apply this electrode to either one of your earlobes (either A1 or A2 as seen on the 10-20 system image  below). You can use some medical tape (or electric tape!) to give this electrode some extra stability, ensuring that it does not fall off. This electrode is the reference that all of the EEG electrodes on your head will be measured in comparison to. The uV reading that will appear in the GUI's EEG DATA montage is a measure of the potential difference between each electrode and this reference electrode (SRB2). SRB1 (the top SRB pin) can also be used as a reference pin, but we won't discuss that here. Check out the other docs on how to maximize the usage of the other pins!
+
+![Fp2](../assets/images/Fp2.JPG)
+ 
+c) Follow the same procedure for the purple electrode and apply it to your forhead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forheads centerline. 
+ 
+![1020](../assets/images/1020.jpg)
+ 
+This electrode location is Fp2 on the [10-20 System](http://en.wikipedia.org/wiki/10-20_system_%28EEG%29). The 10-20 System international standard for electrode placement in the context of EEG. Fp indicates the a "frontal polar" site.
+ 
+![O1](../assets/images/O1.JPG)
+ 
+d) Now follow the same procedure for the red electrode and place it on the back of your head, 1 inch above the inion (as seen on the 10-20 system), and 1 inch to the left. This electrode location is O1 on the 10-20 system. The 'O' stands for occiptal, meaning above your occipital lobe (or visual cortex).
+ 
+**Note:** to do this, pull your hair aside and make sure the electrode is nested as deeply as possible, with the electrode paste making a definitive conductive connection between your scalp and the gold cup.
+
+![headband](../assets/images/headband.JPG)
+
+e) Now follow the same procedure as step 2 above to apply the black electrode to your other earlobe (either A1 or A2 from the 10-20 system). The black electrode is connected to the BIAS pin, which is used for noise cancelling. It is similar to a GROUND pin, which establishes a common ground between the OpenBCI board and your body, but it has some extra destructive interference noise cancelling techniques built in! 
+
+You're now done connecting electrodes to our noggin! I like to use a cheap cotton hairband to add extra stability to all of the electrodes connected to my head, by placing it gently on top of all of the electrodes. 
+ 
+![forearm](../assets/images/forearm.JPG)
+
+f) Now connect the green electrode to your right forearm, somewhere on top of a muscle that you can flex easily. With this electrode we will be looking at both heart activity and muscle activity. I also like to use tape to hold this electrode in place. That's going to hurt a little bit to take off. Hopefully your arms aren't as hairy as mine...
+
+![wrist](../assets/images/wrist.JPG)
+
+g) Finally, connect the blue electrode to your rist on the opposite arm with the green electrode. This will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
+ 
+
+### 4. Launch the GUI and adjust your channel settings
+
+### 5. Check out your heartbeat
+
+### 6. Watch your muscles flex
+
+### 7. Check out your blink artifacts
+
+### 8. Brain waves (Alpha) with OpenBCI!
+
+### 9. More on how to use the OpenBCI GUI
+
+
+## MORE COMING SOON...
 
 
 
