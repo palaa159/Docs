@@ -1,6 +1,5 @@
 # Getting Started w/ OpenBCI
 
-
 ## I. What You Need
 
 ![OpenBCI Contents](../assets/images/Contents8bit.png)
