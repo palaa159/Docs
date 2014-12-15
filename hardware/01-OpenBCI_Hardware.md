@@ -11,8 +11,9 @@
  * Micro SD card slot
  * Voltage Regulation (5V, 3V, +2.5V, -2.5V)
  * SN74LVCC3245A Level Shifter
-
-  [OpenBCI Contents] picture of 8bit Board
+ * Board Dimensions 2.41" x 2.41" (octogon has 1" edges)
+ * Mount holes are 1/16" ID, 0.8" x 2.166" on center
+ 
 
 ###Breakout pins:
  
@@ -71,9 +72,9 @@ Swtiching either BLE or PC will produce the same result. The option is available
  * RFduino BLE radio 
  * Micro SD card slot
  * Voltage Regulation (3V3, +2.5V, -2.5V)
-
-  [picture of 32bit Board](picture of 32bit Board)
-
+ * Board Dimensions 2.41" x 2.41" (octogon has 1" edges)
+ * Mount holes are 1/16" ID, 0.8" x 2.166" on center
+ 
 ###Breakout pins:
  
  * Program pins for bootloading PIC 
@@ -122,12 +123,11 @@ Swtiching either BLE or PC will produce the same result. The option is available
 ##OpenBCI DONGLE
 
 ###Dongle Specs
+
 * Power via USB connector ONLY
 * RFduino BLE radio module
 * FTDI USB<>Serial IC (FT231XQ-R)
 * Resettable fuse
-
-[picture of Dongle](picture of 32bit Board)
 
 ###Breakout Pins
 RFduio pins are broken out in the same order and layout as the RFduino radio and shields. The TXD (red) and RXD (greed) LEDs are connected to outputs from the FTDI chip. The blue LED is connected to RFduino GPIO2.
@@ -151,10 +151,9 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
 ##OpenBCI Daisy Module
 ###Daisy Module Specs:
 
+  
  * Power via pass-thru from OpenBCI Board pins ONLY
  * ADS1299 Analog Front End 
-
-  [picture of Daisy Module](picture of Daisy Module)
 
 ###Breakout pins:
  
