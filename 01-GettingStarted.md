@@ -208,6 +208,8 @@ To make sure that it is responsive, (after you've started the data stream) try r
 
 You should see the channels 8-16 channels on the EEG DATA montage behave chaotically in response to you touching the pins. The headplot on the right side of the GUI should become fully saturated (turning bright red) when you do this.
 
+Congratulations, you are now connected to your OpenBCI board. It's time to see some brain waves!
+
 ## V. Connect yourself to OpenBCI
 
 ### 1. asdf
