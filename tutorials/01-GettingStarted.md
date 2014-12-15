@@ -1,4 +1,4 @@
-# Getting Started w/ OpenBCI
+<div class="header"># Getting Started w/ OpenBCI</div>
 
 ## I. What You Need
 
