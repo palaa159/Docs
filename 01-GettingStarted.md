@@ -134,15 +134,15 @@ If you're using Windows or Linux, it will appear as:
 
 Your USB Dongle's port name will likely be at the top of the list. If you don't see it:
 
-1) Make sure your dongle is plugged in and switched to GPIO 6 (not RESET)
-2) Click the REFRESH LIST button in the SERIAL/COM PORT section of the sub-panel
-3) Make sure you've installed the latest FTDI drivers, as described in section III.1
+1. Make sure your dongle is plugged in and switched to GPIO 6 (not RESET)
+2. Click the REFRESH LIST button in the SERIAL/COM PORT section of the sub-panel
+3. Make sure you've installed the latest FTDI drivers, as described in section III.1
 
 If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum#/categories/hardware) about debugging your hardware connection.
 
 ### 4.(optional) Edit the Playback file name
 
-![Select Serial](assets/images/fileName.png)
+![File Name](assets/images/fileName.png)
 
 In the DATA LOG FIlE section of the LIVE (from OpenBCI) sub-panel you can specify the name of your playback file. This file name is automatically defaulted to:
 
@@ -160,9 +160,44 @@ After creating a Playback file, it can be replayed by running the OpenBCI GUI wi
 
 ### 5 Select your channel count (8 or 16)
 
+![Channel Count](assets/images/channelCount.png)
+
+The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and 32bit board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
+
 ### 6. Select your SD setting
 
+![WRITE TO SD](assets/images/writeToSD.png)
+
+If you want to log data to a MicroSD inserted into the OpenBCI Board, in the WRITE TO SD (Y/N)? sub-panel section you can select the maximum recording time of the file. This setting is defaulted to "Do not write to SD…" and will automatically switch to this if you do not have a MicroSD card properly inserted into your OpenBCI Board.
+
+**Note:** be sure to select a file size that is larger than your planned recording time. The OpenBCI writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
+
 ### 7. Press "START SYSTEM"
+
+![START SYSTEM](assets/images/startSystem.png)
+
+Now you're ready to start the system! Press the START SYSTEM button and wait for the OpenBCI GUI to establish a connection with your OpenBCI Board. This usually takes ~5 seconds. 
+
+![Initializing](assets/images/initializing.png)
+
+During this time, the help line at the bottom of the OpenBCI GUI should be blinking the words: "Initializing communication w/ your OpenBCI board."
+
+**TROUBLESHOOTING**
+
+If the initialization fails, try the following steps in order:
+
+1. Making sure you've selected the correct serial/COM port
+2. Power down your OpenBCI board and unplug your USB Dongle. Then, plug back in your USB Dongle and power up your OpenBCI board in that order. Then try restarting the system, but pressing the START SYSTEM button again.
+3. If this does not work, try relaunching the OpenBCI GUI application and redo step 2 above. Then reconfigure the SYSTEM CONTROL PANEL settings, and retry START SYSTEM.
+4. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
+
+### 8. Your OpenBCI is now live!
+
+Once the GUI successfully connects to your OpenBCI Board, click anywhere outside of the SYSTEM CONTROL PANEL to access the rest of the features of the GUI.
+
+You can now press the bright green Start Data Stream button (located at the top middle of the GUI) to begin streaming live data from your OpenBCI board.
+
+To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the bottom of your board. You should see the channels 8-16 channels on the EEG DATA montage behave chaotically in response to you touching the pins.
 
 ## V. Connect yourself to OpenBCI
 
