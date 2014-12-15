@@ -1,6 +1,6 @@
 ## OpenBCI Docs
 
-All of the content that feeds the [Docs Page](http://docs.openbci.com/03-OpenBCI_GUI) of our website.
+All of the content that feeds the [Docs Page](http://docs.openbci.com/) of our website.
 
 ### Attribution
 
