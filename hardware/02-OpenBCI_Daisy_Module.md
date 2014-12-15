@@ -31,7 +31,7 @@ Before you get up and running, you will need to solder some header pins to your 
 
 ##Attaching Headers
 
-![16 channel Kit Parts](../assets/images/DaisyKitParts.jpg)
+![16 channel Kit Parts](../assets/images/DaisyKitParts.JPG)
 
 For this assembly, we will need:
 
@@ -54,5 +54,5 @@ Solder the 8 position female row to the diagonal pin row on the left of the 32bi
 ![Male Headers on Daisy Module](../assets/images/Daisy_deadBug.jpg)
 Next, sloder the male header pins on the un-populated holes in the Daisy Module as shown. Make sure that you solder the **top** of the board, and that the pins come out of the **bottom** for connection to the 32bit board. 
 
-![Assembled 16 channel system](../assets/images/DaisyAssembled.jpg)
+![Assembled 16 channel system](../assets/images/DaisyAssembled.JPG)
 The 32bit boards shipped as a part of the 16 Channel R&D Kit are already loaded with firmware that interfaces with the Daisy Module. On start-up and initialization, the 32bit Board will 'smell' for the Daisy. 
