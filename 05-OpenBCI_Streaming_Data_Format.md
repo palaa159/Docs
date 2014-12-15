@@ -34,7 +34,7 @@ Each packet contains a header followed by a sample counter, followed by 8 ADS ch
 * Byte 2: Sample Number
 
 **EEG Data**  
-Note: values are 24-bit unsigned int, MSB first
+Note: values are 24-bit signed, MSB first
 
 * Bytes 3-5: Data value for EEG channel 1  
 * Bytes 6-8: Data value for EEG channel 2  
@@ -46,7 +46,7 @@ Note: values are 24-bit unsigned int, MSB first
 * Bytes 24-26: Data value for EEG channel 8  
 
 **Accelerometer Data**  
-Note: values are 16-bit int, MSB first
+Note: values are 16-bit signed, MSB first
 
 * Bytes 27-28: Data value for accelerometer channel X  
 * Bytes 29-30: Data value for accelerometer channel Y  
@@ -58,7 +58,7 @@ Note: values are 16-bit int, MSB first
 
 ### 24-Bit Data Values
 
-For the EEG data values, you will note that we are transferring the data as a 24-bit unsigned integer, which is a bit unusual. We are using this number format because it is the native format used by the ADS1299 EEG chip that is at the core of the OpenBCI board. To convert this unusual number format into a more standard 32-bit signed integer, you can steal some ideas from the example Processing (aka, Java) code below:
+For the EEG data values, you will note that we are transferring the data as a 24-bit signed integer, which is a bit unusual. We are using this number format because it is the native format used by the ADS1299 EEG chip that is at the core of the OpenBCI board. To convert this unusual number format into a more standard 32-bit signed integer, you can steal some ideas from the example Processing (aka, Java) code:
 
     int interpret24bitAsInt32(byte[] byteArray) {     
      int newInt = (  
@@ -73,6 +73,22 @@ For the EEG data values, you will note that we are transferring the data as a 24
      }  
     return newInt;  
     }  
+    
+###16-Bit Data Values
+The accelerometer data, if used, is sent as a 16bit signed value. We're using a similar scheme to convert these values into 32bit integers in Processing.
+
+	int interpret16bitAsInt32(byte[] byteArray) {
+    	int newInt = (
+      	((0xFF & byteArray[0]) << 8) |
+       	(0xFF & byteArray[1])
+      	);
+    	if ((newInt & 0x00008000) > 0) {
+      		newInt |= 0xFFFF0000;
+    	} else {
+      		newInt &= 0x0000FFFF;
+    	}
+    	return newInt;
+  	}
 
 ### Interpreting the EEG Data
 
