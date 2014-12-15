@@ -15,7 +15,7 @@ On startup, the OpenBCI board sends the following text over the radio:
 Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands.
 
 ## Command Set
-###Turn Channels OFF
+### Turn Channels OFF
 **1 2 3 4 5 6 7 8**  
 These ASCII characters turn the respective channels [1-8] off. The channel will read 0.00 when off during streamData mode. These commands work in and out of streamData mode.
 
