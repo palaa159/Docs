@@ -44,15 +44,15 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 ### OpenBCI 8bit Board Circuit Schematic
 
-![OpenBCI 8bit Schematic](assets/images/OBCI_V3_8bit-Schematic.jpg)
+![OpenBCI 8bit Schematic](../assets/images/OBCI_V3_8bit-Schematic.jpg)
 
 
 ### 8bit Board PCB Layer Images
 
-![8bit PCB LayerTOP](assets/images/OBCI_8bit_layerTop.jpg)
-![8bit PCB Layer2](assets/images/OBCI_8bit_layerTwo.jpg)
-![8bit PCB Layer3](assets/images/OBCI_8bit_layerThree.jpg)
-![8bit PCB LayerBOTTOM](assets/images/OBCI_8bit_layerBottom_noMirror.jpg)
+![8bit PCB LayerTOP](../assets/images/OBCI_8bit_layerTop.jpg)
+![8bit PCB Layer2](../assets/images/OBCI_8bit_layerTwo.jpg)
+![8bit PCB Layer3](../assets/images/OBCI_8bit_layerThree.jpg)
+![8bit PCB LayerBOTTOM](../assets/images/OBCI_8bit_layerBottom_noMirror.jpg)
 
 
 
@@ -105,15 +105,15 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 ### OpenBCI 32bit Board Circuit Schematic
 
-![OpenBCI 32bit Schematic](assets/images/OBCI_V3_32bit-Schematic.jpg)
+![OpenBCI 32bit Schematic](../assets/images/OBCI_V3_32bit-Schematic.jpg)
 
 
 ### 32 bit Board PCB Layer Images
 
-![32bit LayerTop](assets/images/OBCI_32bit_layerTop.jpg)
-![32bit Layer2](assets/images/OBCI_32bit_layerTwo.jpg)
-![32bit Layer3](assets/images/OBCI_32bit_layerThree.jpg)
-![32bit LayerBottom](assets/images/OBCI_32bit_layerBottom_noMirror.jpg)
+![32bit LayerTop](../assets/images/OBCI_32bit_layerTop.jpg)
+![32bit Layer2](../assets/images/OBCI_32bit_layerTwo.jpg)
+![32bit Layer3](../assets/images/OBCI_32bit_layerThree.jpg)
+![32bit LayerBottom](../assets/images/OBCI_32bit_layerBottom_noMirror.jpg)
 
 
 
@@ -140,8 +140,8 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
 
 ### Dongle PCB Layer Images
 
-![Dongle LayerTop](assets/images/OBCI_DONGLE_layerTop.jpg)
-![Dongle LayerBottom](assets/images/OBCI_DONGLE_layerBottom.jpg)
+![Dongle LayerTop](../assets/images/OBCI_DONGLE_layerTop.jpg)
+![Dongle LayerBottom](../assets/images/OBCI_DONGLE_layerBottom.jpg)
 
 
 
@@ -164,11 +164,11 @@ The slide switch on the Dongle has two positions (noted on the bottom silkscreen
  	
 The OpenBCI Daisy Module should be used as an expansion card for the OpenBCI Board ONLY. Daisy Modyle requires an external clock signal (2.048MHz) to be applied to the CLK pin.
 ###OpenBCI Daisy Module Circuit Schematic
-![OpenBCI Dongle Schematic](assets/images/OBCI_V3_Daisy-Schematic.jpg)
+![OpenBCI Dongle Schematic](../assets/images/OBCI_V3_Daisy-Schematic.jpg)
 ###Daisy Module PCB Layer Images
-![Daisy LayerTop](assets/images/OBCI_DaisyModule_layerTop.jpg)
-![Daisy Layer2](assets/images/OBCI_DaisyModule_layerTwo.jpg)
-![Daisy Layer3](assets/images/OBCI_DaisyModule_layerThree.jpg)
-![Daisy LayerBottom](assets/images/OBCI_DaisyModule_layerBottom_noMirror.jpg)
+![Daisy LayerTop](../assets/images/OBCI_DaisyModule_layerTop.jpg)
+![Daisy Layer2](../assets/images/OBCI_DaisyModule_layerTwo.jpg)
+![Daisy Layer3](../assets/images/OBCI_DaisyModule_layerThree.jpg)
+![Daisy LayerBottom](../assets/images/OBCI_DaisyModule_layerBottom_noMirror.jpg)
 ###Daisy Module PCB Files
 [OpenBCI Daisy Module gerber & BOM (532K zip)](http://ultracortex.com/downloads/hardware/OpenBCI_DaisyModule.zip)
