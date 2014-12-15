@@ -1,7 +1,11 @@
 #OpenBCI SDK
 The OpenBCI boards communicate using an ASCII command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. 
 
+<<<<<<< HEAD:04-OpenBCI_SDK.md
 ##OpenBCI Command Protocol Overview
+=======
+## OpenBCI Command Protocol Overview
+>>>>>>> origin/dev-class:software/01-OpenBCI_SDK.md
 
 OpenBCI boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (ATmega328P or PIC32MX250F128B) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending ASCII character commands over wireless serial connection. You should have received a Dongle with the OpenBCI 8bit board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). (See the Radios portion for more info on the RFduino link).
 On startup, the OpenBCI board sends the following text over the radio:
@@ -15,7 +19,7 @@ On startup, the OpenBCI board sends the following text over the radio:
 Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands.
 
 ## Command Set
-###Turn Channels OFF
+### Turn Channels OFF
 **1 2 3 4 5 6 7 8**  
 These ASCII characters turn the respective channels [1-8] off. The channel will read 0.00 when off during streamData mode. These commands work in and out of streamData mode.
 
@@ -181,7 +185,14 @@ Use 16 channels.
 
 ###Unused ASCII Characters
 These are currently unused characters accross the OpenBCI platforms:
+<<<<<<< HEAD:04-OpenBCI_SDK.md
 
 **9 ( ) _ { } o O f g h k l ; : ' " v V n N M , < . > /**
 
 
+=======
+
+**~ ` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , < . > / (space)**
+
+
+>>>>>>> origin/dev-class:software/01-OpenBCI_SDK.md

@@ -1,4 +1,4 @@
-### OpenBCI V3 Data Format
+# OpenBCI V3 Data Format
 
 This discussion of the OpenBCI data format only applies to OpenBCI V3 (2014). For OpenBCI V3, the OpenBCI board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE and Microchip's MPIDE, respectively. The OpenBCI board also contains an RFDuino acting as a "Device". The OpenBCI system also includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
 
@@ -26,7 +26,7 @@ Once the OpenBCI has initialized itself and sent the $$$, it waits for commands.
 
 ### Binary Format
 
-Each packet contains a header followed by a sample counter, followed by 8 ADS channels, followed by the three axes values of the accelerometer, followed by a footer. The accelerometer data are optional, and don't need to be sent with every packet when used. if unused, the bytes will read 0. This allows for user defined auxiliary data to be sent in the last six bytes before the footer. Also, there may be room for compressing more samples. Here are details on the format.
+Each packet contains a header followed by a sample counter, followed by 8 ADS channel data, followed by the three axes values of the accelerometer, followed by a footer. The accelerometer data are optional, and don't need to be sent with every packet when used. if unused, the bytes will read 0. This allows for user defined auxiliary data to be sent in the last six bytes before the footer. Also, there may be room for compressing more samples. Here are details on the format.
 
 **Header** 
  
@@ -102,6 +102,10 @@ For the scale factor, this is the multiplier that you use to convert the EEG val
 
 Note that 2^23 might be an unexpected term in this equation considering that the ADS1299 is a 24-bit device. This equation is from the ADS1299 data sheet, specifically it is from the text surrounding Table 7. This scale factor has also been confirmed experimentally using known calibration signals.
 
+###16 Channel Data 
+Our 16 channel system allows for control of individual settings for all 16 channels, and data is retrieved from both ADS1299 IC at a rate of 250SPS. The current bandwith limitations on our serial radio links limit the number of packets we can send. To solve for this, we are sending data packet at the same rate of 250SPS, and alternating sample packets between the on Board ADS1299 and the on Daisy ADS1299. The method takes an average of the current and most recent channel values before sending to the radio. On **odd** sample numbers, the Board ADS1299 values are sent, and on **even** sample numbers, the Daisy ADS1299 samples are sent. When running the system with 16 channels, it is highly recommended that you use an SD card to store the raw (un-averaged) data for post processing.
+
+
 ###Room For Improvement
 
 **Chage baud rate on the fly.**  This would help increase data rate. However, we have not been able to increase the Board UART baud beyond 1152000. The Dongle baud has been tested up to 1Mbaud.
@@ -123,3 +127,5 @@ Note that 2^23 might be an unexpected term in this equation considering that the
 * Bytes 31-32: Data value for accelerometer channel Z 
 
 Our Host code removes the Packet Counter and adds the header and footer. It could be modified to work natively with other protocol specs for other signal processing software....
+
+**Data Compression.** In situations where an increase in the sample resolution, or higher channel counts are desired, a data compression scheme can be implemented. As noted above, when sending **only** the ADS1299 values for 8 channels there are six unused bytes in the radio packet. It may be possible to, for example, increase the sample rate, and compress two samples worth of ADS data into a single radio packet. Or fit all 16 channels of data into a single packet and avoid the averaging that is currently used.
