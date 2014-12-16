@@ -223,8 +223,19 @@ For more information on these three signals, refer to wikipedia:
 
 ### 1. What you need
 
- * asdf 
- * asdf
+![What You Need](../assets/images/whatYouNeed.JPG)
+
+Necessary:
+
+ * Ten20 conductive elctrode paste (or other conductive electrode gel)
+ * Your OpenBCI board, USB Dongle, battery pack, and x4 AA batteries
+ * x6 gold cup electrodes (from your ESK or other)
+ 
+Optional:
+
+ * Paper towels for cleaning excess Ten20 paste
+ * Medical tape (or other tape) for adding extra stability to electrodes
+ * Q-tips for cleaning paste from electrodes when you're done
 
 ### 2. Connect your electrodes to OpenBCI
 
@@ -268,10 +279,12 @@ f) Now connect the green electrode to your right forearm, somewhere on top of a 
 
 ![wrist](../assets/images/wrist.JPG)
 
-g) Finally, connect the blue electrode to your rist on the opposite arm with the green electrode. This will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
+g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. This will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
  
 
 ### 4. Launch the GUI and adjust your channel settings
+
+
 
 ### 5. Check out your heartbeat
 
