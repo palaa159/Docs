@@ -1,4 +1,4 @@
-# OpenBCI SDK
+# OpenBCI SDKkk
 The OpenBCI boards communicate using an ASCII command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. 
 
 ## OpenBCI Command Protocol Overview
