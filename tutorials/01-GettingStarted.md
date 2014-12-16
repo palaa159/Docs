@@ -235,7 +235,7 @@ Optional:
 
  * Paper towels for cleaning excess Ten20 paste
  * Medical tape (or other tape) for adding extra stability to electrodes
- * Q-tips for cleaning paste from electrodes when you're done
+ * Ear swabs for cleaning paste from electrodes, once you're finished
 
 ### 2. Connect your electrodes to OpenBCI
 
