@@ -1,4 +1,4 @@
-# OpenBCI Hardware Documentation
+# OpenBCI Hardware Documentation (edit)
 ## OpenBCI 8bit Board
 
 ###8bit Board Specs:
