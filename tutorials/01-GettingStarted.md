@@ -227,19 +227,38 @@ For more information on these three signals, refer to wikipedia:
 
 Necessary:
 
- * Ten20 conductive elctrode paste (or other conductive electrode gel)
- * Your OpenBCI board, USB Dongle, battery pack, and x4 AA batteries
- * x6 gold cup electrodes (from your ESK or other)
+* Ten20 conductive elctrode paste (or other conductive electrode gel)
+* Your OpenBCI board, USB Dongle, battery pack, and x4 AA batteries
+* x6 gold cup electrodes (from your OpenBCI electrode starter kit or other). If you are using an OpenBCI electrode starter kit, use the following electrodes so as to be consistent with the GUI's color-coding protocol:
+  1. Black
+  2. White
+  3. Purple
+  4. Green
+  5. Blue
+  6. Red
  
 Optional:
 
- * Paper towels for cleaning excess Ten20 paste
- * Medical tape (or other tape) for adding extra stability to electrodes
- * Ear swabs for cleaning paste from electrodes, once you're finished
+* Paper towels for cleaning excess Ten20 paste
+* Medical tape (or other tape) for adding extra stability to electrodes
+* Ear swabs for cleaning paste from electrodes, once you're finished
 
 ### 2. Connect your electrodes to OpenBCI
 
-asdf
+![Electrode Connections 1](../assets/images/electrodeConnections1.JPG)
+
+1. Connect the white electrode to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels. 
+2. Connect the black electrode to the bottom BIAS pin. The BIAS pin is similar to the ground pin of common EEG systems, but it uses destructive interference waveform techniques to eliminate the "common mode noise" of all of the active channels.
+3. Connect the purple electrode to the 2N pin (the bottom pin of the N2P input)
+4. Connect the green electrode to the 4N pin (the bottom pin of the N4P input)
+5. Connect the blue electrode to the 4P pin (the top pin of the N4P input)
+6. Connect the red electrode to the 7N pin (the bottom pin of the N7P input)
+
+![Electrode Connections 2](../assets/images/electrodeConnections2.JPG)
+
+#### Basic OpenBCI pin overview
+
+The picture to the right is a perspective view of the electrode inputs that we are working with in this tutorial. The bottom pins are Negative (N) inputs, and the top pins are Positive (P) inputs. The default board settings look at all N channels in refernce to SRB2 (the bottom SRB pin). SRB1 (the top SRB pin) can also be used as a reference, but when it is activated, it is activated for ALL channels. If using SRB1 as the reference electrode, P inputs must be used as the other input of the potential difference measurement. On the contrary, individual channels can be removed from SRB2. If a channel is removed from SRB2, it can be examined as a unique voltage potential, between the N and P pins of that channel. We will be doing this for the heart measurement in this tutorial, while examining 2 EEG channels in reference to SRB2, using the channel 2 and 7 N pins. For more information on this, refer to page 16 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf). The ADS1299 chip is the analog front-end at the core of the OpenBCI board.
 
 ### 3. Connect your electrodes to your head and body
 
