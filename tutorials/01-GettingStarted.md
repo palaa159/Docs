@@ -225,7 +225,7 @@ For more information on these three signals, refer to wikipedia:
 
 ![What You Need](../assets/images/whatYouNeed.JPG)
 
-Necessary:
+#### Necessary:
 
 * Ten20 conductive elctrode paste (or other conductive electrode gel)
 * Your OpenBCI board, USB Dongle, battery pack, and x4 AA batteries
@@ -237,7 +237,7 @@ Necessary:
   5. Blue
   6. Red
  
-Optional:
+#### Optional:
 
 * Paper towels for cleaning excess Ten20 paste
 * Medical tape (or other tape) for adding extra stability to electrodes
@@ -258,7 +258,7 @@ Optional:
 
 #### Basic OpenBCI pin overview
 
-The picture to the right is a perspective view of the electrode inputs that we are working with in this tutorial. The bottom pins are Negative (N) inputs, and the top pins are Positive (P) inputs. The default board settings look at all N channels in refernce to SRB2 (the bottom SRB pin). SRB1 (the top SRB pin) can also be used as a reference, but when it is activated, it is activated for ALL channels. If using SRB1 as the reference electrode, P inputs must be used as the other input of the potential difference measurement. On the contrary, individual channels can be removed from SRB2. If a channel is removed from SRB2, it can be examined as a unique voltage potential, between the N and P pins of that channel. We will be doing this for the heart measurement in this tutorial, while examining 2 EEG channels in reference to SRB2, using the channel 2 and 7 N pins. For more information on this, refer to page 16 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf). The ADS1299 chip is the analog front-end at the core of the OpenBCI board.
+The picture to the right is a perspective view of the electrode inputs that we are working with in this tutorial. The bottom pins are (N) inputs, and the top pins are (P) inputs. The default board settings look at all N channels in refernce to SRB2 (the bottom SRB pin). SRB1 (the top SRB pin) can also be used as a reference, but when it is activated, it is activated for ALL channels. If using SRB1 as the reference electrode, P inputs must be used as the other input of the potential difference measurement. On the contrary, individual channels can be removed from SRB2. If a channel is removed from SRB2, it can be examined as a unique voltage potential, between the N and P pins of that channel. We will be doing this for the heart measurement in this tutorial, while examining 2 EEG channels in reference to SRB2, using the channel 2 and 7 N pins. For more information on this, refer to page 16 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf). The ADS1299 chip is the analog front-end at the core of the OpenBCI board.
 
 ### 3. Connect your electrodes to your head and body
 
@@ -303,17 +303,34 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 ### 4. Launch the GUI and adjust your channel settings
 
+1. If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from OpenBCI). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
+
+2. Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI device, exit the SYSTEM CONTROL PANEL and start the live data stream. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
+
+![Power Down](../assets/images/powerDown.JPG)
+
+3. Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key. 
+
+![Signals At Start](../assets/images/signalsAtStart.png)
+
+4. Now that you have powered down channels 1, 3, 5, 6, and 8, your EEG DATA montage should look similar to the screenshot on the right (after you relax and let the system settle).
+
+![Adjust Channel Settings](../assets/images/adjustChannelSettings.png)
+
+5. Adjust the channel settings...
 
 
-### 5. Check out your heartbeat
+### 5. Minimize system noise
 
-### 6. Watch your muscles flex
+### 6. Check out your heartbeat
 
-### 7. Check out your blink artifacts
+### 7. Watch your muscles flex
 
-### 8. Brain waves (Alpha) with OpenBCI!
+### 8. Check out your blink artifacts
 
-### 9. More on how to use the OpenBCI GUI
+### 9. Brain waves (Alpha) with OpenBCI!
+
+### 10. More on how to use the OpenBCI GUI
 
 
 ## MORE COMING SOON...
