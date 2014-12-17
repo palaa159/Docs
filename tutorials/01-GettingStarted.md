@@ -373,7 +373,7 @@ Channel 4 in the GUI should now be producing a nice steady succession of uV spik
 
 For more information on how to analyze an electrocardiography (EKG) signal, or on how to set up a full EKG (with 10 electrodes), check out the [wikipedia page on EKG](http://en.wikipedia.org/wiki/Electrocardiography). The image to the right (pulled from the Wikipedia page) shows the various segments of a single heart beat.
 
-### 2. Watch your muscles flex
+### 2. Watch your muscles flex (EMG)
 
 ![Forearm Flex](../assets/images/forearmFlex.png)
 
@@ -382,7 +382,7 @@ Now, try flexing your forearm or whatever muscle you placed the green electrode 
 If you relax your muscle again, you should see the channel 4 signal return to your heart beat (just EKG). The picture on the right shows this transition. When you're flexing your muscle, the electrode is picking up EMG and EKG at the same time. After you relax your muscle, the high-frequency signal disappears, and you're able to see just EKG.
 
 
-### 3. Check out EMG artifacts from blinking and jaw clenching
+### 3. Eye blinks and jaw clenching (more EMG)
 
 
 
