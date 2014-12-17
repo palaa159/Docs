@@ -1,7 +1,0 @@
-#External Trigger on OpenBCI 32bit Board
-Sometimes, when studying EEG or other biopotential signals, you will want to have precise timing between external events or stimulus and the data stream. For example, if you are working with P300 waves it is necessary to know the exact time that the signal was presented to the subject in order to look for the tell-tale wave that happens about 300mS after the stimulus. 
-
-This tutorial will cover a couple of ways to add an external trigger to the OpenBCI data stream on our 32bit Board. All the parts you need are listed further down in the tutorial. Please read this entire page before jaunting off into hardware hacking.
-
-##Digital Triggering The Easy Way
-The OpenBCI 32bit Board comes with a user defineable pushbutton switch already on the board, wired right to the PIC microcontroller. Brilliant! The PROG button is used by the PIC to put it into bootloader mode when uploading new firmware, but when it's not doing that it's attached to a GPIO(D17) with a 470K pulldown resistor. To access the PROG pushbutton in your program create a variable alias for the pin above the setup in your mpide sketch. (remember! the 32bit Board programs with mpide from Microchip!)
