@@ -337,7 +337,7 @@ So there's a good chance your current setup isn't showing clean data like the sc
 
 #### Get rid of AC noise
 
-Get rid of 60 Hz (or 50 Hz if you're in Europe or any country that operates on a 50 Hz power grid). The OpenBCI has a built in notch filter, that does a decent job at eliminating 60 Hz noise. You can adjust the notch filter to 50 Hz by clicking the "Notch 60 Hz" button. Additionally, if your OpenBCI board is on a table with any power chords or devices that are plugged into a wall outlet, move it to a location away from any electronic devices plugged into the wall. This will drastically reduce the alternating current (AC) influence on your signal.
+Get rid of 60 Hz (or 50 Hz if you're in Europe or any country that operates on a 50 Hz power grid). The OpenBCI has a built-in notch filter, that does a decent job at eliminating 60 Hz noise. You can adjust the notch filter to 50 Hz by clicking the "Notch 60 Hz" button. Additionally, if your OpenBCI board is on a table with any power chords or devices that are plugged into a wall outlet, move it to a location away from any electronic devices plugged into the wall. This will drastically reduce the alternating current (AC) influence on your signal.
 
 ![Stablize Your Cables w/ Tape](../assets/images/secureCables.JPG)
 
@@ -359,11 +359,23 @@ Power down your OpenBCI board and unplug your USB Dongle. Then, plug back in you
 
 If you're still having issues, refer to the [Forum](http://openbci.com/index.php/forum) for further troubleshooting techniques.
 
-## VI. Check out your body's electrical output!
+## VI. Check out your body's electrical signals!
 
-### 1. Check out your heartbeat
+Congratulations! If you've made it this far, it's finally time to check out your body's electrophysiological signals!
+
+### 1. Check out your heart activity (EKG)
+
+![Heart Beat](../assets/images/heartBeat.jpg)
+
+Channel 4 in the GUI should now be producing a nice steady succession of uV spikes. This is your heart beating! Try taking slow, deep breaths and watch how it influences your heart rate. If you look carefully, you may notice your heart beat more rapidly as your inhaling, and more slowly as you're exhaling.
+
+![Analyzing EKG](../assets/images/EKG.png)
+
+For more information on how to analyze an electrocardiography (EKG) signal, or on how to set up a full EKG (with 10 electrodes), check out the [wikipedia page on EKG](http://en.wikipedia.org/wiki/Electrocardiography). The image to the right (pulled from the Wikipedia page) shows the various segments of a single heart beat.
 
 ### 2. Watch your muscles flex
+
+
 
 ### 3. Check out your blink artifacts
 
