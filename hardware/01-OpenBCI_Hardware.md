@@ -135,7 +135,7 @@ RFduio pins are broken out in the same order and layout as the RFduino radio and
 The slide switch on the Dongle has two positions (noted on the bottom silkscreen). When the switch is on the GPIO6 side, the FTDI DTR pin is routed to RFduino pin 6 and ready to pass data to-from the OpenBCI board. This configuration is 'normal' mode, and also allows for programming the OpenBCI board over air. When the switch is on the RESET side, the FTDI DTR pin is routed to the RFduino RESET pin. This mode allows for re-programming the RFduino on the Dongle. 
 ### OpenBCI Dongle Circuit Schematic
 
-![OpenBCI Dongle Schematic](assets/images/OBCI_DONGLE-Schematic.jpg)
+![OpenBCI Dongle Schematic](../assets/images/OBCI_DONGLE-Schematic.jpg)
 
 
 ### Dongle PCB Layer Images
