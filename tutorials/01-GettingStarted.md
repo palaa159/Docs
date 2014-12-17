@@ -317,7 +317,16 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 ![Adjust Channel Settings](../assets/images/adjustChannelSettings.png)
 
-5. Adjust the channel settings...
+5. Now it's time to optimize your OpenBCI board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage. These buttons indicate the current settings of the ADS1299 registers on your OpenBCI board. For more information on these settings, refer to pages 39-47 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf).
+
+We have simplified the interface through the OpenBCI firmware and OpenBCI GUI to allow easy, real-time interaction with these registers. For more information on this, please refer to our doc page regarding the ADS1299 interface.
+
+By deactivating channels 1, 3, 5, 6, and 8, those channels were automatically removed from the BIAS and SRB2, so as not to interfere with the signal. The only thing left to do is update channel 4, the input we are using for EMG and EKG. Begin by clicking the PGA Gain button for channel 4 until it is set to x8. Then remove it from the BIAS and SRB2. The reason we do this is because the uV values for EMG and EKG are much bigger (and easier to pick up) than the EEG signals on channels 2 and 7. As a result, we want to prevent channel 4 from influencing the common mode noise rejection of the BIAS, as well as remove it from the EEG reference channel (SRB2).
+
+![EEG DATA AFTER ADJUSTING SETTINGS](../assets/images/eegAfterAdjusting.png)
+
+After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image on the right. Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
+
 
 
 ### 5. Minimize system noise
