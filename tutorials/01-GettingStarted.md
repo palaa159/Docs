@@ -303,21 +303,21 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 ### 4. Launch the GUI and adjust your channel settings
 
-1. If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from OpenBCI). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
+a) If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from OpenBCI). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
 
-2. Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI device, exit the SYSTEM CONTROL PANEL and start the live data stream. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
+b) Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI device, exit the SYSTEM CONTROL PANEL and start the live data stream. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
 
 ![Power Down](../assets/images/powerDown.JPG)
 
-3. Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key. 
+c) Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key. 
 
 ![Signals At Start](../assets/images/signalsAtStart.png)
 
-4. Now that you have powered down channels 1, 3, 5, 6, and 8, your EEG DATA montage should look similar to the screenshot on the right (after you relax and let the system settle).
+d) Now that you have powered down channels 1, 3, 5, 6, and 8, your EEG DATA montage should look similar to the screenshot on the right (after you relax and let the system settle).
 
 ![Adjust Channel Settings](../assets/images/adjustChannelSettings.png)
 
-5. Now it's time to optimize your OpenBCI board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage. These buttons indicate the current settings of the ADS1299 registers on your OpenBCI board. For more information on these settings, refer to pages 39-47 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf).
+e) Now it's time to optimize your OpenBCI board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage. These buttons indicate the current settings of the ADS1299 registers on your OpenBCI board. For more information on these settings, refer to pages 39-47 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf).
 
 We have simplified the interface through the OpenBCI firmware and OpenBCI GUI to allow easy, real-time interaction with these registers. For more information on this, please refer to our doc page regarding the ADS1299 interface.
 
@@ -325,78 +325,48 @@ By deactivating channels 1, 3, 5, 6, and 8, those channels were automatically re
 
 ![EEG DATA AFTER ADJUSTING SETTINGS](../assets/images/eegAfterAdjusting.png)
 
-After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image on the right. Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
+f) After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image on the right. Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
 
 
 
-### 5. Minimize system noise
+### 5. Minimizing noise
 
-### 6. Check out your heartbeat
+So there's a good chance your current setup isn't showing clean data like the screenshots above. There are a number of possible reasons for this. We'll go through troubleshooting them here.
 
-### 7. Watch your muscles flex
+![Notch Filter](../assets/images/notch.png)
 
-### 8. Check out your blink artifacts
+#### Get rid of AC noise
 
-### 9. Brain waves (Alpha) with OpenBCI!
+Get rid of 60 Hz (or 50 Hz if you're in Europe or any country that operates on a 50 Hz power grid). The OpenBCI has a built in notch filter, that does a decent job at eliminating 60 Hz noise. You can adjust the notch filter to 50 Hz by clicking the "Notch 60 Hz" button. Additionally, if your OpenBCI board is on a table with any power chords or devices that are plugged into a wall outlet, move it to a location away from any electronic devices plugged into the wall. This will drastically reduce the alternating current (AC) influence on your signal.
 
-### 10. More on how to use the OpenBCI GUI
+![Stablize Your Cables w/ Tape](../assets/images/secureCables.JPG)
 
+#### Stablize your electrodes
 
-## MORE COMING SOON...
+Make sure your electrode cables are steady. If you shake the electrodes that are dangling from your head/body, you'll notice that it severely affects the signals. This movement noise is something that could be greatly improved with "active" electrodes, but when using the "passive" electrodes that come with the OpenBCI electrode starter kit, you have to be very careful to remain steady while using the system, in order to produce the best signal. Sometimes, I'll bind all of the electrode cables together with a piece of electric tape to secure them and minimize cable movement. If you do this, don't worry about including the blue and green electrodes in the bundle, since movement noise doesn't affect the EMG/EKG signal as significantly.
 
+#### Ensure that your electrodes are securely connceted
 
+Ensure that your electrodes are connected securely (especially your reference)!
 
+#### Make sure your OpenBCI hardware is streaming data properly
 
-# -- CRUDE BELOW THIS POINT --
+Every so often, an error will occur with the wireless communication between your OpenBCI Dongle and board. If you've followed all of the steps above, and the data that you are seeing in the GUI interface is still illegible, try the following:
 
+Power down your OpenBCI board and unplug your USB Dongle. Then, plug back in your USB Dongle and power up your OpenBCI board in that order. Then try restarting the system, but pressing the START SYSTEM button again.
 
+#### Further troubleshooting
 
+If you're still having issues, refer to the [Forum](http://openbci.com/index.php/forum) for further troubleshooting techniques.
 
+## VI. Check out your body's electrical output!
 
+### 1. Check out your heartbeat
 
-a. Attach the 4 plastic feet to your OpenBCI board plus some spaghetti
+### 2. Watch your muscles flex
 
+### 3. Check out your blink artifacts
 
+### 4. Brain waves (Alpha) with OpenBCI!
 
-b. Buy 4 AA batteries and put them in your battery pack
-
-![Pin Connections](../assets/images/PinConnections.png)
-
-c. Connnect the battery pack to the OpenBCI board
-
-
-
-d. Connect your electrodes to the OpenBCI board: Black->BIAS; White->SRB; Gray->N1P
-
-![Test Setup](../assets/images/TestSetup.png)
-
-e. Connect the USB Dongle to your computer
-
-### 3. Software Setup
-![Processing Libaries](../assets/images/processing_libraries.png)
-
-1. Download Processing
-2. Download GWOptics and ControlP5 Libraries
-3. Unzip the libraries and put them in the /Processing/libraries/ folder.
-4. Download the OpenBCI_Processing Github Repository:
-`git clone https://github.com/OpenBCI/OpenBCI_Processing.git`
-
-### 4. Headware Setup
-![Electrode Paste](../assets/images/electrodePaste.png)
-
-1. Apply electrode paste to the 3 electrodes. Make sure to add enough paste so that it forms a convex shape on the electrode cavity, allowing for a strong seal with the skin.
-2. Connect 1 ground electrode (typically to the mastoid behind the ear)
-3. Connect 1 reference electrode to the earlobe
-4. Connect 1 EEG channel electrode (any location on the head from where you want to sample EEG)
-
-### 5. Test It
-![Testing](../assets/images/testing_screenshot.png)
-
-1. Open the file OpenBCI_GUI.pde in Processing and run the program.
-2. Select your serial/COM port in the left hand menu and click Initialize System.
-3. If for some reason, the brainwaves don't start streaming, switch your OpenBCI board to Off and then back to "PC", and redo the previous step.
-4. Click into the main interface and press Tab to change to Channel settings.
-5. De-select every channel but the one your EEG channel electrode is connected to, which will be Channel 1 if you connected it to the N1P pin.
-6. If all goes as it should, you should see your brainwaves streaming out.
-7. Play with the controls to get a feel for different ways to view the data.
-8. Blink your eyes, grit your teeth, play around with it!
+### 5. More on how to use the OpenBCI GUI
