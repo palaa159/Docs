@@ -375,9 +375,16 @@ For more information on how to analyze an electrocardiography (EKG) signal, or o
 
 ### 2. Watch your muscles flex
 
+![Forearm Flex](../assets/images/forearmFlex.png)
+
+Now, try flexing your forearm or whatever muscle you placed the green electrode on top of. You should see a high-amplitude, high-frequency signal introduced into channel 4. This is the electric potential created by you activating your muscle!
+
+If you relax your muscle again, you should see the channel 4 signal return to your heart beat (just EKG). The picture on the right shows this transition. When you're flexing your muscle, the electrode is picking up EMG and EKG at the same time. After you relax your muscle, the high-frequency signal disappears, and you're able to see just EKG.
 
 
-### 3. Check out your blink artifacts
+### 3. Check out EMG artifacts from blinking and jaw clenching
+
+
 
 ### 4. Brain waves (Alpha) with OpenBCI!
 
