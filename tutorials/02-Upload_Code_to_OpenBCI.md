@@ -26,12 +26,15 @@ You will need to install these files from our repository into your Documents/ard
 	
 	
 ![ArduinoIDE](../assets/images/Arduino_IDE.png)
+
 Move the file OpenBCI_8bit_SD.ino into your Documents/arduino folder, and start up the Arduino IDE. you should then see the sketch in your Sketch folder.
 
 ![selectBoardUno](../assets/images/BoardSelect.png)
+
 Select Arduino UNO from the Board drop-down menu.
 
 ![selectSerialPort](../assets/images/SerialPortSelect.png)
+
 Select the correct serial port for your OpenBCI Dongle. 
 
 * On Macs, this will be named **/dev/tty.usbserial-DN00nnnn** where the nnnn is a combination of numbers and letters specific to your openBCI Dongle.
@@ -41,6 +44,7 @@ Select the correct serial port for your OpenBCI Dongle.
 * On Linux, it will be different.
 
 ![Upload](../assets/images/Upload.png)
+
 When you are happy with the code, simply press upload to program the OpenBCI 8bit target. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done.
 
 
