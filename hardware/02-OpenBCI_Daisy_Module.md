@@ -37,7 +37,7 @@ For this assembly, we will need:
 
 Save the two 4 position female headers for mounting to the unused PIC chip pins broken out on the lower right of the 32bit board.
 
-![prepareHeaders](../assets/images/DaisyHeaders.jpg)
+![Prepared Headers](../assets/images/DaisyHeaders.jpg)
 
 Break the male header row into three 2 position and one 8 position segments. 
 

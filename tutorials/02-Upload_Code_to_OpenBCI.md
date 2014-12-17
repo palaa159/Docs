@@ -79,23 +79,23 @@ Before you can upload code correctly to the PIC32 with mpide, you need to make a
 * On Linux, find the app where you put it and go to 
 	* mpide/hardware/pic32/variants/DP32/Board_Defs.h
 	
-	`define _DSPI0_MISO_IN	  PPS_IN_SDI1`
-	
-	`define _DSPI0_MISO_PIN   5 	  // [Changed for OpenBCI was 10] RA1  SDI1 SDI1R = RPA1 = 0`
-	
-	`define _DSPI0_MOSI_OUT   PPS_OUT_SDO1`
-	
-	`define _DSPI0_MOSI_PIN   10  // [Changed for OpenBCI was 18] RA4  SDO1 RPA4R = SDO1 = 3`
-
-	
 The edit we need to make is to the DSPI0 pin definitions for MISO and MOSI (about line 350 or so). Change the DSPI0 MISO pin to 5, and the DSPI0 MOSI pin to 10. Then save the modified file Board_Defs.h. Now you're ready to start the mpide app, and upload code to the OpenBCI 32bit Board!
+
+	define _DSPI0_MISO_IN	  PPS_IN_SDI1
+	define _DSPI0_MISO_PIN   5 	  // [Changed for OpenBCI was 10] RA1  SDI1 SDI1R = RPA1 = 0
+	define _DSPI0_MOSI_OUT   PPS_OUT_SDO1
+	define _DSPI0_MOSI_PIN   10  // [Changed for OpenBCI was 18] RA4  SDO1 RPA4R = SDO1 = 3
+
 ![ArduinoIDE](../assets/images/mpide.png)
+
 Move the file OpenBCI_32bit_SD.pde into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
 
 ![selectBoardDP32](../assets/images/BoardSelect32.png)
+
 Select chipKIT DP32 from the Board drop-down menu.
 
 ![selectSerialPort](../assets/images/SerialPortSelect32.png)
+
 Select the correct serial port for your OpenBCI Dongle. 
 
 * On Macs, this will be named **/dev/tty.usbserial-DN00nnnn** where the nnnn is a combination of numbers and letters specific to your openBCI Dongle.
@@ -106,6 +106,7 @@ Select the correct serial port for your OpenBCI Dongle.
 
 
 When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatable IC, so you have to do it manually.
+
 ![reset_program](../assets/images/RST_PROG.png)
 
 * First, press and hold the RST button
@@ -114,4 +115,5 @@ When you are happy with the code, you will have to put the 32bit board into boot
 * OK, now you can release the PROG button
 
 ![Upload](../assets/images/Upload32.png)
+
 Now you should see the blue LED on the 32bit board blinking pleasantly. Press the upload button on the mpide. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done.
