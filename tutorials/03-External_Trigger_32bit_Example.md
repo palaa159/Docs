@@ -19,11 +19,7 @@ First thing is to establish the variables we need to read the pushbutton switch,
 		// more stuff...	
 	}
 		
-Then, in the loop, we wan to check for the rising edge of the button press, make note of it in the auxData[0] variable, and set the flag 
-
-
-	
-Finally, we want to get the button press event into the data stream. (Reference the [OpenBCI Data Format Doc](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format) for data packet anatomy) There are 6 bytes available in each data packet, and the default format is to read them as three 16bit integers. By default, the accelerometer values are included in the data stream, and they update every 5th data packet (Accelerometer runs at 50Hz by default). When the OBCI.useAux boolean is set, the updated auxData value will get written with the next data packet and override the accelerometer data if it's there. The overridden accelerometer data gets bumped to the next packet. Our sample rate of 250SPS gives us a 4mS resolution on external trigger events like the rising edge of the PROG button press. 
+Then, in the loop, we wan to check for the rising edge of the button press, make note of it in the auxData[0] variable, and set the flag. Finally, we want to get the button press event into the data stream. (Reference the [OpenBCI Data Format Doc](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format) for data packet anatomy) There are 6 bytes available in each data packet, and the default format is to read them as three 16bit integers. By default, the accelerometer values are included in the data stream, and they update every 5th data packet (Accelerometer runs at 50Hz by default). When the OBCI.useAux boolean is set, the updated auxData value will get written with the next data packet and override the accelerometer data if it's there. The overridden accelerometer data gets bumped to the next packet. Our sample rate of 250SPS gives us a 4mS resolution on external trigger events like the rising edge of the PROG button press. 
 
 	pushButtonValue = digitalRead(pushButton);    // feel the PROG button
      if (pushButtonValue != lastPushButtonValue){  // if it's changed,
