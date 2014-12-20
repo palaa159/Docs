@@ -5,13 +5,12 @@ This tutorial will cover a couple of ways to add an external trigger to the Open
 
 ##Digital Triggering The Easy Way
 The OpenBCI 32bit Board comes with a user defineable pushbutton switch already on the board, wired right to the PIC microcontroller. Brilliant! The PROG button is used by the PIC to put it into bootloader mode when uploading new firmware, but when it's not doing that it's attached to a GPIO(D17) with a 470K pulldown resistor. To access the PROG pushbutton in your program create a variable alias for the pin above the setup in your mpide sketch. This method will acquire signals from the subject, or their friend next to them. The PROG pushbutton is a great way to get user acknowlegement of a stimulus (for example) into the data stream. You will likely want to note the rising edge of the button press, so that's the example code that we'll work with. (**Remember:** the 32bit Board programs with mpide from chipKIT!)
-First thing is to establish the variables we need to read the pushbutton switch, and a flag to let the rest of the program know we got new data. The OpenBCI library already has a variable array for auxiliary data, called auxData, which we will use. In the setup function, we set the pin direction and prime the button variables.
 
 	int pushButton = 17;		// the button is on pin D17
 	int pushButtonValue;		// used to hold the latest button reading
 	int lastPushButtonValue;	// used to remember the last button state
-	boolean addAuxToSD;        // option to add the aux data to the SD card 	
-Then, in the loop, we wan to check for the rising edge of the button press, make note of it in the auxData[0] variable, and set the flag 
+	boolean addAuxToSD;        // option to add the aux data to the SD card 
+First thing is to establish the variables we need to read the pushbutton switch, and a flag to let the rest of the program know we got new data. The OpenBCI library already has a variable array for auxiliary data, called auxData, which we will use. In the setup function, we set the pin direction and prime the button variables.
 
 	void setup(){
 		// stuff here...
@@ -19,6 +18,10 @@ Then, in the loop, we wan to check for the rising edge of the button press, make
 		pushButtonValue = lastPushButtonValue = digitalRead(pushButton); // seed
 		// more stuff...	
 	}
+		
+Then, in the loop, we wan to check for the rising edge of the button press, make note of it in the auxData[0] variable, and set the flag 
+
+
 	
 Finally, we want to get the button press event into the data stream. (Reference the [OpenBCI Data Format Doc](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format) for data packet anatomy) There are 6 bytes available in each data packet, and the default format is to read them as three 16bit integers. By default, the accelerometer values are included in the data stream, and they update every 5th data packet (Accelerometer runs at 50Hz by default). When the OBCI.useAux boolean is set, the updated auxData value will get written with the next data packet and override the accelerometer data if it's there. The overridden accelerometer data gets bumped to the next packet. Our sample rate of 250SPS gives us a 4mS resolution on external trigger events like the rising edge of the PROG button press. 
 
