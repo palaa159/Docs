@@ -1,10 +1,10 @@
 # OpenBCI V3 Data Format
 
-This discussion of the OpenBCI data format only applies to OpenBCI V3 (2014). For OpenBCI V3, the OpenBCI board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE and Microchip's MPIDE, respectively. The OpenBCI board also contains an RFDuino acting as a "Device". The OpenBCI system also includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
+This discussion of the OpenBCI data format only applies to OpenBCI V3 (2014). For OpenBCI V3, the OpenBCI board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE and Microchip's MPIDE, respectively. The OpenBCI board has an on-board RFDuino radio module acting as a "Device". The OpenBCI system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
 
 ### Proprietary ("RFDuino") vs Standard Bluetooth
 
-OpenBCI uses RFDuino modules for its Bluetooth wireless connection. To achieve the highest data rates, OpenBCI supplies a RFDuino USB dongle that connects to the computer. When using this USB dongle, higher data rates can be achieved versus using a standard bluetooth 4.0 BLE connection. 
+OpenBCI uses RFDuino modules for its Bluetooth wireless connection. To achieve the highest data rates, OpenBCI supplies a RFDuino USB dongle that connects to the computer. When using this USB dongle, higher data rates can be achieved versus using a standard bluetooth 4.n BLE connection. 
 
 If you prefer to use a standard bluetooth connection (to a mobile phone, for instance), that software and data format has not yet been defined.
 
@@ -20,9 +20,13 @@ When the serial port for the dongle is opened by your PC, it will reset an 8bit 
 **32bit Board**
 
 The chipKIT on our 32bit Board does not go through a reset cycle when its serial port is opened. Because of this, it's possible to connect to the 32bit board and not know it's state. In this case, the terminal or application should write a **v** to the serial port, which causes the system to reset its state to default values.
+
 ### Initiating Binary Transfer
 
-Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of OpenBCI data in binary format will ensue. To turn off the fire hose, send an **s**. Both the Host and Device radios take notice of the **b** and **s**, and go into or out of streamingMode accordingly. 
+Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of OpenBCI data in binary format will ensue. To turn off the fire hose, send an **s**. Both the Host and Device radios take notice of the **b** and **s**, and go into or out of streamingMode accordingly. That's right, the radio modules on both the OpenBCI board and the Dongle have two states.
+
+* streamingData
+* !streamingData
 
 ### Binary Format
 
