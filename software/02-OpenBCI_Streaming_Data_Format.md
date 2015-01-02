@@ -27,7 +27,7 @@ Once the OpenBCI has initialized itself and sent the $$$, it waits for commands.
 
 * **!**streamingData
 	* The radios appear to be a transparent UART betweeen the PC and target uC
-	* Command characters need some delay before and after to pass from PC to target uC
+	* [Command characters](https://github.com/OpenBCI/Docs/blob/master/software/01-OpenBCI_SDK.md) need some delay before and after to pass from PC to target uC
 * streamingData
 	* Device radio expects to get 31 bytes in each data packet from the uC
 	* After 1 second of no transmission, Device and Host will revert to **!**streamingData mode
