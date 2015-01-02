@@ -23,10 +23,15 @@ The chipKIT on our 32bit Board does not go through a reset cycle when its serial
 
 ### Initiating Binary Transfer
 
-Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of OpenBCI data in binary format will ensue. To turn off the fire hose, send an **s**. Both the Host and Device radios take notice of the **b** and **s**, and go into or out of streamingMode accordingly. That's right, the radio modules on both the OpenBCI board and the Dongle have two states.
+Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of OpenBCI data in binary format will ensue. To turn off the fire hose, send an **s**. Both the Host and Device radios take notice of the **b** and **s**, and go into or out of streamingMode accordingly. That's right, the radio modules on both the OpenBCI board and the Dongle have two states:
 
+* **!**streamingData
+	* The radios appear to be a transparent UART betweeen the PC and target uC
+	* Command characters need some delay before and after to pass from PC to target uC
 * streamingData
-* !streamingData
+	* Device radio expects to get 31 bytes in each data packet from the uC
+	* After 1 second of no transmission, Device and Host will revert to **1**streamingData mode
+	* Command characters can be sent from PC following timing protocol above
 
 ### Binary Format
 
