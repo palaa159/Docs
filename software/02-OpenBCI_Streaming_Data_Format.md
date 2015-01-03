@@ -27,10 +27,10 @@ Once the OpenBCI has initialized itself and sent the $$$, it waits for commands.
 
 * **!**streamingData
 	* The radios appear to be a transparent UART betweeen the PC and target uC
-	* [Command characters](https://github.com/OpenBCI/Docs/blob/master/software/01-OpenBCI_SDK.md) need some delay before and after to pass from PC to target uC
+	* [Command characters](https://github.com/OpenBCI/Docs/blob/master/software/01-OpenBCI_SDK.md) need some delay before and after sending to pass from PC to target uC
 * streamingData
 	* Device radio expects to get 31 bytes in each data packet from the uC
-	* After 1 second of no transmission, Device and Host will revert to **!**streamingData mode
+	* After 1 second of no transmission, or not getting 31 bytes in time, Device and Host will revert to **!**streamingData mode
 	* Command characters can be sent from PC following timing protocol above
 
 ### Binary Format
@@ -67,7 +67,7 @@ Note: values are 16-bit signed, MSB first
 
 ### 24-Bit Data Values
 
-For the EEG data values, you will note that we are transferring the data as a 24-bit signed integer, which is a bit unusual. We are using this number format because it is the native format used by the ADS1299 EEG chip that is at the core of the OpenBCI board. To convert this unusual number format into a more standard 32-bit signed integer, you can steal some ideas from the example Processing (aka, Java) code:
+For the EEG data values, you will note that we are transferring the data as a 24-bit signed integer, which is a bit unusual. We are using this number format because it is the native format used by the ADS1299 chip that is at the core of the OpenBCI board. To convert this unusual number format into a more standard 32-bit signed integer, you can steal some ideas from the example Processing (aka, Java) code:
 
     int interpret24bitAsInt32(byte[] byteArray) {     
      int newInt = (  
@@ -103,7 +103,7 @@ The accelerometer data, if used, is sent as a 16bit signed value. We're using a 
 
 Once you receive and parse the data packets, it is important to know how to interpret the data so that the EEG values are useful in a quantitative way. The two critical pieces of information are (1) the sample rate and (2) the scale factor.
 
-For the sample rate, we set the default rate to 250 Hz. Faster rates are supported by the ADS1299 EEG chip at the heart of the OpenBCI board, but the RFDuino wireless link and the serial limits might not be able to keep up with faster sample rates. If you give it a try, let us know how it worked!
+For the sample rate, we set the default rate to 250 Hz. Faster rates are supported by the ADS1299, but the RFDuino wireless link and the serial limits might not be able to keep up with faster sample rates. If you give it a try, let us know how it worked!
 
 For the scale factor, this is the multiplier that you use to convert the EEG values from “counts” (the int32 number that you parse from the binary stream) into scientific units like “volts”. By default, our Arduino sketch running on the OpenBCI board sets the ADS1299 chip to its maximum gain (24x), which results in a scale factor of 0.02235 microVolts per count. Because the gain is user-configurable (24x, 12x, 8x, 6x, 4x, 2x, 1x), the scale factor will be different. If the gain is changed, the equation that you should use for determining the scale factor is:
 
@@ -119,7 +119,7 @@ Our 16 channel system allows for control of individual settings for all 16 chann
 
 **Chage baud rate on the fly.**  This would help increase data rate. However, we have not been able to increase the Board UART baud beyond 1152000. The Dongle baud has been tested up to 1Mbaud.
 
-**Change protocol to meet other standards.** The over-air data is sent in packets (or frames, depending upon your preferred word). The maximum bytes allowed per packet is 32. We are reserving the first byte to use as a packet check-sum in our protocol. So the available bytes-per-packet, as far as the uC is concerned, is 31. The over-air protocol that the Host gets is:
+**Change protocol to meet other standards.** The over-air data is sent in packets (or frames, depending upon your preferred word). The maximum bytes allowed per packet is 32. We are reserving the first byte to use as a packet check-sum in our protocol. So the available bytes-per-packet, as far as the uC is concerned, is 31. The over-air protocol that the Dongle/RFduino Host gets is:
 
 * Byte 1: Packet Counter
 * Byte 2: Sample Number
