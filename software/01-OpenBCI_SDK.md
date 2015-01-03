@@ -14,6 +14,8 @@ On startup, the OpenBCI board sends the following text over the radio:
 
 Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands.
 
+Pay attention to timing when sending commands. There must be some delay before and after sending a command character from the PC (controlling program or user running a terminal).
+
 ## Command Set
 ### Turn Channels OFF
 **1 2 3 4 5 6 7 8**  
