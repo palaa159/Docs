@@ -181,7 +181,7 @@ Use 16 channels.
 
 *Note: On reset, the OpenBCI 32bit board will 'sniff' for the Daisy Module, and if it is present, it will default to 16 channel capability.*
 
-###Unused ASCII Characters
+##Unused ASCII Characters
 These are currently unused characters accross the OpenBCI platforms:
 <<<<<<< HEAD:04-OpenBCI_SDK.md
 
