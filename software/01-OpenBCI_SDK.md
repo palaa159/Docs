@@ -183,14 +183,9 @@ Use 16 channels.
 
 ##Unused ASCII Characters
 These are currently unused characters accross the OpenBCI platforms:
-<<<<<<< HEAD:04-OpenBCI_SDK.md
 
-**9 ( ) _ { } o O f g h k l ; : ' " v V n N M , < . > /**
-
-
-=======
 
 **~ ` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , < . > / (space)**
 
 
->>>>>>> origin/dev-class:software/01-OpenBCI_SDK.md
+
