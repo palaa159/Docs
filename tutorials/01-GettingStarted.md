@@ -415,7 +415,7 @@ You'll notice that the strongest alpha wave signals should be appearing in chann
 
 ### 5. What's next?
 
-For more ideas on what to do next, check out [Chip's Blog, EEG HACKER](http://eeghacker.blogspot.com/) and the other OpenBCI Docs pages.
+For more ideas on what to do next, check out Chip's Blog [EEG HACKER](http://eeghacker.blogspot.com/) and the other OpenBCI Docs pages.
 
 Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum). For all other inquiries, contact us at contact@openbci.com.
  
