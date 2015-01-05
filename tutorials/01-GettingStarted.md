@@ -403,22 +403,21 @@ Now, for what we've all been waiting for... let's check out some brain waves!
 
 Firstly, deactivate channel 4 so that you are only looking at the EEG channels (2 and 7).
 
-It's best to do this portion of the tutorial with a friend. You'll understand why in a second. It just so happens that the easiest way to consciously produce brain waves is by closing your eyes. When you do this, your occipital lobe (the part of your brain responsible for processing visual information) enters into an alpha wave state at a frequency between 7.5-12.5 Hz. Alpha brain waves are the strongest EEG brain signal!
+It's best to do this portion of the tutorial with a friend. You'll understand why in a second. It just so happens that the easiest way to consciously produce brain waves is by closing your eyes. When you do this, your occipital lobe (the part of your brain responsible for processing visual information) enters into an alpha wave state at a frequency between 7.5-12.5 Hz. Alpha brain waves are the strongest EEG brain signal! Historically, they are thought to represent the activity of the visual cortex in an idle state. An alpha-like variant called [mu (μ)](http://en.wikipedia.org/wiki/Mu_wave) can be found over the motor cortex (central scalp) that is reduced with movement, or the intention to move [Wikipedia].
 
 For more information on Alpha waves check out [Wikipedia](http://en.wikipedia.org/wiki/Alpha_wave) and Chip's EEG Hacker [blog post](http://eeghacker.blogspot.com/2014/10/detecting-alpha-waves-threshold.html) about detecting alpha waves with OpenBCI V3.
 
 Once you've closed your eyes, have your friend press the 'm' key on your keyboard to take screenshots. Tell him or her to wait until a strong alpha spike emerges on the Fast Fourier Transform (FFT) Graph, the graph in the lower-right of the GUI. The spike should be somewhere between 7.5-12.5 on the the x-asix of the FFT graph, indicating that there is a strong presence of waves in that frequency range.
 
-After you've taken a few good screenshots, open up the .JPGs and take a look.
+After you've taken a few good screenshots, open up the .JPGs and take a look. **Note:** the screenshots are located in the root directory of your application, or in the OpenBCI_GUI directory if you are working from Processing. 
 
-You'll notice that the strongest alpha wave signals should be appearing in channel 7, the O2 (O standing for occipital) electrode on the back of your head. Try counting the number of waves in a single 1-second time period in the EEG DATA montage on the right side of the GUI.
+You'll notice that the strongest alpha wave signals should be appearing in channel 7, the O2 (O standing for occipital) electrode on the back of your head. Count the number of waves in a single 1-second time period on channel 7 of the EEG DATA montage. The number of waves should correspond x-axis position of the spike on the FFT graph. If you've identified your alpha waves, congratulations! You've now seen your first brain waves with OpenBCI!
 
-Count the # of waves per second in the EEG Data montage (left side of screen), and look for an FFT spike in the graph on the lower right of the GUI. You should see an FFT spike somewhere between 8-12 Hz. This is the typical Alpha  range of the average person. 
+### 5. What's next?
 
-For more information on this, check out Chip's blog post on producing alpha...
+For more ideas on what to do next, check out [Chip's Blog, EEG HACKER](http://eeghacker.blogspot.com/) and the other OpenBCI Docs pages.
+
+Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum). For all other inquiries, contact us at contact@openbci.com.
+ 
 
 
-
-
-
-### 5. More on how to use the OpenBCI GUI
