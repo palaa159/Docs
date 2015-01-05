@@ -384,7 +384,7 @@ If you relax your muscle again, you should see the channel 4 signal return to yo
 
 ### 3. Eye blinks and jaw clenching (more EMG)
 
-![Forearm Flex](../assets/images/eyeBlink-jawClench.png)
+![Eye Blink & Jaw Clench EMG Artifacts](../assets/images/eyeBlink-jawClench.png)
 
 Now blink your eyes a few times. Each time you blink you should see a strong spike on the EEG DATA montage. It should be most visible in channel 2, the channel for the electrode directly above your eye! This uV spike is a result of the muscles in your forehead that make your eyes blink.
 
@@ -395,7 +395,29 @@ In the photo to the left, you can see what these signals look like the green hig
 It's interesting to note that these signals are not picked up in channel 4. This is because channel 4 is only looking at the potential difference across your body—from your right forearm to your left wrist. As a result the EMG/EEG artifacts being produced on your head (in reference to SRB2) are not visible in this channel.
 
 
-### 4. Brain waves (Alpha) with OpenBCI!
+### 4. Brain waves (alpha) with OpenBCI!
+
+![Alpha Brain Waves!](../assets/images/alpha.png)
+
+Now, for what we've all been waiting for... let's check out some brain waves! 
+
+Firstly, deactivate channel 4 so that you are only looking at the EEG channels (2 and 7).
+
+It's best to do this portion of the tutorial with a friend. You'll understand why in a second. It just so happens that the easiest way to consciously produce brain waves is by closing your eyes. When you do this, your occipital lobe (the part of your brain responsible for processing visual information) enters into an alpha wave state at a frequency between 7.5-12.5 Hz. Alpha brain waves are the strongest EEG brain signal!
+
+For more information on Alpha waves check out [Wikipedia](http://en.wikipedia.org/wiki/Alpha_wave) and Chip's EEG Hacker [blog post](http://eeghacker.blogspot.com/2014/10/detecting-alpha-waves-threshold.html) about detecting alpha waves with OpenBCI V3.
+
+Once you've closed your eyes, have your friend press the 'm' key on your keyboard to take screenshots. Tell him or her to wait until a strong alpha spike emerges on the Fast Fourier Transform (FFT) Graph, the graph in the lower-right of the GUI. The spike should be somewhere between 7.5-12.5 on the the x-asix of the FFT graph, indicating that there is a strong presence of waves in that frequency range.
+
+After you've taken a few good screenshots, open up the .JPGs and take a look.
+
+You'll notice that the strongest alpha wave signals should be appearing in channel 7, the O2 (O standing for occipital) electrode on the back of your head. Try counting the number of waves in a single 1-second time period in the EEG DATA montage on the right side of the GUI.
+
+Count the # of waves per second in the EEG Data montage (left side of screen), and look for an FFT spike in the graph on the lower right of the GUI. You should see an FFT spike somewhere between 8-12 Hz. This is the typical Alpha  range of the average person. 
+
+For more information on this, check out Chip's blog post on producing alpha...
+
+
 
 
 
