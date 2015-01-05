@@ -384,8 +384,19 @@ If you relax your muscle again, you should see the channel 4 signal return to yo
 
 ### 3. Eye blinks and jaw clenching (more EMG)
 
+![Forearm Flex](../assets/images/eyeBlink-jawClench.png)
+
+Now blink your eyes a few times. Each time you blink you should see a strong spike on the EEG DATA montage. It should be most visible in channel 2, the channel for the electrode directly above your eye! This uV spike is a result of the muscles in your forehead that make your eyes blink.
+
+Now try clenching your jaw. You should see a big uV spike in both channels 2 and 7. Each time you clench your jaw, you are introducing a strong EMG artifact into any electrodes on your scalp. If you put your fingers on the side of your head (above your ear) and clench your teeth, you should be able to feel the muscles in your head flexing.
+
+In the photo to the left, you can see what these signals look like the green highlighted region shows a single eye blink. The two blue sections show an extended period of jaw clenching.
+
+It's interesting to note that these signals are not picked up in channel 4. This is because channel 4 is only looking at the potential difference across your body—from your right forearm to your left wrist. As a result the EMG/EEG artifacts being produced on your head (in reference to SRB2) are not visible in this channel.
 
 
 ### 4. Brain waves (Alpha) with OpenBCI!
+
+
 
 ### 5. More on how to use the OpenBCI GUI
