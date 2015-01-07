@@ -1,6 +1,6 @@
 #OpenBCI Daisy Module Assembly
 ##Overview
-The OpenBCI Daisy Module is an expansion card for the OpenBCI system that adds 8 more channels for a total of 16 ADS1299 inputs. The ADS1299 provides for a few different methods for interfacing multiple ICs. OpenBCI 16 channel system is designed for maximum flexibiltiy. The Daisy Module gets power and control signals from the OpenBCI main board. At this point, only the OpenBCI 32bit board firmware supports 16channels. Power is shared via the following pins:
+The OpenBCI Daisy Module is an expansion card for the OpenBCI system that adds 8 more channels for a total of 16 ADS1299 inputs. The ADS1299 provides for a few different methods for interfacing multiple ICs. OpenBCI 16 channel system is designed for maximum flexibility. The Daisy Module gets power and control signals from the OpenBCI main board. At this point, only the OpenBCI 32bit board firmware supports 16channels. Power is shared via the following pins:
 
 * DVDD (3.3V)
 * GND (0V)
