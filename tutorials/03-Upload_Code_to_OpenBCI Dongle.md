@@ -6,7 +6,7 @@ The OpenBCI 8bit and 32bit Boards come with a USB dongle that allows for communi
 * The radio Module on the Dongle is called the **HOST**
 * The radio module on the Board (8bit or32bit) is called the **DEVICE**
 * Host-Device pairs can be programmed to transmit on up to **25** discreet channels
-* The firmware is *slightly* different for the 8bit and 32bit systems
+* The firmware are *important* differences in the 8bit and 32bit systems
 
 This page covers how the radio link works, and how to upload new firmware to the Dongle radio and the Board radio. 
 ##Setting up your system to program OpenBCI Dongle
@@ -37,7 +37,7 @@ This process is the easiest of the two. Before you begin, note that there is a s
 
 ![DongleBack](../assets/images/dongleBack.jpg)
 
-If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions!
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
 
 
 	// place this above the setup()
@@ -49,4 +49,10 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 		 RFduinoGZLL.begin(role);  // start the GZLL stack
 		 // more stuff here
 	}
+
+
+#Uploading Device Firmware to OpenBCI Boards
+
+##Overview
+In order to upload code to the Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breadout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. 
 
