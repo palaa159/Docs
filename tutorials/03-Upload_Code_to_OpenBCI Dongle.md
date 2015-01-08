@@ -36,6 +36,6 @@ The files contained in the RFduino folder are custom builds for OpenBCI by our g
 This process is the easiest of the two. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. Whe the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
 
 ![DongleBack](../assets/images/dongleBack.jpg)
-![dongleReset](../assets/images/dongleReset.jpg)
+![dongleReset](../assets/images/dongleRESET.jpg)
 ![dongleGPIO6](../assets/images/dongleGPIO6.jpg)
 
