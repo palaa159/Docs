@@ -39,6 +39,7 @@ This process is the easiest of the two. Before you begin, note that there is a s
 
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions!
 
+
 	// place this above the setup()
 	#include <RFduinoGZLL.h>  // using the Gazelle Stack
 	device_t role = HOST;  // This is the HOST
