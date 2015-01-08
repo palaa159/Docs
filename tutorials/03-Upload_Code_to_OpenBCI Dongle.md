@@ -39,6 +39,7 @@ This process is the easiest of the two. Before you begin, note that there is a s
 
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the static baggie that it came in. 
 
+
 	// place this above the setup()
 	#include <RFduinoGZLL.h>  // using the Gazelle Stack
 	device_t role = HOST;  // This is the HOST
@@ -49,6 +50,7 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 		 // more stuff here
 	}
 
+
 Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
 
 
@@ -58,5 +60,15 @@ Also, make sure that you use the code that is specific to your board. There are 
 #Uploading Device Firmware to OpenBCI Boards
 
 ##Overview
-In order to upload code to the Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breadout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. 
+In order to upload code to the Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breadout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. This page will go over a few ways of uploading firmware to the OpenBCI Device radios.
+
+Again, there is a small difference between the 8bit and 32bit boards, explained below.
+
+##Program Device Radio with OpenBCI Dongle
+
+The idea here is to use the FTDI chip on the Dongle to bridge USB to Serial for the upload process. There is a bit of prep, and a special program for the Dongle radio so that it doesn't get in the way. 
+
+![dongleWithHeaders](../assets/images/dongleHeaders.jpg)
+
+First, solder the headers that came with your OpenBCI Dongle.
 
