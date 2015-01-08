@@ -85,5 +85,13 @@ On The **8bit Board**, the pins you need to connect to are accessed from the TOP
 
 On the **32bit Board** the pins you need to connect to are accessed from the BOTTOM of the board. Connect the jumper wires to the pads as shown and press tightly while uploading to the Device.
 
+##Program Device Radio with Other FTDI Boards
 
+There are many, many FTDI chip breakouts and cables out there that you can use. Here are a couple examples of popular devices.
+
+![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
+
+RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) 
+
+And, **the USB Shield comes with the 0.1uF capacitor already installed!** 
 
