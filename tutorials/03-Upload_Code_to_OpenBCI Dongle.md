@@ -37,8 +37,7 @@ This process is the easiest of the two. Before you begin, note that there is a s
 
 ![DongleBack](../assets/images/dongleBack.jpg)
 
-If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
-
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the static baggie that it came in. 
 
 	// place this above the setup()
 	#include <RFduinoGZLL.h>  // using the Gazelle Stack
@@ -49,6 +48,11 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 		 RFduinoGZLL.begin(role);  // start the GZLL stack
 		 // more stuff here
 	}
+
+Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
+
+
+	
 
 
 #Uploading Device Firmware to OpenBCI Boards
