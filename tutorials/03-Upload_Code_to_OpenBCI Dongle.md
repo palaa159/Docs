@@ -33,9 +33,19 @@ The files contained in the RFduino folder are custom builds for OpenBCI by our g
 
 ##Uploading Host Firmware to the Dongle
 
-This process is the easiest of the two. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. Whe the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
+This process is the easiest of the two. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. Whe the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle. 
 
 ![DongleBack](../assets/images/dongleBack.jpg)
-![dongleReset](../assets/images/dongleReset.jpg)
-![dongleGPIO6](../assets/images/dongleGPIO6.jpg)
+
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions!
+
+	// place this above the setup()
+	#include <RFduinoGZLL.h>  // using the Gazelle Stack
+	device_t role = HOST;  // This is the HOST
+	
+	void setup(){
+		 RFduinoGZLL.channel = 6;  // use channels 2-25. 1 is same as 0 and 0-8 in normal GZLL library
+		 RFduinoGZLL.begin(role);  // start the GZLL stack
+		 // more stuff here
+	}
 
