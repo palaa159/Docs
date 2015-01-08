@@ -1,4 +1,4 @@
-#Upload Code to OpenBCI
+#Upload Code to OpenBCI Dongle
 
 ##Overview
 The OpenBCI 8bit and 32bit boards have powerful microcontrollers on them which ship with the latest OpenBCI firmware to interface with the on-board ADS1299, Accelerometer, and SD card. This totorial explains how to program the firmware using the OpenBCI Dongle and you PC. If we come out with a firmware upgrade, or if your or someone comes up with a custom program, you should use the following method for your particular board.
