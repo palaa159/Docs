@@ -94,13 +94,16 @@ On the **32bit Board** the pins you need to connect to are accessed from the BOT
 
 There are many, many FTDI chip breakouts and cables out there that you can use. Here are a couple examples of popular devices.
 
-![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
+
 
 ###RFduino
+
+![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
+
 RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) The only thing to change, is that the GPIO6 is not the same as the OpenBCI Dongle. Connect the OpenBCI pin RF RST to the RFduino USB Shield pin RESET. And, you don't need to provide a 0.1uF cap, because **the USB Shield comes with the 0.1uF capacitor already installed!** 
 
 ###FTDI Friend
-Another example would be the FTDI Friend from Adafruit. In this case, the pin labled 'RTS' is the one you want to connect to the RFRST on the OpenBCI boardFollow the instructions on Adafruit's website so ensure that you are sending 3V logic out! These breakouts are awesome, but they can be alittle advanced.
+Another example would be the [FTDI Friend](http://www.adafruit.com/products/284) from Adafruit. In this case, the pin labled 'RTS' is the one you want to connect to the RF RST on the OpenBCI board. We need to ensure that the 'RTS' pin is behaving correctly and that we're sending 3V logic out! [Pic and discription coming soon]. These breakouts are awesome, but they can be alittle advanced.
 
 ![FTDI Friend](../assets/images/FTDI_Friend.jpg)
 
