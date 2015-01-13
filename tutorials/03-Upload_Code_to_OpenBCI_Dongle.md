@@ -24,7 +24,7 @@ Download and install the latest Arduino BETA IDE. This is the one with support f
 Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios) repo from our github, and place it in the proper location depending upon your OS.
 	
 	On a Mac, put the RFduino folder and everything it contains in
-	/Applications/Arduino.app/Contents/Resources/Java/hardware
+	/Applications/Arduino.app/Contents/Resources/Java/hardware/arduino
 	
 	On a Windows, put the RFduino folder and everything it contains in 
 	C\Arduino-1.5.x\hardware\arduino
