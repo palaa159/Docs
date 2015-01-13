@@ -46,6 +46,7 @@ We are using the SDFat library, which limits our file name to the old 8.3 format
 
 ###Data Logging Format
 
+
 	Sample#, 8 ADS Channel Values, 3 Accellerometer/Aux Values
 	
 	8B,028A3C,028A0E,028A86,028A04,0288FB,028AB7,028962,028A42
@@ -58,6 +59,7 @@ We are using the SDFat library, which limits our file name to the old 8.3 format
 	92,028A3B,028A0C,028A84,028A04,0288F1,028ABE,028952,028A37
 	93,028A3D,028A0F,028A7E,0289F6,0288EA,028AC2,02895A,028A35,02A0,FF80,2190
 	94,028A40,028A11,028A76,028A03,0288E4,028ABD,028953,028A38
+
 
 We tried to make it as easy as possible to log the data, given the 512 block limitation. Because it's difficult to manage signed decimal values in a timely fasion, we are writing all of the data in hexadecimal. In the example you can see that each value is separated by a comma. The Accelerometer/Aux values are only written when they get updated. In this example, the Accelerometer is sampling at 50Hz. 
 
