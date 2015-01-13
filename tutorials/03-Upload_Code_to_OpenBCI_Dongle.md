@@ -99,6 +99,7 @@ There are many, many FTDI chip breakouts and cables out there that you can use. 
 ###RFduino
 
 RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) The only thing to change, is that the GPIO6 is not the same as the OpenBCI Dongle. Connect the OpenBCI pin RF RST to the RFduino USB Shield pin RESET. And, you don't need to provide a 0.1uF cap, because **the USB Shield comes with the 0.1uF capacitor already installed!** 
+
 ![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
 
 ###FTDI Friend
