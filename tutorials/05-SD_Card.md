@@ -14,4 +14,5 @@ We've used these two cards in the OpenBCI lab, and they both work great.
 ###Formatting
 ![DiskUtility](../assets/images/DiskUtil_Erase.jpg)
 ![SecureErase](../assets/images/DiskUtil_eraseSecure.jpg)
+
 If you are using a new card, or one that you've had around, first thing you should do is format it. We've found that the most successful formatting method is one that overwrites the card. Mac OS provides this option in the Disk Utility, Erase, Secure Erase options.
