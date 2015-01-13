@@ -77,10 +77,10 @@ The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capa
 
 While you're at the store, might as well pick up some jumper wires and a breadboard, unless you got that kind of thing laying around... Here's a picture of the connections that you need to make. In this case, I am powering the OpenBCI board with the battery pack it came with, and so I only need these four connections to do the upload. I could also power the OpenBCI board with 3V from the Dongle, but that makes the next step abit trickier. In any case, these are the pin connections that you need to make:
 
-* FTDI RX	--->	RF TX
-* FTDI TX	--->	RF RX
+* FTDI RX	-->	RF TX
+* FTDI TX	-->	RF RX
 * GPIO6	-->	0.1uF Cap	-->	RF RST
-* GND	--->	GND
+* GND		-->	GND
 
 ![8bitDeviceConnection](../assets/images/8bitDeviceConnection.jpg)
 
