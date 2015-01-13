@@ -71,11 +71,16 @@ First, solder the headers that came with your OpenBCI Dongle. Then, move the swi
 
 ![0.1uF capacitors](../assets/images/caps.jpg)
 
-The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can get them at your local radio shack, or hobby electronics store. The 0.1uF capacitor needs to be in series between the Dongle RESET pin and the OpenBCI Board RFRST pin. 
+The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can get them at your local radio shack, or hobby electronics store. The 0.1uF capacitor needs to be in series between the Dongle GPIO6 pin and the OpenBCI Board RFRST pin. 
 
-![donglePassThruLashup](../assets/images/DonglePassThruLashup.jpg)
+[picutre coming soon!]
 
-While you're at the store, might as well pick up some jumper wires and a breadboard, unless you got that kind of think laying around... Here's a picture of the connections that you need to make. In this case, I am powering the OpenBCI board with the battery pack, and so I only need these four connections to do the upload. I could also power the OpenBCI board with 3V from the Dongle, but that makes the next step abit trickier.
+While you're at the store, might as well pick up some jumper wires and a breadboard, unless you got that kind of thing laying around... Here's a picture of the connections that you need to make. In this case, I am powering the OpenBCI board with the battery pack it came with, and so I only need these four connections to do the upload. I could also power the OpenBCI board with 3V from the Dongle, but that makes the next step abit trickier. In any case, these are the pin connections that you need to make:
+
+* FTDI RX	--->	RF TX
+* FTDI TX	--->	RF RX
+* GPIO6	-->	0.1uF Cap	-->	RF RST
+* GND	--->	GND
 
 ![8bitDeviceConnection](../assets/images/8bitDeviceConnection.jpg)
 
@@ -94,4 +99,10 @@ There are many, many FTDI chip breakouts and cables out there that you can use. 
 RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) 
 
 And, **the USB Shield comes with the 0.1uF capacitor already installed!** 
+
+Another example would be the FTDI Friend from Adafruit. In this case, the pin labled 'RTS' is the one you want to connect to the RFRST on the OpenBCI boardFollow the instructions on Adafruit's website so ensure that you are sending 3V logic out! These breakouts are awesome, but they can be alittle advanced.
+
+![FTDI Friend](../assets/images/FTDI_Friend.jpg)
+
+
 
