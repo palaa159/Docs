@@ -101,9 +101,10 @@ RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com
 ![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
 
 ###FTDI Friend
+![FTDI Friend](../assets/images/FTDI_Friend.jpg)
 Another example would be the [FTDI Friend](http://www.adafruit.com/products/284) from Adafruit. In this case, the pin labled 'RTS' is the one you want to connect to the RF RST on the OpenBCI board. We need to ensure that the 'RTS' pin is behaving correctly and that we're sending 3V logic out! **[Pic and discription coming soon]** The 'RTS' to RF RST connection will also need a 0.1uF series capacitor. These breakouts are awesome, but they can be alittle advanced.
 
-![FTDI Friend](../assets/images/FTDI_Friend.jpg)
+
 
 ###FTDI Basic Breakout
 Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5V and 3V. By now, you know that you want the [3V Version](https://www.sparkfun.com/products/9873). [pic coming soon] The Basic Breakout isn't as fancy as the FTDI Friend, but you do need to put a 0.1uF capacitor between the DTR pin and the RF RST pin.
