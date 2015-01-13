@@ -111,4 +111,5 @@ Another example would be the [FTDI Friend](http://www.adafruit.com/products/284)
 ###FTDI Basic Breakout
 ![FTDI BasicFront](../assets/images/FTDI_BASICfront.jpg)
 ![FTDI BasicBack](../assets/images/FTDI_BASICback.jpg)
+
 Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5V and 3V. By now, you know that you want the [3V Version](https://www.sparkfun.com/products/9873). [pic coming soon] The Basic Breakout isn't as fancy as the FTDI Friend, but you do need to put a 0.1uF capacitor between the DTR pin and the RF RST pin. Also, if you have a version of this board with a voltage selection on the back, make sure that it has the 3.3V pads connected and the 5V pads cut!
