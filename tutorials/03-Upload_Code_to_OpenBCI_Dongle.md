@@ -75,12 +75,12 @@ The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capa
 
 [picutre coming soon!]
 
-While you're at the store, might as well pick up some jumper wires and a breadboard, unless you got that kind of thing laying around... Here's a picture of the connections that you need to make. In this case, I am powering the OpenBCI board with the battery pack it came with, and so I only need these four connections to do the upload. I could also power the OpenBCI board with 3V from the Dongle, but that makes the next step abit trickier. In any case, these are the pin connections that you need to make:
+While you're at the store, might as well pick up some jumper wires and a breadboard, unless you got that kind of thing laying around... Here's a picture of the connections that you need to make. In this case, I am powering the OpenBCI board with the battery pack it came with, and so I only need these four connections to do the upload. I could also power the OpenBCI board with 3V from the Dongle, but that makes the next step abit trickier. In any case, these are the basic pin connections that you need to make when powering the board with a battery pack:
 
 * FTDI RX	-->	RF TX
 * FTDI TX	-->	RF RX
 * GPIO6	-->	0.1uF Cap	-->	RF RST
-* GND		-->	GND
+* GND	-->	GND
 
 ![8bitDeviceConnection](../assets/images/8bitDeviceConnection.jpg)
 
@@ -96,10 +96,10 @@ There are many, many FTDI chip breakouts and cables out there that you can use. 
 
 ![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
 
-RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) 
+###RFduino
+RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) The only thing to change, is that the GPIO6 is not the same as the OpenBCI Dongle. Connect the OpenBCI pin RF RST to the RFduino USB Shield pin RESET. And, you don't need to provide a 0.1uF cap, because **the USB Shield comes with the 0.1uF capacitor already installed!** 
 
-And, **the USB Shield comes with the 0.1uF capacitor already installed!** 
-
+###FTDI Friend
 Another example would be the FTDI Friend from Adafruit. In this case, the pin labled 'RTS' is the one you want to connect to the RFRST on the OpenBCI boardFollow the instructions on Adafruit's website so ensure that you are sending 3V logic out! These breakouts are awesome, but they can be alittle advanced.
 
 ![FTDI Friend](../assets/images/FTDI_Friend.jpg)
