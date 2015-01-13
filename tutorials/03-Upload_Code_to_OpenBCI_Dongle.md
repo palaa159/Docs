@@ -27,7 +27,7 @@ Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios) repo fr
 	/Applications/Arduino.app/Contents/Resources/Java/hardware/arduino
 	
 	On a Windows, put the RFduino folder and everything it contains in 
-	C\Arduino-1.5.x\hardware\arduino
+	C\Program Files (x86)\Arduino-1.5.x\hardware\arduino
 	
 The files contained in the RFduino folder are custom builds for OpenBCI by our good friends over at RFdigital. Those guys are great! They helped us to squeeze all of the speed we could get out of the RFduinoGZLL library, and also gave us access to 25 discreet channels for OpenBCI boards to work on. ROCK!
 
