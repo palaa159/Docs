@@ -1,4 +1,4 @@
-# Spiderclaw V3 (Depecrecated)
+# Spiderclaw V3
 
 ## COMING SOON (Spring 2015)...
 
