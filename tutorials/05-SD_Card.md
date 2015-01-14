@@ -63,3 +63,22 @@ We tried to make it as easy as possible to log the data, given the 512 block lim
 
 
 The OpenBCI Processing Sketch has the functionality to read and convert these hexadecimal files to 'normal' data files. 
+
+###Converting Hex files in OpenBCI GIU
+**Note: SD file conversion is not supported by the OpenBCI GUI stand-alone application** 
+You must run the OpenBCI_GUI Sketch in Processing for this to work.
+
+We don't currently have a way to recall the file contents from the OpenBCI board over the Radio link to the Dongle. You must remove the SD card from the OpenBCI board and access the files via your computer.
+
+![SelectFilePrompt](../assets/images/GUI_selectSDfile.jpg)
+
+On startup, the OpenBCI GUI will ask you for the data source you want to work with. Select **PLAYBACK(from file)** and click the **SELECT SD FILE** button. 
+
+![SelectSDfile](../assets/images/GUI_selectSDfileWindow.jpg)
+
+Navigate to the OpenBCI generated file, and click **OPEN**. The GUI will convert the file you selected. The resulting file will be placed inside a file called EEG_Data in the Processing OpenBCI GUI Sketch Folder. The file naming convention is **SDconverted-Year-Month-Day-Time.txt**
+
+
+	Documents/Processing/OpenBCI_GUI/data/EEG_Data/SDconverted-2015-01-14_13-35-54.txt
+	
+
