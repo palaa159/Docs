@@ -45,7 +45,8 @@ The OpenBCI Processing sketch allows for selecting recording blocks from 'A' to 
 We are using the SDFat library, which limits our file name to the old 8.3 format (8 charcter file name, three character file type extension). OpenBCI automatically creates SD files with an incrementing counter as part of the file name. For example, the first file that you ever make with your OpenBCI board will be called OBCI_01.TXT and the next one will be called OBCI_02.TXT. The numbering counts up in Hexadecimal until you get to file OBCI_FF.TXT, the next file will be OBCI_00.TXT. So, you have up to 256 discreet files that you can make on the SD card before you overwrite anything. The file name counter values are saved in EEPROM, and incremented every time you create a file. 
 
 ###Data Logging Format
-_
+We tried to make it as easy as possible to log the data, given the 512 block limitation. (A sample of a saved file is to the right) Because it's difficult to manage signed decimal values in a timely fasion, we are writing all of the data in hexadecimal. That also makes it easier to anticipate file size and record time. In the example you can see that each value is separated by a comma. The Accelerometer/Aux values are only written when they get updated or are used (activated). In this example, the Accelerometer is sampling at 50Hz, while the ADS1299 is sampling at 250Hz. 
+
 
 	Sample#, 8 ADS Channel Values, 3 Accellerometer/Aux Values
 	
@@ -60,7 +61,5 @@ _
 	93,028A3D,028A0F,028A7E,0289F6,0288EA,028AC2,02895A,028A35,02A0,FF80,2190
 	94,028A40,028A11,028A76,028A03,0288E4,028ABD,028953,028A38
 
-
-We tried to make it as easy as possible to log the data, given the 512 block limitation. (A sample of a saved file is to the right) Because it's difficult to manage signed decimal values in a timely fasion, we are writing all of the data in hexadecimal. That also makes it easier to anticipate file size and record time. In the example you can see that each value is separated by a comma. The Accelerometer/Aux values are only written when they get updated or are used (activated). In this example, the Accelerometer is sampling at 50Hz, while the ADS1299 is sampling at 250Hz. 
 
 The OpenBCI Processing Sketch has the functionality to read and convert these hexadecimal files to 'normal' data files. 
