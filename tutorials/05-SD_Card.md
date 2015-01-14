@@ -45,8 +45,7 @@ The OpenBCI Processing sketch allows for selecting recording blocks from 'A' to 
 We are using the SDFat library, which limits our file name to the old 8.3 format (8 charcter file name, three character file type extension). OpenBCI automatically creates SD files with an incrementing counter as part of the file name. For example, the first file that you ever make with your OpenBCI board will be called OBCI_01.TXT and the next one will be called OBCI_02.TXT. The numbering counts up in Hexadecimal until you get to file OBCI_FF.TXT, the next file will be OBCI_00.TXT. So, you have up to 256 discreet files that you can make on the SD card before you overwrite anything. The file name counter values are saved in EEPROM, and incremented every time you create a file. 
 
 ###Data Logging Format
-
-     
+_
 
 	Sample#, 8 ADS Channel Values, 3 Accellerometer/Aux Values
 	
