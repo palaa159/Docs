@@ -3,7 +3,7 @@
 ##Overview
 The OpenBCI 8bit and 32bit boards have powerful microcontrollers on them which ship with the latest OpenBCI firmware to interface with the on-board ADS1299, Accelerometer, and SD card. This totorial explains how to program the firmware using the OpenBCI Dongle and you PC. If we come out with a firmware upgrade, or if your or someone comes up with a custom program, you should use the following method for your particular board.
 
-##8bit Firmware Upload How-To
+##8bit Upload How-To
 **You will need:**
 
 * Computer running Arduino IDE
@@ -48,7 +48,7 @@ Select the correct serial port for your OpenBCI Dongle.
 When you are happy with the code, simply press upload to program the OpenBCI 8bit target. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done.
 
 
-##32bit Firmware Upload How-To
+##32bit Upload How-To
 **You will need:**
 
 * Computer running mpide from chipKIT
