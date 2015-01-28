@@ -75,11 +75,7 @@ The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in t
 
 
 
-The version of chipKIT's bootloader that we're using does not have an automatic reset like the 8bit Board does. However, we still need to keep track of when the user wants to upload code to the PIC. To do this, we have the Device monitor a pin on the PIC 
-
-* RFduino pin 5 is connected to PIC pin 12
-
-The PIC pin 12 goes HIGH when it is in bootloader mode. To [upload to 32bit OpenBCI](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to), press the RST button, then press and hold the PROG button while you release the RST button. Takes coordination! Users will activate bootlaoder mode in the chipKIT before pressing the upload button on mpide. 
+The version of chipKIT's bootloader that we're using does not have an automatic reset like the 8bit Board does. However, we still need to keep track of when the user wants to upload code to the PIC. To do this, we have the Device monitor a pin on the PIC. RFduino pin 5 is connected to PIC pin 12(which is also known as the PGC pin to PIC programmers). The PIC pin 12 goes HIGH when it is in bootloader mode. To [upload to 32bit OpenBCI](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to), press the RST button, then press and hold the PROG button while you release the RST button. Takes coordination! Users will activate bootlaoder mode in the chipKIT before pressing the upload button on mpide. When the Device radio feels this pin change, it sends a special character to let the Host (Dongle) know. This is important because we found that uploading to the PIC can be prone to errors if the code is trying to do *anything* else during the process.
 	
 			32bit DEVICE BOOTLOADER MODE CODE
 			
