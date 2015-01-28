@@ -111,7 +111,34 @@ The version of chipKIT's bootloader that we're using does not have an automatic 
   	}
 
 ##Passing OpenBCI commands
+OpenBCI uses ASCII commands to control the board. Setting up the SD card, changing ADS channel settings, turning on and off the data stream, are all done with a simple command set. One of this issues with this simple system, is that sometimes it becomes easy for noise to creep in. We found that during data transmission mode, there would be occasional glitches, where the PIC or ATmega would appear to recieve a command that we did not send (!). In order to get around this, we established what Conor dubbed 'The Burger Protocol'. What this means is that any time the PC or other controlling program sends a command character (meat), the Host RFduino will insert a '+' before and after it (buns). This way, the ATmega or PIC will not get tricked that extraineous noise on the UART is a command. The RFduinos 'know' when a command is being sent, because the OpenBCI commands are always only one character. Anything longer that 1 byte will not be burgerized. In the example at the right, the serialIndex[0] variable holds the number of bytes that are to be sent from the buffer. In this case, it is equal to 2 when there is only 1 bytes sent from the terminal or controlling program, because the first byte in the array will always be reserved for the packet check sum. You can see on the right that the message byte (meat) gets moved from serialBuffer[0][1] to serialBuffer[0][2], and then surrounded by '+' characters (buns). As a part of this process, the command byte gets 'sniffed' by the Host and Device RFduinos to see if the OpenBCI board is entering or leaving Streaming Data Mode. The controlling program sends a 'b' to begin streaming data, and an 's' to stop streaming data. RFduinos need to know this in order to change their behavior and stream the data at high speed.
 
+			8bit EXAMPLE OF BURGER PROTOCOL ON HOST RFduino with COMMAND SNIFFING
+			
+	if(serialIndex[0] == 2){	// single byte messages from uC are special we need to burgerize them
+        testSerialByte(serialBuffer[0][1]);  // could be command to streamData, go sniff it
+        serialBuffer[0][2] = serialBuffer[0][1];  // move the command byte into patty position
+        serialBuffer[0][1] = serialBuffer[0][3] = '+';  // put the buns around the patty
+        serialIndex[0] = 4;                  // now we're sending the burger protocol
+      }       
+      
+      
+    void testSerialByte(char z){
+      switch(z){
+    	case 'b':  // PC wants to stream data
+      		streamingData = true;  // enter streaimingData mode
+      		streamingIdleTimer = millis();
+      		radioIndex = 0;        
+      		tail = 0;             
+      		break;
+    	case 's':  
+      		streamingData = false;  // get out of streamingData mode
+      		radioIndex = 0;         // reset radioBuffer index
+      		break;
+    	default:
+      		break;
+      	} 
+	 }		
 
 ##Streaming Data Mode
 
