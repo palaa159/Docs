@@ -141,7 +141,6 @@ OpenBCI uses ASCII commands to control the board. Setting up the SD card, changi
 	 }		
 
 ##Streaming Data Mode
-
-
+The most sensitive state of the OpenBCI system is during streaming data mode. During this mode, the 2D linear buffer on the Device RFduino is turned into a 2D ring buffer, and both the Device and Host RFduinos will expect no more than one packet at a time, and that packet is expected to be complete (31 data bytes, 1 sample counter byte). The Device code also employs some error checking: if a packet is not complete (31 bytes of data) in a reasonable time (1000uS) then the packet is thrown out, and a new one is started.
 
 
