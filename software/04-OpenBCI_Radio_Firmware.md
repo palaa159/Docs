@@ -36,6 +36,7 @@ The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in t
 
 
 			8bit HOST REMOTE RESET CODE
+			
 	resetPinValue = digitalRead(resetPin);
 	if(resetPinValue != lastResetPinValue){
     	if(resetPinValue == LOW){
@@ -49,6 +50,7 @@ The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in t
     
     
     		8bit DEVICE REMOTE RESET CODE
+    		
     boolean testFirstRadioByte(char z){  // test the first byte of a new radio packet for reset msg
     boolean r;
 	switch(z){
@@ -78,6 +80,39 @@ The version of chipKIT's bootloader that we're using does not have an automatic 
 * RFduino pin 5 is connected to PIC pin 12
 
 The PIC pin 12 goes HIGH when it is in bootloader mode. To [upload to 32bit OpenBCI](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to), press the RST button, then press and hold the PROG button while you release the RST button. Takes coordination! Users will activate bootlaoder mode in the chipKIT before pressing the upload button on mpide. 
+	
+			32bit DEVICE BOOTLOADER MODE CODE
+			
+	PGCpinState = digitalRead(PGCpin);
+	if(PGCpinState != lastPGCpinState){
+  		delay(5); // debounce
+  		if(PGCpinState == LOW){
+    		inBootLoaderMode = false;
+    		RFduinoGZLL.sendToHost(outBoot,1);	// sends '('
+  		}else{
+    		inBootLoaderMode = true;
+    		RFduinoGZLL.sendToHost(inBoot,1);	// sends '9'
+  		}
+  		lastPGCpinState = PGCpinState;
+	}
+	
+			32bit HOST BOOTLOADER MODE CODE
+			
+	if(len == 1){  // radios send messages to eachother in single byte packets
+      if(data[0] == '9') {deviceInBoot = true;} 
+      if(data[0] == '(') {deviceInBoot = false;} 
+      return;
+    }
+    
+    resetPinValue = digitalRead(resetPin);
+  	if(resetPinValue != lastResetPinValue){
+    	if(resetPinValue == LOW){
+      		if(deviceInBoot) {inBootLoaderMode = true;}  // only go inBootLoaderMode when PIC is also
+    	}else{  // FTDI sets the DTR pin low when serial port is open (terminal software, apps, etc)
+      		inBootLoaderMode = false; 
+    	}
+    	lastResetPinValue = resetPinValue;
+  	}
 
 ##Passing OpenBCI commands
 
