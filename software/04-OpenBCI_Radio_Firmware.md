@@ -32,6 +32,9 @@ The other basic thing we need to do is have a way for the RFduinos to communicat
 
 ###8bit Board
 
+The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in the day the reset signal had to be sent manually by pressing the Arduino reset button. Then some smart folks hijacked the DTR pin (legacy RS232 Handshaking pin) from the FTDI USB<>Serial chip to 'automatically' perform the reset function. We wanted to retain this automatic reset feature, so we are using 'special message' function of our code to pass the reset signal to the OpenBCI Board. With the slide switch on our USB Dongle set to GPIO6, the RFduino Host can 'feel' the polarity of the DTR on its pin 6, and then send a special character to the Device. When the Device gets the special character, it resets the ATmega. That makes it possible to upload code from the Arduino IDE and treat the 8bit Board just as if it were an Arduino UNO. 
+
+
 			8bit HOST REMOTE RESET CODE
 	resetPinValue = digitalRead(resetPin);
 	if(resetPinValue != lastResetPinValue){
@@ -64,7 +67,6 @@ The other basic thing we need to do is have a way for the RFduinos to communicat
     return r;     // this might be useful
 	}
 
-The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in the day the reset signal had to be sent manually by pressing the Arduino reset button. Then some smart folks hijacked the DTR pin (legacy RS232 Handshaking pin) from the FTDI USB<>Serial chip to 'automatically' perform the reset function. We wanted to retain this automatic reset feature, so we are using 'special message' function of our code to pass the reset signal to the OpenBCI Board. With the slide switch on our USB Dongle set to GPIO6, the RFduino Host can 'feel' the polarity of the DTR on its pin 6, and then send a special character to the Device. When the Device gets the special character, it resets the ATmega. That makes it possible to upload code from the Arduino IDE and treat the 8bit Board just as if it were an Arduino UNO. 
 
 
 ###32bit Board
