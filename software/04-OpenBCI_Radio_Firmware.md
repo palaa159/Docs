@@ -22,7 +22,7 @@ On a basic level, the radio link that we use needs to act as close to a transpar
 
 That code formed the backbone of the OpenBCI radio firmware. Here's a list of the features:
 
-* Large (640 bytes) 2 Dimensional Linear Buffer
+* Large (640 bytes) 2 Dimensional Linear Buffer serialBuffer[20][32]
 * Time-out on the Serial port to determine the end of Serial message
 * First byte of the message reserved for Packet check-sum
 
