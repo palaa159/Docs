@@ -65,7 +65,7 @@ You can find the latest firmware and libraries on our github repository
 
 	https://github.com/OpenBCI/OpenBCI_32bit
 
-You will need to install these files from our repository into your Documents/arduino/libraries folder
+You will need to install these files from our repository into your Documents/mpide/libraries folder
 
 * SD
 	* Supports writing raw data to on-board SD card
@@ -85,10 +85,10 @@ Before you can upload code correctly to the PIC32 with mpide, you need to make a
 	
 The edit we need to make is to the DSPI0 pin definitions for MISO and MOSI (about line 350 or so). Change the DSPI0 MISO pin to 5, and the DSPI0 MOSI pin to 10. Then save the modified file Board_Defs.h. Now you're ready to start the mpide app, and upload code to the OpenBCI 32bit Board!
 
-	define _DSPI0_MISO_IN	  PPS_IN_SDI1
-	define _DSPI0_MISO_PIN   5 	  // [Changed for OpenBCI was 10] RA1  SDI1 SDI1R = RPA1 = 0
-	define _DSPI0_MOSI_OUT   PPS_OUT_SDO1
-	define _DSPI0_MOSI_PIN   10  // [Changed for OpenBCI was 18] RA4  SDO1 RPA4R = SDO1 = 3
+	#define _DSPI0_MISO_IN	  PPS_IN_SDI1
+	#define _DSPI0_MISO_PIN   5 	  // [Changed for OpenBCI was 10] RA1  SDI1 SDI1R = RPA1 = 0
+	#define _DSPI0_MOSI_OUT   PPS_OUT_SDO1
+	#define _DSPI0_MOSI_PIN   10  // [Changed for OpenBCI was 18] RA4  SDO1 RPA4R = SDO1 = 3
 
 ![ArduinoIDE](../assets/images/mpide.png)
 
