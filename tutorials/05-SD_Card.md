@@ -7,7 +7,7 @@ There are many situations where logging biometric data to local storage may be d
 ![SD_Class](../assets/images/SDclass.jpg)
 ![SD_Cards](../assets/images/MicroSDcards.jpg)
 
-First thing to know is that low-cost cards and slow speed cards are **not** recommended. When shopping for SD cards, make sure to look for high quality (Scan Disk, eg) and high speed (class 10 minimum). Look for the symbols to the right to know you are getting the right kind of card. You will also want to look for a card that has alot of memory. OpenBCI will generate about 1 mega bye of data when it is recording samples at the default rate of 250Hz. That's alot of data!
+First thing to know is that low-cost cards and slow speed cards are **not** recommended. When shopping for SD cards, make sure to look for high quality (Scan Disk, eg) and high speed (class 10 minimum). Look for the symbols to the right to know you are getting the right kind of card. You will also want to look for a card that has alot of memory. OpenBCI will generate about 1 mega bye of data per minute when it is recording 8 channels at the default rate of 250Hz. That's alot of data!
 
 We've used these two cards in the OpenBCI lab, and they both work great. 
 
@@ -42,10 +42,10 @@ The OpenBCI Processing sketch allows for selecting recording blocks from 'A' to 
 
 ##OpenBCI Formatting
 ###File Naming
-We are using the SDFat library, which limits our file name to the old 8.3 format (8 charcter file name, three character file type extension). OpenBCI automatically creates SD files with an incrementing counter as part of the file name. For example, the first file that you ever make with your OpenBCI board will be called OBCI_01.TXT and the next one will be called OBCI_02.TXT. The numbering counts up in Hexadecimal until you get to file OBCI_FF.TXT, the next file will be OBCI_00.TXT. So, you have up to 256 discreet files that you can make on the SD card before you overwrite anything. The file name counter values are saved in EEPROM, and incremented every time you create a file. 
+We are using the SDFat library, which limits our file name to the old 8.3 format (8 charcter file name, three character file type extension). OpenBCI automatically creates SD files with an incrementing counter as part of the file name. For example, the first file that you ever make with your OpenBCI board will be called OBCI_01.TXT and the next one will be called OBCI_02.TXT. The numbering counts up in Hexadecimal until you get to file OBCI_FF.TXT, the next file will be OBCI_00.TXT. So, you have up to 256 discreet files that you can make on the SD card before you overwrite anything. The file name counter values are saved in the Arduino and chipKIT EEPROM, and incremented every time you create a file. 
 
 ###Data Logging Format
-We tried to make it as easy as possible to log the data, given the 512 block limitation. (A sample of a saved file is to the right) Because it's difficult to manage signed decimal values in a timely fasion, we are writing all of the data in hexadecimal. That also makes it easier to anticipate file size and record time. In the example you can see that each value is separated by a comma. The Accelerometer/Aux values are only written when they get updated or are used (activated). In this example, the Accelerometer is sampling at 50Hz, while the ADS1299 is sampling at 250Hz. 
+We tried to make it as easy as possible to log the data, given the 512 block limitation. (A sample of a saved file is to the right) Because it's difficult to manage signed decimal values in a timely fasion, we are writing all of the data in hexadecimal. That also makes it easier to anticipate file size and record time. In the example you can see that each ADS channel value is a 24bit number separated by a comma. The Accelerometer/Aux values are 16bit, and only written when they get updated or are used (activated). In this example, the Accelerometer is sampling at 50Hz, while the ADS1299 is sampling at 250Hz. 
 
 
 	Sample#, 8 ADS Channel Values, 3 Accellerometer/Aux Values
