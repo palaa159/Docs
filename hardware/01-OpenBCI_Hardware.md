@@ -1,6 +1,6 @@
 # OpenBCI Hardware Documentation
 
-The OpenBCI PCBs were created in Design Spark, a free PCB capture program. You can find a link to download Design Spark in our [V3 design files repository](https://github.com/OpenBCI/V3_Hardware_Design_Files) where you will find all of the .sch and .pcb files
+The OpenBCI PCBs were created in Design Spark, a free PCB capture program. You can find a link to download Design Spark in our [V3 design files repository](https://github.com/OpenBCI/V3_Hardware_Design_Files) where you will find all of the .sch and .pcb files. There are parts in the BOMs below that are not explicitly specified. For example, the passives (Rs and Cs) are all standard easy to find components. Thin film for the Rs, and MLCC X7R for the Cs. The battery connector is a standard JST type two position (with polarity key at the **TOP**), and the SD card holder that we are using is [ST-TF-003A](https://octopart.com/st-tf-003a-suntech-29424852).
 
 ## OpenBCI 8bit Board
 
