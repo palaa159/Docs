@@ -71,8 +71,6 @@ You will need to install these files from our repository into your Documents/mpi
 	* Supports writing raw data to on-board SD card
 * OpenBCI_32
 	* The OpenBCI 32bit Library
-* OpenBCI_32_SD
-	* The mpide code for OpenBCI 32bit Board
 	
 Before you can upload code correctly to the PIC32 with mpide, you need to add a file to the mpide application folder so that you can select the OpenBCI 32 board. In the files you downloaded from our github there is a folder called mpide_Variant There you will find the folder OpenBCI. Move the entire folder called OpenBCI into the variants folder inside the mpide application. Here's where you can find it on different operating systems:
 
@@ -85,7 +83,7 @@ Before you can upload code correctly to the PIC32 with mpide, you need to add a 
 	
 ![ArduinoIDE](../assets/images/mpide.png)
 
-Move the file OpenBCI_32bit_SD.pde into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
+Move the entire folder called OpenBCI_32bit_SD into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
 
 ![selectBoardDP32](../assets/images/BoardSelect32.png)
 
