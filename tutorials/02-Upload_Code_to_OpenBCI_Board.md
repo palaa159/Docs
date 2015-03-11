@@ -83,7 +83,7 @@ Before you can upload code correctly to the PIC32 with mpide, you need to add a 
 	
 ![ArduinoIDE](../assets/images/mpide.png)
 
-Move the entire folder called OpenBCI_32bit_SD into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
+Next, move the entire folder called OpenBCI_32bit_SD into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
 
 ![selectBoardDP32](../assets/images/BoardSelect32.png)
 
