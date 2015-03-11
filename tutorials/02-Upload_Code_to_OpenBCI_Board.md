@@ -74,29 +74,22 @@ You will need to install these files from our repository into your Documents/mpi
 * OpenBCI_32_SD
 	* The mpide code for OpenBCI 32bit Board
 	
-Before you can upload code correctly to the PIC32 with mpide, you need to make a change to a file inside the mpide application. **The 32bit code won't work unless you do this!** This can be scary if you've never altered application files before, but don't worry. If you really screw things up, you can just download a clean copy of the mpide again! The file we need to change is called Board_Defs.h, and it is located in a specific place for different operating systems:
+Before you can upload code correctly to the PIC32 with mpide, you need to add a file to the mpide application folder so that you can select the OpenBCI 32 board. In the files you downloaded from our github there is a folder called mpide_Variant There you will find the folder OpenBCI. Move the entire folder called OpenBCI into the variants folder inside the mpide application. Here's where you can find it on different operating systems:
 
 * The file is located here on a MAC
-	* mpide.app/Contents/Resources/Java/hardware/pic32/variants/DP32/Board_Defs.h
-* It's similar on Windows
-	* C/Program Files (86)/mpide/hardware/pic32/variants/DP32/Board_Defs.h
-* On Linux, find the app where you put it and go to 
-	* mpide/hardware/pic32/variants/DP32/Board_Defs.h
+	* mpide.app/Contents/Resources/Java/hardware/pic32/variants
+* It's similar on a Windows
+	* C/Program Files (86)/mpide/hardware/pic32/variants
+* On a Linux, find the app where you put it and go to 
+	* mpide/hardware/pic32/variants
 	
-The edit we need to make is to the DSPI0 pin definitions for MISO and MOSI (about line 350 or so). Change the DSPI0 MISO pin to 5, and the DSPI0 MOSI pin to 10. Then save the modified file Board_Defs.h. Now you're ready to start the mpide app, and upload code to the OpenBCI 32bit Board!
-
-	#define _DSPI0_MISO_IN	  PPS_IN_SDI1
-	#define _DSPI0_MISO_PIN   5 	  // [Changed for OpenBCI was 10] RA1  SDI1 SDI1R = RPA1 = 0
-	#define _DSPI0_MOSI_OUT   PPS_OUT_SDO1
-	#define _DSPI0_MOSI_PIN   10  // [Changed for OpenBCI was 18] RA4  SDO1 RPA4R = SDO1 = 3
-
 ![ArduinoIDE](../assets/images/mpide.png)
 
 Move the file OpenBCI_32bit_SD.pde into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
 
 ![selectBoardDP32](../assets/images/BoardSelect32.png)
 
-Select chipKIT DP32 from the Board drop-down menu.
+Select OpenBCI 32 from the Board drop-down menu.
 
 ![selectSerialPort](../assets/images/SerialPortSelect32.png)
 
