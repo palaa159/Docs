@@ -69,6 +69,7 @@ Once it's finished downloading, unzip it and place the Processing .app or .exe w
  b. Unzip the download. It should be called OpenBCI_Processing-master after unzip/extract it.
  
  c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, this directory's path is: 
+ 
  	* On Windows: c:/My Documents/Processing/
  	* On MAC: /Users/your_user_name/Documents/Processing/
  	* On Linux: /Home/your_user_name/sketchbook/
