@@ -7,7 +7,7 @@
 
  1. OpenBCI board
  2. OpenBCI Dongle
- 3. OpenBCI Electrode Starter Kit (ESK) or your own electrodes
+ 3. OpenBCI Electrode Starter Kit (ESK) or your own electrodes (not pictured)
  4. 6V AA battery pack & (x4) AA batteries (batteries not included)
  5. (x4) plastic feet for board stabilization
 
@@ -85,6 +85,10 @@ c. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then h
 ![FTDI Install](../assets/images/FTDI.png)
 
 The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
+
+![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
+
+**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window.
 
 ### 2. Plug in your OpenBCI USB Dongle
 
