@@ -56,11 +56,11 @@ Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of
 
 **Before I continue, note that you don't need to write any code for this tutorial, though you will see all of the code that makes the OpenBCI GUI run!** 
 
-Processing is an open-source creative coding framework based on Java. If you are familiar with the Arduino environment, you'll feel right at home; the Processing IDE is nearly identical. If not, no worries! 
-
-First, go to the [Processing Downloads page](https://www.processing.org/download/?processing) and download the latest stable release for your operating system.
+First, go to the [Processing Downloads page](https://www.processing.org/download/?processing) and download the latest stable release for your operating system. Processing is an open source creative coding framework based on Java. If you are familiar with the Arduino environment, you'll feel right at home; the Processing IDE is nearly identical. If not, no worries! 
 
 Once it's finished downloading, unzip it and place the Processing .app or .exe where you typically place your applications or programs. 
+
+For more information on Processing or for debugging the steps in the next section, check out the [Processing Tutorials page](https://www.processing.org/tutorials/).
 
 ### 2. Download the OpenBCI GUI Processing code
 
