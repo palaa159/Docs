@@ -68,12 +68,12 @@ Once it's finished downloading, unzip it and place the Processing .app or .exe w
  
  b. Unzip the download. It should be called OpenBCI_Processing-master after unzip/extract it.
  
- c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, this directory's path is:
-    * On Windows: c:/My Documents/Processing/
-    * On MAC: /Users/your_user_name/Documents/Processing/
-    * On Linux: /Home/your_user_name/sketchbook/
+ c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, this directory's path is: 
+ 	* On Windows: c:/My Documents/Processing/
+ 	* On MAC: /Users/your_user_name/Documents/Processing/
+ 	* On Linux: /Home/your_user_name/sketchbook/
 
-	**Note:** this directory should be called "Processing" on Windows and Mac, and "Sketchbook" on Linux. This directory should already have a subdirectory called "libraries." If it does not, create the subdirectory.
+**Note:** this directory should be called "Processing" on Windows and Mac, and "Sketchbook" on Linux. This directory should already have a subdirectory called "libraries." If it does not, create the subdirectory.
 
  d. Now, from the OpenBCI_Processing-master directory that you downloaded and unzipped in parts (a) and (b) above, copy the OpenBCI_GUI directory and paste it in the Processing sketchbook directory that you located in part (c) above.
  
