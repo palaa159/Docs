@@ -70,9 +70,9 @@ Once it's finished downloading, unzip it and place the Processing .app or .exe w
  
  c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, this directory's path is: 
  
-##### On Windows: c:/My Documents/Processing/
-##### On MAC: /Users/your_user_name/Documents/Processing/
-##### On Linux: /Home/your_user_name/sketchbook/
+* On Windows: c:/My Documents/Processing/
+* On MAC: /Users/your_user_name/Documents/Processing/
+* On Linux: /Home/your_user_name/sketchbook/
 
 **Note:** this directory should be called "Processing" on Windows and Mac, and "Sketchbook" on Linux. This directory should already have a subdirectory called "libraries." If it does not, create the subdirectory.
 
