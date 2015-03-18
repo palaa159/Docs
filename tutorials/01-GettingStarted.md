@@ -48,34 +48,58 @@ Both the 8bit board and the 32 bit boards have specific input voltage ranges. Th
 
 Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
-## II. Download & Install the OpenBCI GUI
+## II. Download/Run Processing & the OpenBCI GUI Code
 
-### 1. Download the OpenBCI GUI App
-
-![OpenBCI GUI](../assets/images/GUI.jpg)
-
-From the links below or from our [downloads page], get the latest version of the OpenBCI GUI]. There are versions for [Mac OS X](http://ultracortex.com/downloads/application.macosx.zip), [Win32](http://ultracortex.com/downloads/application.windows32.zip), [Win64](http://ultracortex.com/downloads/application.windows64.zip), [Linux32](http://ultracortex.com/downloads/application.linux32.zip), and [Linux64](http://ultracortex.com/downloads/application.linux64.zip). If you’re having issues installing or launching the app, check out (or start) the [Forum section](http://openbci.com/index.php/forum/#/categories/software) on this.
-
-### 2. Or run it from Processing (for developers)
+### 1. Download Processing for your operating system
 
 ![Processing IDE](../assets/images/Processing.png)
 
-You can also launch the application (and check out all of the code that makes it work) from the [Processing IDE](https://processing.org/). Processing is a very powerful Java-based creative coding framework with lots of great graphics libraries. The latest version of the code is always kept in our [OpenBCI_Processing](https://github.com/OpenBCI/OpenBCI_Processing) Github repo. You can also check out other branches of the code, where we’ll be trying out new features. For more information on working with the Processing code, check out the [Up & Running w/ The OpenBCI GUI](http://docs.openbci.com/03-OpenBCI_GUI) docs page.
+**Before I continue, note that you don't need to write any code for this tutorial, though you will see all of the code that makes the OpenBCI GUI run!** 
 
+Processing is an open-source creative coding framework based on Java. If you are familiar with the Arduino environment, you'll feel right at home; the Processing IDE is nearly identical. If not, no worries! 
 
-### 3. Launch the OpenBCI GUI
+First, go to the [Processing Downloads page](https://www.processing.org/download/?processing) and download the latest stable release for your operating system.
 
-![Launch GUI](../assets/images/LaunchGUI.png)
+Once it's finished downloading, unzip it and place the Processing .app or .exe where you typically place your applications or programs. 
 
-a. Double-click the **OpenBCI_GUI app** icon (or run the .exe file if you're on Windows) and the GUI should launch without any issues. If you're encountering an error here, please refer to the [Forum section](http://openbci.com/index.php/forum#/categories/software) on this.
+### 2. Download the OpenBCI GUI Processing code
+
+ a. [Download the necessary files & directories](https://github.com/OpenBCI/OpenBCI_Processing/archive/master.zip) OR [clone the OpenBCI/OpenBCI_Processing repo](github-mac://openRepo/https://github.com/OpenBCI/OpenBCI_Processing) to your desktop (do this only if you're familiar with Github).
+ 
+ b. Unzip the download. It should be called OpenBCI_Processing-master after unzip/extract it.
+ 
+ c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, this directory's path is:
+    * On Windows: c:/My Documents/Processing/
+    * On MAC: /Users/your_user_name/Documents/Processing/
+    * On Linux: /Home/your_user_name/sketchbook/
+
+	**Note:** this directory should be called "Processing" on Windows and Mac, and "Sketchbook" on Linux. This directory should already have a subdirectory called "libraries." If it does not, create the subdirectory.
+
+ d. Now, from the OpenBCI_Processing-master directory that you downloaded and unzipped in parts (a) and (b) above, copy the OpenBCI_GUI directory and paste it in the Processing sketchbook directory that you located in part (c) above.
+ 
+ e. Finally, copy the controlP5 & gwoptics directories from OpenBCI_Processing-master/libraries and paste them into the libraries directory of your Processing sketchbook.
+ 
+ f. Now everything is where it should be!
+ 
+### 3. Open Processing & launch the OpenBCI GUI
+
+a. If Processing is currently open, close it. The new libraries you added won't be recognized until you restart the application.
+
+![Processing IDE](../assets/images/OpenBCI_GUI_Processing.png)
+
+b. Double-click any of the .pde files in the OpenBCI_GUI directory and all of the OpenBCI GUI code should open in the Processing IDE, as seen on the right.
+
+![Play Button](../assets/images/playButton.png)
+
+c. Click the "run" button on the top left of the IDE, and the code should run! If it does not, make sure you installed your libraries correctly and that are using the latest version of Processing. If you continue to have issues, please refer to the [software section](http://www.openbci.com/index.php/forum/#/categories/software) of our forum for help.
 
 ![Synthetic](../assets/images/Synthetic.png)
 
-b. Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator.
+d. Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator.
 
 ![Start Data Stream](../assets/images/StartDataStream.png)
 
-c. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
+e. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
 ## III. Prepare your OpenBCI Hardware
 
@@ -88,7 +112,7 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 ![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
 
-**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window.
+**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
 ### 2. Plug in your OpenBCI USB Dongle
 
