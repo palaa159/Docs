@@ -41,7 +41,7 @@ Slide switch is power for the board. The slide switch has three positions:
 * OFF disconnects the battery input 
 * PC does NOT activate pull-up on RFduino pin 4
 
-    **NOTE: BLE|PC selection is NOT implememnted!**
+    **NOTE: BLE|PC selection is NOT implemented!**
 
 Swtiching either BLE or PC will produce the same result. The option is available for future development... 
 
@@ -101,7 +101,7 @@ Slide switch is power for the board. The slide switch has three positions:
 * OFF disconnects the battery input 
 * PC does NOT activate pull-up on RFduino pin 4
 
-    **NOTE: BLE|PC selection is NOT implememnted!**
+    **NOTE: BLE|PC selection is NOT implemented!**
 
 Swtiching either BLE or PC will produce the same result. The option is available for future development... 
 
