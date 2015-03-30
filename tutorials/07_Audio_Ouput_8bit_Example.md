@@ -48,7 +48,7 @@ On to the code! First, let's initialize some variables. Note that I'm making ali
 	
 	void setup(){
 		// do stuff....
-		// flashing LEDs at different frequencies. Period needs clean /4 to work!		pinMode(Speaker,OUTPUT);
+		pinMode(Speaker,OUTPUT);
 		// do other stuff...
 	}
 		
