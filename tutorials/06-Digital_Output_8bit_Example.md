@@ -60,7 +60,7 @@ On to the code! First, let's initialize some variables. Note that I'm making ali
 The OpenBCI board samples incoming data at a rate of 250 samples per second. That makes for 4mS (0.004 seconds) between samples. I'm using this sample acquisition rate to accurately time the rate of our LED flashes. By doing this, we are not able to assign an arbitrary frequency to the LED flashes. Any frequency we use must have a period that is divisible by 4mS. This should be close enough for all but the most exacting applications To do this in the loop(), when the OpenBCI board is in streamingData mode, we use a modulo to find the toggle time of each LED. When you do modulo on a number, it returns the remainder, in the case of the green LED, in order to flash at 5Hz, we have to toggle the LED every 25 samples. Here's the equation to find the number of samples:
 
 
-* Sample Counts = ((1/freq)/2)/4
+* Sample Counts = 1000x((1/freq)/2)/4
 
 Where freq is the target LED flashing frequency.
 
