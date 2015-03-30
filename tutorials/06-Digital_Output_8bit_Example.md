@@ -33,7 +33,7 @@ We have broken out the following Arduino pins:
 
 ![2 LEDs Schematic](../assets/images/2_LEDs_Schm.jpg)
 
-![2 LEDs on a Breadboard](../assets/images/8bit_2_LEDs.jpg)
+![2 LEDs on a Breadboard](../assets/images/8bit_2_LEDs.JPG)
 
 
 All of these pins default to Analog inputs. For this tutorial, we will be using two Digital outputs connected to LEDs. Here's a simple schematic, and photo of the breadboard setup. It's pretty straightforward. You can place the resistors either before or after the LEDs, it doesn't matter, just make sure they are in series!
