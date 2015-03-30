@@ -34,7 +34,7 @@ We have broken out the following Arduino pins:
 
 ![Speaker Schematic](../assets/images/Speaker_Schm.jpg)
 
-![2 LEDs on a Breadboard](../assets/images/8bit_Speaker.jpg)
+![2 LEDs on a Breadboard](../assets/images/8bit_Speaker.JPG)
 
 
 All of these pins default to Analog inputs. For this tutorial, we will be using one Digital output connected to our speaker. Here's a simple schematic, and photo of the breadboard setup. It's pretty straightforward. You can place the resistor either before or after the speaker, it doesn't matter, just make sure they are in series! Do not ignore or bypass the capacitor! It is doing an important job protecting the speaker from DC current, which could potentially damage it's coil. The value of the cap is not critical (1uF ~ 10uF), but it really should be there.
