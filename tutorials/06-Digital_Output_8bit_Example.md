@@ -48,7 +48,8 @@ On to the code! First, let's initialize some variables. Note that I'm making ali
 	
 	void setup(){
 		// do stuff....
-		// flashing LEDs at different frequencies. Period needs clean /4 to work!		pinMode(GRN,OUTPUT);  // flash at 5Hz | 200mS period | switch pin state every 25 samples
+		// flashing LEDs at different frequencies. Period needs clean /4 to work!
+		pinMode(GRN,OUTPUT);  // flash at 5Hz | 200mS period | switch pin state every 25 samples
 		pinMode(RED,OUTPUT);  // flash at ~7Hz | 136mS period | switch pin state every 17 samples
 		REDstate = GRNstate = true; // start with the lights on
 		digitalWrite(GRN,GRNstate);
