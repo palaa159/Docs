@@ -15,7 +15,7 @@ The OpenBCI 8bit and 32bit boards have powerful microcontrollers on them which s
 Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. That way the DTR reset signal will get passed over-air to the ATmega328. If it's on the other side, it will try to program the Dongle-mounted RFduino!  
 You can find the latest firmware and libraries on our github repository
 
-	https://github.com/OpenBCI/OpenBCI_8bit
+https://github.com/OpenBCI/OpenBCI_8bit
 
 You will need to install these files from our repository into your Documents/arduino/libraries folder
 
@@ -59,13 +59,14 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 
 Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! You can find the latest version of the mpide from chipKit here
 
-	http://chipkit.net/started/install-chipkit-software/
+http://chipkit.net/started/install-chipkit-software/
 	
 You can find the latest firmware and libraries on our github repository
 
-	https://github.com/OpenBCI/OpenBCI_32bit
+https://github.com/OpenBCI/OpenBCI_32bit
 
-You will need to install these files from our repository into your Documents/mpide/libraries folder
+You will need to install these files from our repository into your Documents/mpide/libraries folder.
+If there is no libraries folder in the mpide folder, create one.
 
 * SD
 	* Supports writing raw data to on-board SD card
