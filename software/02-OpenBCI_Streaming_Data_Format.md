@@ -107,6 +107,7 @@ For the sample rate, we set the default rate to 250 Hz. Faster rates are support
 
 For the scale factor, this is the multiplier that you use to convert the EEG values from “counts” (the int32 number that you parse from the binary stream) into scientific units like “volts”. By default, our Arduino sketch running on the OpenBCI board sets the ADS1299 chip to its maximum gain (24x), which results in a scale factor of 0.02235 microVolts per count. Because the gain is user-configurable (24x, 12x, 8x, 6x, 4x, 2x, 1x), the scale factor will be different. If the gain is changed, the equation that you should use for determining the scale factor is:
 
+
 	Scale Factor (Volts/count) = 4.5 Volts / gain / (2^23 - 1);
 
 Note that 2^23 might be an unexpected term in this equation considering that the ADS1299 is a 24-bit device. This equation is from the ADS1299 data sheet, specifically it is from the text surrounding Table 7. This scale factor has also been confirmed experimentally using known calibration signals.
