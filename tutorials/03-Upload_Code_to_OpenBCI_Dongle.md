@@ -14,7 +14,7 @@ This page covers how the radio link works, and how to upload new firmware to the
 **You will need:**
 
 * Computer(Windows or Mac or Other)
-* Latest [Arduino BETA IDE](http://arduino.cc/en/Main/Software#toc3)
+* Latest [Arduino IDE Version 1.5.8](http://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x)
 * Custom RFduino libraries for OpenBCI
 * A 0.1uF capacitor (see Device section below)
 
