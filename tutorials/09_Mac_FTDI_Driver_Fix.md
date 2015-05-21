@@ -9,7 +9,6 @@ This document details how to edit the config data of the **Info.plist** file of 
 
 This tutorial has been verified to work with the following MAC OS X versions:
 
-- 10.8
 - 10.9
 - 10.10
 
