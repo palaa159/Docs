@@ -14,7 +14,7 @@ This tutorial has been verified to work with the following MAC OS X versions:
 - 10.10
 
 
-### Step 1: open terminal
+### Step 1: open Terminal
 
 ![image](../assets/images/Terminal.png)
 
