@@ -35,7 +35,7 @@ That will wipe your hard drive.
 If you are new to Terminal, it is best to simply copy and paste the lines of code below into your terminal window.
 
 
-### Step 1: Remove any existing FTDI drivers & reboot
+### Step 2: Remove any existing FTDI drivers & reboot
 
 Remove the FTDI [kernel extension](http://forums.macnn.com/79/developer-center/81624/what-is-a-kext-file/) (.kext) from your machine. You might not have it  installed already. If you do not, skip this step.
 
@@ -53,7 +53,7 @@ sudo rm -rf /Library/Extensions/FTDIUSBSerialDriver.kext
 
 After removing all exisitng FTDI drivers, reboot your computer before continuing.
 
-### Step 2: get the FTDI driver (2.2.18, not 2.3)
+### Step 3: get the FTDI driver (2.2.18, not 2.3)
 
 Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm). The latest FTDI VCP driver for MAC OS X (version 2.3) does not work yet for this fix.
 
@@ -61,7 +61,7 @@ Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/
 
 The downloaded .dmg comes with two installers in it. You only need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**. Don't worry about FTDIUSBSerialDriver_10_3.
 
-### Step 3: enable dev mode
+### Step 4: enable dev mode
 
 Prior to making edits to the kext file, you must enable kext dev mode:
 
@@ -69,30 +69,30 @@ Prior to making edits to the kext file, you must enable kext dev mode:
 sudo nvram boot-args="kext-dev-mode=1"
 ```
 
-### Step 4: reboot your computer
+### Step 5: reboot your computer
 
 After re-installing the FTDI driver and enabling kext dev mode, reboot your computer once more to ensure that everything has taken effect.
 
-### Step 5: plug in your dongle
+### Step 6: plug in your dongle
 
 Plug in your dongle and ensure that the switch is set to GPIO6 (not RESET). 
 
 ![image](../assets/images/dongleConnection.png)
 
-### Step 6: unload the FTDI kernel extension 
+### Step 7: unload the FTDI kernel extension 
 
 ```
 sudo kextunload /System/Library/Extensions/FTDIUSBSerialDriver.kext
 ```
 
-### Step 7: make sure it's unloaded
+### Step 8: make sure it's unloaded
 
 ```
 kextstat | grep FTDI
 ```
 If everthing is good, nothing should print after running this command.
 
-### Step 8: open the Info.plist file:
+### Step 9: open the Info.plist file:
 
 ```
 sudo emacs /System/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist
@@ -103,7 +103,7 @@ sudo emacs /System/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.pli
 sudo vim /System/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist
 ```
 
-### Step 9: edit the config data
+### Step 10: edit the config data
 
 Now add the new config data for the "FT X Series" as seen below. The "FT X Series" key is about 1/3 of the way through the Info.plist file and all of the keys are in alphabetical order. Scroll down to 'F'!
 
@@ -163,7 +163,7 @@ Now add the new config data for the "FT X Series" as seen below. The "FT X Serie
 ```
 **Note:** We also rename the port name to OpenBCI because it's easier to spot if the board is connected or not.
 
-### Step 10: save & close
+### Step 11: save & close
 
 In emacs:
 
@@ -185,12 +185,12 @@ Hit the **[esc]** key to go into command mode.
 Then type **:wq** to save and quit.
 
 
-### Step 11: reload the kernel extension
+### Step 12: reload the kernel extension
 ```
 sudo kextload /System/Library/Extensions/FTDIUSBSerialDriver.kext
 ```
 
-### Step 12: make sure it's loaded
+### Step 13: make sure it's loaded
 ```
 kextstat | grep FTDI
 ```
@@ -200,7 +200,7 @@ You should get a response that looks something like this:
   145    0 0xffffff7f82dce000 0x8000     0x8000     com.FTDI.driver.FTDIUSBSerialDriver (2.2.18) <118 37 5 4 3 1>
 ```
 
-### Step 13: have fun with real time data 
+### Step 14: have fun with real time data 
 
 Open the OpenBCI Processing GUI (or other software), connect to your device, and begin streaming the data. 
 
