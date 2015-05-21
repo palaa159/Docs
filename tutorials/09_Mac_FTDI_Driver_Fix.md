@@ -13,6 +13,29 @@ This tutorial has been verified to work with the following MAC OS X versions:
 - 10.9
 - 10.10
 
+
+### Step 1: open terminal
+
+![image](../assets/images/Terminal.png)
+
+To open Terminal, go to: 
+
+/Applications/Utilities/Terminal
+
+All of the lines of code you see for the remainder of this tutorial you will run from the terminal command line. If you are unfamiliar with using terminal, check out this [Introduction to the Terminal in Mac OS X](https://www.youtube.com/watch?v=yIY3iPDVUBg) Youtube tutorial.
+
+***!!! WARNING !!!*** 
+
+Be very careful when using **sudo rm**. It is used to remove files from your system. Never ever enter the command: 
+
+```
+sudo rm -rf
+```
+That will wipe your hard drive.
+
+If you are new to terminal, it is best to simply copy and paste the lines of code below into your terminal window.
+
+
 ### Step 1: Remove any existing FTDI drivers & reboot
 
 Remove the FTDI [kernel extension](http://forums.macnn.com/79/developer-center/81624/what-is-a-kext-file/) (.kext) from your machine. You might not have it  installed already. If you do not, skip this step.
@@ -35,7 +58,7 @@ After removing all exisitng FTDI drivers, reboot your computer before continuing
 
 Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm). The latest FTDI VCP driver for MAC OS X (version 2.3) does not work yet for this fix.
 
-Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and [64-bit](http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg).
+Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and [64-bit](http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) processors. Most likely you are working with 64-bit.
 
 The downloaded .dmg comes with two installers in it. You only need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**. Don't worry about FTDIUSBSerialDriver_10_3.
 
