@@ -35,6 +35,8 @@ After removing all exisitng FTDI drivers, reboot your computer before continuing
 
 Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm). Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and [64-bit](http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg).
 
+The downloaded .dmg comes with two installers in it. You only need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**. Don't worry about FTDIUSBSerialDriver_10_3.
+
 The latest FTDI driver (2.3) does not work yet for this fix.
 
 ### Step 3: enable dev mode
