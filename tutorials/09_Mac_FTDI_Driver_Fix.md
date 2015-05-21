@@ -145,10 +145,14 @@ Add config data for the "FT X Series" key like this:
 
 In emacs:
 
+To save:
 **[CTRL] + x**
-
 followed by 
+**[CTRL] + s**
 
+To close emacs:
+**[CTRL] + x**
+followed by 
 **[CTRL] + c**
 
 ---------------
