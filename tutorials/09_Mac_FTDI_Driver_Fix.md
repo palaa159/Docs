@@ -83,7 +83,7 @@ sudo vim /System/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist
 
 ### Step 9: edit the config data
 
-Add config data for the "FT X Series" key like this:
+Now add the new config data for the "FT X Series" as seen below. The "FT X Series" key is about 1/3 of the way through the Info.plist file and all of the keys are in alphabetical order. Scroll down to 'F'!
 
 **BEFORE**
 
