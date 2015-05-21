@@ -22,18 +22,18 @@ To open Terminal, go to:
 
 /Applications/Utilities/Terminal
 
-All of the lines of code you see for the remainder of this tutorial you will run from the terminal command line. If you are unfamiliar with using terminal, check out this [Introduction to the Terminal in Mac OS X](https://www.youtube.com/watch?v=yIY3iPDVUBg) Youtube tutorial.
+All of the lines of code you see below you will run from the Terminal command line. If you are unfamiliar with using Terminal, check out this [Introduction to the Terminal in Mac OS X](https://www.youtube.com/watch?v=yIY3iPDVUBg) Youtube tutorial.
 
 ***!!! WARNING !!!*** 
 
-Be very careful when using **sudo rm**. It is used to remove files from your system. Never ever enter the command: 
+Be very careful when using the **sudo rm** command. It is used to remove files from your system. Never EVER enter the following command by itself, without specifying a filepath: 
 
 ```
 sudo rm -rf
 ```
 That will wipe your hard drive.
 
-If you are new to terminal, it is best to simply copy and paste the lines of code below into your terminal window.
+If you are new to Terminal, it is best to simply copy and paste the lines of code below into your terminal window.
 
 
 ### Step 1: Remove any existing FTDI drivers & reboot
