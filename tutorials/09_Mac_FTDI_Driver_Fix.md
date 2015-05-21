@@ -159,11 +159,8 @@ followed by
 
 In vim:
 
-**[esc]**
-
-followed by 
-
-**:wq**
+Hit the **[esc]** key to go into command mode.
+Then type **:wq** to save and quit.
 
 
 ### Step 11: reload the kernel extension
