@@ -25,15 +25,9 @@ All of the lines of code you see below you will run from the Terminal command li
 
 ***!!! WARNING !!!*** 
 
-Be very careful when using the **sudo rm** command. It is used to remove files from your system. Never EVER enter the following command by itself, without specifying a filepath: 
-
-```
-sudo rm -rf
-```
-That will wipe your hard drive.
+Be very careful when using the **sudo rm** command. It is used to remove files from your system. Never EVER enter the following command by itself, without specifying a filepath. That will wipe your hard drive.
 
 If you are new to Terminal, it is best to simply copy and paste the lines of code below into your terminal window.
-
 
 ### Step 2: Remove any existing FTDI drivers & reboot
 
@@ -59,7 +53,7 @@ Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VC
 
 Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and [64-bit](http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) processors. Most likely you are working with 64-bit.
 
-The downloaded .dmg comes with two installers in it. You only need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**. Don't worry about FTDIUSBSerialDriver_10_3.
+The downloaded .dmg comes with two installers in it. **FTDIUSBSerialDriver_10_3** for OS X 10.3 and **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7** for the rest. You most likely need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**.
 
 ### Step 4: enable dev mode
 
