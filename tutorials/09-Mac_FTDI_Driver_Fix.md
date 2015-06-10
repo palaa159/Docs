@@ -1,5 +1,5 @@
 
-# Fixing FTDI InBufferSize for OS X
+#Fixing FTDI InBufferSize for OS X
 
 ### Summary
 
