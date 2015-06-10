@@ -42,7 +42,7 @@ To create a challenge:
 
 1. First, you must have a verified OpenBCI Community account and a [Github](https://github.com/) account
 * Create a Github repo that will host the code, assets, and other content for your challenge
-* Go to the lhttp://openbci.com/community/challenges/ and click the [“Start A New Challenge”](http://openbci.com/community/wp-admin/post-new.php?post_type=challenge) button
+* Go to the [Challenges Page](http://openbci.com/community/challenges/) and click the [“Start A New Challenge”](http://openbci.com/community/wp-admin/post-new.php?post_type=challenge) button
 * From the Wordpress admin panel, select: Challenges > Add New
 * Add a challenge title, a featured image, your Github repo’s URL, and a Challenge Description. Then click the “Publish” button on the right-hand side (this is very similar to making a Wordpress post).
 
@@ -58,7 +58,7 @@ In addition, we are thinking about ways to enable you to request and share bioda
 
 ### Final Note
 
-The OpenBCI Community is only as strong as its members. We are calling upon you to help us push the OpenBCI mission forward by sharing the work that you do and collaborating with each other. The more we all contribute and collaborate, the more the community benefits as a whole! What can we build together?!
+The OpenBCI Community is only as strong as its members. We are calling upon you (!) to help us push the OpenBCI mission forward by collaborating with each other and going the extra step to share the work that you do. The more we all contribute and collaborate, the more the community benefits as a whole! **Let's see what can we build together!**
 
 
 
