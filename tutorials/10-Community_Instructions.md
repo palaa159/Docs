@@ -1,4 +1,4 @@
-## Welcome to the OpenBCI Community
+#Welcome to the OpenBCI Community
 
 Greetings OpenBCI Brainiacs,
 
