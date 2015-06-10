@@ -24,7 +24,7 @@ Upon registering, you should have received an email with your Login/Password. If
 
 **Note**: your profile will not appear on the People Page until you have a first name, last name, and photo. All other info is optional (but encouraged)!
 
-If your profile is still not showing up on the People Page, reach out to me (conor [at] openbci [dot] com). I’ll make sure your profile is active and you are set up as a contributor.
+If your profile is still not showing up on the People Page, reach out to me (conor [at] openbci [dot] com). I’ll make sure your profile is active and set up as a contributor.
 
 ### Making Posts
 
@@ -52,5 +52,13 @@ You can upvote other people’s challenges, or join challenges by forking and co
 
 The OpenBCI Community interface will be forever under development. We really want your feedback! If you have suggestions, please let us know (conor [at] openbci [dot] com).
 
-We want to 
+As we move forward, we want to improve the level of interactivity between community members and also provide incentives for posting cool projects and challenges. 
+
+In addition, we are thinking about ways to enable you to request and share biodata with other members of the OpenBCI Community. Of course the priority will be that all data exchanged in this way will belong to the individual who generates the data and will remain open for others access.
+
+### Final Note
+
+The OpenBCI Community is only as strong as its members. We are calling upon you to help us push the OpenBCI mission forward by sharing the work that you do and collaborating with each other. The more we all contribute and collaborate, the more the community benefits as a whole! What can we build together?!
+
+
 
