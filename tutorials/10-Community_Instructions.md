@@ -1,5 +1,7 @@
 #Welcome to the OpenBCI Community
 
+[openbci.com/community/](http://openbci.com/community/)
+
 Greetings OpenBCI Brainiacs,
 
 Thank you! You represent the heart of OpenBCI. Without your support and belief in the OpenBCI mission, we wouldn't be where we are today.
