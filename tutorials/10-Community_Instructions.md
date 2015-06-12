@@ -54,7 +54,7 @@ The OpenBCI Community interface will be forever under development. We really wan
 
 As we move forward, we want to improve the level of interactivity between community members and also provide incentives for posting cool projects and challenges. 
 
-In addition, we are thinking about ways to enable you to request and share biodata with other members of the OpenBCI Community. Of course the priority will be that all data exchanged in this way will belong to the individual who generates the data and will remain open for others access.
+In addition, we are thinking about ways to enable you to request and share biodata with other members of the OpenBCI Community. Of course the priority will always be that all data exchanged in this way belongs to the individual who generates the data (first and foremost) and will remain open for others access.
 
 ### Final Note
 
