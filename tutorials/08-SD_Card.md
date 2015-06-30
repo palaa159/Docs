@@ -62,6 +62,31 @@ We tried to make it as easy as possible to log the data, given the 512 block lim
 	94,028A40,028A11,028A76,028A03,0288E4,028ABD,028953,028A38
 
 
+The saved file aslo contains meta-data at the beginning and end. Lines of text start with a **%** symbol, so that conversion software will know they are just text. The first line time-stamps with the time in milliseconds ***since the board was turned on***. If for any reason the streaming data is stopped during a recording session, The stop time will be insterted, and if re-started, there will be another start time stamp. At the end of the file there is a record of the total write time in milliseconds, and information about the block write performance: min block write and max block write in microseconds, as well as record of any blocks that took more than two milliseconds to write. Examples of the meta-data at right.
+
+	%START AT
+	00001C70
+	00,8822D0,882E56,8CB903,8AA6B0,88101E,881459,8C9E38,8CC28A
+	01,882194,882D1F,8CB47F,8AA0B5,880EE8,881321,8C9B2D,8CC403
+	....
+	50,876554,8770E3,8BFE9F,891AE4,875316,875739,8BE3A1,8C0FE0
+	%STOP AT
+	000025BD
+	%START AT
+	0000315A
+	00,866B60,8676F6,8B099A,86F099,8659F9,865DAA,8AE564
+	01,866A24,8675B7,8B05B9,86E9D6,8658B7,865C68,8AE291
+	....
+	%Total time mS:
+	00005F53
+	%min Write time uS:
+	0000012B
+	%max Write time uS:
+	00000131
+	%Over:
+	00000000
+	%block, uS
+
 The OpenBCI Processing Sketch has the functionality to read and convert these hexadecimal files to 'normal' data files. 
 
 ###Converting Hex files in OpenBCI GIU
