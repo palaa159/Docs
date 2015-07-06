@@ -11,7 +11,7 @@ The **OpenBCI Community** interface is our latest project. It consists of:
 * [Challenges](http://openbci.com/community/challenges/) - unfinished hackathon projects, suggested projects, or requests for help
 * [Join](http://openbci.com/community/wp-login.php?action=register) - the way to register (send this to your friends)!
 
-After you [register](http://openbci.com/community/wp-login.php?action=register) and are verified, your account will be switched from **subscriber** to **contributor**. After this, you'll be able to create posts and challenges! Posts appear in the [Community Feed](http://openbci.com/community/), and challenges appear on the Challenges Page. More on this below.
+After you [register](http://openbci.com/community/wp-login.php?action=register) and are verified (we must approve your application), your account will be switched from **subscriber** to **contributor**. After this, you'll be able to create posts and challenges! Posts appear in the [Community Feed](http://openbci.com/community/), and challenges appear on the Challenges Page. More on this below.
 
 ### Editing Your Profile
 
