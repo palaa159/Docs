@@ -2,6 +2,8 @@
 
 ![image](../assets/images/UC_back.JPG)
 
+The Ultracortex is the evolution of the Spiderclaw. 
+
 For the latest information on Ultracortex, the OpenBCI 3D-printed EEG headset, refer to the [Ultracortex Github repo](https://github.com/OpenBCI/Ultracortex). There you'll find the latest printable STLs, as well as documentation on how to print & assemble the headsets.
 
 Ultracotex Versions:
