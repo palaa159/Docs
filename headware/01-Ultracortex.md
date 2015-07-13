@@ -12,6 +12,9 @@ Ultracotex Versions:
 * [Mark 2 - modeled & printed (May-June 2015)](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_2)
 * Mark 3 - currently under development (June 2015-present)
 
+Designed, Printed, and Assembled by [ThreeForm (aka Aaron Trocola)](http://threeformfashion.com/) and [Conor Russomanno](https://twitter.com/russomanno15).
+
+
 
 
 
