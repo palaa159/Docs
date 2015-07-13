@@ -1,6 +1,15 @@
-# Spiderclaw V3
+# Ultracortex
 
-## COMING SOON (Spring 2015)...
+For the latest information on Ultracortex, the OpenBCI 3D-printed EEG headset, refer to the [Ultracortex Github repo](https://github.com/OpenBCI/Ultracortex). There you'll find the latest printable STLs, as well as documentation on how to print & assemble the headsets.
 
-Check out the [Headware section](http://openbci.com/index.php/forum#/categories/headware) of our forum to join in on the development of latest revision of the OpenBCI 3D-printable EEG headset.
+Ultracotex Versions:
+
+* Mark 1 - modeled & printed (April 2015)
+* [Mark 2 - modeled & printed (May-June 2015)](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_2)
+* Mark 3 - currently under development (June 2015-present)
+
+![image](../assets/images/UC_back.JPG)
+
+
+
 
