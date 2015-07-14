@@ -15,7 +15,7 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 * Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. 
 * OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. 
 
-![image](../assets/images/ova-set.jpg =250x)
+![Ova Settings](../assets/images/ova-set.jpg =250x)
 
 * Import the VM, go through all the configs and start it. 
 * For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)
