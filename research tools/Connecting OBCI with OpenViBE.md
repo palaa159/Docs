@@ -58,7 +58,6 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 	- Often, pressing the restart button on the OBCI board, or Disconnecting/Conneting the Dongle will fix any connection issues. 
 	- If error given is that it connot open the selected port, make sure the COM port selected in driver options is the same as your board.
 * Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels which for the V3 board correspond to accelerometer values of the three cardinal directions. 
-TEMPORARY ERROR: To download XML in last step, visit [github repo](https://github.com/OpenBCI/Docs/blob/master/research%20tools/Connecting%20OBCI%20with%20OpenViBE.md) for this tutorial and get file form there.
 * Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
 ![Output](../assets/images/output.jpg)
