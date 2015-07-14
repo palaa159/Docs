@@ -32,7 +32,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 * Allow windows to try to install usb drivers (if error keep reading).
 * Open **Device Manager** from the start menu (or **Control Panel > Hardware > Device Manager**) and try to identify the OBCI board. It should be listed as either a COM port or an unidentified USB device.                            
 
-![image](../assets/images/unidentified.jpg)
+![Unidentified Port](../assets/images/unidentified.jpg)
 
 * If Unidentified, follow the troubleshoot below, otherwise, skip the to next step:
 	- Download [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm).
@@ -41,17 +41,17 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 	- Your board should now be recognized as a COM port. 
 * Open **Device Manager**. If no errors occurred in the previous two steps, there should be a COM port number listed. To check it is the OBCI board, connecting and disconnecting the Dongle should connect and disconnect the COM port.
 
-![image](../assets/images/device-man.jpg) 
+![Device Manager](../assets/images/device-man.jpg) 
 
 * The default FTDI latency is too large for EEG applications. To change it, right click the USB Serial Port of the OBCI board and go to **Properties > Port Settings > Advanced** and change the **Latency Timer** from the default 16 ms to 1 ms. 
 
-![image](../assets/images/latency.jpg)
+![Latency Fix](../assets/images/latency.jpg)
 
 * Start the OpenViBE Signal Acquisition Server (SAS). **C: > Program Files > openvibe > openvibe-acquisition-server** (normally shows up when searching “openvibe” in start menu). 
 * In the SAS select the OpenBCI (unstable means not throughly tested) option from the drop down list.
 * Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
 
-![image](../assets/images/com-select.jpg)
+![COM Selection](../assets/images/com-select.jpg)
 
 * Press Connect. If error, troubleshoot:
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
@@ -60,7 +60,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 * Open the OpenViBE designer GUI and load the attached [xml file](../assets/images/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels which for the V3 board correspond to accelerometer values of the three cardinal directions. 
 * Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
-![image](../assets/images/output.jpg)
+![Output](../assets/images/output.jpg)
 
 ##### Enjoy OpenBCI in OpenViBE!
 
