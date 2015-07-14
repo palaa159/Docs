@@ -1,7 +1,7 @@
 # Connecting OBCI with OpenViBE
 
 OpenViBE works best and is easiest to install in Windows.
-If you have a windows machine, go ahead and skip to the [OpenViBE + OBCI](#openvibe) section and follow form there. 
+If you have a windows machine, go ahead and skip to the OpenViBE + OBCI section and follow form there. 
 
 If you run OS X, don't worry, this guide was made specificaly for mac users so keep reading.
 
@@ -22,7 +22,7 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
-### OpenViBE + OBCI<a name="openvibe"></a>
+### OpenViBE + OBCI
 1. Make sure you have a running Windows 7 Machine (be it either a VM or native).
 * Download the latest OpenViBE software from their [website](http://openvibe.inria.fr/downloads/). 
 * Connect the OpenBCI dongle to the computer.
