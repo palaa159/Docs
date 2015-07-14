@@ -1,7 +1,5 @@
 # Connecting OBCI with OpenViBE
 
-ERROR: XML not downloadable yet.
-
 OpenViBE works best and is easiest to install in Windows.
 If you have a windows machine, go ahead and skip to the OpenViBE + OBCI section and follow form there.
 
@@ -57,9 +55,11 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
 	- Often, pressing the restart button on the OBCI board, or Disconnecting/Conneting the Dongle will fix any connection issues. 
 	- If error given is that it connot open the selected port, make sure the COM port selected in driver options is the same as your board.
-* Open the OpenViBE designer GUI and load the attached [xml file](../assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels which for the V3 board correspond to accelerometer values of the three cardinal directions. 
+* Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels which for the V3 board correspond to accelerometer values of the three cardinal directions. 
 * Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
+
 ![Output](../assets/images/output.jpg)
+
 ##### Enjoy OpenBCI in OpenViBE!
 
 ##### Next Steps: 
