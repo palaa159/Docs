@@ -51,7 +51,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 1. In the SAS select the OpenBCI (unstable means not throughly tested) option from the drop down list.
 1. Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
 
-![COM Selection](../assets/images/com-select.jpg)
+	![COM Selection](../assets/images/com-select.jpg)
 
 1. Press Connect. If error, troubleshoot:
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
