@@ -33,7 +33,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 
 	![Unidentified Port](../assets/images/unidentified.jpg)
 
-1. If Unidentified, follow the troubleshoot below, otherwise, skip the to next step:
+1. If Unidentified, follow the troubleshoot below; otherwise, skip to the next step:
 	- Download [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm).
 	- Right click on Unidentified USB Device from the **Device Manager** tab and select **Update Driver Software**.
 	- Select the "**Browse my Computer for Driver**" option and navigate to the FTDI download folder. Click on the folder and then click OK. 
@@ -51,12 +51,12 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 1. Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
 
 	![COM Selection](../assets/images/com-select.jpg)
-
+1. In the SAS Preference menu, change the drift tolerance from 2ms (default) to 10ms. 
 1. Press Connect. If error, troubleshoot:
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
 	- Often, pressing the restart button on the OBCI board, or Disconnecting/Conneting the Dongle will fix any connection issues. 
-	- If error given is that it connot open the selected port, make sure the COM port selected in driver options is the same as your board.
-1. Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels which for the V3 board correspond to accelerometer values of the three cardinal directions. 
+	- If the error reports that it cannot open the selected port, make sure the COM port selected in the driver options is the same as your board.
+1. Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
 1. Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
 ![Output](../assets/images/output.jpg)
