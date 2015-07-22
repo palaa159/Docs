@@ -10,14 +10,17 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 
 ### Windows 7 Virtual Machine
 
-1. Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). 
-2. Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.
-3. Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. 
-4. OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. 
-
-![Ova Settings](../assets/images/ova-set.jpg)
-5. Import the VM, go through all the configs and start it. 
-6. For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)
+<ol>
+	<li> Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). </li>
+	<li> Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.</li>
+	<li> Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. </li>
+	<li> OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. </li>
+	
+	![Ova Settings](../assets/images/ova-set.jpg)
+	
+	<li> Import the VM, go through all the configs and start it. </li>
+	<li> For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)</li>
+</ol>
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
