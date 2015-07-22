@@ -10,32 +10,32 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 
 ### Windows 7 Virtual Machine
 
-<ol>
-	<li> Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). </li>
-	<li> Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.</li>
-	<li> Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. </li>
-	<li> OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. </li>
-	
-	![Ova Settings](../assets/images/ova-set.jpg)
-	
-	<li> Import the VM, go through all the configs and start it. </li>
-	<li> For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)</li>
-</ol>
+1. Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). 
+1. Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.
+1. Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. 
+1. OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. 
+1. Import the VM, go through all the configs and start it. 
+1. For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)
+
+![Ova Settings](../assets/images/ova-set.jpg)
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
 ### OpenViBE + OBCI
+##### I. OpenVibe Software
 1. Make sure you have a running Windows 7 Machine (be it either a VM or native).
 1. Download the latest OpenViBE software from their [website](http://openvibe.inria.fr/downloads/). 
+
+##### II. Connect the Board
+
+![Unidentified Port](../assets/images/unidentified.jpg)
+
 1. Connect the OpenBCI dongle to the computer.
 1. Power ON the OpenBCI board.
 1. Enable **FTDI FT231X USB UART** on virtual box through 
 **Devices > USB Devices**.
 1. Allow windows to try to install usb drivers (if error keep reading).
 1. Open **Device Manager** from the start menu (or **Control Panel > Hardware > Device Manager**) and try to identify the OBCI board. It should be listed as either a COM port or an unidentified USB device.
-
-	![Unidentified Port](../assets/images/unidentified.jpg)
-
 1. If Unidentified, follow the troubleshoot below; otherwise, skip to the next step:
 	- Download [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm).
 	- Right click on Unidentified USB Device from the **Device Manager** tab and select **Update Driver Software**.
@@ -43,17 +43,21 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 	- Your board should now be recognized as a COM port. 
 1. Open **Device Manager**. If no errors occurred in the previous two steps, there should be a COM port number listed. To check it is the OBCI board, connecting and disconnecting the Dongle should connect and disconnect the COM port.
 
-	![Device Manager](../assets/images/device-man.jpg) 
+![Device Manager](../assets/images/device-man.jpg) 
 
-1. The default FTDI latency is too large for EEG applications. To change it, right click the USB Serial Port of the OBCI board and go to **Properties > Port Settings > Advanced** and change the **Latency Timer** from the default 16 ms to 1 ms. 
+##### III. Settings
 
-	![Latency Fix](../assets/images/latency.jpg)
+![Latency Fix](../assets/images/latency.jpg)
+
+The default FTDI latency is too large for EEG applications. To change it, right click the USB Serial Port of the OBCI board and go to **Properties > Port Settings > Advanced** and change the **Latency Timer** from the default 16 ms to 1 ms. 
+
+##### IV. Connect to OpenVibe
+
+![COM Selection](../assets/images/com-select.jpg)
 
 1. Start the OpenViBE Signal Acquisition Server (SAS). **C: > Program Files > openvibe > openvibe-acquisition-server** (normally shows up when searching “openvibe” in start menu). 
 1. In the SAS select the OpenBCI (unstable means not throughly tested) option from the drop down list.
 1. Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
-
-	![COM Selection](../assets/images/com-select.jpg)
 1. In the SAS Preference menu, change the drift tolerance from 2ms (default) to 10ms. 
 1. Press Connect. If error, troubleshoot:
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
@@ -63,6 +67,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 1. Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
 ![Output](../assets/images/output.jpg)
+
 ##### Enjoy OpenBCI in OpenViBE!
 
 ##### Next Steps: 
