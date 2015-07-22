@@ -17,7 +17,8 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 1. Import the VM, go through all the configs and start it. 
 1. For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)
 
-![Ova Settings](../assets/images/ova-set.jpg)
+
+<img src='../assets/images/ova-set.jpg' alt='Ova Settings' width='75%'>
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
