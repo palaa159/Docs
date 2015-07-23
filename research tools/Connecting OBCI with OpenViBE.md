@@ -28,7 +28,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 
 ##### II. Connect the Board
 
-![Unidentified Port](../assets/images/unidentified.jpg)
+![Device Manager](../assets/images/device-man.jpg) 
 
 1. Connect the OpenBCI dongle to the computer.
 1. Power ON the OpenBCI board.
@@ -37,9 +37,6 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 1. Allow windows to try to install usb drivers (if error keep reading).
 1. Open **Device Manager** from the start menu (or **Control Panel > Hardware > Device Manager**) and try to identify the OBCI board. It should be listed as either a COM port or an unidentified USB device.
 1. If Unidentified, follow the troubleshoot below; otherwise, skip to the next step:
-
-	![Device Manager](../assets/images/device-man.jpg) 
-	
 	- Download [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm).
 	- Right click on Unidentified USB Device from the **Device Manager** tab and select **Update Driver Software**.
 	- Select the "**Browse my Computer for Driver**" option and navigate to the FTDI download folder. Click on the folder and then click OK. 
@@ -58,8 +55,6 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 
 ![COM Selection](../assets/images/com-select.jpg)
 
-![Output](../assets/images/output.jpg)
-
 1. Start the OpenViBE Signal Acquisition Server (SAS). **C: > Program Files > openvibe > openvibe-acquisition-server** (normally shows up when searching “openvibe” in start menu). 
 1. In the SAS select the OpenBCI (unstable means not throughly tested) option from the drop down list.
 1. Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
@@ -73,6 +68,8 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 
 ##### Enjoy OpenBCI in OpenViBE!
 
+	![Output](../assets/images/output.jpg)
+	
 ##### Next Steps: 
 For more advanced tutorials using OpenBCI and OpenViBE, check out [Jeremy Frey's blog](http://blog.jfrey.info/). He has done both a [P300 Speller](http://blog.jfrey.info/2015/02/04/openbci-p300-coadapt/) and a [Motor Imagery Classifier](http://blog.jfrey.info/2015/03/03/openbci-motor-imagery/)
 
