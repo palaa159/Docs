@@ -67,9 +67,7 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 1. Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
 ##### Enjoy OpenBCI in OpenViBE!
+![Output](../assets/images/output.jpg)
 
-	![Output](../assets/images/output.jpg)
-	
-##### Next Steps: 
 For more advanced tutorials using OpenBCI and OpenViBE, check out [Jeremy Frey's blog](http://blog.jfrey.info/). He has done both a [P300 Speller](http://blog.jfrey.info/2015/02/04/openbci-p300-coadapt/) and a [Motor Imagery Classifier](http://blog.jfrey.info/2015/03/03/openbci-motor-imagery/)
 
