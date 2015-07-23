@@ -10,15 +10,14 @@ NOTE: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work.
 
 ### Windows 7 Virtual Machine
 
+![Ova Settings](../assets/images/ova-set.jpg)
+
 1. Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). 
 1. Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.
 1. Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. 
 1. OpenViBE aquisition server uses a lot of RAM. In fact, it'll take up one entire core, if it can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. 
 1. Import the VM, go through all the configs and start it. 
 1. For more detailed instructions/tutorials and troubleshooting see the [Windows Manual](http://modernievirt.blob.core.windows.net/vhd/release_notes_license_terms_1_5_15.pdf). (If you selected a different distribution other than Win 7, see the respective manual in the Windows page.)
-
-
-![Ova Settings](../assets/images/ova-set.jpg)
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
@@ -30,6 +29,8 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 ##### II. Connect the Board
 
 ![Unidentified Port](../assets/images/unidentified.jpg)
+
+![Device Manager](../assets/images/device-man.jpg) 
 
 1. Connect the OpenBCI dongle to the computer.
 1. Power ON the OpenBCI board.
@@ -44,7 +45,7 @@ NOTE: Make sure that Guest Additions are installed correctly on your VM. With th
 	- Your board should now be recognized as a COM port. 
 1. Open **Device Manager**. If no errors occurred in the previous two steps, there should be a COM port number listed. To check it is the OBCI board, connecting and disconnecting the Dongle should connect and disconnect the COM port.
 
-![Device Manager](../assets/images/device-man.jpg) 
+
 
 ##### III. Settings
 
@@ -56,6 +57,8 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 
 ![COM Selection](../assets/images/com-select.jpg)
 
+![Output](../assets/images/output.jpg)
+
 1. Start the OpenViBE Signal Acquisition Server (SAS). **C: > Program Files > openvibe > openvibe-acquisition-server** (normally shows up when searching “openvibe” in start menu). 
 1. In the SAS select the OpenBCI (unstable means not throughly tested) option from the drop down list.
 1. Then open **Driver Properties**. In the Device option, select the COM port number your OBCI board was connected to.
@@ -66,8 +69,6 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 	- If the error reports that it cannot open the selected port, make sure the COM port selected in the driver options is the same as your board.
 1. Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
 1. Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
-
-![Output](../assets/images/output.jpg)
 
 ##### Enjoy OpenBCI in OpenViBE!
 
