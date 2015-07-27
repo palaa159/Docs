@@ -63,7 +63,7 @@ The default FTDI latency is too large for EEG applications. To change it, right 
 	- Look at the terminal window that the SAS opens up. It has a verbose report on the SAS's condition. 
 	- Often, pressing the restart button on the OBCI board, or Disconnecting/Conneting the Dongle will fix any connection issues. 
 	- If the error reports that it cannot open the selected port, make sure the COM port selected in the driver options is the same as your board.
-1. Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/OBCI-display.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
+1. Open the OpenViBE designer GUI and load the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/Start_OBCI.xml). This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
 1. Press the play button on the SAS; then press the play button on the Designer GUI's toolbar above.
 
 ##### Enjoy OpenBCI in OpenViBE!
