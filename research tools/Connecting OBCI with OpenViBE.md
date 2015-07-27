@@ -1,4 +1,4 @@
-# Connecting OBCI with OpenViBE
+# OpenViBE
 
 OpenViBE works best and is easiest to install in Windows.
 If you have a windows machine, go ahead and skip to the OpenViBE + OBCI section and follow form there.
