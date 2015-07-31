@@ -14,11 +14,11 @@ This page covers how the radio link works, and how to upload new firmware to the
 **You will need:**
 
 * Computer(Windows or Mac or Other)
-* Latest [Arduino IDE Version 1.5.8](http://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x)
+* [Arduino IDE Version 1.5.8](http://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x)
 * Custom RFduino libraries for OpenBCI
 * A 0.1uF capacitor (see Device section below)
 
-Download and install the latest Arduino BETA IDE. This is the one with support for the Arduino Yun and Arduino Due (Version 1.5.something)
+Download and install the Arduino BETA IDE. This is the one that works with the custom RFduino libraries that we install in the next step. 
 
 
 Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios) repo from our github, and place it in the proper location depending upon your OS.
