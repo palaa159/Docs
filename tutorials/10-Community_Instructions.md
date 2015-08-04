@@ -58,7 +58,7 @@ In addition, we are thinking about ways to enable you to request and share bioda
 
 ### Final Note
 
-The OpenBCI Community is only as strong as its members. We are calling upon you (!) to help us push the OpenBCI mission forward by collaborating with each other and going the extra step to share the work that you do. The more we all contribute and collaborate, the more the community benefits as a whole! **Let's see what can we build together!**
+The OpenBCI Community is only as strong as its members. We are calling upon you (!) to help us push the OpenBCI mission forward by collaborating with each other and going the extra step to share the work that you do. The more we all contribute and collaborate, the more the community benefits as a whole! **Let's see what we can build together!**
 
 
 
