@@ -43,3 +43,8 @@ The fix is easy. Simply right click the USB Serial Port of the OBCI board and go
 
 Fixing this issue should make the incoming signal much more consistent in terms of packet time intervals.
 
+## Available tools on Windows
+- [OpenViBE](http://docs.openbci.com/research%20tools/OpenViBE)
+
+- [Neuromore](http://docs.openbci.com/research%20tools/Neuromore)
+
