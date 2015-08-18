@@ -6,10 +6,10 @@
 
 **OS X**: See the [FTDI OS X fix](http://docs.openbci.com/tutorials/09-Mac_FTDI_Driver_Fix) first, then follow these instructions.
 
-**Linux**: Neuromore doesn not yet support linux platforms but plans to in the near future.
+**Linux**: Neuromore does not yet support linux platforms but plans to in the near future.
 
 ### I. Neuromore Software
-Download the latest Neuromore software from their [website](http://www.neuromore.com/). Their main software is the Neuromore Studio which they plan to keep inproving on and keep free!
+Download the latest neuromore software from their [website](http://www.neuromore.com/). Their main software is the neuromore Studio which they plan to keep improving on and keep free!
 
 ### II. Connect the Board
 
@@ -21,7 +21,7 @@ Download the latest Neuromore software from their [website](http://www.neuromore
 			/dev/tty.OpenBCI-DN00959R
 
 
-### III. Connect to Neuromore
+### III. Connect to neuromore
 
 Neuromore is pretty awesome in terms of board connectivity. If you open up the studio and connect your board, 9 out of 10 times it'll automatically connect. 
 
@@ -29,9 +29,9 @@ If it doesn't, try the following:
 
 1. Reset OBCI Board (Press Reset Button). 
 2. Turn OBCI Board OFF, disconnect dongle, reconnect dongle, turn board back ON. 
-3. Close Neuromore and disconnect board and dongle. Connect Dongle and Board again and then open Neuromore Studio.
+3. Close neuromore and disconnect board and dongle. Connect Dongle and Board again and then open neuromore Studio.
 
-NOTE: If your board is connected properly, Neuromore should have no trouble connecting to it.
+NOTE: If your board is connected properly, neuromore should have no trouble connecting to it.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ NOTE: If your board is connected properly, Neuromore should have no trouble conn
 
 ![image](../assets/images/obci_gs_loc.png)
 
-A good way to get started with Neuromore and the whole concept of classifiers is to look at the Getting Started OBCI example. 
+A good way to get started with neuromore and the whole concept of classifiers is to look at the Getting Started OBCI example. 
 
 This example can be found in the Back-End File System display which has all sorts of useful classifiers and other examples. 
 
@@ -48,13 +48,13 @@ Neuromore calls these graphs of interconnected processing units, "Classifiers".
 
 The basic structure of a classifer consists of a input device (such as OpenBCI V3) connected to processing nodes that end in some sort of output node. 
 
-This sort of graphical programming (or [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language)) also appears in very popular programs like [PureData](https://puredata.info/) and [MAX]( https://en.wikipedia.org/wiki/Max_(software)/) for more general puroses and [OpenViBE](http://docs.openbci.com/research%20tools/OpenViBE) and of course Neuromore for EEG specific processing. 
+This sort of graphical programming (or [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language)) also appears in very popular programs like [PureData](https://puredata.info/) and [MAX]( https://en.wikipedia.org/wiki/Max_(software)/) for more general puroses and [OpenViBE](http://docs.openbci.com/research%20tools/OpenViBE) and of course neuromore for EEG specific processing. 
 
 The basic idea is that a stream of data that originates at the input device can then be mapped, processed and transformed into outputs that are useful, informative or just plain cool.
 
 ![alpha detector](../assets/images/alpha-detect-gs.png)
 
-The getting started example for OpenBCI in the Neuromore Studio explores these areas and how to properly use the graphical programming interface. 
+The getting started example for OpenBCI in the neuromore Studio explores these areas and how to properly use the graphical programming interface. 
 
 The best example within the classifier is perhaps the dynamic alpha detector.
 
@@ -68,7 +68,7 @@ From this example we can see the power of statistics and simple logic that can e
 
 ## Other resources
 
-- [Neuromore.com](http://www.neuromore.com/)
+- [neuromore.com](http://www.neuromore.com/)
 - [Video tutorials](https://www.youtube.com/channel/UCAOU6SsvwCwC30hJaFLhWgw)
 - [Grahical Programming](http://c2.com/cgi/wiki?GraphicalProgrammingLanguage)
 
