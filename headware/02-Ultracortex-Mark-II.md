@@ -1,4 +1,4 @@
-# Ultracortex (Mark 2)
+# Ultracortex Mark 2
 
 ![image](../assets/ultracortex-images/UC_back.JPG)
 
