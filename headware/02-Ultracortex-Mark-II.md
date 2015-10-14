@@ -1,6 +1,6 @@
 # Ultracortex (Mark 2)
 
-![image](Assets/UC_back.JPG)
+![image](assets/UC_back.JPG)
 
 ## Print Settings (verified)
 
@@ -76,7 +76,7 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 * [Stainless Steel Pan Head Phillips Machine Screw, 2-56 Thread, 3/8" Length ($5.70 per pack of 50)](http://www.mcmaster.com/#91735a017/=xzahfj)
 * [Stainless Steel Hex Nut, 2-56 Thread Size, 3/16" Wide, 1/16" High](http://www.mcmaster.com/#91841a003/=xzahv0)
 
-![image](Assets/ScrewAndNut.JPG)
+![image](assets/ScrewAndNut.JPG)
 
 ## Other Helpful Information
 
@@ -90,7 +90,7 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 	* wirecutters
 	* needle-nose pliers
 	
-![image](Assets/HelpfulTools.JPG)
+![image](assets/HelpfulTools.JPG)
 	
 * The "M2_Electrode Mount A_01" part has a small lip on the inside (where the spring fits into) that must be manually removed with an exacto/razor blade. 
 * Most of the tolerances between pieces are too tight, so assembly requires substantial filing and sanding.
@@ -100,13 +100,13 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 
 ## Photos of Ultracortex M2
 
-![image](Assets/UC.png)
-![image](Assets/UC_front.JPG)
-![image](Assets/UC_top.JPG)
-![image](Assets/Quadrants.JPG)
-![image](Assets/MakerBot_Screenshot2.png)
-![image](Assets/sketch.JPG)
-![image](Assets/Alex.JPG)
-![image](Assets/Evan.JPG)
-![image](Assets/Rodrigo.JPG)
-![image](Assets/Joel.JPG)
+![image](assets/UC.png)
+![image](assets/UC_front.JPG)
+![image](assets/UC_top.JPG)
+![image](assets/Quadrants.JPG)
+![image](assets/MakerBot_Screenshot2.png)
+![image](assets/sketch.JPG)
+![image](assets/Alex.JPG)
+![image](assets/Evan.JPG)
+![image](assets/Rodrigo.JPG)
+![image](assets/Joel.JPG)
