@@ -14,18 +14,18 @@ The screws and nuts used to fasten the FRI electrode to the FRI_electrode_mount 
 ### Image References
 
 
-![image](assets/full.PNG)
+![image](../assets/ultracortex-images/full.PNG)
 
-![image](assets/1020.png)
+![image](../assets/ultracortex-images/1020.png)
 
-![image](assets/top.JPG)
+![image](../assets/ultracortex-images/top.JPG)
 
-![image](assets/inside.png)
+![image](../assets/ultracortex-images/inside.png)
 
-![image](assets/trode.JPG)
+![image](../assets/ultracortex-images/trode.JPG)
 
-![image](assets/trode2.JPG)
+![image](../assets/ultracortex-images/trode2.JPG)
 
-![image](assets/trodes.png)
+![image](../assets/ultracortex-images/trodes.png)
 
 

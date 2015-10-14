@@ -1,7 +1,7 @@
 #Ultracortex Mark 3
 *Development Period: July 2015 — September 2015*
 
-![image](image_assets/Mark3_2.jpg)
+![image](../assets/ultracortex-images/Mark3_2.jpg)
 
 ####Complete Ultracortex Mark 3 kits are [available for sale](http://openbci.myshopify.com/collections/frontpage/products/ultracortex-mark-3-eeg-headset-kit-assembly-required) in the OpenBCI Online Store!
 
@@ -62,7 +62,7 @@ We want to give a big thank you to [3D SYSTEMS](http://www.3dsystems.com/) for t
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/small/FRONT_small.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/medium/FRONT_medium.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/large/FRONT_large.stl))
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/small/BACK_small.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/medium/BACK_medium.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/FRAME/large/BACK_large.stl))
 
-![image](image_assets/FRAME_parts.jpg) 
+![image](../assets/ultracortex-images/FRAME_parts.jpg) 
 
 ####(21x) MECH_PARTS
 
@@ -72,13 +72,13 @@ We want to give a big thank you to [3D SYSTEMS](http://www.3dsystems.com/) for t
 	* [SPRING_CASING](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_3/STLs/MECH_PARTS/SPRING_CASING.stl) (**x21**) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/MECH_PARTS/SPRING_CASING.stl)
 	* [ELECTRODE_HOLDER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_3/STLs/MECH_PARTS/ELECTRODE_HOLDER.stl) (**x21**) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/MECH_PARTS/ELECTRODE_HOLDER.stl)
 
-![image](image_assets/MECH_PARTS.jpg) 
+![image](../assets/ultracortex-images/MECH_PARTS.jpg) 
 
 ####(1x) BOARD_HOLDER
 
 * [BOARD_HOLDER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_3/STLs/BOARD_HOLDER.stl) (**x1**) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/BOARD_HOLDER.stl)
 
-![image](image_assets/BOARD_HOLDER.jpg) 
+![image](../assets/ultracortex-images/BOARD_HOLDER.jpg) 
 
 ####(1x) BOARD_COVER
 
@@ -86,16 +86,16 @@ We want to give a big thank you to [3D SYSTEMS](http://www.3dsystems.com/) for t
 	* [STANDARD](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_3/STLs/BOARD_COVER_logo.stl) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/BOARD_COVER_logo.stl)
 	* [ADVANCED](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_3/STLs/BOARD_COVER_advancedVersion.stl) (for extra hardware accessibility / if you've soldered on your header rows) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_3/STLs/BOARD_COVER_advancedVersion.stl)
 
-![image](image_assets/BOARD_COVER.jpg) 
+![image](../assets/ultracortex-images/BOARD_COVER.jpg) 
 
-![image](image_assets/printedParts.jpg)
+![image](../assets/ultracortex-images/printedParts.jpg)
 
 ###Non-printed Parts:
 
 ####Suggested springs: 
 * (**21x**) [Century Spring Corp. Stock #: U-4](http://www.centuryspring.com/Store/globalresults.php)
 
-![image](image_assets/SPRING.jpg)
+![image](../assets/ultracortex-images/SPRING.jpg)
 
 ####Suggested nuts/bolts:
 
@@ -104,19 +104,19 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 * (**21x**) [Stainless Steel Pan Head Phillips Machine Screw, 2-56 Thread, 3/8" Length ($5.70 per pack of 50)](http://www.mcmaster.com/#91735a017/=xzahfj)
 * (**42x**) [Stainless Steel Hex Nut, 2-56 Thread Size, 3/16" Wide, 1/16" High](http://www.mcmaster.com/#91841a003/=xzahv0)
 
-![image](image_assets/NUT_AND_BOLT.jpg)
+![image](../assets/ultracortex-images/NUT_AND_BOLT.jpg)
 
 ####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
 * (**8x**) [#4 Drive Screw](http://www.mcmaster.com/#90077a106/=yysd5f)
 
-![image](image_assets/SHEET_METAL_SCREW.jpg)
+![image](../assets/ultracortex-images/SHEET_METAL_SCREW.jpg)
 
 ####Wiring
 
 * (**21x**) We strip apart electrodes from the [Electrode Starter Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-electrode-starter-kit)) or from the Touch-Proof Connector cable that comes with an [OpenBCI 32bit Board Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit).
 
-![image](image_assets/WIRING.jpg)
+![image](../assets/ultracortex-images/WIRING.jpg)
 
 ####Dry electrodes by Florida Research Instruments
 
@@ -124,19 +124,19 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 * (**3x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): [Disposable / Reusable Cup Wet/Dry EEG Electrode ($10.00 for 15) ](http://fri-fl-shop.com/product/disposable-reusable-dry-eeg-electrode-quantity-of-15-tde-200a1/)
 * (**2x**) Ear Clip electrode (for reference): [TDI-430 Silver-Silver Chloride Ear Clip Electrode ($19.95 each)](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/)
 
-![image](image_assets/TRODES.jpg)
+![image](../assets/ultracortex-images/TRODES.jpg)
 
 ####(1x) An [OpenBCI 32bit Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
 
-![image](image_assets/OPENBCIs.jpg)
+![image](../assets/ultracortex-images/OPENBCIs.jpg)
 
 ####(**1x**) ~500mAh lithium ion rechargeable battery pack ([Sparkfun](https://www.sparkfun.com/products/10718) or [Adafruit](http://www.adafruit.com/products/1578)) & (**1x**) [A charger for your battery pack](https://www.adafruit.com/products/1304)
 
-![image](image_assets/BATTERY.jpg)
+![image](../assets/ultracortex-images/BATTERY.jpg)
 
 #### (**~10x**) [Zip tie](http://www.amazon.com/Black-Zip-Tie-100-Bag/dp/B0001IMMJI)
 
-![image](image_assets/zipTie.png)
+![image](../assets/ultracortex-images/zipTie.png)
 
 
 ## SUGGESTED PRINT SETTINGS
@@ -177,7 +177,7 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 * needle-nose pliers
 * snippers
 
-![image](image_assets/TOOLS.jpg)
+![image](../assets/ultracortex-images/TOOLS.jpg)
 
 
 ## ASSEMBLY INSTRUCTIONS
@@ -186,36 +186,36 @@ We use small stainless steel screws and hex nuts to fasten the FRI electrodes (l
 
 Use sand paper, a file, and snippers to clean your FRAME and other 3D-printed parts. It's especially important that you clean out the frame nodes where you will place your OCTANUT pieces.
 
-![image](image_assets/cleanup1.JPG)
-![image](image_assets/cleanup3.JPG)
+![image](../assets/ultracortex-images/cleanup1.JPG)
+![image](../assets/ultracortex-images/cleanup3.JPG)
 
 ### Glue the FRAME together
 
 Carefully, glue the FRAME_FRONT and FRAME_BACK together with your Cyanoacrylate super glue. Be sure to be precise; it's VERY difficult to pull the pieces apart once you've put them together.
 
-![image](image_assets/glueFrame.JPG)
+![image](../assets/ultracortex-images/glueFrame.JPG)
 
 ### Mount the OpenBCI BOARD_HOLDER
 
 Use the #4 Drive Screws to mount the BOARD_HOLDER to the FRAME
 
-![image](image_assets/boardMount.JPG)
+![image](../assets/ultracortex-images/boardMount.JPG)
 
 ### Insert OCTANUT pieces (x21) into frame
 
 **Note:** at each node, you must line up the cut in the OCTANUT with the indentation on the frame as indicated in the picture below.
 
-![image](image_assets/insertOCTANUT.JPG)
+![image](../assets/ultracortex-images/insertOCTANUT.JPG)
 
 Your Ultracortex should now look like this:
 
-![image](image_assets/nodes_in.JPG)
+![image](../assets/ultracortex-images/nodes_in.JPG)
 
 ### Embed OpenBCI into the Ultracortex
 
 Connect your ~500 mAh lithium ion rechargeable batter to the back of your 32bit OpenBCI Board. Then fold the battery and its wires neatly behind the board before inserting the board into the BOARD_MOUNT. You can then use one of your #4 Drive Screws to secure the OpenBCI Board to the BOARD_MOUNT. Typically you don't need to use any #4 Drive Screws because the BOARD_COVER locks the OpenBCI Board in place, but in this case it's a good idea because you'll want to see where you're connecting your wires.
 
-![image](image_assets/embed_OpenBCI.jpg)
+![image](../assets/ultracortex-images/embed_OpenBCI.jpg)
 
 ### Identify electrode locations
 
@@ -236,13 +236,13 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 * Channel 7 - O1
 * Channel 8 - O2
 
-![image](image_assets/1020.jpg)
+![image](../assets/ultracortex-images/1020.jpg)
 
 ### Connect wiring to OpenBCI
 
 Before shortening any of your wires, connect the female header of each wire to the N pin of channels 1-8, as indicated in the image to the lower right. The N pins are the ones closer to the OpenBCI Board. By default, the OpenBCI Board references these 8 pins with the SRB 1 pin (the bottom SRB pin).
 
-![image](image_assets/CONNECT_WIRES.jpg)
+![image](../assets/ultracortex-images/CONNECT_WIRES.jpg)
 
 ### Measure, cut, and strip wires
 
@@ -262,72 +262,72 @@ As mentioned above, if you're using the default OpenBCI electrode configuration,
 After you're done measuring, cutting, and stripping your wires, disconnect them from the OpenBCI board. You will need the female header free so you can guide the springs and OCTANUT pieces into place in the following step. But remember which wire goes where!
 
 
-![image](image_assets/STRIP_WIRE.jpg)
+![image](../assets/ultracortex-images/STRIP_WIRE.jpg)
 
 ### Assemble electrode mounts (x8 or x16)
 **Note:** repeat the following steps as many times as necessary, depending upon your OpenBCI setup. In general, using more electrodes will distribute the downward scalp pressure, increasing comfort. Additionally, to increase comfort you can create electrode units without electrodes and the wires to place at various nodes around the frame. This will also help to distribute  pressure.
 
 These are the pieces that comprise one full electrode unit:
-![image](image_assets/Hardware_Parts.JPG)
+![image](../assets/ultracortex-images/Hardware_Parts.JPG)
 
 First, slide a **Machine Screw (2-56 Thread, 3/8" Length)** through the FRI electrode and guide it into the ELECTRODE_HOLDER.
-![image](image_assets/insertTrode.JPG)
+![image](../assets/ultracortex-images/insertTrode.JPG)
 
 Then, twist your first **Hex Nut (2-56 Thread Size, 3/16" Wide, 1/16" High)** onto the screw, securing the electrode to the holder.
-![image](image_assets/fastenNut1.JPG)
+![image](../assets/ultracortex-images/fastenNut1.JPG)
 
 Next, twist the exposed metal of your wire so that it is tight and clean.
-![image](image_assets/twistWire.JPG)
+![image](../assets/ultracortex-images/twistWire.JPG)
 
 This part is a little bit tricky! Wrap the exposed metal of your wire around the remaining thread of the screw. You can use your finger nail to pinch the wire down against the nut, while wrapping.
-![image](image_assets/twistWire2.JPG)
+![image](../assets/ultracortex-images/twistWire2.JPG)
 
 Then, twist your second Hex Nut onto the screw, securing the wire between the two nuts. You can use wire cutters to firmly screw the nut into place.
-![image](image_assets/fastenNut2.JPG)
+![image](../assets/ultracortex-images/fastenNut2.JPG)
 
 Slip the SPRING_CASING around the wire, as shown below:
-![image](image_assets/connectCasing.JPG)
+![image](../assets/ultracortex-images/connectCasing.JPG)
 
 Put a thin line of super glue on the outer edge of the top of the ELECTRODE_HOLDER.
-![image](image_assets/glue.JPG)
+![image](../assets/ultracortex-images/glue.JPG)
 
 Press the SPRING_CASING against the ELECTRODE_HOLDER and hold for a few seconds to make sure the two pieces are securely connected.
-![image](image_assets/glueCasing.JPG)
+![image](../assets/ultracortex-images/glueCasing.JPG)
 
 Now sand around the seam between the ELECTRODE_HOLDER and SPRING_CASING. Try your best to make the full cylindar as smooth as possible. You don't want it to catch on the inside of the OCTABOLT.
-![image](image_assets/sand.JPG)
+![image](../assets/ultracortex-images/sand.JPG)
 
 Slide your spring and then the OCTABOLT around the wire as shown below.
-![image](image_assets/fullPart.JPG)
+![image](../assets/ultracortex-images/fullPart.JPG)
 
 Snap the full electrode unit together, guiding the semi-spherical protrusions on the outside of the SPRING_CASING into the relief cuts of the OCTABOLT. 
-![image](image_assets/completedPart.JPG)
+![image](../assets/ultracortex-images/completedPart.JPG)
 
 Voila! Spring-loaded electrode GIF!
 
-![image](image_assets/MechParts.gif)
+![image](../assets/ultracortex-images/MechParts.gif)
 
 ### Insert electrode units into your Ultracortex
 
 Once you've asesembled all of your electrode units, twist them into their respective Ultracortex frame nodes. If the parts are tough to twist into place by hand, use the OCTATOOL that comes with your kit as shown in the picture below. Over time the resistance between the OCTANUT and OCTABOLT will diminish, and the pieces will twist into place more easily.
 
-![image](image_assets/INSERT_ELECTRODES.jpg)
+![image](../assets/ultracortex-images/INSERT_ELECTRODES.jpg)
 
 ### Reconnect wires to OpenBCI & connect ear clip electrodes (Reference & Ground)
 
 Now that all of your electrode units are connected to your Ultracortex frame, reconnect the electrode wires to the OpenBCI board as detailed above. If you have some handy, you may want to use zip ties to secure the loose wiring to the Ultracortex frame. Later revisions of the headset will be designed to account for this. ;)
 
-![image](image_assets/RECONNECT_WIRES.jpg)
+![image](../assets/ultracortex-images/RECONNECT_WIRES.jpg)
 
 Next, connect two touch-proof adapter cables to SRB1 and bottom BIAS pin (white and black respectively in the image below). You can use the touch-proof adapter that comes with the OpenBCI 32bit Board or OpenBCI 16-channel R&D Kit. Then connect your [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/) to these touch-proof adapters. These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system.
 
-![image](image_assets/REF_BIAS.jpg)
+![image](../assets/ultracortex-images/REF_BIAS.jpg)
 
 ### Fasten the BOARD_COVER
 
 Now clip your board cover into place. If you've soldered any of the header rows onto your OpenBCI board, you'll need to use the BOARD_COVER_ADVANCED, as seen in the picture below. Otherwise, you can use the BOARD_COVER_STANDARD with the OpenBCI logo.
 
-![image](image_assets/BOARD_COVER_2.jpg)
+![image](../assets/ultracortex-images/BOARD_COVER_2.jpg)
 
 ### Adjust the Ultracortex for your head
 
@@ -335,19 +335,19 @@ Put the Ultracortex Mark 3 onto your head and gradually tighten the electrode un
 
 **Be careful** not to strain the electrode wires when twisting the electrode unit with the OCTATOOL, or you may separate the wire from the electrode itself. Turn the OCTABOLT until the wire is nearly taught, then reposition the wire and tool and twist again, as demonstrated in the gif.
 
-![image](image_assets/OCTATOOL.gif)
+![image](../assets/ultracortex-images/OCTATOOL.gif)
 
 ### Examine your brain waves!
 
 Now that you have your Ultracortex assembled and comfortably adjusted to your head size and shape, it's brain wave time!
 
-![image](image_assets/WEARING_IT.jpg)
+![image](../assets/ultracortex-images/WEARING_IT.jpg)
 
 Check out the [Getting Started w/ OpenBCI tutorial](http://docs.openbci.com/tutorials/01-GettingStarted) to get up-and-running with the [OpenBCI Processing GUI](https://github.com/OpenBCI/OpenBCI_Processing).
 
 Below is a screenshot of what the GUI looks like when you've got your OpenBCI + Ultracortex (w/ 8 channels) hooked up! You can see a nice alpha (~11 hz) spike on the FFT Plot. 
 
-![image](image_assets/GUI.jpg)
+![image](../assets/ultracortex-images/GUI.jpg)
 
 ### Give Us Feedback!
 
