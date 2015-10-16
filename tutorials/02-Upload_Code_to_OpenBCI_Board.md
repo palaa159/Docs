@@ -61,12 +61,12 @@ Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 s
 
 Next, install the latest version of Arduino IDE which can be found here:
 
-	https://www.arduino.cc/en/Main/Software
+https://www.arduino.cc/en/Main/Software
 	
 You can find the latest firmware and libraries on our github repository. 
 
-	https://github.com/OpenBCI/OpenBCI_32bit
-	https://github.com/OpenBCI/OpenBCI_32bit_Libraries
+https://github.com/OpenBCI/OpenBCI_32bit
+https://github.com/OpenBCI/OpenBCI_32bit_Libraries
 
 * OpenBCI_32bit
 	* This is the firmware that runs on the OpenBCI 32bit Board	
@@ -79,14 +79,11 @@ You will need to install the folders 'OpenBCI_32_Daisy' and 'OBCI_SD' from our L
 
 Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino. Follow the instructions to download and install the latest chipKIT-core hardware files from the chipKIT-core wiki
 
-	http://chipkit.net/wiki/index.php?title=ChipKIT_core
-	
-___________
+http://chipkit.net/wiki/index.php?title=ChipKIT_core
 
 ![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
 Open the OpenBCI_32bit sketch from the File -> Sketchbook dropdown. Then select OpenBCI 32 from the Board drop-down menu.
-___________
 
 ![serial_port](../assets/images/PortSelect.png)
 
