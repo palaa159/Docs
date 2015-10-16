@@ -87,8 +87,6 @@ https://github.com/OpenBCI/OpenBCI_32bit
 
 You will need to install these files from our repository into your Documents/mpide/libraries folder.
 If there is no libraries folder in the mpide folder, create one.
->>>>>>> origin/master
->>>>>>> Stashed changes
 
 * OBCI_SD
 	* Supports writing raw data to on-board SD card
