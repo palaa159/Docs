@@ -66,6 +66,7 @@ https://www.arduino.cc/en/Main/Software
 You can find the latest firmware and libraries on our github repository. 
 
 https://github.com/OpenBCI/OpenBCI_32bit
+
 https://github.com/OpenBCI/OpenBCI_32bit_Libraries
 
 * OpenBCI_32bit
