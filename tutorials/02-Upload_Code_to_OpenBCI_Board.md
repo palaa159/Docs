@@ -51,14 +51,15 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 ##32bit Upload How-To
 **You will need:**
 
-* Computer running mpide from chipKIT
+* Computer running latest version of Arduino IDE
 * OpenBCI Dongle connected to USB port
 * OpenBCI 32bit Board with battery power
 
 ![OpenBCI Dongle](../assets/images/dongleConnection.png)
 
-Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! You can find the latest version of the mpide from chipKit here
+Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! You can find the latest version of the ARduino IDE from here
 
+<<<<<<< Updated upstream
 http://chipkit.net/started/install-chipkit-software/
 	
 You can find the latest firmware and libraries on our github repository
@@ -67,36 +68,52 @@ https://github.com/OpenBCI/OpenBCI_32bit
 
 You will need to install these files from our repository into your Documents/mpide/libraries folder.
 If there is no libraries folder in the mpide folder, create one.
+=======
+<<<<<<< HEAD
+	https://www.arduino.cc/en/Main/Software
+	
+You can find the latest firmware and libraries on our github repository
 
-* SD
+	https://github.com/OpenBCI/OpenBCI_32bit
+	https://github.com/OpenBCI/OpenBCI_32bit_Libraries
+
+You will need to install these files from our repository into your Documents/Arduino/libraries folder:
+=======
+http://chipkit.net/started/install-chipkit-software/
+	
+You can find the latest firmware and libraries on our github repository
+
+https://github.com/OpenBCI/OpenBCI_32bit
+
+You will need to install these files from our repository into your Documents/mpide/libraries folder.
+If there is no libraries folder in the mpide folder, create one.
+>>>>>>> origin/master
+>>>>>>> Stashed changes
+
+* OBCI_SD
 	* Supports writing raw data to on-board SD card
-* OpenBCI_32
+* OpenBCI_32_Daisy
 	* The OpenBCI 32bit Library
 	
-Before you can upload code correctly to the PIC32 with mpide, you need to add a file to the mpide application folder so that you can select the OpenBCI 32 board. In the files you downloaded from our github there is a folder called mpide_Variant There you will find the folder OpenBCI. Move the entire folder called OpenBCI into the variants folder inside the mpide application. Here's where you can find it on different operating systems:
-
-* The file is located here on a MAC
-	* mpide.app/Contents/Resources/Java/hardware/pic32/variants
-* It's similar on a Windows
-	* C/Program Files (86)/mpide/hardware/pic32/variants
-* On a Linux, find the app where you put it and go to 
-	* mpide/hardware/pic32/variants
 	
-![ArduinoIDE](../assets/images/mpide.png)
 
-Next, move the entire folder called OpenBCI_32bit_SD into your Documents/mpide folder, and start up the mpide. you should then see the sketch in your Sketch folder.
+Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino. Follow the instructions to download and install the latest chipKIT-core hardware files from the chipKIT-core wiki
 
-![selectBoardDP32](../assets/images/BoardSelect32.png)
+	http://chipkit.net/wiki/index.php?title=ChipKIT_core
+
+![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
 Select OpenBCI 32 from the Board drop-down menu.
 
-![selectSerialPort](../assets/images/SerialPortSelect32.png)
+
+
+![serial_port](../assets/images/PortSelect.png)
 
 Select the correct serial port for your OpenBCI Dongle. 
 
 * On Macs, this will be named **/dev/tty.usbserial-DN00nnnn** where the nnnn is a combination of numbers and letters specific to your openBCI Dongle.
 
-* On Windows, the serial port will be listed as a COM port.
+* On Windows, the serial port will be listed as a numbered COM port.
 
 * On Linux, it will be different.
 
@@ -106,10 +123,10 @@ When you are happy with the code, you will have to put the 32bit board into boot
 ![reset_program](../assets/images/RST_PROG.png)
 
 * First, press and hold the RST button
-* Then press and hold the PROG button
+* Then press and hold the PROG button	
 * Then, release the RST button while still holding the PROG button down
 * OK, now you can release the PROG button
 
-![Upload](../assets/images/Upload32.png)
+![Upload32](../assets/images/Upload32.png)
 
 Now you should see the blue LED on the 32bit board blinking pleasantly. Press the upload button on the mpide. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done.
