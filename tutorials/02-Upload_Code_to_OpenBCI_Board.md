@@ -57,54 +57,36 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 
 ![OpenBCI Dongle](../assets/images/dongleConnection.png)
 
-Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! You can find the latest version of the ARduino IDE from here
+Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! 
 
-<<<<<<< Updated upstream
-http://chipkit.net/started/install-chipkit-software/
-	
-You can find the latest firmware and libraries on our github repository
+Next, install the latest version of Arduino IDE which can be found here:
 
-https://github.com/OpenBCI/OpenBCI_32bit
-
-You will need to install these files from our repository into your Documents/mpide/libraries folder.
-If there is no libraries folder in the mpide folder, create one.
-=======
-<<<<<<< HEAD
 	https://www.arduino.cc/en/Main/Software
 	
-You can find the latest firmware and libraries on our github repository
+You can find the latest firmware and libraries on our github repository. 
 
 	https://github.com/OpenBCI/OpenBCI_32bit
 	https://github.com/OpenBCI/OpenBCI_32bit_Libraries
 
-You will need to install these files from our repository into your Documents/Arduino/libraries folder:
-=======
-http://chipkit.net/started/install-chipkit-software/
-	
-You can find the latest firmware and libraries on our github repository
-
-https://github.com/OpenBCI/OpenBCI_32bit
-
-You will need to install these files from our repository into your Documents/mpide/libraries folder.
-If there is no libraries folder in the mpide folder, create one.
-
+* OpenBCI_32bit
+	* This is the firmware that runs on the OpenBCI 32bit Board	
 * OBCI_SD
 	* Supports writing raw data to on-board SD card
 * OpenBCI_32_Daisy
 	* The OpenBCI 32bit Library
-	
-	
+
+You will need to install the folders 'OpenBCI_32_Daisy' and 'OBCI_SD' from our Libraries repository into your Documents/Arduino/libraries folder. If there is no 'libraries' folder in the sketch folder, create one. Move the folder called 'OpenBCI_32bit' into your Documents/Arduino folder.
 
 Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino. Follow the instructions to download and install the latest chipKIT-core hardware files from the chipKIT-core wiki
 
 	http://chipkit.net/wiki/index.php?title=ChipKIT_core
+	
+_______________________
 
 ![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
 Select OpenBCI 32 from the Board drop-down menu.
-
-
-
+___________
 ![serial_port](../assets/images/PortSelect.png)
 
 Select the correct serial port for your OpenBCI Dongle. 
