@@ -4,7 +4,7 @@ Sometimes, when studying EEG or other biopotential signals, you will want to hav
 This tutorial will cover a couple of ways to add an external trigger to the OpenBCI data stream on our 32bit Board. Please read this entire page before jaunting off into hardware hacking.
 
 ##External Triggering The Easy Way
-The code used in this example is located [**here**](link) for those of you who want to play along at home. There's a tutorial for how to program the 32bit Board [**here**](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to)
+The code used in this example is located [**here**](link) for those of you who want to play along at home. There's a tutorial for how to program the 32bit Board [**here**](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to
 
 The OpenBCI 32bit Board comes with a user defineable pushbutton switch already on the board, wired right to the PIC microcontroller. Brilliant! The PROG button is used by the PIC to put it into bootloader mode when uploading new firmware, but when it's not doing that it's attached to a GPIO(D17) with a 470K pulldown resistor. To access the PROG pushbutton in your program create a global variable alias for the pin above the setup in your Arduino sketch. This method will acquire signals from the subject, or their friend next to them. The PROG pushbutton is a great way to get user acknowlegement of a stimulus (for example) into the data stream. You will likely want to note the rising edge of the button press, so that's the example code that we'll work with.
 
@@ -16,7 +16,7 @@ The OpenBCI 32bit Board comes with a user defineable pushbutton switch already o
 	
 First thing is to establish the variables we need to read the pushbutton switch, and a flag to let the rest of the program know we got new data. The OpenBCI library already has a variable array for auxiliary data, called auxData, which we will use for logging. I've also added a flag for writing data to an SD card (if you like that kind of thing) and a boolean to toggle the on-board LED with for user feedback, which is always nice.
 
-In the setup function, we set the pin direction and prime the button variables.
+In the setup function, we set the pin direction and prime the button variables. The startFromScratch() function resets the board peripheral devices and does some general housekeeping, along with making inital serial contact with any controlling program. the useAccel and useAux variables are inside the OpenBCI_32_Daisy library (hence the OBCI.) and it's important to decide and select which kind of data you want to log. It is possible to do both, but you will need to manually operate the useAux or useAcel variables (tutorial on that coming sooooon).
 
 	void setup(){
 		// stuff here...
@@ -30,8 +30,6 @@ In the setup function, we set the pin direction and prime the button variables.
 		// more stuff...	
 	}
 		
-The startFromScratch() function resets the board peripheral devices and does some general housekeeping, along with making inital serial contact with any controlling program. the useAccel and useAux variables are inside the OpenBCI_32_Daisy library (hence the OBCI.) and it's important to decide and select which kind of data you want to log. It is possible to do both, but you will need to manually operate the useAux or useAcel variables (tutorial on that coming sooooon).
-
 Then, in the loop, we want to check for the rising edge of the button press, make note of it in the auxData array, and set the write-to-SD flag (if you like). Finally, we want to get the button press event into the data stream. (Reference the [OpenBCI Data Format Doc](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format) for data packet anatomy) There are 6 bytes available in each data packet, and the default format is to read them as three 16bit integers (aka 'words' or 'shorts'). You can decide to add your flags into the auxData array any way you choose. In this example, we are setting each short to the value 0x6620. That's because our [OpenBCI GUI](https://github.com/OpenBCI/OpenBCI_Processing) converts these variables to Gs (the GUI is expecting accelerometer data) and 0x6620 converts to PI (3.14). Our sample rate of 250SPS gives us a 4mS resolution on external trigger events like the rising edge of the PROG button press. 
 
 	pushButtonValue = digitalRead(pushButton);    // feel the PROG button
