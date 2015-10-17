@@ -95,21 +95,25 @@ The code to read this trigger input is quite similar to the previous button code
 		// stuff here...
 		pinMode(triggerPin, INPUT);		// set the button pin direction
 		triggerValue = lastTriggerValue = digitalRead(triggerPin); // seed
+		startFromScratch();     // initialize OpenBCI, read device IDS
+  		// you can set EITHER useAccel or useAux to true
+  		// if you want both, you MUST set and clear one of the variables every sample
+		OBCI.useAccel = false;  // option to add/remove accelerometer data to stream
+  		OBCI.useAux = true;     // option to add/remove auxiliary data to stream
 		// more stuff...	
 	}
 	
 	void loop(){
 	// do stuff
-	
 	triggerValue = digitalRead(triggerPin);    // feel the trigger pin
-    if (triggerValue != lastTriggerValue){  // if it's changed,
-    	if (pushButtonValue == LOW){    // if it's gone from HIGH to LOW
-        OBCI.auxData[0] = 0xFFFF;	 // take note (this could be a counter, or...)
-        OBCI.useAux = true;	         // set the OBCI.auxData flag
-        addAuxToSD = true;           // add Aux Data to the SD card if it's there
-	}
-	lastTriggerValue = triggerValue; // keep track of the changes
-    }
+    	if (triggerValue != lastTriggerValue){  // if it's changed,
+    		if (triggerValue == LOW){    // if it's gone from HIGH to LOW
+       			// 0x6220 converts to PI in GUI
+       			OBCI.auxData[0] = OBCI.auxData[1] = OBCI.auxData[2] = 0x6220; 
+        		addAuxToSD = true;           // add Aux Data to the SD card if it's there
+		}
+		lastTriggerValue = triggerValue; // keep track of the changes
+    	}
     
-    // do other stuff
-    }
+    	// do other stuff
+    	}
