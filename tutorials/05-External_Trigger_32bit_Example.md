@@ -1,12 +1,12 @@
 #External Trigger on OpenBCI 32bit Board
-Sometimes, when studying EEG or other biopotential signals, you will want to have precise timing between external events or stimulus and the data stream. For example, if you are working with P300 waves it is necessary to know the exact time that the signal was presented to the subject in order to look for the tell-tale wave that happens about 300mS after the stimulus. 
+Sometimes, when studying EEG or other biopotential signals, you will want to have precise timing between external events or stimulus and the data stream. For example, if you are working with P300 waves it is necessary to know the exact time that the signal was presented to the subject in order to look for the tell-tale brain wave that happens about 300mS after the stimulus. 
 
 This tutorial will cover a couple of ways to add an external trigger to the OpenBCI data stream on our 32bit Board. Please read this entire page before jaunting off into hardware hacking.
 
 ##External Triggering The Easy Way
 The code used in this example is located [**here**](https://github.com/OpenBCI/OpenBCI_Button_Trigger) for those of you who want to play along at home. There's a tutorial for how to program the 32bit Board [**here**](http://docs.openbci.com/tutorials/02-Upload_Code_to_OpenBCI_Board#upload-code-to-openbci-board-32bit-upload-how-to)
 
-The OpenBCI 32bit Board comes with a user defineable pushbutton switch already on the board, wired right to the PIC microcontroller. Brilliant! The PROG button is used by the PIC to put it into bootloader mode when uploading new firmware, but when it's not doing that it's attached to a GPIO(D17) with a 470K pulldown resistor. To access the PROG pushbutton in your program create a global variable alias for the pin above the setup in your Arduino sketch. This method will acquire signals from the subject, or their friend next to them. The PROG pushbutton is a great way to get user acknowlegement of a stimulus (for example) into the data stream. You will likely want to note the rising edge of the button press, so that's the example code that we'll work with.
+The OpenBCI 32bit Board comes with a user accessable pushbutton switch already on the board, wired right to the PIC32 microcontroller. Brilliant! It is the PROG button, and it is used by to put the PIC into bootloader mode when uploading new firmware. When it's not doing that it's attached to pin D17 with a 470K pulldown resistor, so when you press the PROG button, D17 goes from LOW to HIGH. The PROG pushbutton is a great way to get user acknowlegement of a stimulus (for example) into the data stream. You will likely want to note the rising edge (pushed state) of the button press, so that's the example code that we'll work with.
 
 	int pushButton = 17;		// the button is on pin D17
 	int pushButtonValue;		// used to hold the latest button reading
@@ -14,9 +14,9 @@ The OpenBCI 32bit Board comes with a user defineable pushbutton switch already o
 	boolean addAuxToSD = false;	// use this to write auxiliary data to SD if you like
 	boolean state = HIGH;		// used to toggle the on-board LED
 	
-First thing is to establish the variables we need to read the pushbutton switch, and a flag to let the rest of the program know we got new data. The OpenBCI library already has a variable array for auxiliary data, called auxData, which we will use for logging. I've also added a flag for writing data to an SD card (if you like that kind of thing) and a boolean to toggle the on-board LED with for user feedback, which is always nice.
+First thing is to establish the variables we need to read the pushbutton switch, and a flag to let the rest of the program know we got new data. The OpenBCI library already has a variable array for auxiliary data, called auxData, which we will use for logging. I've also added a flag for writing data to an SD card (if you like that kind of thing) and a boolean to toggle the on-board blue LED for user feedback, which is always nice.
 
-In the setup function, we set the pin direction and prime the button variables. The startFromScratch() function resets the board peripheral devices and does some general housekeeping, along with making inital serial contact with any controlling program. the useAccel and useAux variables are inside the OpenBCI_32_Daisy library (hence the OBCI.) and it's important to decide and select which kind of data you want to log. It is possible to do both, but you will need to manually operate the useAux or useAcel variables (tutorial on that coming sooooon).
+In the setup function, we set the pin direction and prime the button variables. The startFromScratch() function resets the board peripheral devices and does some general housekeeping, along with making inital serial contact with any controlling program. the useAccel and useAux variables are inside the OpenBCI_32_Daisy library (hence the **OBCI.**) and it's important to decide and select which kind of data you want to log. It is possible to do both, but you will need to manually operate the useAux or useAcel variables (tutorial on that coming sooooon).
 
 	void setup(){
 		// stuff here...
@@ -44,7 +44,7 @@ Then, in the loop, we want to check for the rising edge of the button press, mak
         	lastPushButtonValue = pushButtonValue; // keep track of the changes!
 	}
 
-You can do the button feeling at any point in the loop() function. In our sample code linked above, I'm putting it outside of the if(is-running) conditional so that I can see the LED toggle even when the board is not streaming data.
+You can do the button feeling at any point in the loop() function. In our sample code linked above, I'm putting it outside of the if(is-running) conditional so that I can see the LED toggle even when the board is not streaming data. That's a nice way to know that you've got everything set up and working before starting a data logging session.
 
 Here's an example of what the data looks like after it's been logged by our GUI.
 
@@ -69,8 +69,8 @@ And here's an example of what the data looks like after it's been logged to the 
 
 
 ##External Triggering The Harder Way
-Sometimes a situation may arise where you need to interface OpenBCI witn an existing system, for example an audio or visual event-related potential (ERP). In such a case, it is most desireable to have the onset of the signal tightly bound, temporally, with the EEG data. In sucha case it is possible to interface OpenBCI with the signal generating system with a few low-cost interface parts. 
-Our goal with the OpenBCI board is to make biosensing safe and fun. The biggest part of the safety part is making sure that you can't plug yourself accidentally into the mains electrical supply (yikes!). If you are interfacing an external trigger that is **NOT** operating under a battery supply, we recommend thinking twice about incorporating it into your system/protocol. If you've thought twice, here's how we do it when we need to.
+Sometimes a situation may arise where you need to interface OpenBCI witn an existing system, for example an audio or visual event-related potential (ERP). In such a case, it is most desireable to have the onset of the signal tightly bound, temporally, with the EEG data. It is possible to interface the OpenBCI 32bit Board with the external signal generating system using a few low-cost components. 
+Our goal with the OpenBCI board is to make biosensing safe and fun. The biggest part of the safety part is making sure that you can't plug yourself accidentally into the mains electrical supply (yikes!). If you are interfacing an external trigger that is **NOT** operating under a battery supply, we recommend thinking twice about incorporating it into your system/protocol. If you have thought throug it twice, here's how we do it when we need to.
 
 ###Optoisolation
 
@@ -79,7 +79,7 @@ Our goal with the OpenBCI board is to make biosensing safe and fun. The biggest 
 ![Breadboard CNY17](../assets/images/CNY17_Breadboard.jpg)
 
 
-The simplest trick is to isolate the OpenBCI circuit from the trigger signal generating circuit. For this purpose, we picked an Optoisolator with 5000 Volts isolation between the input and the output. [CNY17](http://www.mouser.ee/ProductDetail/Vishay-Semiconductors/CNY17F-2X006/?qs=sGAEpiMZZMteimceiIVCB7Uit3aMEvQQFLjPtOr%2f870%3d) family from Vishay is a great example of a low-cost high islolation optoisolator. In the circuit to the right, when an external trigger of 3.3V to 5V is applied to the Anode of the input (pin 1), the output (pin 5) will go from HIGH to LOW.
+The simplest trick is to isolate the OpenBCI circuit from the trigger signal generating circuit. For this purpose, we picked an Optoisolator with 5000 Volts isolation between the input and the output. [CNY17](http://www.mouser.ee/ProductDetail/Vishay-Semiconductors/CNY17F-2X006/?qs=sGAEpiMZZMteimceiIVCB7Uit3aMEvQQFLjPtOr%2f870%3d) family from Vishay is a great example of a low-cost high islolation optoisolator. It's usually available, and costs under a dollar (USD) in singles. In the circuit to the right, when an external trigger of 3.3V to 5V is applied to the Anode of the input (pin 1), the output (pin 5) will go from HIGH to LOW.
 
 
 	int triggerPin = 18;		// the CNY17 Collector is on pin 18
@@ -111,9 +111,13 @@ The code to read this trigger input is quite similar to the previous button code
        			// 0x6220 converts to PI in GUI
        			OBCI.auxData[0] = OBCI.auxData[1] = OBCI.auxData[2] = 0x6220; 
         		addAuxToSD = true;           // add Aux Data to the SD card if it's there
+        		state = !state;		// toggle the state variable
+          		digitalWrite(LED,state);	// toggle the LED for user useability
 		}
 		lastTriggerValue = triggerValue; // keep track of the changes
     	}
     
     	// do other stuff
     	}
+
+Have fun, be safe, and, as always, we're [here to help](http://openbci.com/index.php/forum/) 
