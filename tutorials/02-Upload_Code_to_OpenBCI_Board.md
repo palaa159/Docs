@@ -59,11 +59,11 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 
 Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! 
 
-Next, install the latest version of Arduino IDE which can be found here:
+Next, install the version 1.6.5 of Arduino IDE which can be found here:
 
-https://www.arduino.cc/en/Main/Software
+https://www.arduino.cc/en/Main/OldSoftwareReleases#previous
 	
-You can find the latest firmware and libraries on our github repository. 
+You can find the latest OpenBCI firmware and libraries on our github repository. 
 
 https://github.com/OpenBCI/OpenBCI_32bit
 
