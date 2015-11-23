@@ -51,7 +51,7 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 ##32bit Upload How-To
 **You will need:**
 
-* Computer running latest version of Arduino IDE
+* Computer running version [1.6.5](https://www.arduino.cc/en/Main/OldSoftwareReleases#previous) of Arduino IDE 
 * OpenBCI Dongle connected to USB port
 * OpenBCI 32bit Board with battery power
 
