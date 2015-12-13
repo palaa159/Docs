@@ -10,6 +10,7 @@ This tutorial has been verified to work with the following MAC OS X versions:
 
 - 10.9
 - 10.10
+- 10.11
 
 
 ### Step 1: open Terminal
@@ -56,11 +57,19 @@ The downloaded .dmg comes with two installers in it. **FTDIUSBSerialDriver_10_3*
 
 ### Step 4: enable dev mode
 
-Prior to making edits to the kext file, you must enable kext dev mode:
+Prior to making edits to the kext file, you must enable kext dev mode and disable signature verification. For OS X 10.10 or older, you just type:
 
 ```
 sudo nvram boot-args="kext-dev-mode=1"
 ```
+
+For 10.11 or newer, you need to reboot your computer and before booting, hold the Cmd-R key. This will get you into recovery mode. From Utilities, choose Terminal and type:
+
+```
+csrutil disable
+```
+
+You can then close the Terminal application and reboot your computer to normal mode. You can proceed with Step 6.
 
 ### Step 5: reboot your computer
 
