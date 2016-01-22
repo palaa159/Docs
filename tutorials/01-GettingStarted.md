@@ -54,11 +54,9 @@ Go to the [GUI Downloads page](http://openbci.com/donation) and download the lat
 
 ![Synthetic](../assets/images/Synthetic.png)
 
-Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator.
+Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
 ![Start Data Stream](../assets/images/StartDataStream.png)
-
-Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
 
 ## III. Prepare your OpenBCI Hardware
 
