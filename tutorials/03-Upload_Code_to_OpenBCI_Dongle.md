@@ -3,47 +3,47 @@
 ##Overview
 The OpenBCI 8bit and 32bit Boards come with a USB dongle that allows for communication between the Board and your computer. There is a BLE radio module (actually an [RFduino 22301](http://www.rfduino.com/product/rfd22301-rfduino-ble-smt/index.html)) on the Dongle and Board that make the communication happen. Here's some terms that are important to note:
 
-* The radio Module on the Dongle is called the **HOST**
-* The radio module on the Board (8bit or32bit) is called the **DEVICE**
+* The radio module on the Dongle is called the **HOST**
+* The radio module on the Board (8bit or 32bit) is called the **DEVICE**
 * Host-Device pairs can be programmed to transmit on up to **25** discreet channels
-* The firmware are *important* differences in the 8bit and 32bit systems
+* There are *important* differences in the firmware for 8bit and 32bit systems
 
-This page covers how the radio link works, and how to upload new firmware to the Dongle radio and the Board radio. 
+This page covers how the radio link works, and how to upload new firmware to the Dongle radio and the Board radio.
 ##Setting up your system to program OpenBCI Dongle
 
 **You will need:**
 
-* Computer(Windows or Mac or Other)
+* Computer (Windows or Mac or Other)
 * [Arduino IDE Version 1.5.8](http://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x)
 * Custom RFduino libraries for OpenBCI
 * A 0.1uF capacitor (see Device section below)
 
-Download and install the Arduino BETA IDE. This is the one that works with the custom RFduino libraries that we install in the next step. 
+Download and install the Arduino BETA IDE. This is the one that works with the custom RFduino libraries that we install in the next step.
 
 
 Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios) repo from our github, and place it in the proper location depending upon your OS.
-	
+
 	On a Mac, put the RFduino folder and everything it contains in
 	/Applications/Arduino.app/Contents/Resources/Java/hardware/arduino
-	
-	On a Windows, put the RFduino folder and everything it contains in 
+
+	On a Windows, put the RFduino folder and everything it contains in
 	C\Program Files (x86)\Arduino-1.5.x\hardware\arduino
-	
+
 The files contained in the RFduino folder are custom builds for OpenBCI by our good friends over at RFdigital. Those guys are great! They helped us to squeeze all of the speed we could get out of the RFduinoGZLL library, and also gave us access to 25 discreet channels for OpenBCI boards to work on. ROCK!
 
 ##Uploading Host Firmware to the Dongle
 
 ![DongleBack](../assets/images/dongleBack.jpg)
 
-This process does not require 3rd party hardware. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. Whe the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle. 
+This process does not require 3rd party hardware. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. Whe the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
 
-If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the static baggie that it came in. 
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
 
 
 	// place this above the setup()
 	#include <RFduinoGZLL.h>  // using the Gazelle Stack
 	device_t role = HOST;  // This is the HOST
-	
+
 	void setup(){
 		 RFduinoGZLL.channel = 6;  // use channels 2-25. 1 is same as 0 and 0-8 in normal GZLL library
 		 RFduinoGZLL.begin(role);  // start the GZLL stack
@@ -63,7 +63,7 @@ Again, there is a small difference between the 8bit and 32bit boards, explained 
 
 ##Program Device Radio with OpenBCI Dongle
 
-The idea here is to use the FTDI chip on the Dongle to bridge USB to Serial for the upload process. There is a bit of prep, and a special program for the Dongle radio so that it doesn't get in the way. 
+The idea here is to use the FTDI chip on the Dongle to bridge USB to Serial for the upload process. There is a bit of prep, and a special program for the Dongle radio so that it doesn't get in the way.
 
 ![dongleWithHeaders](../assets/images/dongleHeaders.jpg)
 
@@ -71,7 +71,7 @@ First, solder the headers that came with your OpenBCI Dongle. Then, move the swi
 
 ![0.1uF capacitors](../assets/images/caps.jpg)
 
-The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can get them at your local radio shack, or hobby electronics store. The 0.1uF capacitor needs to be in series between the Dongle GPIO6 pin and the OpenBCI Board RFRST pin. 
+The next thing you need are a handful of wires and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can get them at your local radio shack, or hobby electronics store. The 0.1uF capacitor needs to be in series between the Dongle GPIO6 pin and the OpenBCI Board RFRST pin.
 
 ![Dongle Lash Up](../assets/images/DonglePassThruLashup.jpg)
 
@@ -97,7 +97,7 @@ There are many, many FTDI chip breakouts and cables out there that you can use. 
 ###RFduino
 ![RFduinoUSBshield](../assets/images/RFduinoUSBshield.jpg)
 
-RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) The only thing to change, is that the GPIO6 is not the same as the OpenBCI Dongle. Connect the OpenBCI pin RF RST to the RFduino USB Shield pin RESET. And, you don't need to provide a 0.1uF cap, because **the USB Shield comes with the 0.1uF capacitor already installed!** 
+RFduino makes a small board that they call a [USB Shield](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html). The form-factor and pinout of the OpenBCI Dongle matches exactly the pinout of the RFduino USB Shield. It's almost like we planned it that way ;) The only thing to change, is that the GPIO6 is not the same as the OpenBCI Dongle. Connect the OpenBCI pin RF RST to the RFduino USB Shield pin RESET. And, you don't need to provide a 0.1uF cap, because **the USB Shield comes with the 0.1uF capacitor already installed!**
 
 
 ###FTDI Friend
