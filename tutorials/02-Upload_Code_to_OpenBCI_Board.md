@@ -82,6 +82,8 @@ Before you can upload code correctly to the PIC32 with Arduino, you need to add 
 
 http://chipkit.net/wiki/index.php?title=ChipKIT_core
 
+***NOTE*** You must follow the wiki instructions  **2) Manual install by copying ZIP file** from the chipKIT site.
+
 ![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
 Open the OpenBCI_32bit sketch from the File -> Sketchbook dropdown. Then select OpenBCI 32 from the Board drop-down menu.
