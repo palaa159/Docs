@@ -36,7 +36,7 @@ Now that you have both the OpenBCI Python API and LSL set up on your system, you
 ![streamer_lsl on console](../assets/Matlab/lsl_streamer.png)
 ) 
 
-3. Enter "/start" to begin streaming into LSL!
+3.. Enter "/start" to begin streaming into LSL!
 
 If your setup was successful, you won't see any additional information output onto the console. However, LSL should now be able to send the stream of data into whatever application or device you are using LSL to communicate with.
  
