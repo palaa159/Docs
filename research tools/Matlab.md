@@ -34,7 +34,7 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-![ ](http://sccn.ucsd.edu/mediawiki/images/e/ea/Eeglab.jpg  "EEGLAB GUI")
+![image](../assets/Matlab/eeglab_gui.jpg  "EEGLAB GUI")
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI. The following are different data types that can be used:
@@ -65,7 +65,7 @@ eeg_data = eeg_data'
 ```
 If EEGLAB isn't already running, enter "eeglab" into the Matlab command line to start the program. Import your matrix into EEGLAB using the EEGLAB GUI: File -> Import Data -> Using EEGLAB functions and plugins -> From ASCII/float file or Matlab array
 
-![ ](/assets/eeglab_dataimport.png "EEGLAB Data Import")
+![image](../assets/Matlab/eeglab_dataimport.png "EEGLAB Data Import")
 
 
 In the pop-up window that appears, enter information about the data set. Select "Matlab variable", and enter the name of the variable where your matrix is stored. Enter the Data Sampling rate (it should be commented in at the top of the txt file - usually 250 Hz by default in the OpenBCI GUI). The other fields can be left at default, and EEGLAB will automatically fill in the information from the data set.
@@ -95,7 +95,7 @@ Open up MATLAB, and enter the following in MATLAB's command line:
 
 After some console output, you should see the text "Welcome to the BCILAB toolbox!" and then a new GUI with the BCILAB menu should appear.
 
-![ ](/assets/bcilab_menu.png "BCILAB menu")
+![image](../assets/Matlab/bcilab_menu.png "BCILAB menu")
 
 
 ####Streaming into BCILAB
@@ -105,7 +105,7 @@ See our [Labstreaminglayer Tutorial] for instructions on how to start a stream f
 
 Once a stream has been started on your computer, open BCILAB within MATLAB (>> cd your/path/to/bcilab; bcilab) and from the menu, select **Online Analysis > Read input from... > Lab streaming layer...**:
 
-![ ](/assets/bcilab_lsl.png "BCILAB LSL")
+![image](../assets/Matlab/bcilab_lsl.png "BCILAB LSL")
 
 ##ERPLAB
 ####Overview
@@ -115,7 +115,7 @@ From the [ERPLAB homepage](http://erpinfo.org/erplab): "ERPLAB Toolbox is a free
 [Download](http://erpinfo.org/erplab/erplab-download) and extract the latest ERPLAB release to the "plugins" folder of your EEGLAB directory (if you have an old release of EEGLAB, you will also have to enter the path to this directory in MATLAB by *File > Set Path*)
 
 Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
-![ ](/assets/erplab.png "ERPLAB menu")
+![image](../assets/Matlab/erplab.png "ERPLAB menu")
 
 ####Analyzing EEG Data Sets
 To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [Loading OpenBCI Datasets in EEGLAB section](#loading-openbci-datasets-in-eeglab). After the EEG data is imported into EEGLAB, you can then use ERPLAB functions to analyze your data. [Read more on using ERPLAB on their website](http://erpinfo.org/erplab/erplab-documentation/manual_4/)
