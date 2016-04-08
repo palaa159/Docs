@@ -121,6 +121,7 @@ Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
 To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [Loading OpenBCI Datasets in EEGLAB section](#loading-openbci-datasets-in-eeglab). After the EEG data is imported into EEGLAB, you can then use ERPLAB functions to analyze your data. [Read more on using ERPLAB on their website](http://erpinfo.org/erplab/erplab-documentation/manual_4/)
 
 ##FieldTrip
+(Coming soon!)
 
 ##Further Reading
 [EEGLAB Wiki](http://sccn.ucsd.edu/wiki/EEGLAB)
