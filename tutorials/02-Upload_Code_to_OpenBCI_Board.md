@@ -57,9 +57,9 @@ When you are happy with the code, simply press upload to program the OpenBCI 8bi
 
 ![OpenBCI Dongle](../assets/images/dongleConnection.png)
 
-Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! 
+***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board).
 
-Next, install the version 1.6.5 of Arduino IDE which can be found here:
+First, install the version 1.6.5 of Arduino IDE which can be found here:
 
 https://www.arduino.cc/en/Main/OldSoftwareReleases#previous
 	
@@ -88,6 +88,8 @@ http://chipkit.net/wiki/index.php?title=ChipKIT_core
 
 Open the OpenBCI_32bit sketch from the File -> Sketchbook dropdown. Then select OpenBCI 32 from the Board drop-down menu.
 
+Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! Now is a good time to plug your Dongle in and power down the Board.
+
 ![serial_port](../assets/images/PortSelect.png)
 
 Select the correct serial port for your OpenBCI Dongle. 
@@ -98,16 +100,36 @@ Select the correct serial port for your OpenBCI Dongle.
 
 * On Linux, it will be different.
 
-
-When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatable IC, so you have to do it manually.
+When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatible IC, so you have to do it manually.
 
 ![reset_program](../assets/images/RST_PROG.png)
 
-* First, press and hold the RST button
-* Then press and hold the PROG button	
-* Then, release the RST button while still holding the PROG button down
-* OK, now you can release the PROG button
+* Power OFF the OpenBCI Board.
+* Press down both RST and PROG buttons at the same time.
+* Power ON the OpenBCI Board.
+* Release the RST button while still holding down the PROG button.
+* Release the PROG button.
 
 ![Upload32](../assets/images/Upload32.png)
 
 Now you should see the blue LED on the 32bit board blinking pleasantly. Press the upload button on the Arduino IDE. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done. Happy Hacking!
+
+## Troubleshooting
+
+If the upload fails with `No Target Found`:
+
+1. Unplug the Dongle and Device.
+2. Plug the Dongle into your computer.
+3. Plug the Device into your computer.
+4. Put the device into bootloader mode.
+5. Try upload again.
+
+If the upload fails with `Program Flash Failed` it's due to the Arduino IDE not being able to read from the serial port fast enough possibly do to resource starvation or overall computer power. We recommend taking the following actions:
+
+* Keep the Board and Dongle physically close to each other during the upload.
+* Keep the Arduino IDE open, front and center and don't use any other programs during the upload.
+* Close all open programs such as (Google Chrome, MS Word, etc...) and only have the Arduino 1.6.5 IDE open during upload.
+* Restart your computer and don't open any other programs other than the Arduino 1.6.5 IDE used for programming.
+* If all else fails, find a friend with a more powerful computer and do the uploading from their computer.
+
+In extreme conditions, if you have tried all five of the above methods and still can't upload, then you can try to increase the Device's polling time [in the RFduino Device firmware code](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/OpenBCI_32bit_Device/OpenBCI_32bit_Device.ino#L41). Increase `pollTime` incrementally (by about 5ms) until the upload succeeds. Upload the new radio code to the Device ([see tutorial](http://docs.openbci.com/tutorials/03-Upload_Code_to_OpenBCI_Dongle#uploading-device-firmware-to-openbci-boards-program-device-radio-with-openbci-dongle)). After you are satisfied with the uploaded code. You should set the Device's `pollTime` back to 60mS to remain compatible with existing drivers.   
