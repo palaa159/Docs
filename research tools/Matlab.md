@@ -34,7 +34,7 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-![image](../assets/Matlab/eeglab_gui.jpg)
+![image](../assets/Matlab/eeglab_gui.jpg  "EEGLAB GUI")
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI. The following are different data types that can be used:
@@ -70,7 +70,7 @@ If EEGLAB isn't already running, enter "eeglab" into the Matlab command line to 
 
 In the pop-up window that appears, enter information about the data set. Select "Matlab variable", and enter the name of the variable where your matrix is stored. Enter the Data Sampling rate (it should be commented in at the top of the txt file - usually 250 Hz by default in the OpenBCI GUI). The other fields can be left at default, and EEGLAB will automatically fill in the information from the data set.
 
-Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](../assets/Matlab/electrode_positions_8channel.sfp) and [16 channel](../assets/Matlab/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
+Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](/assets/electrode_positions_8channel.sfp) and [16 channel](/assets/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
 
 The data is now imported into EEGLAB, and you can perform a variety of data analysis on the data.See ((performing EEG data analysis and visualization)) for next steps on working with your data.
 
@@ -121,7 +121,6 @@ Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
 To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [Loading OpenBCI Datasets in EEGLAB section](#loading-openbci-datasets-in-eeglab). After the EEG data is imported into EEGLAB, you can then use ERPLAB functions to analyze your data. [Read more on using ERPLAB on their website](http://erpinfo.org/erplab/erplab-documentation/manual_4/)
 
 ##FieldTrip
-(Coming soon!)
 
 ##Further Reading
 [EEGLAB Wiki](http://sccn.ucsd.edu/wiki/EEGLAB)
