@@ -103,7 +103,7 @@ Designers & Engineers:
 
 ![image](../assets/ultracortex-nova-images/SPRING.jpg)
 
-* Suggested Spring 2 (**x5**) — aka "Strong Spring" — [Century Spring Corp. Stock #: S-845](http://cad.centuryspring.com/db/service?domain=century&command=showProduct&category=compression&product=S-845) — this spring has a much stronger "Rate" (14 lb/in). This makes is ideal to act as a standoff at locations where you do not have a spikey electrode. This process is described in more detail below (in the "Assembly Instructions" section).
+* Suggested Spring 2 (**x5**) — aka "Strong Spring" — [Century Spring Corp. Stock #: S-71315S](http://cad.centuryspring.com/db/service?domain=century&command=showProduct&category=compression&product=S-713) — this spring has a much stronger "Rate" (14 lb/in). This makes is ideal to act as a standoff at locations where you do not have a spikey electrode. This process is described in more detail below (in the "Assembly Instructions" section).
 
 ![image](../assets/ultracortex-nova-images/spring2.jpg)
 
