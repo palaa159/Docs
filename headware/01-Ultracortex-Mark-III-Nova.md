@@ -112,7 +112,7 @@ Designers & Engineers:
 
 We use small stainless steel screws and hex nuts to fasten the FRI electrodes (listed above) to the 3D-printed electrode mount components &  wiring that connects the electrodes back to the OpenBCI board. We used stripped [Gold Cup Electrodes](http://openbci.myshopify.com/collections/frontpage/products/openbci-gold-cup-electrodes) as the cabling, by removing the gold cup with a wire cutter and looping the exposed wire around the screw between the two tightened hex nuts (as seen in the picture below).
 
-* (**21x**) [Stainless Steel Pan Head Phillips Machine Screw, 2-56 Thread, 3/4" Length ($5.70 per pack of 50)](http://www.mcmaster.com/#91735a017/=xzahfj)
+* (**21x**) [Stainless Steel Pan Head Phillips Machine Screw, 2-56 Thread, 3/4" Length ($5.70 per pack of 50)](http://www.mcmaster.com/#91772a084/=11zdicn)
 * (**42x**) [Stainless Steel Hex Nut, 2-56 Thread Size, 3/16" Wide, 1/16" High](http://www.mcmaster.com/#91841a003/=xzahv0)
 
 ![image](../assets/ultracortex-nova-images/NUT_AND_BOLT.jpg)
