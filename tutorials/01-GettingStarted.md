@@ -21,7 +21,7 @@ This tutorial can be followed if you are working with any OpenBCI board (8bit, 3
 
 ![OpenBCI Dongle](../assets/images/dongle.png)
 
-The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial connection with your computer's on-board FTDI chip. The serial port is called /dev/ttyUSB\* (if you're using Linux or Mac) or COM\* (if you're using Windows) . You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
+The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial connection with your computer's on-board FTDI chip. The serial port is called /dev/tty\* (if you're using Linux or Mac) or COM\* (if you're using Windows) . You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
 
 ### 3. Your Electrode Starter Kit (ESK) Or Other Electrodes
 
@@ -110,11 +110,11 @@ In order to connect to your OpenBCI, you must specify the data source to be "LIV
 
 ![Select Serial](../assets/images/selectSerial.png)
 
-In the first section of the LIVE (from OpenBCI) sub-panel, find your Dongle's Serial/COM port name. If you're using a MAC, it's name will be in the following format:
+In the first section of the LIVE (from OpenBCI) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, it's name will be in the following format:
 
-**/dev/tty.usbserial-DNxxxxxx**
+**/dev/tty\***
 
-If you're using Windows or Linux, it will appear as:
+If you're using Windows, it will appear as:
 
 **COM#**
 
