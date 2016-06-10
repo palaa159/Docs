@@ -21,7 +21,7 @@ This tutorial can be followed if you are working with any OpenBCI board (8bit, 3
 
 ![OpenBCI Dongle](../assets/images/dongle.png)
 
-The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial (if you're working on a MAC) or COM (if you're on PC or Linux) connection with your computer with its on-board FTDI chip. You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
+The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the OpenBCI board. The dongle establishes a serial connection with your computer's on-board FTDI chip. The serial port is called /dev/ttyUSB* (if you're using Linux or Mac) or COM* (if you're using Windows) . You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your OpenBCI board.
 
 ### 3. Your Electrode Starter Kit (ESK) Or Other Electrodes
 
