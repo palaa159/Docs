@@ -112,7 +112,7 @@ In order to connect to your OpenBCI, you must specify the data source to be "LIV
 
 In the first section of the LIVE (from OpenBCI) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, it's name will be in the following format:
 
-**/dev/tty\***
+**/dev/tty***
 
 If you're using Windows, it will appear as:
 
