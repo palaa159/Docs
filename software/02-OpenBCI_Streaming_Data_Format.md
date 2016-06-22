@@ -118,7 +118,7 @@ Our 16 channel system allows for control of individual settings for all 16 chann
 
 ###Room For Improvement
 
-**Chage baud rate on the fly.**  This would help increase data rate. However, we have not been able to increase the Board UART baud beyond 1152000. The Dongle baud has been tested up to 1Mbaud.
+**Chage baud rate on the fly.**  This would help increase data rate. However, we have not been able to increase the Board UART baud beyond 115200. The Dongle baud has been tested up to 1Mbaud.
 
 **Change protocol to meet other standards.** The over-air data is sent in packets (or frames, depending upon your preferred word). The maximum bytes allowed per packet is 32. We are reserving the first byte to use as a packet check-sum in our protocol. So the available bytes-per-packet, as far as the uC is concerned, is 31. The over-air protocol that the Dongle/RFduino Host gets is:
 
