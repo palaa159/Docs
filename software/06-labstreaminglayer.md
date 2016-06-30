@@ -29,7 +29,7 @@ Now that you have both the OpenBCI Python API and LSL set up on your system, you
 1. Start the OpenBCI Python program via the command line by typing
 
 		>python user.py -p=port --add streamer_lsl
-[Replace "port" with the serial port that the OpenBCI dongle is connected to (e.g. COM1). You can find out the name of your port by starting the OpenBCI GUI and seeing what ports appear when you select "LIVE" as the data source. For more information on doing this, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted)]
+Replace "port" with the serial port that the OpenBCI dongle is connected to (e.g. COM1). You can find out the name of your port by starting the OpenBCI GUI and seeing what ports appear when you select "LIVE" as the data source. For more information on doing this, see our [Getting Started Guide][(http://docs.openbci.com/tutorials/01-GettingStarted)]
 
 2. A message should appear on the console displaying the board being instantiated, available plugins, and the activation of the plugin streamer_lsl. It should show that you have two streams ready to be activated - EEG (8 channels) and AUX (3 channels).
 
