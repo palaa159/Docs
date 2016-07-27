@@ -1,12 +1,12 @@
 #Upload Code to OpenBCI Radios
 
 ##Overview
-The OpenBCI 8bit and 32bit Boards come with a USB dongle that allows for communication between the Board and your computer. There is a BLE radio module (actually an [RFduino 22301](http://www.rfduino.com/product/rfd22301-rfduino-ble-smt/index.html)) on the Dongle and Board that make the communication happen. Here's some terms that are important to note:
+The OpenBCI 8-bit and 32-bit Boards come with a USB dongle that allows for communication between the Board and your computer. There is a BLE radio module (actually an [RFduino 22301](http://www.rfduino.com/product/rfd22301-rfduino-ble-smt/index.html)) on the Dongle and Board that make the communication happen. Here's some terms that are important to note:
 
 * The radio module on the Dongle is called the **HOST**
-* The radio module on the Board (8bit or 32bit) is called the **DEVICE**
+* The radio module on the Board (8-bit or 32-bit) is called the **DEVICE**
 * Host-Device pairs can be programmed to transmit on up to **25** discreet channels
-* There are *important* differences in the firmware for 8bit and 32bit systems
+* There are *important* differences in the firmware for 8-bit and 32-bit systems
 
 This page covers how the radio link works, and how to upload new firmware to the Dongle radio and the Board radio.
 ##Setting up your system to program OpenBCI Dongle
@@ -19,6 +19,8 @@ This page covers how the radio link works, and how to upload new firmware to the
 * A 0.1uF capacitor (see Device section below)
 
 Download and install the Arduino BETA IDE. This is the one that works with the custom RFduino libraries that we install in the next step.
+
+***Note***: To upload code to the OpenBCI board, you need 1.6.5, while you need 1.5.8 to upload code to the dongle. If you have already installed 1.6.5, you may see an error message while installing 1.5.8 saying that you need to uninstall 1.6.5. Instead of doing that, simply move the existing "Arduino" program folder (which should be 1.6.5) in your Program Files to another folder (such as "Documents"). Go to your program manager (called "Change or Remove Program" in Windows, press Uninstall Arduino 1.5.8, and confirm if told that there was an error in uninstalling 1.5.8. Then, install 1.5.8. Rename the new "Arduino" program folder (which should now be 1.5.8) to "Arduino 1.5.8", and rename the Arduino folder that you moved to the name "Arduino 1.6.5". Move this folder back to your Program Files where "Arduino 1.5.8" is located, allowing you to keep both versions.
 
 
 Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios) repo from our github, and place it in the proper location depending upon your OS.
@@ -51,7 +53,7 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 	}
 
 
-Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
+Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8-bit and 32-bit code functions! Both the 8-bit Host and 32-bit Host code are downloaded with the RFduino libraries above.
 
 
 #Uploading Device Firmware to OpenBCI Boards
@@ -59,7 +61,7 @@ Also, make sure that you use the code that is specific to your board. There are 
 ##Overview
 In order to upload code to the Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breadout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. This page will go over a few ways of uploading firmware to the OpenBCI Device radios.
 
-Again, there is a small difference between the 8bit and 32bit boards, explained below.
+Again, there is a small difference between the 8-bit and 32-bit boards, explained below.
 
 ##Program Device Radio with OpenBCI Dongle
 
@@ -82,13 +84,13 @@ While you're at the store, might as well pick up some jumper wires and a breadbo
 * GPIO6	-->	0.1uF Cap	-->	RF RST
 * GND	-->	GND
 
-![8bitDeviceConnection](../assets/images/8bitDeviceConnection.jpg)
+![32-bitDeviceConnection](../assets/images/32-bitDeviceConnection.jpg)
 
-On The **8bit Board**, the pins you need to connect to are accessed from the TOP of the board. Insert the jumpers into the holes in the correct position, and press them tightly agains the sides of the holes to make a strong connection. Now, you can upload Device code to the RFduino on the OpenBCI 8bit Board!
+On the **32-bit Board** the pins you need to connect to are accessed from the BOTTOM of the board. Connect the jumper wires to the pads as shown and press tightly while uploading to the Device.
 
-![32bitDeviceConnection](../assets/images/32bitDeviceConnection.jpg)
+![8-bitDeviceConnection](../assets/images/8-bitDeviceConnection.jpg)
 
-On the **32bit Board** the pins you need to connect to are accessed from the BOTTOM of the board. Connect the jumper wires to the pads as shown and press tightly while uploading to the Device.
+On The **8-bit Board**, the pins you need to connect to are accessed from the TOP of the board. Insert the jumpers into the holes in the correct position, and press them tightly agains the sides of the holes to make a strong connection. Now, you can upload Device code to the RFduino on the OpenBCI 8-bit Board!
 
 ##Program Device Radio with Other FTDI Boards
 

@@ -3,7 +3,7 @@
 
 ## I. What You Need
 
-![OpenBCI Contents](../assets/images/Contents8bit.png)
+![OpenBCI Contents](../assets/images/Contents8-bit.png)
 
  1. OpenBCI board
  2. OpenBCI Dongle
@@ -13,9 +13,9 @@
 
 ### 1. Your Board
 
-![OpenBCI 8bit Top](../assets/images/8.jpg)
+![OpenBCI 8-bit Top](../assets/images/8.jpg)
 
-This tutorial can be followed if you are working with any OpenBCI board (8bit, 32bit, or 32bit with Daisy). I'll be working with the 8bit board.
+This tutorial can be followed if you are working with any OpenBCI board (8-bit, 32-bit, or 32-bit with Daisy). I'll be working with the 8-bit board.
 
 ### 2. Your OpenBCI USB Dongle
 
@@ -40,11 +40,11 @@ If you plan to work with your own electrodes, the touch-proof adapter may come i
 
 ![Battery Connection](../assets/images/batteryConnection.png)
 
-Both the 8bit board and the 32 bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit.
+Both the 8-bit board and the 32-bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit.
 
 ### 5. (x4) Plastic Feet
 
-![Plastic Feet](../assets/images/8bitboard_wPlasticFeet.png)
+![Plastic Feet](../assets/images/8-bitboard_wPlasticFeet.png)
 
 Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
@@ -79,17 +79,17 @@ Plug this in (facing upwards!) and you should see a blue LED light up.
 
 **Note:** make sure your USB Dongle is switched to GPIO 6 and not RESET. The switch should be set closer to your computer as seen in the picture to the right.
 
-### 3. Plug in your 6V AA batter pack (with batteries)
+### 3. Plug in your 6V AA battery pack (with batteries)
 
 ![Battery Connection](../assets/images/batteryConnection.png)
 
-Both the 8bit board and the 32 bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit. There's a good reason we put this notice in here twice!
+Both the 8-bit board and the 32-bit boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit. There's a good reason we put this notice in here twice!
 
 ### 4. Switch your OpenBCI board to PC (not OFF or BLE)
 
 ![Power Up Board](../assets/images/PowerUpBoard.JPG)
 
-Make sure to move the small switch on the right side of the board from "OFF" to "PC". As soon as you do, you should see a blue LED blink 3 times (if you’re using the 8bit board; the 32bit version doesn’t blink). If you don't, press the reset button just to the left of the switch. If the LED still does not blink 3 times, make sure you have full battery. If you're sure your batteries are fully charged, consult the [hardware section](http://openbci.com/index.php/forum#/categories/hardware) of our Forum.
+Make sure to move the small switch on the right side of the board from "OFF" to "PC". As soon as you do, you should see a blue LED blink 3 times (if you’re using the 8-bit board; the 32-bit version doesn’t blink). If you don't, press the reset button just to the left of the switch. If the LED still does not blink 3 times, make sure you have full battery. If you're sure your batteries are fully charged, consult the [hardware section](http://openbci.com/index.php/forum#/categories/hardware) of our Forum.
 
 **Note:** it's important to plug in your Dongle before you turn on your OpenBCI board. Sometimes, if the data stream seems broken, you may need to unplug your USB Dongle and power down your OpenBCI board. Make sure to plug your USB Dongle in first, then power up your board afterwards.
 
@@ -148,7 +148,7 @@ After creating a Playback file, it can be replayed by running the OpenBCI GUI wi
 
 ![Channel Count](../assets/images/channelCount.png)
 
-The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and 32bit board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
+The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and 32-bit board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
 
 ### 6. Select your SD setting
 
@@ -203,7 +203,7 @@ In this quick demo, we'll be showing you how to set up 3 channels of electrophys
 For more information on these three signals, refer to wikipedia:
 
  * [Heart Acitivity - Electrocardiography (EKG or ECG)](http://en.wikipedia.org/wiki/Electrocardiography)
- * [Muscle Acitivity - Electromyiography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
+ * [Muscle Acitivity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
  * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
 
@@ -213,7 +213,7 @@ For more information on these three signals, refer to wikipedia:
 
 #### Necessary:
 
-* Ten20 conductive elctrode paste (or other conductive electrode gel)
+* Ten20 conductive electrode paste (or other conductive electrode gel)
 * Your OpenBCI board, USB Dongle, battery pack, and x4 AA batteries
 * x6 gold cup electrodes (from your OpenBCI electrode starter kit or other). If you are using an OpenBCI electrode starter kit, use the following electrodes so as to be consistent with the GUI's color-coding protocol:
   1. Black
@@ -260,7 +260,7 @@ b) Now apply this electrode to either one of your earlobes (either A1 or A2 as s
 
 ![Fp2](../assets/images/Fp2.JPG)
  
-c) Follow the same procedure for the purple electrode and apply it to your forhead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forheads centerline. 
+c) Follow the same procedure for the purple electrode and apply it to your forehead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forehead's centerline. 
  
 ![1020](../assets/images/1020.jpg)
  
@@ -276,7 +276,7 @@ d) Now follow the same procedure for the red electrode and place it on the back 
 
 e) Now follow the same procedure as step 2 above to apply the black electrode to your other earlobe (either A1 or A2 from the 10-20 system). The black electrode is connected to the BIAS pin, which is used for noise cancelling. It is similar to a GROUND pin, which establishes a common ground between the OpenBCI board and your body, but it has some extra destructive interference noise cancelling techniques built in! 
 
-You're now done connecting electrodes to our noggin! I like to use a cheap cotton hairband to add extra stability to all of the electrodes connected to my head, by placing it gently on top of all of the electrodes. 
+You're now done connecting electrodes to your noggin! I like to use a cheap cotton hairband to add extra stability to all of the electrodes connected to my head, by placing it gently on top of all of the electrodes. 
  
 ![forearm](../assets/images/forearm.JPG)
 
@@ -325,13 +325,13 @@ So there's a good chance your current setup isn't showing clean data like the sc
 
 Get rid of 60 Hz (or 50 Hz if you're in Europe or any country that operates on a 50 Hz power grid). The OpenBCI has a built-in notch filter, that does a decent job at eliminating 60 Hz noise. You can adjust the notch filter to 50 Hz by clicking the "Notch 60 Hz" button. Additionally, if your OpenBCI board is on a table with any power chords or devices that are plugged into a wall outlet, move it to a location away from any electronic devices plugged into the wall. This will drastically reduce the alternating current (AC) influence on your signal.
 
-![Stablize Your Cables w/ Tape](../assets/images/secureCables.JPG)
+![Stabilize Your Cables w/ Tape](../assets/images/secureCables.JPG)
 
-#### Stablize your electrodes
+#### Stabilize your electrodes
 
 Make sure your electrode cables are steady. If you shake the electrodes that are dangling from your head/body, you'll notice that it severely affects the signals. This movement noise is something that could be greatly improved with "active" electrodes, but when using the "passive" electrodes that come with the OpenBCI electrode starter kit, you have to be very careful to remain steady while using the system, in order to produce the best signal. Sometimes, I'll bind all of the electrode cables together with a piece of electric tape to secure them and minimize cable movement. If you do this, don't worry about including the blue and green electrodes in the bundle, since movement noise doesn't affect the EMG/EKG signal as significantly.
 
-#### Ensure that your electrodes are securely connceted
+#### Ensure that your electrodes are securely connected
 
 Ensure that your electrodes are connected securely (especially your reference)!
 
