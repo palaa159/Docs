@@ -41,6 +41,8 @@ C:\Program Files (x86)\Arduino-1.5.x\hardware\arduino
   On Linux, put the RFduino folder and everything it contains in
 arduino-1.5.8/hardware/arduino
 
+This process does not require 3rd party hardware. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. When the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
+
 **NOTE FOR LINUX USERS**
 Linux users will need to have the program [wine](https://www.winehq.org/) installed in order to continue. There is a dependency for the arduino code that requires the running  `RFDLoader.exe` to continue.
 In order to run this .exe, do the following:
