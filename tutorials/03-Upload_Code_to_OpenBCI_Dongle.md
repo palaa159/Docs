@@ -54,11 +54,13 @@ In order to run this .exe, do the following:
 
 That's it! As long as `wine` is installed normally the script should take care of any issues you may have when uploading.
 
-5. Download the [OpenBCI_Radios Firmware](https://github.com/OpenBCI/OpenBCI_Radios/tree/master) repo from our github. You may also clone the repo into your libraries folder cited after step 6.
+### Upload Firmware Version 2.x.x (Fall 2016)
 
-6. Unzip the folder, and if it is named OpenBCI_Radios-master, rename it to just OpenBCI_Radios.
+1. Download the [OpenBCI_Radios Firmware](https://github.com/OpenBCI/OpenBCI_Radios/tree/master) repo from our github. You may also clone the repo into your libraries folder cited after step 6.
 
-7. Move the OpenBCI_Radios folder from your downloads into:
+2. Unzip the folder, and if it is named OpenBCI_Radios-master, rename it to just OpenBCI_Radios.
+
+3. Move the OpenBCI_Radios folder from your downloads into:
 
    On Mac/Linux:
 Documents/Arduino/libraries
@@ -68,15 +70,25 @@ C:\Users\username\Documents\Arduino\libraries
 
    If there is no 'libraries' folder in the above folder, create one.
 
-8. Open the Arduino IDE 1.5.8, restart the Arduino IDE if it was open.
+4. Open the Arduino IDE 1.5.8, restart the Arduino IDE if it was open.
 
-If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a DEVICE, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
 
-The files contained in the RFduino folder are custom builds for OpenBCI by our good friends over at RFdigital. Those guys are great! They helped us to squeeze all of the speed we could get out of the RFduinoGZLL library, and also gave us access to 25 discreet channels for OpenBCI boards to work on. ROCK!
+### Upload Firmware Version 1.x.x (2014 - Fall 2016)
+
+Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios/tree/maint/1.0.0) repo from our github, and place it in the proper location depending upon your OS.
+
+	On a Mac, put the RFduino folder and everything it contains in
+	/Applications/Arduino.app/Contents/Resources/Java/hardware/arduino
+
+	On a Windows, put the RFduino folder and everything it contains in
+	C\Program Files (x86)\Arduino-1.5.x\hardware\arduino
 
 ***Note***: To upload code to the OpenBCI board, you need 1.6.5, while you need 1.5.8 to upload code to the dongle. If you have already installed 1.6.5, you may see an error message while installing 1.5.8 saying that you need to uninstall 1.6.5. Instead of doing that, simply move the existing "Arduino" program folder (which should be 1.6.5) in your Program Files to another folder (such as "Documents"). Go to your program manager (called "Change or Remove Program" in Windows, press Uninstall Arduino 1.6.5, and confirm if told that there was an error in uninstalling 1.6.5. Then, install 1.5.8. Rename the new "Arduino" program folder (which should now be 1.5.8) to "Arduino 1.5.8", and rename the Arduino folder that you moved to the name "Arduino 1.6.5". Move this folder back to your Program Files where "Arduino 1.5.8" is located, allowing you to keep both versions.
 
 **Note for Windows users** While installing 1.5.8 if the installer instructs you to uninstall 1.6.5, move the Arduino folder from `Program Files (x86)` to your downloads folder. Rename this folder to `Arduino_1.6.5`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.5.8 as normal. Navigate to back to your `Program Files (x86)` folder and locate the Arduino folder. Rename this folder to `Arduino_1.5.8`. Now drag and drop the `Arduino_1.6.5` back into `Program Files (x86)` folder.  
+
+The files contained in the RFduino folder are custom builds for OpenBCI by our good friends over at RFdigital. Those guys are great! They helped us to squeeze all of the speed we could get out of the RFduinoGZLL library, and also gave us access to 25 discreet channels for OpenBCI boards to work on. ROCK!
 
 #Uploading Device Firmware to OpenBCI Board
 
@@ -91,19 +103,11 @@ The idea here is to use the FTDI chip on the Dongle to bridge USB to Serial for 
 
 ![dongleWithHeaders](../assets/images/dongleHeaders.jpg)
 
-<<<<<<< c49498100145f8fa1c0f62bdf19b5f52904a4248
 First, solder the headers that came with your OpenBCI Dongle. Then, move the switch to the RESET position, and upload some dummy code to the Dongle radio so that it doesn't interfere with the Serial upload process. Go to the Arduino IDE 1.5.8 and do `File-->Examples-->OpenBCI_Radios-->RadioPassThru32bit`. Make sure to select `RFDuino` from `Tools -> Board -> RFDuino`. Now hit the upload button, it's the button to the right of the check mark in the top left of the IDE. After uploading, make sure to move the switch back over to the GPIO6 side!
 
 ![0.1uF capacitors](../assets/images/caps.jpg)
 
 Next you need a breadboard, 8 jumpers and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can order them online from Amazon, eBay, or hobby electronics store. If you have blue buttons on your board you do not need the 0.1uF capacitor because it is already on the board. The 0.1uF capacitor needs to be in series between the Dongle GPIO6 pin and the OpenBCI Board RESET pin.
-=======
-First, solder the headers that came with your OpenBCI Dongle. Then, move the switch to the RESET position, and upload some dummy code to the Dongle radio so that it doesn't interfere with the Serial upload process. Go to the Arduino IDE 1.5.8 and do `File-->Examples-->OpenBCI_Radios-->RadioPassThru32bit`. Now hit the upload button, it's the button to the left of the check mark in the top left of the IDE. After uploading, make sure to move the switch back over to the GPIO6 side!
-
-![0.1uF capacitors](../assets/images/caps.jpg)
-
-Next you need a breadboard, 8 jumpers and a 0.1uF capacitor. 0.1uF capacitors are small and lentil-shaped, and have the number 104 printed on one side. You can order them online from Amazon, eBay, or hobby electronics store. If you have blue buttons on your board you do not need the 0.1uF capacitor because it is already on the board. The 0.1uF capacitor needs to be in series between the Dongle GPIO6 pin and the OpenBCI Board RERST pin.
->>>>>>> working on the radios
 
 ![Dongle Lash Up](../assets/images/DonglePassThruLashup.jpg)
 
@@ -160,6 +164,8 @@ Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5
 
 This process does not require 3rd party hardware. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. When the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
 
+### Upload Firmware Version 2.x.x (Fall 2016)
+
 **Steps:**
 
 1. In the Arduino IDE 1.5.8 go `File-->Examples-->OpenBCI_Radios-->RadioHost32bit` which will launch the Host firmware.
@@ -176,6 +182,8 @@ This process does not require 3rd party hardware. Before you begin, note that th
 
 7. Click "Upload" on the toolbar (the icon to the right of the checkmark). Your code is now uploading to the OpenBCI Dongle!
 
+### Upload Firmware Version 1.x.x (2014 - Fall 2016)
+
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
 
 
@@ -188,6 +196,5 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 		 RFduinoGZLL.begin(role);  // start the GZLL stack
 		 // more stuff here
 	}
-
 
 Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and 32bit code functions! Both the 8bit Host and 32bit Host code are downloaded with the RFduino libraries above.
