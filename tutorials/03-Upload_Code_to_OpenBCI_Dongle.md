@@ -41,8 +41,6 @@ C:\Program Files (x86)\Arduino-1.5.x\hardware\arduino
   On Linux, put the RFduino folder and everything it contains in
 arduino-1.5.8/hardware/arduino
 
-This process does not require 3rd party hardware. Before you begin, note that there is a switch on the dongle that allows for selection between **RESET** and **GPIO6**. This switch routes the DTR pin from the FTDI chip to either RESET or GPIO6 pin on the RFduino module. When the switch is in the GPIO6 position, the Dongle is ready for general communication, code upload, and streamingData mode to the OpenBCI Board. When the switch is in the RESET position, it is possible to upload code to the RFduino right there on the Dongle.
-
 **NOTE FOR LINUX USERS**
 Linux users will need to have the program [wine](https://www.winehq.org/) installed in order to continue. There is a dependency for the arduino code that requires the running  `RFDLoader.exe` to continue.
 In order to run this .exe, do the following:
@@ -54,7 +52,7 @@ In order to run this .exe, do the following:
 
 That's it! As long as `wine` is installed normally the script should take care of any issues you may have when uploading.
 
-### Upload Firmware Version 2.x.x (Fall 2016)
+### Getting Radio Firmware Version 2.x.x (Fall 2016)
 
 1. Download the [OpenBCI_Radios Firmware](https://github.com/OpenBCI/OpenBCI_Radios/tree/master) repo from our github. You may also clone the repo into your libraries folder cited after step 6.
 
@@ -74,7 +72,7 @@ C:\Users\username\Documents\Arduino\libraries
 
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a DEVICE, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
 
-### Upload Firmware Version 1.x.x (2014 - Fall 2016)
+### Getting Radio Firmware Version 1.x.x (2014 - Fall 2016)
 
 Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios/tree/maint/1.0.0) repo from our github, and place it in the proper location depending upon your OS.
 
@@ -97,13 +95,50 @@ In order to upload code to the Board RFduino, you need to have a Serial connecti
 
 Again, there is a small difference between the 8-bit and 32-bit boards, explained below.
 
+### Upload Device Radio Firmware Version 2.x.x (Fall 2016)
+
+**Steps:**
+
+1. In the Arduino IDE 1.5.8 go `File-->Examples-->OpenBCI_Radios-->RadioDevice32bit` which will launch the Device firmware.
+
+2. Then go to `Tools-->Board` and select `RFduino`.
+
+3. Follow one of the methods listed in the next section to connect the Device to your computer.
+
+4. Now go `Tools-->Port` and select the `COM` port (Windows)  or `/dev/tty.usbserial-*` port (Mac/Linux) for your device or
+
+5. Click "Verify" on the toolbar (checkmark icon) to verify everything is ready. If you see `Done Compiling` then you are ready to go!
+
+6. Choose a channel number for your device. The channel number can be set in the code [`radio.begin(OPENBCI_MODE_DEVICE,20);`](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/examples/RadioDevice32bit/RadioDevice32bit.ino#L22).
+
+7. Click "Upload" on the toolbar (the icon to the right of the checkmark). Your code is now uploading to the OpenBCI Device!
+
+*Important!* As of firmware version 2, you must first flash the board with the line `radio.flashNonVolatileMemory();` in the `setup()` function uncommented, then comment the line back out and program again. It is very important that you reprogram the board with the line commented out. We must do this because with firmware version two, the channel number is stored to non-volatile memory so we can change the channel number of the system from the PC/Driver. *If this is your first time uploading firmware version two (your bought you board prior to October 2016), you may ignore this message the first time you upload radio code.*
+
+### Upload Device Radio Firmware Version 1.x.x (2014 - Fall 2016)
+
+For 32bit boards, you will want to upload: [`OpenBCI_32bit_Device.ino`](https://github.com/OpenBCI/OpenBCI_Radios/blob/maint/1.0.0/OpenBCI_32bit_Device/OpenBCI_32bit_Device.ino)
+
+For 8bit boards, you will want to upload:
+[`OpenBCI_8bit_Device.ino`](https://github.com/OpenBCI/OpenBCI_Radios/blob/maint/1.0.0/OpenBCI_8bit_Device/OpenBCI_8bit_Device.ino)
+
 ##Program Device Radio with OpenBCI Dongle
 
 The idea here is to use the FTDI chip on the Dongle to bridge USB to Serial for the upload process. There is a bit of prep, and a special program for the Dongle radio so that it doesn't get in the way.
 
 ![dongleWithHeaders](../assets/images/dongleHeaders.jpg)
 
-First, solder the headers that came with your OpenBCI Dongle. Then, move the switch to the RESET position, and upload some dummy code to the Dongle radio so that it doesn't interfere with the Serial upload process. Go to the Arduino IDE 1.5.8 and do `File-->Examples-->OpenBCI_Radios-->RadioPassThru32bit`. Make sure to select `RFDuino` from `Tools -> Board -> RFDuino`. Now hit the upload button, it's the button to the right of the check mark in the top left of the IDE. After uploading, make sure to move the switch back over to the GPIO6 side!
+First, solder the headers that came with your OpenBCI Dongle. Then, move the switch to the RESET position, and upload some dummy code to the Dongle radio so that it doesn't interfere with the Serial upload process.
+
+### Upload Pass Thru Radio Firmware Version 2.x.x (Fall 2016)
+
+Go to the Arduino IDE 1.5.8 and do `File-->Examples-->OpenBCI_Radios-->RadioPassThru32bit`. Make sure to select `RFDuino` from `Tools -> Board -> RFDuino`.
+
+### Upload Pass Thru Radio Firmware Version 1.x.x (2014 - Fall 2016)
+
+We provide an Arduino sketch called OpenBCI_Dongle_PassThru.ino which makes this possible. After uploading, make sure to move the switch back over to the GPIO6 side!
+
+Now hit the upload button, it's the button to the right of the check mark in the top left of the IDE. Don't worry! You can re-load the Host code easily after programming the Device. After uploading, make sure to move the switch back over to the GPIO6 side!
 
 ![0.1uF capacitors](../assets/images/caps.jpg)
 
@@ -117,10 +152,6 @@ Here's a picture of the connections that you need to make. Power the OpenBCI boa
 * FTDI TX	-->	RF RX
 * GPIO6	-->	0.1uF Cap	-->	RF RST
 * GND	-->	GND
-
-Now go to the Arduino IDE 1.5.8 and open the file called `RadioDevice32bit` by going to `File-->Examples-->OpenBCI_Radios-->RadioDevice32bit`. Make sure to use the same channel number for both the Host and the Device.
-
-*Important!* As of firmware version 2, you must first flash the board with the line `radio.flashNonVolatileMemory();` in the `setup()` function uncommented, then comment the line back out and program again. It is very important that you reprogram the board with the line commented out. We must do this because with firmware version two, the channel number is stored to non-volatile memory so we can change the channel number of the system from the PC/Driver. *If this is your first time uploading firmware version two (your bought you board prior to July 2016), you may ignore this message the first time you upload radio code.*
 
 ![8-bitDeviceConnection](../assets/images/8-bitDeviceConnection.jpg)
 
@@ -178,7 +209,7 @@ This process does not require 3rd party hardware. Before you begin, note that th
 
 5. Click "Verify" on the toolbar (checkmark icon) to verify everything is ready. If you see `Done Compiling` then you are ready to go!
 
-6. Choose a channel number for your device. The channel number can be set in the line 37 of code `radio.begin(OPENBCI_MODE_HOST,20);`.
+6. Choose a channel number for your device. The channel number can be set in the code see [`radio.begin(OPENBCI_MODE_HOST,20);`](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/examples/RadioHost32bit/RadioHost32bit.ino#L30).
 
 7. Click "Upload" on the toolbar (the icon to the right of the checkmark). Your code is now uploading to the OpenBCI Dongle!
 
