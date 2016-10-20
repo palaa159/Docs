@@ -1,5 +1,5 @@
 # OpenBCI Firmware SDK
-The OpenBCI boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the 32bit runs `v1` and as of summer 2016 runs `v2`.
+The OpenBCI boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the 32bit runs `v1` and as of Fall 2016 runs `v2`.
 
 ## OpenBCI Command Protocol Overview
 
@@ -208,7 +208,7 @@ Use 16 channels.
 ##Time Stamping
 
 **<**  
-Start time stamping and resynchronize command. The Host radio will send a **,** on send of the **<** back to the driver. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the next software document titled _OpenBCI Streaming Data Format_.
+Start time stamping and resynchronize command. When the Driver sends a **<**, the Host radio will respond with a **,**. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`. If the board is streaming, then you will get a response in the data stream when the Driver receives a data packet with a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](./02-OpenBCI_Streaming_Data_Format.md).
 
 **>**
 Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the next software document titled _OpenBCI Streaming Data Format_.
@@ -216,7 +216,7 @@ Stops time stamping. If the Board is not streaming, then expect a response of `T
 
 ## Radio Configuration Commands
 As of firmware version `v2`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main OpenBCI board.
-In order to use the commands you must keep to the form of key-code-(payload) where key is`0xF0`, code is defined below and payload is optional and dependent on the code. For example, to get system status send `0xF0` then send `0x07`.
+In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
 
 ####Get Channel Number `0x00`
 Returns either success or failure. If you get a failure, it will give you the host channel number and a failure message. If success it gives you both host and device channel numbers and a success message. Channel numbers can only be 1-25. The byte before EOT ($$$) will contain the channel number value in HEX.
@@ -239,14 +239,14 @@ Returns either success or failure. On failure it will send a "Communications Tim
 **EXAMPLE**
 User sends **0xF0** **0x04** **0xA0** which sets the poll time to 160ms.
 
-####Set BAUD to Default (115200) `0x05`
-Returns success and sends the BAUD rate in ASCII (115200).
+####Set HOST to Driver Baud Rate to Default (115200) `0x05`
+Returns success and sends the baud rate in ASCII (115200).
 
-####Set BAUD to High-Speed mode (230400) `0x06`
-Returns success and sends the BAUD rate in ASCII (230400).
+####Set HOST to Driver Baud Rate to High-Speed mode (230400) `0x06`
+Returns success and sends the baud rate in ASCII (230400).
 
-####Set BAUD to Hyper-Speed mode (921600) `0x0A`
-Returns success and sends the BAUD rate in ASCII (921600).
+####Set HOST to Driver Baud Rate to Hyper-Speed mode (921600) `0x0A`
+Returns success and sends the baud rate in ASCII (921600).
 
 ####Check if System is Up `0x07`
 Returns success or failure. On failure it will send a "system is down" message. On success, it will send a "system is up" message.
