@@ -1,5 +1,5 @@
 # OpenBCI Firmware SDK
-The OpenBCI boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the 32bit runs `v1` and as of Fall 2016 runs `v2`.
+The OpenBCI boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the 32bit runs `v1` and as of Fall 2016 runs `v2.0.0`.
 
 ## OpenBCI Command Protocol Overview
 
@@ -20,7 +20,7 @@ the OpenBCI 32bit board with firmware `v1` sends the following text over the rad
 	LIS3DH Device ID: 0x33
 	$$$
 
-the OpenBCI 32bit board with firmware `v2` sends the following text over the radio:
+the OpenBCI 32bit board with firmware `v2.0.0` sends the following text over the radio:
 
 	OpenBCI V3 8-16 channel
 	ADS1299 Device ID: 0x3E
@@ -28,9 +28,9 @@ the OpenBCI 32bit board with firmware `v2` sends the following text over the rad
 	Firmware: v2.0.0
 	$$$
 
-Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands. As of `v2`, there is an additional printout to indicate the exact firmware version.
+Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands. As of `v2.0.0`, there is an additional printout to indicate the exact firmware version.
 
-Pay attention to timing when sending commands when using `v0` and `v1` firmware. There must be some delay before and after sending a command character from the PC (controlling program or user running a terminal). As of `v2`, this is no longer the case, send as fast as you can!
+Pay attention to timing when sending commands when using `v0` and `v1` firmware. There must be some delay before and after sending a command character from the PC (controlling program or user running a terminal). As of `v2.0.0`, this is no longer the case, send as fast as you can!
 
 ## Command Set
 ### Turn Channels OFF
@@ -116,7 +116,7 @@ User sends **x  3  0  2  0  0  0  0  X**
 
 'x' enters Channel Settings mode. Channel 3 is set up to be powered up, with gain of 2, normal input, removed from BIAS generation, removed from SRB2, removed from SRB1. The final 'X' latches the settings to the ADS1299 channel settings register.
 
-For firmware `v0` and `v1` it is required that you allow a time delay (>10mS) when setting the channel and parameters. As of `v2`, you may stack multiple channel settings together such as:
+For firmware `v0` and `v1` it is required that you allow a time delay (>10mS) when setting the channel and parameters. As of `v2.0.0`, you may stack multiple channel settings together such as:
 
 **EXAMPLE**
 
@@ -134,7 +134,7 @@ When you query the default settings, expect to get 6 ASCII characters followed b
 
 ###LeadOff Impedance Commands  
 **z (CHANNEL, PCHAN, NCHAN) Z**  
-This works similar to the Channel Settings commands. For firmware `v0` and `v1` care must be taken to delay between sending characters, as of `v2`, you may send as fast as possible in a byte stream. Impedance settings have two parameters for each ADS channel. Impedance is measurable by applying a small 31.5Hz AC signal to the given channel.
+This works similar to the Channel Settings commands. For firmware `v0` and `v1` care must be taken to delay between sending characters, as of `v2.0.0`, you may send as fast as possible in a byte stream. Impedance settings have two parameters for each ADS channel. Impedance is measurable by applying a small 31.5Hz AC signal to the given channel.
 
 * 0 = Test Signal Not Applied (default)
 * 1 = Test Signal Applied  
@@ -177,7 +177,7 @@ Read and report all register settings for the ADS1299 and the LIS3DH. Expect to 
 
 **v**
 
-Soft reset for the Board peripherals. The 8bit board gets a reset signal from the Dongle any time an application opens the serial port, just like a arduino. the 32bit board doesn't have this feature. So, if you want to soft-reset the 32bit board (`v1` or `v2`), send it a **v**.
+Soft reset for the Board peripherals. The 8bit board gets a reset signal from the Dongle any time an application opens the serial port, just like a arduino. the 32bit board doesn't have this feature. So, if you want to soft-reset the 32bit board (`v1` or `v2.0.0`), send it a **v**.
 
 
 ##16 Channel Commands
@@ -208,14 +208,16 @@ Use 16 channels.
 ##Time Stamping
 
 **<**  
-Start time stamping and resynchronize command. When the Driver sends a **<**, the Host radio will respond with a **,**. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`. If the board is streaming, then you will get a response in the data stream when the Driver receives a data packet with a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](./02-OpenBCI_Streaming_Data_Format.md).
+
+Start time stamping and resynchronize command. When the Driver sends a **<**, the Host radio will respond with a **,**. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`. If the board is streaming, then you will get a response in the data stream when the Driver receives a data packet with a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format#openbci-v3-data-format-binary-format).
 
 **>**
-Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the next software document titled _OpenBCI Streaming Data Format_.
+
+Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format#openbci-v3-data-format-binary-format).
 
 
 ## Radio Configuration Commands
-As of firmware version `v2`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main OpenBCI board.
+As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main OpenBCI board.
 In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
 
 ####Get Channel Number `0x00`
