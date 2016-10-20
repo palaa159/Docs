@@ -1,6 +1,6 @@
 # OpenBCI V3 Data Format
 
-This discussion of the OpenBCI data format only applies to OpenBCI V3 `v1` (2014-2016) and `v2` (2016-). For OpenBCI V3, the OpenBCI board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE and Microchip's MPIDE, respectively. The OpenBCI board has an on-board RFDuino radio module acting as a "Device". The OpenBCI system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
+This discussion of the OpenBCI data format only applies to OpenBCI V3 `v1` (2014-2016) and `v2` (Fall 2016). For OpenBCI V3, the OpenBCI board contains either a ATmega or ChipKIT microcontroller that can both be programmed through the Arduino IDE. The OpenBCI board has an on-board RFDuino radio module acting as a "Device". The OpenBCI system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the OpenBCI board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
 
 ### Proprietary ("RFDuino") vs Standard Bluetooth
 
@@ -25,7 +25,7 @@ The chipKIT on our 32bit Board does not go through a reset cycle when its serial
 
 Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of OpenBCI data in binary format will ensue. To turn off the fire hose, send an **s**.
 
-#### Firmware Version 1 (2014 to Fall 2016)
+#### Firmware Version 1.0.0 (2014 to Fall 2016)
 
 Both the Host and Device radios take notice of the **b** and **s**, and go into or out of streamingMode accordingly. That's right, the radio modules on both the OpenBCI board and the Dongle have two states:
 
@@ -37,7 +37,7 @@ Both the Host and Device radios take notice of the **b** and **s**, and go into 
 	* After 1 second of no transmission, or not getting 31 bytes in time, Device and Host will revert to **!**streamingData mode
 	* Command characters can be sent from PC following timing protocol above
 
-#### Firmware Version 2 (Fall 2016 to Now)
+#### Firmware Version 2.0.0 (Fall 2016 to Now)
 
 There are no states in the new Device and Host radio code. However we had to introduce a packet format that **must** be followed when trying to send samples at 250Hz! You must send a one byte header `0x41` then by 31 bytes of data (your choice), followed by `0xCX` where X is 0-F in hex. This X is carried through to the PC/Driver and is described towards the end of the next section.
 
@@ -69,7 +69,9 @@ Note: values are 24-bit signed, MSB first
 
 * Byte 33: 0xCX where X is 0-F in hex
 
-#### Firmware Version 1 (2014 to Fall 2016)
+#### Firmware Version 1.0.0 (2014 to Fall 2016)
+
+The following table is sorted by `Stop Byte`. Drivers should use the `Stop Byte` to determine how to parse the 6 `AUX` bytes.
 
 Stop Byte | Byte 27 | Byte 28 | Byte 29 | Byte 30 | Byte 31 | Byte 32
 --------- |:-------:|:-------:|:-------:|:-------:|:-------:|:------:
@@ -79,17 +81,19 @@ AX1-AX0: Data value for accelerometer channel X
 AY1-AY0: Data value for accelerometer channel Y
 AZ1-AZ0: Data value for accelerometer channel Z
 
-#### Firmware Version 2 (Fall 2016 to Now)
+#### Firmware Version 2.0.0 (Fall 2016 to Now)
+
+The following table is sorted by `Stop Byte`. Drivers should use the `Stop Byte` to determine how to parse the 6 `AUX` bytes.
 
 Stop Byte | Byte 27 | Byte 28 | Byte 29 | Byte 30 | Byte 31 | Byte 32 | Name
 --------- |:-------:|:-------:|:-------:|:-------:|:-------:|:------:|---
 0xC0 | AX1 | AX0 | AY1 | AY0 | AZ1 | AZ0| Standard with accel
 0xC1 | UDF | UDF | UDF | UDF | UDF | UDF | Standard with raw aux
 0xC2 | UDF | UDF | UDF | UDF | UDF | UDF | User defined
-0xC3 | AC | AV | T4 | T3 | T1 | T0 | Time stamped **_set_** with accel
-0xC4 | AC | AV | T4 | T3 | T1 | T0 | Time stamped with accel
-0xC5 | UDF | UDF | T4 | T3 | T1 | T0 | Time stamped **_set_** with raw aux
-0xC6 | UDF | UDF | T4 | T3 | T1 | T0 | Time stamped with raw aux
+0xC3 | AC | AV | T3 | T2 | T1 | T0 | Time stamped **_set_** with accel
+0xC4 | AC | AV | T3 | T2 | T1 | T0 | Time stamped with accel
+0xC5 | UDF | UDF | T3 | T2 | T1 | T0 | Time stamped **_set_** with raw aux
+0xC6 | UDF | UDF | T3 | T2 | T1 | T0 | Time stamped with raw aux
 
 AX1-AX0: Data value for accelerometer channel X
 AY1-AY0: Data value for accelerometer channel Y
