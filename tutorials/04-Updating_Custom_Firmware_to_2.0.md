@@ -1,4 +1,4 @@
-# Updating Custom Firmware to v2.0.0
+# Updating and Using v2.0.0 32bit Firmware
 
 ## Overview
 The OpenBCI 32bit boards were updated with new firmware across all three main microcontrollers, the Pic 32 ([`Pic32`](https://github.com/OpenBCI/OpenBCI_32bit_Library/blob/master/examples/DefaultBoard/DefaultBoard.ino)) and both RFduinos on the Dongle ([`Host`](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/examples/RadioHost32bit/RadioHost32bit.ino)) and the Board ([`Device`](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/examples/RadioDevice32bit/RadioDevice32bit.ino)). This tutorial does not explain how to program the firmware using the OpenBCI Dongle and `PC`; you will want to refer to the tutorials [Upload Code to OpenBCI Board](https://github.com/OpenBCI/Docs/blob/master/tutorials/02-Upload_Code_to_OpenBCI_Board.md) and [Upload Code to OpenBCI Dongle](https://github.com/OpenBCI/Docs/blob/master/tutorials/03-Upload_Code_to_OpenBCI_Dongle.md). If you have spent a lot of time writing custom Arduino code to run on the OpenBCI, then you will find this tutorial helpful in upgrading to get the new stability and features of the 2.0.0 firmware.
