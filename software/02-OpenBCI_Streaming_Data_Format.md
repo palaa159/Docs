@@ -176,7 +176,31 @@ Accelerometer data must also be scaled before it can be correctly interpreted. T
 	Accelerometer Scale Factor = 0.002 / 2^4
 
 ### 16 Channel Data
-Our 16 channel system allows for control of individual settings for all 16 channels, and data is retrieved from both ADS1299 IC at a rate of 250SPS. The current bandwith limitations on our serial radio links limit the number of packets we can send. To solve for this, we are sending data packet at the same rate of 250SPS, and alternating sample packets between the on Board ADS1299 and the on Daisy ADS1299. The method takes an average of the current and most recent channel values before sending to the radio. On **odd** sample numbers, the Board ADS1299 values are sent, and on **even** sample numbers, the Daisy ADS1299 samples are sent. When running the system with 16 channels, it is highly recommended that you use an SD card to store the raw (un-averaged) data for post processing.
+Our 16 channel system allows for control of individual settings for all 16 channels, and data is retrieved from both ADS1299 IC at a rate of 250SPS. The current bandwith limitations on our serial radio links limit the number of packets we can send. To solve for this, we are sending data packet at the same rate of 250SPS, and alternating sample packets between the on Board ADS1299 and the on Daisy ADS1299. The method takes an average of the current and most recent channel values before sending to the radio. The first sample sent will be invalid because there is no previous sample to average it with.  After this, on **odd** sample numbers, the Board ADS1299 values are sent, and on **even** sample numbers, the Daisy ADS1299 samples are sent. When running the system with 16 channels, it is highly recommended that you use an SD card to store the raw (un-averaged) data for post processing.
+
+sample #|recorded|        |sent                  |                      |
+-------:|-------:|:-------|---------------------:|:---------------------|
+       0|board(0)|daisy(0)|                      |an invalid sample     |
+       1|board(1)|daisy(1)|avg(board(0),board(1))|                      |
+       2|board(2)|daisy(2)|                      |avg(daisy(1),daisy(2))|
+       3|board(3)|daisy(3)|avg(board(2),board(3))|                      |
+       4|board(4)|daisy(4)|                      |avg(daisy(3),daisy(4))|
+       5|board(5)|daisy(5)|avg(board(4),board(5))|                      |
+       6|board(6)|daisy(6)|                      |avg(daisy(5),daisy(6))|
+
+The received averages might be upsampled to 250SPS in the following simple manner:
+
+
+received |         |upsampled board data   |upsampled daisy data   |
+--------:|:--------|----------------------:|:----------------------|
+sample(3)|         |avg(sample(1),sample(3)|sample(2)              |
+         |sample(4)|              sample(3)|avg(sample(2),sample(4)|
+sample(5)|         |avg(sample(3),sample(5)|sample(4)              |
+         |sample(6)|              sample(5)|avg(sample(4),sample(6)|
+sample(7)|         |avg(sample(5),sample(7)|sample(6)              |
+         |sample(8)|              sample(7)|avg(sample(6),sample(8)|
+
+The times of the upsampled values are delayed by 1 sample compared to the received values.
 
 
 ###Room For Improvement
