@@ -44,7 +44,7 @@ Both the 8-bit board and the 32-bit boards have specific input voltage ranges. T
 
 ### 5. (x4) Plastic Feet
 
-![Plastic Feet](../assets/images/8-bitboard_wPlasticFeet.png)
+![Plastic Feet](../assets/images/8bitboard_wPlasticFeet.png)
 
 Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
