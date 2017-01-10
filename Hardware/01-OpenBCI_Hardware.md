@@ -1,0 +1,2 @@
+#OpenBCI Hardware 
+Welcome to the OpenBCI Hardware documentation page. Here you will find specifications of the OpenBCI suite of devices. The Cyton page covers our 8 channel board and Dongle, as well as our expansion Daisy Module. The Ganglion page covers our 4 channel biosensing platform. Enjoy!
