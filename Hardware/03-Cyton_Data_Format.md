@@ -1,4 +1,4 @@
-# OpenBCI Cyton Data Format
+# Cyton Data Format
 
 This discussion of the OpenBCI data format only applies to OpenBCI `v1` (2014-2016) and `v2.0.0` (Fall 2016). For OpenBCI Cyton, the OpenBCI board contains either a ChipKIT or ATmega microcontroller that can both be programmed through the Arduino IDE. The Cyton board has an on-board RFDuino radio module acting as a "Device". The Cyton system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the Cyton board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
 
