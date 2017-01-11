@@ -7,6 +7,7 @@ The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture s
 ###Ganglion Board Specs
 
 * Power with 3.3V to 12V DC battery ONLY
+* Current Draw: 14mA when idle, 15mA connected and streaming data
 * [Simblee](http://www.simblee.com) BLE Radio module (Arduino Compatible)
 * [MCP3912](http://www.microchip.com/wwwproducts/en/MCP3912) Analog Front End
 * [LIS2DH](http://www.st.com/en/mems-and-sensors/lis2dh.html) 3 axis Axellerometer
@@ -66,14 +67,18 @@ When you move the switch down, that associated channel's **-** input is connecte
 
 
 ### Ganglion Board Circuit Schematic
-####Download Schematic [here](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files/blob/master/Ganglion_SCH.pdf)  
+####Download The Entire Schematic [here](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files/blob/master/Ganglion_SCH.pdf)  
 
 ![Ganglion Schematic](../assets/images/ganglion_schematic.png)
 
 ### Ganglion Board PCB Layer Images  
 
+Top Layer  
 ![Ganglion Top Layer](../assets/images/ganglion_top.png)  
+Inner Layer 1  
 ![Ganglion Layer 1](../assets/images/ganglion_layer1.png)  
+Inner Layer 2  
 ![Ganglion Layer 2](../assets/images/ganglion_layer2.png)  
+Bottom Layer  
 ![Ganglion Bottom Layer](../assets/images/ganglion_bottom.png)  
 
