@@ -1,9 +1,9 @@
-# OpenBCI Firmware SDK
-The OpenBCI boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI 8bit and 32bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the 32bit runs `v1` and as of Fall 2016 runs `v2.0.0`.
+# OpenBCI Cyton SDK
+The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI Cyton and 8bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the Cyton runs `v1` and Boards shipped as of Fall 2016 run `v2.0.0`.
 
-## OpenBCI Command Protocol Overview
+## Cyton Command Protocol Overview
 
-OpenBCI boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (ATmega328P or PIC32MX250F128B) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). (See the Radios portion for more info on the RFduino link).
+Cyton boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (PIC32MX250F128B or ATmega328P) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). (See the [Radios](needsLink) portion for more info on the RFduino link).
 
 On startup, the OpenBCI 8bit board (`v0`) sends the following text over the radio:
 
@@ -13,14 +13,14 @@ On startup, the OpenBCI 8bit board (`v0`) sends the following text over the radi
 	LIS3DH Device ID: 0x33
 	$$$
 
-the OpenBCI 32bit board with firmware `v1` sends the following text over the radio:
+the OpenBCI Cyton board with firmware `v1` sends the following text over the radio:
 
 	OpenBCI V3 16 channel
 	ADS1299 Device ID: 0x3E
 	LIS3DH Device ID: 0x33
 	$$$
 
-the OpenBCI 32bit board with firmware `v2.0.0` sends the following text over the radio:
+the OpenBCI Cyton board with firmware `v2.0.0` sends the following text over the radio:
 
 	OpenBCI V3 8-16 channel
 	ADS1299 Device ID: 0x3E
@@ -28,7 +28,7 @@ the OpenBCI 32bit board with firmware `v2.0.0` sends the following text over the
 	Firmware: v2.0.0
 	$$$
 
-Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the OpenBCI board is ready to receive commands. As of `v2.0.0`, there is an additional printout to indicate the exact firmware version.
+Device ID info is useful for general board health confirmation. The $$$ is clear indication to the controlling application that the message is complete and the Cyton board is ready to receive commands. As of `v2.0.0`, there is an additional printout to indicate the exact firmware version.
 
 Pay attention to timing when sending commands when using `v0` and `v1` firmware. There must be some delay before and after sending a command character from the PC (controlling program or user running a terminal). As of `v2.0.0`, this is no longer the case, send as fast as you can!
 
@@ -43,7 +43,7 @@ These ASCII characters turn the respective channels [1-8] on. The channel will r
 
 ###Test Signal Control Commands  
 **0 - = p [ ]**  
-Turn **all** available channels on, and connect them to internal test signal. These are useful for self test and calibration. For example, you can measure the internal noise by sending **0** and connecting all inputs to internal GND.
+Turn **all** available channels on, and connect them to internal test signal. These are useful for self test and calibration. For example, you can measure the internal noise by sending **0** which connects all inputs to an internal GND.
 
 * **0**  Connect to internal GND (VDD - VSS)  
 * **-**  Connect to test signal 1xAmplitude, slow pulse  
@@ -52,7 +52,7 @@ Turn **all** available channels on, and connect them to internal test signal. Th
 * **[**  Connect to test signal 2xAmplitude, slow pulse  
 * **]**  Connect to test signal 2xAmplitude, fast pulse  
 
-	**Note: Not all of the internal test connections are implemented here **
+	**Note: Not all possibl internal test connections are implemented here **
 
 ###Channel Setting Commands   
 ** x (CHANNEL, POWER_DOWN, GAIN_SET, INPUT_TYPE_SET, BIAS_SET, SRB2_SET, SRB1_SET) X **  
@@ -177,11 +177,12 @@ Read and report all register settings for the ADS1299 and the LIS3DH. Expect to 
 
 **v**
 
-Soft reset for the Board peripherals. The 8bit board gets a reset signal from the Dongle any time an application opens the serial port, just like a arduino. the 32bit board doesn't have this feature. So, if you want to soft-reset the 32bit board (`v1` or `v2.0.0`), send it a **v**.
+Soft reset for the Board peripherals  
+The 8bit board gets a reset signal from the Dongle any time an application opens the serial port, just like a arduino. the Cyton board doesn't have this feature. So, if you want to soft-reset the Cyton board (`v1` or `v2.0.0`), send it a **v**.
 
 
 ##16 Channel Commands
-Currently, the Daisy Module is implemented only on the 32bit board. The Daisy Module adds 8 more input channels for a total of 16. These are the commands specific to controlling the ADS1299 on the Daisy Module.
+Currently, the Daisy Module is implemented only on the Cyton board. The Daisy Module adds 8 more input channels for a total of 16. These are the commands specific to controlling the ADS1299 on the Daisy Module.
 
 ###Turn Channels OFF
 **q w e r t y u i**  
@@ -201,7 +202,7 @@ Use 8 channels only. If the Daisy Module is attached, it will be unattached, and
 
 Use 16 channels.
 
-*Note: On reset, the OpenBCI 32bit board will 'sniff' for the Daisy Module, and if it is present, it will default to 16 channel capability.*
+*Note: On reset, the OpenBCI Cyton board will 'sniff' for the Daisy Module, and if it is present, it will default to 16 channel capability.*
 
 #Firmware v2.0.0 New Commands
 
@@ -217,7 +218,7 @@ Stops time stamping. If the Board is not streaming, then expect a response of `T
 
 
 ## Radio Configuration Commands
-As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main OpenBCI board.
+As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main Cyton board.
 In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
 
 ####Get Channel Number `0x00`
@@ -255,7 +256,7 @@ Returns success or failure. On failure it will send a "system is down" message. 
 
 
 ##Unused ASCII Characters
-These are currently unused characters across the OpenBCI platforms:
+These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
 
 **~ ` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . / (space)**
