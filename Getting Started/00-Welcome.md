@@ -1,5 +1,6 @@
 # Welcome!
 
+
 Welcome to the **OpenBCI Learning Pages**! Here you will find a wide range of guides and tutorials that are intended to teach you how to use your OpenBCI gear. If you run into issues or have addintional questions, head to our [Forum](http://openbci.com/index.php/forum/) with daily active users.
 
 The Learning Pages are separated into the following sections:
