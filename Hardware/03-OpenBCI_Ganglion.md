@@ -68,11 +68,12 @@ When you move the switch down, that associated channel's **-** input is connecte
 ### Ganglion Board Circuit Schematic
 ####Download Schematic [here](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files/blob/master/Ganglion_SCH.pdf)  
 
-![Ganglion Schematic](../assets/images/ganglion_schematic.pdf)
+![Ganglion Schematic](../assets/images/ganglion_schematic.png)
 
 ### Ganglion Board PCB Layer Images  
 
-![Ganglion Top Layer](../assets/images/ganglion_top.pdf)  
-![Ganglion Layer 1](../assets/images/ganglion_layer1.pdf)  
-![Ganglion Layer 2](../assets/images/ganglion_layer2.pdf)  
-![Ganglion Bottom Layer](../assets/images/ganglion_bottom.pdf)  
+![Ganglion Top Layer](../assets/images/ganglion_top.png)  
+![Ganglion Layer 1](../assets/images/ganglion_layer1.png)  
+![Ganglion Layer 2](../assets/images/ganglion_layer2.png)  
+![Ganglion Bottom Layer](../assets/images/ganglion_bottom.png)  
+
