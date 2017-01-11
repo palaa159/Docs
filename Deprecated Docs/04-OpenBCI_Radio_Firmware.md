@@ -1,6 +1,6 @@
-# OpenBCI Radio Firmware
+# Cyton Radio Firmware
 ##Overview
-The OpenBCI V3 boards communicate via RFduino Bluetooth modules made by RFdigital. This doc will cover the needs of the OpenBCI system, and how we met them with the Radio firmware. Our selection of Bluetooth and RFduino was based on the desire to connect with mobile devices, and the need for accessible development environment. RFduino modules come with a bootloader that allows uploading code via avrdude, just 'like' Arduino. There are some differences, but the basic process is very much the same between RFduino and Arduino UNO, for example. We were also able to wrork very closely with the RFduino team, and they helped us greatly over the development cycle.
+The OpenBCI Cyton boards communicate via RFduino Bluetooth modules made by RFdigital. This doc will cover the needs of the Cyton system, and how we met them with the Radio firmware. Our selection of Bluetooth and RFduino was based on the desire to connect with mobile devices, and the need for accessible development environment. RFduino modules come with a bootloader that allows uploading code via avrdude, just 'like' Arduino. There are some differences, but the basic process is very much the same between RFduino and Arduino UNO, for example. We were also able to wrork very closely with the RFduino team, and they helped us greatly over the development cycle.
 
 OpenBCI comes with a RFduino module on-board for communication, and an RFduino based USB Dongle for communicating to computer. The method of 'talking' to and through the radio connection is standard Serial UART 8N1. It is necessary to have the paired radio modules because we also have a Arduino UNO bootloaded ATmega on the 8bit Board, and a chipKIT bootloaded PIC32 on the 32bit Board. Both of these uC's can be programmed using avrdude.
 
@@ -29,47 +29,6 @@ That code formed the backbone of the OpenBCI radio firmware. Here's a list of th
 Avrdude uploads code to ATmega328 with UNO bootloader in 128 byte pages, and the PIC32 with chipKIT bootloader uses 256 byte pages. The Host needs to make sure all of the bytes get through, so it uses a timer. If the UART is idle for more than 2mS, it will determine that the message is complete, and then put it on the radio. When sending large amounts of data, the firmware stores it in a 2D array, or matrix. Our firmware uses 20 32byte arrays to 'stage' whatever comes in on the serial port. While the UART is active, the firmware keeps track of how many 32byte packets are going to be sent, and then sets the very first byte of the very first packet to that value. The RFduino on the receiving side always checks that very first byte in order to know how many packets to expect.
 
 The other basic thing we need to do is have a way for the RFduinos to communicate to each other special messages that the PC and ATmega (or PIC32) don't see. These 'radio only' messages are used for sending the reset command to the ATmega, and for keeping the radios on the same page when uploading to the PIC32. Radio only messages are always packets that have only one byte in them. Any other packet will have at least two bytes (Packet Check-Sum + Data Byte)
-
-###8bit Board
-
-The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in the day the reset signal had to be sent manually by pressing the Arduino reset button. Then some smart folks hijacked the DTR pin (legacy RS232 Handshaking pin) from the FTDI USB<>Serial chip to 'automatically' perform the reset function. We wanted to retain this automatic reset feature, so we are using 'special message' function of our code to pass the reset signal to the OpenBCI Board. With the slide switch on our USB Dongle set to GPIO6, the RFduino Host can 'feel' the polarity of the DTR on its pin 6, and then send a special character to the Device. When the Device gets the special character, it resets the ATmega. That makes it possible to upload code from the Arduino IDE and treat the 8bit Board just as if it were an Arduino UNO. 
-
-
-			8bit HOST REMOTE RESET CODE
-			
-	resetPinValue = digitalRead(resetPin);
-	if(resetPinValue != lastResetPinValue){
-    	if(resetPinValue == LOW){
-      		RFmessage[0] = '9';  // Device will toggle target MCLR when it gets '9'
-    	}else{
-      		RFmessage[0] = '(';  // Device will toggle target MCLR when it gets '('
-    	}  
-    	sendRFmessage = true; 
-    	lastResetPinValue = resetPinValue;
-    }
-    
-    
-    		8bit DEVICE REMOTE RESET CODE
-    		
-    boolean testFirstRadioByte(char z){  // test the first byte of a new radio packet for reset msg
-    boolean r;
-	switch(z){
-    	case '9':                 // HOST sends '9' when its GPIO6 goes LOW
-      		digitalWrite(resetPin,LOW);  // clear RESET pin
-      		r = true;  
-      		break;
-    	case '(':                 // HOST sends '(' when its GPIO6 goes HIGH
-      		digitalWrite(resetPin,HIGH); // set RESET pin
-      		r = true;
-      		break;   
-    	default:
-      		r = false;
-      		break;
-    }
-    return r;     // this might be useful
-	}
-
-
 
 ###32bit Board
 
@@ -142,5 +101,51 @@ OpenBCI uses ASCII commands to control the board. Setting up the SD card, changi
 
 ##Streaming Data Mode
 The most sensitive state of the OpenBCI system is during streaming data mode. During this mode, the 2D linear buffer on the Device RFduino is turned into a 2D ring buffer, and both the Device and Host RFduinos will expect no more than one packet at a time, and that packet is expected to be complete (31 data bytes, 1 sample counter byte). The Device code also employs some error checking: if a packet is not complete (31 bytes of data) in a reasonable time (1000uS) then the packet is thrown out, and a new one is started.
+
+
+##8bit Board
+###~~Depricated
+
+
+The Arduino UNO bootloader runs when the ATmega 'wakes up' from reset. Back in the day the reset signal had to be sent manually by pressing the Arduino reset button. Then some smart folks hijacked the DTR pin (legacy RS232 Handshaking pin) from the FTDI USB<>Serial chip to 'automatically' perform the reset function. We wanted to retain this automatic reset feature, so we are using 'special message' function of our code to pass the reset signal to the OpenBCI Board. With the slide switch on our USB Dongle set to GPIO6, the RFduino Host can 'feel' the polarity of the DTR on its pin 6, and then send a special character to the Device. When the Device gets the special character, it resets the ATmega. That makes it possible to upload code from the Arduino IDE and treat the 8bit Board just as if it were an Arduino UNO. 
+
+
+			8bit HOST REMOTE RESET CODE
+			
+	resetPinValue = digitalRead(resetPin);
+	if(resetPinValue != lastResetPinValue){
+    	if(resetPinValue == LOW){
+      		RFmessage[0] = '9';  // Device will toggle target MCLR when it gets '9'
+    	}else{
+      		RFmessage[0] = '(';  // Device will toggle target MCLR when it gets '('
+    	}  
+    	sendRFmessage = true; 
+    	lastResetPinValue = resetPinValue;
+    }
+    
+    
+    		8bit DEVICE REMOTE RESET CODE
+    		
+    boolean testFirstRadioByte(char z){  // test the first byte of a new radio packet for reset msg
+    boolean r;
+	switch(z){
+    	case '9':                 // HOST sends '9' when its GPIO6 goes LOW
+      		digitalWrite(resetPin,LOW);  // clear RESET pin
+      		r = true;  
+      		break;
+    	case '(':                 // HOST sends '(' when its GPIO6 goes HIGH
+      		digitalWrite(resetPin,HIGH); // set RESET pin
+      		r = true;
+      		break;   
+    	default:
+      		r = false;
+      		break;
+    }
+    return r;     // this might be useful
+	}
+
+
+
+
 
 
