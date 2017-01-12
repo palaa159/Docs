@@ -8,6 +8,7 @@ Version `v1.0.0` released January 3rd, 2017.
 The OpenBCI Electron Hub (or just "Hub") is a TCP/IP server that listens for clients on port `10996` on `localhost` aka `127.0.0.1`. Broadcast/multicast is never used for transmitting information to clients. Outgoing data is only transmitted to the requesting client. We use [semantic versioning](semver.org) the protocol is always listed first and foremost in all documentation. Please follow the rules of [semantic versioning](semver.org) to avoid breaking changes. 
 
 The hub is designed for either two use cases:
+
 1. An owning application, such as OpenBCI's processing app, starts and stops the Hub.
 2. The Hub runs continuously and 3rd party applications can simply connect as clients, use OpenBCI boards, disconnect and go on their way without closing the Hub.
 
@@ -30,18 +31,26 @@ Stop or start accelerometer.
 
 **ACTION**
 * `start`
-Description: Start accelerometer.
+
+Start accelerometer.
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `a,200,start,;\n`
+
 Response: on failure
 `a,416,string error message,;\n`
 
 * `stop`
-Description: Stop accelerometer.
+
+Stop accelerometer.
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `a,200,stop,;\n`
+
 Response: on failure
 `a,417,string error message,;\n`
 
@@ -49,14 +58,19 @@ Response: on failure
 **k,COMMAND**
 
 Passes through a single char `COMMAND` to a connected device.
+
 Availability: as of `v1.0.0`
 
 **COMMAND**
-Description: Single char to get passed through the module to the connected board. 
+
+Single char to get passed through the module to the connected board. 
+
 Response: on success
 `k,200,;\n`
+
 Response: on failure because no connected device
 `k,400,;\n`
+
 Response: on failure unable to write to connected device
 `k,406.string error message,;\n`
 
@@ -66,21 +80,27 @@ Response: on failure unable to write to connected device
 Connect to a Ganglion BLE device with only a local name.
 
 **PORT_NAME**
-Description: The local string name of a Ganglion peripheral to connect to.
+
+The local string name of a Ganglion peripheral to connect to.
 
 Availability: as of `v1.0.0`
 
 Response: on success
 `c,200,;\n`
+
 Response: on failure unable to connect
 `c,402,string error message,;\n`
+
 Response: on failure to connect because already connected to another device
 `c,408,;\n`
+
 Response: on failure unable to stop scan before verification for connect or unable to stop the verification scan.
 `c,411.string error message,;\n`
+
 Response: on failure unable to start verification scan before connect
 `c,412,string error message,;\n`
-Response: on failure unable to verify, aka scan adn find the requested BLE peripheral with local name matching the requested supplied `PORT_NAME` withing 5 seconds.
+
+Response: on failure unable to verify, aka scan and find the requested BLE peripheral with local name matching the requested supplied `PORT_NAME` within 5 seconds.
 `c,413,;\n`
 
 ### Disconnect
@@ -100,19 +120,28 @@ Response: on failure unable to disconnect
 Stop or start impedance testing.
 
 **ACTION**
+
 * `start`
-Description: Start impedance testing.
+
+Start impedance testing.
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `i,200,start,;\n`
+
 Response: on failure
 `i,414,string error message,;\n`
 
 * `stop`
-Description: Stop impedance testing.
+
+Stop impedance testing.
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `i,200,stop,;\n`
+
 Response: on failure
 `i,415,string error message,;\n`
 
@@ -123,30 +152,44 @@ Scan for Ganglion BLE devices and when found, send their local names to requesti
 
 **ACTION**
 * `start`
-Description: Start a scan. Stop a scan if one in progress before starting the newly requested scan.
+
+Start a scan. Stop a scan if one in progress before starting the newly requested scan.
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `s,200,start,;\n`
+
 Response: on failure to start scan
 `s,412,start,;\n`
+
 Response: on failure to stop scan in progress
 `s,411,stop,;\n`
 
 * `status`
-Description: Is a scan in progress
+
+Is a scan in progress
+
 Availability: as of `v1.0.0`
+
 Response: a scan is in progress
 `s,302,;\n`
+
 Response: a scan is not in progress
 `s,303,;\n`
 
 * `stop`
-Description: Stop a scan in progress
+
+Stop a scan in progress
+
 Availability: as of `v1.0.0`
+
 Response: on success
 `s,200,stop,;\n`
+
 Response: on failure because there is no scan in progress to stop
 `s,410,;\n`
+
 Response: on failure because unable to stop scan
 `s,411,string error message,;\n`
 
@@ -156,6 +199,7 @@ Response: on failure because unable to stop scan
 Get the status of a Hub. If the TCO server in the Hub is working, this will always respond true.
 
 Availability: as of `v1.0.0`
+
 Response: on success
 `q,200,;\n`
 
@@ -184,7 +228,8 @@ Response: on success
 
 ### Impedance
 **i,CODE,CHANNEL,VALUE**
-Description: Accelerometer data from the Ganglion.
+Accelerometer data from the Ganglion.
+
 Availability: as of `v1.0.0`
 
 **CODE**
@@ -205,7 +250,7 @@ Description: Message from the Ganglion.
 Availability: as of `v1.0.0`
 
 **CODE**
-The success or error code for the packet. As of `v1.0.0`, only good messages is sent. 
+The success or error code for the packet. As of `v1.0.0`, only good messages are sent. 
 
 **MESSAGE**
 The string message from the Ganglion.
@@ -215,7 +260,9 @@ Response: on success
 
 ### Samples
 **t,CODE,SAMPLE_NUM,CHAN_1,CHAN_2,CHAN_3,CHAN_4**
-Description: Sample channel data from the Ganglion.
+
+Sample channel data from the Ganglion.
+
 Availability: as of `v1.0.0`
 
 **CODE**
