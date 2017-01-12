@@ -32,37 +32,37 @@ The SPI pins are available for user access. The blue LED on the board is connect
 ###Push Button
 The button switch is connected to the Simblee reset pin, along with a 10K pullup resistor. Pressing this button will put the Simblee into reset. 
 
-###Sensor Inputs
-The Ganglion Board is a 4 channel biosensing board. There is a 16 pin Right Angle header, which can be used to interface electrode sensors of all types. Here is a description of the pins.
+###Sensor Input Header
+The Ganglion Board is a 4 channel biosensing board. There is a 16 pin Right Angle header, which can be used to interface electrode sensors of all types. The inputs pins connect to an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) InAmp buffer. This amplifier had differential inputs. the `+` input is called `non-inverting`, and the `-` input is called `inverting`. Here is a description of the pins.
 
-* **GNDA**
+* `GNDA`
 	* Power Supply: 0 Volts. Connects to the top and bottom pin
-* **D_G**
-	* Driven Ground: 1.5 Volts. Connects to the top and bottom pin
-* **REF**
+* `D_G`
+	* Driven Ground: 1.5 Volts. Connects to both the top and bottom pin
+* `REF`
 	* Combined Reference input. Connects to the top and bottom pin
-* **+4-**
-	* Channel input #4. + input on top, - input on bottom
-* **+3-**
-	* Channel input #3. + input on top, - input on bottom
-* **+2-**
-	* Channel input #2. + input on top, - input on bottom
-* **+1-**
-	* Channel input #1. + input on top, - input on bottom
-* **AVDD**
+* `+4-`
+	* Channel input #4. `+` input on top, `-` input on bottom
+* `+3-`
+	* Channel input #3. `+` input on top, `-` input on bottom
+* `+2-`
+	* Channel input #2. `+` input on top, `-` input on bottom
+* `+1-`
+	* Channel input #1. `+` input on top, `-` input on bottom
+* `AVDD`
 	* Power Supply: 3.0 Volts Connects to the top and bottom pin  
 	
 	
 ###Inverting Input Select Switches
-Each input channel is buffered by an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) Instrumentation Amplifier. There are 4 small slide switches (SW1, SW2, SW3, SW4) which can be set connect the **-** inputs from the InAmps either to their associated **-** pin, or to the **REF** pin.  
+Each input channel is buffered by an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) Instrumentation Amplifier. There are 4 small slide switches (SW1, SW2, SW3, SW4) which can be set connect the `-` inputs from the InAmps either to their associated `-` pin, or to the `REF` pin.  
 
 ![SWITCH UP](../assets/images/ganglion_SW_UP.png)  
 
-The **default** position for these swithches is **UP**, which connects them to their associated differential channel **-** input pin.  
+The **default** position for these swithches when they are shipped to you is **UP**, which connects them to their associated differential channel `-` input pin on the bottom row of headers.  
 
 ![SWITCH DOWN](../assets/images/ganglion_SW_DOWN.png)  
 
-When you move the switch down, that associated channel's **-** input is connected to the **REF** pin. This allows you to 'gang' all of the **-** pins together if you are doing something like reading EEG.  
+When you move the switch **DOWN**, that associated channel's `-` input is connected to the **REF** pin. This allows you to 'gang' some or all of the `-` pins together if you are doing something like reading EEG, or have any reason to combine two or more of the `-` pins.  
 
 
 

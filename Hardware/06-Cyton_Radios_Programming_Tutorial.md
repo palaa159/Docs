@@ -88,9 +88,9 @@ Download the [OpenBCI_Radios](https://github.com/OpenBCI/OpenBCI_Radios/tree/mai
 
 The files contained in the RFduino folder are custom builds for OpenBCI by our good friends over at RFdigital. Those guys are great! They helped us to squeeze all of the speed we could get out of the RFduinoGZLL library, and also gave us access to 25 discreet channels for OpenBCI boards to work on. ROCK!
 
-#Uploading Device Firmware to OpenBCI Board
+##Uploading Device Firmware to Cyton Board
 
-##Overview
+###Overview
 In order to upload code to the Cyton Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breakout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. This page will go over a few ways of uploading firmware to the OpenBCI Device radios.
 
 Again, there is a small difference between the 8-bit and Cyton boards, explained below.
@@ -185,11 +185,11 @@ Another example would be the [FTDI Friend](http://www.adafruit.com/products/284)
 ![FTDI BasicFront](../assets/images/FTDI_BASICfront.jpg)
 ![FTDI BasicBack](../assets/images/FTDI_BASICback.jpg)
 
-Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5V and 3V. By now, you know that you want the [3V Version](https://www.sparkfun.com/products/9873). [pic coming soon] The Basic Breakout isn't as fancy as the FTDI Friend, but you do need to put a 0.1uF capacitor between the DTR pin and the RF RST pin. Also, if you have a version of this board with a voltage selection on the back, make sure that it has the 3.3V pads connected and the 5V pads cut!
-
-#Uploading Host Firmware to the OpenBCI Dongle
-
-##Overview
+Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5V and 3V. By now, you know that you want the [3V Version](https://www.sparkfun.com/products/9873). [pic coming soon] The Basic Breakout isn't as fancy as the FTDI Friend, but you do need to put a 0.1uF capacitor between the DTR pin and the RF RST pin. Also, if you have a version of this board with a voltage selection on the back, make sure that it has the 3.3V pads connected and the 5V pads cut!  
+  
+##Uploading Host Firmware to the OpenBCI Dongle
+  
+###Overview
 
 ![DongleBack](../assets/images/dongleBack_switch.jpg)
 
@@ -217,7 +217,7 @@ This process does not require 3rd party hardware. Before you begin, note that th
 
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a HOST, and that channel is selected correctly. The channel your boards were shipped with is noted on the anit-static baggie that it came in.
 
-
+~~~
 	// place this above the setup()
 	#include <RFduinoGZLL.h>  // using the Gazelle Stack
 	device_t role = HOST;  // This is the HOST
@@ -227,5 +227,6 @@ If you want to modify the firmware that the OpenBCI Dongle came with, or roll yo
 		 RFduinoGZLL.begin(role);  // start the GZLL stack
 		 // more stuff here
 	}
+~~~  
 
 Also, make sure that you use the code that is specific to your board. There are important differences between the way the 8bit and Cyton code functions! Both the 8bit Host and Cyton Host code are downloaded with the RFduino libraries above.

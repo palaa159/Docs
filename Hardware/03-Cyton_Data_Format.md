@@ -1,29 +1,29 @@
 # Cyton Data Format
 
-This discussion of the OpenBCI data format only applies to OpenBCI `v1` (2014-2016) and `v2.0.0` (Fall 2016). For OpenBCI Cyton, the OpenBCI board contains either a ChipKIT or ATmega microcontroller that can both be programmed through the Arduino IDE. The Cyton board has an on-board RFDuino radio module acting as a "Device". The Cyton system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the Cyton board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it!
+This discussion of the OpenBCI data format only applies to OpenBCI `v1` (2014-2016) and `v2.0.0` (Fall 2016). For OpenBCI Cyton, the OpenBCI board contains either a ChipKIT or ATmega microcontroller that can both be programmed through the Arduino IDE. The Cyton board has an on-board RFDuino radio module acting as a "Device". The Cyton system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the Cyton board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it! For more info on the v2 firmware, see these [Notes On Updating and Using v2.0.0 Cyton Firmware](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-notes-on-updating-and-using-v2.0.0-cyton-firmware).
 
-### Proprietary ("RFDuino") vs Standard Bluetooth
+## Proprietary ("RFDuino") vs Standard Bluetooth
 
 OpenBCI Cyton uses RFDuino modules for its Bluetooth wireless connection. To achieve the highest data rates, OpenBCI supplies a RFDuino USB dongle that connects to the computer. When using this USB dongle, higher data rates can be achieved versus using a standard bluetooth 4.n BLE connection.
 
 If you prefer to use a standard bluetooth connection (to a mobile phone, for instance), that software and data format has not yet been defined.
 
-### Serial Setup
+## Serial Setup
 
 The RFDuino USB dongle (the RFDuino "Host") is connected to an FTDI USB<>Serial converter configured to appear to the computer as if it is a standard serial port running at a rate of 115200 baud using the typical 8-N-1. It is possible to run at faster baud (FT231XQ-R on dongle tested up to 1Mbaud), but 115200 is required if you want to upload code to the target uC.
 
-### Startup
-**Cyton Board**
+## Startup
+###**Cyton Board**
 
 The chipKIT on our 32bit Board does not go through a reset cycle when its serial port is opened. Because of this, it's possible to connect to the 32bit board and not know it's state. In this case, the terminal or application should write a **v** to the serial port, which causes the system to reset its state to default values.
 
-**8bit Board (deprecated)**
+###**8bit Board (deprecated)**
 
 When the serial port for the dongle is opened by your PC, it will reset an 8bit Board. That's because the DTR signal from FTDI is getting sent over air, and the ATmega is configured as an Arduino UNO. You will see the familiar blink of the pin 13 LED. After a second or so, you will see the OpenBCI board generate a few lines of ASCII text displaying the device IDs of the ADS1299 and Accelerometer ending in $$$. If you are writing client software for the PC, your software must expect an ASCII string on startup, and look for the $$$ to know it is ready to receive commands.
 
 
 
-### Initiating Binary Transfer
+## Initiating Binary Transfer
 
 Once the OpenBCI has initialized itself and sent the $$$, it waits for commands. In other words, it sends no data until it is told to start sending data. To begin data transfer, transmit a single ASCII **b**. Once the **b** is received, continuous transfer of data in binary format will ensue. To turn off the fire hose, send an **s**.
 
@@ -43,7 +43,7 @@ Both the Host and Device radios take notice of the **b** and **s**, and go into 
 
 There are no states in the new Device and Host radio code. However we had to introduce a packet format that **must** be followed when trying to send samples at 250Hz! You must send a one byte header `0x41` then by 31 bytes of data (your choice), followed by `0xCX` where X is 0-F in hex. This X is carried through to the PC/Driver and is described towards the end of the next section.
 
-### Binary Format
+## Binary Format
 
 Each packet contains a header followed by a sample counter, followed by 8 ADS channel data, followed by the three axes values of the accelerometer, followed by a footer. The accelerometer data are optional, and don't need to be sent with every packet when used. if unused, the bytes will read 0. This allows for user defined auxiliary data to be sent in the last six bytes before the footer. Also, there may be room for compressing more samples. Here are details on the format.
 
@@ -120,7 +120,7 @@ T3-T0: 32 bit unsigned integer OpenBCI board time representing time since the bo
 
 UDF stands for User Defined and for a general driver perspective, should be left alone and sent up to the user.
 
-### 24-Bit Signed Data Values
+## 24-Bit Signed Data Values
 
 For the EEG data values, you will note that we are transferring the data as a 24-bit signed integer, which is a bit unusual. We are using this number format because it is the native format used by the ADS1299 chip that is at the core of the Cyton board. To convert this unusual number format into a more standard 32-bit signed integer, you can steal some ideas from the example Processing (aka, Java) code:
 
@@ -138,7 +138,7 @@ For the EEG data values, you will note that we are transferring the data as a 24
         return newInt;  
     }  
 
-### 16-Bit Signed Data Values
+## 16-Bit Signed Data Values
 
 The accelerometer data, if used, is sent as a 16bit signed value. We're using a similar scheme to convert these values into 32bit integers in Processing.
 
@@ -155,11 +155,11 @@ The accelerometer data, if used, is sent as a 16bit signed value. We're using a 
     	return newInt;
   	}
 
-### 32-Bit Unsigned Time Stamp
+## 32-Bit Unsigned Time Stamp
 
 To time stamp data, if used, is sent as a 32 bit unsigned integer representing time since the board was started in ms. We are using a different scheme to convert these values into 32 bit integers in Processing.
 
-### Interpreting the EEG Data
+## Interpreting the EEG Data
 
 Once you receive and parse the data packets, it is important to know how to interpret the data so that the EEG values are useful in a quantitative way. The two critical pieces of information are (1) the sample rate and (2) the scale factor.
 
@@ -177,30 +177,31 @@ Accelerometer data must also be scaled before it can be correctly interpreted. T
 
 	Accelerometer Scale Factor = 0.002 / 2^4;
 
-### 16 Channel Data
+## 16 Channel Data with Daisy Mdule
 Our 16 channel system allows for control of individual settings for all 16 channels, and data is retrieved from both ADS1299 IC at a rate of 250SPS. The current bandwith limitations on our serial radio links limit the number of packets we can send. To solve for this, we are sending data packet at the same rate of 250SPS, and alternating sample packets between the on Board ADS1299 and the on Daisy ADS1299. The method takes an average of the current and most recent channel values before sending to the radio. The first sample sent will be invalid because there is no previous sample to average it with.  After this, on **odd** sample numbers, the Board ADS1299 values are sent, and on **even** sample numbers, the Daisy ADS1299 samples are sent. When running the system with 16 channels, it is highly recommended that you use an SD card to store the raw (un-averaged) data for post processing.
 
-sample #|recorded|        |sent                  |                      |
--------:|-------:|:-------|---------------------:|:---------------------|
-       0|board(0)|daisy(0)|                      |an invalid sample     |
-       1|board(1)|daisy(1)|avg(board(0),board(1))|                      |
-       2|board(2)|daisy(2)|                      |avg(daisy(1),daisy(2))|
-       3|board(3)|daisy(3)|avg(board(2),board(3))|                      |
-       4|board(4)|daisy(4)|                      |avg(daisy(3),daisy(4))|
-       5|board(5)|daisy(5)|avg(board(4),board(5))|                      |
-       6|board(6)|daisy(6)|                      |avg(daisy(5),daisy(6))|
+
+|sample#|recorded| recorded | sent               |                      |
+|-------:|-------:|:-------|---------------------:|:---------------------|
+|       0|board(0)|daisy(0)|                      |an invalid sample     |
+|       1|board(1)|daisy(1)|avg(board(0),board(1))|                      |
+|       2|board(2)|daisy(2)|                      |avg(daisy(1),daisy(2))|
+|       3|board(3)|daisy(3)|avg(board(2),board(3))|                      |
+|       4|board(4)|daisy(4)|                      |avg(daisy(3),daisy(4))|
+|       5|board(5)|daisy(5)|avg(board(4),board(5))|                      |
+|       6|board(6)|daisy(6)|                      |avg(daisy(5),daisy(6))|
 
 The received averages might be upsampled to 250SPS in the following simple manner:
 
 
-received |         |upsampled board data   |upsampled daisy data   |
---------:|:--------|----------------------:|:----------------------|
-sample(3)|         |avg(sample(1),sample(3)|sample(2)              |
-         |sample(4)|              sample(3)|avg(sample(2),sample(4)|
-sample(5)|         |avg(sample(3),sample(5)|sample(4)              |
-         |sample(6)|              sample(5)|avg(sample(4),sample(6)|
-sample(7)|         |avg(sample(5),sample(7)|sample(6)              |
-         |sample(8)|              sample(7)|avg(sample(6),sample(8)|
+|received |         |upsampled board data   |upsampled daisy data   |
+|--------:|:--------|----------------------:|:----------------------|
+|sample(3)|         |avg(sample(1),sample(3)|sample(2)              |
+|         |sample(4)|              sample(3)|avg(sample(2),sample(4)|
+|sample(5)|         |avg(sample(3),sample(5)|sample(4)              |
+|         |sample(6)|              sample(5)|avg(sample(4),sample(6)|
+|sample(7)|         |avg(sample(5),sample(7)|sample(6)              |
+|         |sample(8)|              sample(7)|avg(sample(6),sample(8)|
 
 The times of the upsampled values are delayed by 1 sample compared to the received values.
 
