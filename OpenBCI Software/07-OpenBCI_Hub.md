@@ -5,7 +5,7 @@ Middleware Software used to communicate with OpenBCI boards through TCP/IP comma
 Version `v1.0.0` released January 3rd, 2017.
 
 ## OpenBCI Electron Hub Overview
-The OpenBCI Electron Hub (or just "Hub") is a TCP/IP server that listens for clients on port `10996` on `localhost` aka `127.0.0.1`. Broadcast/multicast is never used for transmitting information to clients. Outgoing data is only transmitted to the requesting client. We use [semantic versioning](semver.org) the protocol is always listed first and foremost in all documentation. Please follow the rules of [semantic versioning](semver.org) to avoid breaking changes. 
+The OpenBCI Electron Hub (or just "Hub") is a TCP/IP server that listens for clients on port `10996` on `localhost` aka `127.0.0.1`. Broadcast/multicast is never used for transmitting information to clients. Outgoing data is only transmitted to the requesting client. We use [semantic versioning](http://www.semver.org) the protocol is always listed first and foremost in all documentation. Please follow the rules of [semantic versioning](http://www.semver.org) to avoid breaking changes. 
 
 The hub is designed for either two use cases:
 
@@ -18,7 +18,7 @@ A unique port, `10996`, is critical because applications must be able to hit a k
 
 The Hub uses a comma-separated-value system followed by stop characters. The stop characters are `,;\n` or ("comma" "semi-colon" "backslash n"). A recommended client parsing is to store incoming TCP data into a buffer until the stop characters `';\n` are consecutively identified. The contents of the buffer can be now be considered a Message. The buffer can be flushed and the Message can be processed. Split the Message by `,` ("comma") to facilitate parsing. The first value will always be the command. The rest of the Message will then be translated based on the protocol for that command described in the Specification below. All commands sent to the client will be replied to asynchronously.
 
-### A brief example:
+### Example:
 If a client sends `s,start,;\n` to the Hub on `127.0.0.1:10996`, the Hub will respond with either `s,200,start,;\n` if the scan was started or an error message if unable to start such as `s,412,unable to start scan,;\n`.
 
 ## Command Set
