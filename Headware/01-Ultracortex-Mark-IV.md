@@ -61,7 +61,7 @@ Designers & Engineers:
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Front.stl)
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Front.stl)
 
-![image](../assets//MarkIV/Photos/Frame.jpg)
+![image](../assets/MarkIV/Photos/Frame.JPG)
 
 ####(21x) MECH_PARTS
 
