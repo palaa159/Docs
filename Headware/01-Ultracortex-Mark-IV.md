@@ -2,7 +2,7 @@
 
 *Development Period: January to November 2016*
 
-![image](../assets//MarkIV/Photos/UCM4-Product-2.jpg) 
+![image](../assets/MarkIV/Photos/UCM4-Product-2.jpg) 
 
 
 ####Complete Ultracortex Mark 4 kits are [available for sale](http://http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv) in the OpenBCI Online Store!
