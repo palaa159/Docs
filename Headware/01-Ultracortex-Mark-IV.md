@@ -17,7 +17,7 @@ Designers & Engineers:
 
 ## THE COMPLETE ULTRACORTEX
 
-**Note:** the part quantities listed below assume you are making an electrode holder for all 35 nodes of the Ultracortex Mark 4. In reality, you will likely have only 8 or 16 electrodes, depending on whether you are working with the [OpenBCI 32bit Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 channels) or the [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 channels). In general, more electrodes will distribute the downward scalp pressure, increasing comfort.
+**Note:** the part quantities listed below assume you are making an electrode holder for all 35 nodes of the Ultracortex Mark 4. In reality, you will likely have only 8 or 16 electrodes, depending on whether you are working with the [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 channels) or the [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 channels). In general, more electrodes will distribute the downward scalp pressure, increasing comfort.
 
 ###3D-printed Parts:
 
@@ -46,7 +46,7 @@ Designers & Engineers:
 	
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Earclips.JPG)
-* (**1x**) An [OpenBCI 32bit Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit)
+* (**1x**) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit)
 * (**1x**) Lithium Ion Rechargeable Battery Pack (~500mAh) — [Sparkfun](https://www.sparkfun.com/products/10718) or [Adafruit](http://www.adafruit.com/products/1578)
 * (**1x**) [A charger for your battery pack](https://www.adafruit.com/products/1304)
 * (**~10x**) [Zip tie](http://www.amazon.com/Black-Zip-Tie-100-Bag/dp/B0001IMMJI)
@@ -119,7 +119,7 @@ Designers & Engineers:
 
 ![image](../assets//MarkIV/Photos/EarClips.JPG)
 
-####(1x) An [OpenBCI 32bit Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
+####(1x) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/OPENBCIs.jpg)
 
@@ -208,7 +208,7 @@ Your Ultracortex should now look like this with your 5 COMFORT UNITS screwed in 
 
 ### Embed OpenBCI into the Ultracortex
 
-Connect your ~500 mAh lithium ion rechargeable batter to the back of your 32bit OpenBCI Board. Then fold the battery and its wires neatly behind the board before inserting the board into the BOARD_MOUNT. You can then secure the OpenBCI Board to the BOARD_MOUNT by clipping BOARD_COVER over top. 
+Connect your ~500 mAh lithium ion rechargeable batter to the back of your Cyton OpenBCI Board. Then fold the battery and its wires neatly behind the board before inserting the board into the BOARD_MOUNT. You can then secure the OpenBCI Board to the BOARD_MOUNT by clipping BOARD_COVER over top. 
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/embed_OpenBCI.jpg)
 
@@ -220,7 +220,7 @@ Before creating your electrode mounts, it's a good idea to think about where you
 
 The Ultracortex node locations are based on the [10-20 system](https://goo.gl/gSwYw), which is the internationally accepted standard for electrode placement in the context of EEG.
 
-The images below indicates the default 10-20 electrode locations that the OpenBCI Graphical User Interface expects. This application is great for viewing/recording your EEG and can be found in our [OpenBCI_Processing](http://) repo. The blue nodes indicate the 8 default 10-20 locations (channels 1-8) of the 32bit Board. The red nodes indicate the default 10-20 locations of channels 9-16 when using the OpenBCI 16-channel R&D Kit. 
+The images below indicates the default 10-20 electrode locations that the OpenBCI Graphical User Interface expects. This application is great for viewing/recording your EEG and can be found in our [OpenBCI_Processing](http://) repo. The blue nodes indicate the 8 default 10-20 locations (channels 1-8) of the Cyton Board. The red nodes indicate the default 10-20 locations of channels 9-16 when using the OpenBCI 16-channel R&D Kit. 
 
 For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (channels 1-8 of the OpenBCI default settings) will be used. The channel to 10-20 system correlations are as follows:
 
