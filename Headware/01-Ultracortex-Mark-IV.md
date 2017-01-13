@@ -71,7 +71,7 @@ Designers & Engineers:
 ####(1x) BOARD_HOLDER
 
 * [BOARD_MOUNT](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL)	
-![image](../assets//MarkIV/Photos/Board_Mount.JPG) 
+![image](../assets//MarkIV/Photos/Board_Mount.JPG)
 
 ####(1x) BOARD_COVER
 
@@ -117,7 +117,7 @@ Designers & Engineers:
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Earclips.JPG)
 
-![image](../assets//MarkIV/Photos/Earclips.JPG)
+![image](../assets//MarkIV/Photos/EarClips.JPG)
 
 ####(1x) An [OpenBCI 32bit Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
 
