@@ -2,7 +2,7 @@
 
 *Development Period: January to November 2016*
 
-![image](../assets/MarkIV/Photos/UCM4-Product-2.jpg) 
+![image](../assets/MarkIV/Photos/UCM4-Product-2.JPG) 
 
 
 ####Complete Ultracortex Mark 4 kits are [available for sale](http://http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv) in the OpenBCI Online Store!
@@ -21,17 +21,17 @@ Designers & Engineers:
 
 ###3D-printed Parts:
 
-* [FRAME](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
-	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Front.stl)
-	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Back.stl)
-* [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL)
-	* [INSERT](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert_105.5%25.STL) / [normal](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL) / [loose](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert_106.5%25.STL)) (Choose normal first / if it is too tight for the OCTABOLT, choose loose / if it is too loose for the OCTABOLT, choose tight)
-* [BOARD_MOUNT](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL) (**x1**) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL)
+* [FRAME](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Large_Front.stl)
+	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Large_Back.stl)
+* [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL)
+	* [INSERT](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert_105.5%25.STL) / [normal](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) / [loose](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert_106.5%25.STL)) (Choose normal first / if it is too tight for the OCTABOLT, choose loose / if it is too loose for the OCTABOLT, choose tight)
+* [BOARD_MOUNT](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL) (**x1**) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL)
 * BOARD_COVER (**x1**) 
-	* [BOARD COVER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Cover.stl) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Cover.stl)
-	* [BOARD MOUNT BASE(OPTIONAL)](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL) (for an optional easy removable board mount that is still in testing and is not included in the kits) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL)
+	* [BOARD COVER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Cover.stl) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Cover.stl)
+	* [BOARD MOUNT BASE(OPTIONAL)](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL) (for an optional easy removable board mount that is still in testing and is not included in the kits) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL)
 * WIRE_CLIPS (**x30**) 
-	* [WIRE CLIPS](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/Mark_IV/M4%20Released/STL's/Accessories/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Accessories/M4_Wire_Clip.stl)
+	* [WIRE CLIPS](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/Mark_IV/M4_Released/STL's/Accessories/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Accessories/M4_Wire_Clip.stl)
 
 ###Non-printed Parts:
  	
@@ -42,7 +42,7 @@ Designers & Engineers:
 * Flat units
 	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Flat Units.JPG)
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Confort%20Units.JPG)	
+	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Confort_Units.JPG)	
 	
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Earclips.JPG)
@@ -57,33 +57,33 @@ Designers & Engineers:
 
 ####(1x) FRAME
 
-* [FRAME](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's/Frame) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
-	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Front.stl)
-	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Frame/M4_Large_Front.stl)
+* [FRAME](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Frame) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Large_Front.stl)
+	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Frame/M4_Large_Front.stl)
 
 ![image](../assets/MarkIV/Photos/Frame.JPG)
 
 ####(21x) MECH_PARTS
 
-* [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL)
-	* [INCERTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert_105.5%25.STL) / [normal](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert.STL) / [loose](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Mech%20Parts/M4_Hardware_insert_106.5%25.STL) (Choose normal first / if it is too tight for the OCTABOLT, choose loose / if it is too loose for the OCTABOLT, choose tight)
+* [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL)
+	* [INCERTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert_105.5%25.STL) / [normal](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) / [loose](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert_106.5%25.STL) (Choose normal first / if it is too tight for the OCTABOLT, choose loose / if it is too loose for the OCTABOLT, choose tight)
 
 ####(1x) BOARD_HOLDER
 
-* [BOARD_MOUNT](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL)	
-![image](../assets//MarkIV/Photos/Board%20Mount.JPG) 
+* [BOARD_MOUNT](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL)	
+![image](../assets//MarkIV/Photos/Board_Mount.JPG) 
 
 ####(1x) BOARD_COVER
 
 * [BOARD COVER](**x1**) 
-	* [BOARD COVER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Cover.stl) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Cover.stl)
-	* [BOARD MOUNT BASE(OPTIONAL)](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL) (for an optional easy removable board mount that is still in testing and is not included in the kits) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Board%20Mount/M4%20Board_Base.STL)
+	* [BOARD COVER](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Cover.stl) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Cover.stl)
+	* [BOARD MOUNT BASE(OPTIONAL)](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL) (for an optional easy removable board mount that is still in testing and is not included in the kits) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Board_Mount/M4_Board_Base.STL)
 
-![image](../assets//MarkIV/Photos/Board%20Cover.JPG) 
+![image](../assets//MarkIV/Photos/Board_Cover.JPG) 
 
-![image](../assets//MarkIV/Photos/3D%20printed%20Parts3.JPG)
+![image](../assets//MarkIV/Photos/3D_printed_Parts3.JPG)
 
-* [WIRE CLIPS](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/Mark_IV/M4%20Released/STL's/Accessories/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4%20Released/STL's/Accessories/M4_Wire_Clip.stl)
+* [WIRE CLIPS](https://github.com/OpenBCI/Ultracortex/blob/master/Mark_IV/Mark_IV/M4_Released/STL's/Accessories/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Ultracortex/raw/master/Mark_IV/M4_Released/STL's/Accessories/M4_Wire_Clip.stl)
 
 ###Non-printed Parts:
 
@@ -110,7 +110,7 @@ Designers & Engineers:
 ![image](../assets//MarkIV/Photos/FlatUnits.JPG)
 
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Confort%20Units.JPG)
+	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/blob/master//MarkIV/Photos/Confort_Units.JPG)
 	
 ![image](../assets//MarkIV/Photos/ComfortUnits.JPG)
 	
@@ -239,11 +239,11 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 
 First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame. 
 
-![image](../assets//MarkIV/Photos/Assembly_Confort%2BFlat.JPG)
+![image](../assets//MarkIV/Photos/Assembly_Comfort_Flat.JPG)
 
 Then screw 6 SPIKEY ELECTRODE UNITS in the following nodes of the frame. 
 
-![image](../assets//MarkIV/Photos/Assembly_C%2BF%2BS.JPG)
+![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
 
 ### Connect wiring to OpenBCI
 
@@ -280,7 +280,7 @@ Your headset should look like this when your finished assembeling the 8 channels
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished3.JPG)
 
 
-![image](../assets//MarkIV/Photos/Assembly_C%2BF%2BS.JPG)
+![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
 
 
 ### Connect ear clip electrodes (Reference & Ground)
@@ -304,7 +304,7 @@ From the front of the frame remove the following two Comfort Nodes.
 ### Add the next 6 Spikey Electrodes
 
 In the following locations screw in the remaining 6 electrodes units.
-![image](../assets//MarkIV/Photos/Assembly_16Chan_Node%20Placment.JPG)
+![image](../assets//MarkIV/Photos/Assembly_16Chan_Node_Placment.JPG)
 
 ### Wiring Electrodes
 
@@ -316,7 +316,7 @@ Then plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE.
 
 Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DASY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished.JPG)
-![image](../assets//MarkIV/Photos/Assembly_16Chan%20Finished2.JPG)
+![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished2.JPG)
 
 ### Adjust the Ultracortex for your head
 
@@ -331,7 +331,7 @@ Place your UltraCortex on your head so that the back center node is roughly the 
 
 Now that you have your Ultracortex assembled and comfortably adjusted to your head size and shape, it's brain wave time!
 
-![image](../assets//MarkIV/Photos/UCM4-Product-2.jpg)
+![image](../assets//MarkIV/Photos/UCM4-Product-2.JPG)
 
 Check out the [Getting Started w/ OpenBCI tutorial](http://docs.openbci.com/tutorials/01-GettingStarted) to get up-and-running with the [OpenBCI Processing GUI](https://github.com/OpenBCI/OpenBCI_Processing).
 
