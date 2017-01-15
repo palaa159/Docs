@@ -57,7 +57,7 @@ First, turn on your computer's Bluetooth.
   
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
   
-> ***NOTE*** If you are using a Mac with macOS Sierra, you can currently **ONLY** run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.  
+**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.** 
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
@@ -73,7 +73,7 @@ Once the GUI is running, select `LIVE (from Ganglion)`. That button will turn gr
 
 ![File Name](../assets/images/fileName.png)
 
-> ***NOTE*** every time you run the GUI, it will generate a recording to file. You have an option at this point to create your own file name, in the `DATA LOG FILE` window, should you choose to.  
+**NOTE every time you run the GUI, it will generate a recording to file. You have an option at this point to create your own file name, in the `DATA LOG FILE` window, should you choose to.**  
 
 ![START SYSTEM](../assets/images/startSystem.png)
 
@@ -103,8 +103,9 @@ Now let's get the first data from the Ganglion! Click on the `Start Data Stream`
 
 ![Accel Moving](../assets/images/ganglion_moving-accelerometer.jpg)
 
-Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin headder, you will see some noise in the other windows. Nice! 
->*NOTE* If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.
+Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin headder, you will see some noise in the other windows. Nice!  
+
+**NOTE If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.**
 
 Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  
 
@@ -137,8 +138,9 @@ Now a note about your Ganglion board setup. There are 4 switches on the top of t
 ![ECG connection TOP](../assets/images/ganglion_ECG-plugged-top-view.png)
 ![ECG connection PINS](../assets/images/ganglion_ECG-plugged-pins.png)
 
-Here, I'm connecting my `arm` electrodes to the `+` and `-` pins of channel `3`. 
->*NOTE* Connect the `+` pin to your LEFT arm, otherwise the pulse wave will be upside down! The `+` pin is on the TOP row of the pin header. See the [Ganglion Hardware](http://docs.openbci.com/Hardware/07-Ganglion) doc for more details.
+Here, I'm connecting my `arm` electrodes to the `+` and `-` pins of channel `3`.  
+
+**NOTE Connect the `+` pin to your LEFT arm, otherwise the pulse wave will be upside down! The `+` pin is on the TOP row of the pin header. See the [Ganglion Hardware](http://docs.openbci.com/Hardware/07-Ganglion) doc for more details.**
 
 You also need to connect the elbow electrode to the pin labeled `D_G` This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
 
@@ -204,8 +206,7 @@ This is the location that we will move the OpenBCI GUI files that we'll download
 
 ![GUI repo](../assets/images/ganglion_GUI-repo.png)
 
-The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. 
-> If you are a advanced github user, go ahead and clone it if you like  
+The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. If you are a advanced github user, go ahead and clone it if you like  
 
 After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to:
 
