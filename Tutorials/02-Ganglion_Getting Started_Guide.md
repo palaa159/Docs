@@ -57,7 +57,7 @@ First, turn on your computer's Bluetooth.
   
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
   
-> ***NOTE*** If you are using a Mac with macOS Sierra, you can currently **ONLY** run the OpenBCI GUI from Processing. Please go [here](docs.openbci.com/Tutorials/02-Ganglion_Getting_Started_Guide#how-to-run-gui-in-processing) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.  
+> ***NOTE*** If you are using a Mac with macOS Sierra, you can currently **ONLY** run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.  
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
@@ -104,7 +104,7 @@ Now let's get the first data from the Ganglion! Click on the `Start Data Stream`
 ![Accel Moving](../assets/images/ganglion_moving-accelerometer.jpg)
 
 Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin headder, you will see some noise in the other windows. Nice! 
->*NOTE* If you're having trouble, check out the [troubleshooting]() section below.
+>*NOTE* If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.
 
 Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  
 
@@ -130,9 +130,9 @@ Let's start off with something simple, ECG is the electric signal that causes yo
 
 In this example, I'm attaching two of the sticky `SKINTACT` electrodes to either arm, and then an extra one on my elbow. It doesn't matter what elbow you choose. 
 
-![Ganglion Switches Differential]()
+![Ganglion Switches Differential](../assets/images/ganglion_SW_UP.png)
 
-Now a note about your Ganglion board setup. There are 4 switches on the top of the board that are used to re-route the input connections to make connecting yourself easy. The default setting (the way your ganglion was shipped to you) is with the switches in the `UP` position. This allows you to connect your electrodes to the `+` and `-` pins of any channel, and measure the differential between them. 
+Now a note about your Ganglion board setup. There are 4 switches on the top of the board that are used to re-route the input connections to make connecting yourself easy. The default setting (the way your ganglion was shipped to you) is with the switches in the `UP` position. This allows you to connect your electrodes to the `+` and `-` pins of any channel, and measure the differential between them. For more of a deep dive on Ganglion Hardware, go to [this Doc](http://docs.openbci.com/Hardware/07-Ganglion)
 
 ![ECG connection TOP](../assets/images/ganglion_ECG-plugged-top-view.png)
 ![ECG connection PINS](../assets/images/ganglion_ECG-plugged-pins.png)
