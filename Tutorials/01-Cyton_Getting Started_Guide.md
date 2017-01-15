@@ -52,7 +52,7 @@ Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of y
 
 Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for your operating system. Once you unzip/extract the download, open the file called "OpenBCI_GUI".
 
-> ***NOTE*** If you are using a Mac with macOS Sierra, you can currently **ONLY** run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial. 
+**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.** 
 
 ![Synthetic](../assets/images/Synthetic.png)
 
