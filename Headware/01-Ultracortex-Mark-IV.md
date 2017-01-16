@@ -35,16 +35,16 @@ Designers & Engineers:
 ###Non-printed Parts:
  	
 * Cables (**x3**)
-	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Cables.JPG) 
+	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/MarkIV/Photos/Cables.JPG) 
 * Spikey units
-	* (**6x or 14x**) Depending on a 8 or 16 channel heas set dry (spikey) electrodes to be installed in Ultracortex nodes with hair: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Spikey units (8chan).JPG)
+	* (**6x or 14x**) Depending on a 8 or 16 channel heas set dry (spikey) electrodes to be installed in Ultracortex nodes with hair: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/SpikeyUnits8chan.JPG)
 * Flat units
-	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Flat Units.JPG)
+	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Docs/MarkIV/Photos/FlatUnits.JPG)
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Confort_Units.JPG)	
+	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/MarkIV/Photos/ConfortUnits.JPG)	
 	
 * Ear Clips
-	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Ultracortex//MarkIV/Photos/Earclips.JPG)
+	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Docs/MarkIV/Photos/EarClips.JPG)
 * (**1x**) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit)
 * (**1x**) Lithium Ion Rechargeable Battery Pack (~500mAh) — [Sparkfun](https://www.sparkfun.com/products/10718) or [Adafruit](http://www.adafruit.com/products/1578)
 * (**1x**) [A charger for your battery pack](https://www.adafruit.com/products/1304)
@@ -96,27 +96,27 @@ Designers & Engineers:
 ![image](../assets//MarkIV/Photos/Screw.JPG)
 
 * Cables (**x3**)
-	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Cables.JPG) 
+	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/MarkIV/Photos/Cables.JPG) 
 	
 ![image](../assets//MarkIV/Photos/Cables.JPG)
 
 * Spikey units
-	* (**6x or 14x**) Depending on a 8 or 16 channel heas set dry (spikey) electrodes to be installed in Ultracortex nodes with hair: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Spikey units (8chan).JPG)
+	* (**6x or 14x**) Depending on a 8 or 16 channel heas set dry (spikey) electrodes to be installed in Ultracortex nodes with hair: (https://github.com/OpenBCI/Docs/MarkIV/Photos/SpikeyUnits8chan.JPG)
 	
 ![image](../assets//MarkIV/Photos/SpikeyUnits8chan.JPG)
 
 * Flat units
-	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Flat Units.JPG)
+	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Docs/MarkIV/Photos/FlatUnits.JPG)
 	
 ![image](../assets//MarkIV/Photos/FlatUnits.JPG)
 
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Confort_Units.JPG)
+	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/MarkIV/Photos/ConfortUnits.JPG)
 	
 ![image](../assets//MarkIV/Photos/ComfortUnits.JPG)
 	
 * Ear Clips
-	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Ultracortex/MarkIV/Photos/Earclips.JPG)
+	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Docs/MarkIV/Photos/Earclips.JPG)
 
 ![image](../assets//MarkIV/Photos/EarClips.JPG)
 
