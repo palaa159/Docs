@@ -42,7 +42,7 @@ The OpenBCI GUI was built using [Processing](https://processing.org/), a popular
 
 To get started working with the OpenBCI GUI in Processing, first you must [download the latest stable release of Processing](https://processing.org/download/) from their website. 
 
-### Download or Fork the OpenBCI_GUI Github Reop
+### Download or Fork the OpenBCI_GUI Github Repo
 
 Next, you must [download or fork](https://github.com/OpenBCI/OpenBCI_GUI) (if you're familiar with Github) the OpenBCI_GUI Processing code. 
 
