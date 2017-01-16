@@ -48,7 +48,7 @@ The OpenBCI Cyton boards have powerful microcontrollers on them which ship with 
 
 ![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
-* In the Arduino IDE go `File-->Examples-->OpenBCI_32bit_Library-->DefaultBoard` which will launch the Host firmware.
+* In the Arduino IDE go to `File-->Examples-->OpenBCI_32bit_Library-->DefaultBoard` which will launch the Host firmware. **NOTE You must upload ONLY the `DefaultBoard` Sketch!**
 
 * Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! Now is a good time to plug your Dongle in and power down the Board.
 
