@@ -168,6 +168,8 @@ Now, let's take a look at some EMG signals. EMG is the measure of the electrical
 
 The EMG signal is a high frequency signal that is really easy to see in the Time Series window. In this image, I'm squeezing my fist three times in a row.
 
+![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
+
 
 
 ***This Getting Started Guide will be updated periodically. Check back soon for BRAINWAVES!***

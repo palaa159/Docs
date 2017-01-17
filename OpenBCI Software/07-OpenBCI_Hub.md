@@ -30,6 +30,7 @@ Commands are sent from the client to the Hub. Each command gets an asynchronous 
 Stop or start accelerometer.
 
 **ACTION**
+
 * `start`
 
 Start accelerometer.
@@ -151,6 +152,7 @@ Response: on failure
 Scan for Ganglion BLE devices and when found, send their local names to requesting client.
 
 **ACTION**
+
 * `start`
 
 Start a scan. Stop a scan if one in progress before starting the newly requested scan.
@@ -208,6 +210,7 @@ As soon as a client has established itself to the Hub as a requester of informat
 
 ### Accelerometer
 **t,CODE,AXIS_X,AXIS_Y,AXIS_Z**
+
 Description: Accelerometer data from the Ganglion.
 Availability: as of `v1.0.0`
 
@@ -228,6 +231,7 @@ Response: on success
 
 ### Impedance
 **i,CODE,CHANNEL,VALUE**
+
 Accelerometer data from the Ganglion.
 
 Availability: as of `v1.0.0`
@@ -246,6 +250,7 @@ Response: on success
 
 ### Message
 **l,CODE,MESSAGE**
+
 Description: Message from the Ganglion.
 Availability: as of `v1.0.0`
 
