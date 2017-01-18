@@ -158,7 +158,7 @@ To measure your connection to the board, we have to change the Accelerometer wid
 
 ![Measure Impedance](../assets/images/ganglion_ECG-impedance.jpg)
 
-When you start the impedance check, the data will stop streaming, but some numbers will start to pop up in the `Ganglion Signal` window. These values are a measure of the input impedance, or the connection quality, between your body and the Ganglion. In the case of using ECG electrodes on bare skin, you would expect to see a value of between 5k and 10k. Notice the other channels are reporting high values. That's because there is nothing connected to them! Notice that the dot next to `Channel[3] Impedance` is green. That means it's good! The lower, the better!
+When you start the impedance check, the data will stop streaming, but some numbers will start to pop up in the `Ganglion Signal` window. These values are a measure of the input impedance, or the connection quality, between your body and the Ganglion. In the case of using ECG electrodes on bare skin, you would expect to see a value of between 5k and 10k. Notice the other channels are reporting high values. That's because there is nothing connected to them! Notice that the dot next to `Channel[3] Impedance` is green. That means it's good! The lower, the greener, the better!
 
 ![EMG Arms](../assets/images/ganglion_EMG-fist.png)
 
@@ -170,9 +170,59 @@ The EMG signal is a high frequency signal that is really easy to see in the Time
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
+Now, let's set up to see some brainwaves! The first thing you have to do is make an adjustment to the input switches. Remember, when we ship your Ganglion the switches `SW1, SW1, SW3, SW4` in the UP position, which allows you to connect to each channels `+` and `-` input pins. In this configuration, we say that these are "differential inputs". When the switch is in the DOWN position, the `-` pin is disconnected from the electronics, and that `-` input is connected instead to the `REF` pin. In this way, the switch helps you to gang togehter two or more of the `-` pins to use as a single reference. This scheme is useful when doing EEG, as you will soon see.  
+So, First, switch all of the `SW` pins to the DOWN position.
+
+![EEG pin connections](../assets/images/ganglion_EEG-plugged.jpg)
+
+Next, connect the female header end of 6 of the Gold Cup Electrodes to the Ganglion input header. In this case, you want to be sure to connect to the `+` input, of channels 1, 2, 3, and 4, which is on the TOP row. You also need to connect one cable to the `REF` pin (either TOP or BOTTOM is ok) and also the `D_G` pin (either TOP or BOTTOM is ok).
+
+![electrode paste scoop](../assets/images/electrodePaste.png)
+![Connect REF & D_G paste](../assets/images/ganglion_connect-earlobe-paste.jpg)
+![Connect Ref & D_G tape](../assets/images/ganglion_connect-earlobe-tape.jpg)
+
+The first connection to make is the `D_G` electrode. This connection allows the Ganglion to 'share' `GROUND` or `0 Volts` with your body, so that we can measure the electo-potentials correctly. Scoop up a small amount of the eclectrode pasted with the gold cup (as shown). This paste acts as a kind of adhesive. It is also electrically conductive, and makes the connection between your skin and the gold cup. This connection will be on your ear lobe. It can help to have some medical tape or bandaid to help hold the electrode in place. Do the same thing with the gold cup electrode connected to the `REF` pin on your other earlobe. The `REF` pin is connected to all of the channel `-` inputs. This is the electrode that the ones on your head (reading your brain) will be measured against. We are attaching it to your earlobe, because there is *very little* electrical signal in your earlobe, so it won't interfere with what's going on in your head.
+
+![10-20 map positions](../assets/images/ganglion_10-20-positions.png)
+
+It's important to know where you are placing your EEG electrodes on your head, and thankfully there already is a map of electrode positions. It's called the [10-20 system](https://en.wikipedia.org/wiki/10-20_system_(EEG)). In the picture  at right, the Nasion is the 'nose' side of your head, and the Inion is the 'back' side of your head. I have color coded the electrode positions for you, based on the cables connected in previous image, and you can see that we've already applied the `D_G` and `REF` at positions `A2` and `A1` respectively.
+
+![Electrode Frontal Place](../assets/images/ganglion_frontal-place.jpg)
+![Electrode Frontal Position](../assets/images/ganglion_frontal-position.jpg)
+
+The positions `Fp1` and `Fp2` are your Frontal Parietal positions. They should be placed semetrically on your forehead as shown in the picture. `Fp1` should connect to Channel 1, and `Fp2` should connect to Channel 2. I'm using the same color electrode wires as is used in the GUI channel color.
+
+![Electrode Occipital Place](../assets/images/ganglion_occipital-place.jpg)
+![Electrode Occipital Position](../assets/images/ganglion_occipital-position.jpg)
+
+Channel 3 and Channel 4 should be connected to your head in the `O1` and `O2` positions. These are going to measure your Occipital lobe (Connected to your eyes!). make sure to part the hair, and get the electrode connected right on to your scalp. It can help to have a friend do this part with you. *VERY* important to make the connection to your scalp! use more electrode paste if you need to.
+
+![Electrodes Banded GtoG](../assets/images/ganglion_electrodes-ready.jpg) 
+
+I'm using a headband to help hold the electrodes in place, and now I'm good-to-go! Let's check out some EEG!
+
+![GUI Adjust for EEG](../assets/images/ganglion_vert-scale-50.jpg)
+
+Start the GUI as you have done before, and this time, set the `Vert Scale` to `50uV`.
+
+![Eye Blinks!](../assets/images/ganglion_EEG-eye-blinks.jpg)
+
+Press the `Start System` button, and give the data a moment to settle. The first fun thing to measrue is eye blinks. If you blink your eyes, you will see a signature wave in the EEG signal on Channel 1 and Channel 2.
+
+![Jaw Grits](../assets/images/ganglion_EEG-jaw-grits.jpg)
+
+Next, let the signal settle again and then grit your teeth just a bit. You should be able to see some nice EMG from your jaw muscles in two or more of the channels.
+
+![Alpha!](../assets/images/ganglion_EEG-alpha.jpg)
+
+Finally, let's try to get some brainwaves! The easiest brainwave to make 'on command' is an alpha wave. In most of our waking life, our eyes are open and the occipital lobe of our brains is busy processing all of the visual information streaming onto our retinas. It just so happens that when you close your eyes, your occipital lobe has 'nothing to do' as it were, and goes into an 'idle' state. In this state, it produces a brainwave at about 10Hz (between 8Hz and 12Hz). You can measure the alpha wave with the Ganlion when your eyes are closed. So now, close your eyes, and have your friend watch the GUI for signs of alpha. You should see a dominant waveform in the `Time Series` window, and a rising peak in the `FFT Plot` at about 10Hz. Well, you won't see it, because you have your eyes closed! But your friend who helped you put the electrodes on will see it!  
+
+![EEG Impedance Test](../assets/images/ganglion_EEG-impedance-test.jpg)
+
+If you having any trouble seeing the signals above, one thing that might be an issue is the connetion between the gold cup electrodes and your scalp. You can test this connection by doing an Impedance Check. Click the button `Start Impedance Check` and you will see values start to come up at each electrode. The small circle on the left will change color according to the impedance, with `green` being good and `red` being not-good. Using gold cup electrodes and paste, you should be seeing impedance values in the range of `5k` to `15k`. If they are higher, you will need to adjust the connection, add more paste and re-position the electrode if necessary.
 
 
-***This Getting Started Guide will be updated periodically. Check back soon for BRAINWAVES!***
+**Happy Brain Hacking!**
 
 
 
