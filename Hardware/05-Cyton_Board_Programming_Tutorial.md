@@ -32,7 +32,7 @@ The OpenBCI Cyton boards have powerful microcontrollers on them which ship with 
   On Windows:
 `C:\Users\username\Documents\Arduino\libraries`
 
-	If there is no 'libraries' folder in the sketch folder, create one.
+	If there is no `libraries` folder in the sketch folder, create one.
 
 * Download the [OpenBCI_32bit_SD](https://github.com/OpenBCI/OpenBCI_32bit_SD/archive/master.zip) repo from our github.
 
