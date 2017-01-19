@@ -47,7 +47,7 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 ## Download/Run the OpenBCI GUI on macOS
 
-This part is for Mac users. If you use Windows or Linux, there are special parts for you below.  
+This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here. 
 
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
