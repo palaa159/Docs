@@ -312,47 +312,47 @@ This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work w
 
 First plug in your CSR 4.0 BLE Dongle.   
 
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.png)
+![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
 
 Go to the [Zadig tool website](http://zadig.akeo.ie)
 
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.png)
+![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
 
 Then download for Windows Vista or Later
 
-![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.png)
+![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
 
 Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
 
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.png)
+![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
 
 Select _No To Updates_ when prompted.
 
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.png)
+![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
 
 On the top bar select _Options_.
 
-![Select Options](../assets/images/ganglion_win_6_selectOptions.png)
+![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
 
 Then select _List All Devices_.
 
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.png)
+![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
 
 Select CSR from the dropdown.
 
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.png)
+![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
 
 Then press _Replace Driver_.
 
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.png)
+![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
 
 You should then see a progress bar followed by a success message.
 
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.png)
+![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
 
 Note that both drop-downs both say _WinUSB_.
 
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.png)
+![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
 
 Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
 
