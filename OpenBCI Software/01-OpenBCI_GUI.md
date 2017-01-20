@@ -16,7 +16,7 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 
 Next, you must save the application somewhere, the same way you would any other application or executable on your machine. 
 
-**Note: ** for Mac OS Sierra, you must put the application in your /Applications folder in order for it to work properly.
+**Note:** for Mac OS Sierra, you must put the application in your /Applications folder in order for it to work properly.
 
 ### Make Sure You Have The Latest FTDI Drivers Downloaded
 
