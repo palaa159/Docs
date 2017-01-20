@@ -18,7 +18,7 @@ Next, you must save the application somewhere, the same way you would any other 
 
 ### Make Sure You Have The Latest FTDI Drivers Downloaded
 
-
+Go to the [FTDI VCP](http://www.ftdichip.com/Drivers/VCP.htm) Downloads page, and install the FTDI Driver suitable for your operating system.
 
 ### Launch the Application
 
@@ -27,9 +27,8 @@ The easy part!
 **Important Notes:** 
 
  * In some cases, there may be issues with the way your machine handles the BLE application that enables communication with the Ganglion Board. For troubleshooting these issues, please 
- * If using Mac OS w/ Sierra:
- 	* you will need to [re-download the "GanglionHub"](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/download/v0.3.0/Ganglion-Hub-v0.3.0-macOS.zip) and install it manually in: Show Package Contents > Contents/Java/data // you must replace the "Ganglion Hub.app" that is already there.
- 	* Additionally, you will need to [follow the steps](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) in the section titled "Run The GUI In Processing On MacOS Sierra" in the Getting Started w/ Ganglion Guide. This will allow you to alter your system preferences to run apps "downloaded from anywhere": System Preferences/Security & Privacy/Click the lock to make changes/Anywhere
+ * If using **macOS Sierra:**
+ 	* Additionally, you will need to [follow the steps](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) in the section titled "Run The GUI In Processing On MacOS Sierra" in the Getting Started w/ Ganglion Guide. This will allow you to alter your system preferences to run apps "downloaded from anywhere"
  * If you run into additional issues, please visit the [OpenBCI_GUI Section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum
  
 ## Running the OpenBCI GUI from Processing
