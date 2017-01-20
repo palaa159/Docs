@@ -47,7 +47,7 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 ## Download/Run the OpenBCI GUI on macOS
 
-This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here. 
+This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here.
 
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
@@ -230,7 +230,7 @@ The things you will need to run the OpenBCI GUI in Processing are:
 
  * [Processing App](https://processing.org/download/?processing)
  * [OpenBCI GUI Sketch](https://github.com/OpenBCI/OpenBCI_GUI)
- * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.3.0)
+ * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0)
 
 First, go to processing.org and download the latest version of Processing. While that's downloading, move on to the next step, which will allow you to run the OpenBCI GUI on Sierra.
 
@@ -272,7 +272,7 @@ folder. Once you have done that, quit out of Processing. There's one more big st
 ![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
 There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.3.0), and click on the `Ganglion-Hub-v0.3.0-macOS.zip` link.  
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the `Ganglion-Hub-v0.4.0-macOS.zip` link.  
 
 ![electron hub download](../assets/images/ganglion_hub-download.png)
 
