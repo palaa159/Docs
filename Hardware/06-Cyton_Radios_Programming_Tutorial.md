@@ -157,6 +157,8 @@ Here's a picture of the connections that you need to make. Power the OpenBCI boa
 
 On The **8-bit Board**, the pins you need to connect to are accessed from the TOP of the board. Insert the jumpers into the holes in the correct position, and press them tightly agains the sides of the holes to make a strong connection. Now, you can upload Device code to the RFduino on the OpenBCI 8-bit Board!
 
+![Cyton Device Connection](../assets/images/32bitDeviceConnection.jpg)
+
 On the **Cyton Board** the pins you need to connect to are accessed from the BOTTOM of the board. Connect the jumper wires to the *center* of the pads as shown and press tightly while uploading to the Device.
 Helpful tips:
 * Use a 4pin female header to keep the wires in place
