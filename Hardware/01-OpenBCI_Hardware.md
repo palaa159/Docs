@@ -1,4 +1,4 @@
-#OpenBCI Hardware 
+# OpenBCI Hardware 
 Welcome to the OpenBCI Hardware documentation page. Here you will find specifications of the OpenBCI suite of devices.  
 
 The [Cyton](http://docs.openbci.com/Hardware/02-Cyton) page covers the hardware specs of our 8 channel board and Dongle, as well as our expansion Daisy Module. 
