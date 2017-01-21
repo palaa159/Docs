@@ -1,12 +1,12 @@
 # Ganglion Getting Started Guide
 ###Overview
-This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users. the second is for Windows users. Please review this guide in its entirity before starting. Have fun!
+This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun!
 
 ## What You Need
 
 ![OpenBCI Contents](../assets/images/ganglion_what_you_need.png)
 
- 1. OpenBCI Ganglion Board 
+ 1. OpenBCI Ganglion Board
  3. 6V AA battery pack & (x4) AA batteries (batteries not included)
  4. (x4) plastic feet for board stabilization
  5. OpenBCI [Gold Cup Electrodes](http://shop.openbci.com/collections/frontpage/products/openbci-gold-cup-electrodes?variant=9056028163), or your own electrodes, and [Electrode Paste](http://shop.openbci.com/collections/frontpage/products/ten20-conductive-paste-2oz-jars)
@@ -28,9 +28,9 @@ If you ordered OpenBCI [Gold Cup Electrodes](http://shop.openbci.com/collections
 
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 3 2oz Jars of Ten20 conductive electrode paste
- 
+
 ![TouchProof Adapter](../assets/images/touch_proof.jpg)
- 
+
 If you plan to work with your own electrodes, the [Touch-Proof Adapter](http://shop.openbci.com/collections/frontpage/products/touch-proof-electrode-cable-adapter?variant=31007211715) will come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into any OpenBCI Board!
 
 ### 4. (x4) Plastic Feet
@@ -47,25 +47,25 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 ## Download/Run the OpenBCI GUI on macOS
 
-This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here.  
-  
+This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here. 
+
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
 First, turn on your computer's Bluetooth.  
 
 ![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
-  
+
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
-  
-**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.** 
+
+**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.**
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
-When you first run the GUI on your Mac, you will have to give administrator permission. You may see a message pop up asking you if you're sure you want to open it. Click `Open` and the app will launch. 
+When you first run the GUI on your Mac, you will have to give administrator permission. You may see a message pop up asking you if you're sure you want to open it. Click `Open` and the app will launch.
 
 ![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
 
-If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button. 
+If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button.
 
 ![Synthetic](../assets/images/ganglion_select_LIVE-from-ganglion.png)
 
@@ -77,7 +77,7 @@ Once the GUI is running, select `LIVE (from Ganglion)`. That button will turn gr
 
 ![START SYSTEM](../assets/images/startSystem.png)
 
-Click on the Ganglion board name that you want to connect to, so that it turns green, and now you are ready to roll! Press the `START SYSTEM` button. It may take up to a minute, but the GUI is setting itself up and connecting to your Ganglion! 
+Click on the Ganglion board name that you want to connect to, so that it turns green, and now you are ready to roll! Press the `START SYSTEM` button. It may take up to a minute, but the GUI is setting itself up and connecting to your Ganglion!
 
 ![Start Data Stream](../assets/images/ganglion_connected-idle.png)
 
@@ -85,7 +85,7 @@ When the GUI connects, it opens up to the default window layout. For a more inde
 
 ![select layout](../assets/images/ganglion_select-layout.png)
 
-Click on the `Layout` dropdown menu, and select the one outlined in red. 
+Click on the `Layout` dropdown menu, and select the one outlined in red.
 
 ![Auto Scale](../assets/images/ganglion_autoScale.png)
 
@@ -111,9 +111,6 @@ Now that you've got your computer connected to the Ganglion, it's time to connec
 
 
 
-
-
-
 ## Connect yourself to OpenBCI
 
 In this quick demo, we'll be showing you how to set up your Ganglion to read 3 your heart activity (ECG), muscle activity (EMG), and brain activity (EEG)!
@@ -124,12 +121,12 @@ For more information on these three signals, refer to wikipedia:
  * [Muscle Acitivity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
  * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
-Let's start off with something simple, ECG is the electric signal that causes your ticker to tick, and it's easy to measure if you attach electrodes on either side of your body. 
+Let's start off with something simple, ECG is the electric signal that causes your ticker to tick, and it's easy to measure if you attach electrodes on either side of your body.
 
 
 ![ECG Arms](../assets/images/ganglion_ECG-arms.png)
 
-In this example, I'm attaching two of the sticky `SKINTACT` electrodes to either arm, and then an extra one on my elbow. It doesn't matter what elbow you choose. 
+In this example, I'm attaching two of the sticky `SKINTACT` electrodes to either arm, and then an extra one on my elbow. It doesn't matter what elbow you choose.
 
 ![Ganglion Switches Differential](../assets/images/ganglion_SW_UP.png)
 
@@ -170,7 +167,7 @@ The EMG signal is a high frequency signal that is really easy to see in the Time
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
-Now, let's set up to see some brainwaves! The first thing you have to do is make an adjustment to the input switches. Remember, when we ship your Ganglion the switches `SW1, SW1, SW3, SW4` in the UP position, which allows you to connect to each channels `+` and `-` input pins. In this configuration, we say that these are "differential inputs". When the switch is in the DOWN position, the `-` pin is disconnected from the electronics, and that `-` input is connected instead to the `REF` pin. In this way, the switch helps you to gang togehter two or more of the `-` pins to use as a single reference. This scheme is useful when doing EEG, as you will soon see.  
+Now, let's set up to see some brainwaves! The first thing you have to do is make an adjustment to the input switches. Remember, when we ship your Ganglion the switches `SW1, SW1, SW3, SW4` in the UP position, which allows you to connect to each channels `+` and `-` input pins. In this configuration, we say that these are "differential inputs". When the switch is in the DOWN position, the `-` pin is disconnected from the electronics, and that `-` input is connected instead to the `REF` pin. In this way, the switch helps you to gang together two or more of the `-` pins to use as a single reference. This scheme is useful when doing EEG, as you will soon see.  
 So, First, switch all of the `SW` pins to the DOWN position.
 
 ![EEG pin connections](../assets/images/ganglion_EEG-plugged.jpg)
@@ -197,7 +194,7 @@ The positions `Fp1` and `Fp2` are your Frontal Parietal positions. They should b
 
 Channel 3 and Channel 4 should be connected to your head in the `O1` and `O2` positions. These are going to measure your Occipital lobe (Connected to your eyes!). make sure to part the hair, and get the electrode connected right on to your scalp. It can help to have a friend do this part with you. *VERY* important to make the connection to your scalp! use more electrode paste if you need to.
 
-![Electrodes Banded GtoG](../assets/images/ganglion_electrodes-ready.jpg) 
+![Electrodes Banded GtoG](../assets/images/ganglion_electrodes-ready.jpg)
 
 I'm using a headband to help hold the electrodes in place, and now I'm good-to-go! Let's check out some EEG!
 
@@ -215,11 +212,11 @@ Next, let the signal settle again and then grit your teeth just a bit. You shoul
 
 ![Alpha!](../assets/images/ganglion_EEG-alpha.jpg)
 
-Finally, let's try to get some brainwaves! The easiest brainwave to make 'on command' is an alpha wave. In most of our waking life, our eyes are open and the occipital lobe of our brains is busy processing all of the visual information streaming onto our retinas. It just so happens that when you close your eyes, your occipital lobe has 'nothing to do' as it were, and goes into an 'idle' state. In this state, it produces a brainwave at about 10Hz (between 8Hz and 12Hz). You can measure the alpha wave with the Ganlion when your eyes are closed. So now, close your eyes, and have your friend watch the GUI for signs of alpha. You should see a dominant waveform in the `Time Series` window, and a rising peak in the `FFT Plot` at about 10Hz. Well, you won't see it, because you have your eyes closed! But your friend who helped you put the electrodes on will see it!  
+Finally, let's try to get some brainwaves! The easiest brainwave to make 'on command' is an alpha wave. In most of our waking life, our eyes are open and the occipital lobe of our brains is busy processing all of the visual information streaming onto our retinas. It just so happens that when you close your eyes, your occipital lobe has 'nothing to do' as it were, and goes into an 'idle' state. In this state, it produces a brainwave at about 10Hz (between 8Hz and 12Hz). You can measure the alpha wave with the Ganglion when your eyes are closed. So now, close your eyes, and have your friend watch the GUI for signs of alpha. You should see a dominant waveform in the `Time Series` window, and a rising peak in the `FFT Plot` at about 10Hz. Well, you won't see it, because you have your eyes closed! But your friend who helped you put the electrodes on will see it!  
 
 ![EEG Impedance Test](../assets/images/ganglion_EEG-impedance-test.jpg)
 
-If you having any trouble seeing the signals above, one thing that might be an issue is the connetion between the gold cup electrodes and your scalp. You can test this connection by doing an Impedance Check. Click the button `Start Impedance Check` and you will see values start to come up at each electrode. The small circle on the left will change color according to the impedance, with `green` being good and `red` being not-good. Using gold cup electrodes and paste, you should be seeing impedance values in the range of `5k` to `15k`. If they are higher, you will need to adjust the connection, add more paste and re-position the electrode if necessary.
+If you having any trouble seeing the signals above, one thing that might be an issue is the connection between the gold cup electrodes and your scalp. You can test this connection by doing an Impedance Check. Click the button `Start Impedance Check` and you will see values start to come up at each electrode. The small circle on the left will change color according to the impedance, with `green` being good and `red` being not-good. Using gold cup electrodes and paste, you should be seeing impedance values in the range of `5k` to `15k`. If they are higher, you will need to adjust the connection, add more paste and re-position the electrode if necessary.
 
 
 **Happy Brain Hacking!**
@@ -253,7 +250,7 @@ Now, go to your `System Preferences/Security & Privacy` and make sure that your 
 By this time, Processing has likely downloded and extracted itself. Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
 
 	Users/<user-name>/Documents/Processing
-	
+
 This is the location that we will move the OpenBCI GUI files that we'll download next.  
 
 ![GUI repo](../assets/images/ganglion_GUI-repo.png)
@@ -263,18 +260,18 @@ The OpenBCI GUI code repository is located on github [here](https://github.com/O
 After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to:
 
 	Users/<user-name>/Documents/Processing
-	
-![libraries folder](../assets/images/ganglion_libraries-folder.png)	
-	
+
+![libraries folder](../assets/images/ganglion_libraries-folder.png)
+
 Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to move all of these folders into:
 
 	Users/<user-name>/Documents/Processing/libraries
-	
+
 folder. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
 
 ![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
-There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware. 
+There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
 We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.3.0), and click on the `Ganglion-Hub-v0.3.0-macOS.zip` link.  
 
 ![electron hub download](../assets/images/ganglion_hub-download.png)
@@ -286,7 +283,7 @@ After it downloads and unpacks itself, your Downloads folder will look like this
 Move the `Ganglion Hubb app` from your Downloads folder to:
 
 	Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data
-	
+
 That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
 If the Processing app is still running, quit out of it and start it again from scratch (Processing needs to restart to find the libraries and other stuff).  
 
@@ -309,12 +306,64 @@ Press the `play` button on the upper left of the IDE, and the sketch will try to
  Now go back to where you were before to continue this tutorial!
 
 
+##Using Zadig Tool for Windows CSR 4.0 Bluetooth Dongle
+
+This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.
+
+First plug in your CSR 4.0 BLE Dongle.   
+
+![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
+
+Go to the [Zadig tool website](http://zadig.akeo.ie)
+
+![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
+
+Then download for Windows Vista or Later
+
+![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
+
+Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
+
+![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
+
+Select _No To Updates_ when prompted.
+
+![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
+
+On the top bar select _Options_.
+
+![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
+
+Then select _List All Devices_.
+
+![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
+
+Select CSR from the dropdown.
+
+![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
+
+Then press _Replace Driver_.
+
+![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
+
+You should then see a progress bar followed by a success message.
+
+![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
+
+Note that both drop-downs both say _WinUSB_.
+
+![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
+
+Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
+
+
+
 ##TROUBLESHOOTING
 
 If the initialization and data stream fails, try the following steps:
 
 1. Make sure your computer's Bluetooth is turned `ON`
 2. Making sure you've selected the correct Ganglion, if there are multiple Ganglions in the viscinity.
-3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI. 
+3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI.
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
