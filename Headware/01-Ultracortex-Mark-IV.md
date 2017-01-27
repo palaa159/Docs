@@ -11,6 +11,7 @@ The Ultracortex is an open-source, 3D-printable headset intended to work with th
 
 Designers & Engineers:
 
+* [Aaron Lehr (aka Tangible NYC)](https://www.3dhubs.com/service/tangiblenyc)
 * [Aaron Trocola (aka Threeform)](http://threeformfashion.com/)
 * [Conor Russomanno](https://twitter.com/russomanno15)
 * [Joel Murphy (aka SafeForRobots)](https://twitter.com/safeforrobots)
