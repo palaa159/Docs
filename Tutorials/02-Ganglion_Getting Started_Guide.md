@@ -277,7 +277,9 @@ If you having any trouble seeing the signals above, one thing that might be an i
 
 
 
+
 ## RUN THE GUI ON macOS SIERRA
+
 
 When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
 
@@ -292,11 +294,6 @@ When Apple Computer updated their Operating System to Sierra (v10.12.x), they ch
 
 Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
 Now go back to where you were before to continue!
-
-
-
-
-
 
 ##TROUBLESHOOTING
 

@@ -5,9 +5,9 @@ Welcome to the **OpenBCI Headware** section. Here you will find detailed guides 
 
 ##Headset Versions
 * [Ultracortex Mark IV](http://docs.openbci.com/Headware/01-Ultracortex-Mark-IV)
-* [Ultracortex Mark III (Revised)](http://docs.openbci.com/Headware/01-Ultracortex-Mark-III-Nova-Revised)
-* [Ultracortex Mark III](http://docs.openbci.com/Headware/02-Ultracortex-Mark-III-Nova)
-* [Ultracortex Mark 3](http://docs.openbci.com/Headware/03-Ultracortex-Mark-III)
-* [Ultracortex Mark 2](http://docs.openbci.com/Headware/04-Ultracortex-Mark-II)
-* [Ultracortex Mark 1](http://docs.openbci.com/Headware/05-Ultracortex-Mark-I)
-* [Spiderclaw V1 & V2](http://docs.openbci.com/Headware/06-Spiderclaw-V1-V2)
+* [Ultracortex Mark III (Revised)](http://docs.openbci.com/Headware/02-Ultracortex-Mark-III-Nova-Revised)
+* [Ultracortex Mark III](http://docs.openbci.com/Headware/03-Ultracortex-Mark-III-Nova)
+* [Ultracortex Mark 3](http://docs.openbci.com/Headware/04-Ultracortex-Mark-III)
+* [Ultracortex Mark 2](http://docs.openbci.com/Headware/05-Ultracortex-Mark-II)
+* [Ultracortex Mark 1](http://docs.openbci.com/Headware/06-Ultracortex-Mark-I)
+* [Spiderclaw V1 & V2](http://docs.openbci.com/Headware/07-Spiderclaw-V1-V2)
