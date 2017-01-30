@@ -7,7 +7,7 @@
 1. MyoWare Board
 2. OpenBCI Board and power source
 3. OpenBCI Dongle
-4. Headers for soldering (similar to the headers we include in our boards [here](http://docs.openbci.com/tutorials/04-External_Trigger_8bit_Example)). I used male headers but you can use whichever you prefer.
+4. Headers for soldering (I used male headers but you can use whichever you prefer).
 5. Jumper Wires (depending on which headers you use). At least 3 of these cables will need to have female ends and at least 2 will need male ends, the other vary depending on which headers you use.
 6. Soldering Iron and some rosin
 

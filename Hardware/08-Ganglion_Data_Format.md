@@ -157,9 +157,8 @@ void OpenBCI_Ganglion::sendCompressedPacket18() {
       }
     }
 ```
-We use the number associated with the `compression_ring` buffer position to tell when to send the `x`, `y` and `z` axis values. When sending 18bit compressed packets, the accelerometer data can be found in `Packet ID` numbers ending it `1`, `2`, and `3`. **Notice** that the Ganglion also has the capacity to send user defined `ausData` in the place of accelerometer data.
-
-
+We use the number associated with the `compression_ring` buffer position to tell when to send the `x`, `y` and `z` axis values. When sending 18bit compressed packets, the accelerometer data can be found in `Packet ID` numbers ending it `1`, `2`, and `3`.  
+**NOTE** that the Ganglion also has the capacity to send user defined `auxData` in the place of accelerometer data.  
 **NOTE** An `n` ASCII command is used to turn on the Ganglion accelerometer. Use an `N` to turn off the accelerometer.
 
 ## Impedance Testing
@@ -168,7 +167,7 @@ The Ganglion has hardware in place that allows for testing the impedance of the 
 ## Verbose Prints
 The Ganglion will sometimes send verbose data over the BLE connection. In this case, Ganglion can send from 1 to many packets of verbose ASCII data. The `Packet ID` for ASCII messaging will inform the computer if the message is not doen and it should expect another packet `206` or `0xCE`. When Ganglion is sending the last ASCII message packet, the `Packet ID` will be `207` or `0xCF`. 
 
-##Packet ID Cheat Sheet
+## Packet ID Cheat Sheet
 
 Byte ID Decimal | Byte ID HEX | Data Type | Description
 --------|--------|--------|--------

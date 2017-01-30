@@ -19,7 +19,7 @@ The OpenBCI Cyton boards have powerful microcontrollers on them which ship with 
 
 	[https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
-**Note for Windows users** While installing Arduino 1.8, if the installer instructs you to uninstall 1.5.8, move the Arduino folder containing 1.5.8 from `Program Files (x86)` to your downloads folder. Rename this folder to `Arduino_1.5.8`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.8.0 as normal. Navigate to back to your `Program Files (x86)` folder and locate the Arduino folder. Rename this folder to `Arduino_1.8.0`. Now drag and drop the `Arduino_1.5.8` back into `Program Files (x86)` folder.  
+**Note for Windows users** While installing Arduino 1.8, if the installer instructs you to uninstall 1.5.8, move the Arduino folder containing 1.5.8 from `Program Files` to your desktop or another folder. Rename this folder to `Arduino_1.5.8`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.8.0 as normal. Navigate to back to your `Program Files` folder and locate the Arduino folder. Rename this folder to `Arduino_1.8.0`. Now drag and drop the `Arduino_1.5.8` back into `Program Files` folder.  
 
 * Download the [OpenBCI_32bit_Library Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/master) repo from our github.
 
@@ -209,10 +209,10 @@ If the upload fails with `Program Flash Failed` it's due to the Arduino IDE not 
 * Keep the Board and Dongle physically close to each other during the upload.
 * Keep the Arduino IDE open, front and center and don't use any other programs during the upload.
 * Close all open programs such as (Google Chrome, MS Word, etc...) and only have the Arduino 1.6.5 IDE open during upload.
-* Restart your computer and don't open any other programs other than the Arduino 1.6.5 IDE used for programming.
+* Restart your computer and don't open any other programs other than the Arduino IDE used for programming.
 * If all else fails, find a friend with a more powerful computer and do the uploading from their computer.
 
-In extreme conditions, if you have tried all five of the above methods and still can't upload, then you can try to increase the Device's polling time [in the RFduino Device firmware code](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/OpenBCI_32bit_Device/OpenBCI_32bit_Device.ino#L41). Increase `pollTime` incrementally (by about 5ms) until the upload succeeds. Upload the new radio code to the Device ([see tutorial](http://docs.openbci.com/tutorials/03-Upload_Code_to_OpenBCI_Dongle#uploading-device-firmware-to-openbci-boards-program-device-radio-with-openbci-dongle)). After you are satisfied with the uploaded code. You should set the Device's `pollTime` back to 60mS to remain compatible with existing drivers.   
+In extreme conditions, if you have tried all five of the above methods and still can't upload, then you can try to change the Device's polling time. The Poll Time can be adjusted using the OpenBCI Radio Config Utility software (*Tutorial coming soon!*)   
 
 
 ## Notes On Updating and Using v2.0.0 Cyton Firmware

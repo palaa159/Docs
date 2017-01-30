@@ -1,6 +1,6 @@
 # Cyton Data Format
 
-This discussion of the OpenBCI data format only applies to OpenBCI `v1` (2014-2016) and `v2.0.0` (Fall 2016). For OpenBCI Cyton, the OpenBCI board contains either a ChipKIT or ATmega microcontroller that can both be programmed through the Arduino IDE. The Cyton board has an on-board RFDuino radio module acting as a "Device". The Cyton system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the Cyton board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it! For more info on the v2 firmware, see these [Notes On Updating and Using v2.0.0 Cyton Firmware](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-notes-on-updating-and-using-v2.0.0-cyton-firmware).
+This discussion of the OpenBCI data format only applies to OpenBCI `v1` (2014-2016) and `v2.0.0` (Fall 2016). For OpenBCI Cyton, the OpenBCI board contains either a ChipKIT or ATmega microcontroller that can both be programmed through the Arduino IDE. The Cyton board has an on-board RFDuino radio module acting as a "Device". The Cyton system includes a USB dongle for the PC, which acts as the RFDuino "Host". The format of the OpenBCI data as seen on the PC is defined by a combination of the Arduino code on the Cyton board and of the RFDuino code running on the Host. So, if you don't like the data format defined here, feel free to change it! For more info on the v2 firmware, see these [Notes On Updating and Using v2.0.0 Cyton Firmware](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-notes-on-updating-and-using-v2.0.0-cyton-firmware). There is also further information on controlling the OpenBCI Cyton on our [OpenBCI Cyton SDK page](http://docs.openbci.com/OpenBCI%20Software/04-OpenBCI_Cyton_SDK).
 
 ## Proprietary ("RFDuino") vs Standard Bluetooth
 
@@ -33,7 +33,7 @@ Both the Host and Device radios take notice of the **b** and **s**, and go into 
 
 * **!streamingData**
 	* The radios appear to be a transparent UART betweeen the PC and target uC
-	* [Command characters](https://github.com/OpenBCI/Docs/blob/master/software/01-OpenBCI_SDK.md) need some delay before and after sending to pass from PC to target uC
+	* [Command characters](http://docs.openbci.com/OpenBCI%20Software/04-OpenBCI_Cyton_SDK) need some delay before and after sending to pass from PC to target uC
 * **streamingData**
 	* Device radio expects to get 31 bytes in each data packet from the uC
 	* After 1 second of no transmission, or not getting 31 bytes in time, Device and Host will revert to **!streamingData** mode
@@ -88,7 +88,7 @@ AZ1-AZ0: Data value for accelerometer channel Z
 The following table is sorted by `Stop Byte`. Drivers should use the `Stop Byte` to determine how to parse the 6 `AUX` bytes.
 
 Stop Byte | Byte 27 | Byte 28 | Byte 29 | Byte 30 | Byte 31 | Byte 32 | Name
---------- |:-------:|:-------:|:-------:|:-------:|:-------:|:------:|---
+:---------: |:-------:|:-------:|:-------:|:-------:|:-------:|:------:|---
 0xC0 | AX1 | AX0 | AY1 | AY0 | AZ1 | AZ0| Standard with accel
 0xC1 | UDF | UDF | UDF | UDF | UDF | UDF | Standard with raw aux
 0xC2 | UDF | UDF | UDF | UDF | UDF | UDF | User defined
@@ -103,8 +103,8 @@ AZ1-AZ0: Data value for accelerometer channel Z
 
 We can still fit a 25Hz accelerometer in with time stamps due to some interlacing and timing constraints. Since we stream channel data at 250Hz and accelerometer at 25Hz; we have essentially 10 samples to send the accelerometer data in. When a `0xC3` or `0xC4` you should parse _Byte 27_ to indicate what _Byte 28_ is:
 
-AC | AV
---- | ---
+Byte 27 | Byte 28
+:---:|:---:
 'X' | AX1
 'x' | AX0
 'Y' | AY1
@@ -226,4 +226,4 @@ The times of the upsampled values are delayed by 1 sample compared to the receiv
 
 Our Host code removes the Packet Counter and adds the header and footer. It could be modified to work natively with other protocol specs for other signal processing software....
 
-**Data Compression.** In situations where an increase in the sample resolution, or higher channel counts are desired, a data compression scheme can be implemented. As noted above, when sending **only** the ADS1299 values for 8 channels there are six unused bytes in the radio packet. It may be possible to, for example, increase the sample rate, and compress two samples worth of ADS data into a single radio packet. Or fit all 16 channels of data into a single packet and avoid the averaging that is currently used.
+**Data Compression.** In situations where an increase in the sample rate, or higher channel counts are desired, a data compression scheme can be implemented. As noted above, when sending **only** the ADS1299 values for 8 channels there are six unused bytes in the radio packet. It may be possible to, for example, increase the sample rate, and compress two samples worth of ADS data into a single radio packet. Or fit all 16 channels of data into a single packet and avoid the averaging that is currently used.

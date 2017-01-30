@@ -31,93 +31,9 @@ The easy part!
  	* Additionally, you will need to [follow the steps](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) in the section titled "Run The GUI In Processing On MacOS Sierra" in the Getting Started w/ Ganglion Guide. This will allow you to alter your system preferences to run apps "downloaded from anywhere"
  * If you run into additional issues, please visit the [OpenBCI_GUI Section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum
  
-## Running the OpenBCI GUI from Processing
+## Running the OpenBCI GUI From The Processing IDE
 
 The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so, if you are familiar with Java. If you are not, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
-
-### Download the Latest Version of Processing
-
-![image](../assets/images/Download-Processing.JPG)
-
-To get started working with the OpenBCI GUI in Processing, first you must [download the latest stable release of Processing](https://processing.org/download/) from their website.  
-On a MAC, after it downloads and unpacks move the Processing app to your `Applications` folder.  
-On a Windows, download it to your `Program Files` folder.
-
-### Download or Fork the OpenBCI_GUI Github Repo
-
-![GUI repo](../assets/images/ganglion_GUI-repo.png)
-
-The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button, and select `Download ZIP`. If you are a advanced github user, go ahead and clone it if you like.  
-
-After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to:
-
-**On a MAC:  Users/<user>/Documents/Processing**
-	
-**On Windows:  C:\Users\Username\Documents\Processing**
-
-![libraries folder](../assets/images/ganglion_libraries-folder.png)
-
-Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to move all of these folders into:
-
-**On a MAC:  Users/<user-name>/Documents/Processing/libraries**
-
-**On a Windows:  C:\Users\Username\Documents\Processing\libraries**
-
-folder. If there is not folder called `libraries` go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
-
-![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
-
-There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.3.0), and click on the link for yoru operating system.  
-
-![electron hub download](../assets/images/ganglion_hub-download.png)
-
-After it downloads and unpacks itself, your Downloads folder will look like this. the `Ganglion Hub app` needs to be inside your sketch folder, in a specific place.  
-
-![Hub Home](../assets/images/ganglion_hub-home.png)
-
-On a MAC, move the `Ganglion Hubb app` from your Downloads folder to:
-
-**Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data**
-
-Windwos Users you do **NOT** need to run the `GanglionHub Setup.exe`. Just move **the entire contents** of `win-unpacked` to:
-
-**C:\Users\Username\Documents\Processing\OpenBCI_GUI\data**
-
-
-That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
-
-
-### Make Sure You Have The Latest FTDI Drivers Downloaded
-
-### 1. Make sure your FTDI drivers are installed and up-to-date
-
-![FTDI Install](../assets/images/FTDI.png)
-
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
-
-![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
-
-**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from:" `Anywhere`, as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.  
-**If you are using a MAC with macOS Sierra (v10.12.x) you must follow the tutorial [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-on-macos-sierra) to unlock the `Anywhere` option.**
-
-### Open The OpenBCI GUI Project in Processing & Launch It!
-
-Now, close Processing. Re-open it, and you should be able to launch the GUI by pushing the play button without any issues.
-
-If you are encountering issues launching the GUI at this point, please head to the [OpenBCI_GUI section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum and look for help or post a question.
-
-### Using the OpenCBI GUI
-
-![FTDI Install](../assets/images/USE-GUI.JPG)
-
-Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
-
-
-
-
-
-## Run The OpenBI GUI In Processing
 
 The things you will need to run the OpenBCI GUI in Processing are:  
 
@@ -142,11 +58,85 @@ Now, go to your `System Preferences/Security & Privacy` and make sure that your 
 
 By this time, Processing has likely downloded and extracted itself. Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
 
-	Users/<user-name>/Documents/Processing
+On a Mac `Users/<user-name>/Documents/Processing`  
+On a Windows `C:\Users\Username\Documents\Processing`
 
 This is the location that we will move the OpenBCI GUI files that we'll download next.  
 
+![GUI repo](../assets/images/ganglion_GUI-repo.png)
+
+The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. If you are a advanced github user, go ahead and clone it, or fork it if you like.  
+
+After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to your Sketch folder:
+
+On a Mac `Users/<user-name>/Documents/Processing`  
+On a Windows `C:\Users\Username\Documents\Processing`
+
+![libraries folder](../assets/images/ganglion_libraries-folder.png)
+
+Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to move all of these folders into:
+
+On a Mac `Users/<user-name>/Documents/Processing/libraries`  
+On a Windows `C:\Users\Username\Documents\Processing\libraries`
+
+folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
+
+## Install Ganglion Hub on Mac
+
+![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
+
+There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the link for your Operating System.  
+
+![electron hub download](../assets/images/ganglion_hub-download.png)
+
+After it downloads and unpacks itself, your Downloads folder will look like this. the `Ganglion Hub app` needs to be inside your sketch folder, in a specific place.  
+
+![Hub Home](../assets/images/ganglion_hub-home.png)
+
+Move the `Ganglion Hubb app` from your Downloads folder to:
+
+`Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
+
+## Install Ganglion Hub on Windows
+![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
+
+There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the link for your Operating System.  
+
+![electron hub download](../assets/images/win-unpacked-folder.png)
+
+After it downloads, unzip it and your Downloads folder will look like this.  
+**Do Not run the `GanglionHub Setup 0.4.0.exe`!**  
+
+![Select All Files](../assets/images/entire-contents-win-unpacked.png)
+
+Open the file `win-unpacked` and select the entire contents of the folder.
+
+![Move To Data Folder](../assets/images/Processing-GUI-data-folder.png)
+
+**All** of those files need to be moved into the folder: `Documents\Processing\OpenBCI_GUI-master\OpenBCI_GUI\data`
+
+![Hub Home](../assets/images/win-unpacked-files-moved.png)
+
+Your `data` folder should look like this when you're done.  
+
+That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
 If the Processing app is still running, quit out of it and start it again from scratch (Processing needs to restart to find the libraries and other stuff).  
+
+### Make Sure You Have The Latest FTDI Drivers Downloaded
+
+### 1. Make sure your FTDI drivers are installed and up-to-date
+
+![FTDI Install](../assets/images/FTDI.png)
+
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
+
+![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
+
+**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from:" `Anywhere`, as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.  
+
+### Open The OpenBCI GUI Project in Processing & Launch It!
 
 ![processing startup](../assets/images/ganglion_processing-launch.png)
 
@@ -163,5 +153,14 @@ If you don't know anything about coding, don't edit these files. If you like to 
 
 ![Processing RUN](../assets/images/ganglion_processing-RUN.png)
 
-Press the `play` button on the upper left of the IDE, and the sketch will try to launch in all it's glory. If this is your first time running the sketch, you will get a message from the Mac OS that will ask you if you will allow permission for an unsigned app to run. The app in question is the Electron Hub. If you've enabled apps to run from Anywhere, you can just give permission to run the app. However, it is likely that the GUI will not function, because timing is everything. You will need to quit the sketch (press `command+q` or click the `x` button on the upper left (or right) of the GUI). Then, relaunch the sketch by pressing the `play` button as above. This time you won't get the alert from the Mac OS, and the GUI will launch in all it's glory!  
- Now go back to where you were before to continue this tutorial!
+Press the `play` button on the upper left of the IDE, and the sketch will try to launch in all it's glory. If this is your first time running the sketch, you will get a message from the Mac OS that will ask you if you will allow permission for an unsigned app to run. The app in question is the Electron Hub. If you've enabled apps to run from Anywhere, you can just give permission to run the app. However, it is likely that the GUI will not function, because timing is everything. You will need to quit the sketch (press `command+q` or click the `x` button on the upper left of the GUI). Then, relaunch the sketch by pressing the `play` button as above. This time you won't get the alert from the Mac OS, and the GUI will launch in all it's glory!  
+
+If you are encountering issues launching the GUI at this point, please head to the [OpenBCI_GUI section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum and look for help or post a question.
+
+### Using the OpenCBI GUI
+
+![FTDI Install](../assets/images/USE-GUI.JPG)
+
+Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
+
+

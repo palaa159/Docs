@@ -2,9 +2,9 @@
 
 ## Installation
 
-**Windows**: Follow [OBCI on Windows](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows. Then, continue this tutorial.
+**Windows**: Follow [OBCI on Windows](http://docs.openbci.com/Tutorials/11-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows. Then, continue this tutorial.
 
-**OS X**: Visit the [Win7 Virtual Box installation tutorial](http://docs.openbci.com/tutorials/11-Win7_VM_Installation) first, then follow these instructions.
+**OS X**: Visit the [Win7 Virtual Box installation tutorial](http://docs.openbci.com/Tutorials/12-Win7_VM_Installation) first, then follow these instructions.
 
 **NOTE**: [Linux builds](http://openvibe.inria.fr/downloads/) of OpenViBE also work. Some linux users might find this guide useful but keep in mind it is ment primarily for mac + win7.
 
@@ -14,7 +14,7 @@
 
 ### II. Connect the Board
 
-Connect your OBCI board and make sure it is recognized as a COM port and it's latency is set to 1 ms. To troubleshoot, read [this](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows).
+Connect your OBCI board and make sure it is recognized as a COM port and it's latency is set to 1 ms. To troubleshoot, read [this](http://docs.openbci.com/tutorials/11-OpenBCI_on_Windows).
 
 ### III. Connect to OpenVibe
 

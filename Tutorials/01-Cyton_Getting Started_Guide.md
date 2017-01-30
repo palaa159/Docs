@@ -48,17 +48,78 @@ Cyton boards have specific input voltage ranges. These input voltage ranges can 
 
 Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
-## II. Download/Run the OpenBCI GUI
+## II Download/Run the OpenBCI GUI on macOS
 
-Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for your operating system. Once you unzip/extract the download, open the file called "OpenBCI_GUI".
+![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
-**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.** 
+First, turn on your computer's Bluetooth.  
 
-![Synthetic](../assets/images/Synthetic.png)
+![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
 
-Once the GUI is running, select "SYNTHETIC (algorithmic)" and hit the "START SYSTEM" button to launch the GUI with a synthetic data generator. Click the dark overlay on the GUI to exit the SYSTEM CONTROL PANEL and then hit the "Start Data Stream" button to begin the stream of synthetically generated EEG data. You should then see data streaming across the "EEG Data" graph on the left side of the GUI. 
+Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
 
-![Start Data Stream](../assets/images/StartDataStream.png)
+**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#cyton-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
+
+![allow GUI to run](../assets/images/ganglion_permissions.png)
+
+When you first run the GUI on your Mac, you will have to give administrator permission. You may see a message pop up asking you if you're sure you want to open it. Click `Open` and the app will launch.
+
+![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
+
+If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button.
+
+## II Download/Run the OpenBCI GUI on Windows
+
+**This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.**
+
+![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
+
+The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our sotre, and you can get them from various onine vendors.  
+**IMPORTANT:** The BLE Dongle *must* be a veriied CSR 4.0 Dongle  
+
+First plug in your CSR 4.0 BLE Dongle.   
+
+![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
+
+Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
+
+![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
+
+Download Zadig for Windows Vista or Later
+
+![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
+
+Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
+
+![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
+
+Select *No To Updates* when prompted.
+
+![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
+
+On the top bar select *Options*.
+
+![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
+
+Then select *List All Devices*.
+
+![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
+
+Select CSR from the dropdown.
+
+![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
+
+Then press *Replace Driver*.
+
+![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
+
+You should then see a progress bar followed by a success message.
+
+![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
+
+Note that both drop-downs both say *WinUSB*.  
+Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
+Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System.
 
 ## III. Prepare your OpenBCI Hardware
 
@@ -91,7 +152,7 @@ Cyton boards have specific input voltage ranges. These input voltage ranges can 
 
 ![Power Up Board](../assets/images/PowerUpBoard.JPG)
 
-Make sure to move the small switch on the right side of the board from "OFF" to "PC". As soon as you do, you should see a blue LED blink 3 times (if you’re using the 8-bit board; the Cyton version doesn’t blink). If you don't, press the reset button just to the left of the switch. If the LED still does not blink 3 times, make sure you have full battery. If you're sure your batteries are fully charged, consult the [hardware section](http://openbci.com/index.php/forum#/categories/hardware) of our Forum.
+Make sure to move the small switch on the right side of the board from "OFF" to "PC". As soon as you do, you should see a blue LED blink 3 times (if you’re using the 8-bit board; the Cyton version doesn’t blink). If you don't, press the reset button just to the left of the switch. If the LED still does not blink 3 times, make sure you have full battery. If you're sure your batteries are fully charged, consult the [hardware section](http://openbci.com/index.php/forum/#/categories/hardware) of our Forum.
 
 **Note:** it's important to plug in your Dongle before you turn on your Cyton board. Sometimes, if the data stream seems broken, you may need to unplug your USB Dongle and power down your Cyton board. Make sure to plug your USB Dongle in first, then power up your board afterwards.
 
@@ -126,7 +187,7 @@ Your USB Dongle's port name will likely be at the top of the list. If you don't 
 2. Click the REFRESH LIST button in the SERIAL/COM PORT section of the sub-panel
 3. Make sure you've installed the latest FTDI drivers, as described in section III.1
 
-If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum#/categories/hardware) about debugging your hardware connection.
+If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum/) about debugging your hardware connection.
 
 ### 4.(optional) Edit the Playback file name
 
@@ -403,9 +464,24 @@ You'll notice that the strongest alpha wave signals should be appearing in chann
 
 ### 5. What's next?
 
-For more ideas on what to do next, check out Chip's Blog [EEG HACKER](http://eeghacker.blogspot.com/) and the other OpenBCI Docs pages.
+For more ideas on what to do next, check out the OpenBCI [Community Page] (http://openbci.com/community/) and the other OpenBCI Docs pages.
 
-Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum/). For all other inquiries, contact us at contact@openbci.com.
+Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/) or [MacDown](https://macdown.uranusjr.com/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum/). For all other inquiries, contact us at contact@openbci.com.
  
 
 
+## RUN THE GUI ON macOS SIERRA
+
+When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
+
+![sudo](../assets/images/ganglion_sudo-command.png)
+
+1. Open the Terminal app from your /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
+2. You will be prompted to enter your administrator password. Do that, and then press `return` key.
+
+>This hack was published by [osXdaily](http://osxdaily.com/2016/09/27/allow-apps-from-anywhere-macos-gatekeeper/) September, 2016.
+
+![Allow Apps](../assets/images/ganglion_SysPrefs-Allow.png)
+
+Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
+Now go back to where you were before to continue!
