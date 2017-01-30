@@ -1,41 +1,4 @@
-# The OpenBCI GUI
-
-![image](../assets/images/GUI-V2-SCREENSHOT.JPG)
-
-The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, and streaming data from the OpenBCI Boards. It can be launched as a standalone application or launched from Processing (a Java-based programming language). In this guide, we will walk you through how to go about doing it both ways.
-
-## Using the OpenBCI GUI as a "Standalone" Application
-
-### Download the Appropriate Application For Your OS
-
-The fastest way is to download the standalone .exe/.app for your machine and operating system. To do this, head to the [Downloads](http://openbci.com/donation) page of the OpenBCI website, and click the download link that correlates to your OS and machine.
-
-![image](../assets/images/Downloads.JPG)
-
-### Install the Application
-
-Next, you must save the application somewhere, the same way you would any other application or executable on your machine. 
-
-**Note:** for Mac OS Sierra, you must put the application in your /Applications folder in order for it to work properly.
-
-### Make Sure You Have The Latest FTDI Drivers Downloaded
-
-Go to the [FTDI VCP](http://www.ftdichip.com/Drivers/VCP.htm) Downloads page, and install the FTDI Driver suitable for your operating system.
-
-### Launch the Application
-
-The easy part! 
-
-**Important Notes:** 
-
- * In some cases, there may be issues with the way your machine handles the BLE application that enables communication with the Ganglion Board. For troubleshooting these issues, please 
- * If using **macOS Sierra:**
- 	* Additionally, you will need to [follow the steps](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) in the section titled "Run The GUI In Processing On MacOS Sierra" in the Getting Started w/ Ganglion Guide. This will allow you to alter your system preferences to run apps "downloaded from anywhere"
- * If you run into additional issues, please visit the [OpenBCI_GUI Section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum
- 
-## Running the OpenBCI GUI From The Processing IDE
-
-The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so, if you are familiar with Java. If you are not, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
+## Run The OpenBI GUI In Processing
 
 The things you will need to run the OpenBCI GUI in Processing are:  
 
@@ -126,19 +89,7 @@ Your `data` folder should look like this when you're done.
 That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
 If the Processing app is still running, quit out of it and start it again from scratch (Processing needs to restart to find the libraries and other stuff).  
 
-### Make Sure You Have The Latest FTDI Drivers Downloaded
-
-### 1. Make sure your FTDI drivers are installed and up-to-date
-
-![FTDI Install](../assets/images/FTDI.png)
-
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
-
-![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
-
-**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from:" `Anywhere`, as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.  
-
-### Open The OpenBCI GUI Project in Processing & Launch It!
+## Run the OpenBCI GUI 
 
 ![processing startup](../assets/images/ganglion_processing-launch.png)
 
@@ -156,13 +107,3 @@ If you don't know anything about coding, don't edit these files. If you like to 
 ![Processing RUN](../assets/images/ganglion_processing-RUN.png)
 
 Press the `play` button on the upper left of the IDE, and the sketch will try to launch in all it's glory. If this is your first time running the sketch, you will get a message from the Mac OS that will ask you if you will allow permission for an unsigned app to run. The app in question is the Electron Hub. If you've enabled apps to run from Anywhere, you can just give permission to run the app. However, it is likely that the GUI will not function, because timing is everything. You will need to quit the sketch (press `command+q` or click the `x` button on the upper left of the GUI). Then, relaunch the sketch by pressing the `play` button as above. This time you won't get the alert from the Mac OS, and the GUI will launch in all it's glory!  
-
-If you are encountering issues launching the GUI at this point, please head to the [OpenBCI_GUI section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum and look for help or post a question.
-
-### Using the OpenCBI GUI
-
-![FTDI Install](../assets/images/USE-GUI.JPG)
-
-Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
-
-

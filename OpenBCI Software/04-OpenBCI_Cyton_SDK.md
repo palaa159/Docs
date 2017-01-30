@@ -3,7 +3,7 @@ The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command 
 
 ## Cyton Command Protocol Overview
 
-Cyton boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (PIC32MX250F128B or ATmega328P) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). (See the [Radios](needsLink) portion for more info on the RFduino link).
+Cyton boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (PIC32MX250F128B or ATmega328P) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). 
 
 On startup, the OpenBCI 8bit board (`v0`) sends the following text over the radio:
 
@@ -210,11 +210,11 @@ Use 16 channels.
 
 **<**  
 
-Start time stamping and resynchronize command. When the Driver sends a **<**, the Host radio will respond with a **,**. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`. If the board is streaming, then you will get a response in the data stream when the Driver receives a data packet with a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format#openbci-v3-data-format-binary-format).
+Start time stamping and resynchronize command. When the Driver sends a **<**, the Host radio will respond with a **,**. Since the Host cannot send packets to the Device ad hoc, it may be helpful to know when the Host was actually able to send the command. If the Board is not streaming, then expect a response of `Time stamp ON$$$`. If the board is streaming, then you will get a response in the data stream when the Driver receives a data packet with a different **stop byte** as described in the document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format).
 
 **>**
 
-Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the next software document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/software/02-OpenBCI_Streaming_Data_Format#openbci-v3-data-format-binary-format).
+Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format).
 
 
 ## Radio Configuration Commands

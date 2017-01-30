@@ -47,8 +47,6 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 ## Download/Run the OpenBCI GUI on macOS
 
-This setup is for Mac users. If you use Windows you will need a CSR 4.0 USB <> BLE Donlge. Go to the end of this tutorial and follow the instructions for installing it, then come back here.
-
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
 First, turn on your computer's Bluetooth.  
@@ -57,7 +55,7 @@ First, turn on your computer's Bluetooth.
 
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
 
-**NOTE: If you are using a Mac with macOS Sierra, you can currently ONLY run the OpenBCI GUI from Processing. Please go [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) and follow the easy instructions to get up and running with Processing, then come back to this tutorial.**
+**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
@@ -67,7 +65,62 @@ When you first run the GUI on your Mac, you will have to give administrator perm
 
 If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button.
 
-![Synthetic](../assets/images/ganglion_select_LIVE-from-ganglion.png)
+## Download/Run the OpenBCI GUI on Windows
+
+**This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.**
+
+![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
+
+The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our [store](http://shop.openbci.com/products/csr-4-0-bluetooth-dongle), and you can get them from various onine vendors.  
+**IMPORTANT:** The BLE Dongle *must* be a veriied CSR 4.0 Dongle!  
+
+First plug in your CSR 4.0 BLE Dongle.   
+
+![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
+
+Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
+
+![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
+
+Download Zadig for Windows Vista or Later
+
+![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
+
+Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
+
+![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
+
+Select *No To Updates* when prompted.
+
+![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
+
+On the top bar select *Options*.
+
+![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
+
+Then select *List All Devices*.
+
+![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
+
+Select CSR from the dropdown.
+
+![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
+
+Then press *Replace Driver*.
+
+![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
+
+You should then see a progress bar followed by a success message.
+
+![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
+
+Note that both drop-downs both say *WinUSB*.  
+Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
+Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System.
+
+## Start Using The OpenBCI GUI
+
+![Live From Ganglion](../assets/images/ganglion_select_LIVE-from-ganglion.png)
 
 Once the GUI is running, select `LIVE (from Ganglion)`. That button will turn green, and you will see a pane open titled `BLE DEVICES`, and a list of Ganglions in the neighborhood. Each Ganglion has it's own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Gagnlion again. Make a note of *your* Ganglion's 4 character ID.  
 
@@ -224,139 +277,23 @@ If you having any trouble seeing the signals above, one thing that might be an i
 
 
 
-## Run The GUI In Processing On macOS Sierra
 
-The things you will need to run the OpenBCI GUI in Processing are:  
+## RUN THE GUI ON macOS SIERRA
 
- * [Processing App](https://processing.org/download/?processing)
- * [OpenBCI GUI Sketch](https://github.com/OpenBCI/OpenBCI_GUI)
- * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0)
 
-First, go to processing.org and download the latest version of Processing. While that's downloading, move on to the next step, which will allow you to run the OpenBCI GUI on Sierra.
-
-When Apple Computer updated their Operating System to Sierra, they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
+When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
 
 ![sudo](../assets/images/ganglion_sudo-command.png)
 
-1. Open the Terminal app from the /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
+1. Open the Terminal app from your /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
 2. You will be prompted to enter your administrator password. Do that, and then press `return` key.
 
 >This hack was published by [osXdaily](http://osxdaily.com/2016/09/27/allow-apps-from-anywhere-macos-gatekeeper/) September, 2016.
 
 ![Allow Apps](../assets/images/ganglion_SysPrefs-Allow.png)
 
-Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.  
-
-By this time, Processing has likely downloded and extracted itself. Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
-
-	Users/<user-name>/Documents/Processing
-
-This is the location that we will move the OpenBCI GUI files that we'll download next.  
-
-![GUI repo](../assets/images/ganglion_GUI-repo.png)
-
-The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. If you are a advanced github user, go ahead and clone it if you like  
-
-After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to:
-
-	Users/<user-name>/Documents/Processing
-
-![libraries folder](../assets/images/ganglion_libraries-folder.png)
-
-Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to move all of these folders into:
-
-	Users/<user-name>/Documents/Processing/libraries
-
-folder. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
-
-![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
-
-There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the `Ganglion-Hub-v0.4.0-macOS.zip` link.  
-
-![electron hub download](../assets/images/ganglion_hub-download.png)
-
-After it downloads and unpacks itself, your Downloads folder will look like this. the `Ganglion Hub app` needs to be inside your sketch folder, in a specific place.  
-
-![Hub Home](../assets/images/ganglion_hub-home.png)
-
-Move the `Ganglion Hubb app` from your Downloads folder to:
-
-	Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data
-
-That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
-If the Processing app is still running, quit out of it and start it again from scratch (Processing needs to restart to find the libraries and other stuff).  
-
-![processing startup](../assets/images/ganglion_processing-launch.png)
-
-When you get Processing running again, you will see a window open up. This is the Processing IDE (Integrated Development Environment).
-
-![Select Sketchbook](../assets/images/ganglion_file-sketchbook.png)
-![Select OpenBCI GUI from Sketchbook](../assets/images/ganglion_sketchbook-window.png)
-
-Select `File > Sketchbook` and you will open a window where you should see the option to select `OpenBCI GUI`. When you get that far, select `OpenBCI GUI` and the Processing will open up yet another window, that contains all the code to successfully run the OpenBCI GUI.  
-
-![GUI code window](../assets/images/ganglion_GUI-code-window.png)
-
-If you don't know anything about coding, don't edit these files. If you like to dig in to the meat of what makes things work, by all means. have at it. You are looking at the program code that makes the OpenBCI GUI work it's magic. Now, it's time to run it!
-
-![Processing RUN](../assets/images/ganglion_processing-RUN.png)
-
-Press the `play` button on the upper left of the IDE, and the sketch will try to launch in all it's glory. If this is your first time running the sketch, you will get a message from the Mac OS that will ask you if you will allow permission for an unsigned app to run. The app in question is the Electron Hub. If you've enabled apps to run from Anywhere, you can just give permission to run the app. However, it is likely that the GUI will not function, because timing is everything. You will need to quit the sketch (press `command+q` or click the `x` button on the upper left of the GUI). Then, relaunch the sketch by pressing the `play` button as above. This time you won't get the alert from the Mac OS, and the GUI will launch in all it's glory!  
- Now go back to where you were before to continue this tutorial!
-
-
-##Using Zadig Tool for Windows CSR 4.0 Bluetooth Dongle
-
-This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.
-
-First plug in your CSR 4.0 BLE Dongle.   
-
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
-
-Go to the [Zadig tool website](http://zadig.akeo.ie)
-
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
-
-Then download for Windows Vista or Later
-
-![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
-
-Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
-
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
-
-Select _No To Updates_ when prompted.
-
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
-
-On the top bar select _Options_.
-
-![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
-
-Then select _List All Devices_.
-
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
-
-Select CSR from the dropdown.
-
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
-
-Then press _Replace Driver_.
-
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
-
-You should then see a progress bar followed by a success message.
-
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
-
-Note that both drop-downs both say _WinUSB_.
-
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
-
-Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
-
-
+Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
+Now go back to where you were before to continue!
 
 ##TROUBLESHOOTING
 
@@ -366,4 +303,4 @@ If the initialization and data stream fails, try the following steps:
 2. Making sure you've selected the correct Ganglion, if there are multiple Ganglions in the viscinity.
 3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI.
 4. Make sure that your batteries are fully charged and then retry the steps above.
-5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
+5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum/) for extra troubleshooting advice.

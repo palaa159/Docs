@@ -8,7 +8,7 @@ This tutorial will show you how to set up LSL using the OpenBCI Python API and t
 ###Using Python
 1) **Set up OpenBCI Python**
 
-First, download and set up the OpenBCI Python API, which can bound found at the [OpenBCI Python repo ](https://github.com/OpenBCI/OpenBCI_Python) on Github. A full guide regarding setting up and using the API can found on our [OpenBCI_Python Tutorial](http://docs.openbci.com/software/05-OpenBCI_Python).
+First, download and set up the OpenBCI Python API, which can bound found at the [OpenBCI Python repo ](https://github.com/OpenBCI/OpenBCI_Python) on Github. A full guide regarding setting up and using the API can found on our [OpenBCI_Python Tutorial](http://docs.openbci.com/OpenBCI%20Software/05-OpenBCI_Python).
 
 The OpenBCI Python API repo already has an LSL plugin created to support streaming with OpenBCI. However, to use this plugin, you must first set up the other components of LSL on your computer.
 
@@ -29,7 +29,7 @@ Now that you have both the OpenBCI Python API and LSL set up on your system, you
 1. Start the OpenBCI Python program via the command line by typing
 
 		>python user.py -p=port --add streamer_lsl
-Replace "port" with the serial port that the OpenBCI dongle is connected to (e.g. COM1). You can find out the name of your port by starting the OpenBCI GUI and seeing what ports appear when you select "LIVE" as the data source. For more information on doing this, see our [Getting Started Guide][(http://docs.openbci.com/tutorials/01-GettingStarted)]
+Replace "port" with the serial port that the OpenBCI dongle is connected to (e.g. COM1). You can find out the name of your port by starting the OpenBCI GUI and seeing what ports appear when you select "LIVE" as the data source. For more information on doing this, see our [Getting Started Guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide)
 
 2. A message should appear on the console displaying the board being instantiated, available plugins, and the activation of the plugin streamer_lsl. It should show that you have two streams ready to be activated - EEG (8 channels) and AUX (3 channels).
 
@@ -44,7 +44,7 @@ If your setup was successful, you won't see any additional information output on
 ##Next Steps
 Once you have the Lab Streaming Layer set up with your OpenBCI board, check out these other tutorials to view the stream in a variety of different programs:
 
-[Matlab tutorial](http://docs.openbci.com/research%20tools/Matlab)
+[Matlab tutorial](http://docs.openbci.com/3rd%20Party%20Software/01-Matlab)
 
 ##Credit
 Thanks to Winslow Strong for posting the original tutorial on the OpenBCI forums!

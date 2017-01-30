@@ -5,7 +5,7 @@
 ![image](../assets/UCM3_Nova_Revised-image_assets/m3_upgrade_1000.jpg) 
 
 
-####Complete Ultracortex Mark 3 kits are [available for sale](http://openbci.myshopify.com/collections/frontpage/products/ultracortex-mark-3-eeg-headset-kit-assembly-required) in the OpenBCI Online Store!
+####Complete Ultracortex Mark 3 kits are [available for sale](http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iii-upgrade) in the OpenBCI Online Store!
 
 The Ultracortex is an open-source, 3D-printable headset intended to work with the [OpenBCI system](http://openbci.com/). It is capable of recording research-grade brain activity (EEG), muscle activity (EMG), and heart activity (ECG). The Ultracortex is under constant iteration. If you print/assemble your own Ultracortex, we would love to hear your feedback. Send us an email at [contact@openbci.com](mailto:contact@openbci.com) or Tweet at us ([@Ultracortex](https://twitter.com/Ultracortex) & [@OpenBCI](https://twitter.com/OpenBCI))!
 
@@ -471,7 +471,7 @@ Now that you have your Ultracortex assembled and comfortably adjusted to your he
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/WEARING_IT2.jpg)
 
-Check out the [Getting Started w/ OpenBCI tutorial](http://docs.openbci.com/tutorials/01-GettingStarted) to get up-and-running with the [OpenBCI Processing GUI](https://github.com/OpenBCI/OpenBCI_Processing).
+Check out the [Getting Started w/ OpenBCI tutorial](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to get up-and-running with the [OpenBCI Processing GUI](https://github.com/OpenBCI/OpenBCI_Processing).
 
 Below is a screenshot of what the GUI looks like when you've got your OpenBCI + Ultracortex (w/ 8 channels) hooked up! You can see a nice alpha (~11 hz) spike on the FFT Plot. 
 
