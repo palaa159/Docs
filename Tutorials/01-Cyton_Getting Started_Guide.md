@@ -50,15 +50,12 @@ Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of y
 
 ## II Download/Run the OpenBCI GUI on macOS
 
-![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
-
-First, turn on your computer's Bluetooth.  
 
 ![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
 
-Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
+Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through Processing. A tutorial for how to do that is located [here](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)  
 
-**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#cyton-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
+**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
@@ -70,56 +67,7 @@ If you have any other trouble with your permissions, or if you don't see the opt
 
 ## II Download/Run the OpenBCI GUI on Windows
 
-**This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.**
-
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
-
-The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our sotre, and you can get them from various onine vendors.  
-**IMPORTANT:** The BLE Dongle *must* be a veriied CSR 4.0 Dongle  
-
-First plug in your CSR 4.0 BLE Dongle.   
-
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
-
-Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
-
-![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
-
-Download Zadig for Windows Vista or Later
-
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
-
-Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
-
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
-
-Select *No To Updates* when prompted.
-
-![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
-
-On the top bar select *Options*.
-
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
-
-Then select *List All Devices*.
-
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
-
-Select CSR from the dropdown.
-
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
-
-Then press *Replace Driver*.
-
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
-
-You should then see a progress bar followed by a success message.
-
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
-
-Note that both drop-downs both say *WinUSB*.  
-Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
-Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System.
+Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System. Then move the downloaded folder into your `Program Files` folder. Now you can run the OpenBCI GUI!
 
 ## III. Prepare your OpenBCI Hardware
 
