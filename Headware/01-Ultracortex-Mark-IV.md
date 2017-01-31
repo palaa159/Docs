@@ -34,7 +34,8 @@ Designers & Engineers:
 	* [WIRE CLIPS](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl)
 
 ###Non-printed Parts:
- 	
+
+* (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 * Cables (**x3**)
 	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/Cables.JPG) 
 * Spikey units
@@ -92,7 +93,7 @@ Designers & Engineers:
 
 ####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
-* (**2x**) [#4 Screw](http://www.mcmaster.com/)
+* (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 
 ![image](../assets//MarkIV/Photos/Screw.JPG)
 
