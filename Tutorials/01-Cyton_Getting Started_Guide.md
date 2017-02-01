@@ -113,13 +113,13 @@ You may need to relaunch the OpenBCI GUI after installing the FTDI drivers.
 
 ### 2. Select LIVE (from OpenBCI)
 
-![Select Live](../assets/images/selectLIVE.png)
+![Select Live](../assets/images/cyton_live-from-cyton.png)
 
 In order to connect to your Cyton, you must specify the data source to be "LIVE (from Cyton)" in the first section of the SYSTEM CONTROL PANEL. Before hitting the START SYSTEM button, you need to configure your Cyton board (follow the steps below).
 
 ### 3. Find your USB Dongle's Serial/COM port 
 
-![Select Serial](../assets/images/selectSerial.png)
+![Select Serial](../assets/images/cyton_select-serial-port.png)
 
 In the first section of the LIVE (from Cyton) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, it's name will be in the following format:
 
@@ -137,7 +137,40 @@ Your USB Dongle's port name will likely be at the top of the list. If you don't 
 
 If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum/) about debugging your hardware connection.
 
-### 4.(optional) Edit the Playback file name
+### 4. Check Status or Change Radio Channel
+
+![Open Config Tab](../assets/images/cyton_open-radio-config-tab.png)
+
+There is a Radio Configuration tab that you can use to check the status of your Cyton system and change the radio channel. Click on the `>` arrow to open up the options panel. Here you will find tools for configuring your Cyton Radio connection. Let's walk through the functions of each button.
+
+![Status](../assets/images/cyton_radio-status.png)   
+
+Click on the `STATUS` button to check the status of your Cyton system. This may take a few seconds to report, as it reaches out to your Dongle and Cyton board to verify that they are talking to eachother. If they are, you will see the message `Success: System is Up`. If not, you will see `Falure: System is Down`.
+
+![Get Channel](../assets/images/cyton_radio-get-channel.png)
+
+Click the `GET CHANNEL` button to know the channel that your Cyton system is communicating on. If the system is up, you will get the message `Success: Host and Device on Channel number: X`. If the system is down, you will get the message `Failure: Host on Channel number: X`.  
+**NOTE** the Host radio is on the Dongle, and the Device radio is on the Cyton board.
+
+![Change Channel](../assets/images/cyton_change-channel.png)
+
+Click on the `CHANGE CHANNEL` button to change the channel that your Cyton system is communicating on. This can be really useful if you have multiple Cyton systems in the same space. When you click the button, a menu will open up with the channels. When you click on the channel you want, it will take just a second, and you should get the message `Success: Host and Device on Channel number: X`.  
+**IMPORTANT** Make sure that there are not other Cytons active in the neighborhood when you change the channel!
+
+![Override Dongle](../assets/images/cyton_override-dongle.png) 
+
+Click on the `OVERRIDE DONGLE` button to change the channel of the OpenBCI Dongle only. When you click the button, a menu will open up with the channels. For the purpose of this Tutorial, go ahead and change the Dongle channel to Channel `15`. When you click on the channel number, it will take just a second, and you should get the message `Success: Host override - Channel number: 15`
+
+![Status Failure](../assets/images/cyton_status-failure.png)
+![Get Channel Failure](../assets/images/cyton_get-channel-failure.png)
+
+Since you have just changed the channel of the Dongle only, When you click on the `STATUS` button, you will get a failure message. Similarly, when you press the `GET CHANNEL` button you will also get a failure message. But don't worry! We can use the Autoscan function to get your Cyton Board and Dongle back on the same track!
+
+![Autoscan](../assets/images/cyton_autoscan-success.png)
+
+Now, click the `AUTOSCAN` button. It may take a few seconds for the Dongle to scan through every channel until it connects to your Cyton, but it will, and you will get the message `Success: System is Up` Autoscan!
+
+### 5.(optional) Edit the Playback file name
 
 ![File Name](../assets/images/fileName.png)
 
@@ -155,13 +188,13 @@ If working from a Mac, you'll need to right-click on the OpenBCI_GUI application
 
 After creating a Playback file, it can be replayed by running the OpenBCI GUI with the Plaback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
-### 5 Select your channel count (8 or 16)
+### 6. Select your channel count (8 or 16)
 
 ![Channel Count](../assets/images/channelCount.png)
 
 The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and Cyton board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
 
-### 6. Select your SD setting
+### 7. Select your SD setting
 
 ![WRITE TO SD](../assets/images/writeToSD.png)
 
@@ -169,7 +202,7 @@ If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE
 
 **Note:** be sure to select a file size that is larger than your planned recording time. The Cyton writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
 
-### 7. Press "START SYSTEM"
+### 8. Press "START SYSTEM"
 
 ![START SYSTEM](../assets/images/startSystem.png)
 
@@ -189,7 +222,7 @@ If the initialization fails, try the following steps in order:
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your Cyton board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
 
-### 8. Your OpenBCI is now live!
+### 9. Your OpenBCI is now live!
 
 ![Start Stream](../assets/images/startStream.png)
 
