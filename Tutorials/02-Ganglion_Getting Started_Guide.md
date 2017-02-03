@@ -67,7 +67,7 @@ If you have any other trouble with your permissions, or if you don't see the opt
 
 ## Download/Run the OpenBCI GUI on Windows
 
-**This part is for Windows 8 & Windows 10 users. Windows 7 does not seem to work with Bluetooth Low Energy.**
+**We are in the process of updating this guide to include Windows 7 users. it *is* possible to use the Ganglion and CSR 4.0 BLE Dongle on Windows 7. For now, please visit this [forum post](http://openbci.com/forum/index.php?p=/discussion/918/ganglion-and-windows-7), which outlines the proceedure.**
 
 ![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
 
