@@ -22,6 +22,10 @@ Next, you must save the application somewhere, the same way you would any other 
 
 Go to the [FTDI VCP](http://www.ftdichip.com/Drivers/VCP.htm) Downloads page, and install the FTDI Driver suitable for your operating system.
 
+### Connect the USB Dongle only if you use Windows or Linux
+
+The signal will not work if the Dongle is connected on a Mac.
+
 ### Launch the Application
 
 The easy part! 
