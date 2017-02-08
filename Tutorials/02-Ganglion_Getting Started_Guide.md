@@ -51,6 +51,8 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 First, turn on your computer's Bluetooth.  
 
+Do not use a dongle with macOS. Dongles such as the `CSR` dongle are only needed for Windows and sometimes linux!
+
 ![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
 
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
