@@ -35,6 +35,8 @@ Designers & Engineers:
 
 ###Non-printed Parts:
 
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). ** 
+
 * (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 * Cables (**x3**)
 	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/Cables.JPG) 
@@ -90,6 +92,7 @@ Designers & Engineers:
 
 ###Non-printed Parts:
 
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). ** 
 
 ####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
@@ -317,9 +320,21 @@ Take out your rest of your Ribben Cables and separatethe GRAY and PURPLE 8" & 4"
 Then plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables2.JPG)
 
-Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DASY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
+Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DAISY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished2.JPG)
+
+Run wires back to our OPENBCI Board and secure with wire clips. As mentioned above, if you're using the default OpenBCI electrode configuration, cut the wires so that they terminate at the following nodes:
+
+* Channel 9 (N1P on Daisy) - F7
+* Channel 10 (N2P on Daisy) - F8
+* Channel 11 (N3P on Daisy) - F3
+* Channel 12 (N4P on Daisy) - F4
+* Channel 13 (N5P on Daisy) - T3
+* Channel 14 (N6P on Daisy) - T4
+* Channel 15 (N7P on Daisy) - P3
+* Channel 16 (N8P on Daisy) - P4
+
 
 ### Adjust the Ultracortex for your head
 
