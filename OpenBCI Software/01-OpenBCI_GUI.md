@@ -41,7 +41,7 @@ The things you will need to run the OpenBCI GUI in Processing are:
 
  * [Processing App](https://processing.org/download/?processing)
  * [OpenBCI GUI Sketch](https://github.com/OpenBCI/OpenBCI_GUI)
- * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.3.0)
+ * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases)
 
 First, go to processing.org and download the latest version of Processing. While that's downloading, move on to the next step, which will allow you to run the OpenBCI GUI on Sierra.
 
