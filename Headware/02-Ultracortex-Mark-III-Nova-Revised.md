@@ -103,7 +103,7 @@ Designers & Engineers:
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/SPRING.jpg)
 
-* Suggested Spring 2 (**x5**) — aka "Strong Spring" — [Century Spring Corp. Stock #: S-713](http://cad.centuryspring.com/db/service?domain=century&command=showProduct&category=compression&product=S-713) — this spring has a much stronger "Rate" (14 lb/in). This makes is ideal to act as a standoff at locations where you do not have a spikey electrode. This process is described in more detail below (in the "Assembly Instructions" section).
+* Suggested Spring 2 (**x5**) — aka "Strong Spring" — [Century Spring Corp. Stock #: S-845](http://www.centuryspring.com/compression-spring-s-845.html) — this spring has a much stronger "Rate" (14 lb/in). This makes is ideal to act as a standoff at locations where you do not have a spikey electrode. This process is described in more detail below (in the "Assembly Instructions" section).
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/spring2.jpg)
 
