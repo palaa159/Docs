@@ -36,7 +36,7 @@ Designers & Engineers:
 
 ###Non-printed Parts:
 
-**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). ** 
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
 
 * (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 * Cables (**x3**)
@@ -94,7 +94,7 @@ Designers & Engineers:
 
 ###Non-printed Parts:
 
-**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). ** 
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
 
 ####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
