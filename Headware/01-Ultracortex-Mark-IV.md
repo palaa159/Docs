@@ -22,7 +22,7 @@ Designers & Engineers:
 
 ###3D-printed Parts:
 
-* [FRAME](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+* [FRAME](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory) (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl))
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Back.stl))
 	* You can also print the frame in quarters or print the full frame. The .stl files are found [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Mark_IV_Frame).
@@ -60,7 +60,7 @@ Designers & Engineers:
 
 ####(1x) FRAME
 
-* FRAME (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+* FRAME (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl) )
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Back.stl))
 	* You can also print the frame in quarters or print the full frame. The .stl files are found [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Mark_IV_Frame).
