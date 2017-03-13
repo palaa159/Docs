@@ -1,4 +1,4 @@
-## OpenBCI 8bit Board (no longer in production)
+# OpenBCI 8bit Board (no longer in production)
 
 ###8bit Board Specs:
 
