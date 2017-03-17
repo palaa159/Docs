@@ -22,9 +22,10 @@ Designers & Engineers:
 
 ###3D-printed Parts:
 
-* [FRAME](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory) (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+* [FRAME](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory) (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl))
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Back.stl))
+	* You can also print the frame in quarters or print the full frame. The .stl files are found [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Mark_IV_Frame).
 * MECH_PARTS
 	* INSERT (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_105dot5_percent.STL) / [loose](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_106_percent.STL)) (Choose one configuration and modify accordingly)
 * [BOARD_MOUNT](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4%20Board_Mount.stl) (**x1**) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4%20Board_Mount.stl)
@@ -34,7 +35,10 @@ Designers & Engineers:
 	* [WIRE CLIPS](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl)
 
 ###Non-printed Parts:
- 	
+
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
+
+* (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 * Cables (**x3**)
 	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/Cables.JPG) 
 * Spikey units
@@ -56,9 +60,10 @@ Designers & Engineers:
 
 ####(1x) FRAME
 
-* FRAME (head circumference: small = 50-55cm, medium = 55-60cm, large = 60-65cm)
+* FRAME (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl) )
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Back.stl))
+	* You can also print the frame in quarters or print the full frame. The .stl files are found [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Mark_IV_Frame).
 
 ![image](../assets/MarkIV/Photos/Frame.JPG)
 
@@ -89,10 +94,11 @@ Designers & Engineers:
 
 ###Non-printed Parts:
 
+**Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
 
 ####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
-* (**2x**) [#4 Screw](http://www.mcmaster.com/)
+* (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 
 ![image](../assets//MarkIV/Photos/Screw.JPG)
 
@@ -316,9 +322,21 @@ Take out your rest of your Ribben Cables and separatethe GRAY and PURPLE 8" & 4"
 Then plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables2.JPG)
 
-Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DASY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
+Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DAISY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished2.JPG)
+
+Run wires back to our OPENBCI Board and secure with wire clips. As mentioned above, if you're using the default OpenBCI electrode configuration, cut the wires so that they terminate at the following nodes:
+
+* Channel 9 (N1P on Daisy) - F7
+* Channel 10 (N2P on Daisy) - F8
+* Channel 11 (N3P on Daisy) - F3
+* Channel 12 (N4P on Daisy) - F4
+* Channel 13 (N5P on Daisy) - T3
+* Channel 14 (N6P on Daisy) - T4
+* Channel 15 (N7P on Daisy) - P3
+* Channel 16 (N8P on Daisy) - P4
+
 
 ### Adjust the Ultracortex for your head
 

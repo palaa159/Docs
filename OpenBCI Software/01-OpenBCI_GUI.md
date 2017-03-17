@@ -106,20 +106,20 @@ Move the `Ganglion Hubb app` from your Downloads folder to:
 There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
 We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the link for your Operating System.  
 
-![electron hub download](../assets/images/win-unpacked-folder.png)
+![electron hub download](../assets/images/win-unpacked-folder.PNG)
 
 After it downloads, unzip it and your Downloads folder will look like this.  
 **Do Not run the `GanglionHub Setup 0.4.0.exe`!**  
 
-![Select All Files](../assets/images/entire-contents-win-unpacked.png)
+![Select All Files](../assets/images/entire-contents-win-unpacked.PNG)
 
 Open the file `win-unpacked` and select the entire contents of the folder.
 
-![Move To Data Folder](../assets/images/Processing-GUI-data-folder.png)
+![Move To Data Folder](../assets/images/Processing-GUI-data-folder.PNG)
 
 **All** of those files need to be moved into the folder: `Documents\Processing\OpenBCI_GUI-master\OpenBCI_GUI\data`
 
-![Hub Home](../assets/images/win-unpacked-files-moved.png)
+![Hub Home](../assets/images/win-unpacked-files-moved.PNG)
 
 Your `data` folder should look like this when you're done.  
 

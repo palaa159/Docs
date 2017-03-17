@@ -1,6 +1,9 @@
 # Ganglion Getting Started Guide
 ###Overview
-This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun!  
+
+This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun! 
+
+**Note that the Ganglion is not set to be discoberable out of the box, you need the GUI or another app. 
 
 ## What You Need
 
@@ -50,6 +53,8 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
 First, turn on your computer's Bluetooth.  
+
+Do not use a dongle with macOS. Dongles such as the `CSR` dongle are only needed for Windows and sometimes linux!
 
 ![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
 

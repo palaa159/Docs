@@ -44,7 +44,7 @@ In order to run this .exe, do the following:
 
   1. Navigate to the /hardware/arduino/RFduino folder
   2. Rename RFDLoader to RFDLoader.old (just in case)
-  3. Download [RFDLoader](../assets/RFDLoader)
+  3. Download [RFDLoader](https://github.com/OpenBCI/OpenBCI_RFduino/raw/master/RFduino/RFDLoader.exe)
   4. Drag RFDLoader to the RFduino folder
 
 That's it! As long as `wine` is installed normally the script should take care of any issues you may have when uploading.
