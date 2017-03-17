@@ -1,6 +1,6 @@
 # Ganglion Getting Started Guide
 ###Overview
-This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun!
+This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun!  
 
 ## What You Need
 
