@@ -28,7 +28,8 @@ Then, follow the instructions in the [Simblee Quick Start Guide](https://www.sim
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
-In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`, and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
+In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
+and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
 **NOTE** To access the application contents, right click on the application [or `control` + left click] and select `Show Package Contents`.
 
 | define  | DEFAULT  | Change To |
@@ -44,7 +45,9 @@ Make sure to **save** and close the file.
 
 ![Rename platform file](../assets/images/ganglion_platform-rename.png)
 
-In order to create a zip file with the appropriate components to do OTA, we need to further modify the Simblee board files in your `Arduino/Contents/Java/portable` folder. Navigate to the folder `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0` Then change the name of the file `platform.txt` to `platform_NORMAL.txt`. We're doing this in case you ever want to revert to the original.  
+In order to create a zip file with the appropriate components to do OTA, we need to further modify the Simblee board files in your `Arduino/Contents/Java/portable` folder. Navigate to the folder   `/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0`  
+Then change the name of the file `platform.txt` to `platform_NORMAL.txt`.  
+We're doing this in case you ever want to revert to the original.  
 
 ![Modified 1.1.0 Folder](../assets/images/ganglion_add-ota-tools.png)
 
@@ -60,7 +63,9 @@ Move the files called `mkdfuzip`, `nrfutil_macosx`, and `platform.txt` into your
 
 Go to our gihub repo and either clone or download the [OpenBCI_Ganglion_Library](https://github.com/OpenBCI/OpenBCI_Ganglion_Library). Move the folder called `OpenBCI_Ganglion_Library` into your `Documents/Arduino/libraries` folder. If you don't have a `libraries` folder there, go ahead and make one.  
 
-Launch, or relaunch the Arduino IDE, and open the `File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion` sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.
+Launch, or relaunch the Arduino IDE, and open the  
+`File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion`  
+sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.
 
 ### Compile Ganglion Firmware and Create OTA File
 
@@ -199,7 +204,8 @@ Then, follow the instructions in the [Simblee Quick Start Guide](https://www.sim
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
-In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`, and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
+In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
+and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
 **NOTE** To access the application contents, right click on the application [or `control` + left click] and select `Show Package Contents`.
 
 | define  | DEFAULT  | Change To |
@@ -216,7 +222,9 @@ Make sure to **save** and close the file.
 
 Go to our gihub repo and either clone or download the [OpenBCI_Ganglion_Library](https://github.com/OpenBCI/OpenBCI_Ganglion_Library). Move the folder called `OpenBCI_Ganglion_Library` into your `Documents/Arduino/libraries` folder. If you don't have a `libraries` folder there, go ahead and make one.  
 
-Launch, or relaunch the Arduino IDE, and open the `File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion` sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.  
+Launch, or relaunch the Arduino IDE, and open the  
+`File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion`  
+sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.  
 
 With your wires all connected correctly, you should be able to click the `Upload` button and successfully re-program the Ganglion. Now you're ready to do OTA Programming!
 
