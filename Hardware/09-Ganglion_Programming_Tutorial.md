@@ -28,7 +28,8 @@ Then, follow the instructions in the [Simblee Quick Start Guide](https://www.sim
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
-In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
+In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages  
+/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
 and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
 **NOTE** To access the application contents, right click on the application [or `control` + left click] and select `Show Package Contents`.
 
@@ -45,7 +46,9 @@ Make sure to **save** and close the file.
 
 ![Rename platform file](../assets/images/ganglion_platform-rename.png)
 
-In order to create a zip file with the appropriate components to do OTA, we need to further modify the Simblee board files in your `Arduino/Contents/Java/portable` folder. Navigate to the folder   `/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0`  
+In order to create a zip file with the appropriate components to do OTA, we need to further modify the Simblee board files in your `Arduino/Contents/Java/portable` folder. Navigate to the folder  
+`/Arduino.app/Contents/Java/portable/packages  
+/Simblee/hardware/Simblee/1.1.0`  
 Then change the name of the file `platform.txt` to `platform_NORMAL.txt`.  
 We're doing this in case you ever want to revert to the original.  
 
@@ -204,7 +207,8 @@ Then, follow the instructions in the [Simblee Quick Start Guide](https://www.sim
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
-In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
+In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages  
+/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
 and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
 **NOTE** To access the application contents, right click on the application [or `control` + left click] and select `Show Package Contents`.
 
