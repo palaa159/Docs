@@ -20,7 +20,7 @@ Please see the [Radios](http://docs.openbci.com/Hardware/06-Cyton_Radios_Program
 
 First, the maximum number of bytes per BLE radio packet is 20. This limits the number of channels of raw data that can be sent without down-sampling or compression.
 
-Second, the data rate is limited. When using RFduinoGZLL, data rates of 130kB/S are theoretically possible. Our OpenBCI Boards sample biosignals at 250SPS and thier serial connection runs at 115200 baud. When using RFduinoBLE, implemnting serial baud rates higher than 9600 is possible, but may lead to issues. The BLE data rate is also alot slower. (We'll post our findings here when we get adequate benchmark results).
+Second, the data rate is limited. When using RFduinoGZLL, data rates of 130kB/S are theoretically possible. Our OpenBCI Boards sample biosignals at 250SPS and their serial connection runs at 115200 baud. When using RFduinoBLE, implementing serial baud rates higher than 9600 is possible, but may lead to issues. The BLE data rate is also alot slower. (We'll post our findings here when we get adequate benchmark results).
 
 ### Android Example
 
