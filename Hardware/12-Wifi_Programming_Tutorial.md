@@ -48,6 +48,50 @@ The OpenBCI Dongle can be used to upload firmware to ESP8266. See the section on
 
 ## Wired upload
 
+### Getting the board in boot-loading mode
+
 Wether you are using `makeESPArduino` or the Arduino IDE, the steps to get the board into boot-loading are as follows.
 
-You can either unplug your Wifi Shield from the Cyton board
+You can either unplug your Wifi Shield from the Cyton board.
+
+![Wifi alone](../assets/images/wifi_programming_alone.png)
+
+Or keep the wifi shield attached and turn the external power off.
+
+![Wifi seated on Cyton](../assets/images/wifi_programming_seated_on_cyton.png)
+
+First, plug in battery to the wifi shield
+
+![Battery to wifi shield](../assets/images/wifi_programming_power.png)
+
+Second power the Wifi shield
+
+![Battery to wifi shield](../assets/images/wifi_programming_power.png)
+
+Then press and hold the `RESET` button.
+
+![Wifi programming hold reset](../assets/images/wifi_programming_hold_reset.png)
+
+Then press and hold the `PROG` button.
+
+![Wifi programming hold prog](../assets/images/wifi_programming_hold_prog.png)
+
+Release the `RESET` button
+
+![Wifi programming release reset](../assets/images/wifi_programming_release_reset.png)
+
+And finally release the `PROG` button
+
+![Wifi programming release reset](../assets/images/wifi_programming_release_prog.png)
+
+Now the board is ready to get hit with some new firmware!
+
+Hook up the FTDI friend to the Wifi Shield, don't power the Wifi shield through the FTDI friend, it will not supply enough power!
+
+|FTDI_Friend|Wifi Shield|
+|-----------|-----------|
+|GND|GND|
+|RX|TX|
+|TX|RX|
+
+![Wifi to FTDI friend](../assets/images/wifi_programming_ftdi_friend.png)
