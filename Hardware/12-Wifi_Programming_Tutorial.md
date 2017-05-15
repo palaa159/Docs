@@ -54,35 +54,35 @@ Wether you are using `makeESPArduino` or the Arduino IDE, the steps to get the b
 
 You can either unplug your Wifi Shield from the Cyton board.
 
-![Wifi alone](../assets/images/wifi_programming_alone.png)
+![Wifi alone](../assets/images/wifi_programming_alone.jpg)
 
 Or keep the wifi shield attached and turn the external power off.
 
-![Wifi seated on Cyton](../assets/images/wifi_programming_seated_on_cyton.png)
+![Wifi seated on Cyton](../assets/images/wifi_programming_seated_on_cyton.jpg)
 
 First, plug in battery to the wifi shield
 
-![Battery to wifi shield](../assets/images/wifi_programming_power.png)
+![Battery to wifi shield](../assets/images/wifi_programming_power.jpg)
 
 Second power the Wifi shield
 
-![Battery to wifi shield](../assets/images/wifi_programming_power.png)
+![Battery to wifi shield](../assets/images/wifi_programming_power_in.JPG)
 
 Then press and hold the `RESET` button.
 
-![Wifi programming hold reset](../assets/images/wifi_programming_hold_reset.png)
+![Wifi programming hold reset](../assets/images/wifi_programming_hold_reset.jpg)
 
 Then press and hold the `PROG` button.
 
-![Wifi programming hold prog](../assets/images/wifi_programming_hold_prog.png)
+![Wifi programming hold prog](../assets/images/wifi_programming_hold_prog.jpg)
 
 Release the `RESET` button
 
-![Wifi programming release reset](../assets/images/wifi_programming_release_reset.png)
+![Wifi programming release reset](../assets/images/wifi_programming_release_reset.jpg)
 
 And finally release the `PROG` button
 
-![Wifi programming release reset](../assets/images/wifi_programming_release_prog.png)
+![Wifi programming release reset](../assets/images/wifi_programming_release_prog.jpg)
 
 Now the board is ready to get hit with some new firmware!
 
@@ -94,4 +94,4 @@ Hook up the FTDI friend to the Wifi Shield, don't power the Wifi shield through 
 |RX|TX|
 |TX|RX|
 
-![Wifi to FTDI friend](../assets/images/wifi_programming_ftdi_friend.png)
+![Wifi to FTDI friend](../assets/images/wifi_programming_ftdi_friend.jpg)
