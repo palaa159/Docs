@@ -94,4 +94,6 @@ Hook up the FTDI friend to the Wifi Shield, don't power the Wifi shield through 
 |RX|TX|
 |TX|RX|
 
-![Wifi to FTDI friend](../assets/images/wifi_programming_ftdi_friend.jpg)
+![Wifi to FTDI friend](../assets/images/wifi_programming_ftdi_friend_hooked_up.jpg)
+
+Now upload using either the Arduino IDE or a custom make solution.
