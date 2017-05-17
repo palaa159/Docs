@@ -80,7 +80,7 @@ Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/
 
 ### Send `/command` http requests for control
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
 
 ### Send `/latency` http requests for tuning
 

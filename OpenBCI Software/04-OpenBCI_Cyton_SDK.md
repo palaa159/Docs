@@ -3,7 +3,7 @@ The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command 
 
 ## Cyton Command Protocol Overview
 
-Cyton boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (PIC32MX250F128B or ATmega328P) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI). 
+Cyton boards have two powerful microcontrollers on board, and come pre-programmed with the firmware. The RFduino radio link uses the Nordic Gazelle stack and library. The Board mounted RFduino is configured as a DEVICE. The microcontroller (PIC32MX250F128B or ATmega328P) has been programmed with firmware that interfaces between the ADS1299 (Analog Front End), LIS3DH (Accelerometer), micro SD (if installed), and RFduino (Radio module). The user, or application, controls the board by sending commands over wireless serial connection. You should have received a Dongle with the OpenBCI board. The Dongle has an RFduino running the Gazelle library configured as a HOST, and interfaces your computer through a Virtual Com Port (FTDI).
 
 On startup, the OpenBCI 8bit board (`v0`) sends the following text over the radio:
 
@@ -254,9 +254,38 @@ Returns success and sends the baud rate in ASCII (921600).
 ####Check if System is Up `0x07`
 Returns success or failure. On failure it will send a "system is down" message. On success, it will send a "system is up" message.
 
+#Firmware v3.0.0 New Commands
+
+Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system to allow for a variable sample rate.
+
+### Sample Rate
+**~(COMMAND)**  
+This works similar to the Channel Settings commands, however, there is no latching character. Changing the sample rate requires sending a `v` or soft-reset to ensure all systems are correct. Power cycling the OpenBCI board will cause the sample rate to reset back to default of 250Hz.
+
+**IMPORTANT!** The Cyton cannot and will not stream data over 250SPS. Plug in the wifi shield to get speeds over 250SPS streaming. You may still write to an SD card though, the firmware will not send EEG data over the Bluetooth radios.
+
+**COMMAND**
+
+* 0 = 16000 Hz
+* 1 = 8000 Hz
+* 2 = 4000 Hz
+* 3 = 2000 Hz
+* 4 = 1000 Hz
+* 5 = 500 Hz
+* 6 = 250 Hz
+* ~ = Get current sample rate
+
+**EXAMPLE**
+
+First, user sends **~~**
+
+**returns** `Sample rate is 250Hz$$$`
+
+Then, user sends **~5**
+
+**returns** `Sample rate set to 500Hz$$$`
 
 ##Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
-
-**~ ` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . / (space)**
+**` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . / (space)**
