@@ -1,6 +1,6 @@
 #OpenBCI Ganglion
 
-The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [Gagnlion design files repository](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
+The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [Ganglion design files repository](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
 ## OpenBCI Ganglion Board
 
@@ -10,9 +10,9 @@ The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture s
 * Current Draw: 14mA when idle, 15mA connected and streaming data
 * [Simblee](http://www.simblee.com) BLE Radio module (Arduino Compatible)
 * [MCP3912](http://www.microchip.com/wwwproducts/en/MCP3912) Analog Front End
-* [LIS2DH](http://www.st.com/en/mems-and-sensors/lis2dh.html) 3 axis Axellerometer
+* [LIS2DH](http://www.st.com/en/mems-and-sensors/lis2dh.html) 3 axis Accelerometer
 * MicroSD Card Slot
-* Board Dimensions 2.41" x 2.41" (octogon has 1" edges)
+* Board Dimensions 2.41" x 2.41" (octagon has 1" edges)
 * Mount holes are 1/16" ID, 0.8" x 2.166" on center
 * Switches to manually connect/disconnect inputs to the REF pin
 
@@ -27,10 +27,10 @@ The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture s
 * Other Pins:
 	* Simblee Reset, VDD, GND
 
-The SPI pins are available for user access. The blue LED on the board is connected to pin D23. Note that the Analog pins are shared with Digital I/Os. VDD is 3.0V. 
+The SPI pins are available for user access. The blue LED on the board is connected to pin D23. Note that the Analog pins are shared with Digital I/Os. VDD is 3.0V.
 
 ###Push Button
-The button switch is connected to the Simblee reset pin, along with a 10K pullup resistor. Pressing this button will put the Simblee into reset. 
+The button switch is connected to the Simblee reset pin, along with a 10K pullup resistor. Pressing this button will put the Simblee into reset.
 
 ###Sensor Input Header
 The Ganglion Board is a 4 channel biosensing board. There is a 16 pin Right Angle header, which can be used to interface electrode sensors of all types. The inputs pins connect to an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) InAmp buffer. This amplifier had differential inputs. the `+` input is called `non-inverting`, and the `-` input is called `inverting`. Here is a description of the pins.
@@ -51,8 +51,8 @@ The Ganglion Board is a 4 channel biosensing board. There is a 16 pin Right Angl
 	* Channel input #1. `+` input on top, `-` input on bottom
 * `AVDD`
 	* Power Supply: 3.0 Volts Connects to the top and bottom pin  
-	
-	
+
+
 ###Inverting Input Select Switches
 Each input channel is buffered by an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) Instrumentation Amplifier. There are 4 small slide switches (SW1, SW2, SW3, SW4) which can be set connect the `-` inputs from the InAmps either to their associated `-` pin, or to the `REF` pin.  
 
@@ -81,4 +81,3 @@ Inner Layer 2
 ![Ganglion Layer 2](../assets/images/ganglion_layer2.png)  
 Bottom Layer  
 ![Ganglion Bottom Layer](../assets/images/ganglion_bottom.png)  
-

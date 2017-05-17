@@ -1,9 +1,9 @@
 # Ganglion Getting Started Guide
 ###Overview
 
-This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirity before starting. Have fun! 
+This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirety before starting. Have fun!
 
-**Note that the Ganglion is not set to be discoberable out of the box, you need the GUI or another app. 
+**Note that the Ganglion is not set to be discoverable out of the box, you need the GUI or another app.
 
 ## What You Need
 
@@ -60,7 +60,7 @@ Do not use a dongle with macOS. Dongles such as the `CSR` dongle are only needed
 
 Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
 
-**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
+**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to continue this tutorial.**
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
@@ -85,7 +85,7 @@ First plug in your CSR 4.0 BLE Dongle.
 
 Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
 
-![Windows Vist or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
+![Windows Vista or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
 
 Download Zadig for Windows Vista or Later
 
@@ -139,7 +139,7 @@ Click on the Ganglion board name that you want to connect to, so that it turns g
 
 ![Start Data Stream](../assets/images/ganglion_connected-idle.png)
 
-When the GUI connects, it opens up to the default window layout. For a more indepth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
+When the GUI connects, it opens up to the default window layout. For a more in-depth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
 
 ![select layout](../assets/images/ganglion_select-layout.png)
 
@@ -147,7 +147,7 @@ Click on the `Layout` dropdown menu, and select the one outlined in red.
 
 ![Auto Scale](../assets/images/ganglion_autoScale.png)
 
-Click the `Vert Scale` dropdown menu, and change the Veritcal Scale to `Auto`.  
+Click the `Vert Scale` dropdown menu, and change the Vertical Scale to `Auto`.  
 
 ![Accelerometer](../assets/images/ganglion_accelerometer_widget.jpg)
 ![Accel ON!](../assets/images/ganglion_accel-ON.jpg)
