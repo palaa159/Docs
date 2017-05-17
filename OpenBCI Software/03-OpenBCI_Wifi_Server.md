@@ -25,7 +25,20 @@ Power running to Wifi but NOT Cyton because the `EXT PWR` is in `OFF` position.
 
 If the Cyton is powered up already, the Wifi Shield can not start. Don't power your Cyton and plug in a Wifi Shield and expect the system to work, it won't.
 
-## Get Wifi Shield On The Network
+## Connecting to the Wifi Shield
+
+Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
+
+The steps for connecting to the Wifi Shield:
+
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `/websocket` http request for data
+5. Send `/command` http requests for control
+6. Send `/latency` http requests for tuning
+
+### Get Wifi Shield On Your Wireless Network
 
 First thing you need to do is get the Wifi shield on the same network as your computer. You should leave your Wifi shield unattached from the Cyton for now, or flip the external power switch `EXT PWR` to `OFF` position. This allows the ESP to boot up nice and safely.
 
@@ -43,18 +56,34 @@ I need to use my computer to join the OpenBCI Wifi Shield network. I go to list 
 
 After a couple seconds a capture link appears on my computer. I click configure wifi and see that `867` is listed as a possible network for my little Wifi Shield to join! I select `867` and enter the password for the network and press connect. If I made a mistake in the password, no worries, I'll turn the Wifi Shield off and on again and repeat the process. If a got my password right, then the Wifi shield has joined `867` and the fun can begin!
 
-## Connecting to the Wifi Shield
+The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0).
 
-Figuring out how to discover the Wifi Shield turns out to be a whole science in and of itself! As far as we can tell, the whole goal is to get the IP address of the Wifi Shield, so that goal is to get that...
+### Get IP Address of Wifi Shield
 
-We have been using Node.js as the tool to find and interact with the Wifi Shield, checkout a [fully working example](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) on AJ Keller's github!
+Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
 
-We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in!
+The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) which will implement SSDP for you.
 
-Anyway...
+Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
 
-The Wifi Shield is running an http server on port 80. You are going to want to run the `wifiFindShields()` function in Node.js, [just like we do in the example](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js#L75), to list devices matching the characteristics of the OpenBCI Wifi Shield using [SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol).
+We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
 
-Using SSDP achieves the goal of finding out the OpenBCI Wifi Shield's IP address.
+### Open a TCP Socket on Host Computer
 
-Now how do we get streaming data back from the device is the next question... it's a good one too! In order to get low latency high-reliability wireless data transmission we will open a TCP socket on our Computer, one that the Wifi Shield can send data to whenever. Open a TCP port on your computer and let's say it randomly get's assigned a fresh port number of `56342`. We now need to tell the Wifi Shield, hey, this is my port number, send data here! We do that by sending the Wifi shield an http `POST` request from the PC on route `/websocket` with params `{"port":56342}`. Now the OpenBCI Wifi Shield, knows the IP Address and the Port number of the your computers newly opened TCP port, thus data can begin to flow!
+In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
+
+If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
+
+### Send `/websocket` http request for data
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/command` http requests for control
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/latency` http requests for tuning
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  
