@@ -14,7 +14,7 @@ This page covers how the radio link works, and how to upload new firmware to the
 **You will need:**
 
 * Computer (Windows or Mac or Other)
-* Arduino IDE Version 1.5.8 BETA 
+* Arduino IDE Version 1.5.8 BETA
 * Custom [RFduino libraries for OpenBCI](https://github.com/OpenBCI/OpenBCI_RFduino/archive/master.zip)
 * A 0.1uF capacitor (see Device section below)
 
@@ -69,7 +69,7 @@ C:\Users\username\Documents\Arduino\libraries
 
 4. Open the Arduino IDE 1.5.8, restart the Arduino IDE if it was open.
 
-If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a DEVICE, and that channel is selected correctly. 
+If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a DEVICE, and that channel is selected correctly.
 
 
 ##Uploading Device Firmware to Cyton Board
@@ -96,6 +96,8 @@ Again, there is a small difference between the 8-bit and Cyton boards, explained
 6. Choose a channel number for your device. The channel number can be set in the code [`radio.begin(OPENBCI_MODE_DEVICE,20);`](https://github.com/OpenBCI/OpenBCI_Radios/blob/master/examples/RadioDevice32bit/RadioDevice32bit.ino#L22).
 
 7. Click "Upload" on the toolbar (the icon to the right of the checkmark). Your code is now uploading to the OpenBCI Device!
+
+*Important!* As of firmware version 2, you must first flash the board with the line `radio.flashNonVolatileMemory();` in the `setup()` function uncommented, then comment the line back out and program again. It is very important that you reprogram the board with the line commented out. We must do this because with firmware version two, the channel number is stored to non-volatile memory so we can change the channel number of the system from the PC/Driver. *If this is your first time uploading firmware version two (your bought you board prior to October 2016), you may ignore this message the first time you upload radio code.*
 
 
 ### Program DEVICE Radio with OpenBCI Dongle
@@ -159,9 +161,9 @@ Another example would be the [FTDI Friend](http://www.adafruit.com/products/284)
 ![FTDI BasicBack](../assets/images/FTDI_BASICback.jpg)
 
 Sparkfun makes an FTDI breakout as well, and they come in a couple of flavors. 5V and 3V. By now, you know that you want the [3V Version](https://www.sparkfun.com/products/9873). [pic coming soon] The Basic Breakout isn't as fancy as the FTDI Friend, but you do need to put a 0.1uF capacitor between the DTR pin and the RF RST pin. Also, if you have a version of this board with a voltage selection on the back, make sure that it has the 3.3V pads connected and the 5V pads cut!  
-  
+
 ## Uploading Host Firmware to the OpenBCI Dongle
-  
+
 ### Overview
 
 ![DongleBack](../assets/images/dongleBack_switch.jpg)
