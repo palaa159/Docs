@@ -28,7 +28,7 @@ The OpenBCI Wifi Shield can be over the air programmed ([still working in progre
 
 While developing this firmware, we found it much better to use [makeESPArduino](https://github.com/plerup/makeEspArduino) which is a command line tool for building and compiling the firmware without having to use the Arduino IDE!
 
-## Program Device Radio with FTDI Boards
+## Program OpenBCI Wifi with FTDI Boards
 
 There are many, many FTDI chip breakouts and cables out there that you can use. Here are a couple examples of popular devices.
 

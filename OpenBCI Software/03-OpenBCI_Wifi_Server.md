@@ -6,16 +6,16 @@ The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the Ope
 
 One of the coolest parts is the restful fully qualified web server sitting on your OpenBCI board!
 
-# Ganglion
+## Ganglion
 
-## Prerequisites
+### Prerequisites
 
 1. OpenBCI Ganglion with at least [2.x.x firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/blob/development/OpenBCI_Ganglion_Library/examples/WifiGanglion/DefaultGanglion.ino)
 2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
 3. Wireless local area network (internet)
 4. Two batteries to power the whole system
 
-## Powering the Wifi Shield
+### Powering the Wifi Shield
 
 Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Ganglion, so the Wifi shield has it's own power port that allows for much more current to flow. With the first hardware design of the Ganglion, we were not able to eliminate the need for two batteries. The ganglion runs at 3VDC while the wifi shield runs at 3.3VDC. They must share a common ground through!
 
@@ -27,16 +27,16 @@ Do NOT run Ganglion if because the `EXT PWR` is in `ON` position. We tested it i
 
 If the Ganglion is powered up already, the Wifi Shield can not start. The Ganglion will power on reset the Wifi sheld at the start of the ganglion initialization.
 
-# Cyton
+## Cyton
 
-## Prerequisites
+### Prerequisites
 
 1. OpenBCI Cyton with at least [3.x.x firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/dev-3.0.0)
 2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
 3. Wireless local area network (internet)
 4. Battery to power the whole system
 
-## Powering the Wifi Shield
+### Powering the Wifi Shield
 
 Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Cyton, so the Wifi shield has it's own power port that allows for much more current to flow. To eliminate the need for two batteries, we pass through 3.3 VDC to the Cyton board, allowing you, the user, to only have to power the Wifi shield and never have to plug power directly into the Cyton again.
 
@@ -63,7 +63,7 @@ The steps for connecting to the Wifi Shield:
 5. Send `/command` http requests for control
 6. Send `/latency` http requests for tuning
 
-### Get Wifi Shield On Your Wireless Network
+## Get Wifi Shield On Your Wireless Network
 
 First thing you need to do is get the Wifi shield on the same network as your computer. You should leave your Wifi shield unattached from the Cyton for now, or flip the external power switch `EXT PWR` to `OFF` position. This allows the ESP to boot up nice and safely.
 
@@ -83,7 +83,7 @@ After a couple seconds a capture link appears on my computer. I click configure 
 
 The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0).
 
-### Get IP Address of Wifi Shield
+## Get IP Address of Wifi Shield
 
 Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
 
@@ -93,11 +93,13 @@ Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/
 
 We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
 
-### Open a TCP Socket on Host Computer
+## Open a TCP Socket on Host Computer
 
 In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
 
 If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
+
+## OpenBCI HTTP Rest Server
 
 ### Send `/websocket` http request for data
 
