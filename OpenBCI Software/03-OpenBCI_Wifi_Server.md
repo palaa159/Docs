@@ -1,19 +1,44 @@
 # OpenBCI Wifi Shield
 
-The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the OpenBCI Cyton and Ganglion. **The Wifi shield is still in beta.**
+**The Wifi shield and these docs are still in beta, if you see something say something.**
+
+The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the OpenBCI Cyton and Ganglion.
 
 One of the coolest parts is the restful fully qualified web server sitting on your OpenBCI board!
 
+# Ganglion
+
 ## Prerequisites
 
-1. OpenBCI Cyton with at least 3.x.x firmware
-2. Wifi shield with current firmware
+1. OpenBCI Ganglion with at least [2.x.x firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/blob/development/OpenBCI_Ganglion_Library/examples/WifiGanglion/DefaultGanglion.ino)
+2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
+3. Wireless local area network (internet)
+4. Two batteries to power the whole system
+
+## Powering the Wifi Shield
+
+Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Ganglion, so the Wifi shield has it's own power port that allows for much more current to flow. With the first hardware design of the Ganglion, we were not able to eliminate the need for two batteries. The ganglion runs at 3VDC while the wifi shield runs at 3.3VDC. They must share a common ground through!
+
+Don't run power to the Ganglion through the top! Power running to the Ganglion with the `EXT PWR` in on `OFF` position.
+
+![Wifi Cyton Powered](../assets/images/wifi_ganglion_pass_through_power.jpg)
+
+Do NOT run Ganglion if because the `EXT PWR` is in `ON` position. We tested it in the lab and nothing bad will happen, it will just not work.
+
+If the Ganglion is powered up already, the Wifi Shield can not start. The Ganglion will power on reset the Wifi sheld at the start of the ganglion initialization.
+
+# Cyton
+
+## Prerequisites
+
+1. OpenBCI Cyton with at least [3.x.x firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/dev-3.0.0)
+2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
 3. Wireless local area network (internet)
 4. Battery to power the whole system
 
 ## Powering the Wifi Shield
 
-Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Cyton, so the Wifi shield has it's own power port that allows for much more current to flow. To eliminate the need for two batters, we pass through 3.3 VDC to the Cyton board, allowing you, the user, to only have to power the Wifi shield and never have to plug power directly into the Cyton again.
+Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Cyton, so the Wifi shield has it's own power port that allows for much more current to flow. To eliminate the need for two batteries, we pass through 3.3 VDC to the Cyton board, allowing you, the user, to only have to power the Wifi shield and never have to plug power directly into the Cyton again.
 
 Power running to the Cyton with the `EXT PWR` in on `ON` position.
 
@@ -23,7 +48,7 @@ Power running to Wifi but NOT Cyton because the `EXT PWR` is in `OFF` position.
 
 ![Wifi No Cyton Power](../assets/images/wifi_battery_connection.jpg)
 
-If the Cyton is powered up already, the Wifi Shield can not start. Don't power your Cyton and plug in a Wifi Shield and expect the system to work, it won't.
+If the Cyton is powered up already, the Wifi Shield can not start. Don't power your Cyton and hot plug in a Wifi Shield.
 
 ## Connecting to the Wifi Shield
 

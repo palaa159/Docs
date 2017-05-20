@@ -1,4 +1,7 @@
 # Wifi Getting Started Guide
+
+**The Wifi shield and these docs are still in beta, if you see something say something.**
+
 ##Overview
 
 This guide will walk you through setting up your Wifi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Cyton and the second if for Ganglion. Please review this guide in its entirety before starting. Have fun!
