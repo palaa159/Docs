@@ -1,6 +1,6 @@
 # Wifi Shield Programming Tutorial
 
-**The Wifi shield and these docs are still in beta, if you see something say something.**
+**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 ##Overview
 The OpenBCI Wifi Shield can be over the air programmed ([still working in progress :/ help needed](https://github.com/OpenBCI/OpenBCI_WIFI/issues/7)) or through a direct connection to the serial port on the wifi shield itself. For the wired programming, you can use the USB dongle that comes with the Cyton as a pass through or you can use a standard FTDI UART chip.

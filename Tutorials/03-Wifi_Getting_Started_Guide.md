@@ -1,6 +1,6 @@
 # Wifi Getting Started Guide
 
-**The Wifi shield and these docs are still in beta, if you see something say something.**
+**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 ##Overview
 
@@ -9,7 +9,7 @@ This guide will walk you through setting up your Wifi Shield, connecting it to y
 # Ganglion
 ## What You Need
 
-![OpenBCI Wifi Contents](../assets/images/wifi_what_you_need.jpg)
+![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
 
  1. OpenBCI Wifi Shield
  2. OpenBCI Ganglion Board
