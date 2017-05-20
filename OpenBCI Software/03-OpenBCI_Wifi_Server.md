@@ -1,6 +1,6 @@
 # OpenBCI Wifi Shield
 
-**The Wifi shield and these docs are still in beta, if you see something say something.**
+**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the OpenBCI Cyton and Ganglion.
 
