@@ -8,7 +8,18 @@ Cyton boards has a powerful microcontroller on board that comes pre-programmed w
 On startup, the OpenBCI Ganglion board sends the following text over the radio:
 
 	OpenBCI Ganglion v2.0.0
-  LIS2DH ID:
+  LIS2DH ID: 0x33
+  MCP3912 CONFIG_1: 0xXX
+  use !,@,#,$ to turn ON channels
+
+  send 'b' to start data stream
+  send 's' to stop data stream
+  use 1,2,3,4 to turn OFF channels
+  send '?' to print all registers
+  send 'v' to initialize board
+  send '[' ']' to enable/disable synthetic square wave
+  send 'z' 'Z' to start/stop impedance test
+  send 'n','N' to enable/disable accelerometer"
 
 ## Command Set
 ### Turn Channels OFF
