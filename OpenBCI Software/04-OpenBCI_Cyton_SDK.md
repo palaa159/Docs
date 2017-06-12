@@ -256,7 +256,7 @@ Returns success or failure. On failure it will send a "system is down" message. 
 
 #Firmware v3.0.0 New Commands
 
-Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system to allow for a variable sample rate.
+Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system to allow for a variable sample rate and analog or digital input readings!
 
 ### Sample Rate
 **~(COMMAND)**  
@@ -285,7 +285,29 @@ Then, user sends **~5**
 
 **returns** `Sample rate set to 500Hz$$$`
 
+### Board Mode
+**/(COMMAND)**  
+This works similar to the sample rate. Power cycling the OpenBCI board will cause the board mode to return to default mode with accelerometer in the aux bytes.
+
+**COMMAND**
+
+* 0 = Default mode - Sends accelerometer data in aux bytes
+* 1 = Debug mode - Sends serial output over the external serial port which is helpful for debugging.
+* 2 = Analog mode - Reads from analog pins A5, A6 and if no wifi shield is present, then A7 as well.
+* 3 = Digital mode - Reads from analog pins D11, D12 and D17.
+* / = Get current board mode
+
+**EXAMPLE**
+
+First, user sends **//**
+
+**returns** `Board mode is default$$$`
+
+Then, user sends **~2**
+
+**returns** `Board mode set to analog$$$`
+
 ##Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
-**` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . / (space)**
+**` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . (space)**
