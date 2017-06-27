@@ -88,7 +88,7 @@ Read and report all register settings for the MCP and the LIS3DH. Expect to get 
 **v**
 Soft reset for the Board peripherals.
 
-#Firmware v2.x.x New Commands
+##Firmware v2.x.x New Commands
 
 Supporting all v1.0.0, the v2.0.0 firmware extends the OpenBCI Ganglion system to allow for a variable sample rate.
 
@@ -119,6 +119,30 @@ First, user sends **~~**
 Then, user sends **~5**
 
 **returns** `Sample rate set to 800Hz$$$`
+
+### Wifi Shield Commands
+
+**{**
+
+Try to attach a Wifi Shield
+
+**returns** Success will send response `Success: Wifi attached$$$` on failure response will be `Failure: Wifi not attached$$$`. Failure happens when the wifi shield is not powered up or the wifi shield does not power correctly. Try power cycling the system if failure continues.
+
+**}**
+
+Remove an attached wifi shield.
+
+**returns** Success will send response `Success: Wifi removed$$$` on failure response will be `Failure: Wifi not removed$$$`. Failure occurs when no wifi shield is present to remove.
+
+**:**
+
+Get the status of the wifi shield, will either be connected or not connected.
+
+**returns** With wifi shield successfully attached will send response `Wifi present$$$`. If there is no OpenBCI board attached, will send `Wifi not present, send { to attach the shield$$$`.
+
+**;**
+
+Perform a soft reset of the Wifi shield. Will do a power on reset of just the wifi shield.
 
 ##Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Ganglion platform:
