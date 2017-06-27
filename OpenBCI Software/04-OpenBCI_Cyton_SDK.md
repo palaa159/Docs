@@ -1,5 +1,5 @@
 # OpenBCI Cyton SDK
-The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI Cyton and 8bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the Cyton runs `v1` and Boards shipped as of Fall 2016 run `v2.0.0`.
+The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI Cyton and 8bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the Cyton runs `v1` and Boards shipped as of Fall 2016 run `v2.0.0`. `v3.0.0` will begin shipping with boards in August of 2017.
 
 ## Cyton Command Protocol Overview
 
@@ -204,9 +204,14 @@ Use 16 channels.
 
 *Note: On reset, the OpenBCI Cyton board will 'sniff' for the Daisy Module, and if it is present, it will default to 16 channel capability.*
 
-#Firmware v2.0.0 New Commands
+##Firmware v2.0.0 New Commands
 
-##Time Stamping
+Firmware v2.0.0 was the first overhaul from [Push The World](www.pushtheworld.us) which stabilized the core code and added several key new features to improve the user experience. As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main Cyton board.
+In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
+
+If the RFDuinos cannot speak to each other, you will see a `Failure: Communications timeout - Device failed to poll host` which means the Device RFDuino (on the Cyton) has stopped polling the Host RFDuino on the Dongle.
+
+###Time Stamping
 
 **<**  
 
@@ -216,45 +221,104 @@ Start time stamping and resynchronize command. When the Driver sends a **<**, th
 
 Stops time stamping. If the Board is not streaming, then expect a response of `Time stamp OFF$$$`; however if the board is streaming, then you will get a response in a different **stop byte** as described in the document titled [OpenBCI Streaming Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format).
 
+###Get Radio Channel Number
 
-## Radio Configuration Commands
-As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main Cyton board.
-In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
+**0x00**
 
-####Get Channel Number `0x00`
 Returns either success or failure. If you get a failure, it will give you the host channel number and a failure message. If success it gives you both host and device channel numbers and a success message. Channel numbers can only be 1-25. The byte before EOT ($$$) will contain the channel number value in HEX.
 
-####Set Channel Number `0x01`
+**EXAMPLE**
+User sends **0xF0** **0x00** to get the system to channel number
+
+###Set Radio System Channel Number
+
+**0x01**
+
+If your radio system is up and talking, i.e. You sent `0xF007` and got a Success response signifying the Device and Host are on the same channel number.
+
 Returns either success or failure. On failure it will ask you to verify the channel number and print a failure message. On success, it gives you both host and device channel numbers and a success message. Channel numbers can only be 1-25. The byte before EOT ($$$) will contain the channel number value in HEX.
 
 **EXAMPLE**
 User sends **0xF0** **0x01** **0x07** to set the system to channel 7
 
-####Channel Set Override `0x02`
+###Set Host Radio Channel Override
+
+**0x02**
+
+If your radio system is not up and talking, i.e. You sent `0xF007` and got a Failure response signifying the Device and Host are not on the same channel number OR your Cyton does not have power. If your Cyton is powered on you can cycle the Host through all possible 25 channels in an attempt to realign your Host and Device on the same radio channel.
+
 Returns either success or failure. On failure it will ask you to verify the channel number and print a failure message. If success it sends "Host Override" followed by the channel number. Channel numbers can only be 1-25. The byte before EOT ($$$) will contain the channel number value in HEX.
 
-####Get Poll Time `0x03`
+**EXAMPLE**
+User sends **0xF0** **0x02** **0x01** force the **only** the Host to channel 1
+
+###Radio Get Poll Time
+
+**0x03**
+
+The poll time is a critical factor in over the air uploads. There is a direct correlation between poll time, CPU performance, and successful over the air uploads of the Pic32 software. If you are continuously getting failures, check out your poll time and increase if needed. If you have a good computer, you can try lowering the poll time to speed up your over the air uploads!
+
 Returns success followed by the poll time in HEX.
 
-####Set Poll Time `0x04`
+**EXAMPLE**
+User sends **0xF0** **0x03** to get the system to poll time number
+
+###Radio Set Poll Time
+
+**0x04**
+
+The poll time is a critical factor in over the air uploads. There is a direct correlation between poll time, CPU performance, and successful over the air uploads of the Pic32 software. If you are continuously getting failures, check out your poll time and increase if needed. If you have a good computer, you can try lowering the poll time to speed up your over the air uploads!
+
 Returns either success or failure. On failure it will send a "Communications Timeout" message. On success it sends success followed by the poll time in HEX. Values sent must be from 0-255 and must be sent in HEX. Defaults to 80ms.
 
 **EXAMPLE**
-User sends **0xF0** **0x04** **0xA0** which sets the poll time to 160ms.
+User sends **0xF0** **0x04** **0x40** which sets the poll time to 64ms.
 
-####Set HOST to Driver Baud Rate to Default (115200) `0x05`
-Returns success and sends the baud rate in ASCII (115200).
+###Radio Set HOST to Driver Baud Rate to Default
 
-####Set HOST to Driver Baud Rate to High-Speed mode (230400) `0x06`
-Returns success and sends the baud rate in ASCII (230400).
+**0x05**
 
-####Set HOST to Driver Baud Rate to Hyper-Speed mode (921600) `0x0A`
-Returns success and sends the baud rate in ASCII (921600).
+Tells the Host RFDuino to send UART Serial data out at `115200` to the FTDI Virtual Serial Port.
 
-####Check if System is Up `0x07`
-Returns success or failure. On failure it will send a "system is down" message. On success, it will send a "system is up" message.
+Returns success and sends the baud rate in ASCII `115200`.
 
-#Firmware v3.0.0 New Commands
+**EXAMPLE**
+User sends **0xF0** **0x05** to set the baud rate to `115200`
+
+###Radio Set HOST to Driver Baud Rate to High-Speed mode
+
+**0x06**
+
+Tells the Host RFDuino to send UART Serial data out at `230400` to the FTDI Virtual Serial Port. Note this does not help increase sample rate of the system, but it does help prevent dropped packets by allowing the computer to pull data off the serial-port faster because the data arrives so much faster to the FTDI virtual serial port.
+
+Returns success and sends the baud rate in ASCII `230400`.
+
+**EXAMPLE**
+User sends **0xF0** **0x06** to set the baud rate to `230400`
+
+###Radio Set HOST to Driver Baud Rate to Hyper-Speed mode
+
+**0x0A**
+
+Tells the Host RFDuino to send UART Serial data out at `921600` to the FTDI Virtual Serial Port. Note this does not help increase sample rate of the system, but it does help prevent dropped packets by allowing the computer to pull data off the serial-port faster because the data arrives so much faster to the FTDI virtual serial port.
+
+Returns success and sends the baud rate in ASCII `921600`.
+
+**EXAMPLE**
+User sends **0xF0** **0x0A** to set the baud rate to `921600`
+
+###Radio System Status
+
+**0x07**
+
+Get a health status check of your RFDuino to RFDuino communications.
+
+Returns success or failure. On failure it will send a "Failure: System is down$$$" message. On success, it will send a "Success: System is up$$$" message.
+
+**EXAMPLE**
+User sends **0xF0** **0x07** to get status
+
+##Firmware v3.0.0 New Commands
 
 Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system to allow for a variable sample rate and analog or digital input readings!
 
@@ -307,7 +371,31 @@ Then, user sends **~2**
 
 **returns** `Board mode set to analog$$$`
 
+### Wifi Shield Commands
+
+**{**
+
+Try to attach a Wifi Shield
+
+**returns** Success will send response `Success: Wifi attached$$$` on failure response will be `Failure: Wifi not attached$$$`. Failure happens when the wifi shield is not powered up or the wifi shield does not power correctly. Try power cycling the system if failure continues.
+
+**}**
+
+Remove an attached wifi shield.
+
+**returns** Success will send response `Success: Wifi removed$$$` on failure response will be `Failure: Wifi not removed$$$`. Failure occurs when no wifi shield is present to remove.
+
+**:**
+
+Get the status of the wifi shield, will either be connected or not connected.
+
+**returns** With wifi shield successfully attached will send response `Wifi present$$$`. If there is no OpenBCI board attached, will send `Wifi not present, send { to attach the shield$$$`.
+
+**;**
+
+Perform a soft reset of the Wifi shield. Will do a power on reset of just the wifi shield.
+
 ##Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
-**` 9 ( ) _ { } o O f g h k l ; : ' " V n N M , . (space)**
+**` 9 ( ) _ o O f g h k l ' " V n N M , . (space)**
