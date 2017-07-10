@@ -114,3 +114,35 @@ Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/
 Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
 The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  
+
+## Parsing Data from Wifi Shield
+
+Data can be sent from the Wifi shield in two different formats: `raw` and `JSON`.
+
+### `raw` Byte Stream Format
+The first byte to send is the control byte. For streaming data, that goes on the TCP socket, send `0xCX` (where `X` is `0-F` in hex) as the control byte. In the `OpenBCI_32bit_Library` code base:
+
+~~~
+/*  
+ * @description Writes channel data and axisData array to serial port in
+ *  the correct stream packet format.
+ */
+void OpenBCI_32bit_Library::sendChannelDataWifi(void)  {
+
+    wifiStoreByte(OPENBCI_EOP_STND_ACCEL); // 0xC0 1 byte
+
+    wifiStoreByte(sampleCounter); // 1 byte
+
+    ADS_writeChannelDataWifi(); // 24 bytes
+
+    accelWriteAxisDataWifi(); // 6 bytes
+
+    wifiFlushBuffer(); // Flushes the buffer to the SPISlave ESP8266 device!
+
+    sampleCounter++;
+
+}
+~~~  
+
+This code writes 32 bytes of data in the correct format and therefore as soon as it arrives at the Wifi shield. The Wifi shield will convert the 32 byte packet to the standard 33 byte [binary format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format) by moving the control byte `0xCn`, where `n` is `0-F` (hex), to the stop position and add add `0xA0` to the start position. This allows for a seamless integration with the tried and tested parsing systems already built for the Cyton.
+**Important** if you want to only send `20` bytes of data per packet, you still must send this `32` bytes with the proper start and stop bytes.
