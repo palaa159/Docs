@@ -16,7 +16,16 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 
 Next, you must save the application somewhere, the same way you would any other application or executable on your machine. 
 
-**Note:** for Mac OS Sierra, you must put the application in your /Applications folder in order for it to work properly.
+#### On Mac
+
+Place the OpenBCI_GUI in your /Applications folder. If the GUI fails to boot the first time, reboot it, a second popup will come up that asks about running the GanglionHub for the first time, please press "OK".
+
+#### On Windows
+
+Please place the GUI in your Program Files directory such that the structure looks like:
+"\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
+
+Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
 ### Make Sure You Have The Latest FTDI Drivers Downloaded
 
