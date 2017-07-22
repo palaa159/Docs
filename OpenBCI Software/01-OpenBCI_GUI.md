@@ -101,7 +101,7 @@ folder. If there is no folder called `libraries` in that location, go ahead and 
 ![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
 There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the link for your Operating System.  
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/latest), and click on the link for your Operating System.  
 
 ![electron hub download](../assets/images/ganglion_hub-download.png)
 
@@ -117,12 +117,12 @@ Move the `Ganglion Hubb app` from your Downloads folder to:
 ![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
 There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/tag/v0.4.0), and click on the link for your Operating System.  
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/latest), and click on the link for your Operating System.  
 
 ![electron hub download](../assets/images/win-unpacked-folder.PNG)
 
 After it downloads, unzip it and your Downloads folder will look like this.  
-**Do Not run the `GanglionHub Setup 0.4.0.exe`!**  
+**Do Not run the `GanglionHub Setup 0.4.1.exe`!**  
 
 ![Select All Files](../assets/images/entire-contents-win-unpacked.PNG)
 
