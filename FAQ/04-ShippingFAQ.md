@@ -10,6 +10,6 @@ Shipping is calculated based on a number of factors including the size of the pa
 
 ##Are duties and customs included in the shipping rate?
 
-Countries outside of Canada and the United States may be subject to import duties and customs taxes per the laws of your country of residence. As the customer, you are responsible for these charges.
+Countries outside the United States may be subject to import duties and customs taxes per the laws of your country of residence. As the customer, you are responsible for these charges.
 
 We will not intervene with customs procedures, per the import laws of your country of residence.
