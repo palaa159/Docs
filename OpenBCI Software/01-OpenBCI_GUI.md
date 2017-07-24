@@ -31,9 +31,9 @@ Lastly, right click on the executable -> properties -> compatibility -> tick "Ru
 
 Go to the [FTDI VCP](http://www.ftdichip.com/Drivers/VCP.htm) Downloads page, and install the FTDI Driver suitable for your operating system.
 
-### Connect the USB Dongle only if you use Windows or Linux
+### Ganglion Users: Connect the USB CSR BLE 4.0 Dongle only if you use Windows or Linux
 
-The signal will not work if the Dongle is connected on a Mac.
+The signal will not work if the [CSR BLE Dongle](https://shop.openbci.com/collections/frontpage/products/csr-4-0-bluetooth-dongle?variant=34793373070) is connected on a Mac.
 
 ### Launch the Application
 
