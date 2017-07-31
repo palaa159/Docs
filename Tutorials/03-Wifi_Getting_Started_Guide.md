@@ -1,199 +1,123 @@
 # Wifi Getting Started Guide
 
-**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**If you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new) or fix and make a Pull Request on [Github](https://github.com/OpenBCI/Docs).**
 
 ##Overview
 
-This guide will walk you through setting up your Wifi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Ganglion and the second is for the Cyton. Please review this guide in its entirety before starting. Have fun!
+Congrats on getting an OpenBCI WiFi Shield produced in partnership with [Push The World](www.pushtheworldllc.com).
 
-For more information on the Wifi Hardware, visit the [OpenBCI Wifi](http://docs.openbci.com/Hardware/11-Wifi) page in the Hardware section. To update the shield to the latest firmware please visit the [OpenBCI Wifi Programming Tutorial](http://docs.openbci.com/Hardware/11-Wifi_Programming_Tutorial) also in the Hardware section. Make sure to have the latest firmware for the wifi shield!
+Before we jump into setting up your WiFi Shield, here are some helpful links:
 
-## Ganglion
-### What You Need
+ * [Learn to update your WiFi Shield](http://docs.openbci.com/Hardware/11-Wifi_Programming_Tutorial) to the [latest firmware](// TODO: Add link for latest firmware).
+ * Learn about the physical hardware on the WiFi Shield checkout the [OpenBCI Wifi Hardware docs](http://docs.openbci.com/Hardware/11-Wifi)
+ * Lookup the commands for the HTTP rest server on the WiFi Shield at the [swaggerhub.io](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1)
+ * Checkout the firmware that powers the WiFi Shield at [on Github](http://github.com/OpenBCI/OpenBCI_WIFI)
+
+Always make sure you have the [latest firmware](// TODO: Add link for latest firmware.) loaded on your WiFi Shield. Additionally, you will need to update your Ganglion (at least v2.0.0 or newer) and/or Cyton (at least version v3.0.0 or newer) to the latest firmware.
+
+This guide will walk you through setting up your WiFi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Ganglion and the second is for the Cyton.
+
+## Powering Your WiFi Shield
+
+A LiPo battery is highly recommended for powering the WiFi Shield.
+
+### Ganglion
+
+You need two batteries in total when using WiFi with the Ganglion. One to power the WiFi Shield and one to power the Ganglion. The WiFi Shield will pull about 10x the amount of power as the Ganglion! The rational behind the two batteries is in the [OpenBCI Wifi Hardware docs](http://docs.openbci.com/Hardware/11-Wifi) and will be addressed in an upcoming hardware revision.
 
 ![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
 
- 1. OpenBCI Wifi Shield
- 2. OpenBCI Ganglion Board **IMPORTANT: Must have at least v2.x.x Ganglion firmware or newer!**
- 3. 2x LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
- 4. A computer connected to the internet
-
-#### 1. OpenBCI Wifi Shield
-
-![OpenBCI Wifi Shield](../assets/images/wifi_head_shot.jpg)
-
-The battery connector on the back of the Wifi shield can accept 3V to 6V DC power input. The top push button, `RESET`, is a reset button that will power cycle the ESP8266 chip. Don't press the `RESET` button when a Ganglion is attached, if you want to power cycle the Wifi shield, send a `;` command to the Ganglion to trigger a power on reset of the Wifi shield. Further, you can flip the power switch on and then off on the Ganglion which will trigger a power on reset of the Wifi shield. The bottom button, `PROG`, is use for programming the wifi shield over serial UART. Be sure to always have your `EXT PWR` switch in the `OFF` position with the Ganglion!
-
-#### 2. OpenBCI Ganglion Board
-
-![Ganglion](../assets/images/wifi_ganglion_headshot.jpg)
-
-Please be sure to have at least v2.x.x Ganglion firmware running on your board! If you have firmware v1.0.0 please see the [programming tutorial](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial) to learn how to upgrade your firmware.
-
-#### 3. 2x  6V AA Battery Pack & 4 AA Batteries or LiPo Battery
-
-![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
-
-Install 4 AA batteries into your two battery packs or charge up your LiPo batteries. The Wifi shield has a 4-5x larger power draw then the Bluetooth communication system so we recommend using LiPo to power the Wifi Shield! Please review _Powering The Shield_ below to properly power the system.
-
-### Seating the Wifi Shield
-
-Make sure the batteries are disconnected from both the Ganglion and the Wifi shield.
-
-To connect the Wifi shield to the Ganglion, first line up the big header pins on the Wifi shield to the Ganglion's female headers, like in the picture below:
-
-![Line up the big header](../assets/images/wifi_ganglion_seating_1.jpg)
-
-Then line up the two four pin headers.
-
-![Line up the other pins](../assets/images/wifi_ganglion_seating_2.jpg)
-
-Finally once all the pins are lined up, you can press straight down to fully seat the wifi shield onto it's new Ganglion home :)
-
-![Press down to seat](../assets/images/wifi_ganglion_seating_3.jpg)
-
-### Removing the Wifi Shield
-
-Remove power to your Ganglion and/or Wifi shield.
-
-![Wifi remove even fingers](../assets/images/wifi_ganglion_removing_1.jpg)
-
-Wiggle the board slowly off
-
-![Wifi wiggle](../assets/images/wifi_ganglion_removing_2.jpg)
-
-Or pull the shield straight off to avoid bending the pins.
-
-![Wifi off](../assets/images/wifi_removing_3.jpg)
-
-### Powering the Shield
-
-**IMPORTANT! Keep the dip switch labeled `EXT PWR` to `OFF` when using Ganglion.** As of today, the Wifi shield cannot pass through power to the Ganglion, therefore you must use two batteries.
-**Always turn the Wifi on before the Ganglion.** Your Ganglion cannot be powered from the Wifi shield, but the Ganglion can send reset signals to Wifi shield to reset it via software. Therefore you will need two sets of batteries (battery packs or LiPo) in order to use the Ganglion and Wifi shield together.
-
-![Wifi Power](../assets/images/wifi_battery_connection.jpg)
-
-When the Ganglion is on, the pass through LED on the Wifi shield will show the classic _pleasant_ blue LED when powered up!
-
-![Wifi Pass Through Power](../assets/images/wifi_ganglion_power_2.jpg)
-
-Verify that the external power switch is set to `OFF` to **NOT** power through to the Ganglion board.
+ 1. OpenBCI WiFi Shield
+ 2. OpenBCI Ganglion Board **IMPORTANT: Must have at least v2.0.0 Ganglion firmware or newer!**
+ 3. 2 batteries, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
 
 ![Wifi External Power](../assets/images/wifi_ganglion_pass_through_power.jpg)
 
-The Ganglion is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield. In the future, the wifi shield will be able to power the Ganglion too.
+**IMPORTANT! Keep the dip switch labeled `EXT PWR` to `OFF` when using Ganglion.**
 
-## Cyton
-### What You Need
+If you are stuck checkout:
+
+ * [Powering the WiFi Shield](//Todo: add link) with Ganglion docs.
+ * [Attaching the WiFi Shield](//Todo: add link) to the Ganglion docs.
+ * [Removing the WiFi Shield](//Todo: add link) from the Ganglion docs.
+ * [Flashing Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial) docs.
+
+### Cyton
+
+You only need one battery when using the Cyton with the WiFi Shield. In fact, the Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless! Don't worry, that's intended. More about powering the Cyton and WiFi Shield can be found in the [OpenBCI Wifi Hardware docs](http://docs.openbci.com/Hardware/11-Wifi).
 
 ![OpenBCI Wifi Contents](../assets/images/wifi_what_you_need.jpg)
 
- 1. OpenBCI Wifi Shield
- 2. OpenBCI Cyton Board **IMPORTANT: Must have at least v3.x.x Cyton firmware or newer!**
- 3. LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
- 4. A computer connected to the internet
+ 1. OpenBCI WiFi Shield
+ 2. OpenBCI Cyton Board **IMPORTANT: Must have at least v3.0.0 Cyton firmware or newer!**
+ 3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
 
-#### 1. OpenBCI Wifi Shield
+ * [Powering the WiFi Shield](//Todo: add link) with Cyton docs.
+ * [Attaching the WiFi Shield](//Todo: add link) to the Cyton docs.
+ * [Removing the WiFi Shield](//Todo: add link) from the Cyton docs.
+ * [Flashing Cyton Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/blob/dev-3.0.0/UPGRADE_GUIDE.md) docs.
 
-![OpenBCI Wifi Shield](../assets/images/wifi_head_shot.jpg)
+## Get Wifi Shield On Your Wireless Network
 
-The battery connector on the back of the Wifi shield can accept 3V to 6V DC power input. The top push button, `RESET`, is a reset button that will power cycle the ESP8266 chip. Don't press the `RESET` button when a Cyton is attached, if you want to power cycle the Wifi shield, send a `;` command to the Cyton to trigger a power on reset of the Wifi shield. Further, if the Wifi shield is pass through power to the Cyton, you can flip the power switch on and then off on the Wifi shield to cut and then restore power to the entire system. The bottom button, `PROG`, is use for programming the wifi shield over serial UART. Don't supply external power to a Cyton when programming the Wifi shield.
+First thing you need to do is get the Wifi shield on the same network as your computer. You should leave your Wifi shield unattached from the Cyton for now, or flip the external power switch `EXT PWR` to `OFF` position. This allows the ESP to boot up nice and safely.
 
+First, power the Wifi Shield with a battery pack of your choosing
 
-#### 2. OpenBCI Cyton Board
+When the wifi shield boots up for the first time in your working environment, it has no known network to join, so the shield turns into a hot spot (_access point_ if you speak wifi) of sorts and is waiting for you to help it along.
 
-![Cyton](../assets/images/wifi_cyton.jpg)
+Here is an example:
 
-If you have firmware v1.0.0 please see the [Upgrade Guide](https://github.com/OpenBCI/OpenBCI_32bit_Library/blob/dev-3.0.0/UPGRADE_GUIDE.md) because you need to upgrade your [bluetooth radio firmware](https://github.com/OpenBCI/OpenBCI_Radios) because the new 3.0.0 code runs of the stability introduced in 2.0.0.
+The wifi network at OpenBCI HQ is called `867`, it's password protected, and my computer is connected to the internet through `867` right now.
 
-#### 3. Your 6V AA Battery Pack & 4 AA Batteries or LiPo Battery
+I plug in power to my new OpenBCI Wifi Shield, of course my board has never joined a network before, so it's an access point, which means my computer, phone or any internet connected device can join the wifi network being broadcasted by my new Wifi Shield.
 
-![Battery Connection](../assets/images/wifi_battery_connection.jpg)
+I need to use my computer to join the OpenBCI Wifi Shield network. I go to list wifi networks around my laptop and sure enough there is a new network called `OpenBCI-2F0E` (the last four numbers are unique to my device). So I click to join this new OpenBCI network.
 
-Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a 4-5x larger power draw then the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
+After a couple seconds a capture link appears on my computer. I click configure wifi and see that `867` is listed as a possible network for my little Wifi Shield to join! I select `867` and enter the password for the network and press connect. If I made a mistake in the password, no worries, I'll turn the Wifi Shield off and on again and repeat the process. If a got my password right, then the Wifi shield has joined `867` and the fun can begin!
 
-### Seating the Wifi Shield
+The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1).
 
-Remove power to your Cyton and/or Wifi shield.
+## Connecting to the Wifi Shield
 
-First line up the big header.
+Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
 
-![Line up the big header](../assets/images/wifi_seating_1.jpg)
+The steps for connecting to the Wifi Shield:
 
-Then line up the front analog pins.
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/tcp` http request for data
+5. Send `POST` `/command` http requests for control
+6. Send `POST` `/latency` http requests for tuning
 
-![Line up the analog pins](../assets/images/wifi_seating_2.jpg)
+## Get IP Address of Wifi Shield
 
-Finally once all the pins are lined up, you can press straight down to fully seat the wifi shield onto it's new Cyton home :)
+Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
 
-![Press down to seat](../assets/images/wifi_seating_3.jpg)
+The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) which will implement SSDP for you.
 
-### Removing the Wifi Shield
+Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
 
-Remove power to your Cyton and/or Wifi shield.
+We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
 
-![Wifi remove even fingers](../assets/images/wifi_removing_1.jpg)
+## Open a TCP Socket on Host Computer
 
-Either wiggle the board slowly off
+In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
 
-![Wifi wiggle 1](../assets/images/wifi_removing_2.jpg)
+If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
 
-Slowly...
+## OpenBCI HTTP Rest Server
 
-![Wifi wiggle 2](../assets/images/wifi_removing_3.jpg)
+### Send `/websocket` http request for data
 
-Or pull the shield straight off to avoid bending the pins.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
-![Wifi off](../assets/images/wifi_removing_4.jpg)
+### Send `/command` http requests for control
 
-### Powering the Shield
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
 
-**IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
+### Send `/latency` http requests for tuning
 
-The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. Passing through power to the Cyton requries having the `EXT PWR` switch in the `ON` position.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
-![Wifi Power](../assets/images/wifi_battery_connection.jpg)
-
-The pass through LED on the wifi shield will show the classic _pleasant_ blue LED when powered up!
-
-![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
-
-Make sure that the external power switch is set to `ON` to send power through to the Cyton board.
-
-![Wifi External Power](../assets/images/wifi_what_you_need.jpg)
-
-The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
-
-## Sending Data to Wifi Shield
-
-### Overview
-
-The Wifi Shield acts a SPI slave device to the Cyton or Ganglion. The max speed the ESP8266 can seem to handle is 10MHz. A [SPISlave example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Test/SPISlave_Test.ino) we based our [Wifi](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino) code on. To interact with this SPI slave library, (you wanted to use this wifi shield for some other reason...) you should look at the [SPI Master example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Master/SPISlave_Master.ino) because the commands to get data vs read a status register are strictly defined and must be followed. The first constraint the Arduino ESP8266 SPI slave places on us is to always send 32 bytes per message. This library says that each packet must be 32 bytes, so that's where we begin....
-
-### Byte Stream Format
-The first byte to send is the control byte. For streaming data, that goes on the TCP socket, send `0xCX` (where `X` is `0-F` in hex) as the control byte. In the `OpenBCI_32bit_Library` code base:
-
-~~~
-/*  
- * @description Writes channel data and axisData array to serial port in
- *  the correct stream packet format.
- */
-void OpenBCI_32bit_Library::sendChannelDataWifi(void)  {
-
-    wifiStoreByte(OPENBCI_EOP_STND_ACCEL); // 0xC0 1 byte
-
-    wifiStoreByte(sampleCounter); // 1 byte
-
-    ADS_writeChannelDataWifi(); // 24 bytes
-
-    accelWriteAxisDataWifi(); // 6 bytes
-
-    wifiFlushBuffer(); // Flushes the buffer to the SPISlave ESP8266 device!
-
-    sampleCounter++;
-
-}
-~~~  
-
-This code writes 32 bytes of data in the correct format and therefore as soon as it arrives at the Wifi shield. The Wifi shield will convert the 32 byte packet to the standard 33 byte [binary format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format) by moving the control byte `0xCn`, where `n` is `0-F` (hex), to the stop position and add add `0xA0` to the start position. This allows for a seamless integration with the tried and tested parsing systems already built for the Cyton.
-**Important** if you want to only send `20` bytes of data per packet, you still must send this `32` bytes with the proper start and stop bytes.
+The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  

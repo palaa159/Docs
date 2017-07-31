@@ -59,9 +59,9 @@ The steps for connecting to the Wifi Shield:
 1. Get Wifi Shield On Your Wireless Network
 2. Find IP Address of Wifi Shield
 3. Open a TCP Socket on Host Computer
-4. Send `/websocket` http request for data
-5. Send `/command` http requests for control
-6. Send `/latency` http requests for tuning
+4. Send `POST` `/tcp` http request for data
+5. Send `POST` `/command` http requests for control
+6. Send `POST` `/latency` http requests for tuning
 
 ## Get Wifi Shield On Your Wireless Network
 
