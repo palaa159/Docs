@@ -59,27 +59,27 @@ You only need one battery when using the Cyton with the WiFi Shield. In fact, th
 
 ## Get Wifi Shield On Your Wireless Network
 
-First thing you need to do is get the Wifi shield on the same network as your computer. You should leave your Wifi shield unattached from the Cyton for now, or flip the external power switch `EXT PWR` to `OFF` position. This allows the ESP to boot up nice and safely.
+The WiFi Shield must connect to the same wireless network as your chosen wireless device. Power the Wifi Shield with a battery pack of your choosing. Remeber if you need help with how to properly power your WiFi Shield, refer to the [powering the shield](//Todo: add link) docs.
 
-First, power the Wifi Shield with a battery pack of your choosing
+The wifi shield will not know what wireless network to join. When the WiFi Shield can't join a network, it turns into a WiFi hotspot, and will have a name like "OpenBCI-2F0E" where the last four digits are hexadecimal and are unique to your WiFi shield. Use your wireless device to connect to the the WiFi Shield hotspot.
 
-When the wifi shield boots up for the first time in your working environment, it has no known network to join, so the shield turns into a hot spot (_access point_ if you speak wifi) of sorts and is waiting for you to help it along.
+The WiFi shield does not work for Enterprise level security. Use your cellphone hot spot or set up your own wifi network.
 
 Here is an example:
 
-The wifi network at OpenBCI HQ is called `867`, it's password protected, and my computer is connected to the internet through `867` right now.
+The wifi network at OpenBCI HQ is called `lab-wifi`, it's password protected, and my computer is connected to the internet through `lab-wifi` right now.
 
 I plug in power to my new OpenBCI Wifi Shield, of course my board has never joined a network before, so it's an access point, which means my computer, phone or any internet connected device can join the wifi network being broadcasted by my new Wifi Shield.
 
 I need to use my computer to join the OpenBCI Wifi Shield network. I go to list wifi networks around my laptop and sure enough there is a new network called `OpenBCI-2F0E` (the last four numbers are unique to my device). So I click to join this new OpenBCI network.
 
-After a couple seconds a capture link appears on my computer. I click configure wifi and see that `867` is listed as a possible network for my little Wifi Shield to join! I select `867` and enter the password for the network and press connect. If I made a mistake in the password, no worries, I'll turn the Wifi Shield off and on again and repeat the process. If a got my password right, then the Wifi shield has joined `867` and the fun can begin!
+After a couple seconds a captive touch link appears on my computer. I click configure wifi and see that `lab-wifi` is listed as a possible network for my Wifi Shield to join! I select `lab-wifi` and enter the password for the network and press connect. If I made a mistake in the password, no worries, I'll turn rejoin the WiFi Shield network and repeat the process. If I entered the `lab-wifi` password correct, then the Wifi Shield will join `lab-wifi`.
 
 The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1).
 
 ## Connecting to the Wifi Shield
 
-Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
+Be sure that your WiFi Shield is on your local network. Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
 
 The steps for connecting to the Wifi Shield:
 
@@ -108,16 +108,16 @@ If you want the data in another format, please comment on [this issue](https://g
 
 ## OpenBCI HTTP Rest Server
 
-### Send `/websocket` http request for data
+### Send `/tcp` http request for data
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
 ### Send `/command` http requests for control
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
 
 ### Send `/latency` http requests for tuning
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.0.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
 The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  
