@@ -1,6 +1,6 @@
 # OpenBCI Wifi
 
-**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**These docs are open source, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 The OpenBCI Wifi Shield was designed in partnership with [Push The World](www.pushtheworld.us). The OpenBCI Wifi PCB was designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [OpenBCI design files repository](https://github.com/OpenBCI/OpenBCI_Wifi_Shield) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
@@ -143,3 +143,37 @@ Make sure that the external power switch is set to `ON` to send power through to
 ![Wifi External Power](../assets/images/wifi_what_you_need.jpg)
 
 The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
+
+## Sending Data to WiFi Shield
+
+### Overview
+
+The WiFi Shield acts a SPI slave device to the Cyton or Ganglion. The max speed the ESP8266 can seem to handle is 10MHz. A [SPISlave example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Test/SPISlave_Test.ino) we based our [Wifi](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/DefaultBoard/DefaultBoard.ino) code on. To interact with this SPI slave library, (you wanted to use this WiFi Shield for some other reason...) you should look at the [SPI Master example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Master/SPISlave_Master.ino) because the commands to get data vs read a status register are strictly defined and must be followed. The first constraint the Arduino ESP8266 SPI slave places on us is to always send 32 bytes per message. This library says that each packet must be 32 bytes, so that's where we begin....
+
+### Byte Stream Format
+The first byte to send is the control byte. For streaming data, that goes on the TCP socket, send `0xCX` (where `X` is `0-F` in hex) as the control byte. In the `OpenBCI_32bit_Library` code base:
+
+~~~
+/*  
+ * @description Writes channel data and axisData array to serial port in
+ *  the correct stream packet format.
+ */
+void OpenBCI_32bit_Library::sendChannelDataWifi(void)  {
+
+    wifiStoreByte(OPENBCI_EOP_STND_ACCEL); // 0xC0 1 byte
+
+    wifiStoreByte(sampleCounter); // 1 byte
+
+    ADS_writeChannelDataWifi(); // 24 bytes
+
+    accelWriteAxisDataWifi(); // 6 bytes
+
+    wifiFlushBuffer(); // Flushes the buffer to the SPISlave ESP8266 device!
+
+    sampleCounter++;
+
+}
+~~~  
+
+This code writes 32 bytes of data in the correct format and therefore as soon as it arrives at the WiFi Shield. The WiFi Shield will convert the 32 byte packet to the standard 33 byte [binary format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format) by moving the control byte `0xCn`, where `n` is `0-F` (hex), to the stop position and add add `0xA0` to the start position. This allows for a seamless integration with the tried and tested parsing systems already built for the Cyton.
+**Important** if you want to only send `20` bytes of data per packet, you still must send this `32` bytes with the proper start and stop bytes.

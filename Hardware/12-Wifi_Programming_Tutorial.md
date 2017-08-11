@@ -13,7 +13,7 @@ Download the latest stable released binary from the [Github page](https://github
 
 ### Mac
 
-Go to http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier. You may use the _windows_ ip based instructions.
+Go to http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier. You may use the _windows_ ip based instructions too.
 
 ### Windows/Linux
 
@@ -116,36 +116,59 @@ Hook up the FTDI friend to the Wifi Shield, don't power the Wifi shield through 
 
 Now upload using either the Arduino IDE or a custom make solution.
 
-## Sending Data to WiFi Shield
+## Connecting to the Wifi Shield
 
-### Overview
+Be sure that your WiFi Shield is on your local network. Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
 
-The WiFi Shield acts a SPI slave device to the Cyton or Ganglion. The max speed the ESP8266 can seem to handle is 10MHz. A [SPISlave example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Test/SPISlave_Test.ino) we based our [Wifi](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/DefaultBoard/DefaultBoard.ino) code on. To interact with this SPI slave library, (you wanted to use this WiFi Shield for some other reason...) you should look at the [SPI Master example](https://github.com/esp8266/Arduino/blob/master/libraries/SPISlave/examples/SPISlave_Master/SPISlave_Master.ino) because the commands to get data vs read a status register are strictly defined and must be followed. The first constraint the Arduino ESP8266 SPI slave places on us is to always send 32 bytes per message. This library says that each packet must be 32 bytes, so that's where we begin....
+The steps for connecting to the Wifi Shield and streaming over TCP:
 
-### Byte Stream Format
-The first byte to send is the control byte. For streaming data, that goes on the TCP socket, send `0xCX` (where `X` is `0-F` in hex) as the control byte. In the `OpenBCI_32bit_Library` code base:
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/tcp` http request with open socket IP/Port number, can include options for output format (i.e. JSON or RAW output), along with latency.
+5. Send `POST` `/command` http requests for control or for just streaming use GET `/stream/start` or GET `/stream/stop`
+6. Send `POST` `/latency` http requests for tuning, if packets are dropped because older router or poor connection.
 
-~~~
-/*  
- * @description Writes channel data and axisData array to serial port in
- *  the correct stream packet format.
- */
-void OpenBCI_32bit_Library::sendChannelDataWifi(void)  {
+The steps for connecting to the Wifi Shield and streaming over MQTT:
 
-    wifiStoreByte(OPENBCI_EOP_STND_ACCEL); // 0xC0 1 byte
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/mqtt` http request with broker address with optional username and password
+5. Send `POST` `/command` http requests for control
 
-    wifiStoreByte(sampleCounter); // 1 byte
+## Get IP Address of Wifi Shield
 
-    ADS_writeChannelDataWifi(); // 24 bytes
+Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
 
-    accelWriteAxisDataWifi(); // 6 bytes
+The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) which will implement SSDP for you.
 
-    wifiFlushBuffer(); // Flushes the buffer to the SPISlave ESP8266 device!
+Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
 
-    sampleCounter++;
+We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request (researcher frequently requested feature)](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
 
-}
-~~~  
+## Open a TCP Socket on Host Computer
 
-This code writes 32 bytes of data in the correct format and therefore as soon as it arrives at the WiFi Shield. The WiFi Shield will convert the 32 byte packet to the standard 33 byte [binary format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format) by moving the control byte `0xCn`, where `n` is `0-F` (hex), to the stop position and add add `0xA0` to the start position. This allows for a seamless integration with the tried and tested parsing systems already built for the Cyton.
-**Important** if you want to only send `20` bytes of data per packet, you still must send this `32` bytes with the proper start and stop bytes.
+In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
+
+If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
+
+## OpenBCI HTTP Rest Server
+
+### Send `/tcp` http request for TCP configuration
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/mqtt` http request for MQTT configuration
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/command` http requests for control
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
+
+### Send `/latency` http requests for tuning
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  
