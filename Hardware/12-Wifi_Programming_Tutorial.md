@@ -3,9 +3,29 @@
 **The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 ##Overview
-The OpenBCI Wifi Shield can be programmed over the air or through a direct connection to the serial port on the wifi shield itself. Over the air is the perferred way to update your WiFi Shield. For the wired programming, you can use the USB dongle that comes with the Cyton as a pass through or you can use a standard [FTDI UART to USB Breakout board](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tutorial#wifi-shield-programming-tutorial-program-openbci-wifi-with-ftdi-boards).
+The OpenBCI Wifi Shield can be programmed over the air or through a direct connection to the serial port on the wifi shield itself. Over the air is the preferred way to update your WiFi Shield. For the wired programming, you can use the USB dongle that comes with the Cyton as a pass through or you can use a standard [FTDI UART to USB Breakout board](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tutorial#wifi-shield-programming-tutorial-program-openbci-wifi-with-ftdi-boards).
 
-## Program OpenBCI Wifi with Arduino
+## Program OpenBCI WiFi Over The Air
+
+**CRITICAL: REMOVE THE WIFI SHIELD FROM CYTON OR GANGLION. KEEP BOARD ISOLATED DURING UPDATE**
+
+Download the latest stable released binary from the [Github page](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest). Save to downloads folder.
+
+### Mac
+
+Go to http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier. You may use the _windows_ ip based instructions.
+
+### Windows/Linux
+
+Get the ip address of your wifi shield and visit http://192.168.0.1/update.
+
+### Uploading The Firmware
+
+Be sure that the WiFi Shield is not **physically** connected to either a Ganglion or Cyton.
+
+Select choose file and navigate to your Downloads folder where the recently downloaded hex file is, select the hex file and press ok. Then hit the `upload` button, the shield will accept the firmware and reboot.
+
+## Compile source code Program OpenBCI Wifi with Arduino
 
 **You will need:**
 
@@ -22,11 +42,11 @@ The OpenBCI Wifi Shield can be programmed over the air or through a direct conne
 
    On Mac download the `MAC OS X` version, unzip the app and move it into Applications folder.
 
-2. Follow the instructions for downloading the [Arduino ESP8266 core from Github](https://github.com/esp8266/Arduino#using-git-version). **DO NOT USE BOARDS MANAGER IN ARDUINO** because `SPISlave.h` is not part of the official version yet (coming in June with the 2.4.0 release).
+2. Follow the instructions for downloading the [Arduino ESP8266 core from Boards Manager](https://github.com/esp8266/Arduino). **NOTE** because `SPISlave.h` is newly added to the official SDK, be sure to use 2.4.0 or newer!
 
-## Program OpenBCI Wifi with make
+## Compile Source Code with make
 
-While developing this firmware, we found it much better to use [makeESPArduino](https://github.com/plerup/makeEspArduino) which is a command line tool for building and compiling the firmware without having to use the Arduino IDE!
+While developing this firmware, we found it much better to use [makeESPArduino](https://github.com/plerup/makeEspArduino) which is a command line tool for building and compiling the firmware without having to use the Arduino IDE! Use the `makeESPWifiDefault.mk` file in the [WiFi's githuv repo](https://github.com/OpenBCI/OpenBCI_WIFI)
 
 ## Program OpenBCI Wifi with FTDI Boards
 

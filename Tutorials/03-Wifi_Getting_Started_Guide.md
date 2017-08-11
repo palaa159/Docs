@@ -55,40 +55,58 @@ You only need one battery when using the Cyton with the WiFi Shield. In fact, th
  * [Powering the WiFi Shield](//Todo: add link) with Cyton docs.
  * [Attaching the WiFi Shield](//Todo: add link) to the Cyton docs.
  * [Removing the WiFi Shield](//Todo: add link) from the Cyton docs.
- * [Flashing Cyton Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/blob/dev-3.0.0/UPGRADE_GUIDE.md) docs.
-
-## Get Wifi Shield On Your Wireless Network
-
-The WiFi Shield must connect to the same wireless network as your chosen wireless device. Power the Wifi Shield with a battery pack of your choosing. Remeber if you need help with how to properly power your WiFi Shield, refer to the [powering the shield](//Todo: add link) docs.
-
-The wifi shield will not know what wireless network to join. When the WiFi Shield can't join a network, it turns into a WiFi hotspot, and will have a name like "OpenBCI-2F0E" where the last four digits are hexadecimal and are unique to your WiFi shield. Use your wireless device to connect to the the WiFi Shield hotspot.
-
-The WiFi shield does not work for Enterprise level security. Use your cellphone hot spot or set up your own wifi network.
-
-Here is an example:
-
-The wifi network at OpenBCI HQ is called `lab-wifi`, it's password protected, and my computer is connected to the internet through `lab-wifi` right now.
-
-I plug in power to my new OpenBCI Wifi Shield, of course my board has never joined a network before, so it's an access point, which means my computer, phone or any internet connected device can join the wifi network being broadcasted by my new Wifi Shield.
-
-I need to use my computer to join the OpenBCI Wifi Shield network. I go to list wifi networks around my laptop and sure enough there is a new network called `OpenBCI-2F0E` (the last four numbers are unique to my device). So I click to join this new OpenBCI network.
-
-After a couple seconds a captive touch link appears on my computer. I click configure wifi and see that `lab-wifi` is listed as a possible network for my Wifi Shield to join! I select `lab-wifi` and enter the password for the network and press connect. If I made a mistake in the password, no worries, I'll turn rejoin the WiFi Shield network and repeat the process. If I entered the `lab-wifi` password correct, then the Wifi Shield will join `lab-wifi`.
-
-The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1).
+ * [Flashing Cyton Firmware](http://docs.openbci.com/Hardware/005-Cyton_Board_Programming_Tutorial) docs.
 
 ## Connecting to the Wifi Shield
 
 Be sure that your WiFi Shield is on your local network. Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
 
-The steps for connecting to the Wifi Shield:
+The steps for connecting to the Wifi Shield and streaming over TCP:
 
 1. Get Wifi Shield On Your Wireless Network
 2. Find IP Address of Wifi Shield
 3. Open a TCP Socket on Host Computer
-4. Send `POST` `/tcp` http request for data
+4. Send `POST` `/tcp` http request with open socket IP/Port number, can include options for output formate (i.e. JSON or RAW output), along with latency.
+5. Send `POST` `/command` http requests for control or for just streaming use GET `/stream/start` or GET `/stream/stop`
+6. Send `POST` `/latency` http requests for tuning, if packets are dropped because older router or poor connection.
+
+The steps for connecting to the Wifi Shield and streaming over MQTT:
+
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/mqtt` http request with broker address with optional username and password
 5. Send `POST` `/command` http requests for control
-6. Send `POST` `/latency` http requests for tuning
+
+## Get Wifi Shield On Your Wireless Network
+
+The WiFi Shield must connect to the same wireless network as your chosen wireless device. The WiFi Shield will not know what wireless network to join. When the WiFi Shield can't join a network, the Shield turns into a WiFi hotspot, and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi shield. Use any wireless device to connect to the the WiFi Shield hotspot.
+
+The WiFi shield does not work for Enterprise level security. Use your cellphone hot spot or set up your own wifi network.
+
+### Example:
+
+[Powering new OpenBCI Wifi Shield](//TODO:ADD LINK) will cause the WiFi Shield to try to join the last known network. If the last network is not available, the WiFi Shield will become a WiFi router that any computer, phone or any internet connected device can join just like any other wireless network. The OpenBCI Wifi Shield will have a unique name such as `OpenBCI-A4AD` (the last four numbers are unique to my device, write this number down, it's helpful, no worries if you don't, there are ton's of way to find the boards name).
+
+A WiFi network at is called `MeerketManor`, it's password protected, and the iPhone is connected to `MeerketManor`.
+
+![iPhone Connected to `MeerketManor`](../assets/images/wifi_join_network_1.PNG)
+
+There is a known issue where it may take several times to bring up the captive touch portal, we are actively seeking a better solution, in the meantime, be patient and try multiple times to connect to the board. Power cycling the board may useful.
+
+![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
+
+After a couple seconds a captive touch portal will appear on the computer, phone or tablet. Click _Configure wifi_.
+
+![Captive touch portal first screen](../assets/images/wifi_captive_touch_first_screen.PNG)
+
+On the next screen, see that `MeerketManor` is listed as a possible network for the Wifi Shield to join. Select `MeerketManor` and enter the password for the network and press `connect`.
+
+![Captive touch portal second screen](../assets/images/wifi_captive_touch_second_screen.PNG)
+
+The credentials saved page will show. If a mistake was made in the password, no worries, Try to rejoin the WiFi Shield network and repeat the process. If the `MeerketManor` password was entered correct, then the Wifi Shield will join `MeerketManor` after a quick reboot and everytime the network is within range the WiFi shield is not connected to any board.
+
+The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1).
 
 ## Get IP Address of Wifi Shield
 
@@ -98,7 +116,7 @@ The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/ge
 
 Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
 
-We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
+We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request (researcher frequently requested feature)](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
 
 ## Open a TCP Socket on Host Computer
 
@@ -108,7 +126,11 @@ If you want the data in another format, please comment on [this issue](https://g
 
 ## OpenBCI HTTP Rest Server
 
-### Send `/tcp` http request for data
+### Send `/tcp` http request for TCP configuration
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/mqtt` http request for MQTT configuration
 
 Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
 
