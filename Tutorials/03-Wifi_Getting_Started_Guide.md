@@ -8,12 +8,12 @@ Congrats on getting an OpenBCI WiFi Shield produced in partnership with [Push Th
 
 Before we jump into setting up your WiFi Shield, here are some helpful links:
 
- * [Learn to update your WiFi Shield](http://docs.openbci.com/Hardware/11-Wifi_Programming_Tutorial) to the [latest firmware](// TODO: Add link for latest firmware).
+ * [Learn to update your WiFi Shield](http://docs.openbci.com/Hardware/11-Wifi_Programming_Tutorial) to the [latest firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest).
  * Learn about the physical hardware on the WiFi Shield checkout the [OpenBCI Wifi Hardware docs](http://docs.openbci.com/Hardware/11-Wifi)
- * Lookup the commands for the HTTP rest server on the WiFi Shield at the [swaggerhub.io](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.2.1)
+ * Lookup the commands for the HTTP rest server on the WiFi Shield at the [swaggerhub.io](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0)
  * Checkout the firmware that powers the WiFi Shield at [on Github](http://github.com/OpenBCI/OpenBCI_WIFI)
 
-Always make sure you have the [latest firmware](// TODO: Add link for latest firmware.) loaded on your WiFi Shield. Additionally, you will need to update your Ganglion (at least v2.0.0 or newer) and/or Cyton (at least version v3.0.0 or newer) to the latest firmware.
+Always make sure you have the [latest firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest) loaded on your WiFi Shield. Additionally, you will need to update your [Cyton (at least version v3.0.0 or newer)](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest) to the latest firmware and/or [Ganglion (at least v2.0.0 or newer)](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest).
 
 This guide will walk you through setting up your WiFi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Ganglion and the second is for the Cyton.
 
