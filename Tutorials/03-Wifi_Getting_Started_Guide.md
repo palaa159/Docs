@@ -34,7 +34,7 @@ You only need one battery when using the Cyton with the WiFi Shield. In fact, th
 * [Powering the WiFi Shield](//Todo: add link) with Cyton docs.
 * [Attaching the WiFi Shield](//Todo: add link) to the Cyton docs.
 * [Removing the WiFi Shield](//Todo: add link) from the Cyton docs.
-* [Flashing Cyton Firmware](http://docs.openbci.com/Hardware/005-Cyton_Board_Programming_Tutorial) docs.
+* [Flashing Cyton Firmware](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial) docs.
 
 ### Ganglion
 
