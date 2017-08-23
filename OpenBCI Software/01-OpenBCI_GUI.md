@@ -33,7 +33,7 @@ Go to the [FTDI VCP](http://www.ftdichip.com/Drivers/VCP.htm) Downloads page, an
 
 ### Ganglion Users: Connect the USB CSR BLE 4.0 Dongle only if you use Windows or Linux
 
-The signal will not work if the [CSR BLE Dongle](https://shop.openbci.com/collections/frontpage/products/csr-4-0-bluetooth-dongle?variant=34793373070) is connected on a Mac.
+The signal will not work if the [CSR BLE Dongle](https://shop.openbci.com/collections/frontpage/products/csr-4-0-bluetooth-dongle?variant=34793373070) is connected on a Mac. Windows users will need to use the program [Zadig](http://zadig.akeo.ie/) to properly configure the CSR BLE 4.0 dongle; detailed instructions can be found [here](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide).
 
 ### Launch the Application
 
