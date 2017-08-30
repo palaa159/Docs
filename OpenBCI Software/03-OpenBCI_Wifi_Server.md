@@ -15,18 +15,6 @@ One of the coolest parts is the restful fully qualified web server sitting on yo
 3. Wireless local area network (internet)
 4. Two batteries to power the whole system
 
-### Powering the Wifi Shield
-
-Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Ganglion, so the Wifi shield has it's own power port that allows for much more current to flow. With the first hardware design of the Ganglion, we were not able to eliminate the need for two batteries. The ganglion runs at 3VDC while the wifi shield runs at 3.3VDC. They must share a common ground through!
-
-Don't run power to the Ganglion through the top! Power running to the Ganglion with the `EXT PWR` in on `OFF` position.
-
-![Wifi Cyton Powered](../assets/images/wifi_ganglion_pass_through_power.jpg)
-
-Do NOT run Ganglion if because the `EXT PWR` is in `ON` position. We tested it in the lab and nothing bad will happen, it will just not work.
-
-If the Ganglion is powered up already, the Wifi Shield can not start. The Ganglion will power on reset the Wifi sheld at the start of the ganglion initialization.
-
 ## Cyton
 
 ### Prerequisites
@@ -36,21 +24,62 @@ If the Ganglion is powered up already, the Wifi Shield can not start. The Gangli
 3. Wireless local area network (internet)
 4. Battery to power the whole system
 
-### Powering the Wifi Shield
+## Connecting to the Wifi Shield
 
-Wifi takes a lot more current to run then Bluetooth. The Wifi shield exceeds the maximum power of the Cyton, so the Wifi shield has it's own power port that allows for much more current to flow. To eliminate the need for two batteries, we pass through 3.3 VDC to the Cyton board, allowing you, the user, to only have to power the Wifi shield and never have to plug power directly into the Cyton again.
+Be sure that your WiFi Shield is on your local network. Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
 
-Power running to the Cyton with the `EXT PWR` in on `ON` position.
+The steps for connecting to the Wifi Shield and streaming over TCP:
 
-![Wifi Cyton Powered](../assets/images/wifi_cyton_powered.jpg)
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/tcp` http request with open socket IP/Port number, can include options for output format (i.e. JSON or RAW output), along with latency.
+5. Send `POST` `/command` http requests for control or for just streaming use GET `/stream/start` or GET `/stream/stop`
+6. Send `POST` `/latency` http requests for tuning, if packets are dropped because older router or poor connection.
 
-Power running to Wifi but NOT Cyton because the `EXT PWR` is in `OFF` position.
+The steps for connecting to the Wifi Shield and streaming over MQTT:
 
-![Wifi No Cyton Power](../assets/images/wifi_battery_connection.jpg)
+1. Get Wifi Shield On Your Wireless Network
+2. Find IP Address of Wifi Shield
+3. Open a TCP Socket on Host Computer
+4. Send `POST` `/mqtt` http request with broker address with optional username and password
+5. Send `POST` `/command` http requests for control
 
-If the Cyton is powered up already, the Wifi Shield can not start. Don't power your Cyton and hot plug in a Wifi Shield.
+## Get IP Address of Wifi Shield
 
+Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
 
+The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) which will implement SSDP for you.
+
+Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
+
+We are still hashing out the best ways to discover the Wifi shield on the networks (home vs. enterprise and beyond) so [please contribute ides if you have any on this github issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/8) and we can add it in! [Wifi Direct Feature Request (researcher frequently requested feature)](https://github.com/OpenBCI/OpenBCI_WIFI/issues/9)
+
+## Open a TCP Socket on Host Computer
+
+In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
+
+If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
+
+## OpenBCI HTTP Rest Server
+
+### Send `/tcp` http request for TCP configuration
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/mqtt` http request for MQTT configuration
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+### Send `/command` http requests for control
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. To change the sample rate of the Cyton, please use the `~` command as defined in the Cyton SDK docs.
+
+### Send `/latency` http requests for tuning
+
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+
+The time in micro seconds (us) between packet sends. The higher the OpenBCI sample rate, the higher the latency needed. Default is 1000us, minimum stable is 50us. For upper limit sample rates such as 4kHz/8kHz/16kHz, latency around 20ms seems to really stabilize the system.  
 
 ## Parsing Data from Wifi Shield
 

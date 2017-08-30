@@ -1,4 +1,11 @@
 # Ganglion Programming Tutorial
+
+## Download binary from Github
+
+Please download the latest binary from the Releases section on Github. Then jump down to [setup mobile device for OTA programming](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial#ganglion-programming-tutorial-setup-mobile-device-for-ota-programming)
+
+## Building From source
+
 The [Simblee](https://www.simblee.com/) radio module that is at the heart of the Ganlion board offers the ability to reprogram Over The Air `OTA`. The method for doing this in a nutshell is:  
 
 1. Create new Ganglion firmware, or modify existing code in Arduino IDE
@@ -10,21 +17,21 @@ The [Simblee](https://www.simblee.com/) radio module that is at the heart of the
 
 The following tutorials will get your computer and the Arduino IDE set up to create the correct ZIP file, and also show how to use your phone or tablet to upload new code to the Ganglion.   
 
-***IMPORTANT: Ganglions shipped prior to February 27, 2017 will NOT program Over The Air for the first time! If you purchased your Ganglion prior to 2/27/17, Please follow the instructions at the bottom of this page to program your Ganglion for the first time.*** 
+***IMPORTANT: Ganglions shipped prior to February 27, 2017 will NOT program Over The Air for the first time! If you purchased your Ganglion prior to 2/27/17, Please follow the instructions at the bottom of this page to program your Ganglion for the first time.***
 
 ## Setting Up for OTA Programming On A MAC
 ### What You Need
 
 * Arduino IDE v1.8.0 Or Newer
 * Simblee Board Files
-* Compiler Tools 
+* Compiler Tools
 
 ![Download Arduino Mac](../assets/images/ganglion_download-arduino-mac.png)
 
 If you don't already have the Arduino IDE software on your computer, go [here](https://www.arduino.cc/en/Main/Software) to download the latest version for macOS.  
 Then, follow the instructions in the [Simblee Quick Start Guide](https://www.simblee.com/Simblee_Quickstart_Guide_v1.1.0.pdf) to install the Simblee board files in Arduino for macOS.  
 
-### Modify The Simblee Board Files 
+### Modify The Simblee Board Files
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
@@ -37,12 +44,12 @@ and you will find the file called `variant.h`. Open this file up in the editor o
 |:----- |:------:| :-------:|
 | PIN_SPI_SS     | 6u | 26u |
 | PIN_SPI_MOSI   | 5u | 18u |
-| PIN_SPI_MISO   | 3u | 15u | 
+| PIN_SPI_MISO   | 3u | 15u |
 | PIN_SPI_SCK    | 4u | 16u |   
 
 Make sure to **save** and close the file.  
 **IMPORTANT NOTE:** If you don't do this, your Ganglion will not work after you reprogram it!
-  
+
 
 ![Rename platform file](../assets/images/ganglion_platform-rename.png)
 
@@ -60,7 +67,7 @@ Next, download the necessary files [here](https://github.com/biomurph/Ganglion_O
 * nrfutil_macosx
 * platform.txt
 
-Move the files called `mkdfuzip`, `nrfutil_macosx`, and `platform.txt` into your `Simblee/1.1.0` folder. Restart or launch Arduino. 
+Move the files called `mkdfuzip`, `nrfutil_macosx`, and `platform.txt` into your `Simblee/1.1.0` folder. Restart or launch Arduino.
 
 ### Get The Ganglion Library
 
@@ -82,7 +89,7 @@ Now you're ready to create custom Ganglion firmware that is packaged correctly f
 **IMPORTANT NOTE:** Whenever you want to create or modify Ganglion firmware, You must **Always** put the line  
 `#include <OpenBCI_Ganglion_Library.h>`  
 at the top of your code!  
-To create the OTA files, simply select `Export compiled Binary` from the `Sketch` menu. The Arduion IDE will take a few moments, and the tools you just installed will create the `.zip` file you need for OTA ***right in the sketch folder*** right beside your sketch! Cool! Go ahead and change the name of the file to remove the `.ino.Simblee` and you are good to go. 
+To create the OTA files, simply select `Export compiled Binary` from the `Sketch` menu. The Arduion IDE will take a few moments, and the tools you just installed will create the `.zip` file you need for OTA ***right in the sketch folder*** right beside your sketch! Cool! Go ahead and change the name of the file to remove the `.ino.Simblee` and you are good to go.
 
 
 
@@ -90,7 +97,7 @@ To create the OTA files, simply select `Export compiled Binary` from the `Sketch
 ### Coming Sooooon!
 
 
-## Setup Mobile Device For OTA Programming 
+## Setup Mobile Device For OTA Programming
 
 The Simblee is designed around a Nordic Semiconductor [nRF51822](http://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF51822), and so we need to use the Nordic nRF apps to do the actual Over-The-Air stuff. Here's what you will need for this tutorial:
 
@@ -105,14 +112,14 @@ The Simblee is designed around a Nordic Semiconductor [nRF51822](http://www.nord
 
 ### Install apps
 
-Install the nRF Toolbox and Lightblue Explorer apps onto you device. 
+Install the nRF Toolbox and Lightblue Explorer apps onto you device.
 
 ### Verify Ganglion Version
 
 ![Lightblue Scan](../assets/images/ganglion_iphone-select-simblee-lightblue.png)
 
 Turn on your Ganglion, and turn on your phone's bluetooth Then open the Lightblue app. The app will open and show you what Bluetooth Peripherals are nearby. The Ganglion will be listed as `Simblee`. Tap that peripheral, and Lightblue will connect to and interrogate it.  
-**NOTE: the Ganglion may also show up as DfuTarg** 
+**NOTE: the Ganglion may also show up as DfuTarg**
 
 ![Simblee Interrogation](../assets/images/ganglion_iphone-software-revision.png)
 
@@ -138,7 +145,7 @@ You should see `openbci.com` as the Manufacturer, `Gagnlion` as the Model Number
 
 ### Install apps
 
-Install the nRF Toolbox and nRF Connect Apps onto you device. 
+Install the nRF Toolbox and nRF Connect Apps onto you device.
 
 ### Verify Ganglion Version
 
@@ -175,7 +182,7 @@ Now we need to get the `.zip` file from your Arduinn Sketch folder to your iPhon
 ![DFU Select Inbox](../assets/images/ganglion_iphone-select-inbox.png)
 ![DFU Inbox](../assets/images/ganglion_iphone-select-file.png)
 
-If you ever want to re-upload a program that you already have on your phone, select the `DFU` tool after launching the nRF Toolbox app. Tap the `Select File` button, and on the next screen at the bottom you will see an option for `User Files`. Select that, and then `Inbox` on the next screen to choose from all of your nRF Imported files. 
+If you ever want to re-upload a program that you already have on your phone, select the `DFU` tool after launching the nRF Toolbox app. Tap the `Select File` button, and on the next screen at the bottom you will see an option for `User Files`. Select that, and then `Inbox` on the next screen to choose from all of your nRF Imported files.
 
 
 ## Program Ganglion Using Hardware
@@ -185,7 +192,7 @@ The first Ganglions that were shipped out have firmware that will not allow for 
 ### What You Need
 
 * FTDI Breakout or OpenBCI Cyton Dongle
-* 0.1uF Capacitor 
+* 0.1uF Capacitor
 * Jumper Wires
 * Arduino IDE v
 
@@ -196,14 +203,14 @@ The first Ganglions that were shipped out have firmware that will not allow for 
 
 For this tutorial, I will use the [Adafruit FTDI Friend](https://www.adafruit.com/products/284). You can use any FTDI breakout, as long as it uses **only 3V for logic levels**. If you go to Adafruit to purchase one, you can also pick up some [jumper wires](https://www.adafruit.com/products/758), and [0.1uF Capacitors](https://www.adafruit.com/products/753) as well.  
 **IMPORTANT NOTE: THE GANGLION IS A 3V DEVICE! YOU MUST NEVER CONNECT ANY HIGHER VOLTAGE SOURCE TO ANY OF THE PINS!**  
-The 0.1uF capacitor needs to be inbetween the`RESET` pin of the Ganglion and the `RTS` pin of the FTDI breakout. 
+The 0.1uF capacitor needs to be inbetween the`RESET` pin of the Ganglion and the `RTS` pin of the FTDI breakout.
 
 ### Set Up Arduino to Program Your Ganglion
 
 If you don't already have the Arduino IDE software on your computer, go [here](https://www.arduino.cc/en/Main/Software) to download the latest version for macOS.  
 Then, follow the instructions in the [Simblee Quick Start Guide](https://www.simblee.com/Simblee_Quickstart_Guide_v1.1.0.pdf) to install the Simblee board files in Arduino for macOS.  
 
-### Modify The Simblee Board Files 
+### Modify The Simblee Board Files
 
 ![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
 
@@ -216,7 +223,7 @@ and you will find the file called `variant.h`. Open this file up in the editor o
 |:----- |:------:| :-------:|
 | PIN_SPI_SS     | 6u | 26u |
 | PIN_SPI_MOSI   | 5u | 18u |
-| PIN_SPI_MISO   | 3u | 15u | 
+| PIN_SPI_MISO   | 3u | 15u |
 | PIN_SPI_SCK    | 4u | 16u |   
 
 Make sure to **save** and close the file.  
@@ -231,4 +238,3 @@ Launch, or relaunch the Arduino IDE, and open the
 sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.  
 
 With your wires all connected correctly, you should be able to click the `Upload` button and successfully re-program the Ganglion. Now you're ready to do OTA Programming!
-
