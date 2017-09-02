@@ -49,7 +49,7 @@ The Wifi Shield and the Cyton board use only one battery by means of the JST con
 
 ![Wifi Power](../assets/images/wifi_battery_connection.jpg)
 
-The pass through LED on the wifi shield will show the classic _pleasant_ blue LED when powered up!
+The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
 
 ![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
 
@@ -59,7 +59,7 @@ Make sure that the external power switch is set to `ON` to send power through to
 
 The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 
-## Ganglion
+## Ganglion with WiFi Shield
 
 ### What you need
 
@@ -68,13 +68,6 @@ The Cyton is not able to supply enough current to power the power-hungry wifi sh
  3. 1 battery, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
 
 ![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
-
-### Important Concepts and Tutorials
-
-Please read and be comfortable with the following tutorials
-
-1. [Updating the WiFi Shield Firmware](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tutorial)
-2. [Flashing Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial) docs.
 
 ### General Overview
 
@@ -130,11 +123,15 @@ The OpenBCI is now fully qualified port 80 http server that is fully defined on 
 
 ## Connecting with the OpenBCI GUI
 
+Although the WiFi Shield can be connected to any internet connected device, the OpenBCI_GUI provides a great application to get started!
+
+### Download and Install OpenBCI GUI
+
 [Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI. OpenBCI GUI gained WiFi Shield support as of 3.0.0 or later.
 
-### Installing OpenBCI GUI
-
 On Mac, drag and drop the application to /Applications
+
+![GUI unzip](../assets/images/gui_unzipped_mac.png)
 
 On Windows, move the application to Program Files. Always run as administrator.
 

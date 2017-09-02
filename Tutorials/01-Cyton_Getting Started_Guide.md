@@ -1,5 +1,6 @@
 # Cyton Getting Started Guide
 
+This guide will walk you through setting up your computer to use the Cyton and USB Dongle, using the OpenBCI_GUI Application, and how to get EEG/EMG/EKG from your own body!
 
 ## I. What You Need
 
@@ -48,16 +49,24 @@ Cyton boards have specific input voltage ranges. These input voltage ranges can 
 
 Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
-## II Download/Run the OpenBCI GUI on macOS
+## II. Download and Install OpenBCI GUI
+
+[Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI for your operating system.
+
+### Install macOS
+
+Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
+
+![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
 
-![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
+Now navigate to your `Applications` folder and double click the `OpenBCI_GUI` You may see a message pop up asking you if you're sure you want to open it. Click Open and the app will launch.
 
-Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. Once you unzip/extract the download, you will find an Application called `OpenBCI_GUI`. Drag the `OpenBCI_GUI` app into your `Applications` folder. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through Processing. A tutorial for how to do that is located [here](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)  
+![allow GUI to run](../assets/images/ganglion_permissions.png)
 
-## II Download/Run the OpenBCI GUI on Windows
+### Windows
 
-Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System. Then move the downloaded folder into your `Program Files` folder. Now you can run the OpenBCI GUI!
+On Windows, move the application to Program Files. Always run as administrator.
 
 ## III. Prepare your OpenBCI Hardware
 
@@ -101,17 +110,23 @@ Make sure to move the small switch on the right side of the board from "OFF" to 
 
 You may need to relaunch the OpenBCI GUI after installing the FTDI drivers.
 
-### 2. Select LIVE (from OpenBCI)
+### 2. Select LIVE (from Cyton)
 
-![Select Live](../assets/images/cyton_live-from-cyton.png)
+![Select Live from Cyton](../assets/images/serial_cyton_select_cyton.png)
 
-In order to connect to your Cyton, you must specify the data source to be "LIVE (from Cyton)" in the first section of the SYSTEM CONTROL PANEL. Before hitting the START SYSTEM button, you need to configure your Cyton board (follow the steps below).
+In order to connect to your Cyton, you must specify the data source to be `LIVE (from Cyton)` in the first section of the System Control Panel. Before hitting the `START SYSTEM` button, you need to configure your Cyton board (follow the steps below).
 
-### 3. Find your USB Dongle's Serial/COM port
+### 3. Select Serial Transfer Protocol
 
-![Select Serial](../assets/images/cyton_select-serial-port.png)
+Next select `Serial (from Dongle)`. If you want to use the WiFi Shield, please see the [WiFi Getting Started Guide](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-overview)
+
+![select serial transfer protocol](../assets/images/serial_cyton_select_serial.png)
+
+### 4. Find your USB Dongle's Serial/COM port
 
 In the first section of the LIVE (from Cyton) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, it's name will be in the following format:
+
+![Select Serial](../assets/images/serial_cyton_select_serial_port.png)
 
 **/dev/tty***
 
@@ -127,9 +142,9 @@ Your USB Dongle's port name will likely be at the top of the list. If you don't 
 
 If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum/) about debugging your hardware connection.
 
-### 4. Check Status or Change Radio Channel
+### 5. (optional) Check Status or Change Radio Channel
 
-![Open Config Tab](../assets/images/cyton_open-radio-config-tab.png)
+![Open Config Tab](../assets/images/serial_cyton_open_radio_config.png)
 
 There is a Radio Configuration tab that you can use to check the status of your Cyton system and change the radio channel. Click on the `>` arrow to open up the options panel. Here you will find tools for configuring your Cyton Radio connection. Let's walk through the functions of each button.
 
@@ -160,7 +175,7 @@ Since you have just changed the channel of the Dongle only, When you click on th
 
 Now, click the `AUTOSCAN` button. It may take a few seconds for the Dongle to scan through every channel until it connects to your Cyton, but it will, and you will get the message `Success: System is Up` Autoscan!
 
-### 5.(optional) Edit the Playback file name
+### 6.(optional) Edit the Playback file name
 
 ![File Name](../assets/images/fileName.png)
 
@@ -178,13 +193,13 @@ If working from a Mac, you'll need to right-click on the OpenBCI_GUI application
 
 After creating a Playback file, it can be replayed by running the OpenBCI GUI with the Plaback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
-### 6. Select your channel count (8 or 16)
+### 7. Select your channel count (8 or 16)
 
 ![Channel Count](../assets/images/channelCount.png)
 
 The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and Cyton board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
 
-### 7. Select your SD setting
+### 8. (optional) Select your SD setting
 
 ![WRITE TO SD](../assets/images/writeToSD.png)
 
@@ -192,15 +207,15 @@ If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE
 
 **Note:** be sure to select a file size that is larger than your planned recording time. The Cyton writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
 
-### 8. Press "START SYSTEM"
+### 9. Press "START SYSTEM"
 
-![START SYSTEM](../assets/images/startSystem.png)
+![START SYSTEM](../assets/images/serial_cyton_start_system.png)
 
 Now you're ready to start the system! Press the START SYSTEM button and wait for the OpenBCI GUI to establish a connection with your Cyton board. This usually takes ~5 seconds.
 
-![Initializing](../assets/images/initializing.png)
+![Initializing](../assets/images/serial_cyton_initializing_gui.png)
 
-During this time, the help line at the bottom of the OpenBCI GUI should be blinking the words: "Initializing communication w/ your Cyton board."
+During this time, the help line at the bottom of the OpenBCI GUI should be blinking the words: "Attempting to establish a connection with your OpenBCI Board..."
 
 **TROUBLESHOOTING**
 
@@ -212,21 +227,19 @@ If the initialization fails, try the following steps in order:
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your Cyton board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
 
-### 9. Your OpenBCI is now live!
+### 10. Your Cyton is now live!
 
-![Start Stream](../assets/images/startStream.png)
+Now that the OpenBCI_GUI is connected to your Cyton you may press `Start Data Stream` in the upper left hand corner.
 
-Once the GUI successfully connects to your Cyton Board, click anywhere outside of the SYSTEM CONTROL PANEL to access the rest of the features of the GUI.
+![cyton serial data stream start](../assets/images/serial_cyton_data_stream_start.png)
 
-You can now press the bright green Start Data Stream button (located at the top middle of the GUI) to begin streaming live data from your CytonCyton board board.
+You should see data streaming into the GUI, try running your fingers along the electrode pins at the top of your board.
 
 ![Touch](../assets/images/touch.JPG)
 
-To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the top of your board.
+You should see the 8 (or 16 if you're using a Daisy module) channels on the _Time Series_ widget behave chaotically in response to you touching the pins and all the traces of the FFT graph on the upper right should instantly shift upwards.
 
-![Chaos](../assets/images/chaos.png)
-
-You should see the 8 (or 16 if you're using a Daisy module) channels on the EEG DATA montage behave chaotically in response to you touching the pins. The headplot on the right side of the GUI should become fully saturated (turning bright red) when you do this. And all the tracess of the FFT graph on the lower right should instantly shift upwards.
+![cyton serial chaos](../assets/images/serial_cyton_chaos.png)
 
 If this is the case, congratulations; you are now connected to your Cyton board. It's time to see some brain waves!
 
