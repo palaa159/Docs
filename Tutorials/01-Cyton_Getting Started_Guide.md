@@ -31,9 +31,9 @@ If you ordered an OpenBCI Gold Cup Electrodes and Ten20 Paste you should have:
 
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 3 2oz Jars of Ten20 conductive electrode paste
- 
+
 ![TouchProof Adapter](../assets/images/touch_proof.jpg)
- 
+
 If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into any OpenBCI Board!
 
 ### 4. Your 6V AA Battery Pack & 4 AA Batteries
@@ -53,17 +53,7 @@ Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of y
 
 ![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
 
-Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through Processing. A tutorial for how to do that is located [here](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)  
-
-**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to conintue this tutorial.**
-
-![allow GUI to run](../assets/images/ganglion_permissions.png)
-
-When you first run the GUI on your Mac, you will have to give administrator permission. You may see a message pop up asking you if you're sure you want to open it. Click `Open` and the app will launch.
-
-![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
-
-If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button.
+Go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. Once you unzip/extract the download, you will find an Application called `OpenBCI_GUI`. Drag the `OpenBCI_GUI` app into your `Applications` folder. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through Processing. A tutorial for how to do that is located [here](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)  
 
 ## II Download/Run the OpenBCI GUI on Windows
 
@@ -117,7 +107,7 @@ You may need to relaunch the OpenBCI GUI after installing the FTDI drivers.
 
 In order to connect to your Cyton, you must specify the data source to be "LIVE (from Cyton)" in the first section of the SYSTEM CONTROL PANEL. Before hitting the START SYSTEM button, you need to configure your Cyton board (follow the steps below).
 
-### 3. Find your USB Dongle's Serial/COM port 
+### 3. Find your USB Dongle's Serial/COM port
 
 ![Select Serial](../assets/images/cyton_select-serial-port.png)
 
@@ -157,7 +147,7 @@ Click the `GET CHANNEL` button to know the channel that your Cyton system is com
 Click on the `CHANGE CHANNEL` button to change the channel that your Cyton system is communicating on. This can be really useful if you have multiple Cyton systems in the same space. When you click the button, a menu will open up with the channels. When you click on the channel you want, it will take just a second, and you should get the message `Success: Host and Device on Channel number: X`.  
 **IMPORTANT** Make sure that there are not other Cytons active in the neighborhood when you change the channel!
 
-![Override Dongle](../assets/images/cyton_override-dongle.png) 
+![Override Dongle](../assets/images/cyton_override-dongle.png)
 
 Click on the `OVERRIDE DONGLE` button to change the channel of the OpenBCI Dongle only. When you click the button, a menu will open up with the channels. For the purpose of this Tutorial, go ahead and change the Dongle channel to Channel `15`. When you click on the channel number, it will take just a second, and you should get the message `Success: Host override - Channel number: 15`
 
@@ -180,7 +170,7 @@ In the DATA LOG FIlE section of the LIVE (from Cyton) sub-panel you can specify 
 
 You can edit the the name of this file by clicking in the "File Name" text field.
 
-If you're running the OpenBCI GUI from Processing. This file will be saved at the root of your OpenBCI_GUI directory. 
+If you're running the OpenBCI GUI from Processing. This file will be saved at the root of your OpenBCI_GUI directory.
 
 If you're running the OpenBCI GUI as a standalone application, this file will be saved in /Contents/Java/Data/EEG_Data/
 
@@ -206,7 +196,7 @@ If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE
 
 ![START SYSTEM](../assets/images/startSystem.png)
 
-Now you're ready to start the system! Press the START SYSTEM button and wait for the OpenBCI GUI to establish a connection with your Cyton board. This usually takes ~5 seconds. 
+Now you're ready to start the system! Press the START SYSTEM button and wait for the OpenBCI GUI to establish a connection with your Cyton board. This usually takes ~5 seconds.
 
 ![Initializing](../assets/images/initializing.png)
 
@@ -232,7 +222,7 @@ You can now press the bright green Start Data Stream button (located at the top 
 
 ![Touch](../assets/images/touch.JPG)
 
-To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the top of your board. 
+To make sure that it is responsive, (after you've started the data stream) try running your fingers along the electrode pins at the top of your board.
 
 ![Chaos](../assets/images/chaos.png)
 
@@ -266,7 +256,7 @@ For more information on these three signals, refer to wikipedia:
   4. Green
   5. Blue
   6. Red
- 
+
 #### Optional:
 
 * Paper towels for cleaning excess Ten20 paste
@@ -277,7 +267,7 @@ For more information on these three signals, refer to wikipedia:
 
 ![Electrode Connections 1](../assets/images/electrodeConnections1.JPG)
 
-1. Connect the white electrode to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels. 
+1. Connect the white electrode to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels.
 2. Connect the black electrode to the bottom BIAS pin. The BIAS pin is similar to the ground pin of common EEG systems, but it uses destructive interference waveform techniques to eliminate the "common mode noise" of all of the active channels.
 3. Connect the purple electrode to the 2N pin (the bottom pin of the N2P input)
 4. Connect the green electrode to the 4N pin (the bottom pin of the N4P input)
@@ -294,34 +284,34 @@ The picture to the right is a perspective view of the electrode inputs that we a
 
 ![Electrode Paste](../assets/images/electrodePaste.png)
 
-a) We're going to start with the electrodes on your head. Begin by scooping Ten20 electrode paste into your white gold cup electrode. This is going to be your reference (or SRB2) electrode for the other electrodes on your head. Fill the electrode so there is a little extra electrode paste spilling over the top of the gold cup, as seen in the picture to the right. 
- 
+a) We're going to start with the electrodes on your head. Begin by scooping Ten20 electrode paste into your white gold cup electrode. This is going to be your reference (or SRB2) electrode for the other electrodes on your head. Fill the electrode so there is a little extra electrode paste spilling over the top of the gold cup, as seen in the picture to the right.
+
 **Note:** Use a paper towl or napkin to remove excess electrode paste as you are applying your electrodes.
 
 ![SRB2](../assets/images/earlobe.JPG)
- 
+
 b) Now apply this electrode to either one of your earlobes (either A1 or A2 as seen on the 10-20 system image  below). You can use some medical tape (or electric tape!) to give this electrode some extra stability, ensuring that it does not fall off. This electrode is the reference that all of the EEG electrodes on your head will be measured in comparison to. The uV reading that will appear in the GUI's EEG DATA montage is a measure of the potential difference between each electrode and this reference electrode (SRB2). SRB1 (the top SRB pin) can also be used as a reference pin, but we won't discuss that here. Check out the other docs on how to maximize the usage of the other pins!
 
 ![Fp2](../assets/images/Fp2.JPG)
- 
-c) Follow the same procedure for the purple electrode and apply it to your forehead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forehead's centerline. 
- 
+
+c) Follow the same procedure for the purple electrode and apply it to your forehead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forehead's centerline.
+
 ![1020](../assets/images/1020.jpg)
- 
+
 This electrode location is Fp2 on the [10-20 System](http://en.wikipedia.org/wiki/10-20_system_%28EEG%29). The 10-20 System international standard for electrode placement in the context of EEG. Fp indicates the a "frontal polar" site.
- 
+
 ![O1](../assets/images/O1.JPG)
- 
+
 d) Now follow the same procedure for the red electrode and place it on the back of your head, 1 inch above the inion (as seen on the 10-20 system), and 1 inch to the left. This electrode location is O1 on the 10-20 system. The 'O' stands for occiptal, meaning above your occipital lobe (or visual cortex).
- 
+
 **Note:** to do this, pull your hair aside and make sure the electrode is nested as deeply as possible, with the electrode paste making a definitive conductive connection between your scalp and the gold cup.
 
 ![headband](../assets/images/headband.JPG)
 
-e) Now follow the same procedure as step 2 above to apply the black electrode to your other earlobe (either A1 or A2 from the 10-20 system). The black electrode is connected to the BIAS pin, which is used for noise cancelling. It is similar to a GROUND pin, which establishes a common ground between the Cyton board and your body, but it has some extra destructive interference noise cancelling techniques built in! 
+e) Now follow the same procedure as step 2 above to apply the black electrode to your other earlobe (either A1 or A2 from the 10-20 system). The black electrode is connected to the BIAS pin, which is used for noise cancelling. It is similar to a GROUND pin, which establishes a common ground between the Cyton board and your body, but it has some extra destructive interference noise cancelling techniques built in!
 
-You're now done connecting electrodes to your noggin! I like to use a cheap cotton hairband to add extra stability to all of the electrodes connected to my head, by placing it gently on top of all of the electrodes. 
- 
+You're now done connecting electrodes to your noggin! I like to use a cheap cotton hairband to add extra stability to all of the electrodes connected to my head, by placing it gently on top of all of the electrodes.
+
 ![forearm](../assets/images/forearm.JPG)
 
 f) Now connect the green electrode to your right forearm, somewhere on top of a muscle that you can flex easily. With this electrode we will be looking at both heart activity and muscle activity. I also like to use tape to hold this electrode in place. That's going to hurt a little bit to take off. Hopefully your arms aren't as hairy as mine...
@@ -329,7 +319,7 @@ f) Now connect the green electrode to your right forearm, somewhere on top of a 
 ![wrist](../assets/images/wrist.JPG)
 
 g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. This will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
- 
+
 
 ### 4. Launch the GUI and adjust your channel settings
 
@@ -339,7 +329,7 @@ b) Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI 
 
 ![Power Down](../assets/images/powerDown.JPG)
 
-c) Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key. 
+c) Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key.
 
 ![Signals At Start](../assets/images/signalsAtStart.png)
 
@@ -429,7 +419,7 @@ It's interesting to note that these signals are not picked up in channel 4. This
 
 ![Alpha Brain Waves!](../assets/images/alpha.png)
 
-Now, for what we've all been waiting for... let's check out some brain waves! 
+Now, for what we've all been waiting for... let's check out some brain waves!
 
 Firstly, deactivate channel 4 so that you are only looking at the EEG channels (2 and 7).
 
@@ -439,7 +429,7 @@ For more information on Alpha waves check out [Wikipedia](http://en.wikipedia.or
 
 Once you've closed your eyes, have your friend press the 'm' key on your keyboard to take screenshots. Tell him or her to wait until a strong alpha spike emerges on the Fast Fourier Transform (FFT) Graph, the graph in the lower-right of the GUI. The spike should be somewhere between 7.5-12.5 on the the x-asix of the FFT graph, indicating that there is a strong presence of waves in that frequency range.
 
-After you've taken a few good screenshots, open up the .JPGs and take a look. **Note:** the screenshots are located in the root directory of your application, or in the OpenBCI_GUI directory if you are working from Processing. 
+After you've taken a few good screenshots, open up the .JPGs and take a look. **Note:** the screenshots are located in the root directory of your application, or in the OpenBCI_GUI directory if you are working from Processing.
 
 You'll notice that the strongest alpha wave signals should be appearing in channel 7, the O2 (O standing for occipital) electrode on the back of your head. Count the number of waves in a single 1-second time period on channel 7 of the EEG DATA montage. The number of waves should correspond x-axis position of the spike on the FFT graph. If you've identified your alpha waves, congratulations! You've now seen your first brain waves with OpenBCI!
 
@@ -448,12 +438,18 @@ You'll notice that the strongest alpha wave signals should be appearing in chann
 For more ideas on what to do next, check out the OpenBCI [Community Page] (http://openbci.com/community/) and the other OpenBCI Docs pages.
 
 Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/) or [MacDown](https://macdown.uranusjr.com/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum/). For all other inquiries, contact us at contact@openbci.com.
- 
 
 
-## RUN THE GUI ON macOS SIERRA
 
-When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
+## Trouble shooting on macOS SIERRA
+
+If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button. If you don't see the `Anywhere` button, jump down a paragraph and follow the terminal instructions.
+
+![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
+
+When Apple updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. We have fixed this issue since 2.1.x of the `OpenBCI_GUI`, but there still are versions where the permission issue could arise.
+
+Here's how to do it:  
 
 ![sudo](../assets/images/ganglion_sudo-command.png)
 
