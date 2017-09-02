@@ -140,10 +140,10 @@ On Windows, move the application to Program Files. Always run as administrator.
 
 ### Streaming Data On Cyton
 
-Select Cyton from the first drop down
+Select `LIVE (from Cyton)` from the first drop down
 ![selecting cyton from drop down](../assets/images/wifi_cyton_select_cyton.png)
 
-Select "Wifi (from WiFi Shield)" as the transfer protocol
+Select `Wifi (from WiFi Shield)` as the transfer protocol
 ![selecting wifi from the transfer protocol](../assets/images/wifi_cyton_select_wifi.png)
 
 The GUI will automatically start searching for WiFi Shields
@@ -164,6 +164,9 @@ Press `Start Data Stream` to begin streaming!
 When you are finished recording, you may press `Stop Data Stream`
 ![cyton wifi stopping data stream](../assets/images/wifi_cyton_data_stream_stop.png)
 
+Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+![cyton wifi stop system](../assets/images/wifi_cyton_stop_system.png)
+
 If you are unable to connect to the board
 
 1. Verify the EXT PWR switch is in the ON position.
@@ -173,25 +176,106 @@ If you are unable to connect to the board
 
 ### Streaming Data On Ganglion
 
-Select Ganglion from the first drop down
-![selecting ganglion from drop down](../assets/images/wifi_)
+Select `LIVE (from Ganglion)` from the first drop down
+![selecting ganglion from drop down](../assets/images/wifi_ganglion_select_ganglion.png)
 
-Select "Wifi (from WiFi Shield)" as the transfer protocol
-![selecting wifi from the transfer protocol](../assets/images/wifi_)
+Select `Wifi (from WiFi Shield)` as the transfer protocol
+![selecting wifi from the transfer protocol](../assets/images/wifi_ganglion_select_wifi.png)
 
-Select the desired WiFi Shield from the dropdown list and configure output settings
-![selecting wifi shield](../assets/images/wifi_)
+The GUI will automatically start searching for WiFi Shields
+![wifi with ganglion searching for wifi shield](../assets/images/wifi_ganglion_searching.png)
 
-Press connect and start streaming!
-![ganglion wifi page](../assets/images/wifi_)
+Select the desired WiFi Shield from the dropdown list
+![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
+
+The Ganglion will default to a sample rate of 1600Hz with a latency of 10ms. For the majority of modern data WiFi networks these settings will work. If your data transfer LED (`D2` on WiFi Shield) is not solid blue, then you should try adjusting your sample rate and latency while you determine your wireless network problems.
+![setting latency and sample rate of ganglion](../assets/images/wifi_ganglion_settings.png)
+
+Press `START SYSTEM` when you're ready to begin streaming.
+![wifi ganglion start system](../assets/images/wifi_ganglion_start_system.png)
+
+Press `Start Data Stream` to begin streaming!
+![ganglion wifi starting data stream](../assets/images/wifi_ganglion_data_stream_start.png)
+
+When you are finished recording, you may press `Stop Data Stream`
+![ganglion wifi stopping data stream](../assets/images/wifi_ganglion_data_stream_stop.png)
+
+Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+![ganglion wifi stop system](../assets/images/wifi_ganglion_stop_system.png)
 
 If you are unable to connect to the board
 
-1. Always turn the WiFi Shield on and then immediately turn the Ganglion on.
-2. Verify the EXT PWR switch is in the OFF position.
-3. Verify you are using one battery for the Ganglion and one battery for the WiFi Shield.
+1. Verify all three LEDs on the WiFi Shield are solid on.
+2. If using the Ganglion to power the WiFi Shield, verify the `EXT PWR` switch is in the `ON` position.
+3. If using two batteries, verify the `EXT PWR` switch is in the `OFF` position and be sure to always turn the WiFi Shield on before the Ganglion.
 4. Verify the latest firmware on the Ganglion
 5. Verify the latest firmware on the WiFi Shield
+
+## Get WiFi Shield IP, Mac Address, Firmware Version and more
+
+Select `LIVE (from Ganglion)` or `LIVE (from Cyton)` from the first drop down
+
+![selecting ganglion from drop down](../assets/images/wifi_ganglion_select_ganglion.png)
+
+Select `Wifi (from WiFi Shield)` as the transfer protocol
+
+![selecting wifi from the transfer protocol](../assets/images/wifi_ganglion_select_wifi.png)
+
+The GUI will automatically start searching for WiFi Shields
+
+![wifi with ganglion searching for wifi shield](../assets/images/wifi_ganglion_searching.png)
+
+Select the desired WiFi Shield from the dropdown list
+
+![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
+
+Select the right carrot button to open the WiFi Configuration window
+
+![selecting right carrot to open wifi config](../assets/images/wifi_config_select_right_carrot.png)
+
+If the connection to the WiFi Shield was successful, you will see a success message.
+
+![success connection to wifi shield](../assets/images/wifi_config_success_message.png)
+
+When you are finished, press the left facing carrot to close the WiFi Configuration window.
+
+![selecting left facing arrow to close wifi configuration](../assets/images/wifi_config_success_message.png)
+
+### Get WiFi Shield Firmware Version
+
+To verify you have the latest OpenBCI_Wifi firmware version, select `FIRMWARE VERSION` from the WiFi Configuration menu
+
+![selecting firmware version for wifi](../assets/images/wifi_config_get_firmware_version.png)
+
+Compare the firmware version with the [latest OpenBCI_Wifi firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/tag/v1.1.3) available and download/update your firmware if it's outdated.
+
+### Get WiFi Shield IP Address
+
+To get the Wifi Shield IP Address, select `IP ADDRESS` from the WiFi Configuration menu
+
+![getting ip address for openbci wifi shield](../assets/images/wifi_config_get_ip_address.png)
+
+### Get WiFi Shield Mac Address
+
+To get the Wifi Shield IP Address, select `MAC ADDRESS` from the WiFi Configuration menu
+
+![getting mac address for openbci wifi shield](../assets/images/wifi_config_get_mac_address.png)
+
+### What OpenBCI Board is Connected to the Wifi Shield
+
+If you are having trouble starting to stream with the GUI, then select `OPENBCI BOARD` to verify the WiFi Shield is attached properly to the Cyton or Ganglion.
+
+![getting connected openbci board](../assets/images/wifi_config_get_board_type.png)
+
+### Erase WiFi Credentials
+
+If you want to switch what WiFi network your WiFi Shield is on, you can select `ERASE CREDENTIALS`. **NOTE: WiFi Shield must be detached from Ganglion or Cyton.**
+
+![erase credentials for openbci wifi shield](../assets/images/wifi_config_erase_credentials.png)
+
+The GUI will automatically detach from the WiFi Shield. Your WiFi Shield should now be a hotspot which you can join to give the WiFi Shield the credentials for the new network.
+
+![erase credentials force close](../assets/images/wifi_config_erase_credentials_force_close.png)
 
 ## Helpful links and resources
 
