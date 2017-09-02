@@ -205,7 +205,7 @@ The OpenBCI is now fully qualified port 80 http server that is fully defined on 
 
 ## Connecting with the OpenBCI GUI
 
-[Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI
+[Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI. OpenBCI GUI gained WiFi Shield support as of 3.0.0 or later.
 
 ### Installing OpenBCI GUI
 
