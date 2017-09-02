@@ -1,10 +1,10 @@
 # OpenBCI Wifi
 
-**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**These docs are open source, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
 
 The OpenBCI Wifi Shield was designed in partnership with [Push The World](www.pushtheworld.us). The OpenBCI Wifi PCB was designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [OpenBCI design files repository](https://github.com/OpenBCI/OpenBCI_Wifi_Shield) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
-## OpenBCI Wifi Shield
+## About the WiFi Shield
 
 ### Wifi Board Specs
 
@@ -25,3 +25,7 @@ Top Layer
 ![Wifi Top Layer](../assets/images/wifi_top.png)  
 Bottom Layer  
 ![Wifi Bottom Layer](../assets/images/wifi_bottom.png)  
+
+### Buttons
+
+The top push button, `RESET`, is a reset button that will power cycle the ESP8266 chip. Don't press the `RESET` button when a Ganglion is attached, if you want to power cycle the WiFi Shield, send a `;` command to the Ganglion or Cyton to trigger a power on reset of the WiFi Shield. The bottom button, `PROG`, is use for programming the WiFi Shield over serial UART and is hooked up to GPIO 0.
