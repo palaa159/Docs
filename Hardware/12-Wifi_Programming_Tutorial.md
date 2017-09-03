@@ -8,29 +8,45 @@ The easiest way to update your OpenBCI Wifi Shield Firmware is Over-The-Air (OTA
 
 ## Program WiFi Shield Over The Air
 
-First, download the file called `DefaultWifiShield.bin` from the latest release [OpenBCI_WiFi Github repository](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest). Save to downloads folder.
+### Use Any Web Browser
+
+Pick your default web browser
+![default browser](../assets/images/wifi_firmware_update_default_browser.png)
+
+### Download the WiFi Shield Firmware
+First, download the file called `DefaultWifiShield.bin` from the latest release [OpenBCI_WiFi Github repository](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest).
+
+Save to your downloads folder.
 ![download the latest binary](../assets/images/wifi_firmware_update_download.png)
 
+### Isolate and Power WiFi Shield
 Next **remove your wifi shield from the Cyton or Ganglion** if it's not already.
 
 Plug a battery into the WiFi Shield and power the Shield by turning the power switch to the `ON` position.
 
+### Get WiFi Shield on your Wireless Network
+
 Then get your WiFi Shield on your local wireless network if it's not already. A the tutorial to [get your WiFi Shield on your wireless network](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-the-wifi-shield-on-your-wireless-network) if located in the [WiFi Shield Getting Started Guide](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-overview).
 
-Then use the OpenBCI_GUI to get [your shields ip address](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address).
+### Get Address of WiFi Shield
 
-Next launch your default web browser
-![default browser](../assets/images/wifi_firmware_update_default_browser.png)
+Use the OpenBCI_GUI to get [your shields ip address](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address).
+
+### Go to /update Page of WiFi Shield
 
 Navigate to http://192.168.0.210/update where `192.168.0.210` is the IP Address of your WiFi Shield you got from the OpenBCI_GUI.
 
 ![navigate to update page](../assets/images/wifi_firmware_update_ip_address.png)
 
 On mac, you may use your shields unique name instead of the ip address; i.e. http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier.
+
 ![use unique id on mac](../assets/images/wifi_firmware_update_mac_using_mdns.png)
 
+### Select Binary File to Upload
 Now select the `Choose File` button and from the drop down selected the `DefaultWifiShield.bin` which you downloaded earlier
 ![select choose file](../assets/images/wifi_firmware_update_select_binary.png)
+
+### Update the Firmware
 
 Then select `Update` to start the update process
 ![selecting update](../assets/images/wifi_firmware_update_select_update.png)
@@ -41,14 +57,11 @@ The page will hang for about 10-15 seconds, this the firmware being uploaded.
 Then you will see a success message appear, your WiFi Shield is now rebooting, please continue to wait for about 30 seconds.
 ![success message](../assets/images/wifi_firmware_update_select_update.png)
 
+### Verify New Version Number
+
 Once your web browser refreshes itself and the update page is displayed again, you may navigate to the version page and verify your wifi firmware version matches the version you downloaded. If the version is not correct, then be sure you removed your WiFi Shield from a Cyton or Ganglion and try again.
 
-
-### Uploading The Firmware
-
-**Be sure that the WiFi Shield is not physically connected to either a Ganglion or Cyton.** Use your `Spudger` tool to safely remove the WiFi Shield.
-
-Select choose file and navigate to your Downloads folder where the recently downloaded hex file is, select the hex file and press ok. Then hit the `upload` button, the shield will accept the firmware and reboot.
+![verify firmware version number](../assets/images/wifi_firmware_update_version.png)
 
 ## Wired upload
 
