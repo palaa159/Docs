@@ -3,7 +3,7 @@
 
 This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirety before starting. Have fun!
 
-**Note that the Ganglion is not set to be discoverable out of the box, you need the GUI or another app.
+**Note that the Ganglion is not set to be discoverable out of the box, you need the GUI or another app.**
 
 ## What You Need
 
@@ -44,33 +44,30 @@ Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of
 
 ### 5. Your 6V AA Battery Pack & 4 AA Batteries
 
-![Battery Connection](../assets/images/ganglion_batteryConnection.png)
+Install 4 AA batteries in your battery pack, plug in your Ganglion board and turn on the power switch. You should see the BLUE LED blink gently. Blinking means that the BLE radio is not connected or paired with any computer or phone/tablet. Once the Ganglion is connected, the LED stays steady on.
 
-Install 4 AA batteries in your battery pack, plug in your Ganglion board and turn on the power switch. You should see the BLUE LED blink gently. Blinking means that the BLE radio is not connected or paired with any computer or phone/tablet. Once the Gagnlion is connected, the LED stays steady on.
+![Battery Connection](../assets/images/ganglion_batteryConnection.png)
 
 ## Download/Run the OpenBCI GUI on macOS
 
-![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
-
 First, turn on your computer's Bluetooth.  
 
-Do not use a dongle with macOS. Dongles such as the `CSR` dongle are only needed for Windows and sometimes linux!
+![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
-![GUI unzip](../assets/images/ganglion_GUI-unzip.png)
+Do not use a dongle with macOS. Dongles such as the `CSR` dongles are only needed for Windows and sometimes linux. [Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI for your operating system.
 
-Then go to the [GUI Downloads page](http://openbci.com/donation) and download the latest software release for Mac. The GUI is built on [Processing](https://processing.org/), a creative coding language, so you can also download the OpenBCI Processing Sketch and run it through processing. Once you unzip/extract the download, open the file called `OpenBCI_GUI_200_MACOSX` and there you will find the `OpenBCI_GUI.app`. You can move that into your `Applications` folder.  
+### Install and Run on macOS
 
-**NOTE: If you are using a Mac with macOS Sierra, you MUST move the OpenBCI_GUI.app into your Applications folder. You also need to change your Security & Privacy settings to allow apps from Anywhere. Go to the [end](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-on-macos-sierra) of this page for instructions on how to do that, then come back to continue this tutorial.**
+Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
+
+![Drag and drop application](../assets/images/gui_drag_and_drop.png)
+
+
+Now navigate to your `Applications` folder and double click the `OpenBCI_GUI` You may see a message pop up asking you if you're sure you want to open it. Click Open and the app will launch.
 
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
-When you first run the GUI on your Mac, you will have to give administrator permission. You may see a message pop up asking you if you're sure you want to open it. Click `Open` and the app will launch.
-
-![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
-
-If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button.
-
-## Download/Run the OpenBCI GUI on Windows
+## Install and Run on Windows
 
 **We are in the process of updating this guide to include Windows 7 users. it *is* possible to use the Ganglion and CSR 4.0 BLE Dongle on Windows 7. For now, please visit this [forum post](http://openbci.com/forum/index.php?p=/discussion/918/ganglion-and-windows-7), which outlines the proceedure.**
 
@@ -125,20 +122,31 @@ Go to our [Downloads Page](http://openbci.com/donation) and download the applica
 
 ## Start Using The OpenBCI GUI
 
-![Live From Ganglion](../assets/images/ganglion_select_LIVE-from-ganglion.png)
+### Select LIVE (from Ganglion)
 
-Once the GUI is running, select `LIVE (from Ganglion)`. That button will turn green, and you will see a pane open titled `BLE DEVICES`, and a list of Ganglions in the neighborhood. Each Ganglion has it's own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Gagnlion again. Make a note of *your* Ganglion's 4 character ID.  
+Select `LIVE (from Ganglion)` from the first drop down
+![selecting ganglion from drop down](../assets/images/ble_ganglion_select_ganglion.png)
+
+Select `BLE (on Win from Dongle)` as the transfer protocol
+![selecting ganglion ble from the transfer protocol](../assets/images/ble_ganglion_select_ble.png)
+
+The GUI will automatically start searching for Ganglion devices.
+![wifi with ganglion ble searching for wifi shield](../assets/images/ble_ganglion_searching.png)
+Each Ganglion has it's own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Ganglion again. Make a note of *your* Ganglion's 4 character ID.  
+
+Select the desired Ganglion device from the dropdown list
+![selecting your ganglion ble shield](../assets/images/ble_ganglion_select_ganglion_peripheral.png)
+
+The GUI will automatically generate a recording to a file. You have an option at this point to create your own file name, in the `DATA LOG FILE` window, should you choose to.
 
 ![File Name](../assets/images/fileName.png)
 
-**NOTE every time you run the GUI, it will generate a recording to file. You have an option at this point to create your own file name, in the `DATA LOG FILE` window, should you choose to.**  
+Press `START SYSTEM` when you're ready to begin streaming.
+![ble ganglion start system](../assets/images/ble_ganglion_start_system.png)
 
-![START SYSTEM](../assets/images/startSystem.png)
-
-Click on the Ganglion board name that you want to connect to, so that it turns green, and now you are ready to roll! Press the `START SYSTEM` button. It may take up to a minute, but the GUI is setting itself up and connecting to your Ganglion!
+### Navigating the connected GUI
 
 ![Start Data Stream](../assets/images/ganglion_connected-idle.png)
-
 When the GUI connects, it opens up to the default window layout. For a more in-depth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
 
 ![select layout](../assets/images/ganglion_select-layout.png)
