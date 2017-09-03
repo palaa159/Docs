@@ -6,7 +6,7 @@ The OpenBCI Cyton boards have powerful microcontrollers on them which ship with 
 
 ## Firmware Versions 2.x.x & 3.x.x (Fall 2016 - present)
 
-These instructions apply to programming the Cyton with firware versions 2.x.x, 3.x.x, and onwards! For informaiton about uploading the original OpenBCI Cyton firware (1.x.x), see below.
+These instructions apply to programming the Cyton with firware versions 2.x.x, 3.x.x, and onwards! The radio firmware (the firmware for the dongle and the radio module on your Cyton Board) has not been updated since prior to Fall 2016, so as long as you purchased your Cyton Board after that date, you do not need to worry about reprogamming your radios. For information about uploading the original OpenBCI Cyton firware (1.x.x), see below.
 
 **You will need:**
 
