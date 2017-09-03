@@ -27,7 +27,7 @@ Navigate to http://192.168.0.210/update where `192.168.0.210` is the IP Address 
 ![navigate to update page](../assets/images/wifi_firmware_update_ip_address.png)
 
 On mac, you may use your shields unique name instead of the ip address; i.e. http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier.
-![use unique id on mac](assets/images/wifi_firmware_update_mac_using_mdns.png)
+![use unique id on mac](../assets/images/wifi_firmware_update_mac_using_mdns.png)
 
 Now select the `Choose File` button and from the drop down selected the `DefaultWifiShield.bin` which you downloaded earlier
 ![select choose file](../assets/images/wifi_firmware_update_select_binary.png)
