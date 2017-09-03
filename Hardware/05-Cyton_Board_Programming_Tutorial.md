@@ -16,15 +16,13 @@ These instructions apply to programming the Cyton with firware versions 2.x.x, 3
 
 ![OpenBCI Dongle](../assets/images/dongleConnection.png)
 
-***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board).
+***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board). 
 
-* install the Arduino IDE which can be found here:
-
-	[https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
+* If your computer does not have Arduino v1.8.0 (or later), install the latest Arduino IDE which can be found here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
 **Note for Windows users** While installing Arduino 1.8, if the installer instructs you to uninstall 1.5.8, move the Arduino folder containing 1.5.8 from `Program Files` to your desktop or another folder. Rename this folder to `Arduino_1.5.8`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.8.0 as normal. Navigate to back to your `Program Files` folder and locate the Arduino folder. Rename this folder to `Arduino_1.8.0`. Now drag and drop the `Arduino_1.5.8` back into `Program Files` folder.  
 
-* Download the [OpenBCI_32bit_Library Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/master) repo from our github.
+* Download the [OpenBCI_32bit_Library Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/master) repo from our github. Here is the [.zip link](https://github.com/OpenBCI/OpenBCI_32bit_Library/archive/master.zip).
 
 * Unzip the folder, and if it is named `OpenBCI_32bit_Library-master`, rename it to just `OpenBCI_32bit_Library`.
 
@@ -41,7 +39,7 @@ These instructions apply to programming the Cyton with firware versions 2.x.x, 3
 
 * Unzip the folder.
 
-* Now move the folder called `OBCI32_SD` and everything it contains to:
+* Now move the folder called `OBCI32_SD` (the folder inside of OpenBCI_32Bit_SD-master) and everything it contains to:
 
   On Mac: `/Documents/Arduino/libraries`  
   On Windows: `C:\Users\username\Documents\Arduino\libraries`
@@ -122,7 +120,7 @@ Before you can upload code correctly to the PIC32 with Arduino, you need to add 
 
 Open the OpenBCI_32bit sketch from the File -> Sketchbook dropdown. Then select OpenBCI 32 from the Board drop-down menu.
 
-Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! Now is a good time to plug your Dongle in and power down the Board.
+Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection (towards your computer). If it's on the other side, it will try to program the Dongle-mounted RFduino! Now is a good time to plug your Dongle in and power down the Cyton Board.
 
 ![serial_port](../assets/images/PortSelect.png)
 
@@ -136,18 +134,33 @@ Select the correct serial port for your OpenBCI Dongle.
 
 When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatible IC, so you have to do it manually.
 
+* If you're uploading firmware 3.x.x, you'll need to make sure you have the WiFi library installed before uploading the firmware. To do this, go to Sketch > Include Library > Manage Libraries...
+
+* Then, in the search field in the upper right, type OpenBCI WiFi.
+
+* Now, click OpenBCI_WiFi_Master and install v1.0.0 (or the latest version if there are newer versions).
+
 ![reset_program](../assets/images/RST_PROG.png)
 
+**Note:** we suggest that for the five steps below you use one thumb to press down both the RST and PROG buttons, while using your other thumb to toggle the switch between OFF and PC. 
+
 * Power OFF the OpenBCI Board.
-* Press down both RST and PROG buttons at the same time.
-* Power ON the OpenBCI Board.
+* Press down both RST and PROG buttons at the same time (with your left thumb).
+* Power ON the OpenBCI Board (with your right thumb).
 * Release the RST button while still holding down the PROG button.
 * Release the PROG button.
 
-![Upload32](../assets/images/Upload32.png)
+Now you should see the blue LED on the Cyton Board blinking pleasantly. Your Cyton board is ready to be flashed!
 
-Now you should see the blue LED on the 32bit board blinking pleasantly. Press the upload button on the Arduino IDE. That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done. Happy Hacking!
+* Press the upload button on the Arduino IDE (the circular button with the arrow pointing to the right). That's it! You will see some blinky lights on the Dongle, and after a short while, the Arduino IDE will tell you that it's done. Happy Hacking!
 
+![image](../assets/images/Upload32.png)
+
+** Note: ** occasionally, you may see the error message in the screenshot below. You can ignore this. As long as 
+`Program flash: ...................................#################################### done` appears, 99 out of 100 times your firmware uploaded correctly. If your board doesn't appear to be working in the GUI (or other software), simply try re-uploading the firmware.
+
+
+![Upload32](../assets/images/oddUploadError.png)
 
 ##8bit Upload How-To
 ###NOTE: The 8bit Hardware is no longer in production
