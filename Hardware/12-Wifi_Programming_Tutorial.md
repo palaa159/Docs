@@ -36,10 +36,10 @@ Then select `Update` to start the update process
 ![selecting update](../assets/images/wifi_firmware_update_select_update.png)
 
 The page will hang for about 10-15 seconds, this the firmware being uploaded.
-![firmware uploading](../assets/images/wifi_firmware_update_select_update.png)
+![firmware uploading](../assets/images/wifi_firmware_update_first_wait_page.png)
 
 Then you will see a success message appear, your WiFi Shield is now rebooting, please continue to wait for about 30 seconds.
-![success message](assets/images/wifi_firmware_update_select_update.png)
+![success message](../assets/images/wifi_firmware_update_select_update.png)
 
 Once your web browser refreshes itself and the update page is displayed again, you may navigate to the version page and verify your wifi firmware version matches the version you downloaded. If the version is not correct, then be sure you removed your WiFi Shield from a Cyton or Ganglion and try again.
 
