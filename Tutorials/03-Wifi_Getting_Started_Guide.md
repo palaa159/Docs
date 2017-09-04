@@ -93,17 +93,32 @@ Another option is to use two batteries and keep `EXT PWR` to `OFF`.
 
 ## Get the WiFi Shield On Your Wireless Network
 
-The WiFi Shield must be on the same wireless network as your computer, smart phone, or other internet connected device you wish to talk to the device with. When the WiFi Shield can't join a known network, the Shield turns into a WiFi hotspot, and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi shield. Use any wireless device to connect to launch a captive touch portal from the the WiFi Shield hotspot.
+The WiFi Shield must be on the same wireless network as your computer, smart phone, or whatever other internet connected device you wish to talk to the WiFi Shield with. For example, in order to stream data into the OpenBCI GUI using your WiFi Shield, you must first make sure that your WiFi shield and computer that is running the OpenBCI GUI are on the same WiFi network.
 
-The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network. Push The World is planning a WiFi direct connection as another alternative for researchers and those on enterprise networks.
+Before the WiFi Shield has joined a network, the Shield acts as a WiFi hotspot, and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi shield.
+
+To connect your WiFi shield to your local WiFi network (or any other WiFi network), use any WiFi-enabled device to connect to the WiFi shield hotspot. Doing this launches the captive touch portal as shown in the screenshots below. The captive touch portal is used to connect your WiFi shield to your local WiFi network (or any other WiFi network) so that it can share data across that network. 
+
+**Important Notes Before You Continue:** 
+
+* In order to pair you WiFi Shield with a WiFi network (or update its firmware), it cannot be attached to an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately and disconnected from a board, so that it can effectively power cycle after a network connection or firmware udpate.
+* Before attempting to connect to your WiFi Shield, turn the WiFi of your phone/computer/etc. off/on
+* It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
+* Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must first "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI
+* The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network if this is an issue. Push The World is planning a WiFi direct connection as another alternative for researchers and those on enterprise networks.
+
+Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across. 
+
 
 ### Example
 
-A WiFi network is called _MeerketManor_, it's password protected, and the iPhone is connected to _MeerketManor_.
+Your local WiFi network is called _MeerketManor_ and it is password protected. You turn on the WiFi on your smartphone and search for WiFi network options. Additionally, your WiFi Shield is connected to a battery and powered on (and not connected to an OpenBCI Board!). In your iPhone's WiFi network options, you see _MeerketManor_ and "OpenBCI-A4AD" (the last 4 characters will be different in your case).
 
 ![iPhone Connected to MeerketManor](../assets/images/wifi_join_network_1.PNG)
 
-There is a known issue where it may take several times to bring up the captive touch portal, Push The World is actively seeking a better solution, in the meantime, be patient and try multiple times to connect to the board. Power cycling the board may useful.
+You click "OpenBCI-A4AD", in an attempt to launch the captive touch portal.
+
+**Note:** there is a known issue where it may take several times to bring up the captive touch portal. Push The World is actively seeking a better solution, in the meantime, be patient and try multiple times to connect to the board. Power cycling the board may useful.
 
 ![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
 
@@ -115,11 +130,13 @@ On the next screen, see that _MeerketManor_ is listed as a possible network for 
 
 ![Captive touch portal second screen](../assets/images/wifi_captive_touch_second_screen.PNG)
 
-The credentials saved page will show. If a mistake was made in the password, no worries, Try to rejoin the WiFi Shield network and repeat the process. If the _MeerketManor_ password was entered correct, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range the WiFi shield is not connected to any board.
+If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi! 
+
+**Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
 
 ![Captive touch portal final screen](../assets/images/wifi_captive_touch_final_screen_shot.PNG)
 
-The OpenBCI is now fully qualified port 80 http server that is fully defined on with an industry standard swagger.io format. Click for [full http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0).
+If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0)!
 
 ## Connecting with the OpenBCI GUI
 
