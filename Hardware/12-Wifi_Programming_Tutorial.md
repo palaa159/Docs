@@ -24,21 +24,25 @@ Next **remove your wifi shield from the Cyton or Ganglion** if it's not already.
 
 Plug a battery into the WiFi Shield and power the Shield by turning the power switch to the `ON` position.
 
-### Get WiFi Shield on your Wireless Network
+### Get WiFi Shield on Your Wireless Network
 
 Then get your WiFi Shield on your local wireless network if it's not already. A the tutorial to [get your WiFi Shield on your wireless network](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-the-wifi-shield-on-your-wireless-network) if located in the [WiFi Shield Getting Started Guide](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-overview).
 
 ### Get Address of WiFi Shield
 
-Use the OpenBCI_GUI to get [your shields ip address](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address).
+Find the IP Address of your WiFi Sheild by clicking the '>' button in the WiFi section of the Control Panel, and then clicking the IP Address button, as shown in the image below:
+
+![image](../assets/images/IPfind.png)
+
+If you're having issues with that step, here's a more in-depth tutorial on using the OpenBCI_GUI to get [your shields ip address](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address).
 
 ### Go to /update Page of WiFi Shield
 
-Navigate to http://192.168.0.210/update where `192.168.0.210` is the IP Address of your WiFi Shield you got from the OpenBCI_GUI.
+Navigate to http://192.168.0.XXX/update where `192.168.0.XXX` is the IP Address of your WiFi Shield found in the step above. 
 
 ![navigate to update page](../assets/images/wifi_firmware_update_ip_address.png)
 
-On mac, you may use your shields unique name instead of the ip address; i.e. http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier.
+On mac, you may use your shields unique name instead of the ip address; i.e. http://OpenBCI-2F0E.local/update where `2F0E` is your devices unique identifier. Either option works on Mac.
 
 ![use unique id on mac](../assets/images/wifi_firmware_update_mac_using_mdns.png)
 
@@ -55,6 +59,9 @@ The page will hang for about 10-15 seconds, this the firmware being uploaded.
 ![firmware uploading](../assets/images/wifi_firmware_update_first_wait_page.png)
 
 Then you will see a success message appear, your WiFi Shield is now rebooting, please continue to wait for about 30 seconds.
+
+**Note:** on some browsers, the page will not automatically refresh. If you've waited more than 30 seconds for the success message to appear, skip to the next step and see if it works. If it doesn't try the above step again.
+
 ![success message](../assets/images/wifi_firmware_update_select_update.png)
 
 ### Verify New Version Number
