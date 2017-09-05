@@ -8,9 +8,9 @@ The purpose of this doc is to describe what's required to interface another micr
 
 Please have the [latest Arduino](https://www.arduino.cc/en/Main/Software) version downloaded and installed.
 
-## Install OpenBCI Wifi Master Library
+## Install OpenBCI Wifi Master
 
-There are many options for downloading the OpenBCI Wifi Master Library.
+There are many options for downloading the OpenBCI Wifi Master.
 
 ### From Arduino Library Manager (easiest!)
 
@@ -18,11 +18,18 @@ Simply search for _OpenBCI Wifi Master_ in the Arduino Library Manager. For help
 
 ### Manual Installation
 
-Download the latest (or version of choice) from [arduinolibraries.info](http://www.arduinolibraries.info/libraries/open-bci_wifi_master). Then follow the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+ 1. Download the latest (or version of choice) from [arduinolibraries.info](http://www.arduinolibraries.info/libraries/open-bci_wifi_master).
+ 2. Unzip the folder and change the name to `OpenBCI_Wifi_Master`
+ 3. Move `OpenBCI_Wifi_Master` to:
 
-### From Github
+  On Mac: `/Documents/Arduino/libraries`  
+  On Windows: `C:\Users\username\Documents\Arduino\libraries`
 
-Check out the official repository for the [OpenBCI_Wifi_Master_Library](https://github.com/OpenBCI/OpenBCI_Wifi_Master_Library). If you plan to make changes, clone the repository to your libraries folder.
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Clone From Github
+
+Use a git client to clone the official repository for the [OpenBCI_Wifi_Master_Library](https://github.com/OpenBCI/OpenBCI_Wifi_Master_Library) into your `libraries` folder.
 
 ## Sending Data to WiFi Shield
 

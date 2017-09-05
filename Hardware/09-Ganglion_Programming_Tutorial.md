@@ -1,8 +1,12 @@
 # Ganglion Programming Tutorial
 
-## Download binary from Github
+This guide will walk you through how to update your Ganglion firmware. Downloading the latest binary and Over The Air programming makes updating the Ganglion a breeze with a mobile device. If you want to compile the code in Arduino continue to the [Building From Source](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial#ganglion-programming-tutorial-building-from-source) portion of the guide.
 
-Please download the latest binary from the Releases section on Github. Then jump down to [setup mobile device for OTA programming](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial#ganglion-programming-tutorial-setup-mobile-device-for-ota-programming)
+## Download The Latest Firmware Build
+
+[v2.0.0 Direct Download](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/download/v2.0.0/DefaultGanglion.ino.Simblee.zip)
+
+You can read the release notes and more at the [on Github](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest) or jump down to [setup your mobile device for OTA programming](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial#ganglion-programming-tutorial-setup-mobile-device-for-ota-programming) to continue
 
 ## Building From source
 
@@ -15,16 +19,17 @@ The [Simblee](https://www.simblee.com/) radio module that is at the heart of the
 5. Connect your phone or tablet to the Ganglion
 6. Upload new code Over The Air
 
-The following tutorials will get your computer and the Arduino IDE set up to create the correct ZIP file, and also show how to use your phone or tablet to upload new code to the Ganglion.   
+The following tutorials will get your computer and the Arduino IDE set up to create the correct ZIP file, and also show how to use your phone or tablet to upload new code to the Ganglion. This guide will also teach you how to upload code to your ganglion for the first time.
 
-***IMPORTANT: Ganglions shipped prior to February 27, 2017 will NOT program Over The Air for the first time! If you purchased your Ganglion prior to 2/27/17, Please follow the instructions at the bottom of this page to program your Ganglion for the first time.***
+***IMPORTANT: Ganglions shipped prior to February 27, 2017 will NOT program Over The Air for the first time! If you purchased your Ganglion prior to 2/27/17, Please follow the instructions below up till How to create an OTA File and read the instructions the bottom of this page to program your Ganglion for the first time.***
 
-## Setting Up for OTA Programming On A MAC
 ### What You Need
 
 * Arduino IDE v1.8.0 Or Newer
 * Simblee Board Files
-* Compiler Tools
+* Ganglion Library Firmware
+* Wifi Master Library Firmware
+* Compiler Tools (for OTA)
 
 ![Download Arduino Mac](../assets/images/ganglion_download-arduino-mac.png)
 
@@ -50,6 +55,55 @@ and you will find the file called `variant.h`. Open this file up in the editor o
 Make sure to **save** and close the file.  
 **IMPORTANT NOTE:** If you don't do this, your Ganglion will not work after you reprogram it!
 
+### Install Firmware From Arduino Library Manager (easiest!)
+
+Don't know what the _Library Manager_ is? Skim over the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc3).
+
+Open the _Library Manager_ and search for _OpenBCI_ and install the latest version for `OpenBCI_Ganglion_Library` and `OpenBCI_Wifi_Master`.
+
+### Manual Installation of Ganglion Firmware
+
+ 1. Download the latest [OpenBCI_Ganglion_Library](http://www.arduinolibraries.info/libraries/open-bci_ganglion_library), it's the top most zip file.
+ 2. Unzip the folder and change the name to `OpenBCI_Ganglion_Library`
+ 3. Move `OpenBCI_Ganglion_Library` to:
+
+  On Mac: `/Documents/Arduino/libraries`  
+  On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+If you don't have a `libraries` folder there, go ahead and make one.  
+
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Manual Installation of WiFi Master Firmware
+
+ 1. Download the latest [WiFi Master Library](http://www.arduinolibraries.info/libraries/open-bci_wifi_master), it's the top most zip file.
+ 2. Unzip the folder and change the name to `OpenBCI_Wifi_Master`
+ 3. Move `OpenBCI_Wifi_Master` to:
+
+  On Mac: `/Documents/Arduino/libraries`  
+  On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Clone The Repos From Github
+
+Developers looking to contribute or write custom firmware can clone the firmware repositories directly to your `libraries` folder
+
+	On Mac: `/Documents/Arduino/libraries`  
+	On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+* [OpenBCI_Ganglion_Library](https://github.com/OpenBCI/OpenBCI_Ganglion_Library)
+* [OpenBCI_Wifi_Master_Library](https://github.com/OpenBCI/OpenBCI_Wifi_Master_Library)
+
+### Select 'Simblee' as Board
+
+If you followed the process in the previous link, and you will be able to select the _Simblee_ board from the Tools >> Board >> dropdown menu!
+
+### Select DefaultGanglion.ino from Examples
+
+* In the Arduino IDE go to `File-->Examples-->OpenBCI_Ganglion_Library-->DefaultGanglion` which will launch the Ganglion firmware. **NOTE You must upload ONLY the `DefaultGanglion` Sketch!** If you can't see `OpenBCI_Ganglion_Library` then verify `Simblee` is selected as board type.
+
+## How to Create OTA File
 
 ![Rename platform file](../assets/images/ganglion_platform-rename.png)
 
@@ -67,17 +121,7 @@ Next, download the necessary files [here](https://github.com/biomurph/Ganglion_O
 * nrfutil_macosx
 * platform.txt
 
-Move the files called `mkdfuzip`, `nrfutil_macosx`, and `platform.txt` into your `Simblee/1.1.0` folder. Restart or launch Arduino.
-
-### Get The Ganglion Library
-
-Go to our gihub repo and either clone or download the [OpenBCI_Ganglion_Library](https://github.com/OpenBCI/OpenBCI_Ganglion_Library). Move the folder called `OpenBCI_Ganglion_Library` into your `Documents/Arduino/libraries` folder. If you don't have a `libraries` folder there, go ahead and make one.  
-
-Launch, or relaunch the Arduino IDE, and open the  
-`File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion`  
-sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.
-
-### Compile Ganglion Firmware and Create OTA File
+Move the files called `mkdfuzip`, `nrfutil_macosx`, and `platform.txt` into your `Simblee/1.1.0` folder. **Restart or launch Arduino**.
 
 ![Create OTA File](../assets/images/ganglion_export-compiled-binary.png)
 
@@ -89,13 +133,10 @@ Now you're ready to create custom Ganglion firmware that is packaged correctly f
 **IMPORTANT NOTE:** Whenever you want to create or modify Ganglion firmware, You must **Always** put the line  
 `#include <OpenBCI_Ganglion_Library.h>`  
 at the top of your code!  
-To create the OTA files, simply select `Export compiled Binary` from the `Sketch` menu. The Arduion IDE will take a few moments, and the tools you just installed will create the `.zip` file you need for OTA ***right in the sketch folder*** right beside your sketch! Cool! Go ahead and change the name of the file to remove the `.ino.Simblee` and you are good to go.
-
-
+To create the OTA files, simply select `Export compiled Binary` from the `Sketch` menu. The Arduino IDE will take a few moments, and the tools you just installed will create the `.zip` file you need for OTA ***right in the sketch folder*** right beside your sketch! Cool! Go ahead and change the name of the file to remove the `.ino.Simblee` and you are good to go.
 
 ## Setting Up for OTA Programming On A Windows
 ### Coming Sooooon!
-
 
 ## Setup Mobile Device For OTA Programming
 
@@ -185,7 +226,7 @@ Now we need to get the `.zip` file from your Arduinn Sketch folder to your iPhon
 If you ever want to re-upload a program that you already have on your phone, select the `DFU` tool after launching the nRF Toolbox app. Tap the `Select File` button, and on the next screen at the bottom you will see an option for `User Files`. Select that, and then `Inbox` on the next screen to choose from all of your nRF Imported files.
 
 
-## Program Ganglion Using Hardware
+## Setting up to Program Ganglion Using Hardware
 
 The first Ganglions that were shipped out have firmware that will not allow for OTA programming. The problem came from using a 'virtual EEPROM' in the code. **If you ordered your Ganglion before 2/27/17 you will need to go through this process before you can program OTA.** After doing this once, you will not need to do it again!
 
@@ -207,34 +248,26 @@ The 0.1uF capacitor needs to be inbetween the`RESET` pin of the Ganglion and the
 
 ### Set Up Arduino to Program Your Ganglion
 
-If you don't already have the Arduino IDE software on your computer, go [here](https://www.arduino.cc/en/Main/Software) to download the latest version for macOS.  
-Then, follow the instructions in the [Simblee Quick Start Guide](https://www.simblee.com/Simblee_Quickstart_Guide_v1.1.0.pdf) to install the Simblee board files in Arduino for macOS.  
+Follow the guide at the top of this page called [Build From Source](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial#ganglion-programming-tutorial-building-from-source) all that way down till _How To Create an OTA File_, then come back here.
 
-### Modify The Simblee Board Files
+### 'Simblee' selected and 'DefaultGanglion' open
 
-![Open Arduino Contents](../assets/images/ganglion_variant-file-mod.png)
+Select Simblee from menu bar `Tools > Board` and open the `DefaultGanglion` example from `File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion`.
 
-In order to program the Simblee to communicate and control the Ganglion, we need to make a quick change to the `variants.h` file in the Simblee folder that you just loaded into Arduino. Naviage to the folder   `/Applications/Arduino.app/Contents/Java/portable/packages`  
-`/Simblee/hardware/Simblee/1.1.0/variants/Simblee`,  
-and you will find the file called `variant.h`. Open this file up in the editor of your choice, and change the pin defines as shown.  
-**NOTE** To access the application contents, right click on the application [or `control` + left click] and select `Show Package Contents`.
+### Plug in Dongle or FTDI Friend and Select Serial Port
 
-| define  | DEFAULT  | Change To |
-|:----- |:------:| :-------:|
-| PIN_SPI_SS     | 6u | 26u |
-| PIN_SPI_MOSI   | 5u | 18u |
-| PIN_SPI_MISO   | 3u | 15u |
-| PIN_SPI_SCK    | 4u | 16u |   
+Now is a good time to plug your Dongle in and power up the Ganglion.
 
-Make sure to **save** and close the file.  
-**IMPORTANT NOTE:** If you don't do this, your Ganglion will not work after you reprogram it!
+![serial_port](../assets/images/PortSelect.png)
 
-### Get The Ganglion Library
+* Select the correct serial port from the `Tools > Port` menu for your OpenBCI Dongle or FTDI friend.
 
-Go to our gihub repo and either clone or download the [OpenBCI_Ganglion_Library](https://github.com/OpenBCI/OpenBCI_Ganglion_Library). Move the folder called `OpenBCI_Ganglion_Library` into your `Documents/Arduino/libraries` folder. If you don't have a `libraries` folder there, go ahead and make one.  
+	* On Macs, this will be named **/dev/tty.usbserial-DN00nnnn** where the nnnn is a combination of numbers and letters specific to your OpenBCI Dongle.
 
-Launch, or relaunch the Arduino IDE, and open the  
-`File > Examples > OpenBCI_Ganglion_Library > DefaultGanglion`  
-sketch. Make sure that you select the correct Serial Port from the `Tools > Port` menu, and also select Simblee from the `Tools > Board` menu.  
+	* On Windows, the serial port will be listed as a numbered COM port.
+
+	* On Linux, it will be different.
+
+### Verify Wire Connections and Press Upload
 
 With your wires all connected correctly, you should be able to click the `Upload` button and successfully re-program the Ganglion. Now you're ready to do OTA Programming!
