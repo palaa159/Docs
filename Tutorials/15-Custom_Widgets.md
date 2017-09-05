@@ -16,7 +16,7 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI's interface panes. 
 
 ### Step 1 - duplicate the W_template.pde file & rename
 
-The [W_template.pde](https://github.com/OpenBCI/OpenBCI_GUI/blob/master/OpenBCI_GUI/W_Template.pde) file is designed to serve as a simple starting point for creating your own widgets. You'll want to start by duplicating this file and renaming it to something like W_myNewWidget.pde, where 'myNewWidget' is something relevant to the purpose of your new widget! Try to adhere to the naming convention and put 'W_' in front to make sure that all of your widgets end up next to one another in your project directory.
+The [W_template.pde](https://github.com/OpenBCI/OpenBCI_GUI/blob/master/OpenBCI_GUI/W_Template.pde) file is designed to serve as a simple starting point for creating your own widgets. You'll want to start by duplicating this file and renaming it to something like W_myNewWidget.pde, where "myNewWidget" is something relevant to the purpose of your new widget! Try to adhere to the naming convention and put **W_** in front to make sure that all of your widgets end up next to one another in your project directory.
 
 You need to remember to rename the class to make sure that it is a unique and not the same class as W_template.pde. The first uncommented line of your file should read:
 
