@@ -97,18 +97,17 @@ The WiFi Shield must be on the same wireless network as your computer, smart pho
 
 Before the WiFi Shield has joined a network, the Shield acts as a WiFi hotspot, and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi shield.
 
-To connect your WiFi shield to your local WiFi network (or any other WiFi network), use any WiFi-enabled device to connect to the WiFi shield hotspot. Doing this launches the captive touch portal as shown in the screenshots below. The captive touch portal is used to connect your WiFi shield to your local WiFi network (or any other WiFi network) so that it can share data across that network. 
+To connect your WiFi shield to your local WiFi network (or any other WiFi network), use any WiFi-enabled device to connect to the WiFi shield hotspot. Doing this launches the captive touch portal as shown in the screenshots below. The captive touch portal is used to connect your WiFi shield to your local WiFi network (or any other WiFi network) so that it can share data across that network.
 
-**Important Notes Before You Continue:** 
+**Important Notes Before You Continue:**
 
-* In order to pair you WiFi Shield with a WiFi network (or update its firmware), it cannot be attached to an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately and disconnected from a board, so that it can effectively power cycle after a network connection or firmware udpate.
-* Before attempting to connect to your WiFi Shield, turn the WiFi of your phone/computer/etc. off/on
+* In order to unpair your WiFi Shield with a WiFi network (or update its firmware), it cannot be attached to an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately and disconnected from a board, so that it can effectively power cycle after a network connection or firmware update.
+* If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
 * It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must first "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI
 * The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network if this is an issue. Push The World is planning a WiFi direct connection as another alternative for researchers and those on enterprise networks.
 
 Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across. 
-
 
 ### Example
 
@@ -130,7 +129,7 @@ On the next screen, see that _MeerketManor_ is listed as a possible network for 
 
 ![Captive touch portal second screen](../assets/images/wifi_captive_touch_second_screen.PNG)
 
-If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi! 
+If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi!
 
 **Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
 

@@ -6,7 +6,7 @@ The OpenBCI Cyton boards have powerful microcontrollers on them which ship with 
 
 ## Firmware Versions 2.x.x & 3.x.x (Fall 2016 - present)
 
-These instructions apply to programming the Cyton with firware versions 2.x.x, 3.x.x, and onwards! The radio firmware (the firmware for the dongle and the radio module on your Cyton Board) has not been updated since prior to Fall 2016, so as long as you purchased your Cyton Board after that date, you do not need to worry about reprogamming your radios. For information about uploading the original OpenBCI Cyton firware (1.x.x), see below.
+These instructions apply to programming the Cyton with firmware versions 2.x.x, 3.x.x, and onwards! The radio firmware (the firmware for the dongle and the radio module on your Cyton Board) has not been updated since prior to Fall 2016, so as long as you purchased your Cyton Board after that date, you do not need to worry about reprogramming your radios. For information about uploading the original OpenBCI Cyton firmware (1.x.x), see below.
 
 **You will need:**
 
@@ -16,7 +16,7 @@ These instructions apply to programming the Cyton with firware versions 2.x.x, 3
 
 ![OpenBCI Dongle](../assets/images/dongleConnection.png)
 
-***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board). 
+***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board).
 
 * If your computer does not have Arduino v1.8.0 (or later), install the latest Arduino IDE which can be found here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
@@ -142,7 +142,7 @@ When you are happy with the code, you will have to put the 32bit board into boot
 
 ![reset_program](../assets/images/RST_PROG.png)
 
-**Note:** we suggest that for the five steps below you use one thumb to press down both the RST and PROG buttons, while using your other thumb to toggle the switch between OFF and PC. 
+**Note:** we suggest that for the five steps below you use one thumb to press down both the RST and PROG buttons, while using your other thumb to toggle the switch between OFF and PC.
 
 * Power OFF the OpenBCI Board.
 * Press down both RST and PROG buttons at the same time (with your left thumb).
@@ -156,7 +156,7 @@ Now you should see the blue LED on the Cyton Board blinking pleasantly. Your Cyt
 
 ![image](../assets/images/Upload32.png)
 
-** Note: ** occasionally, you may see the error message in the screenshot below. You can ignore this. As long as 
+** Note: ** occasionally, you may see the error message in the screenshot below. You can ignore this. As long as
 `Program flash: ...................................#################################### done` appears, 99 out of 100 times your firmware uploaded correctly. If your board doesn't appear to be working in the GUI (or other software), simply try re-uploading the firmware.
 
 
