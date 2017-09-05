@@ -13,45 +13,87 @@ These instructions apply to programming the Cyton with firmware versions 2.x.x, 
 * Computer running [Arduino v1.8.0](https://www.arduino.cc/en/Main/Software) or later
 * OpenBCI Dongle connected to USB port
 * OpenBCI Cyton Board with battery power
-
-![OpenBCI Dongle](../assets/images/dongleConnection.png)
-
-***Note***: Always plug the Dongle into the PC before powering the Board because the Host (RFduino on the Dongle) must be powered before the Device (RFduino on the Board).
+* OpenBCI Cyton Firmware (follow guide below to download)
+* OpenBCI Cyton SD Firmware (follow guide below to download)
+* OpenBCI WiFi Master Firmware (follow guide below to download)
 
 * If your computer does not have Arduino v1.8.0 (or later), install the latest Arduino IDE which can be found here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
-**Note for Windows users** While installing Arduino 1.8, if the installer instructs you to uninstall 1.5.8, move the Arduino folder containing 1.5.8 from `Program Files` to your desktop or another folder. Rename this folder to `Arduino_1.5.8`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.8.0 as normal. Navigate to back to your `Program Files` folder and locate the Arduino folder. Rename this folder to `Arduino_1.8.0`. Now drag and drop the `Arduino_1.5.8` back into `Program Files` folder.  
+**Note for Windows users** While installing Arduino 1.8, if the installer instructs you to uninstall 1.5.8, move the Arduino folder containing 1.5.8 from `Program Files` to your desktop or another folder. Rename this folder to `Arduino_1.5.8`. Open the `Change or remove program` app in control panel and uninstall the Arduino application. There will be a popup indicating that the files do not exist and asking if you want to remove the program from the files list, select yes. Then install 1.8.0 as normal. Navigate to back to your `Program Files` folder and locate the Arduino folder. Rename this folder to `Arduino_1.8.0`. Now drag and drop the `Arduino_1.5.8` back into `Program Files` folder.
 
-* Download the [OpenBCI_32bit_Library Firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/master) repo from our github. Here is the [.zip link](https://github.com/OpenBCI/OpenBCI_32bit_Library/archive/master.zip).
+### Install Firmware From Arduino Library Manager (easiest!)
 
-* Unzip the folder, and if it is named `OpenBCI_32bit_Library-master`, rename it to just `OpenBCI_32bit_Library`.
+Don't know what the _Library Manager_ is? Skim over the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc3).
 
-* Now move the `OpenBCI_32bit_Library` folder from your downloads into:
+Open the _Library Manager_ and search for _OpenBCI_ and install the latest version for `OpenBCI_32bit_Library` and `OpenBCI_Wifi_Master`.
 
-  On Mac:
-`Documents/Arduino/libraries`  
-  On Windows:
-`C:\Users\username\Documents\Arduino\libraries`
+Then follow the instructions below for Manual Installation of SD Library and skip Cyton Firmware and WiFi Master Firmware.
 
-	If there is no `libraries` folder in the sketch folder, create one.
+### Manual Installation of Cyton SD Library
 
-* Download the [OpenBCI_32bit_SD](https://github.com/OpenBCI/OpenBCI_32bit_SD/archive/master.zip) repo from our github.
+ 1. Download the latest [OpenBCI_32bit_SD zip](https://github.com/OpenBCI/OpenBCI_32bit_SD/archive/v2.0.0.zip) firmware from the [32bit SD Github repo](https://github.com/OpenBCI/OpenBCI_32bit_SD).
+ 2. Unzip the folder and change the name to `OpenBCI_32bit_SD`
+ 3. Move `OpenBCI_32bit_SD` to:
 
-* Unzip the folder.
+	On Mac: `/Documents/Arduino/libraries`  
+	On Windows: `C:\Users\username\Documents\Arduino\libraries`
 
-* Now move the folder called `OBCI32_SD` (the folder inside of OpenBCI_32Bit_SD-master) and everything it contains to:
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Manual Installation of Cyton Firmware
+
+ 1. Download the latest [OpenBCI_32bit_Library](http://www.arduinolibraries.info/libraries/open-bci_32bit_library), it's the top most zip file.
+ 2. Unzip the folder and change the name to `OpenBCI_32bit_Library`
+ 3. Move `OpenBCI_32bit_Library` to:
 
   On Mac: `/Documents/Arduino/libraries`  
   On Windows: `C:\Users\username\Documents\Arduino\libraries`
 
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
 
-* Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino IDE. The folks at chipKIT have put together instructions on how to [Auto Install via URL from within Arduino](http://chipkit.net/wiki/index.php?title=ChipKIT_core#1.29_Auto_install_via_URL_from_within_Arduino_IDE_.28latest_version_chipKIT-core_v1.3.1.29). Follow the process in the previous link, and you will be able to select the OpenBCI board from the Tools >> Board >> dropdown menu!
+### Manual Installation of WiFi Master Firmware
+
+ 1. Download the latest [WiFi Master Library](http://www.arduinolibraries.info/libraries/open-bci_wifi_master), it's the top most zip file.
+ 2. Unzip the folder and change the name to `OpenBCI_Wifi_Master`
+ 3. Move `OpenBCI_Wifi_Master` to:
+
+  On Mac: `/Documents/Arduino/libraries`  
+  On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Clone The Repos From Github
+
+Developers looking to contribute or write custom firmware can clone the firmware repositories directly to your `libraries` folder
+
+	On Mac: `/Documents/Arduino/libraries`  
+	On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+* [OpenBCI_32bit_Library](https://github.com/OpenBCI/OpenBCI_32bit_Library)
+* [OpenBCI_32bit_SD](https://github.com/OpenBCI/OpenBCI_32bit_SD)
+* [OpenBCI_Wifi_Master_Library](https://github.com/OpenBCI/OpenBCI_Wifi_Master_Library)
+
+### Install ChipKIT Core Firmware
+
+* Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino IDE. The folks at chipKIT have put together instructions on how to [Auto Install via URL from within Arduino](http://chipkit.net/wiki/index.php?title=ChipKIT_core#1.29_Auto_install_via_URL_from_within_Arduino_IDE_.28latest_version_chipKIT-core_v1.3.1.29).
+
+### Select 'OpenBCI 32' as Board
+
+If you followed the process in the previous link, and you will be able to select the _OpenBCI 32_ board from the Tools >> Board >> dropdown menu!
 
 ![board_dropdown](../assets/images/OBCI32_Board_Dropdown.png)
 
-* In the Arduino IDE go to `File-->Examples-->OpenBCI_32bit_Library-->DefaultBoard` which will launch the Host firmware. **NOTE You must upload ONLY the `DefaultBoard` Sketch!**
+### Select DefaultBoard.ino from Examples
 
-* Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino! Now is a good time to plug your Dongle in and power down the Board.
+* In the Arduino IDE go to `File-->Examples-->OpenBCI_32bit_Library-->DefaultBoard` which will launch the Cyton firmware. **NOTE You must upload ONLY the `DefaultBoard` Sketch!**
+
+### Pre-upload Hardware Setting
+
+* Make sure that the slide switch on the OpenBCI Dongle is switched to the GPIO6 selection. If it's on the other side, it will try to program the Dongle-mounted RFduino!
+
+### Plug in Dongle and Select Serial Port
+
+Now is a good time to plug your Dongle in and power down the Board.
 
 ![serial_port](../assets/images/PortSelect.png)
 
@@ -63,7 +105,9 @@ These instructions apply to programming the Cyton with firmware versions 2.x.x, 
 
 	* On Linux, it will be different.
 
-* When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatible IC, so you have to do it manually with the proceedure that follows:
+### Put Cyton in Bootloaded Mode
+
+* When you are happy with the code, you will have to put the 32bit board into bootloader mode. We don't have a way to remotely reset the chipKIT compatible IC, so you have to do it manually with the procedure that follows:
 
 ![reset_program](../assets/images/RST_PROG.png)
 
@@ -76,6 +120,8 @@ These instructions apply to programming the Cyton with firmware versions 2.x.x, 
 ![Upload32](../assets/images/Upload32.png)
 
 * Verify that you see the blue LED on the 32bit board blinking pleasantly.
+
+### Upload the Firmware
 
 * Press the upload button on the Arduino IDE.
 
