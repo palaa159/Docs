@@ -12,20 +12,61 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 
 ![image](../assets/images/Downloads.JPG)
 
-### Install the Application
+### Install the Application On Mac
 
-Next, you must save the application somewhere, the same way you would any other application or executable on your machine. 
+Next, you must save the application somewhere, the same way you would any other application or executable on your machine.
 
-#### On Mac
+Place the OpenBCI_GUI in your /Applications folder. If the GUI fails to boot the first time, reboot it, a second popup will come up that asks about running the OpenBCIHub for the first time, please press "OK".
 
-Place the OpenBCI_GUI in your /Applications folder. If the GUI fails to boot the first time, reboot it, a second popup will come up that asks about running the GanglionHub for the first time, please press "OK".
+### Install OpenBCI On Windows
 
-#### On Windows
+First unzip the windows application you downloaded from the [downloads](http://openbci.com/donation) section of the OpenBCI Website.
+
+![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
+
+Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
+"\Program Files\OpenBCIHub\OpenBCIHub.exe"
+
+![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
+
+Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
+
+Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
+
+Then double click the executable to run it for the first time. You must check both check boxes when prompted.
+
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
+
+We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal.
+
+![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
+
+Verify the hub is running in your windows tool tray
+
+![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
+
+To quit the hub, click the tray cat icon, and then press the quit button.
+
+![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
 Please place the GUI in your Program Files directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
 
+![drag and drop](../assets/images/gui_windows_drag_and_drop_gui.png)
+
+If you already have a GUI installed, you may select to replace all the files.
+
+![replace all files popup](../assets/images/gui_windows_replace_warning.PNG)
+
+Replacing the files may bring up another pop up that you need to accept for altering files within the Program Files folder.
+
+![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
+
 Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
 
 ### Make Sure You Have The Latest FTDI Drivers Downloaded
 
@@ -37,15 +78,15 @@ The signal will not work if the [CSR BLE Dongle](https://shop.openbci.com/collec
 
 ### Launch the Application
 
-The easy part! 
+The easy part!
 
-**Important Notes:** 
+**Important Notes:**
 
- * In some cases, there may be issues with the way your machine handles the BLE application that enables communication with the Ganglion Board. For troubleshooting these issues, please 
+ * In some cases, there may be issues with the way your machine handles the BLE application that enables communication with the Ganglion Board. For troubleshooting these issues, please
  * If using **macOS Sierra:**
  	* Additionally, you will need to [follow the steps](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-run-the-gui-in-processing-on-macos-sierra) in the section titled "Run The GUI In Processing On MacOS Sierra" in the Getting Started w/ Ganglion Guide. This will allow you to alter your system preferences to run apps "downloaded from anywhere"
  * If you run into additional issues, please visit the [OpenBCI_GUI Section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum
- 
+
 ## Running the OpenBCI GUI From The Processing IDE
 
 The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so, if you are familiar with Java. If you are not, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
@@ -114,30 +155,31 @@ Move the `Ganglion Hubb app` from your Downloads folder to:
 `Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
 
 ## Install Ganglion Hub on Windows
-![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
-There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/latest), and click on the link for your Operating System.  
+The fastest way is to download the standalone .exe/.app for your machine and operating system. To do this, head to the [Downloads](http://openbci.com/donation) page of the OpenBCI website, and click the download link that correlates to your OS and machine.
 
-![electron hub download](../assets/images/win-unpacked-folder.PNG)
+![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
 
-After it downloads, unzip it and your Downloads folder will look like this.  
-**Do Not run the `GanglionHub Setup 0.4.1.exe`!**  
+Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
+"\Program Files\OpenBCIHub\OpenBCIHub.exe"
 
-![Select All Files](../assets/images/entire-contents-win-unpacked.PNG)
+![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
-Open the file `win-unpacked` and select the entire contents of the folder.
+Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
-![Move To Data Folder](../assets/images/Processing-GUI-data-folder.PNG)
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
 
-**All** of those files need to be moved into the folder: `Documents\Processing\OpenBCI_GUI-master\OpenBCI_GUI\data`
+Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
 
-![Hub Home](../assets/images/win-unpacked-files-moved.PNG)
+Then double click the executable to run it for the first time. You must check both check boxes when prompted.
 
-Your `data` folder should look like this when you're done.  
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-That is the final structural step to getting all of the pieces in place to run the GUI in Processing. Pat yourself on the back for a job well done, and get ready to see if it actually works!  
-If the Processing app is still running, quit out of it and start it again from scratch (Processing needs to restart to find the libraries and other stuff).  
+To quit the hub, click the tray cat icon, and then press the quit button.
+
+![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
+
+Now simply run the hub before starting from processing.   
 
 ### Make Sure You Have The Latest FTDI Drivers Downloaded
 
@@ -177,5 +219,3 @@ If you are encountering issues launching the GUI at this point, please head to t
 ![FTDI Install](../assets/images/USE-GUI.JPG)
 
 Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
-
-

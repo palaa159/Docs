@@ -4,7 +4,7 @@
 
 ## Overview
 
-Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a patnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while [Push The World](www.pushtheworldllc.com) designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
+Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while [Push The World](www.pushtheworldllc.com) designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
 
 ## Prerequisites
 
@@ -107,7 +107,7 @@ To connect your WiFi shield to your local WiFi network (or any other WiFi networ
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must first "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI
 * The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network if this is an issue. Push The World is planning a WiFi direct connection as another alternative for researchers and those on enterprise networks.
 
-Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across. 
+Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across.
 
 ### Example
 
