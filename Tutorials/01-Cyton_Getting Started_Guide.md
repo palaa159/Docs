@@ -49,37 +49,17 @@ Cyton boards have specific input voltage ranges. These input voltage ranges can 
 
 Your Cyton kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
 
-## II. Download and Install OpenBCI GUI
+## II. Download/Install/Run the OpenBCI GUI
 
-[Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI for your operating system.
+Please [follow the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to install the OpenBCI_GUI as a standalone application. Keep an eye out for specific Cyton requirements such as installing the FTDI VCP driver.
 
-### Install macOS
-
-Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
-
-![Drag and drop application](../assets/images/gui_drag_and_drop.png)
-
-
-Now navigate to your `Applications` folder and double click the `OpenBCI_GUI` You may see a message pop up asking you if you're sure you want to open it. Click Open and the app will launch.
-
-![allow GUI to run](../assets/images/ganglion_permissions.png)
-
-### Windows
-
-On Windows, move the application to Program Files. Always run as administrator.
+Come back to this guide when your GUI is running!
 
 ## III. Prepare your OpenBCI Hardware
 
-
 ### 1. Make sure your FTDI drivers are installed and up-to-date
 
-![FTDI Install](../assets/images/FTDI.png)
-
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** you may need to restart your GUI for this to take effect.
-
-![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
-
-**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
+The Cyton will not work with out the VCP drivers. Please see how to get and install the VCP driver in the prerequisites section in the [the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI)
 
 ### 2. Plug in your OpenBCI USB Dongle
 

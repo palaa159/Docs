@@ -48,77 +48,11 @@ Install 4 AA batteries in your battery pack, plug in your Ganglion board and tur
 
 ![Battery Connection](../assets/images/ganglion_batteryConnection.png)
 
-## Download/Run the OpenBCI GUI on macOS
+## Download/Install/Run the OpenBCI GUI
 
-First, turn on your computer's Bluetooth.  
+Please [follow the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to install the OpenBCI_GUI as a standalone application. Keep an eye out for specific Ganglion specific requirements, such as, on Windows, using Zadig to change the driver for your BLE CSR dongle.
 
-![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
-
-Do not use a dongle with macOS. Dongles such as the `CSR` dongles are only needed for Windows and sometimes linux. [Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI for your operating system.
-
-### Install and Run on macOS
-
-Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
-
-![Drag and drop application](../assets/images/gui_drag_and_drop.png)
-
-
-Now navigate to your `Applications` folder and double click the `OpenBCI_GUI` You may see a message pop up asking you if you're sure you want to open it. Click Open and the app will launch.
-
-![allow GUI to run](../assets/images/ganglion_permissions.png)
-
-## Install and Run on Windows
-
-**We are in the process of updating this guide to include Windows 7 users. it *is* possible to use the Ganglion and CSR 4.0 BLE Dongle on Windows 7. For now, please visit this [forum post](http://openbci.com/forum/index.php?p=/discussion/918/ganglion-and-windows-7), which outlines the proceedure.**
-
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
-
-The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our [store](http://shop.openbci.com/products/csr-4-0-bluetooth-dongle), and you can get them from various onine vendors.  
-**IMPORTANT:** The BLE Dongle *must* be a veriied CSR 4.0 Dongle!  
-
-First plug in your CSR 4.0 BLE Dongle.   
-
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
-
-Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
-
-![Windows Vista or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
-
-Download Zadig for Windows Vista or Later
-
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
-
-Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
-
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
-
-Select *No To Updates* when prompted.
-
-![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
-
-On the top bar select *Options*.
-
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
-
-Then select *List All Devices*.
-
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
-
-Select CSR from the dropdown.
-
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
-
-Then press *Replace Driver*.
-
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
-
-You should then see a progress bar followed by a success message.
-
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
-
-Note that both drop-downs both say *WinUSB*.  
-Great! You are now ready to download the OpenBCI GUI and use your Ganglion!
-Go to our [Downloads Page](http://openbci.com/donation) and download the application that suits your Operating System.
+Come back to this guide when your GUI is running!
 
 ## Start Using The OpenBCI GUI
 
