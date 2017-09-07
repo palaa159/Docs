@@ -141,15 +141,13 @@ If you are a developer and want to control the WiFi Shield through HTTP commands
 
 Although the WiFi Shield can be connected to any internet connected device, the OpenBCI_GUI provides a great application to get started!
 
-### Download and Install OpenBCI GUI
+### Download/Install/Run the OpenBCI GUI
 
-[Download the latest version](http://openbci.com/index.php/downloads) of the OpenBCI GUI. OpenBCI GUI gained WiFi Shield support as of 3.0.0 or later.
+The OpenBCI GUI gained WiFi Shield support as of `v3.0.0` or later.
 
-On Mac, drag and drop the application to /Applications
+Please [follow the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to install the OpenBCI_GUI as a standalone application. WiFi has no prerequisites other then installing the OpenBCI Hub on Windows, on mac and linux, the hub is built into the standalone app.
 
-![GUI unzip](../assets/images/gui_unzipped_mac.png)
-
-On Windows, move the application to Program Files. Always run as administrator.
+Come back to this guide when your GUI is running!
 
 ### Streaming Data On Cyton
 
