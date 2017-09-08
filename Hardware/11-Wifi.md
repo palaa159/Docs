@@ -29,3 +29,15 @@ Bottom Layer
 ### Buttons
 
 The top push button, `RESET`, is a reset button that will power cycle the ESP8266 chip. Don't press the `RESET` button when a Ganglion is attached, if you want to power cycle the WiFi Shield, send a `;` command to the Ganglion or Cyton to trigger a power on reset of the WiFi Shield. The bottom button, `PROG`, is use for programming the WiFi Shield over serial UART and is hooked up to GPIO 0.
+
+## GPIO Pins Used by WiFi Shield
+
+The WiFi Shield breaks out every GPIO on the Cyton and Ganglion, however, two of the GIPO pins have been used to make the WiFi Shield work, one pin is used for reset and the other is for a chip select line used in SPI communications.
+
+### Cyton
+
+The WiFi Shield uses `D13` and `D18`, leaving three other pins, `D11`, `D12`, and `D17`. In analog mode this means you can't read `A7` when WiFi Shield is attached.
+
+### Ganglion
+
+The WiFi Shield uses `D_24` and `D_4` (`A_5`). Leaving all other pints open for use!
