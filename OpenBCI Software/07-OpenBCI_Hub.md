@@ -3,7 +3,8 @@
 Middleware Software used to communicate with OpenBCI boards through TCP/IP command protocol. This Doc covers the OpenBCI Hub for Cyton, Ganglion, and WiFi Shield. the Cyton (32bit board) is NOT functional through this interface.
 
 ## Version
-Version `v2.0.0` release September 2017
+Version `v2.0.0` released September 2017
+
 Version `v1.0.0` released January 3rd, 2017.
 
 ## OpenBCI Electron Hub Overview
