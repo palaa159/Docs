@@ -1,6 +1,6 @@
 # OpenBCI Electron Hub
 
-Middleware Software used to communicate with OpenBCI boards through TCP/IP command protocol. This Doc covers the OpenBCI Hub for Cyton, Ganglion, and WiFi Shield. the Cyton (32bit board) is NOT functional through this interface.
+Middleware Software used to communicate with OpenBCI boards through TCP/IP command protocol. This Doc covers the OpenBCI Hub for Cyton, Ganglion, and WiFi Shield.
 
 ## Version
 Version `v2.0.0` released September 2017
@@ -152,6 +152,8 @@ Select to connect (`1`) this channel's P input to the SRB2 pin. This closes a sw
 
 Select to connect (`1`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `1` connects all N inputs to SRB1 and `0` disconnects all N inputs from SRB1 (default).
 
+#### Responses
+
 Response: on success
 `r,200,set,;\n`
 
@@ -171,6 +173,8 @@ Availability: as of `v1.0.0`
 #### COMMAND
 
 Single or multi char to get passed through the module to the connected board. Multi char limited to 30 on WiFi and 19 on BLE.
+
+#### Responses
 
 Response: on success
 `k,200,;\n`
@@ -246,6 +250,8 @@ Availability: as of `v1.0.0`
 
 Example: `d,;\n`
 
+#### Responses
+
 Response: on success
 `d,200,;\n`
 
@@ -264,6 +270,8 @@ Availability: as of `v2.0.0`
 The local shield name of WiFi Shield such as `OpenBCI-ACDC`
 
 Example: `x,OpenBCI-ACDC,;\n`
+
+#### Responses
 
 Response: on success
 `x,200,;\n`
@@ -534,7 +542,7 @@ Example: `m,start,15min,;\n`
 
 Availability: as of `v2.0.0`
 
-**DURATION**
+#### DURATION
 
 The duration you want to log SD information for. Opens a new SD file to write into. Limited to:
 
@@ -548,6 +556,7 @@ The duration you want to log SD information for. Opens a new SD file to write in
  * `12hour` - 12 hour
  * `24hour` - 24 hour
 
+#### Responses
 
 Response: on success
 `m,200,start,;\n`
@@ -589,9 +598,9 @@ Response: on success
 
 Used to get information on an attached WiFi Shield.
 
-#### ACTION
+#### ACTION - ERASE CREDENTIALS
 
-* `eraseCredentials`
+`eraseCredentials`
 
 Erase credentials on the WiFi shield. Your WiFi shield must have no board attached. You should use the *Examine* command to connect to the WiFi Shield with no Ganglion or Cyton attached. The process will take about 6 seconds. WiFi Shield will become a hotspot again.
 
@@ -606,7 +615,9 @@ Response: on failure because no wifi shield attached
 Response: on failure when failure to erase credentials command fails
 `w,428,timeout waiting for response,;\n`
 
-* `getFirmwareVersion`
+#### ACTION - GET FIRMWARE VERSION
+
+`getFirmwareVersion`
 
 Get the firmware version of the attached WiFi Shield.
 
@@ -618,7 +629,9 @@ Response: on success
 Response: on failure because no wifi shield attached
 `w,426,;\n`
 
-* `getIpAddress`
+#### ACTION - GET IP ADDRESS
+
+`getIpAddress`
 
 Get the IP Address of the attached WiFi Shield.
 
@@ -630,7 +643,9 @@ Response: on success
 Response: on failure because no wifi shield attached
 `w,426,;\n`
 
-* `getMacAddress`
+#### ACTION - GET MAC ADDRESS
+
+`getMacAddress`
 
 Get the MAC Address of the attached WiFi Shield.
 
@@ -642,7 +657,9 @@ Response: on success
 Response: on failure because no wifi shield attached
 `w,426,;\n`
 
-* `getTypeOfAttachedBoard`
+#### ACTION - GET TYPE OF BOARD ATTACHED
+
+`getTypeOfAttachedBoard`
 
 If the WiFi Shield is connected to a board, return the type of board. Potential board types are _none_, _cyton_, _daisy_, or _ganglion_
 
@@ -749,29 +766,56 @@ Response: on success
 `l,200,string message,;\n`
 
 ### Samples
-**t,CODE,SAMPLE_NUM,CHAN_1,CHAN_2,CHAN_3,CHAN_4**
+**t,CODE,SAMPLE_NUM,CHAN_1,CHAN_2,CHAN_3,CHAN_4,(CHAN_N),(PACKET_TYPE),(ACCEL_DATA/AUX_DATA)**
 
-Sample channel data from the Ganglion.
+Sample channel data from the Ganglion or Cyton.
 
 Availability: as of `v1.0.0`
 
 **CODE**
 The success or error code for the packet. As of `v1.0.0`, only good data is sent.
 
+Availability: as of `v1.0.0`
+
 **SAMPLE_NUM**
 The sample number of this sample.
+
+Availability: as of `v1.0.0`
 
 **CHAN_1**
 The first channel data in raw integer counts.
 
+Availability: as of `v1.0.0`
+
 **CHAN_2**
 The second channel data in raw integer counts.
+
+Availability: as of `v1.0.0`
 
 **CHAN_3**
 The third channel data in raw integer counts.
 
+Availability: as of `v1.0.0`
+
 **CHAN_4**
 The forth channel data in raw integer counts.
+
+Availability: as of `v1.0.0`
+
+**CHAN_N**
+The nth channel data in raw integer counts. Meaning the data will continue for the number of channels. Cyton would be 8 and daisy would be 16.
+
+Availability: as of `v2.0.0`
+
+**PACKET_TYPE**
+The type of packet, can be as of `v2.0.0` either `0xC0` for 3 ACCEL_DATA raw integer count values or `0xC1` for 6 AUX_DATA 8 bit unsigned values.
+
+Availability: as of `v2.0.0`
+
+**ACCEL_DATA/AUX_DATA**
+When PACKET_TYPE is `0xC0` then expect 3 ACCEL_DATA raw integer count values. When PACKET_TYPE is `0xC1` for 6 AUX_DATA 8 bit unsigned values that range between 0-255.
+
+#### Responses
 
 Response: on success
 `t,204,1,1000,2000,8000,2500,;\n`
