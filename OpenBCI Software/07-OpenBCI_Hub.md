@@ -31,11 +31,11 @@ Commands are sent from the client to the Hub. Each command gets an asynchronous 
 
 Stop or start accelerometer.
 
-#### ACTION
+#### ACTION - START
 
-* `start`
+`start`
 
-Start accelerometer.
+Start accelerometer. Only useful for Ganglion.
 
 Availability: as of `v1.0.0`
 
@@ -45,9 +45,11 @@ Response: on success
 Response: on failure
 `a,416,string error message,;\n`
 
-* `stop`
+#### ACTION - STOP
 
-Stop accelerometer.
+`stop`
+
+Stop accelerometer. Only useful for Ganglion.
 
 Availability: as of `v1.0.0`
 
@@ -58,19 +60,116 @@ Response: on failure
 `a,417,string error message,;\n`
 
 ### Board Type
+**b,BOARD_TYPE**
+
+Attempts to set the board type to user requested board type, such as when a user requests 16 channel Cyton. This command is only useful for Cyton because of Daisy.
+
+Availability: as of `v2.0.0`
+
+#### BOARD_TYPE - CYTON
+
+`cyton`
+
+Force set to 8 channel Cyton board.
+
+Availability: as of `v2.0.0`
+
+Example: `b,cyton,;\n`
+
+#### BOARD_TYPE - DAISY
+
+`daisy`
+
+Availability: as of `v2.0.0`
+
+Example: `b,daisy,;\n`
+
+#### Responses
+
+Response: on success where board type set correctly to Cyton with 8 Channels
+`b,200,cyton,;\n`
+
+Response: on success where board type set correctly to Cyton with Daisy 16 Channels
+`b,200,daisy,;\n`
+
+Response: on failure to set board correctly to Cyton or Daisy with 8 or 16 Channels
+`b,421,some error message,;\n`
 
 ### Channel Settings
+**r,ACTION,(ARGS)**
+
+For setting the channel settings on a Cyton board with either WiFi or Serial protocols set.
+
+Availability: as of `v2.0.0`
+
+#### ACTION - START
+
+`start`
+
+Used to start a channel setting sync. This will emit channel settings on success.
+
+Availability: as of `v2.0.0`
+
+Example: `r,start,;\n`
+
+Response: on success for each channel, see the [Response Set](http://docs.openbci.com/OpenBCI%20Software/07-OpenBCI_Hub#openbci-electron-hub-response-set) below for _Channel Settings_.
+
+#### ACTION - SET
+
+`set`
+
+Used to set a channel for cyton over wifi or ganglion.
+
+Availability: as of `v2.0.0`
+
+Example: `r,set,3,0,24,normal,1,1,0,;\n`
+
+**CHANNEL_NUMBER**
+
+Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
+
+**POWER_DOWN**
+
+Will be either `1` if channel is powered down and `0` if channel is powered up like normal.
+
+**GAIN**
+The integer version of the gain. i.e. 1, 2, 4, 6, 8, 12, 24
+
+**INPUT_TYPE**
+
+Selects the ADC channel input source. It's a 'String' that **MUST** be one of the following: "normal", "shorted", "biasMethod" , "mvdd" , "temp" , "testsig", "biasDrp", "biasDrn".
+
+**BIAS**
+
+Selects if the channel shall include the channel input in bias generation. It's a number where `1` includes the channel in bias (default) or `0` for channel removed from bias.
+
+**SRB2**
+
+Select to connect (`1`) this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `1` connects this input to SRB2 (default) or `0` which disconnect this input from SRB2.
+
+**SRB1**
+
+Select to connect (`1`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `1` connects all N inputs to SRB1 and `0` disconnects all N inputs from SRB1 (default).
+
+Response: on success
+`r,200,set,;\n`
+
+Response: on failure to set command
+`r,424,verbose error message here,;\n`
+
+Response: on failure to parse input commands properly. This means comma separated string input did not contain the correct positioned items. Verify with example.
+`r,425,more verbose error message,;\n`
 
 ### Command
 **k,COMMAND**
 
-Passes through a single char `COMMAND` to a connected device.
+Passes through a `COMMAND`, either one char or multiple chars, to a connected device.
 
 Availability: as of `v1.0.0`
 
-**COMMAND**
+#### COMMAND
 
-Single char to get passed through the module to the connected board.
+Single or multi char to get passed through the module to the connected board. Multi char limited to 30 on WiFi and 19 on BLE.
 
 Response: on success
 `k,200,;\n`
@@ -82,15 +181,41 @@ Response: on failure unable to write to connected device
 `k,406.string error message,;\n`
 
 ### Connect
-**c,PORT_NAME**
+**c,PORT_NAME,(SAMPLE_RATE),(LATENCY)**
 
 Connect to a Ganglion BLE device with only a local name.
 
-**PORT_NAME**
+#### PORT_NAME
 
-The local string name of a Ganglion peripheral to connect to.
+The local string name of a Cyton USB Dongle, Ganglion peripheral, or WiFi Shield unique name to connect to.
 
 Availability: as of `v1.0.0`
+
+Example: `c,Ganglion-XXXX,;\n` for BLE for Ganglion
+Example: `c,COM4,;\n` for Serial on Windows
+
+#### SAMPLE_RATE
+
+**Only Required for WiFi connection**
+
+A number that is the requested sample rate to set the attached Ganglion or Cyton to. Ganglion must have v2.0.0 firmware or later and Cyton must have v3.0.0 firmware available. Value is in Hz and must be a valid sample rate for the board of choice.
+
+Availability: as of `v2.0.0`
+
+Example: `c,OpenBCI-ACDC,1000,15000,;\n` for Cyton/Daisy set to 1000Hz
+Example: `c,OpenBCI-ACDC,1600,15000,;\n` for Ganglion set to 1600Hz
+
+#### LATENCY
+
+**Only Required for WiFi connection**
+
+A number that is the latency for the inter-packet sending on the WiFi Shield. The time is in micro-seconds.
+
+Availability: as of `v2.0.0`
+
+Example: `c,OpenBCI-ACDC,1000,5000,;\n` for latency set to 5000uS (5 ms)
+
+#### Responses
 
 Response: on success
 `c,200,;\n`
@@ -109,6 +234,7 @@ Response: on failure unable to start verification scan before connect
 
 Response: on failure unable to verify, aka scan and find the requested BLE peripheral with local name matching the requested supplied `PORT_NAME` within 5 seconds.
 `c,413,;\n`
+
 
 ### Disconnect
 **d**
@@ -550,6 +676,42 @@ The Z axis in raw integer counts.
 
 Response: on success
 `a,202,50,0,30,;\n`
+
+### Channel settings
+**r,CODE,CHANNEL_NUMBER,POWER_DOWN,GAIN,INPUT_TYPE,BIAS,SRB2,SRB1**
+
+Description: A channel setting for Cyton.
+Availability: as of `v2.0.0`
+
+**CODE**
+The success or error code for the packet. As of `v1.0.0`, only good data is sent.
+
+**CHANNEL_NUMBER**
+
+Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
+
+**POWER_DOWN**
+
+Will be either `true` if channel is powered down and `false` if channel is powered up like normal.
+
+**GAIN**
+The integer version of the gain. I.e. 1, 2, 4, 6, 8, 12, 24
+
+**INPUT_TYPE**
+
+Selects the ADC channel input source. It's a 'String' that **MUST** be one of the following: "normal", "shorted", "biasMethod" , "mvdd" , "temp" , "testsig", "biasDrp", "biasDrn".
+
+**BIAS**
+
+Selects if the channel shall include the channel input in bias generation. It's a 'Bool' where `true` includes the channel in bias (default) or `false` it removes it from bias.
+
+**SRB2**
+
+Select to connect (`true`) this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's a 'Bool' where `true` connects this input to SRB2 (default) or `false` which disconnect this input from SRB2.
+
+**SRB1**
+
+Select to connect (`true`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's a 'Bool' where `true` connects all N inputs to SRB1 and `false` disconnects all N inputs from SRB1 (default).
 
 ### Impedance
 **i,CODE,CHANNEL,VALUE**
