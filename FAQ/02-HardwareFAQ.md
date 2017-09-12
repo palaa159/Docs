@@ -13,7 +13,7 @@ Yes! OpenBCI is designed to be easily interfaced by other hardware and software.
 The Cyton Board is an 8 channel biosensing amplifier that can measure ECG, EMG, and EEG. It connects to your computer wirelessly with an included USB Dongle. Data is sampled at 250Hz.
 The 16-Channel R&D Kit is the same as the Cyton Board, but it also includes an expansion module to increase the channel count to 16. Data is sampled at 250Hz.
 The Ganglion is a 4 channel biosensing amplifier that can measure ECG, EMG, and EEG. It connects to your computer via BLE. Data is sampled at 200Hz.
-The [WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) can be use for higher sample rates.
+The [WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) can be used for higher sample rates.
 
 ##How do I choose between 4, 8, or 16 channels for my research?
 
