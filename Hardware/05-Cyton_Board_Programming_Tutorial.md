@@ -2,7 +2,7 @@
 
 ## Overview
 
-The OpenBCI Cyton boards have powerful microcontrollers on them which ship with the latest OpenBCI firmware to interface with the on-board ADS1299, Accelerometer, and SD card. This tutorial explains how to program the firmware using the OpenBCI Dongle and you PC. If we come out with a firmware upgrade, or if your or someone comes up with a custom program that you want to implement, you should use the following method. We made major changes to the Cyton firmware in 2016. This tutorial covers the v2, as well as v1. If you have already mucked about in the code using the v1 firmware, and want to upgrade, check out the [Notes](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-notes-on-updating-and-using-v200-cyton-firmware) at the end of this doc. Happy Hacking!
+The OpenBCI Cyton boards have powerful microcontrollers on them which ship with the latest OpenBCI firmware to interface with the on-board ADS1299, Accelerometer, and SD card. This tutorial explains how to program the firmware using the OpenBCI Dongle and you PC. If we come out with a firmware upgrade, or if your or someone comes up with a custom program that you want to implement, you should use the following method. We made major changes to the Cyton firmware in 2016 with v2.x and again in 2017 with v3.x. This tutorial covers the v2 and v3, as well as v1. If you have already mucked about in the code using the v1 firmware, and want to upgrade, check out the [Notes](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-notes-on-updating-and-using-v200-cyton-firmware) at the end of this doc. Happy Hacking!
 
 ## Firmware Versions 2.x.x & 3.x.x (Fall 2016 - present)
 
@@ -25,20 +25,9 @@ These instructions apply to programming the Cyton with firmware versions 2.x.x, 
 
 Don't know what the _Library Manager_ is? Skim over the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc3).
 
-Open the _Library Manager_ and search for _OpenBCI_ and install the latest version for `OpenBCI_32bit_Library` and `OpenBCI_Wifi_Master`.
+Open the _Library Manager_ and search for _OpenBCI_ and install the latest version for `OpenBCI_32bit_Library`, `OpenBCI_32bit_SD` and `OpenBCI_Wifi_Master`.
 
-Then follow the instructions below for Manual Installation of SD Library and skip Cyton Firmware and WiFi Master Firmware.
-
-### Manual Installation of Cyton SD Library
-
- 1. Download the latest [OpenBCI_32bit_SD zip](https://github.com/OpenBCI/OpenBCI_32bit_SD/archive/v2.0.0.zip) firmware from the [32bit SD Github repo](https://github.com/OpenBCI/OpenBCI_32bit_SD).
- 2. Unzip the folder and change the name to `OpenBCI_32bit_SD`
- 3. Move `OpenBCI_32bit_SD` to:
-
-	On Mac: `/Documents/Arduino/libraries`  
-	On Windows: `C:\Users\username\Documents\Arduino\libraries`
-
-If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+Now jump down to the section [install ChipKit Core](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-firmware-versions-2xx-3xx-fall-2016-present-install-chipkit-core-firmware)
 
 ### Manual Installation of Cyton Firmware
 
@@ -48,6 +37,17 @@ If you're have trouble or want to learn more checkout the [Official Arduino Guid
 
   On Mac: `/Documents/Arduino/libraries`  
   On Windows: `C:\Users\username\Documents\Arduino\libraries`
+
+If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
+
+### Manual Installation of Cyton SD Library
+
+ 1. Download the latest [OpenBCI_32bit_SD](http://www.arduinolibraries.info/libraries/open-bci_32bit_sd), it's the top most zip file.
+ 2. Unzip the folder and change the name to `OpenBCI_32bit_SD`
+ 3. Move `OpenBCI_32bit_SD` to:
+
+	On Mac: `/Documents/Arduino/libraries`  
+	On Windows: `C:\Users\username\Documents\Arduino\libraries`
 
 If you're have trouble or want to learn more checkout the [Official Arduino Guide](https://www.arduino.cc/en/Guide/Libraries#toc5) for manual installation.
 
