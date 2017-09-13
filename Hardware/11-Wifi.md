@@ -1,6 +1,8 @@
 # OpenBCI Wifi
 
-**These docs are open source, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**[Suggest an edit to this page](https://github.com/OpenBCI/Docs/edit/master/Hardware/11-Wifi.md)**
+
+WiFi Shields are available for sale [on the OpenBCI store](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550).
 
 The OpenBCI Wifi Shield was designed in partnership with [Push The World](www.pushtheworld.us). The OpenBCI Wifi PCB was designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [OpenBCI design files repository](https://github.com/OpenBCI/OpenBCI_Wifi_Shield) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
