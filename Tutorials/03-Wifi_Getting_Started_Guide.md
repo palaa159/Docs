@@ -83,19 +83,17 @@ In general the steps are:
 
 ### Powering the Shield
 
-The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. There fore the Ganglion should not be able to Power the WiFi Shield.
+The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargable batteries to power the Wifi Shield.
 
-Install 4 AA batteries into your battery pack. or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo to power the Wifi Shield.
-
-To use two batteries, keep `EXT PWR` to `OFF`.
+To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spunger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
 
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)
 
-You should have two batteries plugged in, always power the WiFi Shield before the Ganglion.
+With two batteries, always power the WiFi Shield before the Ganglion.
 
 ![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
 
-On some modules the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`.
+On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
