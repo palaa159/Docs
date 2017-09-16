@@ -65,7 +65,7 @@ The Cyton is not able to supply enough current to power the power-hungry wifi sh
 
  1. OpenBCI WiFi Shield
  2. OpenBCI Ganglion Board **IMPORTANT: Must have at least v2.0.0 Ganglion firmware or newer!**
- 3. 1 battery, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
+ 3. Two batteries, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
 
 ![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
 
@@ -75,21 +75,29 @@ In general the steps are:
 
  1. Power off WiFi Shield and Ganglion
  2. Seat WiFi Shield on Ganglion
- 3. Put `EXT PWR` switch on Shield to `ON`
+ 3. Put `EXT PWR` switch on Shield to `OFF`
  4. Plug battery into Ganglion
- 5. Main power to switch on Ganglion to `ON`
+ 5. Plug battery into WiFi Shield
+ 6. Main power switch on WiFi Shield to `ON`
+ 5. Main power switch on Ganglion to `ON`
 
 ### Powering the Shield
 
-The Ganglion can power the WiFi Shield, but the Wifi shield cannot power the Ganglion.
-
-![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
+The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. There fore the Ganglion should not be able to Power the WiFi Shield.
 
 Install 4 AA batteries into your battery pack. or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo to power the Wifi Shield.
 
-Another option is to use two batteries and keep `EXT PWR` to `OFF`.
+To use two batteries, keep `EXT PWR` to `OFF`.
 
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)
+
+You should have two batteries plugged in, always power the WiFi Shield before the Ganglion.
+
+![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
+
+On some modules the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`.
+
+![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
 ## Get the WiFi Shield On Your Wireless Network
 
