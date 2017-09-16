@@ -1,6 +1,6 @@
 # Wifi Getting Started Guide
 
-**If you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new) or fix it with a Pull Request on [Github](https://github.com/OpenBCI/Docs).**
+**[Suggest changes on this page](https://github.com/OpenBCI/Docs/edit/master/Tutorials/03-Wifi_Getting_Started_Guide.md)**
 
 ## Overview
 
