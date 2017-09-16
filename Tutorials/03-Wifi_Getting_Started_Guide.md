@@ -87,7 +87,7 @@ The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Gangl
 
 To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spunger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
 
-![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)
+![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)`EXT PWR` is `ON` in top photo, `OFF` in bottom photo.
 
 With two batteries, always power the WiFi Shield before the Ganglion.
 
