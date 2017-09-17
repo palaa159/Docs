@@ -1,55 +1,44 @@
-# OpenBCI Wifi Shield
+# OpenBCI Wifi Server API
 
-**The Wifi shield and these docs are still in beta, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**[Suggest Changes To This Page](https://github.com/OpenBCI/Docs/edit/master/OpenBCI%20Software/03-OpenBCI_Wifi_Server.md)**
 
 The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the OpenBCI Cyton and Ganglion.
 
-One of the coolest parts is the restful fully qualified web server sitting on your OpenBCI board!
+## Overview
 
-## Ganglion
+One of the coolest parts of the WiFi Shield is it's HTTP web server. For developers looking to get data from OpenBCI with a WiFi Shield, these HTTP commands will allow you to stream data to your applications over TCP or MQTT.
 
-### Prerequisites
+## Prerequisites
 
-1. OpenBCI Ganglion with at least [2.x.x firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/blob/development/OpenBCI_Ganglion_Library/examples/WifiGanglion/DefaultGanglion.ino)
-2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
-3. Wireless local area network (internet)
-4. Two batteries to power the whole system
+Follow the [WiFi Getting Started Guide](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-prerequisites) to get your WiFi Shield on your Wireless Network.
 
-## Cyton
+## Get Wifi Shield on Local Wireless Network
 
-### Prerequisites
-
-1. OpenBCI Cyton with at least [3.x.x firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/tree/dev-3.0.0)
-2. Wifi shield with [current firmware](https://github.com/OpenBCI/OpenBCI_WIFI/blob/master/examples/ESP8266HuzzahSSDP/ESP8266HuzzahSSDP.ino)
-3. Wireless local area network (internet)
-4. Battery to power the whole system
-
-## Connecting to the Wifi Shield
-
-Be sure that your WiFi Shield is on your local network. Please continue reading if your OpenBCI Wifi Shield is on the same wifi network as your computer.
+Be sure that your WiFi Shield is on your local network.
 
 The steps for connecting to the Wifi Shield and streaming over TCP:
 
-1. Get Wifi Shield On Your Wireless Network
-2. Find IP Address of Wifi Shield
-3. Open a TCP Socket on Host Computer
-4. Send `POST` `/tcp` http request with open socket IP/Port number, can include options for output format (i.e. JSON or RAW output), along with latency.
-5. Send `POST` `/command` http requests for control or for just streaming use GET `/stream/start` or GET `/stream/stop`
-6. Send `POST` `/latency` http requests for tuning, if packets are dropped because older router or poor connection.
+1. Get IP Address of the Wifi Shield
+2. Open a TCP Socket on Host Computer
+3. Send `POST` `/tcp` http request with open socket IP/Port number, can include options (i.e. output format of JSON or RAW output, use delimiters between packets, adjust latency)
+4. Send `GET` `/stream/start` or `GET` `/stream/stop`
 
 The steps for connecting to the Wifi Shield and streaming over MQTT:
 
-1. Get Wifi Shield On Your Wireless Network
-2. Find IP Address of Wifi Shield
-3. Open a TCP Socket on Host Computer
+1. Find IP Address of Wifi Shield
+2. Set up MQTT broker
 4. Send `POST` `/mqtt` http request with broker address with optional username and password
-5. Send `POST` `/command` http requests for control
+4. Send `GET` `/stream/start` or `GET` `/stream/stop`
 
 ## Get IP Address of Wifi Shield
 
-Use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network. Use a tool in your favorite language [Python](http://brisa.garage.maemo.org/doc/html/upnp/ssdp.html) | [Node.js](https://github.com/diversario/node-ssdp) | [C](https://developer.gnome.org/gssdp/stable/).
+To programmatically discover WiFi Shields on your local network use [Simple Service Discovery Protocol](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol) (SSDP) to find the device on your local network.
 
-The [Node.js SDK](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) which will implement SSDP for you.
+[Node.js OpenBCI WiFi Driver](https://github.com/aj-ptw/OpenBCI_NodeJS/blob/wifi/examples/getStreamingWifi/getStreamingWifi.js) will implement SSDP for you.
+
+[Python OpenBCI WiFi Driver](https://github.com/OpenBCI/OpenBCI_Python/pull/54) will implement SSDP for you.
+
+Use the [OpenBCI WiFi GUI](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address) which will use the [OpenBCI Electron Hub](http://docs.openbci.com/OpenBCI%20Software/07-OpenBCI_Hub#openbci-electron-hub-command-set-scan) to find WiFi Shields IP Address.
 
 Use a graphical user interface [Mac - Lan Scan](https://itunes.apple.com/us/app/lanscan/id472226235?mt=12)
 
@@ -57,19 +46,50 @@ We are still hashing out the best ways to discover the Wifi shield on the networ
 
 ## Open a TCP Socket on Host Computer
 
-In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket. **IMPORTANT** The data comes over this socket raw and is defined in the docs for [Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format).
+In order to get low latency high-reliability wireless data transmission we will open a TCP socket on your host Computer. The Wifi Shield will stream data to this socket.
 
-If you want the data in another format, please comment on [this issue](https://github.com/OpenBCI/OpenBCI_WIFI/issues/11), thinking protocols like `JSON`.
+### Raw Output Mode
 
-## OpenBCI HTTP Rest Server
+In `raw` output mode the data format follows the OpenBCI [33byte Binary Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format). Even the Ganglion over WiFi Shield will send in the 33byte with the first four channels containing data and the upper four channels are all zeros.
+
+### JSON Output Mode
+
+In `json` output mode, the WiFi Shield will convert raw data into nano volts. As of `v3.0.0` firmware for Cyton and `v2.0.0` firmware for Ganglion, the gain for each channel will be sent to the WiFi Shield once at the first connection between devices, and once each time the Ganglion or Cyton receives a start of streaming command. The WiFi Shield will connect to an NTP server to get the time once, and the WiFi Shield will then send the data in JSON.
+
+The JSON Adheres to the popular LSL stream format by default
+```
+{
+  "chunk": [
+    {"data": [<float>, ..., <float>],  "timestamp": <float> },
+    ...
+    {"data": [<float>, ..., <float>],  "timestamp": <float> }
+  ]
+}
+```
+
+#### Examples
+
+Buffer of 5 samples. Each sample has 4 channels:
+
+```
+[
+  { "data":[ 7056745022195285, -475495395375, 475495395375, -495395375], "timestamp": 1497479774194733},
+  { "data":[ 7056745022195285, -475495395375, 475495395375, -495395375], "timestamp": 1497479774195230},
+  { "data":[ 7056745022195285, -475495395375, 475495395375, -495395375], "timestamp": 1497479774195735},
+  { "data":[ 7056745022195285, -475495395375, 475495395375, -495395375], "timestamp": 1497479774196209},
+  { "data":[ 7056745022195285, -475495395375, 475495395375, -495395375], "timestamp": 1497479774196715}
+]
+```
+
+## OpenBCI WiFi Shield HTTP Rest Server
 
 ### Send `/tcp` http request for TCP configuration
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. There are many options such as `output` mode for JSON or raw output, latency, delimiters and many more awesome options to help you easily process data in a driver.
 
 ### Send `/mqtt` http request for MQTT configuration
 
-Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server.
+Refer to [http server description](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0) swagger.io page as the single source of truth in regards to the OpenBCI Wifi Server. There are many options such as `output` mode for JSON or raw output, latency, delimiters and many more awesome options to help you easily process data in a driver.
 
 ### Send `/command` http requests for control
 
@@ -112,3 +132,18 @@ void OpenBCI_32bit_Library::sendChannelDataWifi(void)  {
 
 This code writes 32 bytes of data in the correct format and therefore as soon as it arrives at the Wifi shield. The Wifi shield will convert the 32 byte packet to the standard 33 byte [binary format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format#cyton-data-format-binary-format) by moving the control byte `0xCn`, where `n` is `0-F` (hex), to the stop position and add add `0xA0` to the start position. This allows for a seamless integration with the tried and tested parsing systems already built for the Cyton.
 **Important** if you want to only send `20` bytes of data per packet, you still must send this `32` bytes with the proper start and stop bytes.
+
+### JSON format
+
+Suggested options for `POST` /tcp or `POST` /mqtt
+```
+{
+  "port": ..., // Enter your local server port
+  "ip": ..., // Enter your local ip address of server
+  "delimiter": true, // will place `\r\n` at end of each chunk
+  "latency": 20000, // Time to wait between packet sends in micro seconds.. i.e. latency here is 20ms
+  "sample_numbers": false, // Don't include sampleNumber in each sample
+  "timestamps": true // Include timestamps in each sample
+}
+
+Now when you start streaming data, you can simply look for `\r\n` in the incoming stream of data and each time you find it, you know you just got then end of packet and can parse everything before that `\r\n` as JSON. 
