@@ -1,4 +1,4 @@
-#PURCHASES AND PAYMENT PROCESSING
+#Purchases & Payment Processing
 
 ##How do I request a quotation or an invoice?
 

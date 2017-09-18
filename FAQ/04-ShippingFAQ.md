@@ -1,4 +1,4 @@
-#SHIPPING AND TAXES
+#Shipping & Taxes
 
 ##Where do you ship to?
 

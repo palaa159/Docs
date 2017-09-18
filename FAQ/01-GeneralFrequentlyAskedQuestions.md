@@ -1,4 +1,4 @@
-#GENERAL
+#General
 
 ##What does OpenBCI stand for?
 	
