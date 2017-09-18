@@ -1,3 +1,7 @@
-# OpenBCI Software
+# Tutorials
 
-Welcome to the **OpenBCI Software** section! Here you will find guides to help you better undertand the OpenBCI software and code. This section includes information about firmware (the code we upload to the boards), in addition to information about the PC-based software we develop. If you are interested in connecting your OpenBCI hardware to 3rd-Party software tools, head over to the [3rd-Party Software section](http://docs.openbci.com/3rd%20Party%20Software) of the docs. If you run into technical questions while working with any OpenBCI software, head over to the [Software section](http://openbci.com/index.php/forum/#/categories/software) of the OpenBCI Forum.
+Welcome to the **Tutorials** section! Here you will find miscellanious guides teaching you how to do cool things with your OpenBCI hardware and software. In this section you'll find getting started guides. Some of these tutorials detail how to do more advanced things with the OpenBCI platform. Some of them teach you how to optimize your computer for maximum performance while working with OpenBCI. And others teach you how to connect OpenBCI to other hardware devices.
+
+If you have an idea for a great OpenBCI tutorial, we'd love to hear it! Please [don’t hesitate to reach out](mailto:contact@openbci.com). We'd be happy to help you in the creation of your tutorial. 
+
+You can also, just go ahead and create one without reaching out to us first. Head over to the ["Docs" repo](https://github.com/openbci/docs) of our github account, fork it, add your own XYZ.md file in the "Tutorials" direcory, create your doc, and submit a pull request! It's as easy as that.
