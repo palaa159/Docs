@@ -1,6 +1,6 @@
 # FAQ
 
-Welcome to the **OpenBCI FAQ**! Select the appropriate question category to proceed:
+Welcome to our **Frequently Asked Questions (FAQ)**! Select the appropriate question category to proceed:
 
 * [General](http://docs.openbci.com/FAQ/01-GeneralFrequentlyAskedQuestions)
 * [Hardware & Software](http://docs.openbci.com/FAQ/02-HardwareFAQ)
