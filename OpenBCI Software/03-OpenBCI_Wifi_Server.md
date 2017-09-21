@@ -1,4 +1,4 @@
-# OpenBCI Wifi Server API
+# OpenBCI WiFi Shield API
 
 **[Suggest Changes To This Page](https://github.com/OpenBCI/Docs/edit/master/OpenBCI%20Software/03-OpenBCI_Wifi_Server.md)**
 
