@@ -1,6 +1,6 @@
 # Wifi Shield Programming Tutorial
 
-**These documents are open source, if you see a typo [please open an issue](https://github.com/OpenBCI/Docs/issues/new).**
+**[Suggest changes to this page](https://github.com/OpenBCI/Docs/edit/master/Hardware/12-Wifi_Programming_Tutorial.md).**
 
 ## Overview
 
