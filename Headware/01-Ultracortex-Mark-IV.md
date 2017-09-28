@@ -302,6 +302,12 @@ Your headset should look like this when your finished assembeling the 8 channels
 
 Now that all of your electrode units are connected to your Ultracortex frame. Connect two [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/) to SRB2 and bottom BIAS pin (white and black respectively in the image below).  These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system.
 
+### Ganglion Only
+
+To connect the Ganglion to the Mark IV you need to connect the electrodes you want to get data from to the top row pins labeled +4, +3, +2, and +1. In addition, connect the ear clips to the D_G and REF top row pins. Make sure to change teh switches to the bottom configuration as well. Below a picture of the switches. 
+
+![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
+
 
 ## 16 Channel Add-Ons
 
