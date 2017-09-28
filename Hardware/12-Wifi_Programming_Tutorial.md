@@ -190,7 +190,7 @@ $ esptool.py --port /dev/tty.usbserial-YOURPORT write_flash ~/Downloads/DefaultW
 From Command Prompt you installed `esptool.py` to earlier, substitute your serial port name for `COM4` in the command below.
 
 ```
-$ esptool.py --port COM4 write_flash 0x000000 Downloads/DefaultWifiShield.bin
+$ esptool.py --port COM4 write_flash 0x000000 Downloads\DefaultWifiShield.bin
 ```
 
 ## Compile Source Code to build binary
