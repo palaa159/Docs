@@ -110,6 +110,8 @@ With some Python installations this may not work and you'll receive an error, tr
 
 After installing, you will have `esptool.py` installed into the default Python executables directory and you should be able to run it with the command `esptool.py`.
 
+In Windows, we use Command Prompt.
+
 ### Download the WiFi Shield Firmware
 First, download the file called `DefaultWifiShield.bin` from the latest release [OpenBCI_WiFi Github repository](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest).
 
@@ -185,10 +187,10 @@ $ esptool.py --port /dev/tty.usbserial-YOURPORT write_flash ~/Downloads/DefaultW
 
 #### On Windows
 
-From terminal you installed `esptool.py` to earlier, substitute your serial port name for `COM4` in the command below.
+From Command Prompt you installed `esptool.py` to earlier, substitute your serial port name for `COM4` in the command below.
 
 ```
-$ esptool.py --port COM4 write_flash ~/Downloads/DefaultWifiShield.bin
+$ esptool.py --port COM4 write_flash 0x000000 Downloads/DefaultWifiShield.bin
 ```
 
 ## Compile Source Code to build binary
