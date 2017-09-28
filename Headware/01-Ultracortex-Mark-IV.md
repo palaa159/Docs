@@ -304,7 +304,7 @@ Now that all of your electrode units are connected to your Ultracortex frame. Co
 
 ### Ganglion Only
 
-To connect the Ganglion to the Mark IV you need to connect the electrodes you want to get data from to the top row pins labeled +4, +3, +2, and +1. In addition, connect the ear clips to the D_G and REF top row pins. Make sure to change teh switches to the bottom configuration as well. Below a picture of the switches. 
+To connect the Ganglion to the Mark IV you need to connect the electrodes you want to get data from to the top row pins labeled +4, +3, +2, and +1. In addition, connect the ear clips to the D_G and REF top row pins. Make sure to change the switches to the bottom configuration as well. Below a picture of the switches. 
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
