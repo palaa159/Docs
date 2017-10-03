@@ -1,4 +1,7 @@
 # OpenBCI Cyton SDK
+
+**[Suggest an edit to this page](https://github.com/OpenBCI/Docs/edit/master/OpenBCI%20Software/04-OpenBCI_Cyton_SDK.md)**
+
 The OpenBCI Cyton boards communicate using a byte string (mostly ASCII) command protocol. This Doc covers command use for the OpenBCI Cyton and 8bit boards. Some of the commands are board specific, where noted. Further this Doc covers the commands needed in order to alter the radio system. There have been several iterations of the firmware, the 8bit board runs `v0`, while the Cyton runs `v1` and Boards shipped as of Fall 2016 run `v2.0.0`. `v3.0.0` will begin shipping with boards in August of 2017.
 
 ## Cyton Command Protocol Overview
@@ -324,9 +327,9 @@ Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system
 
 ### Sample Rate
 **~(COMMAND)**  
-This works similar to the Channel Settings commands, however, there is no latching character. Changing the sample rate requires sending a `v` or soft-reset to ensure all systems are correct. Power cycling the OpenBCI board will cause the sample rate to reset back to default of 250Hz.
+This works similar to the Channel Settings commands, however, there is no latching character. Power cycling the OpenBCI board will cause the sample rate to reset back to default of 250Hz.
 
-**IMPORTANT!** The Cyton cannot and will not stream data over 250SPS. Plug in the wifi shield to get speeds over 250SPS streaming. You may still write to an SD card though, the firmware will not send EEG data over the Bluetooth radios.
+**IMPORTANT!** The Cyton with USB Dongle cannot and will not stream data over 250SPS. Plug in the [WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) to get speeds over 250SPS streaming. You may still write to an SD card though, the firmware will not send EEG data over the Bluetooth radios.
 
 **COMMAND**
 
@@ -357,8 +360,9 @@ This works similar to the sample rate. Power cycling the OpenBCI board will caus
 
 * 0 = Default mode - Sends accelerometer data in aux bytes
 * 1 = Debug mode - Sends serial output over the external serial port which is helpful for debugging.
-* 2 = Analog mode - Reads from analog pins A5, A6 and if no wifi shield is present, then A7 as well.
-* 3 = Digital mode - Reads from analog pins D11, D12 and D17.
+* 2 = Analog mode - Reads from analog pins A5(D11), A6(D12) and if no wifi shield is present, then A7(D13) as well.
+* 3 = Digital mode - Reads from analog pins D11, D12 and D17. If no wifi present then also D13 and D18.
+* 4 = Marker mode - Turns accel off and injects markers into the stream by sending _`X_ where `X` is any char to add to the first AUX byte.
 * / = Get current board mode
 
 **EXAMPLE**
@@ -398,4 +402,4 @@ Perform a soft reset of the Wifi shield. Will do a power on reset of just the wi
 ##Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
-**` 9 ( ) _ o O f g h k l ' " V n N M , . (space)**
+**9 ( ) _ o O f g h k l ' " V n N M , . (space)**
