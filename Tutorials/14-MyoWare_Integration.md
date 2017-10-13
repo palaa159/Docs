@@ -9,10 +9,10 @@
 3. OpenBCI dongle, if using Cyton board
 4. Two male-male wires, and three male-female wires
 5. Soldering iron and materials
+6. Skintact sticky electrodes (for using the MyoWare board)
 
 
 ### 1. Soldering the MyoWare Headers
-
 Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
 
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
@@ -24,7 +24,9 @@ The wires attached to the R, E, and M connects will transmit electrical signals 
 
 ### 2. Preparing OpenBCI Board
 Your Cyton board should look like this:
+
 ![Board with Headers](../assets/images/8bit_w_Headers.jpg)
+
 If your Cyton board is missing the black, female pin connectors (called "headers") sticking out of the board, you will need to solder them on before continuing. 
 
 ### 3. Wiring the MyoWare board to the OpenBCI board 
@@ -50,14 +52,29 @@ When you have everything wired up, set the power switch on the MyoWare board to 
 
 ### 4. Streaming EMG Data with the OpenBCI GUI
 
-As the myoware is basically now a 3-electrode system, we can use it as such in the GUI! If you use the newest GUI version you can use the EMG widget to visualize this data:
-![Resting](../assets/images/rest.png)
-This should be the data at rest (before a muscle flex)
+Attach three Skintact electrodes to the three electrodes on the MyoWare board, and then stick the board on a muscle you'd like to monitor. The adafruit MyoWare tutorial has good guidelines for MyoWare board placement: (https://learn.adafruit.com/getting-started-with-myoware-muscle-sensor/placing-electrodes).
 
-![Firing](../assets/images/firing.png)
-Here is the data after a muscle is flexed
+You'll be able to see signals from the MyoWare electrodes in the OpenBCI GUI. If you connected E and M to the N1P pins on the OpenBCI board, then the MyoWare data will appear in channel 1. 
 
-![Normalizing](../assets/images/normalizing.png)
-And here it is as the muscle goes back to rest
+Here's what the GUI, and channel 1, will look like with the muscle at rest:
 
-You can use these events to trigger analog or digital events from within the GUI as you like! Make sure to check out the `EMG_Widget.pde` file for a full description of how to do this.
+![Resting](../assets/images/OpenBCIGUI_at_rest.png)
+
+And here's what channel 1 will look like after flexing the muscle:
+
+![Firing](../assets/images/OpenBCIGUI_after_flex.png)
+
+## 5. Using OpenBCI's EMG GUI Widget
+
+The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on the drop down menu under "FFT Plot", and select "EMG" instead:
+
+![](../assets/images/emg_drop_down_menu.png)
+![](../assets/images/EMG_gui_at_rest.png)
+
+Each circle and box represents a channel. The circle and box fill up as the intensity of the signal on that channel increases.
+
+Here's what happens to the GUI when a muscle is slightly (top) and strongly (bottom):
+
+![](../assets/images/emg_gui_flex_small.png) ![](../assets/images/emg_gui_flex_big.png)
+
+You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget
