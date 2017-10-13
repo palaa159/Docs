@@ -5,22 +5,21 @@
 ![MyoWare Board](../assets/images/myoware.jpg)
 
 1. MyoWare board
-2. OpenBCI board (we'll be using a Cyton board) and power source
-3. OpenBCI dongle
-4. Headers for soldering (I used male headers but you can use whichever you prefer).
-5. Jumper Wires (depending on which headers you use). At least 3 of these cables will need to have female ends and at least 2 will need male ends, the other vary depending on which headers you use.
-6. Soldering iron and materials
+2. OpenBCI board (we'll be using a Cyton board) with headers soldered and power source
+3. OpenBCI dongle, if using Cyton board
+4. Two male-male wires, and three male-female wires
+5. Soldering iron and materials
 
 
 ### 1. Soldering the MyoWare Headers
 
-Solder 5 wires to the MyoWare board as shown:
+Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
 
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
 The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI board.
 
-The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI board. R is the reference electrode, the one attached to the black wire. E is the end electrode, and M is the middle electrode. The E and M electrodes will measure activity across a muscle. 
+The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
 
 
 ### 2. OpenBCI Board
