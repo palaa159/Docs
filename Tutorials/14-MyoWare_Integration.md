@@ -4,15 +4,17 @@
 
 ![MyoWare Board](../assets/images/myoware.jpg)
 
-1. MyoWare Board
-2. OpenBCI Board and power source
-3. OpenBCI Dongle
+1. MyoWare board
+2. OpenBCI board (we'll be using a Cyton board) and power source
+3. OpenBCI dongle
 4. Headers for soldering (I used male headers but you can use whichever you prefer).
 5. Jumper Wires (depending on which headers you use). At least 3 of these cables will need to have female ends and at least 2 will need male ends, the other vary depending on which headers you use.
-6. Soldering Iron and some rosin
+6. Soldering iron and materials
 
 
 ### 1. Soldering the MyoWare Headers
+
+![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
 In order to properly integrate the MyoWare with your OpenBCI board, we will need to get the output of each electrode attached to the myoware  board itself. To do this we will need to solder headers onto the R, E, and M parts of the board. 
 R is the reference electrode, the one with the wire. E is the end electrode, and M is the middle electrode. These two electrodes will measure activity across a muscle. 
@@ -20,7 +22,7 @@ R is the reference electrode, the one with the wire. E is the end electrode, and
 In addition to these electrode headers we will need to solder headers onto the areas that supply power to the MyoWare. In order to do this, simply solder two headers to the + and - parts of the board. This will be your ground and power supplied from the OpenBCI board.
 
 
-### 2. OpenBCI Headers
+### 2. OpenBCI Board
 ![Board with Headers](../assets/images/8bit_w_Headers.jpg)
 If you have not already soldered your headers onto OpenBCI board, you should do so now. However if you'd prefer to minimize soldering, at least solder headers into the leftmost area of the board. We will be utilizing DVDD and GND right above the OpenBCI logo.
 
