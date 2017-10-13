@@ -203,21 +203,23 @@ Carefully, glue the FRONT FRAME and BACK FRAME together with your Cyanoacrylate 
 
 ### Mount the OpenBCI BOARD_MOUNT
 
-Use two screws to mount the M4 Board_Mount to the Frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
+**Note:** Begin instructions here if you receive a pre-printed but unassembled headset.
+
+Use two screws to mount the M4 Board_Mount to the back of the Frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
 
 ![image](../assets//MarkIV/Photos/Assembly_Board_Mount.JPG)
 
 ### Insert INSERTS pieces (x35) into frame
 
-**Note:** Before glueing the INSERTS into the frame ensure, that it fits properly into the frame without glue.
+**Note:** Before glueing the INSERTS into the frame, ensure that it fits properly into the frame without glue. INSERTs should be inserted from the inside of the frame outwards, so that they lie flush with the frame.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert.JPG)
 
-For each INSERT, line the inner rim of frame with glue. Then insert the INSERT so that it is flush with the frame.
+For each INSERT, line the inner rim of frame with glue. Then insert the INSERT so that it is flush with the frame like previously.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert2.JPG)
 
-Your Ultracortex should now look like this with your 5 COMFORT UNITS screwed in place:
+Screw 5 COMFORT UNITS into the frame as shown below. Your Ultracortex should now look like this:
 
 ![image](../assets//MarkIV/Photos/Assembly_Comfort.JPG)
 
