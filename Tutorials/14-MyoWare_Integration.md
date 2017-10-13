@@ -14,12 +14,13 @@
 
 ### 1. Soldering the MyoWare Headers
 
+Solder 5 wires to the MyoWare board as shown:
+
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
-In order to properly integrate the MyoWare with your OpenBCI board, we will need to get the output of each electrode attached to the myoware  board itself. To do this we will need to solder headers onto the R, E, and M parts of the board. 
-R is the reference electrode, the one with the wire. E is the end electrode, and M is the middle electrode. These two electrodes will measure activity across a muscle. 
+The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI board.
 
-In addition to these electrode headers we will need to solder headers onto the areas that supply power to the MyoWare. In order to do this, simply solder two headers to the + and - parts of the board. This will be your ground and power supplied from the OpenBCI board.
+The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI board. R is the reference electrode, the one attached to the black wire. E is the end electrode, and M is the middle electrode. The E and M electrodes will measure activity across a muscle. 
 
 
 ### 2. OpenBCI Board
