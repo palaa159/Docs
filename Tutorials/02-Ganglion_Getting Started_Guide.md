@@ -66,7 +66,7 @@ Select `BLE (on Win from Dongle)` as the transfer protocol
 
 The GUI will automatically start searching for Ganglion devices.
 ![wifi with ganglion ble searching for wifi shield](../assets/images/ble_ganglion_searching.png)
-Each Ganglion has it's own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Ganglion again. Make a note of *your* Ganglion's 4 character ID.  
+Each Ganglion has its own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Ganglion again. Make a note of *your* Ganglion's 4 character ID.  
 
 Select the desired Ganglion device from the dropdown list
 ![selecting your ganglion ble shield](../assets/images/ble_ganglion_select_ganglion_peripheral.png)
