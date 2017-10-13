@@ -28,7 +28,7 @@ Your Cyton board should look like this:
 If your Cyton board is missing the black, female pin connectors (called "headers") sticking out of the board, you will need to solder them on before continuing. 
 
 ### 3. Wiring the MyoWare board to the OpenBCI board 
-Connect the 5 wires from the MyoWare board in step 2 to the OpenBCI board, as shown below:
+Connect the 5 wires from the MyoWare board in step 1 to the OpenBCI board, as shown below:
 
 ![Board with Headers](../assets/images/cyton_myoware_connects.jpg)
 
@@ -46,9 +46,9 @@ The wires should be connected like this:
 
 R, "+", and "-" must always go to the pins shown above. E and M can also be connected to N2P top and N2P bottom, or N3P top and N3P bottom, or any of the other two "NXP" pins.
 
-When you have everything wired up, plug in your OpenBCI board and dongle, and turn everything on. Then open up the OpenBCI GUI!
+When you have everything wired up, set the power switch on the MyoWare board to "on". Turn on the OpenBCI board, connect the USB dongle to your computer, and start the OpenBCI GUI software. If you're new to using an OpenBCI board with your computer, take a look at the Cyton Getting Started Guide (http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
 
-### 4. Using the GUI
+### 4. Streaming EMG Data with the OpenBCI GUI
 
 As the myoware is basically now a 3-electrode system, we can use it as such in the GUI! If you use the newest GUI version you can use the EMG widget to visualize this data:
 ![Resting](../assets/images/rest.png)
