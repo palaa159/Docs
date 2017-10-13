@@ -28,17 +28,25 @@ If you have not already soldered your headers onto OpenBCI board, you should do 
 
 
 ### 3. Wiring 
+Connect the 5 wires from the MyoWare board in step 2 to the OpenBCI board, as shown below:
 
-The wiring is very simple actually! All we need to do is connect the two electrode pins to an NXP input (I used N1P for this tutorial), and the reference to the bottom BIAS pin. For example:
-* R (Myo)  -> BIAS(OBCI)
-* M (Myo) -> N1P Bottom (OBCI)
-* E (Myo) -> N1P Top (OBCI)
-* \+ (Myo) -> DVDD (OBCI)
-* \- (Myo) -> GND (OBCI)
+![Board with Headers](../assets/images/cyton_myoware_connects.jpg)
 
-While the M and E electrodes can be interchanged onto any of the NXP pins, the reference electrode will always need to stay on the bottom BIAS pin.
+The "+" and "-" from the MyoWare board should go to DVDD and GND connects on the left side of the Cyton board. R, E, and M will connect to the pins at the top.
 
-When you have everything wired up, plug in your OpenBCI board and dongle, and turn everything on. Then open up the GUI and you can start coding!
+The wires should be connected like this:
+
+| MyoWare Board | OpenBCI Board |
+| -------------- | -------------- |
+| \+ | DVDD |
+| \- | GND |
+| R | BIAS (top pin) |
+| E | N1P Top |
+| M | N1P Bottom |
+
+R, "+", and "-" must always go to the pins shown above. E and M can also be connected to N2P top and N2P bottom, or N3P top and N3P bottom, or any of the other two "NXP" pins.
+
+When you have everything wired up, plug in your OpenBCI board and dongle, and turn everything on. Then open up the OpenBCI GUI!
 
 ### 4. Using the GUI
 
