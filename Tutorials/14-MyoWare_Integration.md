@@ -22,12 +22,12 @@ The wires attached to the "+" and "-" connects will be used to supply power to t
 The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
 
 
-### 2. OpenBCI Board
+### 2. Preparing OpenBCI Board
+Your Cyton board should look like this:
 ![Board with Headers](../assets/images/8bit_w_Headers.jpg)
-If you have not already soldered your headers onto OpenBCI board, you should do so now. However if you'd prefer to minimize soldering, at least solder headers into the leftmost area of the board. We will be utilizing DVDD and GND right above the OpenBCI logo.
+If your Cyton board is missing the black, female pin connectors (called "headers") sticking out of the board, you will need to solder them on before continuing. 
 
-
-### 3. Wiring 
+### 3. Wiring the MyoWare board to the OpenBCI board 
 Connect the 5 wires from the MyoWare board in step 2 to the OpenBCI board, as shown below:
 
 ![Board with Headers](../assets/images/cyton_myoware_connects.jpg)
