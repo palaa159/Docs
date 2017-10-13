@@ -1,4 +1,4 @@
-# Tutorials
+# Tutorials <3
 
 Welcome to the **Tutorials** section! Here you will find miscellanious guides teaching you how to do cool things with your OpenBCI hardware and software. In this section you'll find getting started guides. Some of these tutorials detail how to do more advanced things with the OpenBCI platform. Some of them teach you how to optimize your computer for maximum performance while working with OpenBCI. And others teach you how to connect OpenBCI to other hardware devices.
 
