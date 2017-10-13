@@ -28,11 +28,11 @@ If you have not already soldered your headers onto OpenBCI board, you should do 
 ### 3. Wiring 
 
 The wiring is very simple actually! All we need to do is connect the two electrode pins to an NXP input (I used N1P for this tutorial), and the reference to the bottom BIAS pin. For example:
-R (Myo)  -> BIAS(OBCI)
-M (Myo) -> N1P Bottom (OBCI)
-E (Myo) -> N1P Top (OBCI)
-+ (Myo) -> DVDD (OBCI)
-- (Myo) -> GND (OBCI)
+* R (Myo)  -> BIAS(OBCI)
+* M (Myo) -> N1P Bottom (OBCI)
+* E (Myo) -> N1P Top (OBCI)
+* \+ (Myo) -> DVDD (OBCI)
+* \- (Myo) -> GND (OBCI)
 
 While the M and E electrodes can be interchanged onto any of the NXP pins, the reference electrode will always need to stay on the bottom BIAS pin.
 
