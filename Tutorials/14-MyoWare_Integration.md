@@ -64,7 +64,7 @@ And here's what channel 1 will look like after flexing the muscle:
 
 ![Firing](../assets/images/OpenBCIGUI_after_flex.png)
 
-## 5. Using OpenBCI's EMG GUI Widget
+### 5. Using OpenBCI's EMG GUI Widget
 
 The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on the drop down menu under "FFT Plot", and select "EMG" instead:
 
