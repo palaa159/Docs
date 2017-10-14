@@ -68,17 +68,14 @@ And here's what channel 1 will look like after flexing the muscle:
 
 The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on the drop down menu under "FFT Plot", and select "EMG" instead:
 
-|Select EMG instead of FFT Plot | The EMG GUI widget |
-| --- | --- |
-| ![](../assets/images/emg_drop_down_menu.png) | ![](../assets/images/EMG_gui_at_rest.png) |
-
+![](../assets/images/emg_drop_down_menu.png)
+![](../assets/images/EMG_gui_at_rest.png)
 
 Each circle and box represents a channel. The circle and box fill up as the intensity of the signal on that channel increases.
 
-Here's what happens to the GUI when a muscle is flexed a little or very strongly:
+Here's what happens to the GUI when a muscle is flexed a little (top) or very strongly (bottom):
 
-| Slightly flexed | More strongly flexed    |
-| --- | --- |
-| ![](../assets/images/emg_gui_flex_small.png) | ![](../assets/images/emg_gui_flex_big.png) |
+![](../assets/images/emg_gui_flex_small.png)
+![](../assets/images/emg_gui_flex_big.png)
 
 You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget
