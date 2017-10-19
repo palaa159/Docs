@@ -226,7 +226,7 @@ On a Windows `C:\Users\Username\Documents\Processing\libraries`
 
 folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
 
-### Install OpenBCI Hub on Mac
+### Install OpenBCI Hub on Mac/Linux
 
 ![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
 
@@ -243,7 +243,7 @@ Move the `Ganglion Hubb app` from your Downloads folder to:
 
 `Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
 
-## Install OpenBCI Hub on Windows
+### Install OpenBCI Hub on Windows
 
 The fastest way is to download the standalone .exe/.app for your machine and operating system. To do this, head to the [Downloads](http://openbci.com/donation) page of the OpenBCI website, and click the download link that correlates to your OS and machine.
 
