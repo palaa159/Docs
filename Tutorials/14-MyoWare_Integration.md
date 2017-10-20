@@ -1,35 +1,36 @@
-# MyoWare OpenBCI Integration
+# MyoWare OpenBCI Integration (Cyton Board)
 
 ## I. Materials needed
 
 ![MyoWare Board](../assets/images/myoware.jpg)
 
 1. MyoWare board
-2. OpenBCI board (we'll be using a Cyton board) with headers soldered and power source
-3. OpenBCI dongle, if using Cyton board
-4. Two male-male wires, and three male-female wires
+2. OpenBCI Cyton board with headers soldered and power source
+3. OpenBCI dongle
+4. Skintact sticky electrodes (for using the MyoWare board)
 5. Soldering iron and materials
-6. Skintact sticky electrodes (for using the MyoWare board)
+6. Two male-male jumper wires (like [these](https://www.adafruit.com/product/266)), and three male-female jumper wires (like [these](https://www.adafruit.com/product/826))
 
+Note: jumper wires aren't sold on the OpenBCI website, but Adafruit (linked above) has some great options!
 
 ### 1. Soldering the MyoWare Headers
 Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
 
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
-The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI board.
+The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI Cyton board.
 
-The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
+The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI Cyton board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
 
 
-### 2. Preparing OpenBCI Board
+### 2. Preparing OpenBCI Cyton Board
 Your Cyton board should look like this:
 
 ![Board with Headers](../assets/images/8bit_w_Headers.jpg)
 
 If your Cyton board is missing the black, female pin connectors (called "headers") sticking out of the board, you will need to solder them on before continuing. 
 
-### 3. Wiring the MyoWare board to the OpenBCI board 
+### 3. Wiring the MyoWare Board to the OpenBCI Cyton Board 
 Connect the 5 wires from the MyoWare board in step 1 to the OpenBCI board, as shown below:
 
 ![Board with Headers](../assets/images/cyton_myoware_connects.jpg)
