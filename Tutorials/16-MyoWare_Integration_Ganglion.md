@@ -17,6 +17,7 @@ Note: jumper wires aren't sold on the OpenBCI website, but Adafruit (linked abov
 
 ### 1. Soldering the MyoWare Headers
 Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
+
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
 The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI Cyton board.
@@ -34,21 +35,21 @@ If your Ganglion board is missing the black, female pin connectors (called "head
 ### 3. Wiring the MyoWare Board to the OpenBCI Ganglion Board 
 Connect the 5 wires from the MyoWare board in step 1 to the Ganglion board, as shown below:
 
-![Board with Headers](../assets/images/cyton_myoware_connects.jpg)
+![Board with Headers](../assets/images/ganglion_myoware_connects.JPG)
 
-The "+" and "-" from the MyoWare board should go to DVDD and GND connects on the left side of the Cyton board. R, E, and M will connect to the pins at the top.
+The "+" and "-" from the MyoWare board should go to DVDD and GND connects on the left side of the Ganglion board. R, E, and M will connect to the pins at the top.
 
 The wires should be connected like this:
 
-| MyoWare Board | OpenBCI Board |
+| MyoWare Board | OpenBCI Ganglion Board |
 | -------------- | -------------- |
 | \+ | DVDD |
 | \- | GND |
-| R | BIAS (top pin) |
-| E | N1P Top |
-| M | N1P Bottom |
+| R | D_G (top pin) |
+| E | 1- (bottom pin) |
+| M | 1+ (top pin) |
 
-R, "+", and "-" must always go to the pins shown above. E and M can also be connected to N2P top and N2P bottom, or N3P top and N3P bottom, or any of the other two "NXP" pins.
+R, "+", and "-" must always go to the pins shown above. E and M can also be connected to 2+ and 2- (the top and bottom "2" pins), or 3+ and 3-, or 4+ and 4-.
 
 When you have everything wired up, set the power switch on the MyoWare board to "on". Turn on the OpenBCI board, connect the USB dongle to your computer, and start the OpenBCI GUI software. If you're new to using an OpenBCI board with your computer, take a look at the Cyton Getting Started Guide (http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
 
