@@ -1,8 +1,8 @@
 # MyoWare OpenBCI Integration (Cyton Board)
 
-## I. Materials needed
-
 ![MyoWare Board](../assets/images/myoware.jpg)
+
+### Materials Needed
 
 1. MyoWare board
 2. OpenBCI Cyton board with headers soldered and power source
@@ -79,4 +79,4 @@ Here's what happens to the GUI when a muscle is flexed a little (top) or very st
 ![](../assets/images/emg_gui_flex_small.png)
 ![](../assets/images/emg_gui_flex_big.png)
 
-You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget
+You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
