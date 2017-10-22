@@ -28,7 +28,7 @@ The wires attached to the R, E, and M connects will transmit electrical signals 
 ### 2. Preparing OpenBCI Ganglion Board
 Your Ganglion board should look like this:
 
-![Board with Headers](../assets/images/ganglion.jpg)
+![Board with Headers](../assets/images/ganglion_head_shot.jpg)
 
 If your Ganglion board is missing the black, female pin connectors (called "headers") sticking out of the board, you will need to solder them on before continuing. 
 
