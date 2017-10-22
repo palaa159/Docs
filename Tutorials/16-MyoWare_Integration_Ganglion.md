@@ -8,21 +8,21 @@ This tutorial will set you up to read EMG data (electrical signals from muscles)
 ### Materials Needed
 
 1. MyoWare board
-2. OpenBCI Ganglion board with headers soldered and power source
+2. OpenBCI Ganglion board, with power source
 4. Skintact sticky electrodes (for using the MyoWare board)
 5. Soldering iron and materials
 6. Two male-male jumper wires (like [these](https://www.adafruit.com/product/266)), and three male-female jumper wires (like [these](https://www.adafruit.com/product/826))
 
-Note: jumper wires aren't sold on the OpenBCI website, but Adafruit (linked above) has some great options!
+Note: jumper wires aren't sold on the OpenBCI website, but we used the ones from Adafruit (linked above) for this tutorial
 
 ### 1. Soldering the MyoWare Headers
 Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
 
 ![MyoWare Board post-soldering](../assets/images/myoware_post_solder.jpg)
 
-The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI Cyton board.
+The wires attached to the "+" and "-" connects will be used to supply power to the board. They'll be attached to high voltage and ground outputs on the OpenBCI Ganglion board.
 
-The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI Cyton board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
+The wires attached to the R, E, and M connects will transmit electrical signals from MyoWare's three electrodes to the OpenBCI Ganglion board. R is the reference electrode, the one attached to the black wire. M is the middle electrode, and E is the end electrode. The E and M electrodes will measure activity across a muscle. 
 
 
 ### 2. Preparing OpenBCI Ganglion Board
@@ -37,7 +37,7 @@ Connect the 5 wires from the MyoWare board in step 1 to the Ganglion board, as s
 
 ![Board with Headers](../assets/images/ganglion_myoware_connects.JPG)
 
-The "+" and "-" from the MyoWare board should go to DVDD and GND connects on the left side of the Ganglion board. R, E, and M will connect to the pins at the top.
+The "+" and "-" from the MyoWare board should go to the DVDD and GND connects on the left side of the Ganglion board. R, E, and M will connect to the pins at the top.
 
 The wires should be connected like this:
 
@@ -51,13 +51,13 @@ The wires should be connected like this:
 
 R, "+", and "-" must always go to the pins shown above. E and M can also be connected to 2+ and 2- (the top and bottom "2" pins), or 3+ and 3-, or 4+ and 4-.
 
-When you have everything wired up, set the power switch on the MyoWare board to "on". Turn on the OpenBCI board, connect the USB dongle to your computer, and start the OpenBCI GUI software. If you're new to using an OpenBCI board with your computer, take a look at the Cyton Getting Started Guide (http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
+When you have everything wired up, set the power switch on the MyoWare board to "on". Turn on the OpenBCI Ganglion board, turn on your computer's Bluetooth feature, and start the OpenBCI GUI software. If you're new to using a Ganglion board with your computer, take a look at the Ganglion Getting Started Guide (http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide).
 
 ### 4. Streaming EMG Data with the OpenBCI GUI
 
-Attach three Skintact electrodes to the three electrodes on the MyoWare board, and then stick the board on a muscle you'd like to monitor. The adafruit MyoWare tutorial has good guidelines for MyoWare board placement: (https://learn.adafruit.com/getting-started-with-myoware-muscle-sensor/placing-electrodes).
+Attach three Skintact electrodes to the three electrodes on the MyoWare board, and then stick the board on a muscle you'd like to monitor. The Adafruit MyoWare tutorial has good guidelines for MyoWare board placement: (https://learn.adafruit.com/getting-started-with-myoware-muscle-sensor/placing-electrodes).
 
-You'll be able to see signals from the MyoWare electrodes in the OpenBCI GUI. If you connected E and M to the N1P pins on the OpenBCI board, then the MyoWare data will appear in channel 1. 
+You'll be able to see signals from the MyoWare electrodes in the OpenBCI GUI. If you connected E and M to the 1- and 1+ pins on the OpenBCI Ganglion board, then the MyoWare data will appear in channel 1. 
 
 Here's what the GUI, and channel 1, will look like with the muscle at rest:
 
