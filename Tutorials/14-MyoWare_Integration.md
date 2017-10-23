@@ -1,20 +1,20 @@
 # MyoWare OpenBCI Integration (Cyton Board)
 
 ### Overview
-This tutorial will set you up to read EMG data (electrical signals from muscles) using a MyoWare board, an OpenBCI Cyton board, and the OpenBCI GUI. If you have a Ganglion board instead, check out our [Ganglion board MyoWare integration tutorial instead!](http://docs.openbci.com/Tutorials/16-MyoWare_Integration_Ganglion)
+This tutorial will show you how to read EMG data (electrical signals from muscles) using a MyoWare board, an OpenBCI Cyton board, and the OpenBCI GUI. If you have a Ganglion board instead, check out our [Ganglion board MyoWare integration tutorial!](http://docs.openbci.com/Tutorials/16-MyoWare_Integration_Ganglion)
 
 ![MyoWare Board](../assets/images/myoware.jpg)
 
 ### Materials Needed
 
 1. MyoWare board
-2. OpenBCI Cyton board with headers soldered and power source
+2. OpenBCI Cyton board, with power source
 3. OpenBCI dongle
 4. Skintact sticky electrodes (for using the MyoWare board)
 5. Soldering iron and materials
 6. Two male-male jumper wires (like [these](https://www.adafruit.com/product/266)), and three male-female jumper wires (like [these](https://www.adafruit.com/product/826))
 
-Note: jumper wires aren't sold on the OpenBCI website, but Adafruit (linked above) has some great options!
+Note: jumper wires aren't sold on the OpenBCI website, but we used some from Adafruit (linked above) for this tutorial
 
 ### 1. Soldering the MyoWare Headers
 Solder 5 wires to the MyoWare board as shown below. Solder the male-male wires to the "+" and "-" connects, and the male-female wires to the R, E, and M connects.
@@ -82,4 +82,4 @@ Here's what happens to the GUI when a muscle is flexed a little (top) or very st
 ![](../assets/images/emg_gui_flex_small.png)
 ![](../assets/images/emg_gui_flex_big.png)
 
-You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
+You can use these changes in signal intensity to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
