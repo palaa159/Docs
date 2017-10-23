@@ -61,24 +61,23 @@ You'll be able to see signals from the MyoWare electrodes in the OpenBCI GUI. If
 
 Here's what the GUI, and channel 1, will look like with the muscle at rest:
 
-![Resting](../assets/images/OpenBCIGUI_at_rest.png)
+![Resting](../assets/images/MyoWare_Tutorials/Ganglion_GUI_before_flexing.png)
 
 And here's what channel 1 will look like after flexing the muscle:
 
-![Firing](../assets/images/OpenBCIGUI_after_flex.png)
+![Firing](../assets/images/MyoWare_Tutorials/Ganglion_GUI_after_flex.png)
 
 ### 5. Using OpenBCI's EMG GUI Widget
 
 The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on the drop down menu under "FFT Plot", and select "EMG" instead:
 
 ![](../assets/images/emg_drop_down_menu.png)
-![](../assets/images/EMG_gui_at_rest.png)
+![](../assets/images/MyoWare_Tutorials/Ganglion_GUI_before_widget.png)
 
 Each circle and box represents a channel. The circle and box fill up as the intensity of the signal on that channel increases.
 
 Here's what happens to the GUI when a muscle is flexed a little (top) or very strongly (bottom):
 
-![](../assets/images/emg_gui_flex_small.png)
-![](../assets/images/emg_gui_flex_big.png)
+![](../assets/images/MyoWare_Tutorials/Ganglion_GUI_after_widget.png.png)
 
 You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
