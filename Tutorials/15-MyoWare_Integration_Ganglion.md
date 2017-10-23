@@ -1,7 +1,7 @@
 # MyoWare OpenBCI Integration (Ganglion Board)
 
 ### Overview
-This tutorial will set you up to read EMG data (electrical signals from muscles) using a MyoWare board, an OpenBCI Ganglion board, and the OpenBCI GUI. If you have a Cyton board instead, check out our [Cyton board MyoWare integration tutorial instead!](http://docs.openbci.com/Tutorials/14-MyoWare_Integration)
+This tutorial will show you how to read EMG data (electrical signals from muscles) using a MyoWare board, an OpenBCI Ganglion board, and the OpenBCI GUI. If you have a Cyton board instead, check out our [Cyton board MyoWare integration tutorial!](http://docs.openbci.com/Tutorials/14-MyoWare_Integration)
 
 ![MyoWare + Ganglion supplies](../assets/images/flatlay_myoware_ganglion.JPG)
 
@@ -37,7 +37,7 @@ Connect the 5 wires from the MyoWare board in step 1 to the Ganglion board, as s
 
 ![Board with Headers](../assets/images/ganglion_myoware_connects.JPG)
 
-The "+" and "-" from the MyoWare board should go to the DVDD and GND connects on the left side of the Ganglion board. R, E, and M will connect to the pins at the top.
+The "+" and "-" from the MyoWare board should go to the DVDD and GNDA connects on the left side of the Ganglion board. R, E, and M will connect to the pins at the top.
 
 The wires should be connected like this:
 
@@ -78,8 +78,8 @@ Each circle and box represents a channel. The circle and box fill up as the inte
 
 Here's what happens to the GUI when a muscle is flexed:
 
-![](../assets/images/MyoWare_Tutorials/Ganglion_GUI_after_widget.png.png)
+![](../assets/images/MyoWare_Tutorials/Ganglion_GUI_after_widget.png)
 
-You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
+You can use this change in signal intensity to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
 
 Still have questions? Post on our [Forum](http://openbci.com/index.php/forum/) or let us know at contact@openbci.com!
