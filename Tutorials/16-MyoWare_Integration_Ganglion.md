@@ -44,7 +44,7 @@ The wires should be connected like this:
 | MyoWare Board | OpenBCI Ganglion Board |
 | -------------- | -------------- |
 | \+ | DVDD |
-| \- | GND |
+| \- | GNDA |
 | R | D_G (top pin) |
 | E | 1- (bottom pin) |
 | M | 1+ (top pin) |
