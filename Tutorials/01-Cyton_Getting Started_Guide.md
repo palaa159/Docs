@@ -22,7 +22,7 @@ This tutorial can be followed if you are working with any Cyton board (8-bit, Cy
 
 ![OpenBCI Dongle](../assets/images/dongle.png)
 
-The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the Cyton board. The dongle establishes a serial connection with your computer's on-board FTDI chip. The serial port is called /dev/tty\* (if you're using Linux or Mac) or COM\* (if you're using Windows) . You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your Cyton board.
+The OpenBCI USB Dongle has an integrated RFDuino that communicates with the RFDuino on the Cyton board. The dongle establishes a serial connection with your computer's on-board FTDI chip. The serial port is called /dev/tty\* (if you're using Linux or Mac) or COM\* (if you're using Windows). You'll be connecting to this serial port from the OpenBCI GUI or whatever other software you want to end up using to interface your Cyton board.
 
 ### 3. OpenBCI Gold Cup Electrodes and Electrode Paste
 
@@ -59,7 +59,7 @@ Come back to this guide when your GUI is running!
 
 ### 1. Make sure your FTDI drivers are installed and up-to-date
 
-The Cyton will not work with out the VCP drivers. Please see how to get and install the VCP driver in the prerequisites section in the [the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI)
+The Cyton will not work without the VCP drivers. Please see how to get and install the VCP driver in the prerequisites section in the [the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI)
 
 ### 2. Plug in your OpenBCI USB Dongle
 
@@ -104,7 +104,7 @@ Next select `Serial (from Dongle)`. If you want to use the WiFi Shield, please s
 
 ### 4. Find your USB Dongle's Serial/COM port
 
-In the first section of the LIVE (from Cyton) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, it's name will be in the following format:
+In the first section of the LIVE (from Cyton) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, its name will be in the following format:
 
 ![Select Serial](../assets/images/serial_cyton_select_serial_port.png)
 
@@ -122,7 +122,17 @@ Your USB Dongle's port name will likely be at the top of the list. If you don't 
 
 If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum/) about debugging your hardware connection.
 
-### 5. (optional) Check Status or Change Radio Channel
+### 5. Select your channel count (8 or 16)
+
+![Channel Count](../assets/images/channelCount.png)
+
+The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and Cyton board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
+
+### 6. Optional Settings
+
+If you're comfortable using the GUI, feel free to change some of these optional settings below. Otherwise, skip to step 7!
+
+#### Check Status or Change Radio Channel
 
 ![Open Config Tab](../assets/images/serial_cyton_open_radio_config.png)
 
@@ -155,7 +165,7 @@ Since you have just changed the channel of the Dongle only, When you click on th
 
 Now, click the `AUTOSCAN` button. It may take a few seconds for the Dongle to scan through every channel until it connects to your Cyton, but it will, and you will get the message `Success: System is Up` Autoscan!
 
-### 6.(optional) Edit the Playback file name
+#### Edit the Playback file name
 
 ![File Name](../assets/images/fileName.png)
 
@@ -173,13 +183,7 @@ If working from a Mac, you'll need to right-click on the OpenBCI_GUI application
 
 After creating a Playback file, it can be replayed by running the OpenBCI GUI with the Plaback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
-### 7. Select your channel count (8 or 16)
-
-![Channel Count](../assets/images/channelCount.png)
-
-The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and Cyton board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
-
-### 8. (optional) Select your SD setting
+#### Select your SD setting
 
 ![WRITE TO SD](../assets/images/writeToSD.png)
 
@@ -187,7 +191,7 @@ If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE
 
 **Note:** be sure to select a file size that is larger than your planned recording time. The Cyton writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
 
-### 9. Press "START SYSTEM"
+### 7. Press "START SYSTEM"
 
 ![START SYSTEM](../assets/images/serial_cyton_start_system.png)
 
@@ -207,7 +211,7 @@ If the initialization fails, try the following steps in order:
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your Cyton board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
 
-### 10. Your Cyton is now live!
+### 8. Your Cyton is now live!
 
 Now that the OpenBCI_GUI is connected to your Cyton you may press `Start Data Stream` in the upper left hand corner.
 
