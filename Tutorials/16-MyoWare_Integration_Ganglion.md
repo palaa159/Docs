@@ -76,8 +76,10 @@ The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on
 
 Each circle and box represents a channel. The circle and box fill up as the intensity of the signal on that channel increases.
 
-Here's what happens to the GUI when a muscle is flexed a little (top) or very strongly (bottom):
+Here's what happens to the GUI when a muscle is flexed:
 
 ![](../assets/images/MyoWare_Tutorials/Ganglion_GUI_after_widget.png.png)
 
 You can use these events to trigger analog or digital events from within the GUI as you like. Check out the `EMG_Widget.pde` file for more information on the EMG widget.
+
+Still have questions? Post on our [Forum] (http://openbci.com/index.php/forum/) or let us know at contact@openbci.com!
