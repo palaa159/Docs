@@ -124,7 +124,7 @@ For more information on these three signals, refer to wikipedia:
  * [Muscle Acitivity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
  * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
-### 1. Connect for ECG
+### 1. View ECG/EKG Signals
 
 Let's start off with something simple, ECG is the electric signal that causes your ticker to tick, and it's easy to measure if you attach electrodes on either side of your body.
 
@@ -141,9 +141,9 @@ Make sure these switches are in the "up" position (which is the factory default)
 
 Now a note about your Ganglion board setup. There are 4 switches on the top of the board that are used to re-route the input connections to make connecting yourself easy. The default setting (the way your ganglion was shipped to you) is with the switches in the `UP` position. This allows you to connect your electrodes to the `+` and `-` pins of any channel, and measure the differential between them. For more of a deep dive on Ganglion Hardware, go to [this hardware overview document.](http://docs.openbci.com/Hardware/07-Ganglion)
 
-### Connect Electrodes to Ganglion Board
+#### Connect Electrodes to Ganglion Board
 
-Connect the square, plastic ends of three electrode wires to your Ganglion board, as shown below:
+Connect the female header ends (the square, plastic ends) of three electrode wires to your Ganglion board, as shown below:
 
 ![ECG connection TOP](../assets/images/ganglion_ECG-plugged-top-view.png)
 ![ECG connection PINS](../assets/images/ganglion_ECG-plugged-pins.png)
@@ -158,11 +158,15 @@ Here's the color scheme we're using for this tutorial:
 
 The purple and white wires can also be attached to 1+ (top 1 pin) and 1- (bottom 1 pin), or 2+ and 2-, or 4+ and 4-. 
 
+#### Connect Electrodes to your Arm
+
 Attach SkinTact sticky electrodes to all three of the electrode ends. Stick the purple electrode (the 3+ pin) on your left arm, and the white electrode (the 3- pin) on your right arm.
 
 **NOTE Connect the `+` pin to your LEFT arm, otherwise the pulse wave will be upside down! The `+` pin is on the TOP row of the pin header. See the [Ganglion Hardware](http://docs.openbci.com/Hardware/07-Ganglion) doc for more details.**
 
 Stick the grey electrode (the D_G bottom pin) on your elbow. This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
+
+#### View ECG/EKG Signals in the GUI
 
 ![channels on/off](../assets/images/ganglion_channels-ON-OFF.jpg)
 
@@ -180,7 +184,7 @@ To measure your connection to the board, we have to change the Accelerometer wid
 
 When you start the impedance check, the data will stop streaming, but some numbers will start to pop up in the `Ganglion Signal` window. These values are a measure of the input impedance, or the connection quality, between your body and the Ganglion. In the case of using ECG electrodes on bare skin, you would expect to see a value of between 5k and 10k. Notice the other channels are reporting high values. That's because there is nothing connected to them! Notice that the dot next to `Channel[3] Impedance` is green. That means it's good! The lower, the greener, the better!
 
-### 2. Connect for EMG
+### 2. View EMG Signals
 
 ![EMG Arms](../assets/images/ganglion_EMG-fist.png)
 
@@ -190,16 +194,36 @@ Now, let's take a look at some EMG signals. EMG is the measure of the electrical
 
 The EMG signal is a high frequency signal that is really easy to see in the Time Series window. In this image, I'm squeezing my fist three times in a row.
 
-### 3. Connect for EEG
+### 3. View EEG Signals
+
+Now we'll take a look at EEG some signals, or brainwaves!
+
+#### Adjust Input Switches
+
+Switch all of the input switches to the DOWN position, as shown below:
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
-Now, let's set up to see some brainwaves! The first thing you have to do is make an adjustment to the input switches. Remember, when we ship your Ganglion the switches `SW1, SW1, SW3, SW4` in the UP position, which allows you to connect to each channels `+` and `-` input pins. In this configuration, we say that these are "differential inputs". When the switch is in the DOWN position, the `-` pin is disconnected from the electronics, and that `-` input is connected instead to the `REF` pin. In this way, the switch helps you to gang together two or more of the `-` pins to use as a single reference. This scheme is useful when doing EEG, as you will soon see.  
-So, First, switch all of the `SW` pins to the DOWN position.
+Remember, when we ship your Ganglion the switches `SW1, SW1, SW3, SW4` in the UP position, which allows you to connect to each channels `+` and `-` input pins. In this configuration, we say that these are "differential inputs". When the switch is in the DOWN position, the `-` pin is disconnected from the electronics, and that `-` input is connected instead to the `REF` pin. In this way, the switch helps you to gang together two or more of the `-` pins to use as a single reference. This scheme is useful when doing EEG, as you will soon see.  
+
+#### Connect Electrodes to Ganglion Board
+
+Connect the female header end of 6 Gold Cup electrodes to the pins at the top of the Ganglion board, as shown below:
 
 ![EEG pin connections](../assets/images/ganglion_EEG-plugged.jpg)
 
-Next, connect the female header end of 6 of the Gold Cup Electrodes to the Ganglion input header. In this case, you want to be sure to connect to the `+` input, of channels 1, 2, 3, and 4, which is on the TOP row. You also need to connect one cable to the `REF` pin (either TOP or BOTTOM is ok) and also the `D_G` pin (either TOP or BOTTOM is ok).
+The wires should be connected like this:
+
+| Electrode wire color | OpenBCI Ganglion Board |
+| -------------- | -------------- |
+| Grey | 1+ (top 1 pin) |
+| Purple | 2+ (top 3 pin) |
+| Blue | 3+ (top 3 pin) |
+| Green | 4+ (top 4 pin) |
+| Yellow | REF (top or bottom is OK) |
+| Black | D_G (top or bottom is OK) |
+
+In this case, you want to be sure to connect to the `+` input, of channels 1, 2, 3, and 4, which is on the TOP row. You also need to connect one cable to the `REF` pin (either TOP or BOTTOM is ok) and also the `D_G` pin (either TOP or BOTTOM is ok).
 
 ![electrode paste scoop](../assets/images/electrodePaste.png)
 ![Connect REF & D_G paste](../assets/images/ganglion_connect-earlobe-paste.jpg)
