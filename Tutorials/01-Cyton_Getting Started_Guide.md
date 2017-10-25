@@ -412,7 +412,7 @@ In the photo to the left, you can see what these signals look like the green hig
 It's interesting to note that these signals are not picked up in channel 4. This is because channel 4 is only looking at the potential difference across your body—from your right forearm to your left wrist. As a result the EMG/EEG artifacts being produced on your head (in reference to SRB2) are not visible in this channel.
 
 
-### 4. Brain waves (alpha) with OpenBCI!
+### 4. Alpha brain waves (EEG)
 
 ![Alpha Brain Waves!](../assets/images/alpha.png)
 
