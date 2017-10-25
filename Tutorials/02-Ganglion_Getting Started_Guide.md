@@ -124,7 +124,7 @@ For more information on these three signals, refer to wikipedia:
  * [Muscle Acitivity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
  * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
-## Connect for ECG
+### 1. Connect for ECG
 
 Let's start off with something simple, ECG is the electric signal that causes your ticker to tick, and it's easy to measure if you attach electrodes on either side of your body.
 
@@ -162,7 +162,7 @@ To measure your connection to the board, we have to change the Accelerometer wid
 
 When you start the impedance check, the data will stop streaming, but some numbers will start to pop up in the `Ganglion Signal` window. These values are a measure of the input impedance, or the connection quality, between your body and the Ganglion. In the case of using ECG electrodes on bare skin, you would expect to see a value of between 5k and 10k. Notice the other channels are reporting high values. That's because there is nothing connected to them! Notice that the dot next to `Channel[3] Impedance` is green. That means it's good! The lower, the greener, the better!
 
-## Connect for EMG
+### 2. Connect for EMG
 
 ![EMG Arms](../assets/images/ganglion_EMG-fist.png)
 
@@ -172,7 +172,7 @@ Now, let's take a look at some EMG signals. EMG is the measure of the electrical
 
 The EMG signal is a high frequency signal that is really easy to see in the Time Series window. In this image, I'm squeezing my fist three times in a row.
 
-## Connect for EEG
+### 3. Connect for EEG
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
