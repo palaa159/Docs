@@ -212,7 +212,7 @@ Connect the female header end of 6 Gold Cup electrodes to the pins at the top of
 
 ![EEG pin connections](../assets/images/ganglion_EEG-plugged.jpg)
 
-The wires should be connected like this:
+The electrode wires should be connected like this:
 
 | Electrode wire color | OpenBCI Ganglion Board |
 | -------------- | -------------- |
