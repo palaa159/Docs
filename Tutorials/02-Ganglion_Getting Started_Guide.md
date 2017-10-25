@@ -133,18 +133,36 @@ Let's start off with something simple, ECG is the electric signal that causes yo
 
 In this example, I'm attaching two of the sticky `SKINTACT` electrodes to either arm, and then an extra one on my elbow. It doesn't matter what elbow you choose.
 
+#### Pin Switches
+
+Make sure these switches are in the "up" position (which is the factory default):
+
 ![Ganglion Switches Differential](../assets/images/ganglion_SW_UP.png)
 
-Now a note about your Ganglion board setup. There are 4 switches on the top of the board that are used to re-route the input connections to make connecting yourself easy. The default setting (the way your ganglion was shipped to you) is with the switches in the `UP` position. This allows you to connect your electrodes to the `+` and `-` pins of any channel, and measure the differential between them. For more of a deep dive on Ganglion Hardware, go to [this Doc](http://docs.openbci.com/Hardware/07-Ganglion)
+Now a note about your Ganglion board setup. There are 4 switches on the top of the board that are used to re-route the input connections to make connecting yourself easy. The default setting (the way your ganglion was shipped to you) is with the switches in the `UP` position. This allows you to connect your electrodes to the `+` and `-` pins of any channel, and measure the differential between them. For more of a deep dive on Ganglion Hardware, go to [this hardware overview document.](http://docs.openbci.com/Hardware/07-Ganglion)
+
+### Connect Electrodes to Ganglion Board
+
+Connect the square, plastic ends of three electrode wires to your Ganglion board, as shown below:
 
 ![ECG connection TOP](../assets/images/ganglion_ECG-plugged-top-view.png)
 ![ECG connection PINS](../assets/images/ganglion_ECG-plugged-pins.png)
 
-Here, I'm connecting my `arm` electrodes to the `+` and `-` pins of channel `3`.  
+Here's the color scheme we're using for this tutorial:
+
+| Electrode wire color | OpenBCI Ganglion Board |
+| -------------- | -------------- |
+| Grey | D_G (bottom pin) |
+| Purple | 3+ (top 3 pin) |
+| White | 3- (bottom 3 pin) |
+
+The purple and white wires can also be attached to 1+ (top 1 pin) and 1- (bottom 1 pin), or 2+ and 2-, or 4+ and 4-. 
+
+Attach SkinTact sticky electrodes to all three of the electrode ends. Stick the purple electrode (the 3+ pin) on your left arm, and the white electrode (the 3- pin) on your right arm.
 
 **NOTE Connect the `+` pin to your LEFT arm, otherwise the pulse wave will be upside down! The `+` pin is on the TOP row of the pin header. See the [Ganglion Hardware](http://docs.openbci.com/Hardware/07-Ganglion) doc for more details.**
 
-You also need to connect the elbow electrode to the pin labeled `D_G` This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
+Stick the grey electrode (the D_G bottom pin) on your elbow. This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
 
 ![channels on/off](../assets/images/ganglion_channels-ON-OFF.jpg)
 
