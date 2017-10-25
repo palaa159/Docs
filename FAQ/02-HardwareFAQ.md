@@ -18,9 +18,9 @@ The boards sample rate is limited by the bluetooth bandwidth. In order to increa
 
 With the WiFi Shield connected: 
 
-* The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz and 16000Hz.
-* The Cyton + Daisy can to stream data at 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, and 8000Hz.
-* The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
+* The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz.
+* The Cyton + Daisy can to stream data at 250Hz, 500Hz, 1000Hz.
+* The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz.
 
 ##How do I choose between 4, 8, or 16 channels for my research?
 
