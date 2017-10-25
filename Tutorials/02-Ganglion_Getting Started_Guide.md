@@ -83,23 +83,26 @@ Press `START SYSTEM` when you're ready to begin streaming.
 ![Start Data Stream](../assets/images/ganglion_connected-idle.png)
 When the GUI connects, it opens up to the default window layout. For a more in-depth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
 
-![select layout](../assets/images/ganglion_select-layout.png)
-
 Click on the `Layout` dropdown menu, and select the one outlined in red.
 
-![Auto Scale](../assets/images/ganglion_autoScale.png)
+![select layout](../assets/images/ganglion_select-layout.png)
 
-Click the `Vert Scale` dropdown menu, and change the Vertical Scale to `Auto`.  
+Click the `Vert Scale` dropdown menu, and change the Vertical Scale to `Auto`. 
+
+![Auto Scale](../assets/images/ganglion_autoScale.png) 
+
+
+Click the `Head Plot` dropdown menu on the lower right widget container and change it from `Head Plot` to `Accelerometer`. Then turn on the Accelerometer by clicking the `Turn Accel On` button.
 
 ![Accelerometer](../assets/images/ganglion_accelerometer_widget.jpg)
 ![Accel ON!](../assets/images/ganglion_accel-ON.jpg)
 
-Click the `Head Plot` dropdown menu on the lower right widget container and change it from `Head Plot` to `Accelerometer`. Then turn on the Accelerometer by clicking the `Turn Accel On` button.
+Then click "Start Data Stream" to stream data from your Ganglion board.
 
 ![Start Data Stream](../assets/images/ganglion_Start.png)
 ![First Live Ganglion Data](../assets/images/ganglion_first-data.jpg)  
 
-Now let's get the first data from the Ganglion! Click on the `Start Data Stream` button, and you should see the `Time Series` window scrolling some data to the left, the `FFT Plot` container will show you the power level of the signals at different frequencies. The `Accelerometer` window will also scroll data.  
+You should see the `Time Series` window scrolling some data to the left, the `FFT Plot` container will show you the power level of the signals at different frequencies. The `Accelerometer` window will also scroll data.  
 
 ![Accel Moving](../assets/images/ganglion_moving-accelerometer.jpg)
 
