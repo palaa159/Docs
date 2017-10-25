@@ -1,5 +1,5 @@
 # Ganglion Getting Started Guide
-###Overview
+### Overview
 
 This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirety before starting. Have fun!
 
@@ -58,7 +58,7 @@ Come back to this guide when your GUI is running!
 
 ### Select LIVE (from Ganglion)
 
-Select `LIVE (from Ganglion)` from the first drop down
+Make sure your computer's Bluetooth feature is turned on. Select `LIVE (from Ganglion)` from the first drop down
 ![selecting ganglion from drop down](../assets/images/ble_ganglion_select_ganglion.png)
 
 Select `BLE (on Win from Dongle)` as the transfer protocol
