@@ -56,7 +56,7 @@ Come back to this guide when your GUI is running!
 
 ## Start Using The OpenBCI GUI
 
-### Select LIVE (from Ganglion)
+### Connect the GUI to your Ganglion board
 
 Make sure your computer's Bluetooth feature is turned on. Select `LIVE (from Ganglion)` from the first drop down
 ![selecting ganglion from drop down](../assets/images/ble_ganglion_select_ganglion.png)
@@ -78,7 +78,7 @@ The GUI will automatically generate a recording to a file. You have an option at
 Press `START SYSTEM` when you're ready to begin streaming.
 ![ble ganglion start system](../assets/images/ble_ganglion_start_system.png)
 
-### Navigating the connected GUI
+### Navigating the GUI
 
 ![Start Data Stream](../assets/images/ganglion_connected-idle.png)
 When the GUI connects, it opens up to the default window layout. For a more in-depth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
@@ -106,7 +106,7 @@ You should see the `Time Series` window scrolling some data to the left, the `FF
 
 ![Accel Moving](../assets/images/ganglion_moving-accelerometer.jpg)
 
-Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin headder, you will see some noise in the other windows. Nice!  
+Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin header, you will see some noise in the other windows. Nice!  
 
 **NOTE If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.**
 
