@@ -110,8 +110,7 @@ Pick up your board, and move it around. You should see the data in the `Accelero
 
 **NOTE If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.**
 
-Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  
-
+Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  \
 
 
 ## Connect yourself to OpenBCI
@@ -225,15 +224,25 @@ The electrode wires should be connected like this:
 
 In this case, you want to be sure to connect to the `+` input, of channels 1, 2, 3, and 4, which is on the TOP row. You also need to connect one cable to the `REF` pin (either TOP or BOTTOM is ok) and also the `D_G` pin (either TOP or BOTTOM is ok).
 
+#### Connect Ground and Reference Electrodes
+
+Scoop up a small amount of the electrode paste with the gold cup of the 'D_G' electrode (the black electrode). Then stick the electrode on your ear, as shown below. It can help to use some medical tape or a bandaid to help hold the electrode in place.
+
 ![electrode paste scoop](../assets/images/electrodePaste.png)
 ![Connect REF & D_G paste](../assets/images/ganglion_connect-earlobe-paste.jpg)
 ![Connect Ref & D_G tape](../assets/images/ganglion_connect-earlobe-tape.jpg)
 
-The first connection to make is the `D_G` electrode. This connection allows the Ganglion to 'share' `GROUND` or `0 Volts` with your body, so that we can measure the electo-potentials correctly. Scoop up a small amount of the eclectrode pasted with the gold cup (as shown). This paste acts as a kind of adhesive. It is also electrically conductive, and makes the connection between your skin and the gold cup. This connection will be on your ear lobe. It can help to have some medical tape or bandaid to help hold the electrode in place. Do the same thing with the gold cup electrode connected to the `REF` pin on your other earlobe. The `REF` pin is connected to all of the channel `-` inputs. This is the electrode that the ones on your head (reading your brain) will be measured against. We are attaching it to your earlobe, because there is *very little* electrical signal in your earlobe, so it won't interfere with what's going on in your head.
+This D_G electrode connection allows the Ganglion to 'share' `GROUND` or `0 Volts` with your body, so that we can measure the electo-potentials correctly. The electrode paste is an adhesive, as well as an electrical conductor - it makes an electrical connection between your skin and the gold cup. We are attaching the D_G electrode to your earlobe because there is *very little* electrical signal in your earlobe, so it won't interfere with what's going on in your head.
+
+Do the same thing with the gold cup of the 'REF' electrode (the yellow electrode), and attach it to your other earlobe. The `REF` pin is connected to all of the channel `-` inputs. When we attach the rest of the electrodes to your head, their signals will be measured against this 'REF' electrode.
+
+#### Connect Channel Electrodes
+
+It's important to know where you are placing your EEG electrodes on your head, and thankfully there already is a map of electrode positions. It's called the [10-20 system](https://en.wikipedia.org/wiki/10-20_system_(EEG)), shown below:
 
 ![10-20 map positions](../assets/images/ganglion_10-20-positions.png)
 
-It's important to know where you are placing your EEG electrodes on your head, and thankfully there already is a map of electrode positions. It's called the [10-20 system](https://en.wikipedia.org/wiki/10-20_system_(EEG)). In the picture  at right, the Nasion is the 'nose' side of your head, and the Inion is the 'back' side of your head. I have color coded the electrode positions for you, based on the cables connected in previous image, and you can see that we've already applied the `D_G` and `REF` at positions `A2` and `A1` respectively.
+The Nasion is the 'nose' side of your head, and the Inion is the 'back' side of your head. I have color-coded the electrode positions for you, based on the cables connected in previous image, and you can see that we've already applied the `D_G` and `REF` at positions `A2` and `A1` respectively.
 
 ![Electrode Frontal Place](../assets/images/ganglion_frontal-place.jpg)
 ![Electrode Frontal Position](../assets/images/ganglion_frontal-position.jpg)
