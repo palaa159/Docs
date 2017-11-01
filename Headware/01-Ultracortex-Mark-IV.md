@@ -50,7 +50,7 @@ The following parts are included in the Unassembled and the Print it Yourself ve
 * Flat units
 	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/FlatUnits.JPG)
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ConfortUnits.JPG)	
+	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)	
 	
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/EarClips.JPG)
@@ -125,7 +125,7 @@ The following parts are not included with the purchase of any configuration of t
 ![image](../assets//MarkIV/Photos/FlatUnits.JPG)
 
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ConfortUnits.JPG)
+	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)
 	
 ![image](../assets//MarkIV/Photos/ComfortUnits.JPG)
 	
