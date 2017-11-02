@@ -350,7 +350,7 @@ f) After updating these settings, click the EEG DATA tab again, and your EEG DAT
 
 So there's a good chance your current setup isn't showing clean data like the screenshots above. There are a number of possible reasons for this. We'll go through troubleshooting them here.
 
-![Notch Filter](../assets/images/notch.png)
+![Notch Filter](../assets/images/Cyton_Starting_Guide/notch_bar.png)
 
 #### Get rid of AC noise
 
@@ -382,7 +382,7 @@ Congratulations! If you've made it this far, it's finally time to check out your
 
 ### 1. Check out your heart activity (EKG)
 
-![Heart Beat](../assets/images/heartBeat.jpg)
+![Heart Beat](../assets/images/Cyton_Starting_Guide/cytonGS_heartbeat.png)
 
 Channel 4 in the GUI should now be producing a nice steady succession of uV spikes. This is your heart beating! Try taking slow, deep breaths and watch how it influences your heart rate. If you look carefully, you may notice your heart beat more rapidly as your inhaling, and more slowly as you're exhaling.
 
@@ -392,7 +392,7 @@ For more information on how to analyze an electrocardiography (EKG) signal, or o
 
 ### 2. Watch your muscles flex (EMG)
 
-![Forearm Flex](../assets/images/forearmFlex.png)
+![Forearm Flex](../assets/images/Cyton_Starting_Guide/cyton_EKG_EMG.png)
 
 Now, try flexing your forearm or whatever muscle you placed the green electrode on top of. You should see a high-amplitude, high-frequency signal introduced into channel 4. This is the electric potential created by you activating your muscle!
 
