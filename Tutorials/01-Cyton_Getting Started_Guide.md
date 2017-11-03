@@ -414,7 +414,7 @@ It's interesting to note that these signals are not picked up in channel 4. This
 
 ### 4. Alpha brain waves (EEG)
 
-![Alpha Brain Waves!](../assets/Cyton_Starting_Guide/cytonGS_fft_alpha_spike.png)
+![Alpha Brain Waves!](../assets/images/Cyton_Starting_Guide/cytonGS_fft_alpha_spike.png)
 
 Now, for what we've all been waiting for... let's check out some brain waves!
 
