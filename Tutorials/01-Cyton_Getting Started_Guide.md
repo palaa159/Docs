@@ -401,7 +401,7 @@ If you relax your muscle again, you should see the channel 4 signal return to yo
 
 ### 3. Eye blinks and jaw clenching (more EMG)
 
-![Eye Blink & Jaw Clench EMG Artifacts](../assets/images/eyeBlink-jawClench.png)
+![Eye Blink & Jaw Clench EMG Artifacts](../assets/images/Cyton_Starting_Guide/cytonGS_pic8_edited.png)
 
 Now blink your eyes a few times. Each time you blink you should see a strong spike on the EEG DATA montage. It should be most visible in channel 2, the channel for the electrode directly above your eye! This uV spike is a result of the muscles in your forehead that make your eyes blink.
 
@@ -414,7 +414,7 @@ It's interesting to note that these signals are not picked up in channel 4. This
 
 ### 4. Alpha brain waves (EEG)
 
-![Alpha Brain Waves!](../assets/images/alpha.png)
+![Alpha Brain Waves!](../assets/Cyton_Starting_Guide/cytonGS_fft_alpha_spike.png)
 
 Now, for what we've all been waiting for... let's check out some brain waves!
 
