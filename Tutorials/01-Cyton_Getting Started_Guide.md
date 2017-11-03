@@ -264,10 +264,9 @@ For more information on these three signals, refer to wikipedia:
 
 ### 2. Connect your electrodes to OpenBCI
 
-Connect the electrode wires to your Cyton board as shown:
+Connect the electrode wires to your Cyton board as shown below. The proper wire connections are shown in table form as well.
 
 ![Electrode Connections 1](../assets/images/electrodeConnections1.JPG)
-
 
 | Electrode Wire Color | Cyton Board Pin |
 |---|---|
@@ -278,11 +277,15 @@ Connect the electrode wires to your Cyton board as shown:
 | blue | 4P (top N4P pin) |
 | red | 7N (top N7P pin) |
 
+The white and black electrodes must always connect to the SRB2 pin and the bottom BIAS pin. Also, the green and blue wires must be connected to two pins of the same channel (like 4N and 4P). But the purple, red, and green/blue wires can be connected to any of the N1P through N8P channels. We decided to use channels 2, 4, and 7 for this tutorial. 
+
+#### How Cyton Board Pins are Connected (Optional)
+
+Below is a perspective view of the electrode inputs that we are working with in this tutorial:
+
 ![Electrode Connections 2](../assets/images/electrodeConnections2.JPG)
 
-#### Basic OpenBCI pin overview
-
-The picture to the right is a perspective view of the electrode inputs that we are working with in this tutorial. The bottom pins are (N) inputs, and the top pins are (P) inputs. The default board settings look at all N channels in reference to SRB2 (the bottom SRB pin). SRB1 (the top SRB pin) can also be used as a reference, but when it is activated, it is activated for ALL channels. If using SRB1 as the reference electrode, P inputs must be used as the other input of the potential difference measurement. On the contrary, individual channels can be removed from SRB2. If a channel is removed from SRB2, it can be examined as a unique voltage potential, between the N and P pins of that channel. We will be doing this for the heart measurement in this tutorial, while examining 2 EEG channels in reference to SRB2, using the channel 2 and 7 N pins. For more information on this, refer to page 16 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf). The ADS1299 chip is the analog front-end at the core of the Cyton board.
+The bottom pins are (N) inputs, and the top pins are (P) inputs. The default board settings look at all N channels in reference to SRB2 (the bottom SRB pin). SRB1 (the top SRB pin) can also be used as a reference, but when it is activated, it is activated for ALL channels. If using SRB1 as the reference electrode, P inputs must be used as the other input of the potential difference measurement. On the contrary, individual channels can be removed from SRB2. If a channel is removed from SRB2, it can be examined as a unique voltage potential, between the N and P pins of that channel. We will be doing this for the heart measurement in this tutorial, while examining 2 EEG channels in reference to SRB2, using the channel 2 and 7 N pins. For more information on this, refer to page 16 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf). The ADS1299 chip is the analog front-end at the core of the Cyton board.
 
 ### 3. Connect your electrodes to your head and body
 
@@ -327,29 +330,37 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 ### 4. Launch the GUI and adjust your channel settings
 
-a) If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from OpenBCI). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
+a) If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from Cyton) and Serial (from Dongle). Select your Cyton board from the list of devices, set the Channel Count to 8, and click START SYSTEM. Refer to **section IV** of this guide for more information on this process. 
 
-b) Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI device, exit the SYSTEM CONTROL PANEL and start the live data stream. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
+If you're using the Daisy Cyton board, still set the Channel Count to 8, even though the Daisy has 16 channels. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA display will be unnecessarily cluttered.
+
+b) Click START DATA STREAM to begin streaming data from your board. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
 
 ![Power Down](../assets/images/Cyton_Starting_Guide/CytonGS_pic1.png)
 
-c) Now we are going to power down the channels we aren't using. Do this by clicking the channel number buttons outside of the left side of the EEG DATA montage. We are only using channels 2, 4, and 7, so power down every other channel. Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key.
+c) Now we are going to power down the channels we aren't using. Do this by clicking the circular channel number buttons outside of the left side of the EEG DATA montage. Each time you power down a channel, the channel will show a burst of signal and then settle at 0 mV.
 
 ![Signals At Start](../assets/images/Cyton_Starting_Guide/CytonGS_pic2.png)
 
-d) Now that you have powered down channels 1, 3, 5, 6, and 8, your EEG DATA montage should look similar to the screenshot above (after you relax and let the system settle).
+We are only using channels 2, 4, and 7, so power down every other channel. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key.
+
+Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. 
+
+e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage:
 
 ![Adjust Channel Settings](../assets/images/Cyton_Starting_Guide/CytonGS_pic3.png)
 
-e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage. These buttons indicate the current settings of the ADS1299 registers on your Cyton board. For more information on these settings, refer to pages 39-47 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf).
+These buttons indicate the current settings of the ADS1299 registers on your Cyton board. For more information on these settings, refer to pages 39-47 of the [ADS1299 datasheet](http://www.ti.com/lit/ds/symlink/ads1299.pdf).
 
 We have simplified the interface through the OpenBCI firmware and OpenBCI GUI to allow easy, real-time interaction with these registers. For more information on this, please refer to our doc page regarding the ADS1299 interface.
 
 By deactivating channels 1, 3, 5, 6, and 8, those channels were automatically removed from the BIAS and SRB2, so as not to interfere with the signal. The only thing left to do is update channel 4, the input we are using for EMG and EKG. Begin by clicking the PGA Gain button for channel 4 until it is set to x8. Then remove it from the BIAS and SRB2. The reason we do this is because the uV values for EMG and EKG are much bigger (and easier to pick up) than the EEG signals on channels 2 and 7. As a result, we want to prevent channel 4 from influencing the common mode noise rejection of the BIAS, as well as remove it from the EEG reference channel (SRB2).
 
+f) After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image below:
+
 ![EEG DATA AFTER ADJUSTING SETTINGS](../assets/images/Cyton_Starting_Guide/cytonGS_pic5cropped.png)
 
-f) After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image on the right. Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
+Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
 
 
 
