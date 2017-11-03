@@ -344,7 +344,7 @@ c) Now we are going to power down the channels we aren't using. Do this by click
 
 We are only using channels 2, 4, and 7, so power down every other channel. You can also power down the channels with keyboard shortcuts (1-8). Power them back up with [SHIFT] + 1-8. If you are working with a daisy module, channels 9-16 can be powered down with q, w, e, r, t, y, u, i, respectively. You can power those channels back up with [SHIFT] + the same key.
 
-Don't bother with the smaller dark grey squares to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. 
+Don't bother with the ohm symbols to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. 
 
 e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage:
 
@@ -419,13 +419,13 @@ If you relax your muscle again, you should see the channel 4 signal return to yo
 
 ### 3. Eye blinks and jaw clenching (more EMG)
 
-![Eye Blink & Jaw Clench EMG Artifacts](../assets/images/Cyton_Starting_Guide/cytonGS_pic8_edited.png)
-
 Now blink your eyes a few times. Each time you blink you should see a strong spike on the EEG DATA montage. It should be most visible in channel 2, the channel for the electrode directly above your eye! This uV spike is a result of the muscles in your forehead that make your eyes blink.
 
 Now try clenching your jaw. You should see a big uV spike in both channels 2 and 7. Each time you clench your jaw, you are introducing a strong EMG artifact into any electrodes on your scalp. If you put your fingers on the side of your head (above your ear) and clench your teeth, you should be able to feel the muscles in your head flexing.
 
-In the photo to the left, you can see what these signals look like the green highlighted region shows a single eye blink. The two blue sections show an extended period of jaw clenching.
+![Eye Blink & Jaw Clench EMG Artifacts](../assets/images/Cyton_Starting_Guide/cytonGS_pic8_edited.png)
+
+In the photo above, you can see what these signals look like the green highlighted region shows a single eye blink. The two blue sections show an extended period of jaw clenching.
 
 It's interesting to note that these signals are not picked up in channel 4. This is because channel 4 is only looking at the potential difference across your body—from your right forearm to your left wrist. As a result the EMG/EEG artifacts being produced on your head (in reference to SRB2) are not visible in this channel.
 
