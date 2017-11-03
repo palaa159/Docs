@@ -8,7 +8,7 @@ This guide will walk you through setting up your computer to use the Cyton and U
 
  1. OpenBCI Cyton Board
  2. OpenBCI Dongle
- 3. OpenBCI Electrode Starter Kit (ESK) or your own electrodes (not pictured)
+ 3. OpenBCI Gold Cup Electrodes and Ten20 Paste
  4. 6V AA battery pack & (x4) AA batteries (batteries not included)
  5. (x4) plastic feet for board stabilization
 
@@ -33,9 +33,11 @@ If you ordered an OpenBCI Gold Cup Electrodes and Ten20 Paste you should have:
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 3 2oz Jars of Ten20 conductive electrode paste
 
+If you plan to work with your own electrodes, the touch-proof adapter may come in handy:
+
 ![TouchProof Adapter](../assets/images/touch_proof.jpg)
 
-If you plan to work with your own electrodes, the touch-proof adapter may come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into any OpenBCI Board!
+It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into any OpenBCI Board!
 
 ### 4. Your 6V AA Battery Pack & 4 AA Batteries
 
@@ -262,14 +264,19 @@ For more information on these three signals, refer to wikipedia:
 
 ### 2. Connect your electrodes to OpenBCI
 
+Connect the electrode wires to your Cyton board as shown:
+
 ![Electrode Connections 1](../assets/images/electrodeConnections1.JPG)
 
-1. Connect the white electrode to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels.
-2. Connect the black electrode to the bottom BIAS pin. The BIAS pin is similar to the ground pin of common EEG systems, but it uses destructive interference waveform techniques to eliminate the "common mode noise" of all of the active channels.
-3. Connect the purple electrode to the 2N pin (the bottom pin of the N2P input)
-4. Connect the green electrode to the 4N pin (the bottom pin of the N4P input)
-5. Connect the blue electrode to the 4P pin (the top pin of the N4P input)
-6. Connect the red electrode to the 7N pin (the bottom pin of the N7P input)
+
+| Electrode Wire Color | Cyton Board Pin |
+|---|---|
+| white | SRB2 (bottom SRB pin) |
+| black | bottom BIAS pin |
+| purple | 2N (bottom N2P pin) |
+| green | 4N (bottom N4P pin) |
+| blue | 4P (top N4P pin) |
+| red | 7N (top N7P pin) |
 
 ![Electrode Connections 2](../assets/images/electrodeConnections2.JPG)
 
