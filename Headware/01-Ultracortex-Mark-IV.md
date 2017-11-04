@@ -270,11 +270,13 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 
 First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame. 
 
-![image](../assets//MarkIV/Photos/Assembly_Comfort_Flat.JPG)
+![image](../assets/images/MarkIV/MarkIV_comfort_units.JPG)
+<!-- ![image](../assets//MarkIV/Photos/Assembly_Comfort_Flat.JPG) -->
 
 Then screw 6 SPIKEY ELECTRODE UNITS in the following nodes of the frame. 
 
-![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
+![image](../assets/images/MarkIV/MarkIV_spiky_units.JPG)
+<!-- [image](../assets//MarkIV/Photos/Assembly_CFS.JPG) -->
 
 ### Connect wiring to OpenBCI
 
