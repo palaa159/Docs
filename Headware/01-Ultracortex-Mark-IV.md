@@ -225,9 +225,23 @@ Screw 5 COMFORT UNITS into the frame as shown below. Your Ultracortex should now
 
 ### Embed OpenBCI into the Ultracortex
 
-Connect your ~500 mAh lithium ion rechargeable batter to the back of your Cyton OpenBCI Board. Then fold the battery and its wires neatly behind the board before inserting the board into the BOARD_MOUNT. You can then secure the OpenBCI Board to the BOARD_MOUNT by clipping BOARD_COVER over top. 
+Connect your ~500 mAh lithium ion rechargeable batter to the back of your Cyton OpenBCI Board:
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/embed_OpenBCI.jpg)
+
+Fold the battery and its wires neatly behind the board before inserting the board into the BOARD_MOUNT:
+
+![image](../assets/images/MarkIV/MarkIV_cyton_cover_1.JPG)
+
+Snap your Cyton board onto the four pegs on the outside of the BOARD_MOUNT:
+
+![image](../assets/images/MarkIV/MarkIV_cyton_cover_2.JPG)
+
+You can then secure the OpenBCI Board to the BOARD_MOUNT by clipping BOARD_COVER over top. 
+
+![image](../assets/images/MarkIV/MarkIV_cyton_cover_3.JPG)
+
+The pins and female headers should fit neatly into the BOARD_COVER holes as shown.
 
 <!--![image](../assets/MarkIV/Photos/Assembly_Board_Cover.JPG)-->
 
