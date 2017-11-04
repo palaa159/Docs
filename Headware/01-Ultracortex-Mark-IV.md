@@ -280,7 +280,7 @@ Then screw 6 SPIKEY ELECTRODE UNITS in the following nodes of the frame.
 
 ### Connect wiring to OpenBCI
 
-You will find 3 ribbon cables in your kit as seen below.
+It's time to connect the electrodes to your OpenBCI Cyton board with jumper cables. You will find 3 ribbon cables in your kit as seen below.
 
 ![image](../assets//MarkIV/Photos/Cables.JPG)
 
@@ -288,11 +288,29 @@ Peel off the GRAY and PURPLE from the 12" set and the BLUE, GREEN, ORANGE and YE
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Cables.JPG)
 
-Than plug the male end in to the header cable on the NODES as seen below.
+Now connect the jumper cables to the electrodes. The map below assigns names to all the electrodes by their location. The table shows which color wire to attach to each electrode. 
+
+![image](../assets/images/MarkIV/MarkIV_electrode_map.png)
+
+| Electrode | Wire Color |
+|---|---|
+| FP2 | Grey |
+| FP1 | Purple |
+| C4 | Blue |
+| C3 | Green |
+| P8 | Yellow |
+| P7 | Orange |
+| O2 | Brown |
+| O1 | Red |
+
+To connect wires to electrodes, plug the male end in to the header cable on the NODES as shown:
 
 ![image](../assets//MarkIV/Photos/Assembly_Node_Plug.JPG)
 
-Run wires back to our OPENBCI Board and secure with wire clips. As mentioned above, if you're using the default OpenBCI electrode configuration, cut the wires so that they terminate at the following nodes:
+After connecting wires to electrodes, run wires along the frame to the top of the OpenBCI BOARD_MOUNT. Use the included plastic clips to hold wires on the frame, like shown:
+
+![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
+![image](../assets//MarkIV/Photos/Assembly_Wire_Clip2.JPG)
 
 * Channel 1(N1P) - Fp1
 * Channel 2(N2P) - Fp2
@@ -303,17 +321,11 @@ Run wires back to our OPENBCI Board and secure with wire clips. As mentioned abo
 * Channel 7(N7P) - O1
 * Channel 8(N8P) - O2 
 
-![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
-![image](../assets//MarkIV/Photos/Assembly_Wire_Clip2.JPG)
-
 Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished2.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished3.JPG)
-
-
-![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
 
 
 ### Connect ear clip electrodes (Reference & Ground)
