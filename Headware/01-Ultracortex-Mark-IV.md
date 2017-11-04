@@ -245,7 +245,7 @@ The pins and female headers should fit neatly into the BOARD_COVER holes as show
 
 <!--![image](../assets/MarkIV/Photos/Assembly_Board_Cover.JPG)-->
 
-### Identify electrode locations
+### Electrode Location Overview
 
 Before creating your electrode mounts, it's a good idea to think about where you may want to place the electrodes on the Ultracortex FRAME. The placement of the electrode may affect how long you make the wire between the electrode and where the OpenBCI is mounted, at the back of the frame.
 
@@ -266,7 +266,7 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/1020.jpg)
 
-### placement of Nodes
+### Placement of Electrodes
 
 First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame. 
 
