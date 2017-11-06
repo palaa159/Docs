@@ -252,6 +252,7 @@ Connect your OpenBCI board to the battery pack, place it on the BOARD_MOUNT and 
 ![image](../assets/images/MarkIV/MarkIV_battery_pack_2.JPG)
 
 
+
 ### Electrode Location Overview
 
 Before creating your electrode mounts, it's a good idea to think about where you may want to place the electrodes on the Ultracortex FRAME. The placement of the electrode may affect how long you make the wire between the electrode and where the OpenBCI is mounted, at the back of the frame.
@@ -319,14 +320,21 @@ After connecting wires to electrodes, run wires along the frame to the top of th
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip2.JPG)
 
-* Channel 1(N1P) - Fp1
-* Channel 2(N2P) - Fp2
-* Channel 3(N3P) - C3
-* Channel 4(N4P) - C4
-* Channel 5(N5P) - P7
-* Channel 6(N6P) - P8
-* Channel 7(N7P) - O1
-* Channel 8(N8P) - O2 
+#### Connecting Cyton Board to Mark IV
+
+Connect an OpenBCI Cyton board to the Mark IV as shown:
+
+| Electrode | Wire Color | Cyton Board Pin |
+|---|---|---|
+| FP2 | Grey | Bottom N2P pin |
+| FP1 | Purple | Bottom N1P pin |
+| C4 | Blue | Bottom N4P pin |
+| C3 | Green | Bottom N3P pin |
+| P8 | Yellow | Bottom N6P pin |
+| P7 | Orange | Bottom N5P pin |
+| O2 | Brown | Bottom N8P pin |
+| O1 | Red | Bottom N7P pin |
+
 
 Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
 
