@@ -387,44 +387,66 @@ Your finished, 8 channel headset should look like this. To expand to a 16 channe
 
 ## 16 Channel Add-Ons
 
+If you have a Cyton Daisy extension, you can expand your headset from 8 electrodes to 16 electrodes. Each electrode provides one "channel" of data, so we call this a 16 channel setup. 
+
 ### Remove the two Comfort Nodes
 
 From the front of the frame remove the following two Comfort Nodes.
 
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Remove_Node.JPG)
 
+### Replace with Spiky Electrodes
 
-### Replace with Spikey Electrodes
-![image](../assets//MarkIV/Photos/Assembly_16Chan_Remove_Node.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Replace_Node2.JPG)
 
-### Add the next 6 Spikey Electrodes
+### Add the next 6 Spiky Electrodes
 
 In the following locations screw in the remaining 6 electrodes units.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Node_Placment.JPG)
 
 ### Wiring Electrodes
 
-Take out your rest of your Ribben Cables and separatethe GRAY and PURPLE 8" & 4" cables and the BLUE, GREEN, ORANGE and YELLOW 8" and lastly the RED & BROWN 4" cables.
+Take out your rest of your Ribbon Cables and separate the GRAY and PURPLE 8" & 4" cables, the BLUE, GREEN, ORANGE and YELLOW 8", and the RED & BROWN 4" cables.
+
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables.JPG)
 
-Then plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE.
+Plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE. These two extra-long wires will help you reach all the electrodes.
+
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables2.JPG)
 
-Then wire your nodes in the same sequence as the first 8 as seen in the photo below. These wires get plugged them in to the OPENBCI DAISY board. Remove and replace wire clips when needed to secure the 8 wires you just put in place.
+Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes to the Daisy board in the next step.
+
+![image](../assets/images/MarkIV/MarkIV_cyton_daisy.JPG)
+
+Connect each of the new electrodes to corresponding Daisy pins as shown below. You may have to use a different color scheme, depending on what wires you have available. Just make sure to record which electrodes are connected to which Daisy pins.
+
+![image](../assets/images/MarkIV/MarkIV_16_channel_map.png)
+
+The electrode and Daisy pin pairings are below:
+
+| Electrode | Wire Color | Daisy Pin |
+|---|---|---|
+| F7 | Purple | Bottom N1P pin |
+| F8 | Grey | Bottom N2P pin |
+| F3 | White | Bottom N3P pin |
+| F4 | Green | Bottom N4P pin |
+| T7 | Red | Bottom N5P pin |
+| T8 | Brown | Bottom N6P pin |
+| P3 | Yellow | Bottom N7P pin |
+| P4 | Orange | Bottom N8P pin |
+
+The pins connected to the Daisy board should look like this:
+
+![image](../assets/images/MarkIV/MarkIV_cyton_daisy_connects.JPG)
+
+Like for the first 8 electrodes, use the plastic clips to secure wires in place:
+
+![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
+
+Your Mark IV is now ready to use 16 channels! It should look like the images below.
+
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Finished2.JPG)
-
-Run wires back to our OPENBCI Board and secure with wire clips. As mentioned above, if you're using the default OpenBCI electrode configuration, cut the wires so that they terminate at the following nodes:
-
-* Channel 9 (N1P on Daisy) - F7
-* Channel 10 (N2P on Daisy) - F8
-* Channel 11 (N3P on Daisy) - F3
-* Channel 12 (N4P on Daisy) - F4
-* Channel 13 (N5P on Daisy) - T3
-* Channel 14 (N6P on Daisy) - T4
-* Channel 15 (N7P on Daisy) - P3
-* Channel 16 (N8P on Daisy) - P4
 
 
 ### Adjust the Ultracortex for your head
