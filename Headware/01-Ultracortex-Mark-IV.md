@@ -1,11 +1,11 @@
-#Ultracortex Mark IV
+# Ultracortex Mark IV
 
 *Development Period: January to November 2016*
 
 ![image](../assets/MarkIV/Photos/UCM4-Product-2.JPG) 
 
 
-####Complete Ultracortex Mark 4 kits are [available for sale](http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv) in the OpenBCI Online Store!
+#### Complete Ultracortex Mark 4 kits are [available for sale](http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv) in the OpenBCI Online Store!
 
 The Ultracortex is an open-source, 3D-printable headset intended to work with the [OpenBCI system](http://openbci.com/). It is capable of recording research-grade brain activity (EEG), muscle activity (EMG), and heart activity (ECG). The Ultracortex is under constant iteration. If you print/assemble your own Ultracortex, we would love to hear your feedback. Send us an email at [contact@openbci.com](mailto:contact@openbci.com) or Tweet at us ([@Ultracortex](https://twitter.com/Ultracortex) & [@OpenBCI](https://twitter.com/OpenBCI))!
 
@@ -36,7 +36,7 @@ The following parts are included in the Unassembled version of the Mark IV:
 * WIRE_CLIPS (**x30**) 
 	* [WIRE CLIPS](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl)
 
-###Non-printed Parts:
+### Non-printed Parts:
 
 **Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
 
@@ -63,9 +63,9 @@ The following parts are not included with the purchase of any configuration of t
 
 ## THE COMPLETE ULTRACORTEX (w/ PICTURES)
 
-###3D-printed Parts:
+### 3D-printed Parts:
 
-####(1x) FRAME
+#### (1x) FRAME
 
 * FRAME (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl) )
@@ -74,7 +74,7 @@ The following parts are not included with the purchase of any configuration of t
 
 ![image](../assets/MarkIV/Photos/Frame.JPG)
 
-####(21x) MECH_PARTS
+#### (21x) MECH_PARTS
 
 * [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL)
 	* [INCERTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_105dot5_percent.STL) / [loose](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_106_percent.STL)) (Choose one configuration and modify accordingly)
@@ -86,7 +86,7 @@ The following parts are not included with the purchase of any configuration of t
 
 ![image](../assets//MarkIV/Photos/Board_Mount.JPG)
 
-####(1x) BOARD_COVER
+#### (1x) BOARD_COVER
 
 * [BOARD COVER](**x1**) 
 	* [BOARD COVER](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4%20Board_Cover.stl) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4%20Board_Cover.stl)
@@ -97,13 +97,13 @@ The following parts are not included with the purchase of any configuration of t
 
 * [WIRE CLIPS](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl)
 
-###Non-printed Parts:
+### Non-printed Parts:
 
-###Non-printed Parts:
+### Non-printed Parts:
 
 **Note that unlike the Mark III, the electrodes and the electrode holders of the Mark IV are not designed to be 3D printed. The Spikey, Flat, and Comfort Units are all custom made and injection molded and can be purchased at the [OpenBCI shop](shop.openbci.com). If you need thse files for prototyping you can find them [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Injection_Molded_Parts).** 
 
-####Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
+#### Suggested screws for fastening BOARD_MOUNT & OpenBCI Board
 
 * (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 
@@ -134,7 +134,7 @@ The following parts are not included with the purchase of any configuration of t
 
 ![image](../assets//MarkIV/Photos/EarClips.JPG)
 
-####(1x) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
+#### (1x) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/OPENBCIs.jpg)
 
@@ -334,6 +334,8 @@ Connect an OpenBCI Cyton board to the Mark IV as shown:
 | P7 | Orange | Bottom N5P pin |
 | O2 | Brown | Bottom N8P pin |
 | O1 | Red | Bottom N7P pin |
+| Ear Clip | Black | Top SRB pin |
+| Ear Clip | Black | Top BIAS pin |
 
 
 Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
