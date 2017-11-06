@@ -320,9 +320,13 @@ After connecting wires to electrodes, run wires along the frame to the top of th
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip2.JPG)
 
+#### Ear Clips
+
+To use your Mark IV headset, you'll also need two [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/). These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system. You will connect them to your OpenBCI board along with the electrodes in the next step.
+
 #### Connecting Cyton Board to Mark IV
 
-Connect an OpenBCI Cyton board to the Mark IV as shown below (with cover removed for clarity). Note that you need two ear clip wires as well.
+Connect an OpenBCI Cyton board to the Mark IV as shown below (with cover removed for clarity).
 
 ![image](../assets/images/MarkIV/MarkIV_cyton_connects_nocover.JPG)
 
@@ -349,7 +353,9 @@ Replace the cover, and your board should look like this:
 
 #### Connecting Ganglion Board to Mark IV
 
-Connect an OpenBCI Ganglion board to the Mark IV as shown below (with cover removed for clarity). Note that you need to ear clip wires as well.
+Connect an OpenBCI Ganglion board to the Mark IV as shown below (with cover removed for clarity). We placed 8 electrodes on our Mark IV headset, but the Ganglion board can only take 4 inputs. So, we can only connect 4 of our electrodes to the board - we chose FP1, FP2,O1, and O2 for this tutorial.
+
+![image](../assets/images/MarkIV/MarkIV_ganglion_connects.JPG)
 
 Here's a table with the correct electrode, wire color, and Ganglion board pin pairings:
 
@@ -362,22 +368,21 @@ Here's a table with the correct electrode, wire color, and Ganglion board pin pa
 | Ear Clip | Black | Top D_G pin |
 | Ear Clip | Black | Top REF pin |
 
+Next, make sure the switches on your Ganglion board are in the bottom configuration as shown below:
+
+![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
+
+Replace the cover, and your board should look like this:
+
+![image](../assets/images/MarkIV/MarkIV_ganglion_connects_cover.JPG)]
+
+### Completed 8 Channel MarkIV Setup
+
 Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished2.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished3.JPG)
-
-
-### Connect ear clip electrodes (Reference & Ground)
-
-Now that all of your electrode units are connected to your Ultracortex frame. Connect two [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/) to SRB2 and bottom BIAS pin (white and black respectively in the image below).  These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system.
-
-### Ganglion Only
-
-To connect the Ganglion to the Mark IV you need to connect the electrodes you want to get data from to the top row pins labeled +4, +3, +2, and +1. In addition, connect the ear clips to the D_G and REF top row pins. Make sure to change the switches to the bottom configuration as well. Below a picture of the switches. 
-
-![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
 
 ## 16 Channel Add-Ons
