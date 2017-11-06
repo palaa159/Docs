@@ -324,7 +324,7 @@ After connecting wires to electrodes, run wires along the frame to the top of th
 
 To use your Mark IV headset, you'll also need two [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/). These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system. You will connect them to your OpenBCI board along with the electrodes in the next step.
 
-#### Connecting Cyton Board to Mark IV
+#### Cyton Board Setup
 
 Connect an OpenBCI Cyton board to the Mark IV as shown below (with cover removed for clarity).
 
@@ -351,7 +351,7 @@ Replace the cover, and your board should look like this:
 
 ![image](../assets/images/MarkIV/MarkIV_cyton_connects_cover.JPG)
 
-#### Connecting Ganglion Board to Mark IV
+#### Ganglion Board Setup
 
 Connect an OpenBCI Ganglion board to the Mark IV as shown below (with cover removed for clarity). We placed 8 electrodes on our Mark IV headset, but the Ganglion board can only take 4 inputs. So, we can only connect 4 of our electrodes to the board - we chose FP1, FP2,O1, and O2 for this tutorial.
 
@@ -376,9 +376,9 @@ Replace the cover, and your board should look like this:
 
 ![image](../assets/images/MarkIV/MarkIV_ganglion_connects_cover.JPG)]
 
-### Completed 8 Channel MarkIV Setup
+### Completed 8 Channel Mark IV Setup
 
-Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
+Your finished, 8 channel headset should look like this. To expand to a 16 channel headset (for use with Cyton Daisy), see the next section.
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished2.JPG)
@@ -429,7 +429,7 @@ Run wires back to our OPENBCI Board and secure with wire clips. As mentioned abo
 
 ### Adjust the Ultracortex for your head
 
-Put the Ultracortex Mark 4 onto your head and gradually tighten the electrode units until the electrodes are snuggly (but comfortably) against your scalp. If it is difficult to twist the ELECTRODE & COMFORT UNITS by hand
+Put the Ultracortex Mark IV onto your head and gradually tighten the electrode units until the electrodes are snuggly (but comfortably) against your scalp. Tighten the electrodes and comfort units by turning them clockwise, and loosen them by turning counterclockwise. 
 
 **Be careful** not to strain the electrode wires when twisting the electrode unit with the  ELECTRODE UNITS, or you may separate the wire from the electrode itself. 
 
