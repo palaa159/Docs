@@ -374,7 +374,7 @@ Next, make sure the switches on your Ganglion board are in the bottom configurat
 
 Replace the cover, and your board should look like this:
 
-![image](../assets/images/MarkIV/MarkIV_ganglion_connects_cover.JPG)]
+![image](../assets/images/MarkIV/MarkIV_ganglion_connects_cover.JPG)
 
 ### Completed 8 Channel Mark IV Setup
 
