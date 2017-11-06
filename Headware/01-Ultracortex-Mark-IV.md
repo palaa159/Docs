@@ -322,7 +322,11 @@ After connecting wires to electrodes, run wires along the frame to the top of th
 
 #### Connecting Cyton Board to Mark IV
 
-Connect an OpenBCI Cyton board to the Mark IV as shown:
+Connect an OpenBCI Cyton board to the Mark IV as shown below. Note that you need two ear clip wires as well.
+
+![image](../assets/images/MarkIV/MarkIV_cyton_connects_nocover.JPG)
+
+Here's a table with the correct electrode, wire color, and Cyton board pin pairings:
 
 | Electrode | Wire Color | Cyton Board Pin |
 |---|---|---|
@@ -337,6 +341,7 @@ Connect an OpenBCI Cyton board to the Mark IV as shown:
 | Ear Clip | Black | Top SRB pin |
 | Ear Clip | Black | Top BIAS pin |
 
+The electrodes (FP2 through O1) can be connected to any N1P, N2P, etc, channel. The ear clips must always be connected to the top SRB pin and the top BIAS pin.
 
 Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
 
