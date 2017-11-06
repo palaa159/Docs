@@ -243,7 +243,6 @@ You can then secure the OpenBCI Board to the BOARD_MOUNT by clipping BOARD_COVER
 
 The pins and female headers should fit neatly into the BOARD_COVER holes as shown.
 
-<!--![image](../assets/MarkIV/Photos/Assembly_Board_Cover.JPG)-->
 Only have a black battery pack with AA batteries? Tape the pack to your Mark IV in the location shown. As long as you use an 8-channel setup, the battery pack won't overlap with any of the electrode locations. Thread the battery pack wire through the hole in the BOARD_MOUNT as shown.
 
 ![image](../assets/images/MarkIV/MarkIV_battery_pack_1.JPG)
