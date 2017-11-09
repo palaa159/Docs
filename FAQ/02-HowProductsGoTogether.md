@@ -1,6 +1,6 @@
 # How OpenBCI products go together?
 
-![image](assets/images/How_products_go_together.png)
+![image](../assets/images/How_products_go_together.png)
 
 ## What products should I get?
 
