@@ -82,22 +82,24 @@ Another test would be to change the board settings so that all the pins in the b
 
 Alternatively, there are 6 test signals pre configured:
 
-> --> /test1 (connect all pins to ground)
+> --> /test0 (connect all pins to ground)
 
-> --> /test2 (connect all pins to vcc)
+> --> /test1 (connect all pins to vcc)
 
-> --> /test3 (Connecting pins to low frequency 1x amp signal)
+> --> /test2 (Connecting pins to low frequency 1x amp signal)
 
-> --> /test4 (Connecting pins to high frequency 1x amp signal)
+> --> /test3 (Connecting pins to high frequency 1x amp signal)
 
-> --> /test5 (Connecting pins to low frequency 2x amp signal)
+> --> /test4 (Connecting pins to low frequency 2x amp signal)
 
-> --> /test6 (Connecting pins to high frequency 2x amp signal)
+> --> /test5 (Connecting pins to high frequency 2x amp signal)
 
 The / is used in the interface to execute a pre-configured command. Writing anything without a preceding '/' will automatically write those characters, one by one, to the board.
 
 For example, writing 
+
 > -->x3020000X 
+
 will do the following:
 
 ‘x’ enters Channel Settings mode. Channel 3 is set up to be powered up, with gain of 2, normal input, removed from BIAS generation, removed from SRB2, removed from SRB1. The final ‘X’ latches the settings to the ADS1299 channel settings register.
