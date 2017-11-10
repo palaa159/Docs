@@ -50,8 +50,7 @@ The following parts are included in the Unassembled and the Print it Yourself ve
 * Flat units
 	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/FlatUnits.JPG)
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)	
-	
+	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/EarClips.JPG)
 	
@@ -96,8 +95,6 @@ The following parts are not included with the purchase of any configuration of t
 ![image](../assets//MarkIV/Photos/3D_printed_Parts3.JPG)
 
 * [WIRE CLIPS](https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl) (lips will be used to hold wire in place) — [.STL download link](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Wire_Clip.stl)
-
-### Non-printed Parts:
 
 ### Non-printed Parts:
 
@@ -146,6 +143,7 @@ The following parts are not included with the purchase of any configuration of t
 
 ## SUGGESTED PRINT SETTINGS
 
+If you're 3D-printing your Mark IV yourself, here are the print settings we recommend:
 * FRAME_FRONT & FRAME_BACK
 	* Material: PLA
 	* Supports: YES
@@ -203,19 +201,17 @@ Carefully, glue the FRONT FRAME and BACK FRAME together with your Cyanoacrylate 
 
 ### Mount the OpenBCI BOARD_MOUNT
 
-**Note:** Begin instructions here if you receive a pre-printed but unassembled headset.
-
-Use two screws to mount the M4 Board_Mount to the back of the Frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
+Use two screws to mount the Mark IV Board_Mount to the back (the more rounded half) of the Frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
 
 ![image](../assets//MarkIV/Photos/Assembly_Board_Mount.JPG)
 
 ### Insert INSERTS pieces (x35) into frame
 
-**Note:** Before glueing the INSERTS into the frame, ensure that it fits properly into the frame without glue. INSERTs should be inserted from the inside of the frame outwards, so that they lie flush with the frame.
+Before glueing the INSERTS into the frame, ensure that they fit properly into the frame without glue. INSERTs should be inserted from the inside of the frame outwards, so that they lie flush with the frame.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert.JPG)
 
-For each INSERT, line the inner rim of frame with glue. Then insert the INSERT so that it is flush with the frame like previously.
+For each INSERT, line the inner rim of the frame with glue. Then insert the INSERT so that it is flush with the frame.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert2.JPG)
 
@@ -253,7 +249,7 @@ Connect your OpenBCI board to the battery pack, place it on the BOARD_MOUNT and 
 
 
 
-### Electrode Location Overview
+### Electrode location overview
 
 Before creating your electrode mounts, it's a good idea to think about where you may want to place the electrodes on the Ultracortex FRAME. The placement of the electrode may affect how long you make the wire between the electrode and where the OpenBCI is mounted, at the back of the frame.
 
@@ -274,7 +270,7 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/1020.jpg)
 
-### Placement of Electrodes
+### Placement of electrodes
 
 First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame. 
 
@@ -378,7 +374,7 @@ Replace the cover, and your board should look like this:
 
 ### Completed 8 Channel Mark IV Setup
 
-Your finished, 8 channel headset should look like this. To expand to a 16 channel headset (for use with Cyton Daisy), see the next section.
+Your 8 channel headset is finished! To expand to a 16 channel headset (for use with Cyton Daisy), see the next section.
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished2.JPG)
@@ -389,19 +385,18 @@ Your finished, 8 channel headset should look like this. To expand to a 16 channe
 
 If you have a Cyton Daisy extension, you can expand your headset from 8 electrodes to 16 electrodes. Each electrode provides one "channel" of data, so we call this a 16 channel setup. 
 
-### Remove the two Comfort Nodes
+### Adding extra electrodes
 
 From the front of the frame remove the following two Comfort Nodes.
 
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Remove_Node.JPG)
 
-### Replace with Spiky Electrodes
+Replace the old Comfort Nodes with spiky electrodes:
 
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Replace_Node2.JPG)
 
-### Add the next 6 Spiky Electrodes
+Add 6 more spiky electrode units in the locations shown below:.
 
-In the following locations screw in the remaining 6 electrodes units.
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Node_Placment.JPG)
 
 ### Wiring Electrodes
@@ -414,11 +409,11 @@ Plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE. These two
 
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables2.JPG)
 
-Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes to the Daisy board in the next step.
+Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes into the Daisy board pins in the next step.
 
 ![image](../assets/images/MarkIV/MarkIV_cyton_daisy.JPG)
 
-Connect each of the new electrodes to corresponding Daisy pins as shown below. You may have to use a different color scheme, depending on what wires you have available. Just make sure to record which electrodes are connected to which Daisy pins.
+Connect each of the new electrodes to corresponding Daisy pins as shown below. You may have to use a different color scheme, depending on what wires you have available. Just make sure to keep track of which electrodes are connected to which Daisy pins.
 
 ![image](../assets/images/MarkIV/MarkIV_16_channel_map.png)
 
@@ -451,9 +446,9 @@ Your Mark IV is now ready to use 16 channels! It should look like the images bel
 
 ### Adjust the Ultracortex for your head
 
-Put the Ultracortex Mark IV onto your head and gradually tighten the electrode units until the electrodes are snuggly (but comfortably) against your scalp. Tighten the electrodes and comfort units by turning them clockwise, and loosen them by turning counterclockwise. 
+Put the Ultracortex Mark IV onto your head and gradually tighten the electrode units until the electrodes are snugly (but comfortably) against your scalp. Tighten the electrodes and comfort units by turning them clockwise, and loosen them by turning counterclockwise. 
 
-**Be careful** not to strain the electrode wires when twisting the electrode unit with the  ELECTRODE UNITS, or you may separate the wire from the electrode itself. 
+**Be careful** not to strain the electrode wires when twisting the electrode units, or you may separate the wire from the electrode itself. 
 
 
 ### Examine your brain waves!
