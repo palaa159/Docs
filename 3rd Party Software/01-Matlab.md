@@ -9,7 +9,7 @@ This tutorial will walk through setting up your Matlab environment for use with 
 
 
 ## MATLAB
-####Installation
+#### Installation
 Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-mathworks-software.html) for MATLAB installation instructions. 
 
 *Please note that MATLAB is commercial software. Licenses must either be purchased or acquired through academic or professional institutions.*
@@ -123,7 +123,7 @@ Once a stream has been started on your computer, open BCILAB within MATLAB (>> c
 From the [ERPLAB homepage](http://erpinfo.org/erplab): "ERPLAB Toolbox is a free, open-source Matlab package for analyzing ERP data.  It is tightly integrated with EEGLAB Toolbox, extending EEGLAB’s capabilities to provide robust, industrial-strength tools for ERP processing, visualization, and analysis.  A graphical user interface makes it easy for beginners to learn, and Matlab scripting provides enormous power for intermediate and advanced users."
 
 #### Setup
-[Download](http://erpinfo.org/erplab/erplab-download) and extract the latest ERPLAB release to the "plugins" folder of your EEGLAB directory (if you have an old release of EEGLAB, you will also have to enter the path to this directory in MATLAB by *File > Set Path*)
+[Download](https://github.com/lucklab/erplab/releases) and extract the latest ERPLAB release to the "plugins" folder of your EEGLAB directory (if you have an old release of EEGLAB, you will also have to enter the path to this directory in MATLAB by *File > Set Path*)
 
 Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
 ![image](../assets/Matlab/erplab.png "ERPLAB menu")
