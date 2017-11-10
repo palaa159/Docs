@@ -27,12 +27,14 @@ In addition to OpenBCI products, we also sell compatible products like the [Myow
 You can use both the Cyton and the Ganglion with the OpenBCI GUI to get started with reading your brainwaves. Here is the [tutorial](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) on installing the OpenBCI GUI. 
 
 Regarding third party software, the Cyton board is compatible with:
+
 * [OpenViBE](http://openvibe.inria.fr/drivers-openbci/)
 * [neuromore studio](https://doc.neuromore.com/?cat=0&page=2) (Bio-data acquisition, processing and visualization software)
 * [BrainBay](http://www.shifz.org/brainbay/) (Open-source neurofeedback application, OpenBCI tutorial [here](https://sites.google.com/site/biofeedbackpages/brainbay-openbci) and another [here](http://www.autodidacts.io/use-openbci-with-brainbay-on-ubuntu-linux-and-wine/))
 * [BioEra](http://www.proatech.com/be/manual.html#_OpenBCI) (Visual designer useful for analyzing signals in real time)
 
-The Ganglion board is currently compatible with:
+The Ganglion board is currently compatible with: 
+
 * [BioEra](http://www.proatech.com/be/manual.html#_Toc477624700)
 * [BrainBay](http://www.shifz.org/brainbay/) (Open-source neurofeedback application)
 
