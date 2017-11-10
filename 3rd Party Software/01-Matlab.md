@@ -137,7 +137,10 @@ From the [FieldTrip hopmepage](http://www.fieldtriptoolbox.org/development/realt
 ### Setup
 [Download](http://www.fieldtriptoolbox.org/download) the latest version of FieldTrip from the download page (you will have to provide an email address and descriptiption of research). 
 
-##Further Reading
+Add the FieldTrip directory to your MATLAB path and check out FieldTrip's [getting started guide](http://www.fieldtriptoolbox.org/getting_started).
+
+## Further Reading
+
 [EEGLAB Wiki](http://sccn.ucsd.edu/wiki/EEGLAB)
 
 [BCILAB Wiki](http://sccn.ucsd.edu/wiki/BCILAB)
