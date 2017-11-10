@@ -6,9 +6,6 @@ A few Matlab toolboxes have been created specifically for working with EEG and B
 
 This tutorial will walk through setting up your Matlab environment for use with OpenBCI hardware, as well as some basic uses and functionalities that Matlab offers for working with brain-computer interfaces.
 
-
-
-## MATLAB
 #### Installation
 Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-mathworks-software.html) for MATLAB installation instructions. 
 
