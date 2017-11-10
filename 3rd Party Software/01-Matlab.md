@@ -37,7 +37,16 @@ If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 ![image](../assets/Matlab/eeglab_gui.jpg  "EEGLAB GUI")
 
 #### Loading OpenBCI datasets in EEGLAB
-EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI. The following are different data types that can be used:
+EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
+
+To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
+
+![image](../assets/images/Third_party_software/saved_data_folder.png)
+
+The save location for an OpenBCI GUI session is also at the top of the window:
+
+![image](../assets/images/Third_party_software/save_location.png)
+
 
 **ASCII (txt) Files**
 
@@ -51,9 +60,9 @@ eeg_data = csvread('.../directory/yourfile.txt', row offset, column offset)
 ```
 for example:
 ```
-eeg_data = csvread('.../OpenBCI-RAW-__.txt', 5, 1)
+eeg_data = csvread('.../OpenBCI-RAW-__.txt', 6, 1)
 ```
-Row offset is the number of rows in your txt file before the start of your EEG data (in the current version of the OpenBCI GUI, there are 5 commented lines before the start of the data, so the offset should be 5 to make the matrix start on line 6). Column offset skips the sample number column.
+Row offset is the number of rows in your txt file before the start of your EEG data (in the current version of the OpenBCI GUI, there are 6 commented lines before the start of the data, so the offset should be 6 to make the matrix start on line 7). Column offset skips the sample number column.
 
 If you are using the OpenBCI V3 board with accelerometer data and aux data, you might want to remove the last three channels of your data before you send it into EEGLAB in order to only work with the EEG data. To remove the last three columns, enter the command:
 ```
@@ -70,7 +79,7 @@ If EEGLAB isn't already running, enter "eeglab" into the Matlab command line to 
 
 In the pop-up window that appears, enter information about the data set. Select "Matlab variable", and enter the name of the variable where your matrix is stored. Enter the Data Sampling rate (it should be commented in at the top of the txt file - usually 250 Hz by default in the OpenBCI GUI). The other fields can be left at default, and EEGLAB will automatically fill in the information from the data set.
 
-Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](../assets/matlab/electrode_positions_8channel.sfp) and [16 channel](/assets/matlab/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
+Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](../assets/Matlab/electrode_positions_8channel.sfp) and [16 channel](/assets/Matlab/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
 
 The data is now imported into EEGLAB, and you can perform a variety of data analysis on the data.See ((performing EEG data analysis and visualization)) for next steps on working with your data.
 
