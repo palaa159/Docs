@@ -17,7 +17,7 @@ The OpenBCI Python API can be used with the 8 and 32 bit board with 8 or 16 chan
 
 This library includes the main "open_bci_v3" class definition that instantiates an OpenBCI Board object. This object will initialize communication with the board and get the environment ready for data streaming. This library is designed to work with iOS and Linux distributions. To use a Windows OS, change the "__init__" function in open_bci_v3.py to establish a serial connection in Windows.
 
-For additional details on connecting your OpenBCI board to your computer, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted)
+For additional details on connecting your OpenBCI board to your computer, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted).
 
 ## Installation help
 
@@ -41,7 +41,7 @@ Again, you may need to use the `sudo` command to overcome permission settings.
 
 ## Functionality
 
-### Basic usage
+### Overview
 
 The startStreaming function of the Board object takes a callback function and begins streaming data from the board. Each packet it receives is then parsed as an OpenBCISample which is passed to the callback function as an argument. 
 
