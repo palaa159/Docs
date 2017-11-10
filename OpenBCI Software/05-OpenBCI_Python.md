@@ -4,7 +4,7 @@ OpenBCI has a Python software library designed to work with OpenBCI hardware. To
 
 Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/OpenBCI_Python) as well.
 
-## Dependancies:
+## Dependancies
 
  1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
  2. Numpy 1.7 or later (http://www.numpy.org/)
