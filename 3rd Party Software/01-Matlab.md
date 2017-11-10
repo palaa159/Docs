@@ -1,6 +1,5 @@
 # MATLAB
 
-## Overview
 [MATLAB](https://en.wikipedia.org/wiki/MATLAB) is a powerful numerical computing language and environment that is widely used in a wide variety of academic, research, and industry applications. 
 
 A few Matlab toolboxes have been created specifically for working with EEG and BCI. [EEGLAB](http://sccn.ucsd.edu/eeglab/), [BCILAB](http://sccn.ucsd.edu/wiki/BCILAB), [ERPLAB](http://erpinfo.org/erplab), and [FieldTrip](http://www.fieldtriptoolbox.org/) are a few toolboxes that have helped OpenBCI users work in MATLAB.
@@ -18,7 +17,7 @@ Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-m
 Several useful MATLAB toolkits (EEGLAB, BCILAB, FieldTrip, etc) have been created for collecting and analyzing EEG data, so this tutorial will focus on using MATLAB through these toolkits.
 
 ## EEGLAB
-#### Overview
+
 From the EEGLAB wiki: "EEGLAB is an interactive Matlab toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection."
 
 #### Setup
@@ -81,28 +80,31 @@ In the pop-up window that appears, enter information about the data set. Select 
 
 Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](../assets/Matlab/electrode_positions_8channel.sfp) and [16 channel](/assets/Matlab/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
 
-The data is now imported into EEGLAB, and you can perform a variety of data analysis on the data.See ((performing EEG data analysis and visualization)) for next steps on working with your data.
+The data is now imported into EEGLAB, and you can perform a variety of data analysis on the data. See ((performing EEG data analysis and visualization)) for next steps on working with your data.
 
-####Streaming into EEGLAB
+#### Streaming into EEGLAB
 From what I can tell, EEGLAB seems to work primarily with datasets and recorded data. To use streaming in MATLAB with these toolboxes, see the [BCILAB tutorial](http://docs.openbci.com/3rd%20Party%20Software/01-Matlab#matlab-bcilab) below.
 
 
 
-##BCILAB
-####Overview
+## BCILAB
+
 From the [BCILAB wiki](http://sccn.ucsd.edu/wiki/BCILAB): "BCILAB is a MATLAB toolbox and EEGLAB plugin for the design, prototyping, testing, experimentation with, and evaluation of Brain-Computer Interfaces (BCIs), and other systems in the same computational framework."
 
 BCILAB provides a GUI from which you can control the plugin, but batch scripting can be used for those well-versed in MATLAB programming.
 
-####Installation
+#### Installation
 To install BCILAB, download the [BCILAB-1.1 zip file](ftp://sccn.ucsd.edu/pub/bcilab) and extract it to any directory that is not your EEGLAB folder.
 
-Open up MATLAB, and enter the following in MATLAB's command line:
+Open up MATLAB, and set your current MATLAB directory to the unzipped BCILAB file:
 ```
->> cd your/path/to/bcilab; bcilab
+>> cd your/path/to/bcilab;
 ```
-
-After some console output, you should see the text "Welcome to the BCILAB toolbox!" and then a new GUI with the BCILAB menu should appear.
+Once you're in the file, just type the command:
+```
+>> bcilab
+```
+To start running BCILAB. After some console output, you should see the text "Welcome to the BCILAB toolbox!" and then a new GUI with the BCILAB menu should appear.
 
 ![image](../assets/Matlab/bcilab_menu.png "BCILAB menu")
 
@@ -110,26 +112,30 @@ After some console output, you should see the text "Welcome to the BCILAB toolbo
 ####Streaming into BCILAB
 **LabStreamingLayer**
 
-See our [Labstreaminglayer Tutorial] for instructions on how to start a stream from the OpenBCI headset to your computer. Follow the tutorial on how to start a stream using the OpenBCI Python API.
+See our [Labstreaminglayer Tutorial](http://docs.openbci.com/3rd%20Party%20Software/04-LSL) for instructions on how to start a stream from the OpenBCI headset to your computer. Follow the tutorial on how to start a stream using the OpenBCI Python API.
 
 Once a stream has been started on your computer, open BCILAB within MATLAB (>> cd your/path/to/bcilab; bcilab) and from the menu, select **Online Analysis > Read input from... > Lab streaming layer...**:
 
 ![image](../assets/Matlab/bcilab_lsl.png "BCILAB LSL")
 
-##ERPLAB
-####Overview
+## ERPLAB
+
 From the [ERPLAB homepage](http://erpinfo.org/erplab): "ERPLAB Toolbox is a free, open-source Matlab package for analyzing ERP data.  It is tightly integrated with EEGLAB Toolbox, extending EEGLAB’s capabilities to provide robust, industrial-strength tools for ERP processing, visualization, and analysis.  A graphical user interface makes it easy for beginners to learn, and Matlab scripting provides enormous power for intermediate and advanced users."
 
-####Setup
+#### Setup
 [Download](http://erpinfo.org/erplab/erplab-download) and extract the latest ERPLAB release to the "plugins" folder of your EEGLAB directory (if you have an old release of EEGLAB, you will also have to enter the path to this directory in MATLAB by *File > Set Path*)
 
 Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
 ![image](../assets/Matlab/erplab.png "ERPLAB menu")
 
-####Analyzing EEG Data Sets
+#### Analyzing EEG Data Sets
 To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [Loading OpenBCI Datasets in EEGLAB section](#loading-openbci-datasets-in-eeglab). After the EEG data is imported into EEGLAB, you can then use ERPLAB functions to analyze your data. [Read more on using ERPLAB on their website](http://erpinfo.org/erplab/erplab-documentation/manual_4/)
 
-##FieldTrip
+## FieldTrip
+From the [FieldTrip hopmepage](http://www.fieldtriptoolbox.org/development/realtime): "The toolbox offers advanced analysis methods of MEG, EEG, and invasive electrophysiological data, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing."
+
+### Setup
+[Download](http://www.fieldtriptoolbox.org/download) the latest version of FieldTrip from the download page (you will have to provide an email address and descriptiption of research). 
 
 ##Further Reading
 [EEGLAB Wiki](http://sccn.ucsd.edu/wiki/EEGLAB)
