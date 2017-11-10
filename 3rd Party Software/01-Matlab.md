@@ -131,7 +131,7 @@ To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [L
 ## FieldTrip
 From the [FieldTrip hopmepage](http://www.fieldtriptoolbox.org/development/realtime): "The toolbox offers advanced analysis methods of MEG, EEG, and invasive electrophysiological data, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing."
 
-### Setup
+#### Setup
 [Download](http://www.fieldtriptoolbox.org/download) the latest version of FieldTrip from the download page (you will have to provide an email address and descriptiption of research). 
 
 Add the FieldTrip directory to your MATLAB path and check out FieldTrip's [getting started guide](http://www.fieldtriptoolbox.org/getting_started).
