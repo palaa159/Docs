@@ -10,9 +10,19 @@ Please direct any questions, suggestions and bug reports to the github repo at: 
 
  1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
  2. Numpy 1.7 or later (http://www.numpy.org/)
- 3. Yapsy -- if using plugins via `user.py`, documentation: (http://yapsy.sourceforge.net/), download: (https://pypi.python.org/pypi/Yapsy)
+ 3. Yapsy -- if using plugins via `user.py`, documentation: (http://yapsy.sourceforge.net/), download: (https://pypi.python.org/pypi/Yapsy).
+ 
+ 	**Note**: To install Yapsy, download the .egg file for your Python version. Then, if you have [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions), run:
+	
+	> easy_install {Yapsy egg file}
+	
+	For example,
+	
+	> easy_install Yapsy-1.11.223-py2.7.egg
+	
+	You may need to use the `sudo` command to overcome permission settings.
 
-NOTE: For comprehensive list see requirments.txt: (https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
+For a more comprehensive requirements list, see requirments.txt: (https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
 
 The OpenBCI Python API can be used with the 8 and 32 bit board with 8 or 16 channels, as well as the Ganglion.
 
