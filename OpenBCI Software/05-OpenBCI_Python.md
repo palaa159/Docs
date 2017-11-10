@@ -10,17 +10,8 @@ Please direct any questions, suggestions and bug reports to the github repo at: 
 
  1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
  2. Numpy 1.7 or later (http://www.numpy.org/)
+ 3. pySerial (https://pythonhosted.org/pyserial/)
  3. Yapsy -- if using plugins via `user.py`, documentation: (http://yapsy.sourceforge.net/), download: (https://pypi.python.org/pypi/Yapsy).
- 
- 	**Note**: To install Yapsy, download the .egg file for your Python version. Then, if you have [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions), run:
-	
-	> easy_install {Yapsy egg file}
-	
-	For example,
-	
-	> easy_install Yapsy-1.11.223-py2.7.egg
-	
-	You may need to use the `sudo` command to overcome permission settings.
 
 For a more comprehensive requirements list, see requirments.txt: (https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
 
@@ -30,6 +21,25 @@ This library includes the main "open_bci_v3" class definition that instantiates 
 
 For additional details on connecting your board, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted)
 
+## Installation help
+
+#### pySerial
+To install pySerial, running the command:
+
+> pip install pyserial
+
+should be sufficient. You may need to use the `sudo` command to overcome permission settings.
+
+#### Yapsy
+To install Yapsy, [download](https://pypi.python.org/pypi/Yapsy) the .egg file for your Python version. Then, if you have [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions), run:
+	
+> easy_install {Yapsy egg file}
+	
+For example,
+	
+> easy_install Yapsy-1.11.223-py2.7.egg
+	
+Again, you may need to use the `sudo` command to overcome permission settings.
 
 ## Functionality
 
