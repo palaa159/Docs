@@ -10,7 +10,7 @@ Please direct any questions, suggestions and bug reports to the github repo at: 
 
  1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
  2. Numpy 1.7 or later (http://www.numpy.org/)
- 3. Yapsy -- if using plugins via `user.py` (http://yapsy.sourceforge.net/)
+ 3. Yapsy -- if using plugins via `user.py`, documentation: (http://yapsy.sourceforge.net/), download: (https://pypi.python.org/pypi/Yapsy)
 
 NOTE: For comprehensive list see requirments.txt: (https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
 
