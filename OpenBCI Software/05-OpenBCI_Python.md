@@ -1,10 +1,8 @@
 # OpenBCI Python
 
-## Overview
+OpenBCI has a Python software library designed to work with OpenBCI hardware. To use it, download our OpenBCI Python github repository: https://github.com/OpenBCI/OpenBCI_Python. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using python.
 
-The Python software library designed to work with OpenBCI hardware. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using python.
-
-Please direct any questions, suggestions and bug reports to the github repo at: https://github.com/OpenBCI/OpenBCI_Python
+Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/OpenBCI_Python) as well.
 
 ## Dependancies:
 
@@ -19,7 +17,7 @@ The OpenBCI Python API can be used with the 8 and 32 bit board with 8 or 16 chan
 
 This library includes the main "open_bci_v3" class definition that instantiates an OpenBCI Board object. This object will initialize communication with the board and get the environment ready for data streaming. This library is designed to work with iOS and Linux distributions. To use a Windows OS, change the "__init__" function in open_bci_v3.py to establish a serial connection in Windows.
 
-For additional details on connecting your board, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted)
+For additional details on connecting your OpenBCI board to your computer, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted)
 
 ## Installation help
 
