@@ -51,9 +51,13 @@ OpenBCISample members:
 
 This code provides a simple user interface (called user.py) to handle various plugins and communicate with the board. To use it, connect the board to your computer using the dongle (see http://docs.openbci.com/tutorials/01-GettingStarted for details). 
 
-Then simply run the code given as an argument the port your board is connected to:
-Ex Linux:
+To connect to your board, run user.py with your board's serial/COM port as an argument. In a Linux terminal, this would look like the command below. Replace `/dev/ttyUSB0` with your board's unique serial port.
+
 > $python user.py -p /dev/ttyUSB0 
+
+If you're unsure of your board's serial port, connect to your board with the OpenBCI GUI first and locate it under SERIAL/COM PORT:
+
+[image](../assets/images/Third_party_software/cyton_serial_name.png)
 
 The program should establish a serial connection and reset the board to default settings. When a '-->' appears, you can type a character (character map http://docs.openbci.com/software/01-OpenBCI_SDK)  that will be sent to the board using ser.write. This allows you to change the settings on the board. 
 
