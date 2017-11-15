@@ -61,7 +61,7 @@ Swtiching either BLE or PC will produce the same result. The option is available
 
 
 ### Cyton Board PCB Files
-[OpenBCI 32bit gerber & BOM (567K zip)](http://ultracortex.com/downloads/hardware/OpenBCI_32bit.zip)
+[OpenBCI 32bit gerber & BOM](https://github.com/OpenBCI/V3_Hardware_Design_Files/tree/master/OpenBCI%20Cyton%20Designs/OBCI_Cyton_Plots)
 
 
 ##OpenBCI USB DONGLE
