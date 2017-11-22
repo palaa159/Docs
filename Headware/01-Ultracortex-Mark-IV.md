@@ -1,6 +1,6 @@
 # Ultracortex Mark IV
 
-*Development Period: January 2016 Through the Present
+*Development Period: January 2016 Through the Present*
 
 ![image](../assets/MarkIV/Photos/UCM4-Product-2.JPG) 
 
