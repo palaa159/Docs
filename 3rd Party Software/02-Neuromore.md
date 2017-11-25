@@ -9,7 +9,7 @@
 **Linux**: Neuromore does not yet support linux platforms but plans to in the near future.
 
 ### I. Neuromore Software
-Download the latest neuromore software from their [website](http://www.neuromore.com/). Their main software is the neuromore Studio which they plan to keep improving on and keep free!
+Download the latest neuromore software from their [website](http://www.neuromore.com/). Their main software is the neuromore Studio which they plan to keep improving!
 
 ### II. Connect the Board
 
