@@ -34,11 +34,13 @@ Once you select a device, you'll have the option to communicate with it live or 
 
 ![image](../assets/images/Third_party_software/BrainBay_openbci_device_settings.png)
 
+Want to learn more about BrainBay's capabilities with OpenBCI hardware? Check out their [BrainBay & OpenBCI tutorials](https://sites.google.com/site/biofeedbackpages/brainbay-openbci) page. 
+
 ## Documentation
 
 Documentation for the BrainBay software can be found here: (http://www.shifz.org/brainbay/)
 
-Did you use BrainBay and OpenBCI to make something interesting? Post about it on our [community page!](http://openbci.com/community/)
+Did you use BrainBay and OpenBCI to build something new? Post about it on our [community page!](http://openbci.com/community/)
 
 
 
