@@ -1,5 +1,9 @@
 # BrainBay
 
+From their OpenBCI tutorials page: BrainBay is an open-source visual programming language (VPL) for rapid prototyping of EEG digital signal processing steps (or data flows.) 
+
+They recently added an OpenBCI driver to their software, making it easy to use BrainBay with OpenBCI products!
+
 ## Setting Up Your Environment
 
 **Windows:** BrainBay only works with the Windows operating system.
