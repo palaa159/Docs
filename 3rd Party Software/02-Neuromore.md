@@ -13,7 +13,7 @@ Download the latest neuromore software from their [website](http://www.neuromore
 
 ### II. Connect the Board
 
-**Windows**: Connect your OBCI board and make sure it is recognized as a COM port and it's latency is set to 1 ms. To troubleshoot, read [this](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows).
+**Windows**: Connect your OBCI board and make sure it is recognized as a COM port and its latency is set to 1 ms. To troubleshoot, read [this](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows).
 
 **OS X**: Make sure your board is connected and visible as a device. To check you can type `ls /dev/tty.*` on your terminal. An example connected OBCI board should like like this:
 
