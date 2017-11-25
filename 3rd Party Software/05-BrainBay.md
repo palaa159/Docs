@@ -16,11 +16,11 @@ Click **Setup_BrainBay_v2.1.exe**, or the equivalent .exe for the latest version
 
 Double-clicking the BrainBay icon will open a demo screen. To learn more about BrainBay's capabilities, click on one of the demo options.
 
-*image of demo screen*
+![image](../assets/images/Third_party_software/BrainBay_demo_page.png)
 
 To begin using BrainBay yourself, click on Design -> New from the toolbar at the top of the screen.
 
-*image of design screen*
+![image](../assets/images/Third_party_software/BrainBay_design.png)
 
 You're now ready to use BrainBay for EEG streaming and analysis!
 
@@ -28,11 +28,11 @@ You're now ready to use BrainBay for EEG streaming and analysis!
 
 To use BrainBay with data from an OpenBCI board, either live or from a file, select Insert Element -> Source -> Biosignal/EEG Amplifier and one of the OpenBCI devices. 
 
-*image of selecting openbci from menu*
+![image](../assets/images/Third_party_software/BrainBay_select_openbci.png)
 
 Once you select a device, you'll have the option to communicate with it live or read from file. 
 
-*screenshot of openbci device settings*
+![image](../assets/images/Third_party_software/BrainBay_openbci_device_settings.png)
 
 ## Documentation
 
