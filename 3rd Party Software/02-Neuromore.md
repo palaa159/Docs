@@ -4,7 +4,7 @@
 
 **Windows**: Follow [OBCI on Windows](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows. Then, continue this tutorial.
 
-**OS X**: See the [FTDI OS X fix](http://docs.openbci.com/tutorials/09-Mac_FTDI_Driver_Fix) first, then follow these instructions.
+**OS X**: See the [FTDI OS X fix](http://docs.openbci.com/Tutorials/10-Mac_FTDI_Driver_Fix) first, then follow these instructions.
 
 **Linux**: Neuromore does not yet support linux platforms but plans to in the near future.
 
