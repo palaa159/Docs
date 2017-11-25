@@ -41,7 +41,7 @@ To get started, use your OpenBCI board (like the Cyton or Ganglion board) and th
 
 The save location for an OpenBCI GUI session is also at the top of the window:
 
-![image](../assets/images/Third_party_software/save_location.png)
+![image](../assets/images/Third_party_software/save_location_GUI.png)
 
 
 **ASCII (txt) Files**
