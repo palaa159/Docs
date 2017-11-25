@@ -30,14 +30,14 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-<img src="../assets/Matlab/eeglab_gui.jpg" width="300" />
+<img src="../assets/Matlab/eeglab_gui.jpg" width="300">
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
 
 To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
 
-<img src="../assets/images/Third_party_software/saved_data_folder.png" width="500" />
+<img src="../assets/images/Third_party_software/saved_data_folder.png" width="500">
 
 The save location for an OpenBCI GUI session is also at the top of the window:
 
