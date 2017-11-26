@@ -182,7 +182,7 @@ You should see no lights on the WiFi Shield if it is in bootloading mode.
 From terminal you installed `esptool.py` to earlier, substitute your serial port name for `YOURPORT` in the command below.
 
 ```
-$ esptool.py --port /dev/tty.usbserial-YOURPORT write_flash ~/Downloads/DefaultWifiShield.bin
+$ esptool.py --port /dev/tty.usbserial-YOURPORT write_flash 0x000000 ~/Downloads/DefaultWifiShield.bin
 ```
 
 #### On Windows
