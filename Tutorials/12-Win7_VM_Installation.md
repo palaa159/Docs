@@ -27,3 +27,19 @@ If you have files on your regular OS that you'd like to access through VirtualBo
 7. Double click on that computer and you should see your shared folder.
 
 You're all set! For more information, look at the [VirtualBox documentation.](https://www.virtualbox.org/wiki/Documentation)
+
+#### Using OpenBCI Hardware within VirtualBox
+
+While using 3rd party software, you might want to stream data from your OpenBCI board directly to a program on your virtual machine. Here's how to livestream from your OpenBCI board within your VM.
+
+**OpenBCI Cyton Board**
+1. Make sure you're comfortable using your Cyton board and Dongle with your host computer and the OpenBCI GUI. To do so, check out our [Cyton Getting Started Guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
+1. Plug in your Dongle and turn on your Cyton board. Both should display a blue light.
+1. Start VirtualBox. When the "Oracle VM VirtualBox Manager" window appears, select your virtual machine (so that it's highlighted in blue). Make sure your virtual machine is in the "powered off" mode, and not the "saved state" mode.
+1. Click Settings and then the Ports tab.
+1. Switch to the USB tab.
+1. Check "Enable USB Controller" and select "USB 2.0 (EHCL) Controller".
+1. Under USB Device Filters, click the "Add USB" icon with the green plus sign. The FTDI Driver used by the OpenBCI Dongle should appear in a drop down menu. Select it. It should now appear under "USB Device Filters".
+1. Click "OK" to save these settings.
+
+
