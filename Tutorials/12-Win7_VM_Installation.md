@@ -35,21 +35,32 @@ While using 3rd party software, you might want to stream data from your OpenBCI 
 **OpenBCI Cyton Board**
 
 1. Make sure you're comfortable using your Cyton board and Dongle with your host computer and the OpenBCI GUI. To do so, check out our [Cyton Getting Started Guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
-1. Plug in your Dongle and turn on your Cyton board. Both should display a blue light.
-1. Start VirtualBox. When the "Oracle VM VirtualBox Manager" window appears, select your virtual machine (so that it's highlighted in blue). Make sure your virtual machine is in the "powered off" mode, and not the "saved state" mode.
-1. Click Settings and then the Ports tab.
-1. Switch to the USB tab.
-1. Check "Enable USB Controller" and select "USB 2.0 (EHCL) Controller".
-1. Under USB Device Filters, click the "Add USB" icon with the green plus sign. The FTDI Driver used by the OpenBCI Dongle should appear in a drop down menu. Select it. It should now appear under "USB Device Filters".
-1. Click "OK" to save these settings. Make sure no other program that connects to your Dongle (like the OpenBCI GUI) is currently running. Start your virtual machine.
-1. From within your virtual machine, open the control panel, then navigate to Hardware and Sound -> Device Manager.
-1. You should see the FT USB driver under "Other devices". It may have a warning indicator next to it. Double-click the driver name.
-1. Doing so should open a "Properties" page. Go to the "General" tab and select "Update Driver..."
-1. Select "Search automatically for updated driver software" when prompted.
-1. Wait for your your VM OS to search for and download the driver software. You will be prompted when the driver software is downloaded successfully.
-1. Now, in the Device Manager, there should be an object under "Universal Serial Bus controllers" called "USB Serial Converter". There should also be a "Ports" tab with at least one device.
-1. The device listed under "Ports" is your OpenBCI Dongle, and the address in parenthesis is its COM Port. In the example above, the OpenBCI Dongle is on COM Port 3.
+2. Plug in your Dongle and turn on your Cyton board. Both should display a blue light.
+3. Start VirtualBox. When the "Oracle VM VirtualBox Manager" window appears, select your virtual machine (so that it's highlighted in blue). Make sure your virtual machine is in the "powered off" mode, and not the "saved state" mode.
+4. Click Settings and then the Ports tab.
+5. Switch to the USB tab.
+6. Check "Enable USB Controller" and select "USB 2.0 (EHCL) Controller".
+7. Under USB Device Filters, click the "Add USB" icon with the green plus sign. The FTDI Driver used by the OpenBCI Dongle should appear in a drop down menu. Select it. It should now appear under "USB Device Filters".
 
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VirtualBox_enable_usb.png?raw=true" width="70%">
 
+8. Click "OK" to save these settings. Make sure no other program that connects to your Dongle (like the OpenBCI GUI) is currently running. Start your virtual machine.
+9. From within your virtual machine, open the control panel, then navigate to Hardware and Sound -> Device Manager.
+10. You should see the FT USB driver under "Other devices". It may have a warning indicator next to it. Double-click the driver name.
 
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VM_deviceManager_beforeinstallation.png?raw=true" width="70%">
+
+11. Doing so should open a "Properties" page. Go to the "General" tab and select "Update Driver..."
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VM_FT23_driver_properties.png?raw=true" width="50%">
+
+12. Select "Search automatically for updated driver software" when prompted.
+13. Wait for your your VM OS to search for and download the driver software. You will be prompted when the driver software is downloaded successfully.
+14. Now, in the Device Manager, there should be an object under "Universal Serial Bus controllers" called "USB Serial Converter". There should also be a "Ports" tab with at least one device.
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VM_deviceManager_afterinstallation.png?raw=true" width="70%">
+
+15. The device listed under "Ports" is your OpenBCI Dongle, and the address in parenthesis is its COM Port. In the example above, the OpenBCI Dongle is on COM Port 3.
+
+You should now be able to communicate with your OpenBCI Dongle and board from within your VM! Have more questions? Post them on our [Forum.](http://openbci.com/index.php/forum/)
 
