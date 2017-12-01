@@ -28,9 +28,9 @@ To check if EEGLAB is correctly set up, go to the Matlab prompt and type:
 If the toolkit is not yet correctly implemented, the console should output:
 "Undefined function or variable 'eeglab'."
 
-If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
+If it is set up correctly, a pop-up window should appear with the EEGLAB GUI. It should look like the image below.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg" width="100" height="100">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="100" height="100">
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
