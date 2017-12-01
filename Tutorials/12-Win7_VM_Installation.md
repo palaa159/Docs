@@ -1,6 +1,8 @@
-# Installing Windows 7 VM in VirtualBox
+# Windows 7 VirtualBox Guide
 
-Some of the software compatible with OpenBCI products requires a Windows operating system. If you have a non-windows computer, you can still use this software through a Wondows virtual machine on VirtualBox.
+Some of the software compatible with OpenBCI products requires a Windows operating system. If you have a non-windows computer, you can still use this software through a Windows virtual machine on VirtualBox.
+
+## Installing Windows 7 VM in VirtualBox
 
 ![Ova Settings](../assets/images/ova-set.jpg)
 
@@ -14,7 +16,7 @@ Some of the software compatible with OpenBCI products requires a Windows operati
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
 
-#### Sharing files with VirtualBox
+## Sharing files with VirtualBox
 
 If you have files on your regular OS that you'd like to access through VirtualBox, follow these steps to create a shared folder:
 
@@ -28,7 +30,7 @@ If you have files on your regular OS that you'd like to access through VirtualBo
 
 You're all set! For more information, look at the [VirtualBox documentation.](https://www.virtualbox.org/wiki/Documentation)
 
-#### Using OpenBCI Hardware within VirtualBox
+## Using OpenBCI Hardware within VirtualBox
 
 While using 3rd party software, you might want to stream data from your OpenBCI board directly to a program on your virtual machine. Here's how to livestream from your OpenBCI board within your VM.
 
