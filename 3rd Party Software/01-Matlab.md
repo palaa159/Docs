@@ -30,7 +30,7 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-![image](../assets/Matlab/eeglab_gui.jpg)
+<img src="../assets/Matlab/eeglab_gui.jpg" width="100" height="100">
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
