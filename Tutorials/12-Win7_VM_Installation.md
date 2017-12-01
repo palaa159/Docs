@@ -1,8 +1,10 @@
-# Installing Windows 7 VM in Virtual Box
+# Installing Windows 7 VM in VirtualBox
+
+Some of the software compatible with OpenBCI products requires a Windows operating system. If you have a non-windows computer, you can still use this software through a Wondows virtual machine on VirtualBox.
 
 ![Ova Settings](../assets/images/ova-set.jpg)
 
-1. Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads). 
+1. Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads). 
 1. Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.
 1. Extract and double click on the .OVA file resulting from the extraction. This should start Virtual Box and set up your VM's configurations. 
 1. Some EEG processing software uses a lot of RAM (OpenViBE aquisition server for example). In fact, some will take up one entire core, if they can. Because of this, I would advise that you configure your VM to have multiple cores and as much RAM as you deem reasonable. 
@@ -11,3 +13,17 @@
 1. Follow the [OBCI on Windows](http://docs.openbci.com/Tutorials/11-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows.
 
 NOTE: Make sure that Guest Additions are installed correctly on your VM. With the image used, they should be automatically installed.
+
+#### Sharing files with VirtualBox
+
+If you have files on your regular OS that you'd like to access through VirtualBox, follow these steps to create a shared folder:
+
+1. Start VirtualBox. When the "Oracle VM VirtualBox Manager" window appears, select your virtual machine (so that it's highlighted in blue). Make sure your virtual machine is in the "powered off" mode, and not the "saved state" mode.
+2. Click Settings and then the "Shared Folders" tab.
+3. Click the icon for "Add new shared folder", and select the file path to a folder you'd like to share.
+4. Start your virtual machine.
+5. Open a file explorer window and navigate to the "Network" location.
+6. You may need to select "Turn on netowrk and file sharing" as an administrator. Then, a computer called "VBOXSVR" will appear.
+7. Double click on that computer and you should see your shared folder.
+
+You're all set! For more information, look at the [VirtualBox documentation.](https://www.virtualbox.org/wiki/Documentation)
