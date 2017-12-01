@@ -28,7 +28,7 @@ To check if EEGLAB is correctly set up, go to the Matlab prompt and type:
 If the toolkit is not yet correctly implemented, the console should output:
 "Undefined function or variable 'eeglab'."
 
-If it is set up correctly, a pop-up window should appear with the EEGLAB GUI (image below resized).
+If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg" width="100" height="100">
 
