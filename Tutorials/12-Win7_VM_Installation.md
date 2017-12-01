@@ -33,6 +33,7 @@ You're all set! For more information, look at the [VirtualBox documentation.](ht
 While using 3rd party software, you might want to stream data from your OpenBCI board directly to a program on your virtual machine. Here's how to livestream from your OpenBCI board within your VM.
 
 **OpenBCI Cyton Board**
+
 1. Make sure you're comfortable using your Cyton board and Dongle with your host computer and the OpenBCI GUI. To do so, check out our [Cyton Getting Started Guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide).
 1. Plug in your Dongle and turn on your Cyton board. Both should display a blue light.
 1. Start VirtualBox. When the "Oracle VM VirtualBox Manager" window appears, select your virtual machine (so that it's highlighted in blue). Make sure your virtual machine is in the "powered off" mode, and not the "saved state" mode.
