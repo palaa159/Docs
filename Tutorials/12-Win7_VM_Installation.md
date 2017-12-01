@@ -4,7 +4,7 @@ Some of the software compatible with OpenBCI products requires a Windows operati
 
 ## Installing Windows 7 VM in VirtualBox
 
-![Ova Settings](../assets/images/ova-set.jpg)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/ova-set.jpg?raw=true" width="75%">
 
 1. Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads). 
 1. Go to <http://dev.modern.ie/tools/vms/> and download a Windows 7 virtual machine (I used IE8) image for your appropriate host on the "Choose your OS" tab. (The OS that your computer runs natively). Choosing Virtual Box as the platform.
