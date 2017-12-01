@@ -30,7 +30,7 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="200">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="50%">
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
@@ -123,7 +123,8 @@ From the [ERPLAB homepage](http://erpinfo.org/erplab): "ERPLAB Toolbox is a free
 [Download](https://github.com/lucklab/erplab/releases) and extract the latest ERPLAB release to the "plugins" folder of your EEGLAB directory (if you have an old release of EEGLAB, you will also have to enter the path to this directory in MATLAB by *File > Set Path*)
 
 Next time your launch EEGLAB, the ERPLAB menu should appear in the EEGLAB GUI:
-![image](../assets/Matlab/erplab.png "ERPLAB menu")
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/erplab.png?raw=true" width="70%">
 
 #### Analyzing EEG Data Sets
 To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [Loading OpenBCI Datasets in EEGLAB section](#loading-openbci-datasets-in-eeglab). After the EEG data is imported into EEGLAB, you can then use ERPLAB functions to analyze your data. [Read more on using ERPLAB on their website](http://erpinfo.org/erplab/erplab-documentation/manual_4/)
