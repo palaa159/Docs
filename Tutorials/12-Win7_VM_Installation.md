@@ -41,6 +41,15 @@ While using 3rd party software, you might want to stream data from your OpenBCI 
 1. Switch to the USB tab.
 1. Check "Enable USB Controller" and select "USB 2.0 (EHCL) Controller".
 1. Under USB Device Filters, click the "Add USB" icon with the green plus sign. The FTDI Driver used by the OpenBCI Dongle should appear in a drop down menu. Select it. It should now appear under "USB Device Filters".
-1. Click "OK" to save these settings.
+1. Click "OK" to save these settings. Make sure no other program that connects to your Dongle (like the OpenBCI GUI) is currently running. Start your virtual machine.
+1. From within your virtual machine, open the control panel, then navigate to Hardware and Sound -> Device Manager.
+1. You should see the FT USB driver under "Other devices". It may have a warning indicator next to it. Double-click the driver name.
+1. Doing so should open a "Properties" page. Go to the "General" tab and select "Update Driver..."
+1. Select "Search automatically for updated driver software" when prompted.
+1. Wait for your your VM OS to search for and download the driver software. You will be prompted when the driver software is downloaded successfully.
+1. Now, in the Device Manager, there should be an object under "Universal Serial Bus controllers" called "USB Serial Converter". There should also be a "Ports" tab with at least one device.
+1. The device listed under "Ports" is your OpenBCI Dongle, and the address in parenthesis is its COM Port. In the example above, the OpenBCI Dongle is on COM Port 3.
+
+
 
 
