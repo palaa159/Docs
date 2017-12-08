@@ -28,15 +28,40 @@ To begin using BrainBay yourself, click on Design -> New from the toolbar at the
 
 You're now ready to use BrainBay for EEG streaming and analysis!
 
-## Using BrainBay with OpenBCI
+## Live Stream from OpenBCI to BrainBay
 
-To use BrainBay with data from an OpenBCI board, either live or from a file, select Insert Element -> Source -> Biosignal/EEG Amplifier and one of the OpenBCI devices. 
+To stream data live from your OpenBCI board within a BrainBay design, select Insert Element -> Source -> Biosignal/EEG Amplifier and one of the OpenBCI devices. I'm using a Cyton board (without the Daisy extension), so I selected "OpenBCI 8 Channels".
+
+BrainBay does have an "import data from file" option, but it is only compatible with archive (.arc) files. The OpenBCI GUI saves data as comma-delineated .txt files. So, unless you have another application that saves data from your OpenBCI board as .arc files, you need to stream data live to use BrainBay. 
 
 ![image](../assets/images/Third_party_software/BrainBay_select_openbci.png)
 
-Once you select a device, you'll have the option to communicate with it live or read from file. 
+After selecting your device, select your device's COM port. If you're using VirtualBox, our [VirtualBox tutorial](http://docs.openbci.com/Tutorials/12-Win7_VM_Installation) has a section on finding the COM port of a connected hardware device. 
 
-![image](../assets/images/Third_party_software/BrainBay_openbci_device_settings.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_unchecked.png?raw=true" width="50%">
+
+Click "Connect/Disconnect". A checkmark should appear in the "connected:" box. 
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_checked.png?raw=true" width="50%">
+
+Exit out of the device configuration window. A image corresponding to your OpenBCI board should have appeared in your design window, like below. Re-open the configuration window at any time by right-clicking on the image. 
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_checked.png?raw=true" width="50%">
+
+You're now streaming data from your board! In the next section, we'll show a simple application of 
+
+## Quick Project: Using the Oscilloscope Tool
+
+BrainBay has a wide variety of useful tools for streaming EEG data. To get familiar with BrainBay's interface, and to double-check our board is streaming data, we'll show how to use the Oscilloscope tool. 
+
+Select Insert Element -> Target -> Oscilloscope from the toolbar.
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_selecting_oscilloscope.png?raw=true" width="50%">
+
+A box representing the oscilloscope will appear in the "Design" window. Drag it off the box representing your OpenBCI board if necessary.
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_oscilloscope_added.png?raw=true" width="50%">
+
 
 Want to learn more about BrainBay's capabilities with OpenBCI hardware? Check out their [BrainBay & OpenBCI tutorials](https://sites.google.com/site/biofeedbackpages/brainbay-openbci) page. 
 
