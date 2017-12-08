@@ -1,4 +1,4 @@
-# Windows 7 VirtualBox Guide
+# VirtualBox Windows 7 Guide
 
 Some of the software compatible with OpenBCI products requires a Windows operating system. If you have a non-windows computer, you can still use this software through a Windows virtual machine on VirtualBox.
 
@@ -60,7 +60,7 @@ While using 3rd party software, you might want to stream data from your OpenBCI 
 13. Wait for your your VM OS to search for and download the driver software. You will be prompted when the driver software is downloaded successfully.
 14. Now, in the Device Manager, there should be an object under "Universal Serial Bus controllers" called "USB Serial Converter". There should also be a "Ports" tab with at least one device.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VM_deviceManager_afterinstallation.png?raw=true" width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/VM_tutorial/VM_tutorial_COM_port.png?raw=true" width="70%">
 
 15. The device listed under "Ports" is your OpenBCI Dongle, and the address in parenthesis is its COM Port. In the example above, the OpenBCI Dongle is on COM Port 3.
 
