@@ -20,11 +20,11 @@ Click **Setup_BrainBay_v2.1.exe**, or the equivalent .exe for the latest version
 
 Double-clicking the BrainBay icon will open a demo screen. To learn more about BrainBay's capabilities, click on one of the demo options.
 
-![image](../assets/images/Third_party_software/BrainBay_demo_page.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_demo_page.png?raw=true" width="70%">
 
 To begin using BrainBay yourself, click on Design -> New from the toolbar at the top of the screen.
 
-![image](../assets/images/Third_party_software/BrainBay_design.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_design.png?raw=true" width="70%">
 
 You're now ready to use BrainBay for EEG streaming and analysis!
 
@@ -34,7 +34,7 @@ To stream data live from your OpenBCI board within a BrainBay design, select Ins
 
 BrainBay does have an "import data from file" option, but it is only compatible with archive (.arc) files. The OpenBCI GUI saves data as comma-delineated .txt files. So, unless you have another application that saves data from your OpenBCI board as .arc files, you need to stream data live to use BrainBay. 
 
-![image](../assets/images/Third_party_software/BrainBay_select_openbci.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_select_openbci.png?raw=true" width="70%">
 
 After selecting your device, select your device's COM port. If you're using VirtualBox, our [VirtualBox tutorial](http://docs.openbci.com/Tutorials/12-Win7_VM_Installation) has a section on finding the COM port of a connected hardware device. 
 
@@ -66,7 +66,7 @@ A second window will pop up behind your design window. This window will display 
 
 Click on the "Design" window. Click on the icon for the Cyton board, so that it's outlined in yellow. Decide which input channel (or which Cyton board pin) you want to display on the oscilloscope. Click and hold on the orange circle next to that channel. Drag the cursor to the yellow "chan1" circle on the oscilloscope icon. A red line should now connect the two circles. 
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_link_channels.png?raw=true" width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_link_channels.png?raw=true" width="40%">
 
 Press the "Play (F7)" button at the bottom of the BrainBay screen. A red LED on your Dongle should turn on. This means your board is streaming live data to your computer! 
 
