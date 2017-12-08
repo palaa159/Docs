@@ -61,7 +61,7 @@ This code provides a simple user interface (called user.py) to handle various pl
 
 To connect to your board, run user.py with your board's serial/COM port as an argument. In a Linux terminal, this would look like the command below. Replace `/dev/ttyUSB0` with your board's unique serial port.
 
-> $python user.py -p /dev/ttyUSB0 
+> $python ./user.py -p /dev/ttyUSB0 
 
 If you're unsure of your board's serial port, connect to your board with the OpenBCI GUI first and locate it under SERIAL/COM PORT:
 
