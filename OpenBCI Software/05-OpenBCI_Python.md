@@ -65,7 +65,7 @@ To connect to your board, run user.py with your board's serial/COM port as an ar
 
 If you're unsure of your board's serial port, connect to your board with the OpenBCI GUI first and locate it under SERIAL/COM PORT:
 
-![image](../assets/images/Third_party_software/cyton_serial_name.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/cyton_serial_name.png?raw=true" width="60%">
 
 Running user.py like in the command above should establish a serial connection and reset the board to default settings. When a '-->' appears, you can type a character (character map http://docs.openbci.com/software/01-OpenBCI_SDK)  that will be sent to the board using ser.write. This allows you to change the settings on the board. 
 
