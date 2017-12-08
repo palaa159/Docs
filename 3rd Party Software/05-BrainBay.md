@@ -44,7 +44,7 @@ Click "Connect/Disconnect". A checkmark should appear in the "connected:" box.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_checked.png?raw=true" width="50%">
 
-Exit out of the device configuration window. A image corresponding to your OpenBCI board should have appeared in your design window, like below. Re-open the configuration window at any time by right-clicking on the image. 
+Exit out of the device configuration window. A icon corresponding to your OpenBCI board should have appeared in your design window, like below. Re-open the configuration window at any time by right-clicking on the icon. 
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_checked.png?raw=true" width="50%">
 
@@ -52,16 +52,29 @@ You're now streaming data from your board! In the next section, we'll show a sim
 
 ## Quick Project: Using the Oscilloscope Tool
 
-BrainBay has a wide variety of useful tools for streaming EEG data. To get familiar with BrainBay's interface, and to double-check our board is streaming data, we'll show how to use the Oscilloscope tool. 
+BrainBay has a wide variety of useful tools for streaming EEG data. To get familiar with BrainBay's interface, and to double-check our board is streaming data, we'll show how to use the oscilloscope tool. An oscilloscope is a tool that displays changes in signal voltage vs. time (just like the main display of the OpenBCI GUI).
 
 Select Insert Element -> Target -> Oscilloscope from the toolbar.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_selecting_oscilloscope.png?raw=true" width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_selecting_oscilloscope.png?raw=true" width="70%">
 
-A box representing the oscilloscope will appear in the "Design" window. Drag it off the box representing your OpenBCI board if necessary.
+A icon representing the oscilloscope will appear in the "Design" window. Drag it off the icon representing your OpenBCI board if necessary.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_oscilloscope_added.png?raw=true" width="50%">
+A second window will pop up behind your design window. This window will display the oscilloscope output. Reposition the Design and Oscilloscope windows so both are visible. 
 
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_oscilloscope_reposition.png?raw=true" width="70%">
+
+Click on the "Design" window. Click on the icon for the Cyton board, so that it's outlined in yellow. Decide which input channel (or which Cyton board pin) you want to display on the oscilloscope. Click and hold on the orange circle next to that channel. Drag the cursor to the yellow "chan1" circle on the oscilloscope icon. A red line should now connect the two circles. 
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_link_channels.png?raw=true" width="70%">
+
+Press the "Play (F7)" button at the bottom of the BrainBay screen. A red LED on your Dongle should turn on. This means your board is streaming live data to your computer! 
+
+Tap on the pins of your OpenBCI Cyton board. You should see a signal response in the oscilloscope window.
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_oscilloscope_output.png?raw=true" width="70%">
+
+You are now using BrainBay to view data streamed from your OpenBCI board! Feel free to connect one of the other OpenBCI channels to "chan2" on the oscilloscope icon to view signals from multiple pins at once. Once you're comfortable with the Oscilloscope tool, explore BrainBay's other target and processing tools!
 
 Want to learn more about BrainBay's capabilities with OpenBCI hardware? Check out their [BrainBay & OpenBCI tutorials](https://sites.google.com/site/biofeedbackpages/brainbay-openbci) page. 
 
