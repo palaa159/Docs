@@ -43,7 +43,7 @@ A good way to get started with neuromore and the whole concept of classifiers is
 
 This example can be found in the Back-End File System display which has all sorts of useful classifiers and other examples. 
 
-### Clasifiers
+### Classifiers
 Neuromore calls these graphs of interconnected processing units, "Classifiers".
 
 The basic structure of a classifer consists of a input device (such as OpenBCI V3) connected to processing nodes that end in some sort of output node. 
