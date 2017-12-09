@@ -46,7 +46,7 @@ Click "Connect/Disconnect". A checkmark should appear in the "connected:" box.
 
 Exit out of the device configuration window. A icon corresponding to your OpenBCI board should have appeared in your design window, like below. Re-open the configuration window at any time by right-clicking on the icon. 
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_COM3_checked.png?raw=true" width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BrainBay_Cyton_connected.png?raw=true" width="50%">
 
 You're now streaming data from your board! In the next section, we'll show a simple application of 
 
