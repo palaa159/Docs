@@ -7,25 +7,15 @@ This tutorial will show you how to set up LSL using the OpenBCI Python API and t
 ## Setup
 
 1) **Download or clone the [OpenBCI_LSL](https://github.com/OpenBCI/OpenBCI_LSL) repo from Github.**
-
 2) **Download and install [Python](https://www.python.org/downloads/) (either version 2 or 3).**
-
-Python might already be installed on your computer. Type python --version to check if you have Python version 2 or 3 installed. 
-
+Python might already be installed on your computer. Type python --version to check if you have Python version 2 or 3 installed.
 3) **Install Python requirements**
-
 To use this program, you need the following Python packages installed:
-
 * pylsl (version 1.10.5 or greater)
-
 * pyserial (version 3.1.1 or greater)
-
 * numpy (version 1.11.1 or greater)
-
 * pyqtgraph (version 0.9.10 or greater) (optional: needded for GUI functionality only)
-
 * scipy (version 0.17.1 or greater) (optional: needed for GUI functionality only)
-
 To automatically install using pip, navigate to the "OpenBCI_LSL" folder on your command line and terminal, and type:
 
 ```
@@ -95,6 +85,28 @@ To change the channel location metadata of the stream, type /loc followed by a s
 ```
 
 This can only be done while the board is not currently streaming.
+
+## GUI
+If you would like the ability to configure the board and LSL stream with advanced settings, you can do so by running the GUI. The GUI comes up by default if you run the program with no flags:
+
+python openbci_lsl.py
+
+If you plug in your board and dongle before running the above command, the program should have already detected the appropriate settings for your board (port and daisy). If not, you can enter those yourself in the appropriate fields.
+
+<img src="https://raw.githubusercontent.com/gabrielibagon/OpenBCI_LSL/master/images/GUI.jpg?raw=true" width="60%">
+
+### Streaming
+To stream data, make sure the appropriate Port, Daisy, and LSL Stream fields are filled in correctly. Then, press "Connect" and then "Start Streaming". To pause streaming, click "Stop Streaming". To disconnect the board, press "Disconnect".
+
+The board must be disconnected to change LSL settings. Once you "Connect" again, your current settings are saved until the next time you disconnect.
+
+For consistent performance, pause streaming before you disconnect the board.
+
+### Configuring the board from the GUI
+To change the channel settings, click on "Board Config". Note: this must be done BEFORE you press "Connect".
+
+## Troubleshooting
+Note: Many issues with board connectivity can simply be resolved by restarting the program and your board. Unplug your dongle, turn off the board, plug in the dongle, and turn on the board, in that order. This method works the most consistently.
 
 ## Next Steps
 Once you have the Lab Streaming Layer set up with your OpenBCI board, check out these other tutorials to view the stream in a variety of different programs:
