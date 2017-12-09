@@ -30,19 +30,18 @@ If the toolkit is not yet correctly implemented, the console should output:
 
 If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="70%">
 
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
 
 To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
 
-![image](../assets/images/Third_party_software/saved_data_folder.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/saved_data_folder.png?raw=true" width="80%">
 
 The save location for an OpenBCI GUI session is also at the top of the window:
 
-![image](../assets/images/Third_party_software/save_location_GUI.png)
-
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/save_location_GUI.png?raw=true" width="80%">
 
 **ASCII (txt) Files**
 
@@ -70,8 +69,7 @@ eeg_data = eeg_data'
 ```
 If EEGLAB isn't already running, enter "eeglab" into the Matlab command line to start the program. Import your matrix into EEGLAB using the EEGLAB GUI: File -> Import Data -> Using EEGLAB functions and plugins -> From ASCII/float file or Matlab array
 
-![image](../assets/Matlab/eeglab_dataimport.png "EEGLAB Data Import")
-
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_dataimport.png?raw=true" width="80%">
 
 In the pop-up window that appears, enter information about the data set. Select "Matlab variable", and enter the name of the variable where your matrix is stored. Enter the Data Sampling rate (it should be commented in at the top of the txt file - usually 250 Hz by default in the OpenBCI GUI). The other fields can be left at default, and EEGLAB will automatically fill in the information from the data set.
 
@@ -103,17 +101,16 @@ Once you're in the file, just type the command:
 ```
 To start running BCILAB. After some console output, you should see the text "Welcome to the BCILAB toolbox!" and then a new GUI with the BCILAB menu should appear.
 
-![image](../assets/Matlab/bcilab_menu.png "BCILAB menu")
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/bcilab_menu.png?raw=true" width="80%">
 
-
-####Streaming into BCILAB
+#### Streaming into BCILAB
 **LabStreamingLayer**
 
 See our [Labstreaminglayer Tutorial](http://docs.openbci.com/3rd%20Party%20Software/04-LSL) for instructions on how to start a stream from the OpenBCI headset to your computer. Follow the tutorial on how to start a stream using the OpenBCI Python API.
 
 Once a stream has been started on your computer, open BCILAB within MATLAB (>> cd your/path/to/bcilab; bcilab) and from the menu, select **Online Analysis > Read input from... > Lab streaming layer...**:
 
-![image](../assets/Matlab/bcilab_lsl.png "BCILAB LSL")
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/bcilab_lsl.png?raw=true" width="80%">
 
 ## ERPLAB
 
