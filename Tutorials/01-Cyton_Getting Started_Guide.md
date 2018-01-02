@@ -275,7 +275,7 @@ Connect the electrode wires to your Cyton board as shown below. The proper wire 
 | purple | 2N (bottom N2P pin) |
 | green | 4N (bottom N4P pin) |
 | blue | 4P (top N4P pin) |
-| red | 7N (top N7P pin) |
+| red | 7N (bottom N7P pin) |
 
 The white and black electrodes must always connect to the SRB2 pin and the bottom BIAS pin. Also, the green and blue wires must be connected to two pins of the same channel (like 4N and 4P). But the purple, red, and green/blue wires can be connected to any of the N1P through N8P channels. We decided to use channels 2, 4, and 7 for this tutorial. 
 
@@ -325,7 +325,7 @@ f) Now connect the green electrode to your right forearm, somewhere on top of a 
 
 ![wrist](../assets/images/wrist.JPG)
 
-g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. This will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
+g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. This will serve as the reference electrode for the green electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
 
 
 ### 4. Launch the GUI and adjust your channel settings
