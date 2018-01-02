@@ -325,7 +325,7 @@ f) Now connect the green electrode to your right forearm, somewhere on top of a 
 
 ![wrist](../assets/images/wrist.JPG)
 
-g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. The green electrode will serve as the reference electrode for the blue electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
+g) Finally, connect the blue electrode to your wrist on the opposite arm with the green electrode. The blue electrode will serve as the reference electrode for the green electrode. If you noticed, the blue electrode is on the pin above the green electrode. We will be removing pin 4 from SRB2 so that it is not included in the same reference signal being used to measure brain waves. The main reason for this is because the microvolt (uV) values produced by your heart and muscles are much stronger than the signals we can detect from your brain, so we don't want these signals to interfere. I'll go into more detail about this later on, when it comes time to adjust the channel settings in the GUI.
 
 
 ### 4. Launch the GUI and adjust your channel settings
