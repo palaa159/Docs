@@ -67,7 +67,7 @@ When you move the switch **DOWN**, that associated channel's `-` input is connec
 
 
 ### Ganglion Board Circuit Schematic
-####Download The Entire Schematic [here](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files/blob/master/Ganglion_SCH.pdf)  
+#### This is only the first page of the schematic. Download The Entire Schematic [here](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files/blob/master/Ganglion_SCH.pdf)  
 
 ![Ganglion Schematic](../assets/images/ganglion_schematic.png)
 
