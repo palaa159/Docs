@@ -37,7 +37,7 @@ NOTE: If your board is connected properly, neuromore should have no trouble conn
 
 ### Location
 
-![image](../assets/images/obci_gs_loc.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/obci_gs_loc.png?raw=true" width="50%">
 
 A good way to get started with neuromore and the whole concept of classifiers is to look at the Getting Started OBCI example. 
 
@@ -52,7 +52,7 @@ This sort of graphical programming (or [visual programming](https://en.wikipedia
 
 The basic idea is that a stream of data that originates at the input device can then be mapped, processed and transformed into outputs that are useful, informative or just plain cool.
 
-![alpha detector](../assets/images/alpha-detect-gs.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/alpha-detect-gs.png?raw=true" width="100%">
 
 The getting started example for OpenBCI in the neuromore Studio explores these areas and how to properly use the graphical programming interface. 
 
