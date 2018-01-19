@@ -52,6 +52,12 @@ Connect the output of the FTDI object with the input of the OpenBCI object, as s
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/BioEra_icons_connected.png?raw=true" width="80%">
 
+You're ready to stream live data from your OpenBCI board! In the next section, we'll give an example for how to use and display your OpenBCI data using BioEra tools.
+
+## Quick Project: Using the Oscilloscoope Tool
+
+BioEra has a wide variety of useful tools for streaming EEG data. To get familiar with BioEra’s interface, and to double-check our board is streaming data, we’ll show how to use the oscilloscope tool. An oscilloscope is a tool that displays changes in signal voltage vs. time (just like the main display of the OpenBCI GUI).
+
 Select an oscilloscope object the same way you selected the FTDI and OpenBCI objects. In addition to the oscilloscope icon in the design window, an oscilloscope display will appear in the dark grey window, like below. Connect one of the OpenBCI channels to the oscilloscope icon input.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/Bioera_Osc_edit.png?raw=true" width="80%">
