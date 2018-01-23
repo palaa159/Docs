@@ -8,7 +8,7 @@ Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a part
 
 ## Prerequisites
 
-The WiFi Shield requires your Cyton to run the latest [v3.0.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.0.0) firmware and your Ganglion to the latest [v2.0.0](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
+The WiFi Shield requires your Cyton to run the latest [v3.1.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) firmware and your Ganglion to the latest [v2.0.0](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
 
 **You must update your firmware before getting started.**
 
@@ -26,7 +26,7 @@ You only need one battery when using the Cyton with the WiFi Shield. The Cyton t
 ### What you need
 
  1. OpenBCI WiFi Shield
- 2. OpenBCI Cyton Board **Must have at least [v3.0.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.0.0) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
+ 2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
 
 ### General Overview
@@ -97,9 +97,21 @@ On some modules, the Ganglion can power the WiFi Shield using only one battery w
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
+## WiFi Shield Mode of Operations
+
+The release of WiFi Shield firmware v2.0.0 introduced WiFi Direct. WiFi Direct bypasses a WiFi router by having your computing device use WiFi to join the WiFi Shield's hotspot. This allows for really great signal acquisition.
+
+### Status D2 LED Indicator
+
+If the WiFI Shield is not able to join a wireless network, such as when the saved wireless network is not in range or the WiFi shield has no credentials saved in memory, the WiFi will be in WiFi Direct mode. The D2 LED indicator will blink 10 times in 2 seconds to indicate the WiFi Shield is in WiFi Direct mode.
+
+If there are saved wireless network credentials on the WiFi Shield, the WiFi Shield will blink 4 times in 2 seconds to indicate the WiFi Shield is searching for the stored wireless network. If the stored network is found, the WiFi Shield will join the wireless network and blink 2 times in 2 seconds; the WiFi Shield is now in WiFi Station mode. If the stored network is not found within 10 seconds, the WiFi Shield will switch into WiFi Direct mode.
+
+The WiFi Manager, the tool used to store wireless network credentials onto the WiFi shield, may be launched in either WiFi Client mode or WiFi Direct mode.
+
 ## Get the WiFi Shield On Your Wireless Network
 
-The WiFi Shield must be on the same wireless network as your computer, smart phone, or whatever other internet connected device you wish to talk to the WiFi Shield with. For example, in order to stream data into the OpenBCI GUI using your WiFi Shield, you must first make sure that your WiFi shield and computer that is running the OpenBCI GUI are on the same WiFi network.
+You want to put the WiFi Shield into WiFi Station mode. Therefore the WiFi Shield must be on the same wireless network as your computer, smart phone, or whatever other internet connected device you wish to talk to the WiFi Shield with. For example, in order to stream data into the OpenBCI GUI using your WiFi Shield, you must first make sure that your WiFi shield and computer that is running the OpenBCI GUI are on the same WiFi network.
 
 Before the WiFi Shield has joined a network, the Shield acts as a WiFi hotspot, and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi shield.
 
@@ -107,7 +119,7 @@ To connect your WiFi shield to your local WiFi network (or any other WiFi networ
 
 **Important Notes Before You Continue:**
 
-* In order to unpair your WiFi Shield with a WiFi network (or update its firmware), it cannot be attached to an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately and disconnected from a board, so that it can effectively power cycle after a network connection or firmware update.
+* In order to unpair your WiFi Shield with a WiFi network (or update its firmware), it cannot be under control of an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
 * If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
 * It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must first "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI
@@ -115,7 +127,35 @@ To connect your WiFi shield to your local WiFi network (or any other WiFi networ
 
 Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across.
 
-### Example
+### Example WiFi Firmware v2.x.x and later
+
+Your local WiFi network is called _MeerketManor_ and it is password protected. You turn on the WiFi on your smartphone and search for WiFi network options. Additionally, your WiFi Shield is connected to a battery and powered on (and not connected to an OpenBCI Board, or if Cyton, `EXT PWR` is OFF). In your iPhone's WiFi network options, you see _MeerketManor_ and "OpenBCI-A4AD" (the last 4 characters will be different in your case).
+
+![iPhone Connected to MeerketManor](../assets/images/wifi_join_network_1.PNG)
+
+You click "OpenBCI-A4AD", in an attempt to connect to the WiFi Shield's hotspot.
+
+**Note:** If there is an issue where it may take several times to bring up the captive touch portal.  Power cycling the board may useful.
+
+![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
+
+After a couple seconds a captive touch portal will appear on the computer, phone or tablet. Click _Configure WiFi_.
+
+![Captive touch portal first screen](../assets/images/wifi_captive_touch_first_screen.PNG)
+
+On the next screen, see that _MeerketManor_ is listed as a possible network for the WiFi Shield to join. Select _MeerketManor_ and enter the password for the network and press _save_.
+
+![Captive touch portal second screen](../assets/images/wifi_captive_touch_second_screen.PNG)
+
+If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi!
+
+**Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
+
+![Captive touch portal final screen](../assets/images/wifi_captive_touch_final_screen_shot.PNG)
+
+If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0)!
+
+### Example Firmware v1.x.x
 
 Your local WiFi network is called _MeerketManor_ and it is password protected. You turn on the WiFi on your smartphone and search for WiFi network options. Additionally, your WiFi Shield is connected to a battery and powered on (and not connected to an OpenBCI Board!). In your iPhone's WiFi network options, you see _MeerketManor_ and "OpenBCI-A4AD" (the last 4 characters will be different in your case).
 
