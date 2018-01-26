@@ -13,7 +13,7 @@ Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-m
 
 Several useful MATLAB toolkits (EEGLAB, BCILAB, FieldTrip, etc) have been created for collecting and analyzing EEG data, so this tutorial will focus on using MATLAB through these toolkits.
 
-## Loading OpenBCI Data in MATLAB
+## Loading OpenBCI Data
 
 To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
 
@@ -41,7 +41,7 @@ From the EEGLAB wiki: "EEGLAB is an interactive Matlab toolbox for processing co
 #### Setup
 Go to the [EEGLAB downloads page](http://sccn.ucsd.edu/eeglab/downloadtoolbox.html) and follow the instructions for your operating system.
 
-In short, you will want to download the zip file of the most current version of EEGLAB and extract it into a directory on your system. Then, you will want to make this toolbox accessible from Matlab by adding a path to this directory (the steps to do this vary by OS - see the "EEGLAB downloads page" link above).
+Download the zip file of the most current version of EEGLAB and extract it into a directory on your system. Then, make this toolbox accessible from Matlab by adding a path to this directory (the steps to do this vary by OS - see the "EEGLAB downloads page" link above).
 
 To check if EEGLAB is correctly set up, go to the Matlab prompt and type:
 > \>\> eeglab
@@ -53,13 +53,15 @@ If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_gui.jpg?raw=true" width="70%">
 
-#### Loading OpenBCI datasets in EEGLAB
-EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
-
-In the case of OpenBCI Processing's txt data, the matrix is imported in the opposite orientation than what EEGLAB needs, so to transpose the data before importing in EEGLAB, perform a simple matrix transposition:
+#### Preparing OpenBCI Datasets for EEGLAB Use
+OpenBCI saves data in the opposite orientation from what EEGLAB needs. So, after importing your OpenBCI data to MATLAB as described above, perform a simple matrix transposition:
 ```
 eeg_data = eeg_data'
 ```
+Your data matrix is now ready to use with EEGLAB.
+
+#### Using EEGLAB
+
 If EEGLAB isn't already running, enter "eeglab" into the Matlab command line to start the program. Import your matrix into EEGLAB using the EEGLAB GUI: File -> Import Data -> Using EEGLAB functions and plugins -> From ASCII/float file or Matlab array
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/eeglab_dataimport.png?raw=true" width="80%">
