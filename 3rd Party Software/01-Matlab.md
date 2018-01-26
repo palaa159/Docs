@@ -13,6 +13,27 @@ Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-m
 
 Several useful MATLAB toolkits (EEGLAB, BCILAB, FieldTrip, etc) have been created for collecting and analyzing EEG data, so this tutorial will focus on using MATLAB through these toolkits.
 
+## Loading OpenBCI Data in MATLAB
+
+To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/saved_data_folder.png?raw=true" width="80%">
+
+The save location for an OpenBCI GUI session is also at the top of the window:
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/save_location_GUI.png?raw=true" width="80%">
+
+The OpenBCI Processing GUI saves data in text (txt) or comma separated value (csv) files. Import the CSV file into MATLAB as a matrix by using the "Import Data" wizard:
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/matlab_import_data.png?raw=true" width="80%">
+
+Once the data import screen is open, select the "Numeric Matrix" import option. Deselect all of the header rows. Also deselect the final column, the timestamp values, since the import wizard can only parse numeric values. Feel free to give your matrix a conveneint name, like "eeg_data":
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/matlab_import_screen.png?raw=true" width="80%">
+
+Click "Import Selection". Your matrix should now appear as an object in your workspace! Keep reading to learn more about processing your data with MATLAB toolboxes.
+
+
 ## EEGLAB
 
 From the EEGLAB wiki: "EEGLAB is an interactive Matlab toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection."
@@ -35,34 +56,6 @@ If it is set up correctly, a pop-up window should appear with the EEGLAB GUI.
 #### Loading OpenBCI datasets in EEGLAB
 EEGLAB can be used for the analysis and visualization of EEG datasets recorded using OpenBCI hardware and software. EEGLAB can work with a variety of different file types, including those that are exported from the OpenBCI GUI.
 
-To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/saved_data_folder.png?raw=true" width="80%">
-
-The save location for an OpenBCI GUI session is also at the top of the window:
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/save_location_GUI.png?raw=true" width="80%">
-
-**ASCII (txt) Files**
-
-EEG data can be stored ASCII files (often saved with the ".txt" extension).
-
-The OpenBCI Processing GUI saves data in text or comma separated value (csv) files, which are output into the "SavedData" directory within the OpenBCI_Processing directory.
-
-Import the CSV file as a MATLAB matrix using the following command:
-```
-eeg_data = csvread('.../directory/yourfile.txt', row offset, column offset)
-```
-for example:
-```
-eeg_data = csvread('.../OpenBCI-RAW-__.txt', 6, 1)
-```
-Row offset is the number of rows in your txt file before the start of your EEG data (in the current version of the OpenBCI GUI, there are 6 commented lines before the start of the data, so the offset should be 6 to make the matrix start on line 7). Column offset skips the sample number column.
-
-If you are using the OpenBCI V3 board with accelerometer data and aux data, you might want to remove the last three channels of your data before you send it into EEGLAB in order to only work with the EEG data. To remove the last three columns, enter the command:
-```
-eeg_data = eeg_data(:,1:end-3)
-```
 In the case of OpenBCI Processing's txt data, the matrix is imported in the opposite orientation than what EEGLAB needs, so to transpose the data before importing in EEGLAB, perform a simple matrix transposition:
 ```
 eeg_data = eeg_data'
