@@ -27,7 +27,7 @@ The OpenBCI Processing GUI saves data in text (txt) or comma separated value (cs
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/matlab_import_data.png?raw=true" width="80%">
 
-Once the data import screen is open, select the "Numeric Matrix" import option. Deselect all of the header rows. Also deselect the final column, the timestamp values, since the import wizard can only parse numeric values. Feel free to give your matrix a conveneint name, like "eeg_data":
+Select a saved OpenBCI data file. Once the data import screen is open, select the "Numeric Matrix" import option. Deselect all of the header rows. Also deselect the final column, the timestamp values, since the import wizard can only parse numeric values. Feel free to give your matrix a conveneint name, like "eeg_data":
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/matlab_import_screen.png?raw=true" width="80%">
 
@@ -70,7 +70,19 @@ In the pop-up window that appears, enter information about the data set. Select 
 
 Channel locations are useful for plotting EEG scalp maps in 2-D or 3-D format. OpenBCI uses the standard 10-20 format for the 8 and 16 channel models, which can be found within these sfp files: [8 channel](../assets/Matlab/electrode_positions_8channel.sfp) and [16 channel](/assets/Matlab/electrode_positions_16channel.sfp). You can then import channel data by click "Browse" next to "Channel location file or info" and locating the OpenBCI sfp file you downloaded.
 
-The data is now imported into EEGLAB, and you can perform a variety of data analysis on the data. See ((performing EEG data analysis and visualization)) for next steps on working with your data.
+The data is now imported into EEGLAB and ready to use!
+
+#### Plotting Data in EEGLAB
+
+To double check your data is imported correctly, and to get familiar with EEGLAB's interface, try plotting your data. Select Plot -> Channel data (scroll) from the EEGLAB pop-up window.
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/EEGLAB_plot.png?raw=true" width="50%">
+
+Your data should appear in a window like the image below:
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/matlab_tutorial/EEGLAB_plot_image.png?raw=true" width="80%">
+
+Check out the links in the Further Reading section to learn more about processing data with EEGLAB!
 
 #### Streaming into EEGLAB
 From what I can tell, EEGLAB seems to work primarily with datasets and recorded data. To use streaming in MATLAB with these toolboxes, see the [BCILAB tutorial](http://docs.openbci.com/3rd%20Party%20Software/01-Matlab#matlab-bcilab) below.
