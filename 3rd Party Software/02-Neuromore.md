@@ -1,29 +1,42 @@
 # Neuromore
 
+Neuromore is an EEG streaming and processing studio. Like BrainBay and BioEra, it provides a visual designer that can be used to process signals real-time.
+
+## Setting Up Your Environment
+
+**Windows**: Neuromore Studio is available for Windows (but only as a 64-bit application).
+
+**OS X**: Neuromore Studio is availabe for MacOs, but ee the [FTDI OS X fix](http://docs.openbci.com/Tutorials/10-Mac_FTDI_Driver_Fix) before using it.
+
+**Linux**: If you have Linux, you can use Neuromore through a virtual machine program like VirtualBox. Check out our VirtualBox tutorial [here!](http://docs.openbci.com/Tutorials/12-Win7_VM_Installation)
+
 ## Installation
 
-**Windows**: Follow [OBCI on Windows](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows. Then, continue this tutorial.
+Download the latest verison of Neuromore Studio for your operating system from their [website](http://neuromore.com/). After installation, the application will be in the folder neuromore -> Studio.
 
-**OS X**: See the [FTDI OS X fix](http://docs.openbci.com/Tutorials/10-Mac_FTDI_Driver_Fix) first, then follow these instructions.
+## Getting Started
 
-**Linux**: Neuromore does not yet support linux platforms but plans to in the near future.
+Open the Neuromore Studio application. A demo will begin playing that displays example EEG data.
 
-### I. Neuromore Software
-Download the latest neuromore software from their [website](http://www.neuromore.com/). Their main software is the neuromore Studio which they plan to keep improving!
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/Neruomore_opening_screen.png?raw=true" width="80%">
 
-### II. Connect the Board
+## Livestream from OpenBCI to Neuromore
 
-**Windows**: Connect your OBCI board and make sure it is recognized as a COM port and its latency is set to 1 ms. To troubleshoot, read [this](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows).
+First, connect your OpenBCI board to your computer. Make sure to take the following steps:
+
+**Windows**: Mke sure your board is recognized as a COM port and that its latency is set to 1 ms. To troubleshoot, read our [OpenBCI on Windows tutorial](http://docs.openbci.com/tutorials/10-OpenBCI_on_Windows).
 
 **OS X**: Make sure your board is connected and visible as a device. To check you can type `ls /dev/tty.*` on your terminal. An example connected OBCI board should like like this:
 
 	Rodrigos-MacBook-Pro:~ rodrigo$ ls /dev/tty.*
 			/dev/tty.OpenBCI-DN00959R
 
+Now, to connect to your OpenBCI board from within Neuromore, click the magnifying glass under "Devices" in the top right corner. This will prompt Neuromore to search for new devices. You should see an OpenBCI logo pop up, and data from your board will start streaming in the top of the Neuromore window.
 
-### III. Connect to neuromore
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/neuromore_openBCI_connected.png?raw=true" width="80%">
 
-Neuromore is pretty awesome in terms of board connectivity. If you open up the studio and connect your board, 9 out of 10 times it'll automatically connect. 
+#### Troubleshooting
+Neuromore is pretty awesome in terms of board connectivity. If you open up the studio and connect your board, 9 out of 10 times it'll automatically connect.
 
 If it doesn't, try the following:
 
@@ -35,18 +48,11 @@ NOTE: If your board is connected properly, neuromore should have no trouble conn
 
 ## Getting Started
 
-### Location
+To get started with Neuromore, try opening one of the OpenBCI tutorials from the "Back-End File System" pane:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/obci_gs_loc.png?raw=true" width="50%">
 
-A good way to get started with neuromore and the whole concept of classifiers is to look at the Getting Started OBCI example. 
-
-This example can be found in the Back-End File System display which has all sorts of useful classifiers and other examples. 
-
-### Classifiers
-Neuromore calls these graphs of interconnected processing units, "Classifiers".
-
-The basic structure of a classifer consists of a input device (such as OpenBCI V3) connected to processing nodes that end in some sort of output node. 
+An example of Neuromore's visual programming language will appear. Neuromore calls these graphs of interconnected processing units "Classifiers". The basic structure of a classifer consists of a input device (such as OpenBCI V3) connected to processing nodes that end in some sort of output node. 
 
 This sort of graphical programming (or [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language)) also appears in very popular programs like [PureData](https://puredata.info/) and [MAX]( https://en.wikipedia.org/wiki/Max_(software)/) for more general puroses and [OpenViBE](http://docs.openbci.com/research%20tools/OpenViBE) and of course neuromore for EEG specific processing. 
 
