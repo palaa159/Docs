@@ -157,9 +157,23 @@ You click "OpenBCI-A4AD", in an attempt to connect to the WiFi Shield's hotspot.
 
 ![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
 
-After the phone has connected to the WiFi Shield's hotspot, launch your web browser and navigate to http://192.168.4.1/wifi which will start the WiFi Manager.
+Your phone or computer will connect to the WiFi Shield's hotspot.
 
-After a couple seconds a captive touch portal will appear on the computer, phone or tablet. Click _Configure WiFi_.
+![iPhone Connected to `OpenBCI-E218`](../assets/images/wifi_joined_network.png)
+
+Launch your web browser and navigate to http://192.168.4.1/wifi to start the WiFi Manager.
+
+![iPhone Web Browser](../assets/images/wifi_manager_start.PNG)
+
+A success page will load with a hyperlink to the WiFi Manager.
+
+![iPhone wifi manager start request](../assets/images/wifi_manager_started.PNG)
+
+You will be rerouted to the now started WiFi Manager.
+
+![WiFi Manager home page](assets/images/wifi_manager_route_home.PNG)
+
+Click _Configure WiFi_ to scan for nearby wireless networks or click _Configure WiFi (No Scan)_ to enter the wireless network credentials. A captive touch portal may appear on the computer, phone or tablet, if so, continue the setup on the captive touch page if on mobile or ignore the portal on the computer if you want, either WiFi manager page will work!
 
 ![Captive touch portal first screen](../assets/images/wifi_captive_touch_first_screen.PNG)
 
@@ -169,11 +183,11 @@ On the next screen, see that _MeerketManor_ is listed as a possible network for 
 
 If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi!
 
-**Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
+**Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again, you'll see the D2 light flash **10 times in 2 seconds**. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
 
 ![Captive touch portal final screen](../assets/images/wifi_captive_touch_final_screen_shot.PNG)
 
-If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0)!
+If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/2.0.0)!
 
 ## WiFi Configuration for Firmware v1.x.x
 
