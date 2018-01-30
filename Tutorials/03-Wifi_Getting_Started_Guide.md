@@ -8,7 +8,7 @@ Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a part
 
 ## Prerequisites
 
-The WiFi Shield requires your Cyton to run the latest [v3.0.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.0.0) firmware and your Ganglion to the latest [v2.0.0](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
+The WiFi Shield requires your Cyton to run the latest [v3.1.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) firmware and your Ganglion to the latest [v2.0.0](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
 
 **You must update your firmware before getting started.**
 
@@ -26,7 +26,7 @@ You only need one battery when using the Cyton with the WiFi Shield. The Cyton t
 ### What you need
 
  1. OpenBCI WiFi Shield
- 2. OpenBCI Cyton Board **Must have at least [v3.0.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.0.0) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
+ 2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
 
 ### General Overview
@@ -97,7 +97,149 @@ On some modules, the Ganglion can power the WiFi Shield using only one battery w
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
-## Get the WiFi Shield On Your Wireless Network
+## WiFi Configuration for Firmware v2.x.x
+
+WiFi Shields got powerful in firmware 2.0.0, we learned lot's and iterated continuously, we love the new features on the WiFi Shield, where we is a world wide community of empowered hackers and researchers alike.
+
+### WiFi Shield Mode of Operations
+
+There are two modes primary modes of operation for the WiFi Shield, **WiFi Station** and **WiFi Direct**. The D2 LED status light is used to indicate what mode of operation the WiFi Shield is in at start up.
+
+**WiFi Station**
+
+WiFi Station shipped as the only option with v1.3.0 firmware. WiFi Station mode connects your WiFi Shield to a WiFi Router, such as your home wireless network that you watch _Netflix_ on... The WiFi Shield uses 802.1 b/g/n and sends a lot of data, especially as we increase data rates and number of channels, slow or far routers can result in data loss. We introduced UDP and UDP burst mode in firmware 2.0.0 that we hear _runs great_.
+
+WiFi Station is not a realistic mode of operation when you are at a conference, hack-a-thon, universities with enterprise level security, doing a live demo, etc... The community pushed hard and introduced WiFi Direct mode of operation.
+
+**WiFi Direct**
+
+WiFi Direct bypasses a WiFi router by having your computer or phone connect directly to a wireless network broadcasted by the WiFi Shield. The WiFi Direct mode allows for high speed data streaming, such as 1000Hz with 16 channels with zero compression, these speeds and data throughputs are digested easily in this peer to peer WiFi data transfer mode.
+
+### Status D2 LED Indicator
+
+If your D2 LED Indicator light stays solid on at start-up, it's highly recommended you follow the tutorial for , you must update your firmware with an over the air update to 2.0.0 or later.
+
+If the WiFI Shield is not able to join a wireless network, such as when the saved wireless network is not in range or the WiFi shield has no credentials saved in memory, the WiFi will be in WiFi Direct mode. The D2 LED indicator will blink 10 times in 2 seconds to indicate the WiFi Shield is in WiFi Direct mode.
+
+If there are saved wireless network credentials on the WiFi Shield, the WiFi Shield will blink 4 times in 2 seconds to indicate the WiFi Shield is searching for the stored wireless network. If the stored network is found, the WiFi Shield will join the wireless network and blink 2 times in 2 seconds; the WiFi Shield is now in WiFi Station mode. If the stored network is not found within 10 seconds, the WiFi Shield will switch into WiFi Direct mode.
+
+The WiFi Manager, the tool used to store wireless network credentials onto the WiFi shield, may be launched in either WiFi Client mode or WiFi Direct mode.
+
+### Important Notes
+
+* To update a WiFi Shield's firmware or it cannot be under control of an OpenBCI Board (Cyton or Ganglion). The WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
+* If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
+* It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
+* Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must launch the WiFi manager (instructions below) or "Erase Credentials" of the WiFi Shield.
+* The WiFi shield does not work for Enterprise level security so use WiFi Direct mode or use your cellphone as a hot spot or set up your own wifi network.
+
+### Configure WiFi Station Mode
+
+Follow this section if you want to put the WiFi Shield into WiFi Station mode. The WiFi Shield must be on the same wireless network as your computer, smart phone, or whatever other internet connected device you wish to talk to the WiFi Shield with. For example, in order to stream data into the OpenBCI GUI using your WiFi Shield in WiFi Station mode of operation, you must first make sure that your WiFi shield and computer that is running the OpenBCI GUI are on the same WiFi network.
+
+**For the rest of this tutorial, the WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position**
+
+If you power the the WiFi Shield up and D2 LED does **4 blinks in 2 seconds** followed within 10 seconds by **2 blinks in 2 seconds**, then your WiFi Shield is on your local network. Feel free to head to skip a head to [connecting with the OpenBCI GUI](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-connecting-with-the-openbci-gui). If you want the WiFi Shield to join a different wireless network, continue reading and pay attention when it comes time to bring up the WiFi Manager.
+
+Before the WiFi Shield has joined a network, the Shield acts as a WiFi hotspot, where the D2 LED blinks **10 times in 2 seconds** and will have a name such as "OpenBCI-A4AD" where the last four digits are hexadecimal and are unique to your WiFi Shield.
+
+To connect your WiFi shield to your local WiFi network (or any other WiFi network), use any WiFi-enabled device to connect to the WiFi shield hotspot. Once connected to the WiFi Shield's network go to http://192.168.4.1/wifi. A link to go to the WiFi manager should then be clicked and you will be taken to the WiFi Manager page. Then you can scan for wireless networks and save your wireless network credentials. A captive touch portal as shown in the screenshots below may appear after hitting the http://192.168.4.1/wifi endpoint, if so, continue on either page.
+
+Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across.
+
+### WiFi Station Example
+
+Your local WiFi network is called _MeerketManor_ and it is password protected. You turn on the WiFi on your smartphone and search for WiFi network options. Additionally, your WiFi Shield is connected to a battery and powered on (and not connected to an OpenBCI Board, or if Cyton, `EXT PWR` is OFF). Note what the D2 light does at start-up, if your In your iPhone's WiFi network options, you see _MeerketManor_ and "OpenBCI-A4AD" (the last 4 characters will be different in your case).
+
+![iPhone Connected to MeerketManor](../assets/images/wifi_join_network_1.PNG)
+
+You click "OpenBCI-A4AD", in an attempt to connect to the WiFi Shield's hotspot.
+
+![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
+
+Your phone or computer will connect to the WiFi Shield's hotspot.
+
+![iPhone Connected to `OpenBCI-E218`](../assets/images/wifi_joined_network.png)
+
+Launch your web browser and navigate to http://192.168.4.1/wifi to start the WiFi Manager.
+
+![iPhone Web Browser](../assets/images/wifi_manager_start.PNG)
+
+A success page will load with a hyperlink to the WiFi Manager.
+
+![iPhone wifi manager start request](../assets/images/wifi_manager_started.PNG)
+
+You will be rerouted to the now started WiFi Manager.
+
+![WiFi Manager home page](../assets/images/wifi_manager_route_home.PNG)
+
+Click _Configure WiFi_ to scan for nearby wireless networks or click _Configure WiFi (No Scan)_ to enter the wireless network credentials. A captive touch portal may appear on the computer, phone or tablet, if so, continue the setup on the captive touch page if on mobile or ignore the portal on the computer if you want, either WiFi manager page will work!
+
+![Captive touch portal first screen](../assets/images/wifi_captive_touch_first_screen.PNG)
+
+On the next screen, see that _MeerketManor_ is listed as a possible network for the WiFi Shield to join. Select _MeerketManor_ and enter the password for the network and press _save_.
+
+![Captive touch portal second screen](../assets/images/wifi_captive_touch_second_screen.PNG)
+
+If the _MeerketManor_ password was entered correctly, then the WiFi Shield will join _MeerketManor_ after a quick reboot and every time the network is within range. Have fun streaming your brain waves over WiFi!
+
+**Note:** the OpenBCI WiFi shield cannot be paired with multiple WiFi networks. However, if the WiFi Shield is out of range of the network it is currently paired with, it will reappear as a hotspot again, you'll see the D2 light flash **10 times in 2 seconds**. At this point, if you reconnect to the hotspot and then connect the WiFi Shield to a different WiFi network. The previous network credentials will be overwritten by the new ones.
+
+![Captive touch portal final screen](../assets/images/wifi_captive_touch_final_screen_shot.PNG)
+
+If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [WiFi Shield's web server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/2.0.0)!
+
+### Change Stored Credentials
+
+If your WiFi Shield blinks **4 times within 2 seconds** followed by **2 blinks in 2 seconds** then your WiFi Shield has an IP Address and is on a wireless network! If you want to change the credentials of the WiFi Shield, you must start the WiFi Manager or erase the stored wireless credentials. Using the WiFi Manager allows you to keep the WiFi Shield connected to an OpenBCI Board so the method is worth explaining. Erase the stored wireless credentials with a connected OpenBCI Board may not work because the OpenBCI Board will prevent the WiFi Shield from a required reset.
+
+Use a computer to join the same wireless network as the stored wireless network credentials on the WiFi Shield. Get the IP Address using  from the wireless network it's currently attached to, you can get the IP address of the WiFi shield, and in a web browser visit http://192.168.1.100/wifi to start the WiFi Manager.
+
+Now follow the example above for the WiFi Station Example to join the WiFi Shield's hotspot, use a web browser to go to http://192.168.4.1 and use the WiFi Manager to store the new wireless network credentials to flash memory.
+
+### Erase Stored Credentials
+
+If the shield blinks **four times within two seconds** after power up, the WiFi Shield is searching for a wireless network that matches the wireless credentials stored in flash memory. If you see D2 LED **blink 2 times in 2 seconds**, then the WiFi Shield was **successful** in joining the wireless network matching the stored wireless network credentials in flash memory. If you see the D2 LED **blink 10 times within 2 seconds**, the WiFi Shield abandoned the search for a wireless network matching the wireless network credentials stored in flash memory.
+
+You must erase the stored credentials or else the WiFi Shield will spend 10 seconds searching for the wireless network matching the wireless network credentials stored in flash memory. Note that if you are out of range of the stored wireless network, the WiFi Shield will search for the wireless network, fail to find it after 10 seconds of searching and switch to WiFi Direct mode and visually show that to you by blinking D2 **10 times in 2 seconds**.
+
+There is a multitude of ways to erase stored wireless network configurations:
+
+1. Press "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI. Make sure your WiFi Shield is not connected to an OpenBCI Board, or if Cyton, `EXT PWR` is OFF). [Tutorial link here](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-erase-wifi-credentials).
+2. On macOS/iPhone, go to your WiFi Shields home page in a web browser such as http://OpenBCI-A4AD.local (`OpenBCI-A4AD` is the name of the WiFi Shield) and tap "Click to Erase WiFi Credentials".
+3. On macOS/iOS, in a web browser go to http://OpenBCI-A4AD.local/wifi/delete (`OpenBCI-A4AD` is the name of the WiFi Shield).
+4. In any web browser on any device you can use the IP Address ([OpenBCI GUI tutorial to get IP address](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-get-wifi-shield-ip-mac-address-firmware-version-and-more-get-wifi-shield-ip-address)) of the WiFi Shield and navigate to http://192.168.1.100/wifi/delete where the `192.168.1.100` is substituted for the WiFi Shield's IP Address to trigger the erase.
+* Send an HTTP DELETE request to `192.168.1.100/wifi` where the `192.168.1.100` is the WiFi Shield's IP Address
+
+If you erase the WiFi Shield's stored credentials, the WiFi Shield will immediately startup in WiFi Direct mode and that's indicated with **10 blinks in 2 seconds**.
+
+### WiFi Direct Example
+
+You want to directly connect your computer with the WiFi Shield. Your WiFi Shield is connected to a battery and powered on. If D2 **blinks 10 times in two seconds** the shield is ready to go! If this is not the case, follow the example above to erase the stored wireless network credentials from flash memory.
+
+Connect your computer or phone to the WiFi Shield by joining the hotspot (a.k.a. wireless network, soft access point) broadcasted by the WiFi Shield.
+
+![iPhone Connected to MeerketManor](../assets/images/wifi_join_network_1.PNG)
+
+Click "OpenBCI-A4AD", where your WiFi Shield is some other name such as OpenBCI-E318, in an attempt to connect to the WiFi Shield's hotspot.
+
+![iPhone Connecting to `OpenBCI-A4AD`](../assets/images/wifi_join_network_2.PNG)
+
+Your phone or computer will connect to the WiFi Shield's hotspot.
+
+![iPhone Connected to `OpenBCI-E218`](../assets/images/wifi_joined_network.png)
+
+Launch your web browser and navigate to http://192.168.4.1 to go to your WiFi's home page.
+
+![WiFi Shield home page on iPhone](../assets/images/wifi_home_page.jpeg)
+
+That's it! You're ready to stream high speed data from the WiFi Shield! You may use the OpenBCI GUI or any other interface such as NodeJS, python or many of the other new SDKs! Keep in mind the WiFi Shield's IP Address is set to 192.168.4.1.
+
+If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/2.0.0)!
+
+## WiFi Configuration for Firmware v1.x.x
+
+### Get the WiFi Shield On Your Wireless Network
 
 The WiFi Shield must be on the same wireless network as your computer, smart phone, or whatever other internet connected device you wish to talk to the WiFi Shield with. For example, in order to stream data into the OpenBCI GUI using your WiFi Shield, you must first make sure that your WiFi shield and computer that is running the OpenBCI GUI are on the same WiFi network.
 
@@ -107,11 +249,12 @@ To connect your WiFi shield to your local WiFi network (or any other WiFi networ
 
 **Important Notes Before You Continue:**
 
-* In order to unpair your WiFi Shield with a WiFi network (or update its firmware), it cannot be attached to an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately and disconnected from a board, so that it can effectively power cycle after a network connection or firmware update.
+* If you are able to join the WiFi network but a captive portal does not come up, use a web browser to go to http://192.168.4.1
+* In order to unpair your WiFi Shield with a WiFi network (or update its firmware), it cannot be under control of an OpenBCI Board (Cyton or Ganglion). It needs to be powered separately, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
 * If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
 * It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must first "ERASE CREDENTIALS" of the WiFi Shield from the WIFI SHIELDS configuration inside the OpenBCI GUI
-* The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network if this is an issue. Push The World is planning a WiFi direct connection as another alternative for researchers and those on enterprise networks.
+* The WiFi shield does not work for Enterprise level security. Use your cellphone as a hot spot or set up your own wifi network if this is an issue. Update to firmware v2.0.0 or later to use WiFi Direct as another alternative.
 
 Follow the below example that goes through the steps of connecting the WiFi Shield to a local WiFi networked called _MeerketManor_. **Note:** in your case the network will not be called _MeerketManor_ but will instead be the name of whatever WiFi network you wish to connect your WiFi Shield to and share data across.
 
