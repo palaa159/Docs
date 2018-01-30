@@ -55,7 +55,7 @@ The pass through LED (the right most LED) on the wifi shield will show the solid
 
 Make sure that the external power switch is set to `ON` to send power through to the Cyton board.
 
-![Wifi External Power](../assets/images/wifi_what_you_need.jpg)
+![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
 
 The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 
@@ -85,7 +85,7 @@ In general the steps are:
 
 The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargable batteries to power the Wifi Shield.
 
-To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spunger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
+To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spudger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
 
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)`EXT PWR` is `ON` in top photo, `OFF` in bottom photo.
 
@@ -97,9 +97,9 @@ On some modules, the Ganglion can power the WiFi Shield using only one battery w
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
-## WiFi Configuration for Firmware v2.x.x
+## WiFi Configuration for Firmware 2.0 and later
 
-WiFi Shields got powerful in firmware 2.0.0, we learned lot's and iterated continuously, we love the new features on the WiFi Shield, where we is a world wide community of empowered hackers and researchers alike.
+WiFi Shields got powerful in firmware 2.0.0, we learned a lot and iterated continuously, we love the new features on the WiFi Shield, where we is a world wide community of empowered hackers and researchers alike.
 
 ### WiFi Shield Mode of Operations
 
@@ -237,7 +237,7 @@ That's it! You're ready to stream high speed data from the WiFi Shield! You may 
 
 If you are a developer and want to control the WiFi Shield through HTTP commands checkout the [server specifications](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/2.0.0)!
 
-## WiFi Configuration for Firmware v1.x.x
+## WiFi Configuration for Firmware 1.X.X
 
 ### Get the WiFi Shield On Your Wireless Network
 
