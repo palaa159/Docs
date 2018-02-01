@@ -322,11 +322,9 @@ To use your Mark IV headset, you'll also need two [ear clip electrodes](http://f
 
 #### Cyton Board Setup
 
-Connect an OpenBCI Cyton board to the Mark IV as shown below (with cover removed for clarity).
+Connect an OpenBCI Cyton board to the Mark IV as shown below. Here's a table with the correct electrode, wire color, and Cyton board pin pairings. 
 
-![image](../assets/images/MarkIV/MarkIV_cyton_connects_nocover.JPG)
-
-Here's a table with the correct electrode, wire color, and Cyton board pin pairings:
+By bottom pin, we mean the pin CLOSEST to the OpenBCI board:
 
 | Electrode | Wire Color | Cyton Board Pin |
 |---|---|---|
@@ -338,14 +336,13 @@ Here's a table with the correct electrode, wire color, and Cyton board pin pairi
 | P7 | Orange | Bottom N5P pin |
 | O2 | Brown | Bottom N8P pin |
 | O1 | Red | Bottom N7P pin |
-| Ear Clip | Black | Top SRB pin |
+| Ear Clip | Black | Bottom SRB pin (SRB2) |
 | Ear Clip | Black | Top BIAS pin |
 
 The electrodes (FP2 through O1) can be connected to any N1P, N2P, etc, channel. The ear clips must always be connected to the top SRB pin and the top BIAS pin.
 
-Replace the cover, and your board should look like this:
+Replace the cover.
 
-![image](../assets/images/MarkIV/MarkIV_cyton_connects_cover.JPG)
 
 #### Ganglion Board Setup
 
