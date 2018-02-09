@@ -96,7 +96,7 @@ From the [BCILAB wiki](http://sccn.ucsd.edu/wiki/BCILAB): "BCILAB is a MATLAB to
 BCILAB provides a GUI from which you can control the plugin, but batch scripting can be used for those well-versed in MATLAB programming.
 
 #### Installation
-To install BCILAB, download the [BCILAB-1.1 zip file](ftp://sccn.ucsd.edu/pub/bcilab) and extract it to any directory that is not your EEGLAB folder.
+To install BCILAB, download the [development version of BCILAB](https://github.com/sccn/BCILAB/tree/devel) and extract it to any directory that is not your EEGLAB folder. Note: I found that the non-developer version (found [here](https://sccn.ucsd.edu/wiki/BCILAB#Quick_Start_Guide)) had bugs that were fixed by using the BCILAB-devel version instead.
 
 Open up MATLAB, and set your current MATLAB directory to the unzipped BCILAB file:
 ```
@@ -110,12 +110,11 @@ To start running BCILAB. After some console output, you should see the text "Wel
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/bcilab_menu.png?raw=true" width="80%">
 
-#### Streaming into BCILAB
-**LabStreamingLayer**
+#### Streaming into BCILAB with Lab Streaming Layer (LSL)
 
 See our [Labstreaminglayer Tutorial](http://docs.openbci.com/3rd%20Party%20Software/04-LSL) for instructions on how to start a stream from the OpenBCI headset to your computer. Follow the tutorial on how to start a stream using the OpenBCI Python API.
 
-Once a stream has been started on your computer, open BCILAB within MATLAB (>> cd your/path/to/bcilab; bcilab) and from the menu, select **Online Analysis > Read input from... > Lab streaming layer...**:
+Once a stream has been started on your computer, open BCILAB within MATLAB (>> cd your/path/to/bcilab; bcilab) and from the menu, select **Online Analysis > Read input from... > Lab streaming layer...**
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/Matlab/bcilab_lsl.png?raw=true" width="80%">
 
