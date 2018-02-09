@@ -49,7 +49,7 @@ You're ready to stream data from your board! Return to the OpenViBE Acquisition 
 
 Return to the OpenViBE designer GUI. Click the play button from the top toolbar. A signal display window should pop up, displaying data as it streams from your OpenBCI board.
 
-![image](../assets/images/Third_party_software/OpenViBE_streaming_live.JPG)
+![image](../assets/images/Third_party_software/OpenViBE_signal_live.JPG)
 
 You're now streaming data from your OpenBCI board to OpenViBE! Feel free to explore the other tools OpenViBE has to offer.
 
