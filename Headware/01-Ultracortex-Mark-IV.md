@@ -292,7 +292,7 @@ Peel off the GRAY and PURPLE from the 12" set and the BLUE, GREEN, ORANGE and YE
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Cables.JPG)
 
-Now connect the jumper cables to the electrodes. The map below assigns names to all the electrodes by their location. The table shows which color wire to attach to each electrode. 
+Now connect the jumper cables to the electrodes. The map below assigns names to all the electrodes by their location. To follow along with this tutorial, attach each electrode to the wire color listed in the table below.
 
 ![image](../assets/images/MarkIV/MarkIV_electrode_map.png)
 
@@ -322,26 +322,32 @@ To use your Mark IV headset, you'll also need two [ear clip electrodes](http://f
 
 #### Cyton Board Setup
 
-Connect an OpenBCI Cyton board to the Mark IV as shown below. Here's a table with the correct electrode, wire color, and Cyton board pin pairings. 
+Connect an OpenBCI Cyton board to the Mark IV as shown below:
 
-By bottom pin, we mean the pin CLOSEST to the OpenBCI board:
+![image](../assets/images/MarkIV/cyton_wired_nocover_FIXED.jpg)
+
+Here's a table with the correct electrode, wire color, and Cyton board pin pairings. By bottom pin, we mean the pin CLOSEST to the OpenBCI board:
 
 | Electrode | Wire Color | Cyton Board Pin |
 |---|---|---|
-| FP2 | Grey | Bottom N2P pin |
-| FP1 | Purple | Bottom N1P pin |
-| C4 | Blue | Bottom N4P pin |
-| C3 | Green | Bottom N3P pin |
-| P8 | Yellow | Bottom N6P pin |
-| P7 | Orange | Bottom N5P pin |
-| O2 | Brown | Bottom N8P pin |
-| O1 | Red | Bottom N7P pin |
 | Ear Clip | Black | Bottom SRB pin (SRB2) |
-| Ear Clip | Black | Top BIAS pin |
+| FP1 | Purple | Bottom N1P pin |
+| FP2 | Grey | Bottom N2P pin |
+| C3 | Green | Bottom N3P pin |
+| C4 | Blue | Bottom N4P pin |
+| P7 | Orange | Bottom N5P pin |
+| P8 | Yellow | Bottom N6P pin |
+| O1 | Red | Bottom N7P pin |
+| O2 | Brown | Bottom N8P pin |
+| Ear Clip | Black | Bottom BIAS pin |
 
-The electrodes (FP2 through O1) can be connected to any N1P, N2P, etc, channel. The ear clips must always be connected to the top SRB pin and the top BIAS pin.
+The electrodes (FP1 through O2) can be connected to any N1P, N2P, etc, channel. The ear clips must always be connected to the bottom SRB pin and either of the BIAS pins.
 
-Replace the cover.
+Replace the cover, as shown below:
+
+![image](../assets/images/MarkIV/cyton_wired_cover_FIXED.jpg)
+
+Your Cyton board is ready to use with your Mark IV headset!
 
 
 #### Ganglion Board Setup
@@ -365,9 +371,11 @@ Next, make sure the switches on your Ganglion board are in the bottom configurat
 
 ![Switches DOWN](../assets/images/ganglion_SW_DOWN.png)
 
-Replace the cover, and your board should look like this:
+Replace the cover, like below:
 
 ![image](../assets/images/MarkIV/MarkIV_ganglion_connects_cover.JPG)
+
+Your Ganglion board is now ready to use with your Mark IV headset!
 
 ### Completed 8 Channel Mark IV Setup
 
@@ -408,7 +416,7 @@ Plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE. These two
 
 Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes into the Daisy board pins in the next step.
 
-![image](../assets/images/MarkIV/MarkIV_cyton_daisy.JPG)
+![image](../assets/images/MarkIV/cyton_wired_with_daisy_FIXED.jpg)
 
 Connect each of the new electrodes to corresponding Daisy pins as shown below. You may have to use a different color scheme, depending on what wires you have available. Just make sure to keep track of which electrodes are connected to which Daisy pins.
 
