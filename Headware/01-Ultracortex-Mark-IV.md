@@ -472,7 +472,7 @@ Below is a screenshot of what the GUI looks like when you've got your OpenBCI + 
 
 OpenBCI has a widget for visualizing signal strenth at each electrode. To view it, click on the "FFT Plot" drop-down menu in the top right corner. Select "Head Plot".
 
-![image](../assets/images/MarkIV/head_plot_menu.png)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/MarkIV/head_plot_menu.png?raw=true" width="50%">
 
 You should now see a visual map of signal strength in the top right corner.
 
