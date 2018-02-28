@@ -75,7 +75,10 @@ Developers looking to contribute or write custom firmware can clone the firmware
 
 ### Install ChipKIT Core Firmware
 
-* Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino IDE. The folks at chipKIT have put together instructions on how to [Auto Install via URL from within Arduino](http://chipkit.net/wiki/index.php?title=ChipKIT_core#1.29_Auto_install_via_URL_from_within_Arduino_IDE_.28latest_version_chipKIT-core_v1.3.1.29).
+* Before you can upload code correctly to the PIC32 with Arduino, you need to add the chipKIT-core board files to your Arduino IDE. The folks at chipKIT have put together instructions on how to [Auto Install via URL from within Arduino](http://chipkit.net/wiki/index.php?title=ChipKIT_core#1.29_Auto_install_via_URL_from_within_Arduino_IDE_.28latest_version_chipKIT-core_v1.3.1.29).  
+
+**NOTE** Latest ChipKIT firmware may cause improper flashing of the device firmware. In such a case [No data stream from the board/No device ID and accelerometer ID after soft resetting the board] select the firmware version 1.3.1.
+
 
 ### Select 'OpenBCI 32' as Board
 
