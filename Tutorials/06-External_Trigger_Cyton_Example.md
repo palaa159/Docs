@@ -1,4 +1,4 @@
-#External Trigger on OpenBCI 32bit Board
+#External Trigger on OpenBCI Cyton Board
 Sometimes, when studying EEG or other biopotential signals, you will want to have precise timing between external events or stimulus and the data stream. For example, if you are working with P300 waves it is necessary to know the exact time that the signal was presented to the subject in order to look for the tell-tale brain wave that happens about 300mS after the stimulus.
 
 This tutorial will cover a couple of ways to add an external trigger to the OpenBCI data stream on our 32bit Board. Please read this entire page before jaunting off into hardware hacking.
@@ -7,7 +7,24 @@ This tutorial will cover a couple of ways to add an external trigger to the Open
 
 ##External Triggering The Easy Way (Firmware 3.x.x)
 
-Firmware 3.x.x brings a long requested out-of-the-box ability to read from analog or digital inputs with the default firmware. Allowing you to simply read from the analog input (sending `/2`) or digital input (sending `/3`) with the type of a command. The default board is activated by default, but can always be achieved again by sending a `/0`.
+### Using the OpenBCI GUI
+
+Follow the official [OpenBCI GUI guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-installing-the-openbci-gui-as-a-standalone-application) to download version 3.2.0 or later [from our website](http://openbci.com/index.php/downloads).
+
+Be sure that your Cyton firmware is later than [v3.1.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) by following the [**tutorial here**](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial)! May all your troubles disappear!
+
+Launch the OpenBCI GUI for your operating system following the tutorial for the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci_gui) (remember to [run your OpenBCIHub application](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci_gui-running-on-windows) first windows users!).
+
+Once the GUI has launched, follow the guide to [connect to your Cyton from the OpenBCI GUI](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-iv-connect-to-your-cyton-board-from-the-gui).
+
+Once you have connected, you may selected the "Digital Read" for one of your widgets. Then select start digital read mode button in the top left of the newly populated widget. This will activate and send the proper commands to your cyton. Note that the accelerometer will no long be turned on because the trigger data is now sent instead.
+
+You can verify the digital read widget is working by pressing the "PROG" button which is hooked up to the D17 pin.
+
+### Programmatically Setting Board Mode
+Firmware 3.x.x brings a long requested out-of-the-box ability to read from analog or digital inputs with the default firmware. Allowing you to simply read from the analog input (sending `/2`) or digital input (sending `/3`) with the type of two ascii commands. The default board is activated by default, and can always be achieved again by sending a `/0`.
+
+Learn more about board modes in the [Cyton SDK](http://docs.openbci.com/OpenBCI%20Software/04-OpenBCI_Cyton_SDK#openbci-cyton-sdk-firmware-v300-new-commands-board-mode).
 
 ##External Triggering The Easy Way (Firmware 2.x.x)
 
