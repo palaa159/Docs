@@ -138,8 +138,8 @@ On failure:
 
 * If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
  	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
-	* 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
-	* Too many characters or some other issue, `Failure: Err: too many chars$$$`
+  * 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
+  * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
 
 **EXAMPLE**
@@ -184,8 +184,8 @@ On failure:
 
 * If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
  	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
-	* 5th character is not the upper case 'X', `Failure: 5th char not Z$$$` (**example** user sends x1020000V)
-	* Too many characters or some other issue, `Failure: Err: too many chars$$$`
+  * 5th character is not the upper case 'X', `Failure: 5th char not Z$$$` (**example** user sends x1020000V)
+  * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
 
 ###SD card Commands  
