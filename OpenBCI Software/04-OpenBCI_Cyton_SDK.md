@@ -137,7 +137,7 @@ On success:
 On failure:
 
 * If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
- 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
+  * Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
   * 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
   * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
@@ -183,7 +183,7 @@ On success:
 On failure:
 
 * If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
- 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
+  * Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
   * 5th character is not the upper case 'X', `Failure: 5th char not Z$$$` (**example** user sends x1020000V)
   * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
@@ -228,7 +228,7 @@ Soft reset for the Board peripherals
 The 8bit board gets a reset signal from the Dongle any time an application opens the serial port, just like a arduino. The Cyton board doesn't have this feature. So, if you want to soft-reset the Cyton board (`v1` or `v2.0.0`), send it a **v**.
 
 **returns**
-  OpenBCI V3 8-16 channel
+  	OpenBCI V3 8-16 channel
 	ADS1299 Device ID: 0x3E
 	LIS3DH Device ID: 0x33
 	Firmware: v3.1.1
