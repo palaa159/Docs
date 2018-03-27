@@ -1,4 +1,4 @@
-#Harware & Software
+#Hardware & Software
 
 ##What do I need to get started?
 
