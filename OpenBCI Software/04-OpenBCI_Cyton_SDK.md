@@ -131,16 +131,16 @@ For firmware `v0` and `v1` it is required that you allow a time delay (>10mS) wh
 
 On success:
 
-	* If streaming, no confirmation of success. Note: WiFi Shields will always get a response, even if streaming.
-  * If not streaming, returns `Success: Channel set for 3$$$`, where 3 is the channel that was requested to be set.
+* If streaming, no confirmation of success. Note: WiFi Shields will always get a response, even if streaming.
+* If not streaming, returns `Success: Channel set for 3$$$`, where 3 is the channel that was requested to be set.
 
 On failure:
 
-	* If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
-	 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
-		* 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
-		* Too many characters or some other issue, `Failure: Err: too many chars$$$`
-	* If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
+* If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
+ 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
+	* 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
+	* Too many characters or some other issue, `Failure: Err: too many chars$$$`
+* If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
 
 **EXAMPLE**
 
@@ -177,16 +177,16 @@ User sends **z  4  1  0  Z**
 
 On success:
 
-	* If streaming, no confirmation of success. Note: WiFi Shields will always get a response, even if streaming.
-  * If not streaming, returns `Success: Lead off set for 4$$$`, where 4 is the channel that was requested to be set.
+* If streaming, no confirmation of success. Note: WiFi Shields will always get a response, even if streaming.
+* If not streaming, returns `Success: Lead off set for 4$$$`, where 4 is the channel that was requested to be set.
 
 On failure:
 
-	* If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
-	 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
-		* 5th character is not the upper case 'X', `Failure: 5th char not Z$$$` (**example** user sends x1020000V)
-		* Too many characters or some other issue, `Failure: Err: too many chars$$$`
-	* If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
+* If not streaming, NOTE: WiFi shield always sends the following responses without `$$$`
+ 	* Not enough characters received, `Failure: too few chars$$$` (**example** user sends x102000X)
+	* 5th character is not the upper case 'X', `Failure: 5th char not Z$$$` (**example** user sends x1020000V)
+	* Too many characters or some other issue, `Failure: Err: too many chars$$$`
+* If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
 
 ###SD card Commands  
 **A S F G H J K L**  
