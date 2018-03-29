@@ -416,7 +416,7 @@ Plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE. These two
 
 Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes into the Daisy board pins in the next step.
 
-![image](../assets/images/MarkIV/Cyton Daisy unconnected.jpg)
+![image](../assets/images/MarkIV/Cyton_Daisy_unconnected.JPG)
 
 Connect each of the new electrodes to corresponding Daisy pins as shown below. You may have to use a different color scheme, depending on what wires you have available. Just make sure to keep track of which electrodes are connected to which Daisy pins.
 
