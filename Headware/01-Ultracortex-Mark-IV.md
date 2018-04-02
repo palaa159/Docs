@@ -437,7 +437,7 @@ The electrode and Daisy pin pairings are below:
 
 The pins connected to the Daisy board should look like this:
 
-![image](../assets/images/MarkIV/MarkIV_cyton_daisy_connects.JPG)
+![image](../assets/images/MarkIV/Cyton_Daisy_Setup.JPG)
 
 Like for the first 8 electrodes, use the plastic clips to secure wires in place:
 
