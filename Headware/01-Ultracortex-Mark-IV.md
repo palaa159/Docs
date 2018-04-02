@@ -430,12 +430,12 @@ The electrode and Daisy pin pairings are below:
 | F8 | Grey | Bottom N2P pin |
 | F3 | White | Bottom N3P pin |
 | F4 | Green | Bottom N4P pin |
-| T7 | Red | Bottom N5P pin |
-| T8 | Brown | Bottom N6P pin |
+| T7 | Brown | Bottom N5P pin |
+| T8 | Red | Bottom N6P pin |
 | P3 | Yellow | Bottom N7P pin |
 | P4 | Orange | Bottom N8P pin |
 
-The pins connected to the Daisy board should look like this:
+The other female end of the white Y-Splitter Cable should be connected to the bottom SRB pin of the Daisy. The pins connected to the Daisy board should look like this:
 
 ![image](../assets/images/MarkIV/Cyton_Daisy_Setup.JPG)
 
