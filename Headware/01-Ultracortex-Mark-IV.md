@@ -414,7 +414,7 @@ Plug the male end of the 8" GRAY and PURPLE to the 4" GRAY and PURPLE. These two
 
 ![image](../assets//MarkIV/Photos/Assembly_16Chan_Cables2.JPG)
 
-Attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes into the Daisy board pins in the next step.
+As shown below, connect one female end of the white Y-Splitter Cable to the bottom SRB pin of the Cyton. Connect the male end of the white Y-Splitter Cable to the female end of one black ear clip electrode. The other black ear clip electrode should be connected to the bottom BIAS pin of the Cyton. Bottom pins N1P through N8P of the Cyton should be connected to colored wires in the order shown below. Then, attach the Daisy extension to the outside of the Cyton board as shown below. You will plug all of the new electrodes into the Daisy board pins in the next step.
 
 ![image](../assets/images/MarkIV/Cyton_Daisy_unconnected.JPG)
 
