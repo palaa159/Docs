@@ -26,6 +26,8 @@ Region/State/Province:
 
 Postal/zip code*:
 
+Tax ID (if purchasing on behalf of a tax-exempt institution):
+
 ##When will my credit card be charged?
 
 Our store system will authorize your card the moment you place your order and a settlement (debit) will likely occur within 48 hours.
