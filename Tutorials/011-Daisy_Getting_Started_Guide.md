@@ -54,5 +54,10 @@ Refer to the Ultracortex Mark IV [tutorial](http://docs.openbci.com/Headware/01-
 
 If you did not purchase a headset, you can use 16 of our [Gold Cup Electrodes](https://shop.openbci.com/collections/frontpage/products/openbci-gold-cup-electrodes?variant=9056028163), [Snap Electrode Cables](https://shop.openbci.com/collections/frontpage/products/emg-ecg-snap-electrode-cables?variant=32372786958), or [Header Pin to Touch Proof Electrode Adapter](https://shop.openbci.com/collections/frontpage/products/touch-proof-electrode-cable-adapter?variant=31007211715).
 
+If you purchased a Wifi Shield, attach it to the Cyton board, then attach the Daisy module on top of the Wifi Shield, shown below.
 
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton_Daisy_Wifi.jpg?raw=true" width="60%">
+The leads are connected to the pins in the same way as if you did not have the Wifi Shield. 
+
+See the Wifi Shield [tutorial.](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide)
 
