@@ -57,7 +57,6 @@ If you did not purchase a headset, you can use 16 of our [Gold Cup Electrodes](h
 If you purchased a Wifi Shield, attach it to the Cyton board, then attach the Daisy module on top of the Wifi Shield, shown below.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton_Daisy_Wifi.JPG?raw=true" width="60%">
-The leads are connected to the pins in the same way as if you did not have the Wifi Shield. 
+The leads are connected to the pins in the same way as if you did not have the Wifi Shield. See Section III. Assembly above.
 
-See the Wifi Shield [tutorial.](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide)
 
