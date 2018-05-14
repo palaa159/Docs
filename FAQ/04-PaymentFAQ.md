@@ -26,7 +26,7 @@ Region/State/Province:
 
 Postal/zip code*:
 
-Tax ID (if purchasing on behalf of a tax-exempt institution):
+Tax ID or VAT (if purchasing on behalf of a tax-exempt institution):
 
 ##When will my credit card be charged?
 
