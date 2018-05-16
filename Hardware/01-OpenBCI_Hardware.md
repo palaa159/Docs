@@ -14,4 +14,5 @@ The [Wifi Shield Page](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tuto
 
 Enjoy!
 
-<img src="https://github.com/OpenBCI/Docs/master/assets/images/Cyton_Daisy_Wifi.JPG?raw=true" width="60%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton%2BDaisy%20Front%20Image.JPG?raw=true" width="60%">
+### Cyton and Daisy 16-channel 
