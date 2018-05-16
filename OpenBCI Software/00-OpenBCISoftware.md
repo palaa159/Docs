@@ -5,4 +5,4 @@ Welcome to the **OpenBCI Software** section! Here you will find guides to help y
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI-V2-SCREENSHOT.JPG?raw=true" width="80%">
 
-**GUI running with 8-channel Cyton and 8-channel Ultracortex Mark IV Headset**
+**OpenBCI GUI running with 8-channel Cyton and 8-channel Ultracortex Mark IV Headset**
