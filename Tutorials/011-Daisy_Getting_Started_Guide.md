@@ -41,8 +41,9 @@ The Y-Splitter connects the bottom SRB pin of the Daisy Board to the bottom SRB 
 ### 3) Connect the bottom BIAS pin of the Cyton to your reference point
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton_Daisy_BIAS.jpg?raw=true" width="60%">
+Usually the earlobe is used as the reference point, because it has no muscle or neurons and therefore very low electrical signals.
 
-### 4) Connect Cyton and Daisy bottom pins N1P through N8P to leads
+### 4) Connect Cyton bottom pins N1P-N8P and Daisy bottom pins N1P-N8P to leads
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/MarkIV/Cyton_Daisy_Setup.JPG?raw=true" width="80%">
 
