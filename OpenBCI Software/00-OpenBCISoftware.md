@@ -5,4 +5,4 @@ Welcome to the **OpenBCI Software** section! Here you will find guides to help y
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_v3.3.1.png?raw=true" width="90%">
 
-**OpenBCI GUI newest release v3.3.1  running with 8-channel Cyton and 8-channel Ultracortex Mark IV Headset**
+**OpenBCI GUI newest release v3.3.1 running with 8-channel [Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) and 8-channel Ultracortex Mark IV [Headset](https://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv)**
