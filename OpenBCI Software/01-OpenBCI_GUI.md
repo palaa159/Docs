@@ -296,3 +296,9 @@ If you are encountering issues launching the GUI at this point, please head to t
 ![use gui](../assets/images/USE-GUI.JPG)
 
 Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
+
+## Cool GUI Features 
+
+The OpenBCI GUI has three customizable windows. You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="90%">
