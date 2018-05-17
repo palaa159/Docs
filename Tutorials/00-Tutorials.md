@@ -7,4 +7,6 @@ If you have an idea for a great OpenBCI tutorial, we'd love to hear it! Please [
 You can also, just go ahead and create one without reaching out to us first. Head over to the ["Docs" repo](https://github.com/openbci/docs) of our github account, fork it, add your own XYZ.md file in the "Tutorials" direcory, create your doc, and submit a pull request! It's as easy as that.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/CYTONDAISYWIFI.JPG?raw=true" width="60%">
-[Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) Board plus [Wifi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) plus [Daisy](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526) Extension
+
+[Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) Board plus [Wifi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) 
+plus [Daisy](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526) Extension
