@@ -20,7 +20,7 @@ This guide will walk you through setting up your Ganglion, connecting it to your
 
 ![OpenBCI 8-bit Top](../assets/images/ganglion_head_shot.jpg)
 
-The battery connector on the back can accept 3V to 12V DC power input. The pushbutton is a reset button. For more information on the Ganglion Hardware, visit the [OpenBCI Ganglion](http://docs.openbci.com/Hardware/07-Ganglion) page in the Hardware section.
+The battery connector on the back can accept 3V to 12V DC power input. The pushbutton is a reset button. Note the removable orange stickers on the four switches (SW1, SW2, SW3, SW4). For more information on the Ganglion Hardware, visit the [OpenBCI Ganglion](http://docs.openbci.com/Hardware/07-Ganglion) page in the Hardware section.
 
 
 ### 2. Gold Cup Electrodes and Paste
