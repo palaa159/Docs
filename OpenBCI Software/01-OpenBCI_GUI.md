@@ -311,9 +311,9 @@ After starting the system, simply arrange the GUI to how you like it and __press
 Afterwards, or the next time you open the GUI, just __press Shift + 'L' to Load__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!"
 
 ## Other Keyboard Shortcuts
-*_Use the spacebar to start or stop a stream!_* You can use lowercase 'b' to set "Bias Don't Include" on all channels, or uppercase 'B' to set "Bias Include" on all channels. 
+**__Use the spacebar to start or stop a stream!__** You can use _lowercase 'b' to set "Bias Don't Include"_ on all channels, or _uppercase 'B' to set "Bias Include"_ on all channels. 
 
-Using an English keyboard, you can deactivate channels 1-16 using: 
+Using an __English keyboard__, you can deactivate channels 1-16 using: 
 1,2,3,4,5,6,7,8
 q,w,e,r,t,y,u,i
 
