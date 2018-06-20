@@ -291,7 +291,7 @@ Press the `play` button on the upper left of the IDE, and the sketch will try to
 
 If you are encountering issues launching the GUI at this point, please head to the [OpenBCI_GUI section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum and look for help or post a question.
 
-### Using the OpenCBI GUI
+### Using the OpenBCI GUI
 
 ![use gui](../assets/images/USE-GUI.JPG)
 
