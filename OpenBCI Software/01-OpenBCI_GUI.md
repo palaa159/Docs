@@ -308,7 +308,7 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 Start the system first. Then, arrange the GUI to how you like it and __press Shift + 'S' to Save__. You will see a message saying "Settings Saved!" 
 
-Afterwards, or the next time you open the GUI, just __press Shift + 'L' to Load__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!"
+Afterwards, or the next time you open the GUI, just __press Shift + 'L' to Load__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ You can use _lowercase 'b' to set "Bias Don't Include"_ on all channels, or _uppercase 'B' to set "Bias Include"_ on all channels. 
