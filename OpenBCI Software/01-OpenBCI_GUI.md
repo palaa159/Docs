@@ -308,9 +308,11 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 ## Other Keyboard Shortcuts
 Use the spacebar to start or stop a stream! You can use lowercase 'b' to set "Bias Don't Include" on all channels, or uppercase 'B' to set "Bias Include" on all channels. 
+
 Using an English keyboard, you can deactivate channels 1-16 using: 
 1,2,3,4,5,6,7,8
 q,w,e,r,t,y,u,i
+
 Similarly, activate channels 1-16 using:
 !, @, #, $, %, ^, &, *
 Q,W,E,R,T,Y,U,I
