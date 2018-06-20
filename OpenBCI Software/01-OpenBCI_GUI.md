@@ -304,10 +304,14 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Decrease Setup Time by Saving/Loading Settings
-Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) with capital 'S' and capital 'L' on your keyboard! After starting the system, Simply arrange the GUI to how you like it and press Shift + 'S' to Save. You will see a message saying "Settings Saved!" Its just as easy to load these settings: just press Shift + 'L'. The GUI will show an error at the bottom if the settings are incompatible (ex. loading 16 channels while using 8). If all is well, the GUI will display "Settings Loaded!"
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) with capital 'S' and capital 'L' on your keyboard! 
+
+After starting the system, simply arrange the GUI to how you like it and __press Shift + 'S' to Save__. You will see a message saying "Settings Saved!" 
+
+Afterwards, or the next time you open the GUI, just __press Shift + 'L' to Load__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!"
 
 ## Other Keyboard Shortcuts
-Use the spacebar to start or stop a stream! You can use lowercase 'b' to set "Bias Don't Include" on all channels, or uppercase 'B' to set "Bias Include" on all channels. 
+*_Use the spacebar to start or stop a stream!_* You can use lowercase 'b' to set "Bias Don't Include" on all channels, or uppercase 'B' to set "Bias Include" on all channels. 
 
 Using an English keyboard, you can deactivate channels 1-16 using: 
 1,2,3,4,5,6,7,8
