@@ -295,10 +295,13 @@ If you are encountering issues launching the GUI at this point, please head to t
 
 ![use gui](../assets/images/USE-GUI.JPG)
 
-Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
+Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V3! Coming Soon.
 
-## Cool GUI Features 
+## Customize Your Layout
 
-The OpenBCI GUI has three customizable windows. You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
+The OpenBCI GUI displays up to six customizable windows in twelve layouts! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
+
+## Decrease Setup Time by Saving/Loading Settings
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) with capital S and capital L on your keyboard. Simply arrange the GUI to how you like it and press Shift + 's' to Save. Its just as easy to load these settings: just press Shift + 'l'. The GUI will show an error at the bottom if the settings are incompatible (ex. loading 16 channels while using 8).
