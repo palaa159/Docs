@@ -1,7 +1,7 @@
 # Ganglion Getting Started Guide
 ### Overview
 
-This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirety before starting. Have fun!
+This guide will walk you through setting up your Ganglion, connecting it to your computer, and then connecting it to yourself. The first tutorial is for Mac users, the second is for Windows users. Please review this guide in its entirety before starting, and consult the [Ganglion Biosensing Tutorial](https://youtu.be/l13R_99h0qQ). Have fun!
 
 **Note that the Ganglion is not set to be discoverable out of the box, you need the GUI or another app.**
 
