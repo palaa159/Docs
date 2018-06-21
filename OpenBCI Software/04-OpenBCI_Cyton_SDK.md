@@ -442,7 +442,7 @@ First, user sends **//**
 
 **returns** `Board mode is default$$$`
 
-Then, user sends **~2**
+Then, user sends **/2**
 
 **returns** `Board mode set to analog$$$`
 
