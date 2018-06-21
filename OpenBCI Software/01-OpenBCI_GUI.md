@@ -304,11 +304,15 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Decrease Setup Time by Saving/Loading Settings
-Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) with capital 'S' and capital 'L' on your keyboard! 
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) by using a dropdown menu or keyboard shortcuts.
 
-Start the system first. Then, arrange the GUI to how you like it and __press Shift + 'S' to Save__. You will see a message saying "Settings Saved!" 
+![Config Button] (../assets/images/GUI_Config_Button_Screenshot.png)
 
-Afterwards, or the next time you open the GUI, just __press Shift + 'L' to Load__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! Please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
+Start the system first. Then, arrange the GUI to suit your needs and __click "Config"-->"Save Settings"__. You will see a message saying "Settings Saved!" 
+
+Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Settings"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! Please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
+
+Alternatively, you can Save and Load with capital 'S' and capital 'L' on your keyboard! 
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ You can use _lowercase 'b' to set "Bias Don't Include"_ on all channels, or _uppercase 'B' to set "Bias Include"_ on all channels. 
