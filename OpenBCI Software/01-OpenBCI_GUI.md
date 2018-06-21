@@ -304,13 +304,13 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Decrease Setup Time by Saving/Loading Settings
-Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (shown below) or keyboard shortcuts!
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu or keyboard shortcuts!
 
 ![Config Button](../assets/images/GUI_Config_Button_Screenshot.png)
 
 Start the system first. Then, arrange the GUI to suit your needs and __click "Config"-->"Save Settings"__. You will see a message saying "Settings Saved!" 
 
-Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Settings"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! Please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
+Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Settings"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
 
 Alternatively, you can Save and Load with capital 'S' and capital 'L' on your keyboard! 
 
