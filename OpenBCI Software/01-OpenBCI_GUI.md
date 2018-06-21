@@ -304,7 +304,7 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Decrease Setup Time by Saving/Loading Settings
-Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts!
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts!
 
 ![Config Button](../assets/images/GUI_Config_Button_Screenshot.png)
 
