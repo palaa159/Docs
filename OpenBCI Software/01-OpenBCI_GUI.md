@@ -306,7 +306,7 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 ## Decrease Setup Time by Saving/Loading Settings
 Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Time Series Channel Settings) by using a dropdown menu or keyboard shortcuts.
 
-![Config Button] (../assets/images/GUI_Config_Button_Screenshot.png)
+![Config Button](../assets/images/GUI_Config_Button_Screenshot.png)
 
 Start the system first. Then, arrange the GUI to suit your needs and __click "Config"-->"Save Settings"__. You will see a message saying "Settings Saved!" 
 
