@@ -4,7 +4,9 @@
 
 ## What products should I get?
 
-If you are new to OpenBCI or you are just curious about our products don’t fret! Here is a detailed explanation of what you need to get started:
+If you are new to OpenBCI or you are just curious about our products don’t fret! Watch our tutorial of [How OpenBCI Products Go Together](https://youtu.be/QIWswAOFp8w) to get a crash course on your first set-up!
+
+Here is a detailed explanation of what you need to get started:
 
 The first component you would need is one of our 3 Biosensing Boards. You will select a board depending on how many electrodes you want to analyze data from. In general, with additional channels, you have additional spatial resolution that enables more diverse types of research. We offer three different boards, the [Ganglion Board](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board) (4 channels at a sample rate of 200Hz), the [Cyton Board](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) (8 channels at a sample rate of 250Hz), and the [Cyton + Daisy Boards](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526) (16 channels at a sample rate of 125Hz). Each channel lets you plug one electrode into them, so the more channels you have the more electrodes you can play with. If you are purchasing the Ganglion board and you are working primarily on Windows or Linux computers you will need to get our [Bluetooth Dongle](https://shop.openbci.com/collections/frontpage/products/csr-4-0-bluetooth-dongle?variant=34793373070). Note that if you are using a Mac or you are using the Cyton board, you don't need this dongle.
 
@@ -41,3 +43,4 @@ The Ganglion board is currently compatible with:
 Currently new drivers are being developed to add OpenBCI compatibility to Bioexplorer (tbd), BCI2000 (tbd), etc.
 
 In addition, if you are really comfortable with programming you can use [MatLab](http://docs.openbci.com/3rd%20Party%20Software/01-Matlab) or [Python](http://docs.openbci.com/3rd%20Party%20Software/04-LSL) tools to analyze the raw data of your OpenBCI boards.
+
