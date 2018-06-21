@@ -1,6 +1,6 @@
 # Cyton Getting Started Guide
 
-This guide will walk you through setting up your computer to use the Cyton and USB Dongle, using the OpenBCI_GUI Application, and how to get EEG/EMG/EKG from your own body!
+This guide will walk you through setting up your computer to use the Cyton and USB Dongle, using the OpenBCI_GUI Application, and how to get EEG/EMG/EKG from your own body! Please review this guide in its entirety before starting and consult the [Cyton Biosensing Tutorial](https://youtu.be/D5RCu41msT4) for extra guidance. Have fun!
 
 ## I. What You Need
 
