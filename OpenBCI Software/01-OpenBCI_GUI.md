@@ -328,4 +328,4 @@ Time Series Shortcuts:
   - !, @, #, $, %, ^, &, *
   - Q,W,E,R,T,Y,U,I
 
-Take a screenshot of the GUI using lowercase 'm'. It will be saved to /SavedData/. To change to the alternate color scheme, use '{' (or Shift + '[').
+__Take a screenshot of the GUI using lowercase 'm'!__ It will be saved to /SavedData/. To change to the alternate color scheme, use '{' (or Shift + '[').
