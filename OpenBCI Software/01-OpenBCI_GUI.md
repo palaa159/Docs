@@ -321,11 +321,11 @@ Time Series Shortcuts:
 - You can _use uppercase 'B' to set "Bias Don't Include"_ on all channels, or _uppercase 'N' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
 
 - Using an _English keyboard_, you can deactivate channels 1-16 using: 
-⋅⋅- 1,2,3,4,5,6,7,8
-⋅⋅- q,w,e,r,t,y,u,i
+  - 1,2,3,4,5,6,7,8
+  - q,w,e,r,t,y,u,i
 
 - Similarly, activate channels 1-16 using:
-⋅⋅- !, @, #, $, %, ^, &, *
-⋅⋅- Q,W,E,R,T,Y,U,I
+  - !, @, #, $, %, ^, &, *
+  - Q,W,E,R,T,Y,U,I
 
-- Take a screenshot of the GUI using lowercase 'm'. It will be saved to /SavedData/. To change to the alternate color scheme, use '{' (or Shift + '[').
+Take a screenshot of the GUI using lowercase 'm'. It will be saved to /SavedData/. To change to the alternate color scheme, use '{' (or Shift + '[').
