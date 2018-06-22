@@ -26,19 +26,19 @@ On startup, the OpenBCI Ganglion board sends the following text over the radio:
 **1 2 3 4**  
 These ASCII characters turn the respective channels [1-4] off. The channel will read 0.00 when off during streamData mode. These commands work in and out of streamData mode.
 
-###Turn Channels ON  
+### Turn Channels ON  
 **! @ # $**  
 These ASCII characters turn the respective channels [1-4] on. The channel will read ADC output values during streamData mode. These commands work in and out of streamData mode.
 
-###Synthetic Square Wave ON  
+### Synthetic Square Wave ON  
 **[**  
 Turn on and generate a fake square wave signal.
 
-###Synthetic Square Wave OFF  
+### Synthetic Square Wave OFF  
 **]**  
 Turn off and generate a fake square wave signal.
 
-###LeadOff Impedance  
+### LeadOff Impedance  
 
 **z**  
 Start an impedance test, will send back impedance packets!
@@ -46,7 +46,7 @@ Start an impedance test, will send back impedance packets!
 **Z**  
 Stop an impedance test.
 
-###Accelerometer
+### Accelerometer
 
 **n**  
 Start accelerometer which results in 18-bit delta compression of channel data.
@@ -54,7 +54,7 @@ Start accelerometer which results in 18-bit delta compression of channel data.
 **N**  
 Stop accelerometer which results in 19-bit delta compression of channel data.
 
-###SD card Commands  
+### SD card Commands  
 **A S F G H J K L**  
 Send to initiate SD card data logging for specified time  
 
@@ -71,7 +71,7 @@ Send to initiate SD card data logging for specified time
 **j**  
 Stop logging data and close SD file  
 
-###Stream Data Commands  
+### Stream Data Commands  
 **b**  
 Start streaming data
 
@@ -79,7 +79,7 @@ Start streaming data
 Stop Streaming data  
 
 
-###Miscellaneous
+### Miscellaneous
 
 **?**  
 Query register settings  
@@ -88,7 +88,7 @@ Read and report all register settings for the MCP and the LIS3DH. Expect to get 
 **v**
 Soft reset for the Board peripherals.
 
-##Firmware v2.x.x New Commands
+## Firmware v2.x.x New Commands
 
 Supporting all v1.0.0, the v2.0.0 firmware extends the OpenBCI Ganglion system to allow for a variable sample rate.
 
@@ -144,7 +144,7 @@ Get the status of the wifi shield, will either be connected or not connected.
 
 Perform a soft reset of the Wifi shield. Will do a power on reset of just the wifi shield.
 
-##Unused ASCII Characters
+## Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Ganglion platform:
 
 **a A B c C d D e E f F g G h H i I j J k K l L m M o O p P q Q r R S t T u U V w W x X y Y ` 5 6 7 8 9 0 % ^ & * ( ) - _ { } [ ] ; : ' " , . / \ | (space)**
