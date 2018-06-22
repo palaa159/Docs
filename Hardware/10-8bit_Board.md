@@ -1,6 +1,6 @@
 # OpenBCI 8bit Board (no longer in production)
 
-###8bit Board Specs:
+### 8bit Board Specs:
 
  * Power with 6-12V DC Battery ONLY
  * ATmega328P Micrcontroller with Arduino UNO bootloader
@@ -14,7 +14,7 @@
  * Mount holes are 1/16" ID, 0.8" x 2.166" on center
  
 
-###Breakout pins:
+### Breakout pins:
  
  * ICSP pins on 5V side for bootloading ATmega 
  	* MISO, MOSI, SCLK, 5V, MCLR, GND
@@ -27,10 +27,10 @@
  	
 The SPI bus pins on 3V side include CLK, which is tied to the ADS1299 CLK pin for timing the Daisy Module, and a RST pin which is tied to the ADS1299 MCLR pin for hardware reset of the ADS. The A0 to A5 pins can be used as Analog inputs or Digital Input|Output just like on Arduino UNO. A6 and A7 are Analog input only.
 
-###Push Button
+### Push Button
 Pushbutton switch is RESET for ATmega. 
 
-###Slide Switch
+### Slide Switch
 Slide switch is power for the board. The slide switch has three positions:
 
 * BLE activates a pull-up on RFduino pin 4
