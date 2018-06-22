@@ -34,8 +34,8 @@ These ASCII characters turn the respective channels [1-4] on. The channel will r
 **[**  
 Turn on and generate a fake square wave signal.
 
-###Synthetic Square Wave OFF
-**}**  
+###Synthetic Square Wave OFF  
+**]**  
 Turn off and generate a fake square wave signal.
 
 ###LeadOff Impedance  
@@ -94,9 +94,9 @@ Supporting all v1.0.0, the v2.0.0 firmware extends the OpenBCI Ganglion system t
 
 ### Sample Rate
 **~(COMMAND)**  
-This works similar to the Channel Settings commands, however, there is no latching character. Power cycling the OpenBCI Ganglion board will cause the sample rate to reset back to default of 250Hz.
+This works similar to the Channel Settings commands, however, there is no latching character. Power cycling the OpenBCI Ganglion board will cause the sample rate to reset back to default of 200Hz.
 
-**IMPORTANT!** The Ganlion cannot and will not stream data over 200SPS. Plug in the wifi shield to get speeds over 200SPS streaming.
+**IMPORTANT!** The Ganglion cannot and will not stream data over 200SPS. Plug in the wifi shield to get speeds over 200SPS streaming.
 
 **COMMAND**
 
