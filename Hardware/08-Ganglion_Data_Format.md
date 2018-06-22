@@ -16,7 +16,7 @@ Service | Value
 **Disconnect** | `2d30c084f39f4ce6923f3484ea480596`
 
 ## Startup
-###**Ganglion Board**
+### **Ganglion Board**
 
 The Ganglion does go through a reset cycle when its BLE connection is opened. Because of this, it's *NOT* possible to connect/disconnect from the Ganglion mid stream.
 
