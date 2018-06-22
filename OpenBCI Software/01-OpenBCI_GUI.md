@@ -315,7 +315,10 @@ Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Set
 Alternatively, you can Save and Load with capital 'S' and capital 'L' on your keyboard! 
 
 ## Other Keyboard Shortcuts
-__Use the spacebar to start or stop the data stream!__ You can use _lowercase 'b' to set "Bias Don't Include"_ on all channels, or _uppercase 'B' to set "Bias Include"_ on all channels. 
+__Use the spacebar to start or stop the data stream! Other than spacebar, you can press 's' to stop data stream, and 'b' the begin, or start, the data stream.
+
+Time Series Shortcuts:
+__ You can use _lowercase 'B' to set "Bias Don't Include"_ on all channels, or _uppercase 'N' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
 
 Using an _English keyboard_, you can deactivate channels 1-16 using: 
 1,2,3,4,5,6,7,8
@@ -324,3 +327,5 @@ q,w,e,r,t,y,u,i
 Similarly, activate channels 1-16 using:
 !, @, #, $, %, ^, &, *
 Q,W,E,R,T,Y,U,I
+
+Take a screenshot of the GUI using lowercase 'm'. It will be saved to /SavedData/. To change to the alternate color scheme, use '{' (or Shift + '[').
