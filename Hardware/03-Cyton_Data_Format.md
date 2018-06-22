@@ -13,11 +13,11 @@ If you prefer to use a standard bluetooth connection (to a mobile phone, for ins
 The RFDuino USB dongle (the RFDuino "Host") is connected to an FTDI USB<>Serial converter configured to appear to the computer as if it is a standard serial port running at a rate of 115200 baud using the typical 8-N-1. It is possible to run at faster baud (FT231XQ-R on dongle tested up to 1Mbaud), but 115200 is required if you want to upload code to the target uC.
 
 ## Startup
-###**Cyton Board**
+### **Cyton Board**
 
 The chipKIT on our 32bit Board does not go through a reset cycle when its serial port is opened. Because of this, it's possible to connect to the 32bit board and not know it's state. In this case, the terminal or application should write a **v** to the serial port, which causes the system to reset its state to default values.
 
-###**8bit Board (deprecated)**
+### **8bit Board (deprecated)**
 
 When the serial port for the dongle is opened by your PC, it will reset an 8bit Board. That's because the DTR signal from FTDI is getting sent over air, and the ATmega is configured as an Arduino UNO. You will see the familiar blink of the pin 13 LED. After a second or so, you will see the OpenBCI board generate a few lines of ASCII text displaying the device IDs of the ADS1299 and Accelerometer ending in $$$. If you are writing client software for the PC, your software must expect an ASCII string on startup, and look for the $$$ to know it is ready to receive commands.
 
@@ -206,7 +206,7 @@ The received averages might be upsampled to 250SPS in the following simple manne
 The times of the upsampled values are delayed by 1 sample compared to the received values.
 
 
-###Room For Improvement
+### Room For Improvement
 
 **Change protocol to meet other standards.** The over-air data is sent in packets (or frames, depending upon your preferred word). The maximum bytes allowed per packet is 32. We are reserving the first byte to use as a packet check-sum in our protocol. So the available bytes-per-packet, as far as the uC is concerned, is 31. The over-air protocol that the Dongle/RFduino Host gets is:
 
