@@ -63,7 +63,7 @@ Turn **all** available channels on, and connect them to internal test signal. Th
 
 **returns** If not streaming, returns `Success: Configured internal test signal.$$$`, if streaming, there is no confirmation.
 
-###Channel Setting Commands   
+### Channel Setting Commands   
 ** x (CHANNEL, POWER_DOWN, GAIN_SET, INPUT_TYPE_SET, BIAS_SET, SRB2_SET, SRB1_SET) X **  
 Channel Settings commands have six parameters for each ADS channel. To access Channel Settings, first send **x**. The OpenBCI board will then expect the next 7 bytes to be channel settings specific commands. The first byte is the channel number. (If you have the Daisy Module, you can select up to 16 channels to set). The following six ASCII characters are accepted as parameters to set. Lastly, sending **X** will latch the settings to the ADS channel.
 
@@ -188,7 +188,7 @@ On failure:
   * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
 
-###SD card Commands  
+### SD card Commands  
 **A S F G H J K L**  
 Send to initiate SD card data logging for specified time  
 
@@ -205,7 +205,7 @@ Send to initiate SD card data logging for specified time
 **j**  
 Stop logging data and close SD file  
 
-###Stream Data Commands  
+### Stream Data Commands  
 **b**  
 Start streaming data
 
@@ -216,7 +216,7 @@ Stop Streaming data
 
 **returns** none, there is no confirmation. NOTE: when command from WiFi shield, confirmation is `Stream stopped`.
 
-###Miscellaneous  
+### Miscellaneous  
 **?**  
 Query register settings  
 
@@ -235,22 +235,22 @@ The 8bit board gets a reset signal from the Dongle any time an application opens
 	$$$
 
 
-##16 Channel Commands
+## 16 Channel Commands
 Currently, the Daisy Module is implemented only on the Cyton board. The Daisy Module adds 8 more input channels for a total of 16. These are the commands specific to controlling the ADS1299 on the Daisy Module.
 
-###Turn Channels OFF
+### Turn Channels OFF
 **q w e r t y u i**  
 These ASCII characters turn the respective channels [9-16] off. The channel will read 0.00 during streamData mode. These commands work in and out of streamData mode.
 
 **returns** none, there is no confirmation.
 
-###Turn Channels ON  
+### Turn Channels ON  
 **Q W E R T Y U I**  
 These ASCII characters turn the respective channels [9-16] on. The channel will contain ADC values during streamData mode. These commands work in and out of streamData mode.
 
 **returns** none, there is no confirmation.
 
-###Select maximum channel number
+### Select maximum channel number
 
 **c**
 
@@ -272,14 +272,14 @@ Use 16 channels.
 
 *Note: On reset, the OpenBCI Cyton board will 'sniff' for the Daisy Module, and if it is present, it will default to 16 channel capability.*
 
-##Firmware v2.0.0 New Commands
+## Firmware v2.0.0 New Commands
 
 Firmware v2.0.0 was the first overhaul from [Push The World](www.pushtheworld.us) which stabilized the core code and added several key new features to improve the user experience. As of firmware version `v2.0.0`, a set of commands has been implemented to change the radio system and improve over-the-air programming of the main Cyton board.
 In order to use the commands you must keep to the form of **key**-**code**-**(payload)** where **key** is`0xF0`, **code** is defined below and **payload** is optional and dependent on the **code**. For example, to get system status send `0xF0` then send `0x07`.
 
 If the RFDuinos cannot speak to each other, you will see a `Failure: Communications timeout - Device failed to poll host` which means the Device RFDuino (on the Cyton) has stopped polling the Host RFDuino on the Dongle.
 
-###Time Stamping
+### Time Stamping
 
 **<**  
 
@@ -293,7 +293,7 @@ Stops time stamping. If the Board is not streaming, then expect a response of `T
 
 **returns** if not streaming, `Time stamp OFF$$$`, if streaming then no confirmation
 
-###Get Radio Channel Number
+### Get Radio Channel Number
 
 **0x00**
 
@@ -302,7 +302,7 @@ Returns either success or failure. If you get a failure, it will give you the ho
 **EXAMPLE**
 User sends **0xF0** **0x00** to get the system to channel number
 
-###Set Radio System Channel Number
+### Set Radio System Channel Number
 
 **0x01**
 
@@ -313,7 +313,7 @@ Returns either success or failure. On failure it will ask you to verify the chan
 **EXAMPLE**
 User sends **0xF0** **0x01** **0x07** to set the system to channel 7
 
-###Set Host Radio Channel Override
+### Set Host Radio Channel Override
 
 **0x02**
 
@@ -324,7 +324,7 @@ Returns either success or failure. On failure it will ask you to verify the chan
 **EXAMPLE**
 User sends **0xF0** **0x02** **0x01** force the **only** the Host to channel 1
 
-###Radio Get Poll Time
+### Radio Get Poll Time
 
 **0x03**
 
@@ -335,7 +335,7 @@ Returns success followed by the poll time in HEX.
 **EXAMPLE**
 User sends **0xF0** **0x03** to get the system to poll time number
 
-###Radio Set Poll Time
+### Radio Set Poll Time
 
 **0x04**
 
@@ -346,7 +346,7 @@ Returns either success or failure. On failure it will send a "Communications Tim
 **EXAMPLE**
 User sends **0xF0** **0x04** **0x40** which sets the poll time to 64ms.
 
-###Radio Set HOST to Driver Baud Rate to Default
+### Radio Set HOST to Driver Baud Rate to Default
 
 **0x05**
 
@@ -357,7 +357,7 @@ Returns success and sends the baud rate in ASCII `115200`.
 **EXAMPLE**
 User sends **0xF0** **0x05** to set the baud rate to `115200`
 
-###Radio Set HOST to Driver Baud Rate to High-Speed mode
+### Radio Set HOST to Driver Baud Rate to High-Speed mode
 
 **0x06**
 
@@ -368,7 +368,7 @@ Returns success and sends the baud rate in ASCII `230400`.
 **EXAMPLE**
 User sends **0xF0** **0x06** to set the baud rate to `230400`
 
-###Radio Set HOST to Driver Baud Rate to Hyper-Speed mode
+### Radio Set HOST to Driver Baud Rate to Hyper-Speed mode
 
 **0x0A**
 
@@ -379,7 +379,7 @@ Returns success and sends the baud rate in ASCII `921600`.
 **EXAMPLE**
 User sends **0xF0** **0x0A** to set the baud rate to `921600`
 
-###Radio System Status
+### Radio System Status
 
 **0x07**
 
@@ -390,7 +390,7 @@ Returns success or failure. On failure it will send a "Failure: System is down$$
 **EXAMPLE**
 User sends **0xF0** **0x07** to get status
 
-##Firmware v3.0.0 New Commands
+## Firmware v3.0.0 New Commands
 
 Supporting all v1.0.0 and v2.0.0, the v3.0.0 firmware extends the OpenBCI system to allow for a variable sample rate and analog or digital input readings!
 
@@ -477,7 +477,7 @@ Perform a soft reset of the Wifi shield. Will do a power on reset of just the wi
 
 **returns** `v3.1.1$$$`
 
-##Unused ASCII Characters
+## Unused ASCII Characters
 These are currently unused (and user available) characters in the OpenBCI Cyton platform:
 
 **9 ( ) _ o O f g h k l ' " n N M , . (space)**
