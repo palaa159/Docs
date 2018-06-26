@@ -54,7 +54,7 @@ When submitting to OpenBCI any information about a third party, such as a friend
 
 
 ### 6. COOKIES AND OTHER THIRD PARTY TRACKING
-We also collect information about you via cookies. You can find out more about this in our Cookie Policy. The Cookie Policy forms part of this Privacy Policy.
+We also collect information about you via cookies. You can find out more about this in our [Cookie Policy](https://github.com/OpenBCI/Docs/blob/master/FAQ/Cookie_Policy.md). The Cookie Policy forms part of this Privacy Policy.
 
 
 ### 7. LEGAL GROUNDS FOR DATA PROCESSING
