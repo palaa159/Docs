@@ -312,13 +312,13 @@ Start the system first. Then, arrange the GUI to suit your needs and __click "Co
 
 Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Settings"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
 
-Alternatively, you can Save and Load with capital 'S' and capital 'L' on your keyboard! 
+Alternatively, you can Save with lowercase 'n' and Load with capital 'N' on your keyboard! 
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
 
 Time Series Shortcuts:
-- You can _use uppercase 'B' to set "Bias Don't Include"_ on all channels, or _uppercase 'N' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
+- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
 
 - Using an _English keyboard_, you can deactivate channels 1-16 using: 
   - 1,2,3,4,5,6,7,8
