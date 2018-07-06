@@ -306,13 +306,13 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 ## Decrease Setup Time by Saving/Loading Settings
 Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts!
 
-![Config Button](../assets/images/GUI_Config_Button_Screenshot.png)
+![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
 
-Start the system first. Then, arrange the GUI to suit your needs and __click "Config"-->"Save Settings"__. You will see a message saying "Settings Saved!" 
+Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. You will see a message saying "Settings Saved!" 
 
-Afterwards, or the next time you open the GUI, just __click "Config"-->"Load Settings"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom . If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards.
+_Your settings will be automatically loaded the next time you start the system!_ To load a custom configuration, just __click "Settings"-->"Load"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom or say "Default Settings Loaded". Simply click "Settings"-->"Default" to revert the GUI to default settings. When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings! When you stop the system, all settings will be auto-saved. _If you change anything during a session, save your settings before exiting the GUI!_
 
-Alternatively, you can Save with lowercase 'n' and Load with capital 'N' on your keyboard! 
+__Alternatively, you can Save with lowercase 'n' and Load with capital 'N' on your keyboard!__ 
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
