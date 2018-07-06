@@ -308,11 +308,11 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 ![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
 
-Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. You will see a message saying "Settings Saved!" When you click "Stop System" under "System Control Panel, all settings will be auto-saved.
+Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. A dialog box will open to confirm file name and path.You will see a message saying "Settings Saved!" When you click "Stop System", all settings will be auto-saved.
 
 _Your settings will be automatically loaded the next time you start the system!_ 
 
-_To load a custom configuration, just click "Settings"-->"Load"__._ If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom or say "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
+To load a custom configuration, just __click "Settings"-->"Load"__. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom or say "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
 
 __Click "Settings"-->"Default" to revert the GUI to default settings.__ 
 
