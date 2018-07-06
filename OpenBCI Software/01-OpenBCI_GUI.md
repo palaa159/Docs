@@ -316,9 +316,9 @@ To load settings, just __click "Settings"-->"Load"__. Select a settings file fro
 
 __Click "Settings"-->"Default" to revert the GUI to default settings.__ 
 
-When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. _If you change anything during a session, save your settings before exiting the GUI!_
+When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. 
 
-Alternatively, you can __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from UserSettingsFile.json!
+_If you change anything during a session, save your settings before exiting the GUI!_ Alternatively, you can __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _UserSettingsFile.json_!
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
