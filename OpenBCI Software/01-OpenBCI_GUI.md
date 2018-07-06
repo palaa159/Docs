@@ -310,7 +310,7 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. A dialog box will open to confirm file name and path _(e.g. UserSettingsFile.json)_. After, you will see a message saying "Settings Saved!" When you click "Stop System", all settings will be auto-saved.
 
-_The GUI automatically loads settings from _/data/UserSettingsFile.json_ the next time you start the system!_ 
+The GUI automatically loads settings from _/data/UserSettingsFile.json_ when the system starts!
 
 To load settings, just __click "Settings"-->"Load"__. Select a settings file from the dialog box that opens. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will display an error at the bottom or "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
 
