@@ -308,17 +308,17 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 ![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
 
-Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. A dialog box will open to confirm file name and path. After, you will see a message saying "Settings Saved!" When you click "Stop System", all settings will be auto-saved.
+Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. A dialog box will open to confirm file name and path _(e.g. UserSettingsFile.json)_. After, you will see a message saying "Settings Saved!" When you click "Stop System", all settings will be auto-saved.
 
 _Your settings will be automatically loaded the next time you start the system!_ 
 
-To load settings, just __click "Settings"-->"Load"__. Select a settings file _(e.g. UserSettingsFile.json)_. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will display an error at the bottom or "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
+To load settings, just __click "Settings"-->"Load"__. Select a settings file from the dialog box that opens. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will display an error at the bottom or "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
 
 __Click "Settings"-->"Default" to revert the GUI to default settings.__ 
 
 When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. _If you change anything during a session, save your settings before exiting the GUI!_
 
-__Alternatively, you can Save with lowercase 'n' and Load with capital 'N' on your keyboard!__ 
+Alternatively, you can __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from UserSettingsFile.json!
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
