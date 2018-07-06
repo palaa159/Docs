@@ -308,15 +308,15 @@ Starting with GUI V3, you can save and load a snapshot of nearly every setting i
 
 ![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
 
-Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. You will see a message saying "Settings Saved!" 
+Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. You will see a message saying "Settings Saved!" When you click "Stop System" under "System Control Panel, all settings will be auto-saved.
 
 _Your settings will be automatically loaded the next time you start the system!_ 
 
-_To load a custom configuration, just __click "Settings"-->"Load"__._ If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom or say "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
+_To load a custom configuration, just click "Settings"-->"Load"__._ If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will show an error at the bottom or say "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings!
 
 __Click "Settings"-->"Default" to revert the GUI to default settings.__ 
 
-When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board.  When you stop the system, all settings will be auto-saved. _If you change anything during a session, save your settings before exiting the GUI!_
+When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. _If you change anything during a session, save your settings before exiting the GUI!_
 
 __Alternatively, you can Save with lowercase 'n' and Load with capital 'N' on your keyboard!__ 
 
