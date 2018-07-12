@@ -11,7 +11,6 @@ Welcome to the **OpenBCI Software** section! Here you will find guides to help y
 
 **See the full video on [YouTube](https://www.youtube.com/watch?v=NAM6eOA4a8Y)!**
 
---
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Ganglion_Impedance.png?raw=true" width="800" height="600">
 
 
