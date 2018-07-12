@@ -7,3 +7,5 @@ Welcome to our **Frequently Asked Questions (FAQ)**! Select the appropriate ques
 * [Hardware & Software](http://docs.openbci.com/FAQ/03-HardwareFAQ)
 * [Purchases & Payment Processing](http://docs.openbci.com/FAQ/04-PaymentFAQ)
 * [Shipping & Taxes](http://docs.openbci.com/FAQ/05-ShippingFAQ)
+
+<img src="https://raw.githubusercontent.com/OpenBCI/Docs/master/assets/images/Ganglion_Tutorial_Screenshot.png" width="60%">
