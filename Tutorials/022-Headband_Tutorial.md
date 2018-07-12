@@ -67,8 +67,16 @@ impedance measurement of the four channels
 
 If you want to add additional electrodes to the headband, contact us!
 
-<video controls loop="" muted="" playsinline="" width="800" height="600">
+<!-- This is a video that looks like a gif. -->
+<video autoplay="" loop="" muted="" playsinline="" width="400" height="300">
     <source src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI%20Cyton.mp4?raw=true" type="video/mp4" />
     Your browser does not support HTML5 videos.
 </video>
-     
+
+Next video:
+
+<!-- This is a regular video with controls. -->
+<video controls muted="" playsinline="" width="800" height="600">
+    <source src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI%20Cyton.mp4?raw=true" type="video/mp4" />
+    Your browser does not support HTML5 videos.
+</video>
