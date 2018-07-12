@@ -14,5 +14,11 @@ The Learning Pages are separated into the following sections:
 
 **Note:** If you are interested in contributing to the OpenBCI Learning Pages, feel free to create your own Markdown file and submit a pull request to relevant sub-directory of the [Docs repo](https://github.com/openbci/docs) on our Github! If you notice any mistakes in these guides, you can also submit issues here. 
 
+<video autoplay="" loop="" muted="" playsinline="" width="600">
+    <source src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI%20Cyton.mp4?raw=true" type="video/mp4" />
+    Your browser does not support HTML5 videos.
+</video>
 
+#### OpenBCI [GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) Showing 8-channel [Cyton Board](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide) with 5-channel [EEG Headband](https://shop.openbci.com/collections/frontpage/products/openbci-eeg-headband-kit?variant=8120393760782)
 
+Full YouTube video [here](https://www.youtube.com/watch?v=XktF8OhHH4A)
