@@ -8,6 +8,6 @@ Welcome to the **OpenBCI Software** section! Here you will find guides to help y
 </video>
 
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Ganglion_Impedance.png?raw=true" width="80%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Ganglion_Impedance.png?raw=true" width="800" height="600">
 
 #### OpenBCI GUI newest release v3.3.2 running with 4-channel [Ganglion board](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board?variant=13461804483) and EEG [Headband Kit](https://shop.openbci.com/collections/frontpage/products/openbci-eeg-headband-kit?variant=8120393760782)
