@@ -13,4 +13,4 @@ Welcome to the **OpenBCI Headware** section. Here you will find detailed guides 
  * [Ultracortex Mark 1](http://docs.openbci.com/Headware/06-Ultracortex-Mark-I)
  * [Spiderclaw V1 & V2](http://docs.openbci.com/Headware/07-Spiderclaw-V1-V2)
 
-<img src="https://raw.githubusercontent.com/OpenBCI/Docs/master/assets/MarkIV/Photos/UCM4-Product-2.JPG" width="50%">
+<img src="https://raw.githubusercontent.com/OpenBCI/Docs/master/assets/MarkIV/Photos/UCM4.png" width="60%">
