@@ -112,7 +112,7 @@ Once you've installed the GUI by following the tutorial, fire it up like shown i
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true"width="70%">
 
-The screenshot above shows an example of your brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
+The screenshot above shows an example of your live-streamed brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
 
 For more details on the various GUI functions, scroll up to the OpenBCI Software section of the Headband-Ganglion Tutorial above and also check out the cool features section of the GUI [page](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-cool-gui-features).
 
