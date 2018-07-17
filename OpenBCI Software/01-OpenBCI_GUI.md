@@ -142,6 +142,8 @@ Replacing the files may bring up another pop up that you need to accept for alte
 
 ![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
 
+If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
+
 Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
 ![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
