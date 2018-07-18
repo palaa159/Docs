@@ -63,7 +63,7 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 
 Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI like shown in the video below!
  
-<iframe width="640" src="https://www.youtube.com/embed/NAM6eOA4a8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="640" height="400" src="https://www.youtube.com/embed/NAM6eOA4a8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Notice the sharp peak-trough-peak wave behavior in the upper left time series window of the GUI. The first peak corresponds with the initiation of an eye blink, the trough immediately after shows a dip in alpha brain waves that syncs to the eye's closing for a fraction of a second! The peak immediately **after** the trough corresponds to the brain signals to the eyelid to reopen, thus concluding the blink cycle.
 
@@ -108,25 +108,13 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 
 Once you've installed the GUI by following the tutorial, fire it up like shown in the video below!
 
-<iframe width="640"  src="https://www.youtube.com/embed/XktF8OhHH4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="640" height="400" src="https://www.youtube.com/embed/XktF8OhHH4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true"width="70%">
 
 The screenshot above shows an example of your live-streamed brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
 
 For more details on the various GUI functions, scroll up to the OpenBCI Software section of the Headband-Ganglion Tutorial above and also check out the cool features section of the GUI [page](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-cool-gui-features).
-
-<!-- This is a video that looks like a gif.
-<video autoplay="" loop="" muted="" playsinline="" width="400" height="300">
-    <source src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI%20Cyton.mp4?raw=true" type="video/mp4" />
-    Your browser does not support HTML5 videos.
-</video>
-
- This is a regular video with controls.
-<video controls muted="" playsinline="" width="800" height="600">
-    <source src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI%20Cyton.mp4?raw=true" type="video/mp4" />
-    Your browser does not support HTML5 videos.
-</video>-->
 
 As always, don't hesitate to email us at support@openbci.com for assistance!
 
