@@ -65,6 +65,7 @@ Once you've downloaded the GUI zip file per tutorial instructions, fire up the G
  
 <iframe width="854" height="480" src="https://www.youtube.com/embed/NAM6eOA4a8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+
 Notice the sharp peak-trough-peak wave behavior in the upper left time series window of the GUI. The first peak corresponds with the initiation of an eye blink, the trough immediately after shows a dip in alpha brain waves that syncs to the eye's closing for a fraction of a second! The peak immediately **after** the trough corresponds to the brain signals to the eyelid to reopen, thus concluding the blink cycle.
 
 The band power window in the lower right of the GUI shows the relative strengths of the user's alpha, beta, gamma, delta, and theta brain waves. The GUI and Ganglion work together to separate and categorize brain waves based on characteristics like frequency and amplitude. 
@@ -109,6 +110,7 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 Once you've installed the GUI by following the tutorial, fire it up like shown in the video below!
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/XktF8OhHH4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true"width="70%">
 
