@@ -304,7 +304,7 @@ The OpenBCI GUI displays up to six customizable windows in twelve layouts! You c
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Decrease Setup Time by Saving/Loading Settings
-Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts!
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts. If you change anything during a session, save your settings or click "Stop System" before exiting. __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _/SavedData/Settings/_!
 
 ![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
 
@@ -317,9 +317,6 @@ To load settings, just __click "Settings"-->"Load"__. Select a settings file fro
 __Click "Settings"-->"Default" to revert the GUI to default settings.__ 
 
 When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
-
-_If you change anything during a session, save your settings before exiting the GUI!_ 
-Also, you can __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _/SavedData/Settings/_!
 
 ## Other Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
