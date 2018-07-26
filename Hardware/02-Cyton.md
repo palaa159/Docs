@@ -95,7 +95,7 @@ The slide switch on the Dongle has two positions (noted on the bottom  silkscree
 
 
 ##OpenBCI Daisy Module
-The OpenBCI Daisy Module is a daugher card to the Cyton Board, and expands the number of sensor channels from **8** to **16**.
+The OpenBCI Daisy Module is a daughter card to the Cyton Board, and expands the number of sensor channels from **8** to **16**.
 ###Daisy Module Specs:
 
   
