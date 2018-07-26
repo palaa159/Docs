@@ -63,7 +63,7 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 
 Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI like shown in the video below!
  
-<iframe width="854" height="480" src="https://www.youtube.com/embed/NAM6eOA4a8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="600" src="https://www.youtube.com/embed/NAM6eOA4a8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 Notice the sharp peak-trough-peak wave behavior in the upper left time series window of the GUI. The first peak corresponds with the initiation of an eye blink, the trough immediately after shows a dip in alpha brain waves that syncs to the eye's closing for a fraction of a second! The peak immediately **after** the trough corresponds to the brain signals to the eyelid to reopen, thus concluding the blink cycle.
@@ -109,7 +109,7 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 
 Once you've installed the GUI by following the tutorial, fire it up like shown in the video below!
 
-<div style="position:relative;height:0;padding-bottom:39.38%"><iframe src="https://www.youtube.com/embed/XktF8OhHH4A?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="854" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+<div style="position:relative;height:0;padding-bottom:39.38%"><iframe src="https://www.youtube.com/embed/XktF8OhHH4A?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="600" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true"width="70%">
