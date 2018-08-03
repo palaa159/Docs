@@ -10,7 +10,7 @@ You can read the release notes and more at the [on Github](https://github.com/Op
 
 ## Building From source
 
-The [Simblee](https://www.simblee.com/) radio module that is at the heart of the Ganlion board offers the ability to reprogram Over The Air `OTA`. The method for doing this in a nutshell is:  
+The [Simblee](https://www.simblee.com/) radio module that is at the heart of the Ganglion board offers the ability to reprogram Over The Air `OTA`. The method for doing this in a nutshell is:  
 
 1. Create new Ganglion firmware, or modify existing code in Arduino IDE
 2. Generate a compiled HEX file in the Arduino IDE

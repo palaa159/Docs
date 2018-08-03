@@ -142,6 +142,8 @@ Replacing the files may bring up another pop up that you need to accept for alte
 
 ![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
 
+If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
+
 Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
 ![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
@@ -299,6 +301,6 @@ Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on h
 
 ## Cool GUI Features 
 
-The OpenBCI GUI has three customizable windows. You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
+The OpenBCI GUI can display up to six customizable windows! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">

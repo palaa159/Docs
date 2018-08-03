@@ -54,11 +54,11 @@ The Ganglion Board is a 4 channel biosensing board. There is a 16 pin Right Angl
 
 
 ### Inverting Input Select Switches
-Each input channel is buffered by an [AD8237](http://www.analog.com/en/products/amplifiers/instrumentation-amplifiers/ad8237.html) Instrumentation Amplifier. There are 4 small slide switches (SW1, SW2, SW3, SW4) which can be set connect the `-` inputs from the InAmps either to their associated `-` pin, or to the `REF` pin.  
+Each input channel is buffered by an [AD8237](http://www.analog.com/media/en/technical-documentation/data-sheets/AD8237.pdf) Instrumentation Amplifier with a differential input impedance of 100 MΩ. There are 4 small slide switches (SW1, SW2, SW3, SW4) which can be set to connect the `-` inputs from the InAmps either to their associated `-` pin, or to the `REF` pin.  
 
 ![SWITCH UP](../assets/images/ganglion_SW_UP.png)  
 
-The **default** position for these swithches when they are shipped to you is **UP**, which connects them to their associated differential channel `-` input pin on the bottom row of headers.  
+The **default** position for these switches when they are shipped to you is **UP**, which connects them to their associated differential channel `-` input pin on the bottom row of headers.  
 
 ![SWITCH DOWN](../assets/images/ganglion_SW_DOWN.png)  
 
