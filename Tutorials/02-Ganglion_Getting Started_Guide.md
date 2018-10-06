@@ -305,7 +305,7 @@ When Apple Computer updated their Operating System to Sierra (v10.12.x), they ch
 Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
 Now go back to where you were before to continue!
 
-##TROUBLESHOOTING
+## General Troubleshooting
 
 If the initialization and data stream fails, try the following steps:
 
