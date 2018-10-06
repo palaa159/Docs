@@ -278,12 +278,15 @@ Finally, let's try to get some brainwaves! The easiest brainwave to make 'on com
 
 If you having any trouble seeing the signals above, one thing that might be an issue is the connection between the gold cup electrodes and your scalp. You can test this connection by doing an Impedance Check. Click the button `Start Impedance Check` and you will see values start to come up at each electrode. The small circle on the left will change color according to the impedance, with `green` being good and `red` being not-good. Using gold cup electrodes and paste, you should be seeing impedance values in the range of `5k` to `15k`. If they are higher, you will need to adjust the connection, add more paste and re-position the electrode if necessary.
 
-
 **Happy Brain Hacking!**
 
+ ## Noise Reduction and EEG/EMG/ECG Troubleshooting
 
+Seeing lots of noise in the data stream? Consult the [minimizing noise guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-5-minimizing-noise) in the Cyton Tutorial. These tips are very much applicable to the Ganglion board.
 
+For a guide to GUI settings when obtaining EEG/EMG/EKG simultaneously, refer to the [relevant section](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-4-launch-the-gui-and-adjust-your-channel-settings) in the Cyton Tutorial.
 
+Don't hesitate to email support@openbci.com with any questions!
 
 ## RUN THE GUI ON macOS SIERRA
 
