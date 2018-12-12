@@ -1,9 +1,9 @@
-# OpenBCI Electron Hub
+# OpenBCI Hub
 
 Middleware Software used to communicate with OpenBCI boards through TCP/IP command protocol. This Doc covers the OpenBCI Hub for Cyton, Ganglion, and WiFi Shield.
 
 ## Version
-Version `v2.0.0` released September 2017
+Version `v2.0.0` released September 2018
 
 Version `v1.0.0` released January 3rd, 2017.
 
@@ -19,530 +19,581 @@ A unique port, `10996`, is critical because applications must be able to hit a k
 
 ## Hub Command Protocol Overview
 
-The Hub uses a comma-separated-value system followed by stop characters. The stop characters are `,;\n` or ("comma" "semi-colon" "backslash n"). A recommended client parsing is to store incoming TCP data into a buffer until the stop characters `';\n` are consecutively identified. The contents of the buffer can be now be considered a Message. The buffer can be flushed and the Message can be processed. Split the Message by `,` ("comma") to facilitate parsing. The first value will always be the command. The rest of the Message will then be translated based on the protocol for that command described in the Specification below. All commands sent to the client will be replied to asynchronously.
+As of v2.0.0, the Hub uses JSON to pass messages send and receive messages over TCP. Each JSON string should end in a `\n`. Parse for `\n` and then strip the beginning of the string down to the character before `\n` and use your languages built in JSON parser. The contents of the buffer can be now be considered a Message. The buffer can be flushed and the Message can be processed. There will always be a 'command' key which will aid in parsing the rest of message. The rest of the Message will then be translated based on the protocol for that command described in the Specification below. All commands sent to the client will be replied to asynchronously.
 
 ### Example:
-If a client sends `s,start,;\n` to the Hub on `127.0.0.1:10996`, the Hub will respond with either `s,200,start,;\n` if the scan was started or an error message if unable to start such as `s,412,unable to start scan,;\n`.
+If a client sends `{"type":"scan", "action":"start"}\n` to the Hub on `127.0.0.1:10996`, the Hub will respond with either `{"type":"scan", "action":"start", "code":200}\n` if the scan was started or an error message if unable to start such as `{"type":"scan","code":412,"message":"unable to start scan"}\n`.
 
 ## Command Set
 Commands are sent from the client to the Hub. Each command gets an asynchronous response with a meaningful code. When able, errors are sent with string error messages.
 
 ### Accelerometer
-**a,ACTION**
+
+**type: `accelerometer`**
 
 Stop or start accelerometer.
 
-#### ACTION - START
+#### `action` - `start`
 
-`start`
-
+Description:
 Start accelerometer. Only useful for Ganglion.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"accelerometer", "action": "start"}`
 
 Response: on success
-`a,200,start,;\n`
+`{"type":"accelerometer", "action": "start", "code": 200}`
 
 Response: on failure
-`a,416,string error message,;\n`
+`{"type":"accelerometer", "action": "start", "code": 416, "message": "string error message"}`
 
-#### ACTION - STOP
+#### `action` - `stop`
 
-`stop`
-
+Description:
 Stop accelerometer. Only useful for Ganglion.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"accelerometer", "action": "stop"}`
 
 Response: on success
-`a,200,stop,;\n`
+`{"type":"accelerometer", "action": "stop", "code": 200}`
 
 Response: on failure
-`a,417,string error message,;\n`
+`{"type":"accelerometer", "action": "stop", "code": 417, "message": "string error message"}`
+
 
 ### Board Type
-**b,BOARD_TYPE**
+
+**type: `boardType`**
 
 Attempts to set the board type to user requested board type, such as when a user requests 16 channel Cyton. This command is only useful for Cyton because of Daisy.
 
-Availability: as of `v2.0.0`
+#### `boardType` - `cyton`
 
-#### BOARD_TYPE - CYTON
-
-`cyton`
-
+Description:
 Force set to 8 channel Cyton board.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-Example: `b,cyton,;\n`
+Example:
+`{"type":"boardType", "boardType": "cyton"}`
 
-#### BOARD_TYPE - DAISY
+Response: on success
+`{"type":"boardType", "boardType": "cyton", "code": 200}`
 
-`daisy`
+Response: on failure
+`{"type":"boardType", "boardType": "cyton", "code": 421, "message": "string error message"}`
 
-Availability: as of `v2.0.0`
+#### `boardType` - `daisy`
 
-Example: `b,daisy,;\n`
+Description:
+Force set to 16 channel Cyton board.
 
-#### Responses
+Availability:
+As of `v2.0.0`
 
-Response: on success where board type set correctly to Cyton with 8 Channels
-`b,200,cyton,;\n`
+Example:
+`{"type":"boardType", "boardType": "daisy"}`
 
-Response: on success where board type set correctly to Cyton with Daisy 16 Channels
-`b,200,daisy,;\n`
+Response: on success
+`{"type":"boardType", "boardType": "daisy", "code": 200}`
 
-Response: on failure to set board correctly to Cyton or Daisy with 8 or 16 Channels
-`b,421,some error message,;\n`
+Response: on failure
+`{"type":"boardType", "boardType": "daisy", "code": 421, "message": "string error message"}`
 
 ### Channel Settings
-**r,ACTION,(ARGS)**
+
+**type: `channelSettings`**
 
 For setting the channel settings on a Cyton board with either WiFi or Serial protocols set.
 
 Availability: as of `v2.0.0`
 
-#### ACTION - START
+#### `action` - `start`
 
-`start`
-
+Description:
 Used to start a channel setting sync. This will emit channel settings on success.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-Example: `r,start,;\n`
+Example:
+`{"type":"channelSettings", "action": "start"}`
+
+Response: on success
+`{"type":"channelSettings", "action": "start", "code": 200}`
+
+Response: on failure when channel setting sync is already in progress
+`{"type":"channelSettings", "action": "start", "code": 422, "message": "Sync in progress"}`
 
 Response: on success for each channel, see the [Response Set](http://docs.openbci.com/OpenBCI%20Software/07-OpenBCI_Hub#openbci-electron-hub-response-set) below for _Channel Settings_.
 
-#### ACTION - SET
+#### `action` - `set`
 
-`set`
-
+Description:
 Used to set a channel for cyton over wifi or ganglion.
 
-Availability: as of `v2.0.0`
-
-Example: `r,set,3,0,24,normal,1,1,0,;\n`
-
-**CHANNEL_NUMBER**
+**channelNumber**
 
 Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
 
-**POWER_DOWN**
+**powerDown**
 
-Will be either `1` if channel is powered down and `0` if channel is powered up like normal.
+Will be either `true` if channel is powered down and `false` if channel is powered up like normal.
 
-**GAIN**
+**gain**
 The integer version of the gain. i.e. 1, 2, 4, 6, 8, 12, 24
 
-**INPUT_TYPE**
+**inputType**
 
 Selects the ADC channel input source. It's a 'String' that **MUST** be one of the following: "normal", "shorted", "biasMethod" , "mvdd" , "temp" , "testsig", "biasDrp", "biasDrn".
 
-**BIAS**
+**bias**
 
-Selects if the channel shall include the channel input in bias generation. It's a number where `1` includes the channel in bias (default) or `0` for channel removed from bias.
+Selects if the channel shall include the channel input in bias generation. It's a number where `true` includes the channel in bias (default) or `false` for channel removed from bias.
 
-**SRB2**
+**srb2**
 
-Select to connect (`1`) this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `1` connects this input to SRB2 (default) or `0` which disconnect this input from SRB2.
+Select to connect `true` this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `true` connects this input to SRB2 (default) or `false` which disconnect this input from SRB2.
 
-**SRB1**
+**srb1**
 
-Select to connect (`1`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `1` connects all N inputs to SRB1 and `0` disconnects all N inputs from SRB1 (default).
+Select to connect `true` all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `true` connects all N inputs to SRB1 and `false` disconnects all N inputs from SRB1 (default).
 
-#### Responses
+Availability:
+As of `v2.0.0`
+
+Example:
+```
+{
+  "action": "set",
+  "type": "channelSettings",
+  "channelNumber": 3,
+  "powerDown": false,
+  "gain": 24,
+  "inputType": "normal",
+  "bias": true,
+  "srb2": true,
+  "srb1": false
+}
+```
 
 Response: on success
-`r,200,set,;\n`
+`{"type":"channelSettings", "action": "set", "code": 200}`
 
 Response: on failure to set command
-`r,424,verbose error message here,;\n`
+`{"type":"channelSettings", "action": "set", "code": 424, "message": "verbose error message here"}`
 
 Response: on failure to parse input commands properly. This means comma separated string input did not contain the correct positioned items. Verify with example.
-`r,425,more verbose error message,;\n`
+`{"type":"channelSettings", "action": "set", "code": 425, "message": "more verbose error message"}`
 
 ### Command
-**k,COMMAND**
 
-Passes through a `COMMAND`, either one char or multiple chars, to a connected device.
+**type: `command`**
 
-Availability: as of `v1.0.0`
+Passes through a `COMMAND`, either one char or a string, to a connected device.
 
-#### COMMAND
+Availability: as of `v2.0.0`
 
+#### `command` - `*`
+
+Description:
 Single or multi char to get passed through the module to the connected board. Multi char limited to 30 on WiFi and 19 on BLE.
 
-#### Responses
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"command", "command": "1"}`
 
 Response: on success
-`k,200,;\n`
-
-Response: on failure because no connected device
-`k,400,;\n`
+`{"type":"command", "command": "start", "code": 200}`
 
 Response: on failure unable to write to connected device
-`k,406.string error message,;\n`
+`{"type":"command", "command": "start", "code": 406, "message": "verbose error message"}`
+
+Response: on failure when protocol of current device is not selected
+`{"type":"command", "command": "start", "code": 420, "message": "verbose error message"}`
 
 ### Connect
-**c,PORT_NAME,(SAMPLE_RATE),(LATENCY)**
 
-Connect to a Ganglion BLE device with only a local name.
+**type: `connect`**
 
-#### PORT_NAME
+Connect to any device a local name or IP address.
+
+Availability: as of `v2.0.0`
+
+**name**
 
 The local string name of a Cyton USB Dongle, Ganglion peripheral, or WiFi Shield unique name to connect to.
 
-Availability: as of `v1.0.0`
+**burst** *optional*
 
-Example: `c,Ganglion-XXXX,;\n` for BLE for Ganglion
-Example: `c,COM4,;\n` for Serial on Windows
+True to use burst mode, only applies when UDP is set for protocol. Either `true` and `false`.
 
-#### SAMPLE_RATE
-
-**Only Required for WiFi connection**
+**sampleRate** *optional*
 
 A number that is the requested sample rate to set the attached Ganglion or Cyton to. Ganglion must have v2.0.0 firmware or later and Cyton must have v3.0.0 firmware available. Value is in Hz and must be a valid sample rate for the board of choice.
 
-Availability: as of `v2.0.0`
-
-Example: `c,OpenBCI-ACDC,1000,15000,;\n` for Cyton/Daisy set to 1000Hz
-Example: `c,OpenBCI-ACDC,1600,15000,;\n` for Ganglion set to 1600Hz
-
-#### LATENCY
-
-**Only Required for WiFi connection**
+**latency** *optional*
 
 A number that is the latency for the inter-packet sending on the WiFi Shield. The time is in micro-seconds.
 
-Availability: as of `v2.0.0`
+**protocol** *optional*
 
-Example: `c,OpenBCI-ACDC,1000,5000,;\n` for latency set to 5000uS (5 ms)
+The type of internet protocol to use, either 'udp' or 'tcp'.
 
-#### Responses
+**ipAdderss** *optional*
+
+The ip
+
+Availability:
+As of `v2.0.0`
+
+Example for Ganglion and Cyton:
+`{"type": "connect", "name": "Ganglion-XXXX"}`
+
+Example for WiFi with name over tcp:
+```
+{
+  "type": "connect",
+  "name": "OpenBCI-XXXX",
+  "latency": 1000,
+  "sampleRate": 500,
+  "protocol": "tcp"
+}
+```
+
+Example for WiFi with IP Address over UDP with burst mode:
+```
+{
+  "type": "connect",
+  "ipAddress": "192.168.4.1",
+  "latency": 1000,
+  "sampleRate": 500,
+  "protocol": "udp",
+  "burst": true
+}
+```
 
 Response: on success
-`c,200,;\n`
+`{"type":"connect", "firmware": "v2.0.0", "code": 200}`
 
-Response: on failure unable to connect
-`c,402,string error message,;\n`
+Response: on failure to connect
+`{"type":"connect", "code": 402, "message": "verbose error message"}`
 
-Response: on failure to connect because already connected to another device
-`c,408,;\n`
-
-Response: on failure unable to stop scan before verification for connect or unable to stop the verification scan.
-`c,411.string error message,;\n`
-
-Response: on failure unable to start verification scan before connect
-`c,412,string error message,;\n`
-
-Response: on failure unable to verify, aka scan and find the requested BLE peripheral with local name matching the requested supplied `PORT_NAME` within 5 seconds.
-`c,413,;\n`
-
+Response: on failure already connected
+`{"type":"connect", "code": 408}`
 
 ### Disconnect
-**d**
 
-Disconnect from a connected Ganglion BLE device.
+**type: `disconnect`**
 
-Availability: as of `v1.0.0`
+Disconnect from a connected device.
 
-Example: `d,;\n`
+Availability:
+As of `v1.0.0`
 
-#### Responses
+Example:
+`{"type":"disconnect"}`
 
 Response: on success
-`d,200,;\n`
+`{"type":"disconnect", "code": 200}`
 
-Response: on failure unable to disconnect
-`d,401,string error message,;\n`
+Response: on failure unable to disconnect to connected device
+`{"type":"disconnect", "code": 401, "message": "verbose error message"}`
 
 ### Examine
-**x,SHIELD**
 
-Connect to and sync info with WiFi Shield named _SHIELD_. Should have started scan and asynchronously received the WiFi Shield name prior to calling to examine.
+**type: `examine`**
 
-Availability: as of `v2.0.0`
+Examine a WiFi shield.
 
-#### SHIELD
+Availability:
+As of `v2.0.0`
 
-The local shield name of WiFi Shield such as `OpenBCI-ACDC`
+Example with shield name:
+`{"type":"examine", "shieldName": "OpenBCI-XXXX"}`
 
-Example: `x,OpenBCI-ACDC,;\n`
+Example with ipAddress:
+`{"type":"examine", "ipAddress": "192.168.4.1"}`
 
-#### Responses
+If was searching for WiFi Shield prior to start, expect response on a
+`{"type":"scan", "action": "stop", "code": 200}`
 
 Response: on success
-`x,200,;\n`
-If was searching for WiFi Shield prior to start expect response on a
-`s,200,stop,;\n`
+`{"type":"examine", "code": 200}`
+
+Response: on failure to connect to device
+`{"type":"examine", "code": 402, "message": "verbose error message"}`
+
+Response: on failure if already connected to device
+`{"type":"examine", "code": 408, "message": "verbose error message"}`
 
 Response: on failure to stop scan
-`x,411,could not stop error,;\n`
-
-Response: on already connected to WiFi Shield
-`x,408,;\n`
+`{"type":"examine", "code": 411, "message": "could not stop error"}`
 
 ### Impedance
-**i,ACTION**
 
-Stop or start impedance testing.
+**type: `impedance`**
 
-#### ACTION - START
+Stop or start impedance testing for Ganglion or send a impedance setting for the cyton.
 
-`start`
+#### `action` - `set`
 
-Start impedance testing.
+Description:
+Used to set impedance registers for Cyton.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v2.0.0`
+
+**channelNumber**
+
+Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
+
+**pInputApplied**
+
+Should the impedance signal be routed to the P input `channelNumber`
+
+**nInputApplied**
+
+Should the impedance signal be routed to the N input `channelNumber`
+
+Example:
+```
+{
+  "action": "set",
+  "type": "impedance",
+  "channelNumber": 3,
+  "pInputApplied": false,
+  "nInputApplied": true
+}
+```
 
 Response: on success
-`i,200,start,;\n`
+`{"type":"impedance", "action": "set", "code": 200}`
 
-Response: on failure
-`i,414,string error message,;\n`
+Response: on failure to set impedance
+`{"type":"impedance", "action": "set", "code": 424, "message": "verbose error message here"}`
 
-#### ACTION - STOP
+Response: on failure to parse input commands properly.
+`{"type":"impedance", "action": "set", "code": 431, "message": "more verbose error message"}`
 
-`stop`
+#### `action` - `start`
 
-Stop impedance testing.
+Description:
+Used to start impedance testing for Ganglion
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"impedance", "action": "start"}`
 
 Response: on success
-`i,200,stop,;\n`
+`{"type":"impedance", "action": "start", "code": 200}`
 
-Response: on failure
-`i,415,string error message,;\n`
+Response: on failure to start
+`{"type":"impedance", "action": "start", "code": 414, "message": "Error message"}`
+
+#### `action` - `stop`
+
+Description:
+Used to stop impedance testing for Ganglion
+
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"impedance", "action": "stop"}`
+
+Response: on success
+`{"type":"impedance", "action": "stop", "code": 200}`
+
+Response: on failure to stop
+`{"type":"impedance", "action": "stop", "code": 415, "message": "Error message"}`
 
 ### Protocol
-**p,ACTION,PROTOCOL**
 
-Protocol should also be started prior to each session. It will cleanly start a session.
+**type: `protocol`**
 
-#### ACTION - START
+Protocol should also be started prior to each session. It will cleanly start a session. The currently supported protocols are `ble`, `bled112`, `serial`, and `wifi`.
 
-`start`
+Availability: as of `v2.0.0`
 
+#### `action` - `start`
+
+Description:
 Start a protocol. Stop all other protocols before starting this new one.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-The currently supported protocols are `ble`, `serial` and `wifi`.
+**protocol**
 
-**PROTOCOL - BLE**
+The currently supported protocols are `ble`, `bled112`, `serial`, and `wifi`.
 
-`ble`
+Only the Ganglion uses the `ble` and `bled112` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial.
 
-Only the Ganglion uses the `ble` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial.
+Example of `ble` or `bled112` for Ganglion:
+`{"type":"protocol", "action": "start", "protocol": "ble"}`
 
-Availability: as of `v2.0.0`
+Response: on success for Ganglion:
+`{"type":"protocol", "action": "start", "protocol": "ble", "code": 200}`
 
-Example: `p,start,ble,;\n`
+Response: on failure to start ganglion ble driver
+`{"type":"impedance", "action": "start", "code": 419, "message": "failed to start driver"}`
 
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,ble,start,;\n`
-`s,200,start,;\n`
+Only the Ganglion uses the `ble` and `bled112` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial if not using BLED112.
 
-Response: on failure
-`p,412,failed to start driver,;\n`
+Example of `serial` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "serial"}`
 
-**PROTOCOL - Serial (Dongle)**
+Response: on success for `serial` Cyton:
+`{"type":"protocol", "action": "start", "protocol": "serial", "code": 200}`
 
-`serial`
+Example of `wifi` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "wifi"}`
 
-Only the Cyton uses the `serial` as of today. Paired, with `start`, the `serial` will start a serial driver. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-cyton-on-macoswindowslinux). Need FTDI VCP drivers.
+Response: on success for `wifi` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "wifi", "code": 200}`
 
-Availability: as of `v2.0.0`
 
-Example: `p,start,serial,;\n`
+#### `action` - `status`
 
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,serial,start,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Both the Cyton and Ganglion can use the `wifi` protocol as of today. Paired, with `start`, the `wifi` command will start a wifi driver. There are no dependencies for this protocol.
-
-Example: `p,start,wifi,;\n`
-
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,wifi,start,;\n`
-
-#### ACTION - STATUS
-
-`status`
-
+Description:
 Check the to see if a protocol has been started and is set as the current protocol.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v1.0.0`
 
-The currently supported protocols are `ble`, `serial` and `wifi`.
+Example on `ble` or `bled112`:
+`{"type":"protocol", "action": "status", "protocol": "ble"}`
 
-**PROTOCOL - BLE**
+Response: on on ganglion was started successfully and running
+`{"type":"protocol", "action": "status", "code": 200}`
 
-`ble`
+Response: on protocol is stopped
+`{"type":"protocol", "action": "status", "code": 501}`
 
-Availability: as of `v2.0.0`
+Example on `serial` or `wifi`:
+`{"type":"protocol", "action": "status"}`
 
-Example: `p,status,ble,;\n`
+Response: on protocol is started
+`{"type":"protocol", "action": "status", "code": 304}`
 
-Response: on ganglion was started successfully and running
-`p,200,ble,status,;\n`
+Response: on protocol is stopped
+`{"type":"protocol", "action": "status", "code": 305}`
 
-Response: on failure of ganglion to be started successfully
-`p,501,ble,status,;\n`
+#### `action` - `stop`
 
-**PROTOCOL - Serial (Dongle)**
+Description:
+Check the to see if a protocol has been started and is set as the current protocol.
 
-`serial`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v2.0.0`
+Example for `ble`, `bled112`, `serial`, and `wifi`:
+`{"type":"protocol", "action": "stop", "protocol": "ble"}`
 
-Example: `p,status,serial,;\n`
-
-Response: on cyton serial object started successfully and running
-`p,304,;\n`
-
-Response: on cyton serial object not started
-`p,305,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Availability: as of `v2.0.0`
-
-Example: `p,status,wifi,;\n`
-
-Response: on wifi object started successfully and running
-`p,304,;\n`
-
-Response: on wifi object not started
-`p,305,;\n`
-
-#### ACTION - STOP
-
-`stop`
-
-Stop and destroy a protocol. These are designed to be over called, in that calling when protocol is not started, will still result in success message.
-
-Availability: as of `v2.0.0`
-
-The currently supported protocols are `ble`, `serial` and `wifi`.
-
-**PROTOCOL - BLE**
-
-`ble`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,ble,;\n`
-
-Response: on ganglion was stopped and cleaned up
-`p,200,ble,stop,;\n`
-
-**PROTOCOL - Serial (Dongle)**
-
-`serial`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,serial,;\n`
-
-Response: on cyton serial was stopped and cleaned up
-`p,200,serial,stop,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,wifi,;\n`
-
-Response: on wifi object stopped and cleaned up
-`p,200,wifi,stop,;\n`
+Response: on stop for `ble`, `bled112`, `serial`, and `wifi`:
+`{"type":"protocol", "action": "stop", "protocol": "ble", "code": 200}`
 
 ### Scan
-**s,ACTION**
 
-Scan for Ganglion BLE devices and when found, send their local names to requesting client.
+**type: `scan`**
 
-#### ACTION - START
+Scan for devices for the protocol set previously and when found, send their local names to requesting client.
 
-`start`
+#### `action` - `start`
 
+Description:
 Start a scan. Stop a scan if one in progress before starting the newly requested scan.
 
-Example: `s,start,;\n`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v1.0.0`
+Example:
+`{"type":"scan", "action": "start"}`
 
 Response: on success
-`s,200,start,;\n`
+`{"type":"scan", "action": "start", "code": 200}`
 
 Response: on failure to start scan
-`s,412,start,;\n`
+`{"type":"scan", "action": "start", "code": 412, "message": "Error message"}`
 
 Response: on failure to stop scan in progress
-`s,411,stop,;\n`
+`{"type":"scan", "action": "start", "code": 411, "message": "Error message"}`
 
-#### ACTION - STATUS
+#### `action` - `status`
 
-`status`
-
+Description:
 Is a scan in progress
 
-Example: `s,status,;\n`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v1.0.0`
+Example:
+`{"type":"scan", "action": "status"}`
 
-Response: a scan is in progress
-`s,302,;\n`
+Response: a scan is in progress for ganglion over ble and bled112
+`{"type":"scan", "action": "status", "code": 302}`
 
-Response: a scan is not in progress
-`s,303,;\n`
+Response: a scan is not in progress for ganglion over ble and bled112
+`{"type":"scan", "action": "status", "code": 303}`
 
-#### ACTION - STOP
+Response: a scan is in progress for wifi shields
+`{"type":"scan", "action": "status", "code": 304}`
 
-`stop`
+Response: a scan is not in progress for wifi shields
+`{"type":"scan", "action": "status", "code": 305}`
 
+#### `action` - `stop`
+
+Description:
 Stop a scan in progress
 
-Example: `s,stop,;\n`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"scan", "action": "stop"}`
+
+Response: on success
+`{"type":"scan", "action": "stop", "code": 200}`
+
+Response: on failure because there is no scan in progress to stop
+`{"type":"scan", "action": "stop", "code": 410, "message": "Error message"}`
+
+Response: on failure because unable to stop scan
+`{"type":"scan", "action": "stop", "code": 411, "message": "Error message"}`
+
+### SD Card
+
+**type: `sd`**
+
+The SD Card is only working on the Cyton. So you can only use it for protocols `wifi`, and `serial`.
 
 Availability: as of `v1.0.0`
 
-Response: on success
-`s,200,stop,;\n`
+#### `action` - `start`
 
-Response: on failure because there is no scan in progress to stop
-`s,410,;\n`
-
-Response: on failure because unable to stop scan
-`s,411,string error message,;\n`
-
-### SD Card
-**m,ACTION,(DURATION)**
-
-**Cyton must be connected over WiFi or Serial**
-
-#### ACTION
-
-* `start`
-
+Description:
 Start and SD card recording with a human readable command.
 
-Example: `m,start,15min,;\n`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v2.0.0`
+**command**
 
-#### DURATION
+The currently supported protocols are `serial`, and `wifi`.
 
 The duration you want to log SD information for. Opens a new SD file to write into. Limited to:
 
@@ -556,132 +607,161 @@ The duration you want to log SD information for. Opens a new SD file to write in
  * `12hour` - 12 hour
  * `24hour` - 24 hour
 
-#### Responses
+Example:
+`{"type":"sd", "action": "start", "command": "5min"}`
 
 Response: on success
-`m,200,start,;\n`
+`{"type":"sd", "action": "start", "code": 200}`
 
 Response: on failure because there is no SD card or some other failure
-`m,499,start,No sd card found,;\n`
+`{"type":"scan", "action": "start", "code": 499, "message": "Error message"}`
 
-Response: on failure because unsupported protocol set
-`m,433,;\n`
+#### `action` - `stop`
 
-#### ACTION
-
-* `stop`
-
+Description:
 Stop an SD card recording. Does not have DURATION property.
 
-Example: `m,stop,;\n`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v2.0.0`
+Example:
+`{"type":"sd", "action": "stop"}`
 
 Response: on success
-`m,200,start,;\n`
+`{"type":"sd", "action": "stop", "code": 200}`
 
-Response: on failure with message
-`m,499,stop,some error,;\n`
+Response: on failure
+`{"type":"scan", "action": "stop", "code": 499, "message": "Error message"}`
 
 ### Status
-**q**
+
+**type: `status`**
 
 Get the status of a Hub. If the TCO server in the Hub is working, this will always respond true.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"status"}`
 
 Response: on success
-`q,200,;\n`
+`{"type":"status", "code": 200}`
 
 ### WiFi
-**w,ACTION**
+
+**type: `wifi`**
 
 Used to get information on an attached WiFi Shield.
 
-#### ACTION - ERASE CREDENTIALS
+Availability: as of `v1.0.0`
 
-`eraseCredentials`
+#### `action` - `eraseCredentials`
 
+Description:
 Erase credentials on the WiFi shield. Your WiFi shield must have no board attached. You should use the *Examine* command to connect to the WiFi Shield with no Ganglion or Cyton attached. The process will take about 6 seconds. WiFi Shield will become a hotspot again.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"wifi", "action": "eraseCredentials"}`
 
 Response: on success
-`w,200,eraseCredentials,Rebooting wifi shield in 5 seconds,;\n`
+`{"type":"wifi", "action": "eraseCredentials", "code": 200, "command": eraseCredentials, "message": "Rebooting wifi shield in 5 seconds"}`
 
 Response: on failure because no wifi shield attached
-`w,426,;\n`
+`{"type":"wifi", "code": 426}`
 
 Response: on failure when failure to erase credentials command fails
-`w,428,timeout waiting for response,;\n`
+`{"type":"wifi", "code": 428, "command": eraseCredentials, "message": "Error message"}`
 
-#### ACTION - GET FIRMWARE VERSION
+#### `action` - `getFirmwareVersion`
 
-`getFirmwareVersion`
-
+Description:
 Get the firmware version of the attached WiFi Shield.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"wifi", "action": "getFirmwareVersion"}`
 
 Response: on success
-`w,200,getFirmwareVersion,v1.1.4,;\n`
+`{"type":"wifi", "command": "getFirmwareVersion", "code": 200, "message": "v3.1.1"}`
 
 Response: on failure because no wifi shield attached
-`w,426,;\n`
+`{"type":"wifi", "code": 426}`
 
-#### ACTION - GET IP ADDRESS
+#### `action` - `getIpAddress`
 
-`getIpAddress`
-
+Description:
 Get the IP Address of the attached WiFi Shield.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"wifi", "action": "getFirmwareVersion"}`
 
 Response: on success
-`w,200,getIpAddress,192.168.0.101,;\n`
+`{"type":"wifi", "command": "getFirmwareVersion", "code": 200, "message": "192.168.4.1"}`
 
 Response: on failure because no wifi shield attached
-`w,426,;\n`
+`{"type":"wifi", "code": 426}`
 
-#### ACTION - GET MAC ADDRESS
+#### `action` - `getMacAddress`
 
-`getMacAddress`
-
+Description:
 Get the MAC Address of the attached WiFi Shield.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"wifi", "action": "getMacAddress"}`
 
 Response: on success
-`w,200,getMacAddress,AA:12:AB:23:11:CD,;\n`
+`{"type":"wifi", "action": "getMacAddress", "code": 200, "message": "AA:12:AB:23:11:CD"}`
 
 Response: on failure because no wifi shield attached
-`w,426,;\n`
+`{"type":"wifi", "code": 426}`
 
-#### ACTION - GET TYPE OF BOARD ATTACHED
+#### `action` - `getTypeOfAttachedBoard`
 
-`getTypeOfAttachedBoard`
-
+Description:
 If the WiFi Shield is connected to a board, return the type of board. Potential board types are _none_, _cyton_, _daisy_, or _ganglion_
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"wifi", "action": "getTypeOfAttachedBoard"}`
 
 Response: on success
-`w,200,getTypeOfAttachedBoard,cyton,;\n`
+`{"type":"wifi", "command": "getTypeOfAttachedBoard", "code": 200, "message": "cyton"}`
 
 Response: on failure because no wifi shield attached
-`w,426,;\n`
+`{"type":"wifi", "code": 426}`
 
 ## Response Set
 As soon as a client has established itself to the Hub as a requester of information, messages will asynchronously be sent to the client.
 
 ### Accelerometer
-**t,CODE,AXIS_X,AXIS_Y,AXIS_Z**
 
-Description: Accelerometer data from the Ganglion.
-Availability: as of `v1.0.0`
+**type: accelerometer**
 
-**CODE**
-The success or error code for the packet. As of `v1.0.0`, only good data is sent.
+Description:
+Accelerometer data from the Ganglion.
+
+Availability:
+As of `v1.0.0`
+
+**accelDataCounts**
+
+An array of integers with three indexs: [AXIS_X,AXIS_Y,AXIS_Z]
+
+Where:
 
 **AXIS_X**
 The X axis in raw integer counts.
@@ -692,130 +772,207 @@ The Y axis in raw integer counts.
 **AXIS_Z**
 The Z axis in raw integer counts.
 
-Response: on success
-`a,202,50,0,30,;\n`
+Example:
+`{"type": "accelerometer", "code": 202, "accelDataCounts": [50, 0, 30]}`
 
 ### Channel settings
-**r,CODE,CHANNEL_NUMBER,POWER_DOWN,GAIN,INPUT_TYPE,BIAS,SRB2,SRB1**
 
-Description: A channel setting for Cyton.
-Availability: as of `v2.0.0`
+**type: channelSettings**
 
-**CODE**
-The success or error code for the packet. As of `v1.0.0`, only good data is sent.
+Description:
+Used to give registers of cyton
 
-**CHANNEL_NUMBER**
+**channelNumber**
 
 Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
 
-**POWER_DOWN**
+**powerDown**
 
 Will be either `true` if channel is powered down and `false` if channel is powered up like normal.
 
-**GAIN**
-The integer version of the gain. I.e. 1, 2, 4, 6, 8, 12, 24
+**gain**
+The integer version of the gain. i.e. 1, 2, 4, 6, 8, 12, 24
 
-**INPUT_TYPE**
+**inputType**
 
 Selects the ADC channel input source. It's a 'String' that **MUST** be one of the following: "normal", "shorted", "biasMethod" , "mvdd" , "temp" , "testsig", "biasDrp", "biasDrn".
 
-**BIAS**
+**bias**
 
-Selects if the channel shall include the channel input in bias generation. It's a 'Bool' where `true` includes the channel in bias (default) or `false` it removes it from bias.
+Selects if the channel shall include the channel input in bias generation. It's a number where `true` includes the channel in bias (default) or `false` for channel removed from bias.
 
-**SRB2**
+**srb2**
 
-Select to connect (`true`) this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's a 'Bool' where `true` connects this input to SRB2 (default) or `false` which disconnect this input from SRB2.
+Select to connect `true` this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `true` connects this input to SRB2 (default) or `false` which disconnect this input from SRB2.
 
-**SRB1**
+**srb1**
 
-Select to connect (`true`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's a 'Bool' where `true` connects all N inputs to SRB1 and `false` disconnects all N inputs from SRB1 (default).
+Select to connect `true` all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `true` connects all N inputs to SRB1 and `false` disconnects all N inputs from SRB1 (default).
+
+Availability:
+As of `v1.0.0`
+
+Example:
+```
+{
+  "code": 207
+  "type": "channelSettings",
+  "channelNumber": 3,
+  "powerDown": false,
+  "gain": 24,
+  "inputType": "normal",
+  "bias": true,
+  "srb2": true,
+  "srb1": false
+}
+```
 
 ### Impedance
-**i,CODE,CHANNEL,VALUE**
 
-Accelerometer data from the Ganglion.
+**type: impedance**
 
-Availability: as of `v1.0.0`
+Description:
+Impedance data from the Ganglion.
 
-**CODE**
-The success or error code for the packet. As of `v1.0.0`, only good data is sent.
+Availability:
+As of `v1.0.0`
 
-**CHANNEL**
-The channel number for the impedance `VALUE`. Either 1, 2, 3, 4 or 0 for the reference channel.
+**channel**
 
-**VALUE**
+Channel number as zero indexed i.e. 1,2,3,4 or 0 for the reference channel.
+
+**value**
+
 The impedance value in ohms for `CHANNEL`.
 
-Response: on success
-`i,203,1,300,;\n`
+Example:
+```
+{
+  "code": 203
+  "type": "impedance",
+  "channel": 3,
+  "value": 300
+}
+```
 
 ### Message
-**l,CODE,MESSAGE**
 
-Description: Message from the Ganglion.
-Availability: as of `v1.0.0`
+**type: message**
 
-**CODE**
-The success or error code for the packet. As of `v1.0.0`, only good messages are sent.
+Description:
+Message from the boards.
 
-**MESSAGE**
+Availability:
+As of `v1.0.0`
+
+**message**
+
 The string message from the Ganglion.
 
-Response: on success
-`l,200,string message,;\n`
+Example:
+```
+{
+  "code": 200
+  "type": "message",
+  "message": "Hello, world!",
+  "value": 300
+}
+```
 
 ### Samples
-**t,CODE,SAMPLE_NUM,CHAN_1,CHAN_2,CHAN_3,CHAN_4,(CHAN_N),(PACKET_TYPE),(ACCEL_DATA/AUX_DATA)**
 
-Sample channel data from the Ganglion or Cyton.
+**type: data**
 
-Availability: as of `v1.0.0`
+Description:
+Sample from the boards.
 
-**CODE**
-The success or error code for the packet. As of `v1.0.0`, only good data is sent.
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v1.0.0`
+**startByte**
 
-**SAMPLE_NUM**
-The sample number of this sample.
+Number should be 0xA0
 
-Availability: as of `v1.0.0`
+**sampleNumber**
 
-**CHAN_1**
-The first channel data in raw integer counts.
+a Number between 0-255
 
-Availability: as of `v1.0.0`
+**channelData**
 
-**CHAN_2**
-The second channel data in raw integer counts.
+channel data indexed at 0 filled with floating point Numbers in Volts) if sendCounts is false
 
-Availability: as of `v1.0.0`
+**channelDataCounts**
 
-**CHAN_3**
-The third channel data in raw integer counts.
+channel data indexed at 0 filled with un scaled integer Numbers in raw ADS counts) if sendCounts is true
 
-Availability: as of `v1.0.0`
+**accelData**
 
-**CHAN_4**
-The forth channel data in raw integer counts.
+Array with X, Y, Z accelerometer values when new data available) if sendCounts is false
 
-Availability: as of `v1.0.0`
+**accelDataCounts**
 
-**CHAN_N**
-The nth channel data in raw integer counts. Meaning the data will continue for the number of channels. Cyton would be 8 and daisy would be 16.
+Array with X, Y, Z accelerometer values when new data available) Only present if sendCounts is true
 
-Availability: as of `v2.0.0`
+**auxData**
 
-**PACKET_TYPE**
-The type of packet, can be as of `v2.0.0` either `0xC0` for 3 ACCEL_DATA raw integer count values or `0xC1` for 6 AUX_DATA 8 bit unsigned values.
+Buffer filled with either 2 bytes (if time synced) or 6 bytes (not time synced)
 
-Availability: as of `v2.0.0`
+**stopByte**
 
-**ACCEL_DATA/AUX_DATA**
-When PACKET_TYPE is `0xC0` then expect 3 ACCEL_DATA raw integer count values. When PACKET_TYPE is `0xC1` for 6 AUX_DATA 8 bit unsigned values that range between 0-255.
+Number should be 0xCx where x is 0-15 in hex
 
-#### Responses
+**boardTime**
 
-Response: on success
-`t,204,1,1000,2000,8000,2500,;\n`
+Number the raw board time
+
+**timestamp**
+
+Number the boardTime plus the NTP calculated offset
+
+Example for gangliom:
+```
+{
+  "code": 200,
+  "type": "data",
+  "channelDataCounts": [0, 1, 2, 3]
+}
+```
+
+Example for Cyton with accel:
+```
+{
+  "code": 200,
+  "type": "data",
+  "channelDataCounts": [0, 1, 2, 3, 4, 5, 6, 7],
+  "accelDataCounts": [0, 1, 2],
+  "stopByte": 192
+}
+```
+
+Example for Cyton with Daisy in analog read mode:
+
+```
+{
+  "auxData": {
+    "lower": {
+      "data": [ 1, 215, 1, 45, 3, 250],
+      "type": "Buffer"
+    },
+    "upper": {
+      "data": [ 1, 215, 1, 44, 3, 251],
+      "type": "Buffer"
+    }
+  },
+  "valid": true,
+  "code": 204,
+  "stopByte": 193,
+  "_timestamps": {
+    "lower": 1543879978994,
+    "upper": 1543879978994
+  },
+  "channelDataCounts": [-7729993, -7649407, -7606327, -7571616, -7591709, -7687549, -7552756, -7590690, -7580998, -7556930, -7596914, -7549892, -7594576, -7658804, -7523426, -7662588],
+  "type": "data",
+  "sampleNumber": 52,
+  "timestamp": 1543879978994
+}
+```
