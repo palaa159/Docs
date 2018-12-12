@@ -340,215 +340,171 @@ Response: on failure if already connected to device
 Response: on failure to stop scan
 `{"type":"examine", "code": 411, "message": "could not stop error"}`
 
-### Examine
-**x,SHIELD**
-
-Connect to and sync info with WiFi Shield named _SHIELD_. Should have started scan and asynchronously received the WiFi Shield name prior to calling to examine.
-
-Availability: as of `v2.0.0`
-
-#### SHIELD
-
-The local shield name of WiFi Shield such as `OpenBCI-ACDC`
-
-Example: `x,OpenBCI-ACDC,;\n`
-
-#### Responses
-
-Response: on success
-`x,200,;\n`
-If was searching for WiFi Shield prior to start expect response on a
-`s,200,stop,;\n`
-
-Response: on failure to stop scan
-`x,411,could not stop error,;\n`
-
-Response: on already connected to WiFi Shield
-`x,408,;\n`
-
 ### Impedance
-**i,ACTION**
 
-Stop or start impedance testing.
+**type: `impedance`**
 
-#### ACTION - START
+Stop or start impedance testing for Ganglion or send a impedance setting for the cyton.
 
-`start`
+#### `action` - `set`
 
-Start impedance testing.
+Description:
+Used to set impedance registers for Cyton.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v2.0.0`
+
+**channelNumber**
+
+Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
+
+**pInputApplied**
+
+Should the impedance signal be routed to the P input `channelNumber`
+
+**nInputApplied**
+
+Should the impedance signal be routed to the N input `channelNumber`
+
+Example:
+```
+{
+  "action": "set",
+  "type": "impedance",
+  "channelNumber": 3,
+  "pInputApplied": false,
+  "nInputApplied": true
+}
+```
 
 Response: on success
-`i,200,start,;\n`
+`{"type":"impedance", "action": "set", "code": 200}`
 
-Response: on failure
-`i,414,string error message,;\n`
+Response: on failure to set impedance
+`{"type":"impedance", "action": "set", "code": 424, "message": "verbose error message here"}`
 
-#### ACTION - STOP
+Response: on failure to parse input commands properly.
+`{"type":"impedance", "action": "set", "code": 431, "message": "more verbose error message"}`
 
-`stop`
+#### `action` - `start`
 
-Stop impedance testing.
+Description:
+Used to start impedance testing for Ganglion
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"impedance", "action": "start"}`
 
 Response: on success
-`i,200,stop,;\n`
+`{"type":"impedance", "action": "start", "code": 200}`
 
-Response: on failure
-`i,415,string error message,;\n`
+Response: on failure to start
+`{"type":"impedance", "action": "start", "code": 414, "message": "Error message"}`
+
+#### `action` - `stop`
+
+Description:
+Used to stop impedance testing for Ganglion
+
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"impedance", "action": "stop"}`
+
+Response: on success
+`{"type":"impedance", "action": "stop", "code": 200}`
+
+Response: on failure to stop
+`{"type":"impedance", "action": "stop", "code": 415, "message": "Error message"}`
 
 ### Protocol
-**p,ACTION,PROTOCOL**
 
-Protocol should also be started prior to each session. It will cleanly start a session.
+**type: `protocol`**
 
-#### ACTION - START
+Protocol should also be started prior to each session. It will cleanly start a session. The currently supported protocols are `ble`, `bled112`, `serial` and `wifi`.
 
-`start`
+Availability: as of `v2.0.0`
 
+#### `action` - `start`
+
+Description:
 Start a protocol. Stop all other protocols before starting this new one.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-The currently supported protocols are `ble`, `serial` and `wifi`.
+**protocol**
 
-**PROTOCOL - BLE**
+The currently supported protocols are `ble`, `bled112`, `serial` and `wifi`.
 
-`ble`
+Only the Ganglion uses the `ble` and `bled112` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial.
 
-Only the Ganglion uses the `ble` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial.
+Example of `ble` or `bled112` for Ganglion:
+`{"type":"protocol", "action": "start", "protocol": "ble"}`
 
-Availability: as of `v2.0.0`
+Response: on success for Ganglion:
+`{"type":"protocol", "action": "start", "protocol": "ble", "code": 200}`
 
-Example: `p,start,ble,;\n`
+Response: on failure to start ganglion ble driver
+`{"type":"impedance", "action": "start", "code": 419, "message": "failed to start driver"}`
 
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,ble,start,;\n`
-`s,200,start,;\n`
+Only the Ganglion uses the `ble` and `bled112` as of today. Paired, with `start`, the `ble` will start a ble attempt to start the bluetooth low energy drivers. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-ganglion-on-windows). Windows it's very important for you to use Zadig tool as described in the tutorial if not using BLED112.
 
-Response: on failure
-`p,412,failed to start driver,;\n`
+Example of `serial` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "serial"}`
 
-**PROTOCOL - Serial (Dongle)**
+Response: on success for `serial` Cyton:
+`{"type":"protocol", "action": "start", "protocol": "serial", "code": 200}`
 
-`serial`
+Example of `wifi` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "wifi"}`
 
-Only the Cyton uses the `serial` as of today. Paired, with `start`, the `serial` will start a serial driver. [Tutorial found on docs.openbci.com](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-hardwaredriver-setup-for-openbci_gui-and-openbcihub-cyton-on-macoswindowslinux). Need FTDI VCP drivers.
+Response: on success for `wifi` for Cyton:
+`{"type":"protocol", "action": "start", "protocol": "wifi", "code": 200}`
 
-Availability: as of `v2.0.0`
 
-Example: `p,start,serial,;\n`
+#### `action` - `status`
 
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,serial,start,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Both the Cyton and Ganglion can use the `wifi` protocol as of today. Paired, with `start`, the `wifi` command will start a wifi driver. There are no dependencies for this protocol.
-
-Example: `p,start,wifi,;\n`
-
-Response: on success, ganglion will also start searching once driver is initialized.
-`p,200,wifi,start,;\n`
-
-#### ACTION - STATUS
-
-`status`
-
+Description:
 Check the to see if a protocol has been started and is set as the current protocol.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v1.0.0`
 
-The currently supported protocols are `ble`, `serial` and `wifi`.
+Example on `ble` or `bled112`:
+`{"type":"protocol", "action": "status", "protocol": "ble"}`
 
-**PROTOCOL - BLE**
+Response: on on ganglion was started successfully and running
+`{"type":"protocol", "action": "status", "code": 200}`
 
-`ble`
+Response: on protocol is stopped
+`{"type":"protocol", "action": "status", "code": 501}`
 
-Availability: as of `v2.0.0`
+Example on `serial` or `wifi`:
+`{"type":"protocol", "action": "status"}`
 
-Example: `p,status,ble,;\n`
+Response: on protocol is started
+`{"type":"protocol", "action": "status", "code": 304}`
 
-Response: on ganglion was started successfully and running
-`p,200,ble,status,;\n`
+Response: on protocol is stopped
+`{"type":"protocol", "action": "status", "code": 305}`
 
-Response: on failure of ganglion to be started successfully
-`p,501,ble,status,;\n`
+#### `action` - `stop`
 
-**PROTOCOL - Serial (Dongle)**
+Description:
+Check the to see if a protocol has been started and is set as the current protocol.
 
-`serial`
+Availability:
+As of `v1.0.0`
 
-Availability: as of `v2.0.0`
+Example for `ble`, `bled112`, `serial`, and `wifi`:
+`{"type":"protocol", "action": "stop", "protocol": "ble"}`
 
-Example: `p,status,serial,;\n`
-
-Response: on cyton serial object started successfully and running
-`p,304,;\n`
-
-Response: on cyton serial object not started
-`p,305,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Availability: as of `v2.0.0`
-
-Example: `p,status,wifi,;\n`
-
-Response: on wifi object started successfully and running
-`p,304,;\n`
-
-Response: on wifi object not started
-`p,305,;\n`
-
-#### ACTION - STOP
-
-`stop`
-
-Stop and destroy a protocol. These are designed to be over called, in that calling when protocol is not started, will still result in success message.
-
-Availability: as of `v2.0.0`
-
-The currently supported protocols are `ble`, `serial` and `wifi`.
-
-**PROTOCOL - BLE**
-
-`ble`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,ble,;\n`
-
-Response: on ganglion was stopped and cleaned up
-`p,200,ble,stop,;\n`
-
-**PROTOCOL - Serial (Dongle)**
-
-`serial`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,serial,;\n`
-
-Response: on cyton serial was stopped and cleaned up
-`p,200,serial,stop,;\n`
-
-**PROTOCOL - WiFi Shield**
-
-`wifi`
-
-Availability: as of `v2.0.0`
-
-Example: `p,stop,wifi,;\n`
-
-Response: on wifi object stopped and cleaned up
-`p,200,wifi,stop,;\n`
+Response: on stop for `ble`, `bled112`, `serial`, and `wifi`:
+`{"type":"protocol", "action": "stop", "protocol": "ble", "code": 200}`
 
 ### Scan
 **s,ACTION**
