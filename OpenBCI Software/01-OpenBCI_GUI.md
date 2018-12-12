@@ -142,6 +142,8 @@ Replacing the files may bring up another pop up that you need to accept for alte
 
 ![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
 
+If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
+
 Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
 ![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
@@ -302,6 +304,9 @@ Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on h
 The OpenBCI GUI displays up to six customizable windows in twelve layouts! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
+
+The GUI stores the raw EEG data in a directory called "data" in the root directory of the GUI
+It stores each session with a session time stamp. 
 
 ## Decrease Setup Time by Saving/Loading Settings
 Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts. If you change anything during a session, save your settings or click "Stop System" before exiting. __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _/SavedData/Settings/_.
