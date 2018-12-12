@@ -293,18 +293,50 @@ Press the `play` button on the upper left of the IDE, and the sketch will try to
 
 If you are encountering issues launching the GUI at this point, please head to the [OpenBCI_GUI section](http://openbci.com/index.php/forum/#/categories/openbci_gui) of our Forum and look for help or post a question.
 
-### Using the OpenCBI GUI
+### Using the OpenBCI GUI
 
 ![use gui](../assets/images/USE-GUI.JPG)
 
-Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V2! Coming Soon.
+Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V3! Coming Soon.
 
-## Cool GUI Features 
+## Customize Your Layout
 
-The OpenBCI GUI can display up to six customizable windows! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
+The OpenBCI GUI displays up to six customizable windows in twelve layouts! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. Here's a tip that some users have inquired about: display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number. See below:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 The GUI stores the raw EEG data in a directory called "data" in the root directory of the GUI
 It stores each session with a session time stamp. 
 
+## Decrease Setup Time by Saving/Loading Settings
+Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts. If you change anything during a session, save your settings or click "Stop System" before exiting. __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _/SavedData/Settings/_.
+
+![Config Button](../assets/images/GUI_Config_Button_ScreenshotRev3.png)
+
+Start the system first. Then, arrange the GUI to suit your needs and __click "Settings"-->"Save"__. A dialog box will open to confirm file name and path _(e.g. GanglionUserSettings.json)_. After, you will see a message saying "Settings Saved!" When you click "Stop System", all settings will be auto-saved.
+
+The GUI automatically loads settings from _/SavedData/Settings/_ when the system starts!
+
+To load settings, just __click "Settings"-->"Load"__. Select a settings file from the dialog box that opens. If the settings are incompatible (ex. loading 16 channels while using 8), the GUI will display an error at the bottom or "Default Settings Loaded". If all is well, the GUI will display "Settings Loaded!" as the GUI snaps directly to your desired settings.
+
+__Click "Settings"-->"Default" to revert the GUI to default settings.__ 
+
+When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
+
+## Other Keyboard Shortcuts
+__Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
+
+Time Series Shortcuts:
+- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
+
+- Using an _English keyboard_, you can deactivate channels 1-16 using: 
+  - 1,2,3,4,5,6,7,8
+  - q,w,e,r,t,y,u,i
+
+- Similarly, activate channels 1-16 using:
+  - !, @, #, $, %, ^, &, *
+  - Q,W,E,R,T,Y,U,I
+
+- __Take a screenshot of the GUI using lowercase 'm'!__ It will be saved to /SavedData/.
+- __Enter presentation mode using Enter (Win), or Return (Mac).__
+- To change to the alternate color scheme, use '{' .
