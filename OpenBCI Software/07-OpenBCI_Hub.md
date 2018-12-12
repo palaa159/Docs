@@ -1,9 +1,9 @@
-# OpenBCI Electron Hub
+# OpenBCI Hub
 
 Middleware Software used to communicate with OpenBCI boards through TCP/IP command protocol. This Doc covers the OpenBCI Hub for Cyton, Ganglion, and WiFi Shield.
 
 ## Version
-Version `v2.0.0` released September 2017
+Version `v2.0.0` released September 2018
 
 Version `v1.0.0` released January 3rd, 2017.
 
@@ -19,244 +19,326 @@ A unique port, `10996`, is critical because applications must be able to hit a k
 
 ## Hub Command Protocol Overview
 
-The Hub uses a comma-separated-value system followed by stop characters. The stop characters are `,;\n` or ("comma" "semi-colon" "backslash n"). A recommended client parsing is to store incoming TCP data into a buffer until the stop characters `';\n` are consecutively identified. The contents of the buffer can be now be considered a Message. The buffer can be flushed and the Message can be processed. Split the Message by `,` ("comma") to facilitate parsing. The first value will always be the command. The rest of the Message will then be translated based on the protocol for that command described in the Specification below. All commands sent to the client will be replied to asynchronously.
+As of v2.0.0, the Hub uses JSON to pass messages send and receive messages over TCP. Each JSON string should end in a `\n`. Parse for `\n` and then strip the beginning of the string down to the character before `\n` and use your languages built in JSON parser. The contents of the buffer can be now be considered a Message. The buffer can be flushed and the Message can be processed. There will always be a 'command' key which will aid in parsing the rest of message. The rest of the Message will then be translated based on the protocol for that command described in the Specification below. All commands sent to the client will be replied to asynchronously.
 
 ### Example:
-If a client sends `s,start,;\n` to the Hub on `127.0.0.1:10996`, the Hub will respond with either `s,200,start,;\n` if the scan was started or an error message if unable to start such as `s,412,unable to start scan,;\n`.
+If a client sends `{"type":"scan", "action":"start"}\n` to the Hub on `127.0.0.1:10996`, the Hub will respond with either `{"type":"scan", "action":"start", "code":200}\n` if the scan was started or an error message if unable to start such as `{"type":"scan","code":412,"message":"unable to start scan"}\n`.
 
 ## Command Set
 Commands are sent from the client to the Hub. Each command gets an asynchronous response with a meaningful code. When able, errors are sent with string error messages.
 
 ### Accelerometer
-**a,ACTION**
+
+**type: `accelerometer`**
 
 Stop or start accelerometer.
 
-#### ACTION - START
+#### `action` - `start`
 
-`start`
-
+Description:
 Start accelerometer. Only useful for Ganglion.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"accelerometer", "action": "start"}`
 
 Response: on success
-`a,200,start,;\n`
+`{"type":"accelerometer", "action": "start", "code": 200}`
 
 Response: on failure
-`a,416,string error message,;\n`
+`{"type":"accelerometer", "action": "start", "code": 416, "message": "string error message"}`
 
-#### ACTION - STOP
+#### `action` - `stop`
 
-`stop`
-
+Description:
 Stop accelerometer. Only useful for Ganglion.
 
-Availability: as of `v1.0.0`
+Availability:
+As of `v1.0.0`
+
+Example:
+`{"type":"accelerometer", "action": "stop"}`
 
 Response: on success
-`a,200,stop,;\n`
+`{"type":"accelerometer", "action": "stop", "code": 200}`
 
 Response: on failure
-`a,417,string error message,;\n`
+`{"type":"accelerometer", "action": "stop", "code": 417, "message": "string error message"}`
+
 
 ### Board Type
-**b,BOARD_TYPE**
+
+**type: `boardType`**
 
 Attempts to set the board type to user requested board type, such as when a user requests 16 channel Cyton. This command is only useful for Cyton because of Daisy.
 
-Availability: as of `v2.0.0`
+#### `boardType` - `cyton`
 
-#### BOARD_TYPE - CYTON
-
-`cyton`
-
+Description:
 Force set to 8 channel Cyton board.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-Example: `b,cyton,;\n`
+Example:
+`{"type":"boardType", "boardType": "cyton"}`
 
-#### BOARD_TYPE - DAISY
+Response: on success
+`{"type":"boardType", "boardType": "cyton", "code": 200}`
 
-`daisy`
+Response: on failure
+`{"type":"boardType", "boardType": "cyton", "code": 421, "message": "string error message"}`
 
-Availability: as of `v2.0.0`
+#### `boardType` - `daisy`
 
-Example: `b,daisy,;\n`
+Description:
+Force set to 16 channel Cyton board.
 
-#### Responses
+Availability:
+As of `v2.0.0`
 
-Response: on success where board type set correctly to Cyton with 8 Channels
-`b,200,cyton,;\n`
+Example:
+`{"type":"boardType", "boardType": "daisy"}`
 
-Response: on success where board type set correctly to Cyton with Daisy 16 Channels
-`b,200,daisy,;\n`
+Response: on success
+`{"type":"boardType", "boardType": "daisy", "code": 200}`
 
-Response: on failure to set board correctly to Cyton or Daisy with 8 or 16 Channels
-`b,421,some error message,;\n`
+Response: on failure
+`{"type":"boardType", "boardType": "daisy", "code": 421, "message": "string error message"}`
 
 ### Channel Settings
-**r,ACTION,(ARGS)**
+
+**type: `channelSettings`**
 
 For setting the channel settings on a Cyton board with either WiFi or Serial protocols set.
 
 Availability: as of `v2.0.0`
 
-#### ACTION - START
+#### `action` - `start`
 
-`start`
-
+Description:
 Used to start a channel setting sync. This will emit channel settings on success.
 
-Availability: as of `v2.0.0`
+Availability:
+As of `v2.0.0`
 
-Example: `r,start,;\n`
+Example:
+`{"type":"channelSettings", "action": "start"}`
+
+Response: on success
+`{"type":"channelSettings", "action": "start", "code": 200}`
+
+Response: on failure when channel setting sync is already in progress
+`{"type":"channelSettings", "action": "start", "code": 422, "message": "Sync in progress"}`
 
 Response: on success for each channel, see the [Response Set](http://docs.openbci.com/OpenBCI%20Software/07-OpenBCI_Hub#openbci-electron-hub-response-set) below for _Channel Settings_.
 
-#### ACTION - SET
+#### `action` - `set`
 
-`set`
-
+Description:
 Used to set a channel for cyton over wifi or ganglion.
 
-Availability: as of `v2.0.0`
-
-Example: `r,set,3,0,24,normal,1,1,0,;\n`
-
-**CHANNEL_NUMBER**
+**channelNumber**
 
 Channel number as zero indexed i.e. 0-7 or 0-15 for Cyton and Cyton with Daisy respectively.
 
-**POWER_DOWN**
+**powerDown**
 
-Will be either `1` if channel is powered down and `0` if channel is powered up like normal.
+Will be either `true` if channel is powered down and `false` if channel is powered up like normal.
 
-**GAIN**
+**gain**
 The integer version of the gain. i.e. 1, 2, 4, 6, 8, 12, 24
 
-**INPUT_TYPE**
+**inputType**
 
 Selects the ADC channel input source. It's a 'String' that **MUST** be one of the following: "normal", "shorted", "biasMethod" , "mvdd" , "temp" , "testsig", "biasDrp", "biasDrn".
 
-**BIAS**
+**bias**
 
-Selects if the channel shall include the channel input in bias generation. It's a number where `1` includes the channel in bias (default) or `0` for channel removed from bias.
+Selects if the channel shall include the channel input in bias generation. It's a number where `true` includes the channel in bias (default) or `false` for channel removed from bias.
 
-**SRB2**
+**srb2**
 
-Select to connect (`1`) this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `1` connects this input to SRB2 (default) or `0` which disconnect this input from SRB2.
+Select to connect `true` this channel's P input to the SRB2 pin. This closes a switch between P input and SRB2 for the given channel, and allows the P input to also remain connected to the ADC. It's an integer where `true` connects this input to SRB2 (default) or `false` which disconnect this input from SRB2.
 
-**SRB1**
+**srb1**
 
-Select to connect (`1`) all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `1` connects all N inputs to SRB1 and `0` disconnects all N inputs from SRB1 (default).
+Select to connect `true` all channels' N inputs to SRB1. This effects all pins, and disconnects all N inputs from the ADC. It's an integer where `true` connects all N inputs to SRB1 and `false` disconnects all N inputs from SRB1 (default).
 
-#### Responses
+Availability:
+As of `v2.0.0`
+
+Example:
+```
+{
+  "action": "set",
+  "type": "channelSettings",
+  "channelNumber": 3,
+  "powerDown": false,
+  "gain": 24,
+  "inputType": "normal",
+  "bias": true,
+  "srb2": true,
+  "srb1": false
+}
+```
 
 Response: on success
-`r,200,set,;\n`
+`{"type":"channelSettings", "action": "set", "code": 200}`
 
 Response: on failure to set command
-`r,424,verbose error message here,;\n`
+`{"type":"channelSettings", "action": "set", "code": 424, "message": "verbose error message here"}`
 
 Response: on failure to parse input commands properly. This means comma separated string input did not contain the correct positioned items. Verify with example.
-`r,425,more verbose error message,;\n`
+`{"type":"channelSettings", "action": "set", "code": 425, "message": "more verbose error message"}`
 
 ### Command
-**k,COMMAND**
 
-Passes through a `COMMAND`, either one char or multiple chars, to a connected device.
+**type: `command`**
 
-Availability: as of `v1.0.0`
+Passes through a `COMMAND`, either one char or a string, to a connected device.
 
-#### COMMAND
+Availability: as of `v2.0.0`
 
+#### `command` - `*`
+
+Description:
 Single or multi char to get passed through the module to the connected board. Multi char limited to 30 on WiFi and 19 on BLE.
 
-#### Responses
+Availability:
+As of `v2.0.0`
+
+Example:
+`{"type":"command", "command": "1"}`
 
 Response: on success
-`k,200,;\n`
-
-Response: on failure because no connected device
-`k,400,;\n`
+`{"type":"command", "command": "start", "code": 200}`
 
 Response: on failure unable to write to connected device
-`k,406.string error message,;\n`
+`{"type":"command", "command": "start", "code": 406, "message": "verbose error message"}`
+
+Response: on failure when protocol of current device is not selected
+`{"type":"command", "command": "start", "code": 420, "message": "verbose error message"}`
 
 ### Connect
-**c,PORT_NAME,(SAMPLE_RATE),(LATENCY)**
 
-Connect to a Ganglion BLE device with only a local name.
+**type: `connect`**
 
-#### PORT_NAME
+Connect to any device a local name or IP address.
+
+Availability: as of `v2.0.0`
+
+**name**
 
 The local string name of a Cyton USB Dongle, Ganglion peripheral, or WiFi Shield unique name to connect to.
 
-Availability: as of `v1.0.0`
+**burst** *optional*
 
-Example: `c,Ganglion-XXXX,;\n` for BLE for Ganglion
-Example: `c,COM4,;\n` for Serial on Windows
+True to use burst mode, only applies when UDP is set for protocol. Either `true` and `false`.
 
-#### SAMPLE_RATE
-
-**Only Required for WiFi connection**
+**sampleRate** *optional*
 
 A number that is the requested sample rate to set the attached Ganglion or Cyton to. Ganglion must have v2.0.0 firmware or later and Cyton must have v3.0.0 firmware available. Value is in Hz and must be a valid sample rate for the board of choice.
 
-Availability: as of `v2.0.0`
-
-Example: `c,OpenBCI-ACDC,1000,15000,;\n` for Cyton/Daisy set to 1000Hz
-Example: `c,OpenBCI-ACDC,1600,15000,;\n` for Ganglion set to 1600Hz
-
-#### LATENCY
-
-**Only Required for WiFi connection**
+**latency** *optional*
 
 A number that is the latency for the inter-packet sending on the WiFi Shield. The time is in micro-seconds.
 
-Availability: as of `v2.0.0`
+**protocol** *optional*
 
-Example: `c,OpenBCI-ACDC,1000,5000,;\n` for latency set to 5000uS (5 ms)
+The type of internet protocol to use, either 'udp' or 'tcp'.
 
-#### Responses
+**ipAdderss** *optional*
+
+The ip
+
+Availability:
+As of `v2.0.0`
+
+Example for Ganglion and Cyton:
+`{"type": "connect", "name": "Ganglion-XXXX"}`
+
+Example for WiFi with name over tcp:
+```
+{
+  "type": "connect",
+  "name": "OpenBCI-XXXX",
+  "latency": 1000,
+  "sampleRate": 500,
+  "protocol": "tcp"
+}
+```
+
+Example for WiFi with IP Address over UDP with burst mode:
+```
+{
+  "type": "connect",
+  "ipAddress": "192.168.4.1",
+  "latency": 1000,
+  "sampleRate": 500,
+  "protocol": "udp",
+  "burst": true
+}
+```
 
 Response: on success
-`c,200,;\n`
+`{"type":"connect", "firmware": "v2.0.0", "code": 200}`
 
-Response: on failure unable to connect
-`c,402,string error message,;\n`
+Response: on failure to connect
+`{"type":"connect", "code": 402, "message": "verbose error message"}`
 
-Response: on failure to connect because already connected to another device
-`c,408,;\n`
-
-Response: on failure unable to stop scan before verification for connect or unable to stop the verification scan.
-`c,411.string error message,;\n`
-
-Response: on failure unable to start verification scan before connect
-`c,412,string error message,;\n`
-
-Response: on failure unable to verify, aka scan and find the requested BLE peripheral with local name matching the requested supplied `PORT_NAME` within 5 seconds.
-`c,413,;\n`
-
+Response: on failure already connected
+`{"type":"connect", "code": 408}`
 
 ### Disconnect
-**d**
 
-Disconnect from a connected Ganglion BLE device.
+**type: `disconnect`**
 
-Availability: as of `v1.0.0`
+Disconnect from a connected device.
 
-Example: `d,;\n`
+Availability:
+As of `v1.0.0`
 
-#### Responses
+Example:
+`{"type":"disconnect"}`
 
 Response: on success
-`d,200,;\n`
+`{"type":"disconnect", "code": 200}`
 
-Response: on failure unable to disconnect
-`d,401,string error message,;\n`
+Response: on failure unable to disconnect to connected device
+`{"type":"disconnect", "code": 401, "message": "verbose error message"}`
+
+### Examine
+
+**type: `examine`**
+
+Examine a WiFi shield.
+
+Availability:
+As of `v2.0.0`
+
+Example with shield name:
+`{"type":"examine", "shieldName": "OpenBCI-XXXX"}`
+
+Example with ipAddress:
+`{"type":"examine", "ipAddress": "192.168.4.1"}`
+
+If was searching for WiFi Shield prior to start, expect response on a
+`{"type":"scan", "action": "stop", "code": 200}`
+
+Response: on success
+`{"type":"examine", "code": 200}`
+
+Response: on failure to connect to device
+`{"type":"examine", "code": 402, "message": "verbose error message"}`
+
+Response: on failure if already connected to device
+`{"type":"examine", "code": 408, "message": "verbose error message"}`
+
+Response: on failure to stop scan
+`{"type":"examine", "code": 411, "message": "could not stop error"}`
 
 ### Examine
 **x,SHIELD**
