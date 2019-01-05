@@ -117,7 +117,7 @@ Then double click the executable to run it for the first time. You must check bo
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal. **As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.**
+We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal. As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.
 
 ![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
 
@@ -272,7 +272,7 @@ To quit the hub, click the tray cat icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'. **When using Processing, simply set Processing or another IDE to 'Run this program as an administrator'.**
+As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
