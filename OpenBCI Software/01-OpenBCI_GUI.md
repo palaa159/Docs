@@ -272,7 +272,7 @@ To quit the hub, click the tray cat icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
+As of GUI v4, the GUI will auto-launch the Hub on Windows. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
