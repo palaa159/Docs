@@ -122,6 +122,7 @@ Next, right click on the executable -> properties -> compatibility -> tick "Run 
 Please place the OpenBCIHub in the GUI data directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
 
+REPLACE THIS SCREENSHOT
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
@@ -146,7 +147,8 @@ To quit the hub, click the tray cat icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-Make sure to set both the GUI and the Hub to "Run this program as an administrator". As of GUI v4, the GUI will launch the Hub automatically.
+Make sure to set both the GUI and the Hub to "Run this program as an administrator". 
+**As of GUI v4, the GUI will launch the Hub automatically.**
 
 ### Install OpenBCI_GUI on Linux
 
@@ -243,7 +245,7 @@ After it downloads and unpacks itself, your Downloads folder will look like this
 
 ![Hub Home](../assets/images/ganglion_hub-home.png)
 
-Move the `Ganglion Hubb app` from your Downloads folder to:
+Move the `Ganglion Hub app` from your Downloads folder to:
 
 `Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
 
@@ -253,9 +255,10 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 
 ![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
 
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
+Please place the OpenBCIHub in the GUI `/data/` directory. Example:
+"\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
 
+REPLACE THIS SCREENSHOT
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
