@@ -136,19 +136,11 @@ Navigate to your `Applications` folder and double click the `OpenBCI_GUI` You ma
 
 ### Running on Windows
 
-Double click the `OpenBCIHub` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+Navigate to your `Program Files\OpenBCI_GUI` directory. If you set the properties to always start as administrator, double click OpenBCI_GUI.exe. Otherwise, right click on the executable and run as administrator.
 
-From testing, it's incredibly important to run as adminstrator for Cyton over Serial or Ganglion over BLE. You don't need to run the OpenBCIHub as an administrator for WiFi.
+If prompted, check both boxes:
 
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, so you don't forget to start the hub before running the OpenBCI_GUI. The hub has a very low memory usage and zero CPU impact when not streaming data.
-
-**As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.**
-
-You can verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-Now with the Hub running, double click the `OpenBCI_GUI` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
 ### Running on Linux
 
