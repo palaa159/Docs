@@ -98,49 +98,18 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ### Install OpenBCI_GUI On Windows
 
-First unzip the windows application you downloaded from the [downloads](http://openbci.com/donation) section of the OpenBCI Website.
-
-![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
-
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
-
-Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
-
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
-
-Then double click the executable to run it for the first time. You must check both check boxes when prompted.
-
-![accept networking](../assets/images/gui_windows_accept_networking.PNG)
-
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal. As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.
-
-![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
-
-Verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-To quit the hub, click the tray cat icon, and then press the quit button.
-
-![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
-
-Please place the GUI in your Program Files directory such that the structure looks like:
+Place the GUI in your Program Files directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
 
-![drag and drop](../assets/images/gui_windows_drag_and_drop_gui.png)
+Note: The GUI may not run properly if installed in another location.
 
-If you already have a GUI installed, you may select to replace all the files.
+![drag and drop](../assets/images/gui_windows_drag_and_drop.png)
 
-![replace all files popup](../assets/images/gui_windows_replace_warning.PNG)
+Create a short cut on your desktop by right clicking on the executable -> Send to -> Desktop
 
-Replacing the files may bring up another pop up that you need to accept for altering files within the Program Files folder.
+Then double click the executable to run it for the first time. You must check both check boxes if prompted.
 
-![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
 If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
 
