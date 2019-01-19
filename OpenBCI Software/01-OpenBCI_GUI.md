@@ -105,6 +105,10 @@ Note: The GUI may not run properly if installed in another location.
 
 ![drag and drop](../assets/images/gui_windows_drag_and_drop.png)
 
+Right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
+
 Create a short cut on your desktop by right clicking on the executable -> Send to -> Desktop
 
 Then double click the executable to run it for the first time. You must check both check boxes if prompted.
@@ -112,10 +116,6 @@ Then double click the executable to run it for the first time. You must check bo
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
 If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
-
-Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
 
 ### Install OpenBCI_GUI on Linux
 
