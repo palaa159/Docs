@@ -102,33 +102,6 @@ First unzip the windows application you downloaded from the [downloads](http://o
 
 ![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
 
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
-
-Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
-
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
-
-Then double click the executable to run it for the first time. You must check both check boxes when prompted.
-
-![accept networking](../assets/images/gui_windows_accept_networking.PNG)
-
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal. As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.
-
-![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
-
-Verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-To quit the hub, click the tray cat icon, and then press the quit button.
-
-![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
-
 Please place the GUI in your Program Files directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
 
@@ -142,11 +115,38 @@ Replacing the files may bring up another pop up that you need to accept for alte
 
 ![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
 
-If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
-
-Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+Next, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
 ![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
+
+Please place the OpenBCIHub in the GUI data directory such that the structure looks like:
+"\Program Files\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
+
+![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
+
+Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
+
+Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
+
+Then double click the executable to run it for the first time. You must check both check boxes when prompted.
+
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
+
+We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal.
+
+![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
+
+Verify the hub is running in your windows tool tray.
+
+![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
+
+To quit the hub, click the tray cat icon, and then press the quit button.
+
+![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
+
+Make sure to set both the GUI and the Hub to "Run this program as an administrator". As of GUI v4, the GUI will launch the Hub automatically.
 
 ### Install OpenBCI_GUI on Linux
 
