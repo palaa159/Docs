@@ -122,7 +122,6 @@ Next, right click on the executable -> properties -> compatibility -> tick "Run 
 Please place the OpenBCIHub in the GUI data directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
 
-REPLACE THIS SCREENSHOT
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
@@ -258,7 +257,6 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 Please place the OpenBCIHub in the GUI `/data/` directory. Example:
 "\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
 
-REPLACE THIS SCREENSHOT
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
