@@ -389,7 +389,7 @@ Select the desired WiFi Shield from the dropdown list
 
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
-Select the right carrot button to open the WiFi Configuration window
+Select the right caret button to open the WiFi Configuration window
 
 ![selecting right carrot to open wifi config](../assets/images/wifi_config_select_right_carrot.png)
 
@@ -397,7 +397,7 @@ If the connection to the WiFi Shield was successful, you will see a success mess
 
 ![success connection to wifi shield](../assets/images/wifi_config_success_message.png)
 
-When you are finished, press the left facing carrot to close the WiFi Configuration window.
+When you are finished, press the left facing caret to close the WiFi Configuration window.
 
 ![selecting left facing arrow to close wifi configuration](../assets/images/wifi_config_success_message.png)
 
