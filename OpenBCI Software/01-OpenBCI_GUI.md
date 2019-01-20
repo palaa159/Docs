@@ -98,7 +98,7 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ### Install OpenBCI_GUI On Windows
 
-Place the GUI in your Program Files directory such that the structure looks like:
+Place the OpenBCI_GUI directory in your Program Files directory such that the structure looks like:
 "\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
 
 Note: The GUI may not run properly if installed in another location.
@@ -204,7 +204,7 @@ After it downloads and unpacks itself, your Downloads folder will look like this
 
 ![Hub Home](../assets/images/ganglion_hub-home.png)
 
-Move the `Ganglion Hubb app` from your Downloads folder to:
+Move the `Ganglion Hub app` from your Downloads folder to:
 
 `Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
 
@@ -214,8 +214,8 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 
 ![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
 
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
+Please place the OpenBCIHub in the GUI `/data/` directory. Example:
+"\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
 
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
