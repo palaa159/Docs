@@ -201,11 +201,11 @@ We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub]
 
 After downloading and uppacking, your Downloads folder will look like this on Windows/Linux. On Mac, you'll just have an OpenBCIHub.app file.
 
-# On Mac, move the `OpenBCIHub.app` to:
+#### On Mac, move the `OpenBCIHub.app` to:
 
 `/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
-# On Windows:
+#### On Windows:
 
 Rename the directory you just unpacked to `OpenBCIHub` and move it to:
 
@@ -227,7 +227,7 @@ Then quit the HUB: click the tray icon, and then press the quit button.
 
 As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
 
-# On Linux:
+#### On Linux:
 
 Copy all the contents of the directory you just unpacked, and paste it in here:
 
