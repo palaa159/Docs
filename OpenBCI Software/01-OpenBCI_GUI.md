@@ -214,7 +214,8 @@ The fastest way is to download the standalone .exe/.app for your machine and ope
 ![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
 
 Please place the OpenBCIHub in the GUI `/data/` directory. Example:
-"\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
+
+`\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe`
 
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
