@@ -100,7 +100,7 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 Place the OpenBCI_GUI directory in your Program Files directory such that the structure looks like:
 
-`\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe`
+`C:\\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe`
 
 Note: The GUI may not run properly if installed in another location.
 
