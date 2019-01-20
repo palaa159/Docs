@@ -221,7 +221,7 @@ Then double click the executable to run it for the first time. You must check bo
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-Then quit the HUB: click the tray cat icon, and then press the quit button.
+Then quit the HUB: click the tray icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
