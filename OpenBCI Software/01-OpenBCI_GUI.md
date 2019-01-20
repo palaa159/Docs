@@ -99,7 +99,7 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 ### Install OpenBCI_GUI On Windows
 
 Place the OpenBCI_GUI directory in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
+`\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe`
 
 Note: The GUI may not run properly if installed in another location.
 
@@ -109,9 +109,7 @@ Right click on the executable -> properties -> compatibility -> tick "Run this p
 
 ![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
 
-Create a short cut on your desktop by right clicking on the executable -> Send to -> Desktop
-
-Then double click the executable to run it for the first time. You must check both check boxes if prompted.
+Double click the executable to run it for the first time. You must check both check boxes if prompted.
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
