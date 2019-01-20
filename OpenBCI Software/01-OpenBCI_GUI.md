@@ -220,7 +220,7 @@ Please place the OpenBCIHub in the GUI `/data/` directory. Example:
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.png)
 
 Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
 
