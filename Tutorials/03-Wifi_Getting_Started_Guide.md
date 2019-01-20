@@ -127,7 +127,7 @@ The WiFi Manager, the tool used to store wireless network credentials onto the W
 
 ### Important Notes
 
-* To update a WiFi Shield's firmware or it cannot be under control of an OpenBCI Board (Cyton or Ganglion). The WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
+* To update a WiFi Shield's firmware it cannot be under control of an OpenBCI Board (Cyton or Ganglion). The WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
 * If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
 * It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must launch the WiFi manager (instructions below) or "Erase Credentials" of the WiFi Shield.
