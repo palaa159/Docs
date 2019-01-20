@@ -6,7 +6,7 @@ The OpenBCI Wifi Shield seeks to offer a plug and play Wifi solution for the Ope
 
 ## Overview
 
-One of the coolest parts of the WiFi Shield is it's HTTP web server. For developers looking to get data from OpenBCI with a WiFi Shield, these HTTP commands will allow you to stream data to your applications over TCP or MQTT.
+One of the coolest parts of the WiFi Shield is its HTTP web server. For developers looking to get data from OpenBCI with a WiFi Shield, these HTTP commands will allow you to stream data to your applications over TCP or MQTT.
 
 ## Prerequisites
 
