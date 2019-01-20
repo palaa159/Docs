@@ -225,7 +225,7 @@ Then quit the HUB: click the tray icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
+As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
 
 #### On Linux:
 
@@ -236,6 +236,8 @@ Copy all the contents of the directory you just unpacked, and paste it in here:
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
 ![processing startup](../assets/images/ganglion_processing-launch.png)
+
+**If you are on Windows, set Processing to 'Run this program as an administrator'.**
 
 When you get Processing running again, you will see a window open up. This is the Processing IDE (Integrated Development Environment).
 
