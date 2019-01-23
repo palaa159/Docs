@@ -100,55 +100,23 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ### Install OpenBCI_GUI On Windows
 
-First unzip the windows application you downloaded from the [downloads](http://openbci.com/donation) section of the OpenBCI Website.
+Place the OpenBCI_GUI directory in your Program Files directory such that the structure looks like:
 
-![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
+`C:\\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe`
 
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
+Note: The GUI may not run properly if installed in another location.
 
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
+![drag and drop](../assets/images/gui_windows_drag_and_drop.png)
 
-Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+Right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
 
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
-
-Then double click the executable to run it for the first time. You must check both check boxes when prompted.
+Double click the executable to run it for the first time. You must check both check boxes if prompted.
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal. As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.
-
-![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
-
-Verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-To quit the hub, click the tray cat icon, and then press the quit button.
-
-![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
-
-Please place the GUI in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_gui.png)
-
-If you already have a GUI installed, you may select to replace all the files.
-
-![replace all files popup](../assets/images/gui_windows_replace_warning.PNG)
-
-Replacing the files may bring up another pop up that you need to accept for altering files within the Program Files folder.
-
-![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
-
 If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
-
-Lastly, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
 
 ### Install OpenBCI_GUI on Linux
 
@@ -169,19 +137,11 @@ Navigate to your `Applications` folder and double click the `OpenBCI_GUI` You ma
 
 ### Running on Windows
 
-Double click the `OpenBCIHub` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+Navigate to your `Program Files\OpenBCI_GUI` directory. If you set the properties to always start as administrator, double click OpenBCI_GUI.exe. Otherwise, right click on the executable and run as administrator.
 
-From testing, it's incredibly important to run as adminstrator for Cyton over Serial or Ganglion over BLE. You don't need to run the OpenBCIHub as an administrator for WiFi.
+If prompted, check both boxes:
 
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, so you don't forget to start the hub before running the OpenBCI_GUI. The hub has a very low memory usage and zero CPU impact when not streaming data.
-
-**As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.**
-
-You can verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-Now with the Hub running, double click the `OpenBCI_GUI` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
 ### Running on Linux
 
@@ -232,53 +192,54 @@ On a Windows `C:\Users\Username\Documents\Processing\libraries`
 
 folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
 
-### Install OpenBCI Hub on Mac/Linux
+### Install OpenBCI Hub on Mac/Linux/Windows
 
-![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
+![OBCI Electron github](../assets/images/hub-github-release.png)   
 
 There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/latest), and click on the link for your Operating System.  
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Hub/releases/latest), and click on the link for your Operating System.  
 
-![electron hub download](../assets/images/ganglion_hub-download.png)
+![electron hub download](../assets/images/hub-unzipped-windows.png)
 
-After it downloads and unpacks itself, your Downloads folder will look like this. the `Ganglion Hub app` needs to be inside your sketch folder, in a specific place.  
+After downloading and uppacking, your Downloads folder will look like this on Windows/Linux. On Mac, you'll just have an OpenBCIHub.app file.
 
-![Hub Home](../assets/images/ganglion_hub-home.png)
+#### On Mac, move the `OpenBCIHub.app` to:
 
-Move the `Ganglion Hubb app` from your Downloads folder to:
+`/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
-`Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
+#### On Windows:
 
-### Install OpenBCI Hub on Windows
+Rename the directory you just unpacked to `OpenBCIHub` and move it to:
 
-The fastest way is to download the standalone .exe/.app for your machine and operating system. To do this, head to the [Downloads](http://openbci.com/donation) page of the OpenBCI website, and click the download link that correlates to your OS and machine.
+`C:\users\<user-name>\Documents\Processing\OpenBCI_GUI\OpenBCI_GUI\data\`
 
-![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
-
-Please place the OpenBCIHub in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCIHub\OpenBCIHub.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
+![Hub Home](../assets/images/hub-installed-processing.png)
 
 Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
 
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
-
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.png)
 
 Then double click the executable to run it for the first time. You must check both check boxes when prompted.
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-To quit the hub, click the tray cat icon, and then press the quit button.
+Then quit the HUB: click the tray icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
+As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
+
+#### On Linux:
+
+Copy all the contents of the directory you just unpacked, and paste it in here:
+
+`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
 ![processing startup](../assets/images/ganglion_processing-launch.png)
+
+**If you are on Windows, set Processing to 'Run this program as an administrator'.**
 
 When you get Processing running again, you will see a window open up. This is the Processing IDE (Integrated Development Environment).
 
