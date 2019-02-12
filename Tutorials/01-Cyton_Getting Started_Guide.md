@@ -450,7 +450,7 @@ You'll notice that the strongest alpha wave signals should be appearing in chann
 
 ### 5. What's next?
 
-For more ideas on what to do next, check out the OpenBCI [Community Page] (http://openbci.com/community/) and the other OpenBCI Docs pages.
+For more ideas on what to do next, check out the [OpenBCI Community Page](http://openbci.com/community/) and the other OpenBCI Docs pages.
 
 Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/) or [MacDown](https://macdown.uranusjr.com/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! 
 
