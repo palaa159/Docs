@@ -108,9 +108,9 @@ You should see the `Time Series` window scrolling some data to the left, the `FF
 
 Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin header, you will see some noise in the other windows. Nice!  
 
-**NOTE If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.**
+**NOTE: If you're having trouble, check out the troubleshooting section at the bottom of this tutorial.**
 
-Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  \
+Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*
 
 
 ## Connect yourself to OpenBCI
@@ -280,31 +280,6 @@ If you having any trouble seeing the signals above, one thing that might be an i
 
 **Happy Brain Hacking!**
 
- ## Noise Reduction and EEG/EMG/ECG Troubleshooting
-
-Seeing lots of noise in the data stream? Consult the [minimizing noise guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-5-minimizing-noise) in the Cyton Tutorial. These tips are very much applicable to the Ganglion board.
-
-For a guide to GUI settings when obtaining EEG/EMG/EKG simultaneously, refer to the [relevant section](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-4-launch-the-gui-and-adjust-your-channel-settings) in the Cyton Tutorial.
-
-Don't hesitate to email support@openbci.com with any questions!
-
-## RUN THE GUI ON macOS SIERRA
-
-
-When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
-
-![sudo](../assets/images/ganglion_sudo-command.png)
-
-1. Open the Terminal app from your /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
-2. You will be prompted to enter your administrator password. Do that, and then press `return` key.
-
->This hack was published by [osXdaily](http://osxdaily.com/2016/09/27/allow-apps-from-anywhere-macos-gatekeeper/) September, 2016.
-
-![Allow Apps](../assets/images/ganglion_SysPrefs-Allow.png)
-
-Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
-Now go back to where you were before to continue!
-
 ## General Troubleshooting
 
 If the initialization and data stream fails, try the following steps:
@@ -314,3 +289,11 @@ If the initialization and data stream fails, try the following steps:
 3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI.
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum/) for extra troubleshooting advice.
+
+ ## Noise Reduction and EEG/EMG/ECG Troubleshooting
+
+Seeing lots of noise in the data stream? Consult the [minimizing noise guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-5-minimizing-noise) in the Cyton Tutorial. These tips are very much applicable to the Ganglion board.
+
+For a guide to GUI settings when obtaining EEG/EMG/EKG simultaneously, refer to the [relevant section](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-4-launch-the-gui-and-adjust-your-channel-settings) in the Cyton Tutorial.
+
+Don't hesitate to email support@openbci.com with any questions!

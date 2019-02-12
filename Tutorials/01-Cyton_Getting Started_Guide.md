@@ -392,7 +392,7 @@ Power down your Cyton board and unplug your USB Dongle. Then, plug back in your 
 
 #### Further troubleshooting
 
-If you're still having issues, refer to the [Forum](http://openbci.com/index.php/forum) for further troubleshooting techniques.
+If you're still having issues, refer to the [Forum](http://openbci.com/index.php/forum/) for further troubleshooting techniques.
 
 ## VI. Check out your body's electrical signals!
 
@@ -452,28 +452,6 @@ You'll notice that the strongest alpha wave signals should be appearing in chann
 
 For more ideas on what to do next, check out the OpenBCI [Community Page] (http://openbci.com/community/) and the other OpenBCI Docs pages.
 
-Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/) or [MacDown](https://macdown.uranusjr.com/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum/). For all other inquiries, contact us at contact@openbci.com.
+Also, if you have a great follow-up tutorial to this getting started guide or something else you want to share, feel free to create your own by following format we have in the [Docs repo](https://github.com/OpenBCI/Docs) of our Github. It's really easy to create your own Docs page with a Markdown editor like [Mou](http://25.io/mou/) or [MacDown](https://macdown.uranusjr.com/). If you do so, send us a pull request on Github and we'll add your tutorial to the Docs! 
 
-
-
-## Trouble shooting on macOS SIERRA
-
-If you have any other trouble with your permissions, or if you don't see the option to `Open` the app, check your `Settings/Security & Privacy` and make sure you tick the `Anywhere` button. If you don't see the `Anywhere` button, jump down a paragraph and follow the terminal instructions.
-
-![Allow Form Anywhere](../assets/images/ganglion_SysPrefs-Allow.png)
-
-When Apple updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. We have fixed this issue since 2.1.x of the `OpenBCI_GUI`, but there still are versions where the permission issue could arise.
-
-Here's how to do it:  
-
-![sudo](../assets/images/ganglion_sudo-command.png)
-
-1. Open the Terminal app from your /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
-2. You will be prompted to enter your administrator password. Do that, and then press `return` key.
-
->This hack was published by [osXdaily](http://osxdaily.com/2016/09/27/allow-apps-from-anywhere-macos-gatekeeper/) September, 2016.
-
-![Allow Apps](../assets/images/ganglion_SysPrefs-Allow.png)
-
-Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
-Now go back to where you were before to continue!
+If you have troubleshooting questions be sure to visit the [OpenBCI Forum](http://openbci.com/index.php/forum/). For all other inquiries, contact us at contact@openbci.com.
