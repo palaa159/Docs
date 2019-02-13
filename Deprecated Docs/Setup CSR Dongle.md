@@ -1,3 +1,5 @@
+### Ganglion on Windows
+
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our [store](http://shop.openbci.com/products/csr-4-0-bluetooth-dongle), and you can get them from various online vendors.  
 
 **IMPORTANT:** The BLE Dongle *must* be a verified CSR 4.0 Dongle!

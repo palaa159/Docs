@@ -18,9 +18,15 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 **If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-### Ganglion on Windows/macOS/Linux
+### Ganglion on macOS
+
+Mac users can 
+
+### Ganglion on Windows/Linux
 
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
+
+There is also a CSR dongle, more information can be found here.
 
 ### Wifi on macOS/Windows/Linux
 
@@ -40,7 +46,12 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
-### Install OpenBCI_GUI On Windows/Linux
+### Install OpenBCI_GUI On Windows
+Move the `OpenBCI_GUI` directory anywhere you like.
+	
+If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
+
+### Install OpenBCI_GUI On Linux
 
 Unzip the downloaded application and place in desired location.
 
@@ -58,6 +69,12 @@ Navigate to your `Applications` folder and double click the `OpenBCI_GUI` You ma
 ![allow GUI to run](../assets/images/ganglion_permissions.png)
 
 ### Running on Windows
+
+Navigate to your `OpenBCI_GUI` directory, double click `OpenBCI_GUI.exe`.
+
+If prompted, check both boxes:
+
+![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
 As of GUI v4, the GUI will auto-launch the Hub on Windows.
 
@@ -112,44 +129,54 @@ On a Windows `C:\Users\Username\Documents\Processing\libraries`
 
 folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
 
-### Install OpenBCI Hub on Mac/Linux   
+### Install OpenBCI Hub on Mac/Linux/Windows
 
-The OpenBCI Hub is necessary to make the connection between the GUI and your computer's Bluetooth hardware. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Hub/releases/latest), and click on the link for your Operating System.  
+![OBCI Electron github](../assets/images/hub-github-release.png)   
 
-The `OpenBCIHub.app` needs to be inside the OpenBCI_GUI `/data/` folder, shown below. 
+There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
+We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Hub/releases/latest), and click on the link for your Operating System.  
 
-![Hub Home](../assets/images/ganglion_hub-home.png)
+![electron hub download](../assets/images/hub-unzipped-windows.png)
 
-Move the `OpenBCIHub.app` from your Downloads folder to:
+After downloading and uppacking, your Downloads folder will look like this on Windows/Linux. On Mac, you'll just have an OpenBCIHub.app file.
 
-`Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
+#### On Mac, move the `OpenBCIHub.app` to:
 
-### Install OpenBCI Hub on Windows
+`/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
-The fastest way is to download the standalone .exe/.app for your machine and operating system. To do this, head to the [Downloads](http://openbci.com/donation) page of the OpenBCI website, and click the download link that correlates to your OS and machine.
+#### On Windows:
 
-![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
+Rename the directory you just unpacked to `OpenBCIHub` and move it to:
 
-Please place the OpenBCIHub in the GUI `/data/` directory. Example:
-"\Processing\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
+`C:\users\<user-name>\Documents\Processing\OpenBCI_GUI\OpenBCI_GUI\data\`
 
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
+![Hub Home](../assets/images/hub-installed-processing.png)
+
+Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
+
+![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.png)
 
 Then double click the executable to run it for the first time. You must check both check boxes when prompted.
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-To quit the hub, click the tray cat icon, and then press the quit button.
+Then quit the HUB: click the tray icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows. 
+As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
 
-**If Hub does not auto-launch, simply set Processing to 'Run this program as an administrator'.**
+#### On Linux:
+
+Copy all the contents of the directory you just unpacked, and paste it in here:
+
+`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
 ![processing startup](../assets/images/ganglion_processing-launch.png)
+
+**If you are on Windows, set Processing to 'Run this program as an administrator'.**
 
 When you get Processing running again, you will see a window open up. This is the Processing IDE (Integrated Development Environment).
 
