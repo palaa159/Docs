@@ -20,7 +20,11 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 ### Ganglion on macOS
 
-Mac users can 
+Turn on your computer's Bluetooth if not already.
+
+![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
+
+Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
 ### Ganglion on Windows/Linux
 
