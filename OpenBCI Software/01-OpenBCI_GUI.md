@@ -30,7 +30,7 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
-There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](../Deprecated_Docs/Setup_CSR_Dongle.md).
+There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](http://github.com/OpenBCI/Docs/tree/master/Deprecated%20Docs/Setup_CSR_Dongle.md).
 
 ### Wifi on macOS/Windows/Linux
 
