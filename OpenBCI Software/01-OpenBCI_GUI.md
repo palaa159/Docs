@@ -18,65 +18,9 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 **If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-### Ganglion on Windows
+### Ganglion on Windows/macOS/Linux
 
-The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified CSR 4.0 Dongles in our [store](http://shop.openbci.com/products/csr-4-0-bluetooth-dongle), and you can get them from various online vendors.  
-
-**IMPORTANT:** The BLE Dongle *must* be a verified CSR 4.0 Dongle!
-
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
-
-First plug in your CSR 4.0 BLE Dongle.   
-
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
-
-Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
-
-![Windows Vista or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
-
-Download Zadig for Windows Vista or Later
-
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
-
-Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
-
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
-
-Select *No To Updates* when prompted.
-
-![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
-
-On the top bar select *Options*.
-
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
-
-Then select *List All Devices*.
-
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
-
-Select CSR from the dropdown.
-
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
-
-Then press *Replace Driver*.
-
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
-
-You should then see a progress bar followed by a success message.
-
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
-
-Note that both drop-downs both say *WinUSB*.  
-
-**We are in the process of updating this guide to include Windows 7 users. it *is* possible to use the Ganglion and CSR 4.0 BLE Dongle on Windows 7. For now, please visit this [forum post](http://openbci.com/forum/index.php?p=/discussion/918/ganglion-and-windows-7), which outlines the procedure.**
-
-### Ganglion on macOS/Linux
-
-Turn on your computer's Bluetooth if not already.
-
-![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
-
-Do not use a dongle with macOS. Dongles such as the `CSR` dongles are only needed for Windows and sometimes linux.
+The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
 ### Wifi on macOS/Windows/Linux
 
@@ -96,62 +40,9 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
-### Install OpenBCI_GUI On Windows
+### Install OpenBCI_GUI On Windows/Linux
 
-First unzip the windows application you downloaded from the [downloads](http://openbci.com/donation) section of the OpenBCI Website.
-
-![unzipped gui on windows](../assets/images/gui_windows_unzipped.PNG)
-
-Please place the GUI in your Program Files directory such that the structure looks like:
-"\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_gui.png)
-
-If you already have a GUI installed, you may select to replace all the files.
-
-![replace all files popup](../assets/images/gui_windows_replace_warning.PNG)
-
-Replacing the files may bring up another pop up that you need to accept for altering files within the Program Files folder.
-
-![replace need admin](../assets/images/gui_windows_replace_admin_needed.PNG)
-
-Next, right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
-
-Please place the OpenBCIHub in the GUI data directory such that the structure looks like:
-"\Program Files\OpenBCI_GUI\data\OpenBCIHub\OpenBCIHub.exe"
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
-
-Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
-
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
-
-Then double click the executable to run it for the first time. You must check both check boxes when prompted.
-
-![accept networking](../assets/images/gui_windows_accept_networking.PNG)
-
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, the hub's impact on performance when not in use is minimal.
-
-![low impact on CPU](../assets/images/gui_windows_hub_low_impact.PNG)
-
-Verify the hub is running in your windows tool tray.
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-To quit the hub, click the tray cat icon, and then press the quit button.
-
-![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
-
-Make sure to set both the GUI and the Hub to "Run this program as an administrator". 
-**As of GUI v4, the GUI will launch the Hub automatically.**
-
-### Install OpenBCI_GUI on Linux
-
-Unzip the downloaded application.
+Unzip the downloaded application and place in desired location.
 
 ## Running the OpenBCI_GUI
 
@@ -168,19 +59,9 @@ Navigate to your `Applications` folder and double click the `OpenBCI_GUI` You ma
 
 ### Running on Windows
 
-Double click the `OpenBCIHub` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+As of GUI v4, the GUI will auto-launch the Hub on Windows.
 
-From testing, it's incredibly important to run as adminstrator for Cyton over Serial or Ganglion over BLE. You don't need to run the OpenBCIHub as an administrator for WiFi.
-
-We recommend you leave the Hub running, even when not using the OpenBCI_GUI, so you don't forget to start the hub before running the OpenBCI_GUI. The hub has a very low memory usage and zero CPU impact when not streaming data.
-
-**As of GUI v4, the GUI will auto-launch the Hub on Windows if both apps are set to 'Run this program as an administrator'.**
-
-You can verify the hub is running in your windows tool tray
-
-![clicking the icon](../assets/images/gui_windows_openbci_hub_running.PNG)
-
-Now with the Hub running, double click the `OpenBCI_GUI` if you set the properties to always start as administrator, or right click on the executable and run as administrator.
+After launching the GUI, you can verify the Hub is running in your Windows tool tray.
 
 ### Running on Linux
 
@@ -231,20 +112,15 @@ On a Windows `C:\Users\Username\Documents\Processing\libraries`
 
 folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
 
-### Install OpenBCI Hub on Mac/Linux
+### Install OpenBCI Hub on Mac/Linux   
 
-![OBCI Electron github](../assets/images/ganglion_electron-github.png)   
+The OpenBCI Hub is necessary to make the connection between the GUI and your computer's Bluetooth hardware. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Hub/releases/latest), and click on the link for your Operating System.  
 
-There is a piece of software which is necessary to make the connection between the GUI and your computer's Bluetooth hardware.
-We call this the OpenBCI Electron Hub. Go to our github repository for the [Hub](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases/latest), and click on the link for your Operating System.  
-
-![electron hub download](../assets/images/ganglion_hub-download.png)
-
-After it downloads and unpacks itself, your Downloads folder will look like this. the `Ganglion Hub app` needs to be inside your sketch folder, in a specific place.  
+The `OpenBCIHub.app` needs to be inside the OpenBCI_GUI `/data/` folder, shown below. 
 
 ![Hub Home](../assets/images/ganglion_hub-home.png)
 
-Move the `Ganglion Hub app` from your Downloads folder to:
+Move the `OpenBCIHub.app` from your Downloads folder to:
 
 `Users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data`
 
@@ -259,12 +135,6 @@ Please place the OpenBCIHub in the GUI `/data/` directory. Example:
 
 ![drag and drop](../assets/images/gui_windows_drag_and_drop_hub.png)
 
-Enter the new OpenBCIHub folder and right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin_hub.PNG)
-
-Create a short cut on your desktop by right click on the executable -> Send to -> Desktop
-
 Then double click the executable to run it for the first time. You must check both check boxes when prompted.
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
@@ -273,7 +143,9 @@ To quit the hub, click the tray cat icon, and then press the quit button.
 
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows. **When using Processing, simply set Processing to 'Run this program as an administrator'.**
+As of GUI v4, the GUI will auto-launch the Hub on Windows. 
+
+**If Hub does not auto-launch, simply set Processing to 'Run this program as an administrator'.**
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
