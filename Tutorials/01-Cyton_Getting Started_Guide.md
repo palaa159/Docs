@@ -169,7 +169,7 @@ Now, click the `AUTOSCAN` button. It may take a few seconds for the Dongle to sc
 
 #### Edit the Playback file name
 
-![File Name](../assets/images/fileName.png)
+![File Name](../assets/images/ble112_ganglion_fileName.png)
 
 In the DATA LOG FIlE section of the LIVE (from Cyton) sub-panel you can specify the name of your playback file. This file name is automatically defaulted to:
 
