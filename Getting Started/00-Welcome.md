@@ -1,7 +1,7 @@
 # Welcome!
 
 
-Welcome to the **OpenBCI Learning Pages**! Here you will find a wide range of guides and tutorials that are intended to teach you how to use your OpenBCI gear. If you run into issues or have additional questions, head to our [Forum](http://openbci.com/index.php/forum/) with daily active users.
+Welcome to the **OpenBCI Learning Pages**! Here you will find a wide range of guides and tutorials that are intended to teach you how to use your OpenBCI gear. If you run into issues or have additional questions, head to our [Forum](http://openbci.com/index.php/forum/) with daily active users. Check out the [Community Page](http://openbci.com/community) for project ideas!
 
 The Learning Pages are separated into the following sections:
 
@@ -12,12 +12,10 @@ The Learning Pages are separated into the following sections:
 * [Tutorials](http://docs.openbci.com/Tutorials) - This section consists of a variety of tutorials that show you how to do cool things with your OpenBCI gear. 
 * [FAQ](http://docs.openbci.com/FAQ) - Frequetly Asked Questions
 
+We put together [The OpenBCI Citation List](https://docs.google.com/spreadsheets/d/1WvolD2-QJ5aUJy5o0Dq5wdFQtLMkMtppZT8s_ihYyA4/edit#gid=0), a collection of recently published peer-reviewed research using OpenBCI products. We're proud of how many OpenBCI-based research reports are out there!
+
 **Note:** If you are interested in contributing to the OpenBCI Learning Pages, feel free to create your own Markdown file and submit a pull request to relevant sub-directory of the [Docs repo](https://github.com/openbci/docs) on our Github! If you notice any mistakes in these guides, you can also submit issues here. 
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/XktF8OhHH4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-#### OpenBCI [GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) Showing 8-channel [Cyton Board](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide) with 5-channel [EEG Headband](https://shop.openbci.com/collections/frontpage/products/openbci-eeg-headband-kit?variant=8120393760782)
-
-#### Video posted on [Youtube](https://www.youtube.com/watch?v=XktF8OhHH4A).
+#### Video of the OpenBCI GUI posted on [Youtube](https://www.youtube.com/watch?v=XktF8OhHH4A), showing the [8-channel Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel) Board paired with a 5-channel [EEG Headband Kit](https://shop.openbci.com/collections/frontpage/products/openbci-eeg-headband-kit).
 
 

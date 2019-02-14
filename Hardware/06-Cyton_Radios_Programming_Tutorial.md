@@ -1,6 +1,6 @@
 # Cyton Radios Programming Tutorial
 
-##Overview
+## Overview
 The OpenBCI Cyton Boards come with a USB dongle that allows for communication between the Board and your computer. There is a BLE radio module (actually an [RFduino 22301](http://www.rfduino.com/product/rfd22301-rfduino-ble-smt/index.html)) on the Dongle and Board that make the communication happen. Here's some terms that are important to note:
 
 * The radio module on the Dongle is called the **HOST**
@@ -9,7 +9,8 @@ The OpenBCI Cyton Boards come with a USB dongle that allows for communication be
 * There are *important* differences in the firmware for 8-bit and 32-bit systems
 
 This page covers how the radio link works, and how to upload new firmware to the Dongle radio and the Board radio.
-##Setting up your system to program OpenBCI Radios
+
+## Setting up your system to program OpenBCI Radios
 
 **You will need:**
 
@@ -72,9 +73,9 @@ C:\Users\username\Documents\Arduino\libraries
 If you want to modify the firmware that the OpenBCI Dongle came with, or roll your own, make sure that you are setting the RFduino up as a DEVICE, and that channel is selected correctly.
 
 
-##Uploading Device Firmware to Cyton Board
+## Uploading Device Firmware to Cyton Board
 
-###Overview
+### Overview
 In order to upload code to the Cyton Board RFduino, you need to have a Serial connection to the computer. This is traditionally done with a FTDI cable breakout (SparkFun and Adafruit sell several). If you have an FTDI cable or breakout handy, make sure that it is a 3V device! **Using a 5V FTDI device could damage the RFduino on-board OpenBCI!** It is also possible to upload code to the Board mounted RFduino using the OpenBCI Dongle. This page will go over a few ways of uploading firmware to the OpenBCI Device radios.
 
 Again, there is a small difference between the 8-bit and Cyton boards, explained below.

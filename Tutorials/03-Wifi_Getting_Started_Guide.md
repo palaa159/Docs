@@ -127,7 +127,7 @@ The WiFi Manager, the tool used to store wireless network credentials onto the W
 
 ### Important Notes
 
-* To update a WiFi Shield's firmware or it cannot be under control of an OpenBCI Board (Cyton or Ganglion). The WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
+* To update a WiFi Shield's firmware it cannot be under control of an OpenBCI Board (Cyton or Ganglion). The WiFi needs to be powered independently, with Ganglion, WiFi Shield shall be disconnected, with Cyton, the `EXT PWR` shall be in the off position. Why? So the WiFi Shield can effectively power cycle.
 * If you have trouble joining the WiFi Shield network, turn the WiFi of your phone/computer/etc. off/on
 * It may take 10-15 seconds for your WiFi shield to appear in your WiFi options (be patient!)
 * Once you connect your WiFi shield to a network, it will no longer appear in your WiFi options with its "OpenBCI-XXXX" unique ID. To make it reappear, you must launch the WiFi manager (instructions below) or "Erase Credentials" of the WiFi Shield.
@@ -389,7 +389,7 @@ Select the desired WiFi Shield from the dropdown list
 
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
-Select the right carrot button to open the WiFi Configuration window
+Select the right caret button to open the WiFi Configuration window
 
 ![selecting right carrot to open wifi config](../assets/images/wifi_config_select_right_carrot.png)
 
@@ -397,7 +397,7 @@ If the connection to the WiFi Shield was successful, you will see a success mess
 
 ![success connection to wifi shield](../assets/images/wifi_config_success_message.png)
 
-When you are finished, press the left facing carrot to close the WiFi Configuration window.
+When you are finished, press the left facing caret to close the WiFi Configuration window.
 
 ![selecting left facing arrow to close wifi configuration](../assets/images/wifi_config_success_message.png)
 

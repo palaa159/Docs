@@ -211,8 +211,8 @@ Now you should see the blue LED on the Cyton Board blinking pleasantly. Your Cyt
 
 ![Upload32](../assets/images/oddUploadError.png)
 
-##8bit Upload How-To
-###NOTE: The 8bit Hardware is no longer in production
+## 8bit Upload How-To
+### NOTE: The 8bit Hardware is no longer in production
 **You will need:**
 
 * Computer running Arduino IDE
