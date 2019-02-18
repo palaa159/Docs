@@ -10,6 +10,7 @@ This guide will walk you through setting up your Ganglion, connecting it to your
 ![OpenBCI Contents](../assets/images/ganglion_what_you_need.png)
 
  1. OpenBCI Ganglion Board
+ 2. An [OpenBCI Ganglion Dongle](https://shop.openbci.com/products/ganglion-dongle)
  3. 6V AA battery pack & (x4) AA batteries (batteries not included)
  4. (x4) plastic feet for board stabilization
  5. OpenBCI [Gold Cup Electrodes](http://shop.openbci.com/collections/frontpage/products/openbci-gold-cup-electrodes?variant=9056028163), or your own electrodes, and [Electrode Paste](http://shop.openbci.com/collections/frontpage/products/ten20-conductive-paste-2oz-jars)
@@ -22,8 +23,25 @@ This guide will walk you through setting up your Ganglion, connecting it to your
 
 The battery connector on the back can accept 3V to 12V DC power input. The pushbutton is a reset button. Note the removable orange stickers on the four switches (SW1, SW2, SW3, SW4). For more information on the Ganglion Hardware, visit the [OpenBCI Ganglion](http://docs.openbci.com/Hardware/07-Ganglion) page in the Hardware section.
 
+### 2. OpenBCI Ganglion Dongle
 
-### 2. Gold Cup Electrodes and Paste
+![OpenBCI Ganglion Dongle](../assets/images/Ganglion_dongle.jpg)
+
+Plug the OpenBCI Ganglion Dongle into your computer before launching the GUI. Additional dongles can be found in the [OpenBCI Shop](https://shop.openbci.com/products/ganglion-dongle).
+
+### 3. Your 6V AA Battery Pack & 4 AA Batteries
+
+Install 4 AA batteries in your battery pack, plug in your Ganglion board and turn on the power switch. You should see the BLUE LED blink gently. Blinking means that the BLE radio is not connected or paired with any computer or phone/tablet. Once the Ganglion is connected, the LED stays steady on.
+
+![Battery Connection](../assets/images/ganglion_batteryConnection.png)
+
+### 4. (x4) Plastic Feet
+
+![Plastic Feet](../assets/images/ganglion_wPlasticFeet.png)
+
+Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
+
+### 5. Gold Cup Electrodes and Paste
 
 ![Electrode Starter Kit](../assets/images/electrodeStarterKit.png)
 
@@ -36,21 +54,9 @@ If you ordered OpenBCI [Gold Cup Electrodes](http://shop.openbci.com/collections
 
 If you plan to work with your own electrodes, the [Touch-Proof Adapter](http://shop.openbci.com/collections/frontpage/products/touch-proof-electrode-cable-adapter?variant=31007211715) will come in handy. It will convert any electrode that terminates in the industry-standard touch-proof design to an electrode that can be plugged into any OpenBCI Board!
 
-### 4. (x4) Plastic Feet
-
-![Plastic Feet](../assets/images/ganglion_wPlasticFeet.png)
-
-Your OpenBCI kit comes with 4 plastic feet that can be snapped into the holes of your board to provide extra stability while working.
-
-### 5. Your 6V AA Battery Pack & 4 AA Batteries
-
-Install 4 AA batteries in your battery pack, plug in your Ganglion board and turn on the power switch. You should see the BLUE LED blink gently. Blinking means that the BLE radio is not connected or paired with any computer or phone/tablet. Once the Ganglion is connected, the LED stays steady on.
-
-![Battery Connection](../assets/images/ganglion_batteryConnection.png)
-
 ## Download/Install/Run the OpenBCI GUI
 
-Please [follow the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to install the OpenBCI_GUI as a standalone application. Keep an eye out for specific Ganglion specific requirements, such as, on Windows, using Zadig to change the driver for your BLE CSR dongle.
+Please [follow the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to install the OpenBCI_GUI as a standalone application.
 
 Come back to this guide when your GUI is running!
 
@@ -58,46 +64,46 @@ Come back to this guide when your GUI is running!
 
 ### Connect the GUI to your Ganglion board
 
-Make sure your computer's Bluetooth feature is turned on. Select `LIVE (from Ganglion)` from the first drop down
-![selecting ganglion from drop down](../assets/images/ble_ganglion_select_ganglion.png)
+Make sure your computer's Bluetooth feature is turned on. **Select `LIVE (from Ganglion)` from the first drop down.**
 
-Select `BLE (on Win from Dongle)` as the transfer protocol
-![selecting ganglion ble from the transfer protocol](../assets/images/ble_ganglion_select_ble.png)
+![selecting ganglion from drop down](../assets/images/ble112_ganglion_select_ganglion.png)
+
+**Select `Bluetooth (BLED112 Dongle)` as the transfer protocol.**
+
+![selecting ganglion ble from the transfer protocol](../assets/images/ble112_ganglion_select.png)
 
 The GUI will automatically start searching for Ganglion devices.
-![wifi with ganglion ble searching for wifi shield](../assets/images/ble_ganglion_searching.png)
+
 Each Ganglion has its own unique 4 character ID (in HEX), and you will see it listed in the `BLE DEVICES` window. If you don't see any Ganglions, check to make sure your Ganglion has a battery connected, is switched on, and the blue LED is blinking. If there are multiple Ganglions in the room, you can find yours by turning it off, clicking the `REFRESH LIST` button, then turn on your Ganglion again. Make a note of *your* Ganglion's 4 character ID.  
 
-Select the desired Ganglion device from the dropdown list
-![selecting your ganglion ble shield](../assets/images/ble_ganglion_select_ganglion_peripheral.png)
+**Select the desired Ganglion device from the dropdown list.**
+
+![selecting your ganglion ble shield](../assets/images/ble112_ganglion_select_peripheral.png)
 
 The GUI will automatically generate a recording to a file. You have an option at this point to create your own file name, in the `DATA LOG FILE` window, should you choose to.
 
-![File Name](../assets/images/fileName.png)
+![File Name](../assets/images/ble112_ganglion_fileName.png)
 
-Press `START SYSTEM` when you're ready to begin streaming.
-![ble ganglion start system](../assets/images/ble_ganglion_start_system.png)
+**Press `START SYSTEM` when you're ready to begin streaming.**
+
+![ble ganglion start system](../assets/images/ble112_ganglion_start_system.png)
 
 ### Navigating the GUI
 
-![Start Data Stream](../assets/images/ganglion_connected-idle.png)
 When the GUI connects, it opens up to the default window layout. For a more in-depth guide to the GUI interface and functionality, check out the [OpenBCI GUI](http://docs.openbci.com/OpenBCI%20Software/00-OpenBCISoftware) doc. For the purposes of this introductory tutorial, You should follow the following steps to setup the GUI.  
 
-Click on the `Layout` dropdown menu, and select the one outlined in red.
+![Start Data Stream](../assets/images/ganglion_connected-idle-GUIv4.png)
+
+**Click on the `Layout` dropdown menu, and select the one outlined in red.**
 
 ![select layout](../assets/images/ganglion_select-layout.png)
 
-Click the `Vert Scale` dropdown menu, and change the Vertical Scale to `Auto`. 
+If the Accelerometer is off, turn on the Accelerometer by clicking the `Turn Accel. On` button.
 
-![Auto Scale](../assets/images/ganglion_autoScale.png) 
-
-
-Click the `Head Plot` dropdown menu on the lower right widget container and change it from `Head Plot` to `Accelerometer`. Then turn on the Accelerometer by clicking the `Turn Accel On` button.
-
-![Accelerometer](../assets/images/ganglion_accelerometer_widget.jpg)
 ![Accel ON!](../assets/images/ganglion_accel-ON.jpg)
+![Accel ON!](../assets/images/ganglion_accel-ON.png)
 
-Then click "Start Data Stream" to stream data from your Ganglion board.
+**Then, click `Start Data Stream` to stream data from your Ganglion board.**
 
 ![Start Data Stream](../assets/images/ganglion_Start.png)
 ![First Live Ganglion Data](../assets/images/ganglion_first-data.jpg)  
@@ -108,9 +114,9 @@ You should see the `Time Series` window scrolling some data to the left, the `FF
 
 Pick up your board, and move it around. You should see the data in the `Accelerometer` window also move around, and if you're touching the input pin header, you will see some noise in the other windows. Nice!  
 
-**NOTE If you're having trouble, check out the [troubleshooting](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-troubleshooting) section below.**
+**NOTE: If you're having trouble, check out the troubleshooting section at the bottom of this tutorial.**
 
-Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*  \
+Now that you've got your computer connected to the Ganglion, it's time to connect your *self!*
 
 
 ## Connect yourself to OpenBCI
@@ -280,31 +286,6 @@ If you having any trouble seeing the signals above, one thing that might be an i
 
 **Happy Brain Hacking!**
 
- ## Noise Reduction and EEG/EMG/ECG Troubleshooting
-
-Seeing lots of noise in the data stream? Consult the [minimizing noise guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-5-minimizing-noise) in the Cyton Tutorial. These tips are very much applicable to the Ganglion board.
-
-For a guide to GUI settings when obtaining EEG/EMG/EKG simultaneously, refer to the [relevant section](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-4-launch-the-gui-and-adjust-your-channel-settings) in the Cyton Tutorial.
-
-Don't hesitate to email support@openbci.com with any questions!
-
-## RUN THE GUI ON macOS SIERRA
-
-
-When Apple Computer updated their Operating System to Sierra (v10.12.x), they changed a few things about your `Security & Privacy` default settings. Sierra won't allow any apps that aren't from the App Store or Identified Developers. While we work on becoming Identified Developers, you will need to change your default `Security & Privacy` settings. Here's how to do it:  
-
-![sudo](../assets/images/ganglion_sudo-command.png)
-
-1. Open the Terminal app from your /Applications/Utilities/ folder and then enter the following command syntax: `sudo spctl --master-disable` and press the  `return` key.
-2. You will be prompted to enter your administrator password. Do that, and then press `return` key.
-
->This hack was published by [osXdaily](http://osxdaily.com/2016/09/27/allow-apps-from-anywhere-macos-gatekeeper/) September, 2016.
-
-![Allow Apps](../assets/images/ganglion_SysPrefs-Allow.png)
-
-Now, go to your `System Preferences/Security & Privacy` and make sure that your system allows apps downloaded from Anywhere. You may again be prompted for your administrator password.   
-Now go back to where you were before to continue!
-
 ## General Troubleshooting
 
 If the initialization and data stream fails, try the following steps:
@@ -314,3 +295,11 @@ If the initialization and data stream fails, try the following steps:
 3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI.
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum/) for extra troubleshooting advice.
+
+ ## Noise Reduction and EEG/EMG/ECG Troubleshooting
+
+Seeing lots of noise in the data stream? Consult the [minimizing noise guide](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-5-minimizing-noise) in the Cyton Tutorial. These tips are very much applicable to the Ganglion board.
+
+For a guide to GUI settings when obtaining EEG/EMG/EKG simultaneously, refer to the [relevant section](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-v-connect-yourself-to-openbci-4-launch-the-gui-and-adjust-your-channel-settings) in the Cyton Tutorial.
+
+Don't hesitate to email support@openbci.com with any questions!

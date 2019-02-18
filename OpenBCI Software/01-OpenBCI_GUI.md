@@ -18,67 +18,19 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 **If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-### Ganglion on Windows
-
-The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion with Windows, you need a small USB Dongle. We have verified  Dongles in our [store](https://shop.openbci.com/collections/frontpage/products/ganglion-dongle), and you can get them from various online vendors.  
-
-If you have the discontinued CSR 4.0 Bluetooth Dongle, follow the directions below for Windows. If you have the new Ganglion-specific BLE dongle, you can skip forward to [downloading the GUI](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-installing-the-openbci-gui-as-a-standalone-application-download-the-appropriate-application-for-your-os).
-
-**IMPORTANT:** The BLE Dongle *must* be a verified CSR 4.0 Dongle!
-
-![CSR Dongle to USB port](../assets/images/ganglion_win_1_plugCSRDongleIn.JPG)
-
-First plug in your CSR 4.0 BLE Dongle.   
-
-![Searching Zadig in Google](../assets/images/ganglion_win_2_searchZadigInGoogle.PNG)
-
-Then, go to the [Zadig tool website](http://zadig.akeo.ie) to get the driver.
-
-![Windows Vista or Later](../assets/images/ganglion_win_3_downloadZadigForWindowsVistaOrLater.PNG)
-
-Download Zadig for Windows Vista or Later
-
-![Open Zadig Installer](../assets/images/ganglion_win_4_openZadigExe.PNG)
-
-Open the Zadig tool once it's done downloading. Acknowledge the message to allow the program to make changes to your OS.
-
-![No to updates](../assets/images/ganglion_win_5_noToUpdates.PNG)
-
-Select *No To Updates* when prompted.
-
-![Select Options](../assets/images/ganglion_win_6_selectOptions.PNG)
-
-On the top bar select *Options*.
-
-![List all devices](../assets/images/ganglion_win_7_selectListAllDevices.PNG)
-
-Then select *List All Devices*.
-
-![Select CSR](../assets/images/ganglion_win_8_selectCSRFromDropDown.PNG)
-
-Select CSR from the dropdown.
-
-![Replace Driver](../assets/images/ganglion_win_9_selectReplaceDriver.PNG)
-
-Then press *Replace Driver*.
-
-![Driver Installed Success](../assets/images/ganglion_win_10_driverInstalledMessage.PNG)
-
-You should then see a progress bar followed by a success message.
-
-![Driver Installed Success](../assets/images/ganglion_win_11_bothSayWinUSB.PNG)
-
-Note that both drop-downs both say *WinUSB*.  
-
-**We are in the process of updating this guide to include Windows 7 users. it *is* possible to use the Ganglion and CSR 4.0 BLE Dongle on Windows 7. For now, please visit this [forum post](http://openbci.com/forum/index.php?p=/discussion/918/ganglion-and-windows-7), which outlines the procedure.**
-
-### Ganglion on macOS/Linux
+### Ganglion on macOS
 
 Turn on your computer's Bluetooth if not already.
 
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
 
-Do not use a dongle with macOS. Dongles such as the `CSR` dongles are only needed for Windows and sometimes linux.
+Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
+
+### Ganglion on Windows/Linux
+
+The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
+
+There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
 
 ### Wifi on macOS/Windows/Linux
 
@@ -99,28 +51,13 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 ![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
 ### Install OpenBCI_GUI On Windows
-
-Place the OpenBCI_GUI directory in your Program Files directory such that the structure looks like:
-
-`C:\\Program Files\OpenBCI_GUI\OpenBCI_GUI.exe`
-
-Note: The GUI may not run properly if installed in another location.
-
-![drag and drop](../assets/images/gui_windows_drag_and_drop.png)
-
-Right click on the executable -> properties -> compatibility -> tick "Run this program as an administrator".
-
-![set to run as admin always](../assets/images/gui_windows_properties_run_as_admin.PNG)
-
-Double click the executable to run it for the first time. You must check both check boxes if prompted.
-
-![accept networking](../assets/images/gui_windows_accept_networking.PNG)
-
+Move the `OpenBCI_GUI` directory anywhere you like.
+	
 If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
 
-### Install OpenBCI_GUI on Linux
+### Install OpenBCI_GUI On Linux
 
-Unzip the downloaded application.
+Unzip the downloaded application and place in desired location.
 
 ## Running the OpenBCI_GUI
 
@@ -137,11 +74,15 @@ Navigate to your `Applications` folder and double click the `OpenBCI_GUI` You ma
 
 ### Running on Windows
 
-Navigate to your `Program Files\OpenBCI_GUI` directory. If you set the properties to always start as administrator, double click OpenBCI_GUI.exe. Otherwise, right click on the executable and run as administrator.
+Navigate to your `OpenBCI_GUI` directory, double click `OpenBCI_GUI.exe`.
 
 If prompted, check both boxes:
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
+
+As of GUI v4, the GUI will auto-launch the Hub on Windows.
+
+After launching the GUI, you can verify the Hub is running in your Windows tool tray.
 
 ### Running on Linux
 

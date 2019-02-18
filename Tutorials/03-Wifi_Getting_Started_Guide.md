@@ -4,11 +4,11 @@
 
 ## Overview
 
-Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while [Push The World](www.pushtheworldllc.com) designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
+Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while Push The World designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
 
 ## Prerequisites
 
-The WiFi Shield requires your Cyton to run the latest [v3.1.0](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) firmware and your Ganglion to the latest [v2.0.0](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
+The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
 
 **You must update your firmware before getting started.**
 
@@ -26,7 +26,7 @@ You only need one battery when using the Cyton with the WiFi Shield. The Cyton t
 ### What you need
 
  1. OpenBCI WiFi Shield
- 2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.1.0) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
+ 2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
 
 ### General Overview
@@ -41,7 +41,7 @@ In general the steps are:
 
 ### Powering the Shield
 
-Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw then the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
+Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
 
 **IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
 
@@ -407,7 +407,7 @@ To verify you have the latest OpenBCI_Wifi firmware version, select `FIRMWARE VE
 
 ![selecting firmware version for wifi](../assets/images/wifi_config_get_firmware_version.png)
 
-Compare the firmware version with the [latest OpenBCI_Wifi firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/tag/v1.1.3) available and download/update your firmware if it's outdated.
+Compare the firmware version with the [latest OpenBCI_Wifi firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest) available and download/update your firmware if it's outdated.
 
 ### Get WiFi Shield IP Address
 
@@ -441,7 +441,7 @@ The GUI will automatically detach from the WiFi Shield. Your WiFi Shield should 
 
 Before we jump into setting up your WiFi Shield, here are some helpful links:
 
- * [Learn to update your WiFi Shield](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tutorial) to the [latest firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/tag/v3.0.0-rc4).
+ * [Learn to update your WiFi Shield](http://docs.openbci.com/Hardware/12-Wifi_Programming_Tutorial) to the [latest firmware](https://github.com/OpenBCI/OpenBCI_WIFI/releases/latest).
  * Learn about the physical hardware on the WiFi Shield checkout the [OpenBCI Wifi Hardware docs](http://docs.openbci.com/Hardware/11-Wifi)
  * Lookup the commands for the HTTP rest server on the WiFi Shield at the [swaggerhub.io](https://app.swaggerhub.com/apis/pushtheworld/openbci-wifi-server/1.3.0)
  * Checkout the firmware that powers the WiFi Shield at [on Github](http://github.com/OpenBCI/OpenBCI_WIFI)
