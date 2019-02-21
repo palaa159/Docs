@@ -58,7 +58,7 @@ You're now streaming data from your OpenBCI board to OpenViBE! Feel free to expl
 ## Documentation and Resources
 For more advanced tutorials using OpenBCI and OpenViBE, check out [Jeremy Frey's blog](http://blog.jfrey.info/). He has done both a [P300 Speller](http://blog.jfrey.info/2015/02/04/openbci-p300-coadapt/) and a [Motor Imagery Classifier](http://blog.jfrey.info/2015/03/03/openbci-motor-imagery/).
 
-For an example of a more advanced OpenViBE setup with OpenBCI, open the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/Start_OBCI.xml) in the OpenViBE designer GUI. This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
+For an example of a more advanced OpenViBE setup with OpenBCI, open the attached [xml file](https://github.com/OpenBCI/Docs/blob/master/assets/files/Start_OBCI_Cyton.xml) in the OpenViBE designer GUI. This file is a pre-made graph that will display both the EEG channels and the AUX channels. For the V3 board, the AUX channels correspond to accelerometer values in the three cardinal directions. 
 
 To learn more about OpenViBE, take a look at their documentation [here.](http://openvibe.inria.fr/documentation-index/)
 
