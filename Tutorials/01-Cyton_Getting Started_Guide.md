@@ -33,7 +33,7 @@ If you ordered an OpenBCI Gold Cup Electrodes and Ten20 Paste you should have:
  * 10 passive, gold cup electrodes on a color-coded ribbon cable
  * 3 2oz Jars of Ten20 conductive electrode paste
 
-If you plan to work with your own electrodes, the touch-proof adapter may come in handy:
+If you plan to work with your own electrodes, the [touch-proof adapter](https://shop.openbci.com/products/touch-proof-electrode-cable-adapter) may come in handy:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/touch_proof.jpg?raw=true" width="70%">
 
@@ -132,7 +132,8 @@ The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI 
 
 ### 6. Optional Settings
 
-If you're comfortable using the GUI, feel free to change some of these optional settings below. Otherwise, skip to step 7!
+<details><summary>If you're comfortable using the GUI, use the optional settings in this dropdown section. Otherwise, skip to step 7!</summary>
+<p>
 
 #### Check Status or Change Radio Channel
 
@@ -192,6 +193,8 @@ After creating a Playback file, it can be replayed by running the OpenBCI GUI wi
 If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE TO SD (Y/N)? sub-panel section you can select the maximum recording time of the file. This setting is defaulted to "Do not write to SD…" and will automatically switch to this if you do not have a MicroSD card properly inserted into your Cyton board.
 
 **Note:** be sure to select a file size that is larger than your planned recording time. The Cyton writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
+</p>
+</details>
 
 ### 7. Press "START SYSTEM"
 
