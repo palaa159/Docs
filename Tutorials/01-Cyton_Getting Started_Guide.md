@@ -335,13 +335,13 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 a) If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from Cyton) and Serial (from Dongle). Select your Cyton board from the list of devices, set the Channel Count to 8, and click START SYSTEM. Refer to **section IV** of this guide for more information on this process. 
 
-If you're using the Daisy Cyton board, still set the Channel Count to 8, even though the Daisy has 16 channels. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA display will be unnecessarily cluttered.
+If you're using the Daisy Cyton board, still set the Channel Count to 8, even though the Daisy has 16 channels. Nothing will go wrong if you start the system with 16 channels, except the `Time Series` display will be unnecessarily cluttered.
 
-b) Click START DATA STREAM to begin streaming data from your board. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
+b) Click START DATA STREAM to begin streaming data from your board. You should see live data from your body (and the unattached channels) streaming into the `Time Series` montage on the left side of the GUI.
 
 ![Power Down](../assets/images/Cyton_Starting_Guide/CytonGS_pic1.png)
 
-c) Now we are going to power down the channels we aren't using. Do this by clicking the circular channel number buttons outside of the left side of the EEG DATA montage. Each time you power down a channel, the channel will show a burst of signal and then settle at 0 mV.
+c) Now we are going to power down the channels we aren't using. Do this by clicking the circular channel number buttons outside of the left side of the `Time Series` montage. Each time you power down a channel, the channel will show a burst of signal and then settle at 0 mV.
 
 ![Signals At Start](../assets/images/Cyton_Starting_Guide/CytonGS_pic2.png)
 
@@ -349,7 +349,7 @@ We are only using channels 2, 4, and 7, so power down every other channel. You c
 
 Don't bother with the ohm symbols to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. 
 
-e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the `Hardware Settings` button above the data oscilloscope display and an array of buttons should appear in place of the EEG DATA montage:
+e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the `Hardware Settings` button above the data oscilloscope display and an array of buttons should appear in place of the `Time Series` montage:
 
 ![Adjust Channel Settings](../assets/images/Cyton_Starting_Guide/CytonGS_pic3.png)
 
@@ -359,9 +359,9 @@ We have simplified the interface through the OpenBCI firmware and OpenBCI GUI to
 
 By deactivating channels 1, 3, 5, 6, and 8, those channels were automatically removed from the BIAS and SRB2, so as not to interfere with the signal. The only thing left to do is update channel 4, the input we are using for EMG and EKG. Begin by clicking the PGA Gain button for channel 4 until it is set to x8. Then remove it from the BIAS and SRB2. The reason we do this is because the uV values for EMG and EKG are much bigger (and easier to pick up) than the EEG signals on channels 2 and 7. As a result, we want to prevent channel 4 from influencing the common mode noise rejection of the BIAS, as well as remove it from the EEG reference channel (SRB2).
 
-f) After updating these settings, click the EEG DATA tab again, and your EEG DATA montage should now appear similar to the image below:
+f) After updating these settings, click the `Time Series` button again, and your `Time Series` montage should now appear similar to the image below:
 
-![EEG DATA AFTER ADJUSTING SETTINGS](../assets/images/Cyton_Starting_Guide/cytonGS_pic5cropped.png)
+![TIME SERIES DATA AFTER ADJUSTING SETTINGS](../assets/images/Cyton_Starting_Guide/cytonGS_pic5cropped.png)
 
 Notice that you no longer see the heart beat artifacts in channels 2 and 7. Additionally, the heart beat signal in channel 4 should be more steady, looking more like a typical EKG signal.
 
