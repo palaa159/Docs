@@ -349,7 +349,7 @@ We are only using channels 2, 4, and 7, so power down every other channel. You c
 
 Don't bother with the ohm symbols to the right of the buttons with numbers; they are used for impedance measuring, but we won't go into that now. 
 
-e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the CHAN SET tab to the right of the EEG DATA tab, and an array of buttons should appear of the EEG DATA montage:
+e) Now it's time to optimize your Cyton board's channel settings for this setup. Click the `Hardware Settings` button above the data oscilloscope display and an array of buttons should appear in place of the EEG DATA montage:
 
 ![Adjust Channel Settings](../assets/images/Cyton_Starting_Guide/CytonGS_pic3.png)
 
