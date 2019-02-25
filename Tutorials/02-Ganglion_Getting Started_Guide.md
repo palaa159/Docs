@@ -25,7 +25,7 @@ The battery connector on the back can accept 3V to 12V DC power input. The pushb
 
 ### 2. OpenBCI Ganglion Dongle
 
-![OpenBCI Ganglion Dongle](../assets/images/Ganglion_dongle.jpg)
+<a href="url"><img src="../assets/images/Ganglion_dongle.JPG" height="200"></a>
 
 Plug the OpenBCI Ganglion Dongle into your computer before launching the GUI. Additional dongles can be found in the [OpenBCI Shop](https://shop.openbci.com/products/ganglion-dongle).
 
