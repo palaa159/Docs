@@ -47,21 +47,21 @@ If you are using the OpenBCI USB Dongle, attach the Daisy module on top of the C
 ### 3) Connect Y-Splitter Cable
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton%2BDaisy%2BY-Splitter.JPG?raw=true" width="60%">
 
-The Y-Splitter connects the bottom SRB pin of the Daisy Board to the bottom SRB pin of the Cyton Board
+The Y-Splitter connects the bottom `SRB` pin of the Daisy Board to the bottom `SRB` pin of the Cyton Board
 
-### 4) Connect the bottom BIAS pin of the Cyton to your reference point
+### 4) Connect the bottom `BIAS` pin of the Cyton to your reference point
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Cyton_Daisy_BIAS.jpg?raw=true" width="60%">
 
 **Usually, the earlobe is used as the reference point, because it has no muscle or neurons and therefore very low electrical signals.**
 
-### 5) Connect Cyton bottom pins N1P-N8P and Daisy bottom pins N1P-N8P to leads
+### 5) Connect Cyton bottom pins `N1P-N8P` and Daisy bottom pins `N1P-N8P` to leads
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/MarkIV/Cyton_Daisy_Setup.JPG?raw=true" width="80%">
 
 Use the 16 of the color coded cables that came with your Ultracortex MarkIV headset.
 
-Connect Cyton bottom pins N1P through N8P to the cables, shown above. Then, connect the remaining 8 cables to Daisy bottom pins N1P through N8P. Color order does not matter. 
+Connect Cyton bottom pins `N1P` through `N8P` to the cables, shown above. Then, connect the remaining 8 cables to Daisy bottom pins `N1P` through `N8P`. Color order does not matter. 
 
 Refer to the Ultracortex Mark IV [tutorial](http://docs.openbci.com/Headware/01-Ultracortex-Mark-IV) to learn how to connect the male terminations of the color coded cables to the electrodes on the headset.
 
