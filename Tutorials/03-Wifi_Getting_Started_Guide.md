@@ -19,7 +19,7 @@ This guide will walk you through setting up your WiFi Shield, connecting it to y
 
 ## Cyton with WiFi Shield
 
-![OpenBCI Wifi Contents](../assets/images/wifi_what_you_need.jpg)
+<a href="url"><img src="../assets/images/wifi_what_you_need.jpg" height="400"></a>
 
 <details><summary>Expand this section for Cyton + WiFi Shield instructions</summary>
 <p>
@@ -42,23 +42,16 @@ In general the steps are:
 
 ### Powering the Shield
 
-Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
+Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 
 **IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
 
-The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. Passing through power to the Cyton requries having the `EXT PWR` switch in the `ON` position.
+![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
 
-![Wifi Power](../assets/images/wifi_battery_connection.jpg)
-
-The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
+The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
 
 ![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
 
-Make sure that the external power switch is set to `ON` to send power through to the Cyton board.
-
-![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
-
-The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 </details>
 
 ## Ganglion with WiFi Shield
