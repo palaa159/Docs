@@ -4,70 +4,68 @@
 
 ## Overview
 
-Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while Push The World designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
+Congrats on your new [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550)! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while Push The World designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
 
 ## Prerequisites
 
-The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
+The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest) firmware.
 
 **You must update your firmware before getting started.**
 
-* [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-overview)
+* [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial)
 * [Updating Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial)
 
 This guide will walk you through setting up your WiFi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Cyton and the second is for the Ganglion.
 
 ## Cyton with WiFi Shield
 
-You only need one battery when using the Cyton with the WiFi Shield. The Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless.
+<a href="url"><img src="../assets/images/wifi_what_you_need.jpg" height="400"></a>
 
-![OpenBCI Wifi Contents](../assets/images/wifi_what_you_need.jpg)
+<details><summary>Expand this section for Cyton + WiFi Shield instructions</summary>
+<p>
 
 ### What you need
 
- 1. OpenBCI WiFi Shield
+ 1. [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550)
  2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
-
+    - You only need one battery when using the Cyton with the WiFi Shield. The Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless.
 ### General Overview
 
 In general the steps are:
 
  1. Power off WiFi Shield and Cyton
  2. Seat WiFi Shield on Cyton
- 3. Put `EXT PWR` switch on Shield to `ON`
- 4. Plug battery into WiFi Shield only
+ 3. Put `EXT PWR` switch on the WiFi Shield to `ON`
+ 4. Plug battery into WiFi Shield only (do not plug a battery into the Cyton)
  5. Main power switch on WiFi Shield to `ON`
 
 ### Powering the Shield
 
-Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
+Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 
 **IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
 
-The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. Passing through power to the Cyton requries having the `EXT PWR` switch in the `ON` position.
+![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
 
-![Wifi Power](../assets/images/wifi_battery_connection.jpg)
-
-The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
+The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
 
 ![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
 
-Make sure that the external power switch is set to `ON` to send power through to the Cyton board.
-
-![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
-
-The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
+</details>
 
 ## Ganglion with WiFi Shield
+
+![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
+
+<details><summary>Expand this section for Ganglion + WiFi Shield instructions</summary>
+<p>
 
 ### What you need
 
  1. OpenBCI WiFi Shield
  2. OpenBCI Ganglion Board **IMPORTANT: Must have at least v2.0.0 Ganglion firmware or newer!**
  3. Two batteries, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
-
-![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
 
 ### General Overview
 
@@ -96,6 +94,8 @@ With two batteries, always power the WiFi Shield before the Ganglion.
 On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
+
+</details>
 
 ## WiFi Configuration for Firmware 2.0 and later
 

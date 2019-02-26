@@ -25,7 +25,7 @@ The battery connector on the back can accept 3V to 12V DC power input. The pushb
 
 ### 2. OpenBCI Ganglion Dongle
 
-![OpenBCI Ganglion Dongle](../assets/images/Ganglion_dongle.jpg)
+<a href="url"><img src="../assets/images/Ganglion_dongle.JPG" height="200"></a>
 
 Plug the OpenBCI Ganglion Dongle into your computer before launching the GUI. Additional dongles can be found in the [OpenBCI Shop](https://shop.openbci.com/products/ganglion-dongle).
 
@@ -157,19 +157,19 @@ Here's the color scheme we're using for this tutorial:
 
 | Electrode wire color | OpenBCI Ganglion Board |
 | -------------- | -------------- |
-| Grey | D_G (bottom pin) |
-| Purple | 3+ (top 3 pin) |
-| White | 3- (bottom 3 pin) |
+| Grey | `D_G` (bottom pin) |
+| Purple | `3+` (top 3 pin) |
+| White | `3-` (bottom 3 pin) |
 
-The purple and white wires can also be attached to 1+ (top 1 pin) and 1- (bottom 1 pin), or 2+ and 2-, or 4+ and 4-. 
+The purple and white wires can also be attached to `1+` (top 1 pin) and `1-` (bottom 1 pin), or `2+` and `2-`, or `4+` and `4-`. 
 
 #### Connect Electrodes to your Arm
 
-Attach SkinTact sticky electrodes to all three of the electrode ends. Stick the purple electrode (the 3+ pin) on your left arm, and the white electrode (the 3- pin) on your right arm.
+Attach SkinTact sticky electrodes to all three of the electrode ends. Stick the purple electrode (the `3+` pin) on your left arm, and the white electrode (the `3-` pin) on your right arm.
 
 **NOTE Connect the `+` pin to your LEFT arm, otherwise the pulse wave will be upside down! The `+` pin is on the TOP row of the pin header. See the [Ganglion Hardware](http://docs.openbci.com/Hardware/07-Ganglion) doc for more details.**
 
-Stick the grey electrode (the D_G bottom pin) on your elbow. This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
+Stick the grey electrode (the `D_G` bottom pin) on your elbow. This is the `Driven Ground` pin of the Ganglion, and it is important to connect to this pin so that you and the Ganglion 'agree' on what `0 Volts` is, otherwise your signal will be unstable.
 
 #### View ECG/EKG Signals in the GUI
 
@@ -221,12 +221,12 @@ The electrode wires should be connected like this:
 
 | Electrode wire color | OpenBCI Ganglion Board |
 | -------------- | -------------- |
-| Grey | 1+ (top 1 pin) |
-| Purple | 2+ (top 3 pin) |
-| Blue | 3+ (top 3 pin) |
-| Green | 4+ (top 4 pin) |
-| Yellow | REF (top or bottom is OK) |
-| Black | D_G (top or bottom is OK) |
+| Grey | `1+` (top 1 pin) |
+| Purple | `2+` (top 3 pin) |
+| Blue | `3+` (top 3 pin) |
+| Green | `4+` (top 4 pin) |
+| Yellow | `REF` (top or bottom is OK) |
+| Black | `D_G` (top or bottom is OK) |
 
 In this case, you want to be sure to connect to the `+` input, of channels 1, 2, 3, and 4, which is on the TOP row. You also need to connect one cable to the `REF` pin (either TOP or BOTTOM is ok) and also the `D_G` pin (either TOP or BOTTOM is ok).
 
@@ -270,7 +270,7 @@ Start the GUI as you have done before, and this time, set the `Vert Scale` to `5
 
 ![Eye Blinks!](../assets/images/ganglion_EEG-eye-blinks.jpg)
 
-Press the `Start System` button, and give the data a moment to settle. The first fun thing to measrue is eye blinks. If you blink your eyes, you will see a signature wave in the EEG signal on Channel 1 and Channel 2.
+Press the `Start Data Stream` button, and give the data a moment to settle. The first fun thing to measure is eye blinks. If you blink your eyes, you will see a signature wave in the EEG signal on Channel 1 and Channel 2.
 
 ![Jaw Grits](../assets/images/ganglion_EEG-jaw-grits.jpg)
 
@@ -292,7 +292,7 @@ If the initialization and data stream fails, try the following steps:
 
 1. Make sure your computer's Bluetooth is turned `ON`
 2. Making sure you've selected the correct Ganglion, if there are multiple Ganglions in the viscinity.
-3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and restaring the GUI.
+3. Power down your Ganglion, and close the GUI. Then try restarting the system, buy turning on the Ganglion, and then reopening the GUI.
 4. Make sure that your batteries are fully charged and then retry the steps above.
 5. If you are still having troubles connecting to your OpenBCI board, refer to the [Forum](http://openbci.com/index.php/forum/) for extra troubleshooting advice.
 
