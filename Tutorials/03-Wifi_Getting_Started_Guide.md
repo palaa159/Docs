@@ -10,7 +10,7 @@ Congrats on your new [OpenBCI WiFi Shield](https://shop.openbci.com/collections/
 
 The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest) firmware.
 
-**You must update your firmware before getting started.**
+#### You must update your firmware before getting started. If you purchased your board mid-2018 or later, you won't need to update firmware and can skip down to General Overview. 
 
 * [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial)
 * [Updating Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial)
