@@ -132,8 +132,7 @@ The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI 
 
 ### 6. Optional Settings
 
-<details><summary>If you're comfortable using the GUI, use the optional settings in this dropdown section. Otherwise, skip to step 7!</summary>
-<p>
+<details><summary>If you're comfortable using the GUI, use the optional settings in this dropdown section. Otherwise, skip to step 7!</summary><br>
 
 #### Check Status or Change Radio Channel
 
@@ -193,7 +192,7 @@ After creating a Playback file, it can be replayed by running the OpenBCI GUI wi
 If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE TO SD (Y/N)? sub-panel section you can select the maximum recording time of the file. This setting is defaulted to "Do not write to SD…" and will automatically switch to this if you do not have a MicroSD card properly inserted into your Cyton board.
 
 **Note:** be sure to select a file size that is larger than your planned recording time. The Cyton writes to the local SD in a way that enables us to write lots of data very quickly. As a result, however, we must specify how large the file will be before we begin. The technique is known as block writing.
-</p>
+
 </details>
 
 ### 7. Press "START SYSTEM"
