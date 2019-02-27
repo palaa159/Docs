@@ -19,7 +19,7 @@ This guide will walk you through setting up your WiFi Shield, connecting it to y
 
 ## Cyton with WiFi Shield
 
-<a href="url"><img src="../assets/images/wifi_what_you_need.jpg" height="400"></a>
+![OpenBCI Cyton Wifi Contents](../assets/images/wifi_what_you_need.jpg)
 
 <details><summary>Expand this section for Cyton + WiFi Shield instructions</summary>
 <p>
