@@ -214,7 +214,8 @@ If the initialization fails, try the following steps in order:
 2. Power down your Cyton board and unplug your USB Dongle. Then, plug back in your USB Dongle and power up your Cyton board in that order. Then try restarting the system, but pressing the START SYSTEM button again.
 3. If this does not work, try relaunching the OpenBCI GUI application and redo step 2 above. Then reconfigure the SYSTEM CONTROL PANEL settings, and retry START SYSTEM.
 4. Make sure that your batteries are fully charged and then retry the steps above.
-5. If you are still having troubles connecting to your Cyton board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
+5. If the channel number is not being displayed, select "AUTOSCAN" from the RADIO CONFIGURATION settings.
+6. If you are still having troubles connecting to your Cyton board, refer to the [Forum](http://openbci.com/index.php/forum) for extra troubleshooting advice.
 
 ### 8. Your Cyton is now live!
 
