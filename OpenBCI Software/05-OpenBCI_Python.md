@@ -2,9 +2,14 @@
 
 OpenBCI has a Python software library designed to work with OpenBCI hardware. To use it, download our OpenBCI Python github repository: https://github.com/OpenBCI/OpenBCI_Python. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using Python.
 
+Check out the example on how to plot the data real time using Jupyter notebooks here:
+[Cyton plot live data](https://github.com/andreaortuno/Plotting_OpenBCI_Cyton_Data_live) (This tutorial was made on Windows 10 and tested on a Linux VM)
+Cyton + Daisy:
+Ganglion (in development)
+
 Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/OpenBCI_Python) as well.
 
-## Dependancies
+## Dependencies
 
  1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
  2. Numpy 1.7 or later (http://www.numpy.org/)
@@ -30,20 +35,20 @@ should be sufficient. You may need to use the `sudo` command to overcome permiss
 
 #### Yapsy
 To install Yapsy, [download](https://pypi.python.org/pypi/Yapsy) the .egg file for your Python version. Then, if you have [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions), run:
-	
+
 > easy_install {Yapsy egg file}
-	
+
 For example,
-	
+
 > easy_install Yapsy-1.11.223-py2.7.egg
-	
+
 Again, you may need to use the `sudo` command to overcome permission settings.
 
 ## Functionality
 
 ### Overview
 
-The startStreaming function of the Board object takes a callback function and begins streaming data from the board. Each packet it receives is then parsed as an OpenBCISample which is passed to the callback function as an argument. 
+The startStreaming function of the Board object takes a callback function and begins streaming data from the board. Each packet it receives is then parsed as an OpenBCISample which is passed to the callback function as an argument.
 
 OpenBCISample members:
 -id:
@@ -57,17 +62,17 @@ OpenBCISample members:
 
 ### user.py
 
-This code provides a simple user interface (called user.py) to handle various plugins and communicate with the board. To use it, connect the board to your computer using the dongle (see http://docs.openbci.com/tutorials/01-GettingStarted for details). 
+This code provides a simple user interface (called user.py) to handle various plugins and communicate with the board. To use it, connect the board to your computer using the dongle (see http://docs.openbci.com/tutorials/01-GettingStarted for details).
 
 To connect to your board, run user.py with your board's serial/COM port as an argument. In a Linux terminal, this would look like the command below. Replace `/dev/ttyUSB0` with your board's unique serial port.
 
-> $python ./user.py -p /dev/ttyUSB0 
+> $python ./user.py -p /dev/ttyUSB0
 
 If you're unsure of your board's serial port, connect to your board with the OpenBCI GUI first and locate it under SERIAL/COM PORT:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/cyton_serial_name.png?raw=true" width="60%">
 
-Running user.py like in the command above should establish a serial connection and reset the board to default settings. When a '-->' appears, you can type a character (character map http://docs.openbci.com/software/01-OpenBCI_SDK)  that will be sent to the board using ser.write. This allows you to change the settings on the board. 
+Running user.py like in the command above should establish a serial connection and reset the board to default settings. When a '-->' appears, you can type a character (character map http://docs.openbci.com/software/01-OpenBCI_SDK)  that will be sent to the board using ser.write. This allows you to change the settings on the board.
 
 A good first test is to try is to type '?':
 >--> ?
@@ -94,9 +99,9 @@ Alternatively, there are 6 test signals pre configured:
 
 The / is used in the interface to execute a pre-configured command. Writing anything without a preceding '/' will automatically write those characters, one by one, to the board.
 
-For example, writing 
+For example, writing
 
-> -->x3020000X 
+> -->x3020000X
 
 will do the following:
 
@@ -104,7 +109,7 @@ will do the following:
 
 Pre-configured commands that use the / prefix are:
 
-test (As explained above) 
+test (As explained above)
 
 > --> /test4
 
@@ -131,7 +136,7 @@ Serial established...
 View command map at http://docs.openbci.com.
 Type start to run. Type /exit to exit.
 
---> 
+-->
 OpenBCI V3 8bit Board
 Setting ADS1299 Channel Values
 ADS1299 Device ID: 0x3E
@@ -176,17 +181,17 @@ Add new functionalities to user.py by creating new scripts inside the `plugins` 
 
 ```python
 	import plugin_interface as plugintypes
-	
+
 	class PluginPrint(plugintypes.IPluginExtended):
 		def activate(self):
 			print "Print activated"
-		
+
 		def deactivate(self):
 			print "Goodbye"
-			
+
 		def show_help(self):
 			print "I do not need any parameter, just printing stuff."
-				
+
 		# called with each new sample
 		def __call__(self, sample):
 			print "----------------"
@@ -219,7 +224,7 @@ You're done, your plugin should be automatically detected by `user.py`.
 
 * `sample_rate`: Print effective sampling rate averaged over XX seconds (default: 10).
 
-* `streamer_tcp`: Acts as a TCP server, using a "raw" protocol to send value. 
+* `streamer_tcp`: Acts as a TCP server, using a "raw" protocol to send value.
 	* The stream can be acquired with [OpenViBE](http://openvibe.inria.fr/) acquisition server, selecting telnet, big endian, float 32 bits, forcing 250 sampling rate (125 if daisy mode is used).
 	* Default IP: localhost, default port: 12345
 
