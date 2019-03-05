@@ -3,9 +3,11 @@
 OpenBCI has a Python software library designed to work with OpenBCI hardware. To use it, download our OpenBCI Python github repository: https://github.com/OpenBCI/OpenBCI_Python. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using Python.
 
 Check out the example on how to plot the data real time using Jupyter notebooks here:
-[Cyton plot live data](https://github.com/andreaortuno/Plotting_OpenBCI_Cyton_Data_live) (This tutorial was made on Windows 10 and tested on a Linux VM)
-Cyton + Daisy:
-Ganglion (in development)
+* [Cyton plot live data](https://github.com/andreaortuno/Plotting_OpenBCI_Cyton_Data_live) (This tutorial was made on Windows 10 and tested on a Linux VM)
+* Cyton + Daisy (in development)
+* Ganglion (in development)
+* Ganglion + WIFI Shield (in development)
+* Cyton + WIFI Shield (in development)
 
 Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/OpenBCI_Python) as well.
 
