@@ -25,7 +25,7 @@ For those who want to modify the headset design and need CAD files, go to the [U
 **Note:** the part quantities listed below assume you are making an electrode holder for all 35 nodes of the Ultracortex Mark 4. In reality, you will likely have only 8 or 16 electrodes, depending on whether you are working with the [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 channels) or the [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 channels). In general, more electrodes will distribute the downward scalp pressure, increasing comfort.
 
 ###3D-printed Parts:
-The Ultracortex Mark IV frame is designed to be printed one half at a time(front and back halves), with the flat side on the 3-D printer's build plate. The following parts are included in the Unassembled version of the Mark IV:
+The following parts are included in the Unassembled version of the Mark IV:
 
 * [FRAME](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory) (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl))
@@ -69,7 +69,7 @@ The following parts are not included with the purchase of any configuration of t
 
 #### (1x) FRAME
 
-The Ultracortex Mark IV frame is designed to be printed one half at a time(front and back halves), with the flat side on the 3-D printer's build plate.
+The Ultracortex Mark IV frame is designed to be printed one half at a time(front and back halves), with the flat side on the 3-D printer's build plate. [Prusa](https://www.prusa3d.com/) and [Lulzbot](https://www.lulzbot.com/) make 3-D printers that would be suitable for printing the Mark IV frame in halves or quarters. this purpose
 
 * FRAME (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl) )
