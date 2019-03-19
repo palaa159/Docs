@@ -115,5 +115,5 @@ Explore how the  existing widgets are accessing data structures internal to the 
 
 ### Step 5 - share your custom widget with the world!
 
-If you make a functional that you think others could benefit from, please share it with the world by submitting a pull request to the [OpenBCI_GUI repo](https://github.com/OpenBCI/OpenBCI_GUI)! 
+If you make a functional widget that you think others could benefit from, please share it with the world by submitting a pull request to the [OpenBCI_GUI repo](https://github.com/OpenBCI/OpenBCI_GUI)! 
 
