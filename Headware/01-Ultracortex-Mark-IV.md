@@ -7,7 +7,7 @@
 
 #### Complete Ultracortex Mark 4 kits are [available for sale](http://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv) in the OpenBCI Online Store!
 
-The Ultracortex is an open-source, 3D-printable headset intended to work with the [OpenBCI system](http://openbci.com/). It is capable of recording research-grade brain activity (EEG). The Ultracortex is under constant iteration. If you print/assemble your own Ultracortex, we would love to hear your feedback. Send us an email at [contact@openbci.com](mailto:contact@openbci.com) or Tweet at us ([@Ultracortex](https://twitter.com/Ultracortex) & [@OpenBCI](https://twitter.com/OpenBCI))!
+The Ultracortex is an open-source, 3D-printable headset designed to work with the [OpenBCI system](http://openbci.com/). It is a tool for recording research-grade brain activity (EEG). The Ultracortex is under constant iteration. If you print/assemble your own Ultracortex, we would love to hear your feedback. Send us an email at [contact@openbci.com](mailto:contact@openbci.com) or Tweet at us ([@Ultracortex](https://twitter.com/Ultracortex) & [@OpenBCI](https://twitter.com/OpenBCI))!
 
 [Step-by-step Assembly Tutorial Video](https://youtu.be/S87FV-Q59F8)
 
@@ -22,7 +22,7 @@ For those who want to modify the headset design and need CAD files, go to the [U
 
 ## THE COMPLETE ULTRACORTEX
 
-**Note:** the part quantities listed below assume you are making an electrode holder for all 35 nodes of the Ultracortex Mark 4. In reality, you will likely have only 8 or 16 electrodes, depending on whether you are working with the [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 channels) or the [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 channels). In general, more electrodes will distribute the downward scalp pressure, increasing comfort.
+**Note:** the part quantities listed below assume you are making an electrode holder for all 35 nodes of the Ultracortex Mark 4. In reality, you will likely have only 8 or 16 electrodes, depending on whether you are working with the [OpenBCI Cyton Board](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel) (8 channels) or the [OpenBCI CytonDaisy Board](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel) (16 channels). In general, more electrodes will distribute the downward scalp pressure, increasing comfort.
 
 ###3D-printed Parts:
 The following parts are included in the Unassembled version of the Mark IV:
@@ -45,7 +45,7 @@ The following parts are included in the Unassembled version of the Mark IV:
 
 The following parts are included in the Unassembled and the Print it Yourself versions of the Mark IV:
 
-* (**2x**)* [#4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
+* (**2x**)* [No.4 Screws for Brittle Plastic](https://www.mcmaster.com/#97349A100)
 * Cables (**x3**)
 	* We strip apart the Cables in your kit (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/Cables.JPG) 
 * Spikey units
@@ -59,7 +59,7 @@ The following parts are included in the Unassembled and the Print it Yourself ve
 	
 The following parts are not included with the purchase of any configuration of the Mark IV and should be purchased separately:
 
-* (**1x**) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit)
+* (**1x**) An [OpenBCI Cyton 8-channel Board](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel) or an [OpenBCI CytonDaisy 16-channel Board](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel)
 * (**1x**) Lithium Ion Rechargeable Battery Pack (~500mAh) — [Sparkfun](https://www.sparkfun.com/products/10718) or [Adafruit](http://www.adafruit.com/products/1578)
 * (**1x**) [A charger for your battery pack](https://www.adafruit.com/products/1304)
 
@@ -69,7 +69,7 @@ The following parts are not included with the purchase of any configuration of t
 
 #### (1x) FRAME
 
-The Ultracortex Mark IV frame is designed to be printed one half at a time(front and back halves), with the flat side on the 3-D printer's build plate. [Prusa](https://www.prusa3d.com/) and [Lulzbot](https://www.lulzbot.com/) make 3-D printers that would be suitable for printing the Mark IV frame in halves or quarters. this purpose
+The Ultracortex Mark IV frame is designed to be printed one half at a time (front and back halves), with the flat side on the 3-D printer's build plate. [Prusa](https://www.prusa3d.com/) and [Lulzbot](https://www.lulzbot.com/) make 3-D printers that are suitable for printing the Mark IV frame in halves or quarters. 
 
 * FRAME (head circumference: small = 42-50cm, medium = 48-58cm, large = 58-65cm)
 	* FRAME_FRONT (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Front.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Front.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Front.stl) )
@@ -136,7 +136,7 @@ The Ultracortex Mark IV frame is designed to be printed one half at a time(front
 
 ![image](../assets//MarkIV/Photos/EarClips.JPG)
 
-#### (1x) An [OpenBCI Cyton Board](http://openbci.myshopify.com/collections/frontpage/products/openbci-32-bit-board-kit) (8 electrode channels) or an [OpenBCI 16-channel R&D Kit](http://openbci.myshopify.com/collections/frontpage/products/openbci-16-channel-r-d-kit) (16 electrode channels)
+#### (1x) An [OpenBCI Cyton Board](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel) (8 electrode channels) or an [OpenBCI CytonDaisy Board](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel) (16 electrode channels)
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/OPENBCIs.jpg)
 
@@ -149,30 +149,30 @@ The Ultracortex Mark IV frame is designed to be printed one half at a time(front
 ## SUGGESTED PRINT SETTINGS
 
 If you're 3D-printing your Mark IV yourself, here are the print settings we recommend:
-* FRAME_FRONT & FRAME_BACK
-	* Material: PLA
-	* Supports: YES
-	* Raft: hopefully NO (but if supports aren't sticking, try the raft)
-	* Infill: 20%
-	* Layer Height: 0.2mm
-	* Number of Shells: 3
-	* Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
-* MECH_PARTS (INSERT )
-	* Material: PLA
-	* Supports: NO
-	* Raft: NO
-	* Infill: 20%
-	* Layer Height: 0.2mm
-	* Number of Shells: 3
-	* Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
-* BOARD_MOUNT, BOARD_COVER
-	* Material: PLA
-	* Supports: NO
-	* Raft: NO
-	* Infill: 20%
-	* Layer Height: 0.2mm
-	* Number of Shells: 3
-	* Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
+#### FRAME_FRONT & FRAME_BACK
+	- Material: PLA
+	- Supports: YES
+	- Raft: hopefully NO (but if supports aren't sticking, try the raft)
+	- Infill: 20%
+	- Layer Height: 0.2mm
+	- Number of Shells: 3
+	- Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
+#### MECH_PARTS (INSERT)
+	- Material: PLA
+	- Supports: NO
+	- Raft: NO
+	- Infill: 20%
+	- Layer Height: 0.2mm
+	- Number of Shells: 3
+	- Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
+#### BOARD_MOUNT, BOARD_COVER
+	- Material: PLA
+	- Supports: NO
+	- Raft: NO
+	- Infill: 20%
+	- Layer Height: 0.2mm
+	- Number of Shells: 3
+	- Speed while extruding: 50-70% (slow it down if possible; these parts are detailed)
 
 
 ## RECOMMENDED ASSEMBLY TOOLS
@@ -323,7 +323,7 @@ After connecting wires to electrodes, run wires along the frame to the top of th
 
 #### Ear Clips
 
-To use your Mark IV headset, you'll also need two [ear clip electrodes](http://fri-fl-shop.com/product/td-430-silver-disc-electrode-ear-clip/). These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system. You will connect them to your OpenBCI board along with the electrodes in the next step.
+To use your Mark IV headset, you'll also need two ear clip electrodes, which come with your headset kit. These ear clip electrodes serve as the reference and bias (ground with common-mode noise rejection) for your EEG system. You will connect them to your OpenBCI board along with the electrodes in the next step.
 
 #### Cyton Board Setup
 
@@ -475,7 +475,7 @@ Below is a screenshot of what the GUI looks like when you've got your OpenBCI + 
 
 ![image](../assets/images/MarkIV/MarkIV_screenshot.png)
 
-OpenBCI has a widget for visualizing signal strenth at each electrode. To view it, click on the "FFT Plot" drop-down menu in the top right corner. Select "Head Plot".
+The OpenBCI GUI has a widget for visualizing signal strength at each electrode. To view it, click on the "FFT Plot" drop-down menu in the top right corner. Select "Head Plot".
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/MarkIV/head_plot_menu.png?raw=true" width="50%">
 
