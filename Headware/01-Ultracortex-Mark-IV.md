@@ -62,7 +62,7 @@ The following parts are not included with the purchase of any configuration of t
 * (**1x**) An [OpenBCI Cyton 8-channel Board](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel) or an [OpenBCI CytonDaisy 16-channel Board](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel)
 * (**1x**) Lithium Ion Rechargeable Battery Pack (~500mAh) — [Sparkfun](https://www.sparkfun.com/products/10718) or [Adafruit](http://www.adafruit.com/products/1578)
 * (**1x**) [A charger for your battery pack](https://www.adafruit.com/products/1304)
-* (**1x**) [Velcro One Wrap](https://www.industrialwebbing.com/velcro-brand-one-wrap-tape-1-x-25-yard-roll/) The Ultracortex            Mark IV has horizontal bars designed to hold straps. The addition of DIY chin straps improves stability and                    therefore quality of the signal. We recommend 25 yard rolls of 1" Velcro One Wrap. which has hooks on one side and            loops on the other.
+* (**1x**) [Velcro One Wrap](https://www.industrialwebbing.com/velcro-brand-one-wrap-tape-1-x-25-yard-roll/) - The Ultracortex            Mark IV has horizontal bars designed to hold straps. The addition of DIY chin straps improves stability and                    therefore quality of the signal. We recommend 25 yard rolls of 1" Velcro One Wrap. which has hooks on one side and            loops on the other.
 
 ## THE COMPLETE ULTRACORTEX (w/ PICTURES)
 
