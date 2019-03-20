@@ -76,7 +76,7 @@ The Ultracortex Mark IV frame is designed to be printed one half at a time (fron
 	* FRAME_BACK (**x1**) — .STLs ([small](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Small_Back.stl) / [medium](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Medium_Back.stl) / [large](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Large_Back.stl))
 	* You can also print the frame in quarters or print the full frame. The .stl files are found [here](https://github.com/OpenBCI/Docs/tree/master/assets/MarkIV/STL_Directory/Mark_IV_Frame).
 
-![image](../assets/MarkIV/Photos/Frame.JPG)
+![image](../assets/MarkIV/Photos/M4_Orientation_render.png)
 
 #### (21x) MECH_PARTS
 
