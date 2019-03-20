@@ -13,12 +13,19 @@ On startup, the OpenBCI Ganglion board sends the following text over the radio:
   use !,@,#,$ to turn ON channels
 
   send 'b' to start data stream
+  
   send 's' to stop data stream
+  
   use 1,2,3,4 to turn OFF channels
+  
   send '?' to print all registers
+  
   send 'v' to initialize board
+  
   send '[' ']' to enable/disable synthetic square wave
+  
   send 'z' 'Z' to start/stop impedance test
+  
   send 'n','N' to enable/disable accelerometer"
 
 ## Command Set
