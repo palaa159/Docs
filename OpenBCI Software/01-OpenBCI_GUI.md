@@ -148,6 +148,12 @@ After downloading and uppacking, your Downloads folder will look like this on Wi
 
 `/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
+#### On Linux:
+
+Rename the directory you just unpacked to `OpenBCIHub` and move it to:
+
+`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
+
 #### On Windows:
 
 Rename the directory you just unpacked to `OpenBCIHub` and move it to:
@@ -169,12 +175,6 @@ Then quit the HUB: click the tray icon, and then press the quit button.
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
 As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
-
-#### On Linux:
-
-Copy all the contents of the directory you just unpacked, and paste it in here:
-
-`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
