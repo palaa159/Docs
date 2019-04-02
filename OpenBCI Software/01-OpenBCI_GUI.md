@@ -244,5 +244,4 @@ Time Series Shortcuts:
   - Q,W,E,R,T,Y,U,I
 
 - __Take a screenshot of the GUI using lowercase 'm'!__ It will be saved to /SavedData/.
-- __Enter presentation mode using Enter (Win), or Return (Mac).__
 - To change to the alternate color scheme, use '{' .
