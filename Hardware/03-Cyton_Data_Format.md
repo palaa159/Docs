@@ -170,7 +170,7 @@ For the scale factor, this is the multiplier that you use to convert the EEG val
 
 	Scale Factor (Volts/count) = 4.5 Volts / gain / (2^23 - 1);
 
-Note that 2^23 might be an unexpected term in this equation considering that the ADS1299 is a 24-bit device. That's because the 24bit raw count value is in 2's Compliment format. This equation is from the ADS1299 data sheet, specifically it is from the text surrounding Table 7. This scale factor has also been confirmed experimentally using known calibration signals.
+Note that 2^23 might be an unexpected term in this equation considering that the ADS1299 is a 24-bit device. That's because the 24bit raw count value is in 2's complement format. This equation is from the ADS1299 data sheet, specifically it is from the text surrounding Table 7. This scale factor has also been confirmed experimentally using known calibration signals.
 
 Accelerometer data must also be scaled before it can be correctly interpreted. The equation used to scale Accelerometer data is as follows (We assume 4Gs, so 2mG per digit):
 
