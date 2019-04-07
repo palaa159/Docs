@@ -22,19 +22,25 @@ The [OpenBCI_GUI-FocusArduino.ino](../assets/files/OpenBCI_GUI-FocusArduino/Open
 
 ### Step 2 - Upload the Arduino sketch
 
-![OpenBCI Serial Not Focused](../assets/images/gui_arduino_uploadArduinoSketch.png)
+![Upload Arduino Sketch](../assets/images/gui_arduino_uploadArduinoSketch.png)
 
 
 ### Step 3 - Open OpenBCI_GUI in Synthetic Mode
-![OpenBCI Serial Not Focused](../assets/images/gui_arduino_selectSyntheticMode.png)
+![Open GUI Synthetic Mode](../assets/images/gui_arduino_selectSyntheticMode.png)
 
 
 ### Step 4 - Start Streaming
 
-#### Setup the GUI as shown below using the Focus and Networking Widgets.
+#### Open and Setup the Networking Widget
+![Setup Networking Widget](../assets/images/gui_arduino_setupNetworkingWidgetSerial.png)
+
+#### Open the Focus Widget. Then, click "Start Data Steam" and then "Start" in the Networking Widget
+
 ![OpenBCI Serial Not Focused](../assets/images/gui_arduino_serial_notFocused.png)
+
 #### Next, turn off channel one to simulate Focused state.
-![OpenBCI Serial Not Focused](../assets/images/gui_arduino_serial_Focused.png)
+
+![OpenBCI Serial Focused](../assets/images/gui_arduino_serial_Focused.png)
 
 
 
