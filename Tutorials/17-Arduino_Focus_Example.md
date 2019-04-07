@@ -4,7 +4,7 @@ This tutorial shows you how to get started streaming data from the OpenBCI_GUI's
 
 ## What do I need?
 - An [OpenBCI Board](https://shop.openbci.com/collections/frontpage) 
-- The [OpenBCI_GUI]((https://github.com/OpenBCI/OpenBCI_GUI/releases/latest))
+- The [OpenBCI_GUI](https://github.com/OpenBCI/OpenBCI_GUI/releases/latest)
 - An [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3), or other similar device
 
 
