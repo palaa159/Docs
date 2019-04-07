@@ -9,7 +9,7 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI's interface panes. 
 ## Helpful Background Skills
 
 * Knowledge of [Arduino](https://www.arduino.cc/reference/en/) or C-based programming
-* Experience with [running the OpenBCI GUI from the Processing IDE](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)
+* Experience with [running the OpenBCI GUI from the Processing IDE](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-running-the-openbci-gui-from-the-processing-ide)
 
 
 ### Step 1 - Load the Example from the Docs in Arduino IDE
@@ -17,7 +17,7 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI's interface panes. 
 The [OpenBCI_GUI-FocusArduino.ino](../assets/files/OpenBCI_GUI-FocusArduino.ino) file is designed to serve as a simple starting point for creating your own Arduino project using data from the GUI over serial.
 
 
-### Step 2 - Then do this
+### Step 2 - Upload the Arduino sketch
 
 
 

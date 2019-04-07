@@ -1,5 +1,10 @@
-
-// Example 2 - Receive with an end-marker
+////////////////////////////////////////////////////////////////////////
+//                OpenBCI_GUI to Arduino Serial: Focus                //
+//                                                                    //
+//    - The Arduino Built-In LED blinks when the user is Focused      //
+//   https://docs.openbci.com/Tutorials/17-Arduino_Focus_Example.md   //
+//   Tested 4/7/2019 using iMac, Genuine Arduino, OpenBCI_GUI 4.1.2   //
+////////////////////////////////////////////////////////////////////////
 
 const byte numChars = 32;
 char receivedChars[numChars];   // an array to store the received data
@@ -23,6 +28,7 @@ void loop() {
     }
 }
 
+//Recieve data and look for the endMarker '\n' (new line)
 void recvWithEndMarker() {
     static byte ndx = 0;
     char endMarker = '\n';
@@ -48,7 +54,9 @@ void recvWithEndMarker() {
 
 void showNewData() {
     if (newData == true) {
+        //Convert char array into string
         String s = receivedChars;
+        //Check if the string is "true" or "false"
         if (s.equals("false")) {
           Serial.println("Input: FALSE");
           isFocusedFromGUI = false;
@@ -56,6 +64,7 @@ void showNewData() {
           Serial.println("Input: TRUE");
           isFocusedFromGUI = true;
         } else {
+          //Otherwise print the incoming with no action
           Serial.println("This just in ... " + s);
         }
         newData = false;
