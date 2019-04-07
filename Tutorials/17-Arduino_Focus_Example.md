@@ -3,7 +3,7 @@
 This tutorial shows you how to get started streaming data from the OpenBCI_GUI's Focus Widget via Serial connection to an [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3).
 
 ## What do I need?
-- An [OpenBCI Board](https://shop.openbci.com/collections/frontpage) 
+- An [OpenBCI Board](https://shop.openbci.com/collections/frontpage) *(Optional)*
 - The [OpenBCI_GUI](https://github.com/OpenBCI/OpenBCI_GUI/releases/latest)
 - An [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3), or other similar device
 
