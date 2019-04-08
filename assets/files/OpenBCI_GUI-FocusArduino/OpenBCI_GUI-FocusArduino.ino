@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////
-//                OpenBCI_GUI to Arduino Serial: Focus                //
+//            OpenBCI_GUI to Arduino via Serial: Focus                //
 //                                                                    //
 //    - The Arduino Built-In LED blinks when the user is Focused      //
 //   https://docs.openbci.com/Tutorials/17-Arduino_Focus_Example.md   //

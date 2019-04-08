@@ -22,7 +22,7 @@ The [OpenBCI_GUI-FocusArduino.ino](../assets/files/OpenBCI_GUI-FocusArduino/Open
 
 ### Step 2 - Upload the Arduino sketch
 
-![Upload Arduino Sketch](../assets/images/gui_arduino_uploadArduinoSketch.png)
+![Upload Arduino Sketch](../assets/images/gui_arduino_uploadArduinoSketchIDE.png)
 
 
 ### Step 3 - Open OpenBCI_GUI in Synthetic Mode
