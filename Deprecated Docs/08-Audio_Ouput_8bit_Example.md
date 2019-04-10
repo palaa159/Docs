@@ -1,4 +1,4 @@
-#Audio Ouput on OpenBCI 8bit Board
+#Audio Output on OpenBCI 8bit Board
 Sometimes, when studying EEG or other biopotential signals, you will want to generate a stimulus during a recording or live session, and it may be important that the stimulus occurs at a specific timed frequency. We've posted a tutorial on how to blink LEDs at different rates, and that works for visual stimulation, but what about auditory stimulation? This tutorial seeks to answer that question. The example below would be applicable to a study exploring audio ERPs (Event Related Potentials) and P300 wave experiments. For these kinds of studies, the onset of the stimulus (beep or boop) needs to be noted in the data stream with great accuracy. We can do this easily with the OpenBCI board. Please read this entire page before jaunting off into hardware hacking.
 
 ##Generating Audio Signals With OpenBCI 8bit Board
