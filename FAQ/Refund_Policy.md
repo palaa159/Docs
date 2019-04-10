@@ -1,22 +1,13 @@
 # RETURNS & REFUNDS
 
-### HOW DO I REQUEST A REFUND?
 
 #### Returns
 
-Before returning any items, please note:
-You must contact us at sales@openbci.com before returning any items.
-Items must be returned within 30 days of receipt of your purchase.
-Items that have been laundered or altered in any way will not be accepted.
-Items that have been opened will not be accepted.
-You are responsible for the cost of return shipping.
+Before returning any items, 
+you must contact us at sales@openbci.com. Refunds and exchanges can be requested within 30 days of the delivery date.
 
-Please note, all returns are contingent on the resale-able condition of the items.
+Please note, all returns are contingent on the resale-able condition of the items. You are responsible for the cost of return shipping.
 
-After one month, we will accept returns and refund you for the original price less 25%. 
-We deduct a 25% restocking fee to cover the cost of moving parts.
-If you are returning items three months after delivery date, we will deduct 50% of the original price. 
-After six months, we do not accept returns.
 
 #### Order Issues
 
@@ -35,8 +26,8 @@ Include a note that indicates your name and contact information, the order numbe
 
 OpenBCI, Inc.
 Attn. Returns Department
-630 Flushing Ave, Suite 867
-Brooklyn, NY 11206
+19 Morris Ave, Building 128
+Brooklyn, NY 11205
 
 
 #### If You’re Requesting a Refund
