@@ -169,7 +169,9 @@ Now, click the `AUTOSCAN` button. It may take a few seconds for the Dongle to sc
 
 #### Edit the Playback file name
 
+
 ![File Name](../assets/images/ble112_ganglion_fileName.png)
+
 
 In the DATA LOG FIlE section of the LIVE (from Cyton) sub-panel you can specify the name of your playback file. This file name is automatically defaulted to:
 
@@ -177,17 +179,15 @@ In the DATA LOG FIlE section of the LIVE (from Cyton) sub-panel you can specify 
 
 You can edit the the name of this file by clicking in the "File Name" text field.
 
-If you're running the OpenBCI GUI from Processing. This file will be saved at the root of your OpenBCI_GUI directory.
+**Playback files and user data are stored in a folder called `SavedData`.** OpenBCI Data Format Playback Files use [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formatting and plain text.
 
-If you're running the OpenBCI GUI as a standalone application, this file will be saved in /Contents/Java/Data/EEG_Data/
-
-If working from a Mac, you'll need to right-click on the OpenBCI_GUI application and then select "show package contents" to see the /Contents directory where your playback files are saved.
-
-After creating a Playback file, it can be replayed by running the OpenBCI GUI with the Plaback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
+After creating a Playback file, it can be replayed by running Playback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
 #### Select your SD setting
 
+
 ![WRITE TO SD](../assets/images/writeToSD.png)
+
 
 If you want to log data to a MicroSD inserted into the Cyton Board, in the WRITE TO SD (Y/N)? sub-panel section you can select the maximum recording time of the file. This setting is defaulted to "Do not write to SD…" and will automatically switch to this if you do not have a MicroSD card properly inserted into your Cyton board.
 
