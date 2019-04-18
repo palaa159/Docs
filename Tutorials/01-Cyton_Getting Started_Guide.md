@@ -179,7 +179,7 @@ In the DATA LOG FIlE section of the LIVE (from Cyton) sub-panel you can specify 
 
 You can edit the the name of this file by clicking in the "File Name" text field.
 
-**Playback files and user data are stored in a folder called `SavedData`.** OpenBCI Data Format Playback Files use [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formatting and plain text.
+**Playback files and user data are stored in a folder called `SavedData`.** OpenBCI Playback Files use [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formatting and plain text.
 
 For Mac `Applications/SavedData/`
 
