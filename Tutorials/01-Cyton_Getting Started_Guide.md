@@ -181,7 +181,7 @@ You can edit the the name of this file by clicking in the "File Name" text field
 
 **Playback files and user data are stored in a folder called `SavedData`.** OpenBCI Playback Files use [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formatting and plain text.
 
-For Mac `Applications/SavedData/`
+For example, the path on a Mac using the standalone app is `Applications/SavedData/` when installed in the `Applications` folder.
 
 After creating a Playback file, it can be replayed by running Playback File data source mode. As a result, you can easily share recorded OpenBCI Playback files with your friends and colleagues.
 
