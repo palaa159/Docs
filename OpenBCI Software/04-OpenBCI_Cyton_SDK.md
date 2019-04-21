@@ -127,6 +127,12 @@ User sends **x  3  0  2  0  0  0  0  X**
 
 For firmware `v0` and `v1` it is required that you allow a time delay (>10mS) when setting the channel and parameters. As of `v2.0.0`, you may stack multiple channel settings together such as:
 
+**EXAMPLE**
+
+User sends **x1020000Xx2020000Xx3020000X**
+
+This will set the first three channels.
+
 **returns**
 
 On success:
@@ -141,12 +147,6 @@ On failure:
   * 9th character is not the upper case 'X', `Failure: 9th char not X$$$` (**example** user sends x1020000V)
   * Too many characters or some other issue, `Failure: Err: too many chars$$$`
 * If not all commands are not received within 1 second, `Timeout processing multi byte message - please send all commands at once as of v2$$$`
-
-**EXAMPLE**
-
-User sends **x1020000Xx2020000Xx3020000X**
-
-This will set the first three channels.
 
 ### Default Channel Settings
 
