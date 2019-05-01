@@ -4,7 +4,18 @@
 
 ## Overview
 
-Congrats on your new [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550)! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while Push The World designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
+The [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) is a hardware product, intended to work with the OpenBCI GUI software and be paired with any OpenBCI board, that enables biodata streaming over wifi. 
+The advantage of wifi over bluetooth is increased sampling rate.
+The WiFi Shield increases the sample rate by transmitting the data via WiFi as opposed to Bluetooth. The WiFi Shield can be controlled through HTTP requests and can send JSON objects with data in nano volts. With the WiFi Shield connected:
+
+*The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz and 16000Hz.
+
+*The Cyton + Daisy can stream data at 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, and 8000Hz.
+
+*The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
+
+
+IMPORTANT NOTE: This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration. 
 
 ## Prerequisites
 
