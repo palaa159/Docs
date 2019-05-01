@@ -8,14 +8,14 @@ The [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/product
 The advantage of wifi over bluetooth is increased sampling rate.
 The WiFi Shield increases the sample rate by transmitting the data via WiFi as opposed to Bluetooth. The WiFi Shield can be controlled through HTTP requests and can send JSON objects with data in nano volts. With the WiFi Shield connected:
 
-*The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz and 16000Hz.
+* The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz and 16000Hz.
 
-*The Cyton + Daisy can stream data at 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, and 8000Hz.
+* The Cyton + Daisy can stream data at 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, and 8000Hz.
 
-*The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
+* The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
 
 
-IMPORTANT NOTE: This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration. 
+**IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration. 
 
 ## Prerequisites
 
@@ -313,30 +313,39 @@ Come back to this guide when your GUI is running!
 ### Streaming Data On Cyton
 
 Select `LIVE (from Cyton)` from the first drop down
+
 ![selecting cyton from drop down](../assets/images/wifi_cyton_select_cyton.png)
 
 Select `Wifi (from WiFi Shield)` as the transfer protocol
+
 ![selecting wifi from the transfer protocol](../assets/images/wifi_cyton_select_wifi.png)
 
 The GUI will automatically start searching for WiFi Shields
+
 ![wifi with cyton searching for wifi shield](../assets/images/wifi_cyton_searching.png)
 
 Select the desired WiFi Shield from the dropdown list
+
 ![selecting wifi shield](../assets/images/wifi_cyton_select_wifi_shield.png)
 
 The Cyton will default to a sample rate of 1000Hz with a latency of 10ms. For the majority of modern data WiFi networks these settings will work. If your data transfer LED (`D2` on WiFi Shield) is not solid blue, then you should try adjusting your sample rate and latency while you determine your wireless network problems.
+
 ![setting latency and sample rate of cyton](../assets/images/wifi_cyton_wifi_settings.png)
 
 Press `START SYSTEM` when you're ready to begin streaming.
+
 ![wifi cyton start system](../assets/images/wifi_cyton_start_system.png)
 
 Press `Start Data Stream` to begin streaming!
+
 ![cyton wifi starting data stream](../assets/images/wifi_cyton_data_stream_start.png)
 
 When you are finished recording, you may press `Stop Data Stream`
+
 ![cyton wifi stopping data stream](../assets/images/wifi_cyton_data_stream_stop.png)
 
 Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+
 ![cyton wifi stop system](../assets/images/wifi_cyton_stop_system.png)
 
 If you are unable to connect to the board
@@ -349,31 +358,50 @@ If you are unable to connect to the board
 ### Streaming Data On Ganglion
 
 Select `LIVE (from Ganglion)` from the first drop down
+
 ![selecting ganglion from drop down](../assets/images/wifi_ganglion_select_ganglion.png)
 
+
 Select `Wifi (from WiFi Shield)` as the transfer protocol
+
 ![selecting wifi from the transfer protocol](../assets/images/wifi_ganglion_select_wifi.png)
 
+
 The GUI will automatically start searching for WiFi Shields
+
 ![wifi with ganglion searching for wifi shield](../assets/images/wifi_ganglion_searching.png)
 
+
 Select the desired WiFi Shield from the dropdown list
+
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
+
 The Ganglion will default to a sample rate of 1600Hz with a latency of 10ms. For the majority of modern data WiFi networks these settings will work. If your data transfer LED (`D2` on WiFi Shield) is not solid blue, then you should try adjusting your sample rate and latency while you determine your wireless network problems.
+
 ![setting latency and sample rate of ganglion](../assets/images/wifi_ganglion_settings.png)
 
 Press `START SYSTEM` when you're ready to begin streaming.
+
 ![wifi ganglion start system](../assets/images/wifi_ganglion_start_system.png)
 
+
 Press `Start Data Stream` to begin streaming!
+
 ![ganglion wifi starting data stream](../assets/images/wifi_ganglion_data_stream_start.png)
 
+
 When you are finished recording, you may press `Stop Data Stream`
+
 ![ganglion wifi stopping data stream](../assets/images/wifi_ganglion_data_stream_stop.png)
 
+
+
 Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+
 ![ganglion wifi stop system](../assets/images/wifi_ganglion_stop_system.png)
+
+
 
 If you are unable to connect to the board
 
@@ -401,7 +429,7 @@ Select the desired WiFi Shield from the dropdown list
 
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
-Select the right caret button to open the WiFi Configuration window
+Select the right carrot button to open the WiFi Configuration window
 
 ![selecting right carrot to open wifi config](../assets/images/wifi_config_select_right_carrot.png)
 
