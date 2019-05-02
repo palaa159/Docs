@@ -58,11 +58,15 @@ Install 4 AA batteries in your battery pack or charge up your LiPo battery. The 
 
 **IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
 
+
 ![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
+
 
 The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
 
+
 ![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
+
 </details>
 
 ## Ganglion with WiFi Shield
@@ -97,17 +101,23 @@ The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Gangl
 
 To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spudger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
 
+
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)`EXT PWR` is `ON` in top photo, `OFF` in bottom photo.
+
 
 With two batteries, always power the WiFi Shield before the Ganglion.
 
+
 ![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
+
 
 On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
+
 </details>
+
 
 ## WiFi Configuration for Firmware 2.0 and later
 
