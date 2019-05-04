@@ -233,9 +233,11 @@ When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cy
 __Use the spacebar to start or stop the data stream!__ 
 
 __To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
+
 ![Expert Mode Button](../assets/images/expertModeToggleHelpText.png)
 
 Expert Mode Keyboard Shortcuts:
+
 - Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
 
 - You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. 
