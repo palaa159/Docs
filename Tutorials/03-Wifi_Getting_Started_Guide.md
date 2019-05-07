@@ -4,7 +4,7 @@
 
 ## Overview
 
-The [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) is a hardware product, intended to work with the OpenBCI GUI software and be paired with any OpenBCI board, that enables biodata streaming over wifi. 
+The [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) is a hardware product, intended to work with the OpenBCI GUI software and be paired with any OpenBCI board, that enables biodata streaming over wifi.
 The advantage of wifi over bluetooth is increased sampling rate.
 The WiFi Shield increases the sample rate by transmitting the data via WiFi as opposed to Bluetooth. The WiFi Shield can be controlled through HTTP requests and can send JSON objects with data in nano volts. With the WiFi Shield connected:
 
@@ -15,13 +15,13 @@ The WiFi Shield increases the sample rate by transmitting the data via WiFi as o
 * The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
 
 
-**IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration. 
+**IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration.
 
 ## Prerequisites
 
 The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest) firmware.
 
-#### You must update your firmware before getting started. If you purchased your board mid-2018 or later, you won't need to update firmware and can skip down to General Overview. 
+#### You must update your firmware before getting started. If you purchased your board mid-2018 or later, you won't need to update firmware and can skip down to General Overview.
 
 * [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial)
 * [Updating Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial)
@@ -41,7 +41,7 @@ This guide will walk you through setting up your WiFi Shield, connecting it to y
  2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
     - You only need one battery when using the Cyton with the WiFi Shield. The Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless.
-    
+
 ### General Overview
 
 In general the steps are:
@@ -97,24 +97,21 @@ In general the steps are:
 
 ### Powering the Shield
 
-The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargable batteries to power the Wifi Shield.
+The Ganglion runs at 3.0 Volts while the WiFi Shield runs at 3.3 Volts. You can use the WiFi shield to power the Ganglion; using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargeable batteries to power the Wifi Shield.
 
-To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spudger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
+To use one battery, flip `EXT PWR` in the `ON` position. You can use the black spudger tool that came with your WiFi Shield.
 
+To use two batteries, keep `EXT PWR` in the `OFF` position, or flip it to `OFF` in case it is `ON`.
 
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)`EXT PWR` is `ON` in top photo, `OFF` in bottom photo.
 
-
 With two batteries, always power the WiFi Shield before the Ganglion.
 
-
 ![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
-
 
 On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
 
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
-
 
 </details>
 
