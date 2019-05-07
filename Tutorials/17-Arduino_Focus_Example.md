@@ -17,13 +17,16 @@ This tutorial shows you how to get started streaming data from the OpenBCI_GUI's
 
 ### Step 1 - Load the Example in the Arduino IDE
 
-The [OpenBCI_GUI-FocusArduino.ino](../assets/files/OpenBCI_GUI-FocusArduino/OpenBCI_GUI-FocusArduino.ino) file is designed to serve as a simple starting point for creating your own Arduino project using data from the GUI over serial.
+The [OpenBCI_GUI-FocusArduino.ino](https://github.com/OpenBCI/Docs/blob/master/assets/files/OpenBCI_GUI-FocusArduino/OpenBCI_GUI-FocusArduino.ino) file is designed to serve as a simple starting point for creating your own Arduino project using data from the GUI over serial. 
+
+You can copy/paste the code into the Arduino IDE or [download the Docs](https://github.com/OpenBCI/Docs/archive/master.zip) and navigate to the example `/assets/files/OpenBCI_GUI-FocusArduino/OpenBCI_GUI-FocusArduino.ino`.
 
 
 ### Step 2 - Upload the Arduino sketch
 
 ![Upload Arduino Sketch](../assets/images/gui_arduino_uploadArduinoSketchIDE.png)
 
+After uploading the sketch, you can close or minimize the Arduino IDE, but keep the Arduino connected to the computer. The sketch we just uploaded is running!
 
 ### Step 3 - Open OpenBCI_GUI in Synthetic Mode
 ![Open GUI Synthetic Mode](../assets/images/gui_arduino_selectSyntheticMode.png)
@@ -42,12 +45,23 @@ The [OpenBCI_GUI-FocusArduino.ino](../assets/files/OpenBCI_GUI-FocusArduino/Open
 
 ![OpenBCI Serial Focused](../assets/images/gui_arduino_serial_Focused.png)
 
+The Arduino's built-in LED should blink when the Focus Widget reads "focused!"
 
+How does the Focus Widget work? [Check out this community post!](https://openbci.com/community/focus-visualization-widget/)
+
+How can this be used to *make* something? [Here's an example!](https://openbci.com/community/using-openbci-guis-focus-widget-to-harness-alpha-and-beta-waves/)
 
 ### Step 5 - Learn! Create! Share!
 
-From here, you can add more to your new Arduino project to react to data from the OpenBCI_GUI!
+From here, you can add more to your new Arduino project to react to Focus data from the OpenBCI_GUI:
 
- - **How does the Focus Widget work? [Checkout this community post!](https://openbci.com/community/using-openbci-guis-focus-widget-to-harness-alpha-and-beta-waves/)**
-  - **Add more positive information here**
+  - Use Live Data from a [Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) or [Ganglion](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board?variant=13461804483)
+
+ - Try controlling even more LEDs using the Arduino
+
+ - Try controlling a motor or group of motors
+
+ - Make a second copy of your project and make it a two player game!
+
+ - [Share what you've made in a community post!](https://openbci.com/community/)
 
