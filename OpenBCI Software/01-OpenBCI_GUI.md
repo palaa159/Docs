@@ -148,6 +148,12 @@ After downloading and uppacking, your Downloads folder will look like this on Wi
 
 `/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
+#### On Linux:
+
+Rename the directory you just unpacked to `OpenBCIHub` and move it to:
+
+`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
+
 #### On Windows:
 
 Rename the directory you just unpacked to `OpenBCIHub` and move it to:
@@ -169,12 +175,6 @@ Then quit the HUB: click the tray icon, and then press the quit button.
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
 As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
-
-#### On Linux:
-
-Copy all the contents of the directory you just unpacked, and paste it in here:
-
-`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
@@ -230,10 +230,19 @@ __Click "Settings"-->"Default" to revert the GUI to default settings.__
 When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
 
 ## Other Keyboard Shortcuts
-__Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
+__Use the spacebar to start or stop the data stream!__ 
 
-Time Series Shortcuts:
-- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
+__To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
+
+![Expert Mode Button](../assets/images/expertModeToggleHelpText.png)
+
+Expert Mode Keyboard Shortcuts:
+
+- Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
+
+- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. 
+
+- __Press lowercase 'd' to set all channels settings to default.__
 
 - Using an _English keyboard_, you can deactivate channels 1-16 using:
   - 1,2,3,4,5,6,7,8
@@ -244,5 +253,7 @@ Time Series Shortcuts:
   - Q,W,E,R,T,Y,U,I
 
 - __Take a screenshot of the GUI using lowercase 'm'!__ It will be saved to /SavedData/.
+
 - __Enter presentation mode using Enter (Win), or Return (Mac).__
+
 - To change to the alternate color scheme, use '{' .
