@@ -1,13 +1,13 @@
 # MATLAB
 
-[MATLAB](https://en.wikipedia.org/wiki/MATLAB) is a powerful numerical computing language and environment that is widely used in a wide variety of academic, research, and industry applications. 
+[MATLAB](https://en.wikipedia.org/wiki/MATLAB) is a powerful numerical computing language and environment that is widely used in a wide variety of academic, research, and industry applications.
 
 A few Matlab toolboxes have been created specifically for working with EEG and BCI. [EEGLAB](http://sccn.ucsd.edu/eeglab/), [BCILAB](http://sccn.ucsd.edu/wiki/BCILAB), [ERPLAB](http://erpinfo.org/erplab), and [FieldTrip](http://www.fieldtriptoolbox.org/) are a few toolboxes that have helped OpenBCI users work in MATLAB.
 
 This tutorial will walk through setting up your Matlab environment for use with OpenBCI hardware, as well as some basic uses and functionalities that Matlab offers for working with brain-computer interfaces.
 
-#### Installation
-Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-mathworks-software.html) for MATLAB installation instructions. 
+## Installation
+Go to the [MathWorks website](http://www.mathworks.com/help/install/ug/install-mathworks-software.html) for MATLAB installation instructions.
 
 *Please note that MATLAB is commercial software. Licenses must either be purchased or acquired through academic or professional institutions.*
 
@@ -15,13 +15,14 @@ Several useful MATLAB toolkits (EEGLAB, BCILAB, FieldTrip, etc) have been create
 
 ## Loading OpenBCI Data
 
-To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. On MacOs, data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
+There are two main ways to get your OpenBCI data from the boards into MATLAB for analysis. The first is to import a CSV file from a recorded session, and the second is to use the Lab Streaming Layer (LSL) to stream the board data into MATLAB. We will go over both methods.
+
+
+### Method 1: Import CSV file from the OpenBCI GUI
+
+To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. The data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/saved_data_folder.png?raw=true" width="80%">
-
-The save location for an OpenBCI GUI session is also at the top of the window:
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/save_location_GUI.png?raw=true" width="80%">
 
 The OpenBCI Processing GUI saves data in text (txt) or comma separated value (csv) files. Import the CSV file into MATLAB as a matrix by using the "Import Data" wizard:
 
@@ -33,8 +34,20 @@ Select a saved OpenBCI data file. Once the data import screen is open, select th
 
 Click "Import Selection". Your matrix should now appear as an object in your workspace! Keep reading to learn more about processing your data with MATLAB toolboxes.
 
+### Method 2: Stream OpenBCI data via LSL
 
-## EEGLAB
+You can also stream live OpenBCI data into MATLAB using the Lab Streaming Layer either from the OpenBCI GUI or from Python. We will go over how to import data using the OpenBCI GUI, for the python LSL tutorial please go to [OpenBCI Python]().
+
+Open the OpenBCI GUI and "Start System" with your setup as you would do. On the widget dropdown menu select "Networking". At the right upper corner of the Networking widget there is another dropdown
+
+![](https://github.com/OpenBCI/Docs/blob/master/assets/images/Matlab/Networking_LSL1.gif)
+
+
+## Analyzing OpenBCI data
+
+There are many ways in which you can use MATLAB to analyze the data from the OpenBCI board, we will go over a few common ones to get started.
+
+### EEGLAB
 
 From the EEGLAB wiki: "EEGLAB is an interactive Matlab toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection."
 
@@ -136,7 +149,7 @@ To use ERPLAB for analyzing EEG datasets, import your data set as seen in the [L
 From the [FieldTrip hopmepage](http://www.fieldtriptoolbox.org/development/realtime): "The toolbox offers advanced analysis methods of MEG, EEG, and invasive electrophysiological data, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing."
 
 #### Setup
-[Download](http://www.fieldtriptoolbox.org/download) the latest version of FieldTrip from the download page (you will have to provide an email address and descriptiption of research). 
+[Download](http://www.fieldtriptoolbox.org/download) the latest version of FieldTrip from the download page (you will have to provide an email address and descriptiption of research).
 
 Add the FieldTrip directory to your MATLAB path and check out FieldTrip's [getting started guide](http://www.fieldtriptoolbox.org/getting_started).
 
@@ -149,5 +162,3 @@ Add the FieldTrip directory to your MATLAB path and check out FieldTrip's [getti
 [ERPLAB Homepage](http://erpinfo.org/erplab)
 
 [FieldTrip Homepage](http://www.fieldtriptoolbox.org/)
-
-
