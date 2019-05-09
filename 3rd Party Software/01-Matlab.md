@@ -40,7 +40,8 @@ You can also stream live OpenBCI data into MATLAB using the Lab Streaming Layer 
 
 Open the OpenBCI GUI and "Start System" with your setup as you would do. On the widget dropdown menu select "Networking". At the right upper corner of the Networking widget there is another dropdown
 
-![](https://github.com/OpenBCI/Docs/blob/master/assets/images/Matlab/Networking_LSL1.gif)
+![](https://github.com/OpenBCI/Docs/blob/andrea/assets/Matlab/Networking_LSL1.gif)
+
 
 
 ## Analyzing OpenBCI data
