@@ -3,7 +3,7 @@ The OpenBCI boards communicate using a byte string (mostly ASCII) command protoc
 
 ## Ganglion Command Protocol Overview
 
-Cyton boards has a powerful microcontroller on board that comes pre-programmed with the firmware. The Simblee radio link uses the Nordic Gazelle stack and library along with a BLE stack. The microcontroller has been programmed with firmware that interfaces between the MCP (Analog Front End), LIS3DH (Accelerometer), and micro SD (if installed). The user, or application, controls the board by sending commands over wireless serial connection.
+Ganglion boards have a powerful microcontroller on board that comes pre-programmed with the firmware. The Simblee radio link uses the Nordic Gazelle stack and library along with a BLE stack. The microcontroller has been programmed with firmware that interfaces between the MCP (Analog Front End), LIS3DH (Accelerometer), and micro SD (if installed). The user, or application, controls the board by sending commands over wireless serial connection.
 
 On startup, the OpenBCI Ganglion board sends the following text over the radio:
 
@@ -13,12 +13,19 @@ On startup, the OpenBCI Ganglion board sends the following text over the radio:
   use !,@,#,$ to turn ON channels
 
   send 'b' to start data stream
+
   send 's' to stop data stream
+
   use 1,2,3,4 to turn OFF channels
+
   send '?' to print all registers
+
   send 'v' to initialize board
+
   send '[' ']' to enable/disable synthetic square wave
+
   send 'z' 'Z' to start/stop impedance test
+
   send 'n','N' to enable/disable accelerometer"
 
 ## Command Set
