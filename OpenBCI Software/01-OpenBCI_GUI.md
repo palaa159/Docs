@@ -12,7 +12,11 @@ The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, a
 
 ![FTDI Install](../assets/images/FTDI.png)
 
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** if you jumped ahead and are already running your GUI, you may need to restart your GUI for this to take effect.
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). 
+
+**If using Windows 64-bit:** Here is a direct link to download the FTDI version for your system [here.](https://www.ftdichip.com/Drivers/CDM/CDM21228_Setup.zip)
+
+**Note:** if you jumped ahead and are already running your GUI, you may need to restart your GUI for this to take effect.
 
 ![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
 
