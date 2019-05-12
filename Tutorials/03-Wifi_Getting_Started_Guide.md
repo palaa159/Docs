@@ -92,8 +92,8 @@ In general the steps are:
  3. Put `EXT PWR` switch on Shield to `OFF`
  4. Plug battery into Ganglion
  5. Plug battery into WiFi Shield
- 6. Main power switch on Ganglion to `ON`
- 7. Main power switch on WiFi Shield to `ON`
+ 6. Main power switch on WiFi Shield to `ON`
+ 7. Main power switch on Ganglion to `ON`
 
 ### Powering the Shield
 
