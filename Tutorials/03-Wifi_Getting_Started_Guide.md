@@ -109,8 +109,6 @@ With two batteries, always power the WiFi Shield before the Ganglion.
 
 ![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
 
-On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
-
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
 
 </details>
