@@ -119,7 +119,7 @@ There are a few details at the top of SoftwareSettings.pde that should be helpfu
 
 ### Step 6 - Initial Testing
 *Debugging*
-If you've added any `println()` in your widget, you can use the Console Log feature to see "under the hood", or just look at the console in your favorite IDE.
+If you've added any `println()` or `verbosePrint()`in your widget, you can use the Console Log feature to see these messages, or just look at the console in your favorite IDE.
 
 *Screen Resized*
 Some objects may need to be resized, or re-positioned, when the user changes the GUI screen size. This is why the widget class has the `screenResized()` method. Something not displaying right after resize? This is where you need to add code. Typically, object x, y, width, and height are declared when the widget is instantiated, and again in `screenResized()` using relative positioning.
