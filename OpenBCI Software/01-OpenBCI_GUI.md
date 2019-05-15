@@ -22,8 +22,9 @@ The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on
 
 **If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-### Ganglion on macOS
+**If using Linux:** According to the FTDI website, Ubuntu comes with the necessary FTDI drivers! Just make sure you have permission to access the serial ports, see section "Fix Linux Serial Port Permissions" below.
 
+### Ganglion on macOS
 Turn on your computer's Bluetooth if not already.
 
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
@@ -34,11 +35,23 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
-There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
+Deprecated: There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
 
-### Wifi on macOS/Windows/Linux
+### WiFi Shield
 
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
+
+### Fix Linux Serial Port Permissions
+
+Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
+
+1. First, verify if the user does belong to the dialout group using the “id” command.
+    - Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options
+1. Next, add the user to the “dialout” supplementary group.
+    - Type `sudo usermod -a -G dialout <username>` in terminal
+1. Restart Ubuntu
+1. Try "id" command again
+    - Repeart step one
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
 
