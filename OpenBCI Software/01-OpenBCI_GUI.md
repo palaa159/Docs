@@ -14,15 +14,15 @@ The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, a
 
 The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). 
 
-**If using Windows 64-bit:** Here is a direct link to download the FTDI version for your system [here.](https://www.ftdichip.com/Drivers/CDM/CDM21228_Setup.zip)
+**Windows 64-bit Users:** Here is a direct link to download the FTDI version for your system [here.](https://www.ftdichip.com/Drivers/CDM/CDM21228_Setup.zip)
 
 **Note:** if you jumped ahead and are already running your GUI, you may need to restart your GUI for this to take effect.
 
 ![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
 
-**If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
+**Mac Users:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-**If using Linux:** According to the FTDI website, Ubuntu comes with the necessary FTDI drivers! Just make sure you have permission to access the serial ports, see section "Fix Linux Serial Port Permissions" below.
+**Linux Users:** According to the FTDI website, Ubuntu comes with the necessary FTDI drivers! Just make sure you have permission to access the serial ports. See section "Fix Linux Serial Port Permissions" below.
 
 ### Ganglion on macOS
 Turn on your computer's Bluetooth if not already.
