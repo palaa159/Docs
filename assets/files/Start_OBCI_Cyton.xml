@@ -257,7 +257,7 @@
 		</Box>
 		<Box>
 			<Identifier>(0x00000bff, 0x000015df)</Identifier>
-			<Name>1:8</Name>
+			<Name>1:4</Name>
 			<AlgorithmClassIdentifier>(0x361722e8, 0x311574e8)</AlgorithmClassIdentifier>
 			<Inputs>
 				<Input>
@@ -276,7 +276,7 @@
 					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
 					<Name>Channel List</Name>
 					<DefaultValue>:</DefaultValue>
-					<Value>1:8</Value>
+					<Value>1:4</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -1348,17 +1348,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00002842, 0x00004eda)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000002d0, 0x00003608)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00005066, 0x00003beb)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00002ea5, 0x00001337)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x000002d0, 0x00003608)</BoxIdentifier>
@@ -1488,7 +1477,8 @@ to 17:19 for Cyton+Daisy</Text>
 		<Comment>
 			<Identifier>(0x00002d14, 0x00004ca3)</Identifier>
 			<Text>Set this channel selector
-to 1:16 for Cyton+Daisy</Text>
+to 1:16 for Cyton+Daisy
+and 1:4 for Ganglion</Text>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
