@@ -24,7 +24,6 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI's interface panes. 
 - The [OpenBCI_GUI](https://github.com/OpenBCI/OpenBCI_GUI/releases/latest) standalone app or Processing sketch
 - An [OpenBCI Board](https://shop.openbci.com/collections/frontpage) *(Required to access some widgets)*
 
-
 ## EMG Widget
 
 <details><summary> Expand this dropdown for a breakdown of the EMG Widget, originally shared in the OpenBCI Forum.</summary><br>
@@ -53,6 +52,10 @@ This value sets the minimum voltage range between the upper threshold and lower 
 
 </details>
 
+
+## Playback History Widget
+
+This Widget only appears when in playback mode. It allows you to select a different playback without having to "Stop System". There is a button in the top right of the Widget that allows you to select any OpenBCI playback file (.txt or .csv). Selecting other types of files may cause an error.
 ___
 
 ##### More Info Coming Soon!
