@@ -12,14 +12,19 @@ The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, a
 
 ![FTDI Install](../assets/images/FTDI.png)
 
-The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). **Note:** if you jumped ahead and are already running your GUI, you may need to restart your GUI for this to take effect.
+The FTDI chip on your OpenBCI Dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm). 
+
+**If using Windows 64-bit:** Here is a direct link to download the FTDI version for your system [here.](https://www.ftdichip.com/Drivers/CDM/CDM21228_Setup.zip)
+
+**Note:** if you jumped ahead and are already running your GUI, you may need to restart your GUI for this to take effect.
 
 ![Unidentified Developer MAC](../assets/images/securityAndPrivacy.png)
 
 **If using a MAC:** When you try to install the FTDI driver, your computer may tell you that it is unable to install the application because it is from an unidentified developer. In this case, go to System Preference > Security & Privacy and switch your settings to "Allow Applications Downloaded from: Anywhere," as seen in the screenshot to the right. You will most likely have to unlock the lock (and type in your root password) at the bottom of the Security & Privacy window before you can make this change.
 
-### Ganglion on macOS
+**If using Linux:** According to the FTDI website, Ubuntu comes with the necessary FTDI drivers! Just make sure you have permission to access the serial ports, see section "Fix Linux Serial Port Permissions" below.
 
+### Ganglion on macOS
 Turn on your computer's Bluetooth if not already.
 
 ![Bluetooth On!](../assets/images/ganglion_BLE-ON.png)  
@@ -30,11 +35,23 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
-There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
+Deprecated: There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
 
-### Wifi on macOS/Windows/Linux
+### WiFi Shield
 
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
+
+### Fix Linux Serial Port Permissions
+
+Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
+
+1. First, verify if the user does belong to the dialout group using the “id” command.
+    - Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options
+1. Next, add the user to the “dialout” supplementary group.
+    - Type `sudo usermod -a -G dialout <username>` in terminal
+1. Restart Ubuntu
+1. Try "id" command again
+    - Repeart step one
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
 
@@ -148,6 +165,12 @@ After downloading and uppacking, your Downloads folder will look like this on Wi
 
 `/users/<user-name>/Documents/Processing/OpenBCI_GUI/OpenBCI_GUI/data/OpenBCIHub.app`
 
+#### On Linux:
+
+Rename the directory you just unpacked to `OpenBCIHub` and move it to:
+
+`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
+
 #### On Windows:
 
 Rename the directory you just unpacked to `OpenBCIHub` and move it to:
@@ -169,12 +192,6 @@ Then quit the HUB: click the tray icon, and then press the quit button.
 ![quit the hub](../assets/images/gui_windows_openbci_hub_quit.png)
 
 As of GUI v4.0.3, the GUI will auto-launch the Hub on Windows.
-
-#### On Linux:
-
-Copy all the contents of the directory you just unpacked, and paste it in here:
-
-`<path-to-processing>/Processing/OpenBCI_GUI/OpenBCI_GUI/data/`
 
 ### Open The OpenBCI GUI Project in Processing & Launch It!
 
@@ -230,10 +247,19 @@ __Click "Settings"-->"Default" to revert the GUI to default settings.__
 When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
 
 ## Other Keyboard Shortcuts
-__Use the spacebar to start or stop the data stream!__ Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
+__Use the spacebar to start or stop the data stream!__ 
 
-Time Series Shortcuts:
-- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. __Press lowercase 'd' to set all channels settings to default.__
+__To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
+
+![Expert Mode Button](../assets/images/expertModeToggleHelpText.png)
+
+Expert Mode Keyboard Shortcuts:
+
+- Other than spacebar, you can press 's' to stop data stream, and 'b' to begin, or start the data stream.
+
+- You can _use lowercase 'k' to set "Bias Don't Include"_ on all channels, or _lowercase 'l' to set "Bias Include"_ on all channels. 
+
+- __Press lowercase 'd' to set all channels settings to default.__
 
 - Using an _English keyboard_, you can deactivate channels 1-16 using:
   - 1,2,3,4,5,6,7,8
@@ -244,5 +270,7 @@ Time Series Shortcuts:
   - Q,W,E,R,T,Y,U,I
 
 - __Take a screenshot of the GUI using lowercase 'm'!__ It will be saved to /SavedData/.
+
 - __Enter presentation mode using Enter (Win), or Return (Mac).__
+
 - To change to the alternate color scheme, use '{' .

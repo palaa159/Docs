@@ -19,7 +19,7 @@ People have reported issues with _Transcend_ and _Samsung_ Class 10 cards.
 ![DiskUtility](../assets/images/DiskUtil_Erase.jpg)
 ![SecureErase](../assets/images/DiskUtil_eraseSecure.jpg)
 
-If you are using a new card, or one that you've had around, first thing you should do is format it. We've found that the most successful formatting method is one that overwrites the card, not just 'erasing' it which can leave old data intact. The Mac OS provides this option in the Disk Utility. Click the Erase tab, open Security Options, and slide the slider to the 'single pass of zeros' option. There are more comprehensive secure erase options, but they take longer. 
+If you are using a new card, or one that you've had around, first thing you should do is format it to FAT32. We've found that the most successful formatting method is one that overwrites the card, not just 'erasing' it which can leave old data intact. The Mac OS provides this option in the Disk Utility. Click the Erase tab, open Security Options, and slide the slider to the 'single pass of zeros' option. There are more comprehensive secure erase options, but they take longer. 
 
 ![ScanDiskFormatterMAC](../assets/images/ScanDiskFormatter.jpg)
 ![ScanDiskFormatterWin](../assets/images/SDformatterWin.jpg)
@@ -108,7 +108,7 @@ On startup, the OpenBCI GUI will ask you for the data source you want to work wi
 
 Navigate to the OpenBCI generated file, and click **OPEN**. The GUI will convert the file you selected. The resulting file will be placed inside a file called EEG_Data in the Processing OpenBCI GUI Sketch Folder. The file naming convention is **SDconverted-Year-Month-Day-Time.txt**. Example:
 
-*Documents/Processing/OpenBCI_GUI/data/EEG_Data/SDconverted-2015-01-14_13-35-54.txt*
+*Documents/GitHub/OpenBCI_GUI/OpenBCI_GUI/SavedData/SDconverted-2015-01-14_13-35-54.txt*
 
 
 

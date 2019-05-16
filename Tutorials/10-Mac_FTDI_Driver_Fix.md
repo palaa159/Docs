@@ -2,28 +2,28 @@
 
 ### Summary
 
-If you've been working with OpenBCI on MAC OS X, you may have noticed that the data coming from your board and into your computer is very choppy. This is a result of the FTDI virtual com port (VCP) driver's default settings for Mac OS X. For more info on FTDI VCP drivers, see [this forum thread](http://openbci.com/forum/index.php?p=/discussion/196/os-x-and-virtual-com-ports-mavericks-yosemite-note) and the [FTDI VCP web page](http://www.ftdichip.com/Drivers/VCP.htm).
+If you've been working with OpenBCI on macOS, you may have noticed that the data coming from your board and into your computer is very choppy. This is a result of the FTDI virtual com port (VCP) driver's default settings for macOS. For more info on FTDI VCP drivers, see [this forum thread](http://openbci.com/forum/index.php?p=/discussion/196/os-x-and-virtual-com-ports-mavericks-yosemite-note) and the [FTDI VCP web page](http://www.ftdichip.com/Drivers/VCP.htm).
 
 This document details how to edit the config data of the **Info.plist** file of your FTDI VCP driver, so that the choppiness is significantly reduced, and you are able to process the data in real-time, with minimal latency!
 
-This tutorial has been verified to work with the following MAC OS X versions:
+This tutorial has been verified to work with the following macOS versions:
 
 - 10.9
 - 10.10
 - 10.11
-
+- 10.13
 
 ### Step 1: open Terminal
 
 ![image](../assets/images/Terminal.png)
 
-To open Terminal, go to: 
+To open Terminal, go to:
 
 /Applications/Utilities/Terminal
 
-All of the lines of code you see below you will run from the Terminal command line. If you are unfamiliar with using Terminal, check out this [Introduction to the Terminal in Mac OS X](https://www.youtube.com/watch?v=yIY3iPDVUBg) Youtube tutorial.
+All of the lines of code you see below you will run from the Terminal command line. If you are unfamiliar with using Terminal, check out this [Introduction to the Terminal in macOS](https://www.youtube.com/watch?v=yIY3iPDVUBg) Youtube tutorial.
 
-***!!! WARNING !!!*** 
+***!!! WARNING !!!***
 
 Be very careful when using the **sudo rm** command. It is used to remove files from your system. Never EVER enter the following command by itself, without specifying a filepath. That will wipe your hard drive.
 
@@ -47,13 +47,19 @@ sudo rm -rf /Library/Extensions/FTDIUSBSerialDriver.kext
 
 After removing all exisitng FTDI drivers, reboot your computer before continuing.
 
-### Step 3: get the FTDI driver (2.2.18, not 2.3)
+### Step 3: get the FTDI driver
 
-Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm). The latest FTDI VCP driver for MAC OS X (version 2.3) does not work yet for this fix.
+#### for macOS 10.9 to 10.11
+
+Download and install the FTDI Driver 2.2.18 for your processor from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm). The latest FTDI VCP driver for macOS (version 2.3) does not work yet for this fix.
 
 Here are the direct download links for [32-bit](http://www.ftdichip.com/drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) and [64-bit](http://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v2_2_18.dmg) processors. Most likely you are working with 64-bit.
 
 The downloaded .dmg comes with two installers in it. **FTDIUSBSerialDriver_10_3** for OS X 10.3 and **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7** for the rest. You most likely need to install **FTDIUSBSerialDriver_10_4_10_5_10_6_10_7**.
+
+#### for macOS 10.13
+
+Download and install the FTDI Driver 2.4.2 from the [FTDI VCP page](http://www.ftdichip.com/Drivers/VCP.htm).
 
 ### Step 4: enable dev mode
 
@@ -77,11 +83,11 @@ After re-installing the FTDI driver and enabling kext dev mode, reboot your comp
 
 ### Step 6: plug in your dongle
 
-Plug in your dongle and ensure that the switch is set to GPIO6 (not RESET). 
+Plug in your dongle and ensure that the switch is set to GPIO6 (not RESET).
 
 ![image](../assets/images/dongleConnection.png)
 
-### Step 7: unload the FTDI kernel extension 
+### Step 7: unload the FTDI kernel extension
 
 ```
 sudo kextunload /System/Library/Extensions/FTDIUSBSerialDriver.kext
@@ -108,6 +114,8 @@ sudo vim /System/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist
 ### Step 10: edit the config data
 
 Now add the new config data for the "FT X Series" as seen below. The "FT X Series" key is about 1/3 of the way through the Info.plist file and all of the keys are in alphabetical order. Scroll down to 'F'!
+
+#### for macOS 10.9 to 10.11, using the driver 2.2.18
 
 **BEFORE**
 
@@ -165,18 +173,76 @@ Now add the new config data for the "FT X Series" as seen below. The "FT X Serie
 ```
 **Note:** We also rename the port name to OpenBCI because it's easier to spot if the board is connected or not.
 
+#### for macOS 10.13, using the driver 2.4.2
+
+**BEFORE**
+
+```
+<key>FT X Series</key>
+<dict>
+  <key>CFBundleIdentifier</key>
+  <string>com.FTDI.driver.FTDIUSBSerialDriver</string>
+  <key>IOClass</key>
+  <string>FTDIUSBSerialDriver</string>
+  <key>IOProviderClass</key>
+  <string>IOUSBInterface</string>
+  <key>bConfigurationValue</key>
+  <integer>1</integer>
+  <key>bInterfaceNumber</key>
+  <integer>0</integer>
+  <key>bcdDevice</key>
+  <integer>4096</integer>
+  <key>idProduct</key>
+  <integer>24597</integer>
+  <key>idVendor</key>
+  <integer>1027</integer>
+</dict>
+```
+
+**AFTER**
+
+```
+<key>FT X Series</key>
+<dict>
+  <key>CFBundleIdentifier</key>
+  <string>com.FTDI.driver.FTDIUSBSerialDriver</string>
+  <key>IOClass</key>
+  <string>FTDIUSBSerialDriver</string>
+  <key>IOProviderClass</key>
+  <string>IOUSBInterface</string>
+  <key>bConfigurationValue</key>
+  <integer>1</integer>
+  <key>bInterfaceNumber</key>
+  <integer>0</integer>
+  <key>bcdDevice</key>
+  <integer>4096</integer>
+  <key>idProduct</key>
+  <integer>24597</integer>
+  <key>idVendor</key>
+  <integer>1027</integer>
+  <key>ConfigData</key>
+  <dict>
+    <key>InBufferSize</key>
+    <integer>128</integer>
+    <key>LatencyTimer</key>
+    <integer>24</integer>
+  </dict>
+</dict>
+```
+
+
 ### Step 11: save & close
 
 In emacs:
 
 To save:
 **[CTRL] + x**
-followed by 
+followed by
 **[CTRL] + s**
 
 To close emacs:
 **[CTRL] + x**
-followed by 
+followed by
 **[CTRL] + c**
 
 ---------------
@@ -202,16 +268,16 @@ You should get a response that looks something like this:
   145    0 0xffffff7f82dce000 0x8000     0x8000     com.FTDI.driver.FTDIUSBSerialDriver (2.2.18) <118 37 5 4 3 1>
 ```
 
-### Step 14: have fun with real time data 
+### Step 14: have fun with real time data
 
-Open the OpenBCI Processing GUI (or other software), connect to your device, and begin streaming the data. 
+Open the OpenBCI Processing GUI (or other software), connect to your device, and begin streaming the data.
 
 Check out the improved latency!
 
 ```
 \m/-(^.^)-\m/
 ```
-  
+
 
 ------------
 
@@ -221,6 +287,4 @@ Check out the improved latency!
 - [Marion's original fix (thank you)!](http://ebrain.io/openbci-ftdi-driver/)
 - [FTDI VCP web page](http://www.ftdichip.com/Drivers/VCP.htm)
 - [What is a .kext file?](http://forums.macnn.com/79/developer-center/81624/what-is-a-kext-file/)
-- [FTDI Driver Installation Guide for MAC OS X](http://www.ftdichip.com/Support/Documents/AppNotes/AN_134_FTDI_Drivers_Installation_Guide_for_MAC_OSX.pdf)
-
-
+- [FTDI Driver Installation Guide for macOS](http://www.ftdichip.com/Support/Documents/AppNotes/AN_134_FTDI_Drivers_Installation_Guide_for_MAC_OSX.pdf)

@@ -10,7 +10,7 @@ You can read the release notes and more at the [on Github](https://github.com/Op
 
 ## Building From source
 
-The [Simblee](https://www.simblee.com/) radio module that is at the heart of the Ganglion board offers the ability to reprogram Over The Air `OTA`. The method for doing this in a nutshell is:  
+The Simblee(website discontinued) radio module that is at the heart of the Ganglion board offers the ability to reprogram Over The Air `OTA`. The method for doing this in a nutshell is:  
 
 1. Create new Ganglion firmware, or modify existing code in Arduino IDE
 2. Generate a compiled HEX file in the Arduino IDE
@@ -33,8 +33,11 @@ The following tutorials will get your computer and the Arduino IDE set up to cre
 
 ![Download Arduino Mac](../assets/images/ganglion_download-arduino-mac.png)
 
-If you don't already have the Arduino IDE software on your computer, go [here](https://www.arduino.cc/en/Main/Software) to download the latest version for macOS.  
-Then, follow the instructions in the [Simblee Quick Start Guide](https://www.simblee.com/Simblee_Quickstart_Guide_v1.1.0.pdf) to install the Simblee board files in Arduino for macOS.  
+If you don't already have the Arduino IDE software on your computer, go [here](https://www.arduino.cc/en/Main/Software) to download the latest version for macOS.
+
+Here is a [temporary link to the Simblee board files](https://drive.google.com/file/d/1aZijlZ081pie5su9li1vdSes1nh_IMtv/view?usp=sharing).
+
+Deprecated: Then, follow the instructions in the Simblee Quick Start Guide(website deprecated) to install the Simblee board files in Arduino for macOS.  
 
 ### Modify The Simblee Board Files
 

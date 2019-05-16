@@ -4,30 +4,43 @@
 
 ## Overview
 
-Congrats on your new OpenBCI WiFi Shield! The WiFi Shield was produced in a partnership between OpenBCI and Push The World. OpenBCI lended their expertise in prototyping, sourcing, and distribution while Push The World designed the hardware, firmware, drivers and OpenBCI_GUI code. We are excited to provide a device that opens up a whole new world of possibilities.
+The [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550) is a hardware product, intended to work with the OpenBCI GUI software and be paired with any OpenBCI board, that enables biodata streaming over wifi.
+The advantage of wifi over bluetooth is increased sampling rate.
+The WiFi Shield increases the sample rate by transmitting the data via WiFi as opposed to Bluetooth. The WiFi Shield can be controlled through HTTP requests and can send JSON objects with data in nano volts. With the WiFi Shield connected:
+
+* The Cyton can stream data at 50Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz and 16000Hz.
+
+* The Cyton + Daisy can stream data at 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, and 8000Hz.
+
+* The Ganglion can stream data at 200Hz, 400Hz, 800Hz, 1600Hz, 3200Hz, 6400Hz, and 12800Hz
+
+
+**IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration.
 
 ## Prerequisites
 
-The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/tag/v2.0.0) firmware.
+The WiFi Shield requires your Cyton to run the [latest Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases/latest)  and your Ganglion to the [latest Ganglion firmware](https://github.com/OpenBCI/OpenBCI_Ganglion_Library/releases/latest) firmware.
 
-**You must update your firmware before getting started.**
+#### You must update your firmware before getting started. If you purchased your board mid-2018 or later, you won't need to update firmware and can skip down to General Overview.
 
-* [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial#cyton-board-programming-tutorial-overview)
+* [Updating Cyton Firmware Tutorial](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial)
 * [Updating Ganglion Firmware](http://docs.openbci.com/Hardware/09-Ganglion_Programming_Tutorial)
 
 This guide will walk you through setting up your WiFi Shield, connecting it to your computer, and then connecting it to yourself. The first tutorial is for the Cyton and the second is for the Ganglion.
 
 ## Cyton with WiFi Shield
 
-You only need one battery when using the Cyton with the WiFi Shield. The Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless.
+![OpenBCI Cyton Wifi Contents](../assets/images/wifi_what_you_need.jpg)
 
-![OpenBCI Wifi Contents](../assets/images/wifi_what_you_need.jpg)
+<details>
+  <summary>Expand this section for Cyton + WiFi Shield instructions</summary>
 
 ### What you need
 
- 1. OpenBCI WiFi Shield
+ 1. [OpenBCI WiFi Shield](https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550)
  2. OpenBCI Cyton Board **Must have at least [v3.1.0 Cyton firmware](https://github.com/OpenBCI/OpenBCI_32bit_Library/releases) or newer!** Here is the guide for [uploading new firmware to your Cyton Board](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial).
  3. One LiPo battery or 6V AA battery pack & (x4) AA batteries (batteries not included)
+    - You only need one battery when using the Cyton with the WiFi Shield. The Cyton takes power from the WiFi Shield. When the Cyton is powered by the WiFi Shield, you'll find the power switch on the Cyton becomes useless.
 
 ### General Overview
 
@@ -35,39 +48,40 @@ In general the steps are:
 
  1. Power off WiFi Shield and Cyton
  2. Seat WiFi Shield on Cyton
- 3. Put `EXT PWR` switch on Shield to `ON`
- 4. Plug battery into WiFi Shield only
+ 3. Put `EXT PWR` switch on the WiFi Shield to `ON`
+ 4. Plug battery into WiFi Shield only (do not plug a battery into the Cyton)
  5. Main power switch on WiFi Shield to `ON`
 
 ### Powering the Shield
 
-Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. You can keep the `EXT PWR` switch `ON` to passthrough power to the Cyton, more on this in the section below titled _Powering the Shield_.
+Install 4 AA batteries in your battery pack or charge up your LiPo battery. The Wifi shield has a larger power draw than the Bluetooth communication system so we recommend using LiPo battery packs. The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
 
 **IMPORTANT! Keep the dip switch labeled `EXT PWR` to `ON` when using Cyton.**
 
-The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. Passing through power to the Cyton requries having the `EXT PWR` switch in the `ON` position.
-
-![Wifi Power](../assets/images/wifi_battery_connection.jpg)
-
-The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
-
-![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
-
-Make sure that the external power switch is set to `ON` to send power through to the Cyton board.
 
 ![Wifi External Power](../assets/images/wifi_cyton_powered.jpg)
 
-The Cyton is not able to supply enough current to power the power-hungry wifi shield, so we put a bigger voltage regulator on the shield to power both the Wifi chip and pass the Cyton components.
+
+The Wifi Shield and the Cyton board use only one battery by means of the JST connector on the Wifi shield. The pass through LED (the right most LED) on the wifi shield will show the solid blue LED from the Cyton below.
+
+
+![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
+
+</details>
 
 ## Ganglion with WiFi Shield
+
+![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
+
+<details>
+  <summary>Expand this section for Ganglion + WiFi Shield instructions</summary>
+
 
 ### What you need
 
  1. OpenBCI WiFi Shield
  2. OpenBCI Ganglion Board **IMPORTANT: Must have at least v2.0.0 Ganglion firmware or newer!**
  3. Two batteries, 3.7V or 4.2V LiPo or 6V AA battery will work (batteries not included)
-
-![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
 
 ### General Overview
 
@@ -79,13 +93,15 @@ In general the steps are:
  4. Plug battery into Ganglion
  5. Plug battery into WiFi Shield
  6. Main power switch on WiFi Shield to `ON`
- 5. Main power switch on Ganglion to `ON`
+ 7. Main power switch on Ganglion to `ON`
 
 ### Powering the Shield
 
-The Ganglion runs at 3 Volts while the WiFi Shield runs at 3.3V. Using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargable batteries to power the Wifi Shield.
+The Ganglion runs at 3.0 Volts while the WiFi Shield runs at 3.3 Volts. You can use the WiFi shield to power the Ganglion; using the Ganglion to power the WiFi Shield is not recommended. Install 4 AA batteries into your battery packs or charge up your LiPo batteries. The Wifi shield draws more current than the Ganglion so we recommend using LiPo rechargeable batteries to power the Wifi Shield.
 
-To use two batteries, keep `EXT PWR` in the `OFF` position, you can use the black spudger tool, that came with your WiFi Shield, to flip the `EXT PWR` switch to `OFF`.
+To use one battery, flip `EXT PWR` in the `ON` position. You can use the black spudger tool that came with your WiFi Shield.
+
+To use two batteries, keep `EXT PWR` in the `OFF` position, or flip it to `OFF` in case it is `ON`.
 
 ![EXT PWR ON/OFF](../assets/images/wifi_ext_pwr_on_off.jpg)`EXT PWR` is `ON` in top photo, `OFF` in bottom photo.
 
@@ -93,9 +109,10 @@ With two batteries, always power the WiFi Shield before the Ganglion.
 
 ![Two batteries for ganglion with wifi shield](../assets/images/wifi_ganglion_power_2.jpg)
 
-On some modules, the Ganglion can power the WiFi Shield using only one battery with `EXT PWR` to `ON`. This method is not recommended but has been shown to work with some devices.
-
 ![Battery Connection](../assets/images/wifi_ganglion_power.jpg)
+
+</details>
+
 
 ## WiFi Configuration for Firmware 2.0 and later
 
@@ -301,30 +318,39 @@ Come back to this guide when your GUI is running!
 ### Streaming Data On Cyton
 
 Select `LIVE (from Cyton)` from the first drop down
+
 ![selecting cyton from drop down](../assets/images/wifi_cyton_select_cyton.png)
 
 Select `Wifi (from WiFi Shield)` as the transfer protocol
+
 ![selecting wifi from the transfer protocol](../assets/images/wifi_cyton_select_wifi.png)
 
 The GUI will automatically start searching for WiFi Shields
+
 ![wifi with cyton searching for wifi shield](../assets/images/wifi_cyton_searching.png)
 
 Select the desired WiFi Shield from the dropdown list
+
 ![selecting wifi shield](../assets/images/wifi_cyton_select_wifi_shield.png)
 
 The Cyton will default to a sample rate of 1000Hz with a latency of 10ms. For the majority of modern data WiFi networks these settings will work. If your data transfer LED (`D2` on WiFi Shield) is not solid blue, then you should try adjusting your sample rate and latency while you determine your wireless network problems.
+
 ![setting latency and sample rate of cyton](../assets/images/wifi_cyton_wifi_settings.png)
 
 Press `START SYSTEM` when you're ready to begin streaming.
+
 ![wifi cyton start system](../assets/images/wifi_cyton_start_system.png)
 
 Press `Start Data Stream` to begin streaming!
+
 ![cyton wifi starting data stream](../assets/images/wifi_cyton_data_stream_start.png)
 
 When you are finished recording, you may press `Stop Data Stream`
+
 ![cyton wifi stopping data stream](../assets/images/wifi_cyton_data_stream_stop.png)
 
 Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+
 ![cyton wifi stop system](../assets/images/wifi_cyton_stop_system.png)
 
 If you are unable to connect to the board
@@ -337,31 +363,50 @@ If you are unable to connect to the board
 ### Streaming Data On Ganglion
 
 Select `LIVE (from Ganglion)` from the first drop down
+
 ![selecting ganglion from drop down](../assets/images/wifi_ganglion_select_ganglion.png)
 
+
 Select `Wifi (from WiFi Shield)` as the transfer protocol
+
 ![selecting wifi from the transfer protocol](../assets/images/wifi_ganglion_select_wifi.png)
 
+
 The GUI will automatically start searching for WiFi Shields
+
 ![wifi with ganglion searching for wifi shield](../assets/images/wifi_ganglion_searching.png)
 
+
 Select the desired WiFi Shield from the dropdown list
+
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
+
 The Ganglion will default to a sample rate of 1600Hz with a latency of 10ms. For the majority of modern data WiFi networks these settings will work. If your data transfer LED (`D2` on WiFi Shield) is not solid blue, then you should try adjusting your sample rate and latency while you determine your wireless network problems.
+
 ![setting latency and sample rate of ganglion](../assets/images/wifi_ganglion_settings.png)
 
 Press `START SYSTEM` when you're ready to begin streaming.
+
 ![wifi ganglion start system](../assets/images/wifi_ganglion_start_system.png)
 
+
 Press `Start Data Stream` to begin streaming!
+
 ![ganglion wifi starting data stream](../assets/images/wifi_ganglion_data_stream_start.png)
 
+
 When you are finished recording, you may press `Stop Data Stream`
+
 ![ganglion wifi stopping data stream](../assets/images/wifi_ganglion_data_stream_stop.png)
 
+
+
 Then end your session by pressing `STOP SYSTEM` from the `System Control Panel` drop down.
+
 ![ganglion wifi stop system](../assets/images/wifi_ganglion_stop_system.png)
+
+
 
 If you are unable to connect to the board
 
@@ -389,7 +434,7 @@ Select the desired WiFi Shield from the dropdown list
 
 ![selecting wifi shield](../assets/images/wifi_ganglion_select_wifi_shield.png)
 
-Select the right caret button to open the WiFi Configuration window
+Select the right carrot button to open the WiFi Configuration window
 
 ![selecting right carrot to open wifi config](../assets/images/wifi_config_select_right_carrot.png)
 

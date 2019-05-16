@@ -1,5 +1,13 @@
 # OpenViBE
 
+## Overview
+
+There are two primary methods of connecting from OpenBCI tech to OpenVibe. 
+
+1. You can connect the Cyton and Cyton+Daisy using an OpenVibe driver. This method is described below.
+
+2. Connect any OpenBCI Board to the OpenBCI GUI, then use the Networking Widget to stream data using LSL protocol to OpenVibe Acquisition Server. Start streaming from the GUI first. Select LSL in OpenVibe Acquisition Server. You should see an option in Driver Properties to select the data stream from the GUI, its typically auto-detected.
+
 ## Setting Up Your Environment
 
 **Windows**: Follow [OBCI on Windows](http://docs.openbci.com/Tutorials/11-OpenBCI_on_Windows) tutorial to properly connect your OBCI board on Windows. Then, continue this tutorial.
