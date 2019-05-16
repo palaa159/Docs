@@ -1,4 +1,4 @@
-# OpenBCI Wifi
+# OpenBCI WiFi
 
 **[Suggest an edit to this page](https://github.com/OpenBCI/Docs/edit/master/Hardware/11-Wifi.md)**
 
@@ -7,6 +7,8 @@ WiFi Shields are available for sale [on the OpenBCI store](https://shop.openbci.
 The OpenBCI Wifi Shield was designed in partnership with [Push The World](www.pushtheworld.us). The OpenBCI Wifi PCB was designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [OpenBCI design files repository](https://github.com/OpenBCI/OpenBCI_Wifi_Shield) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
 ## About the WiFi Shield
+
+**IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration.
 
 ### Wifi Board Specs
 
