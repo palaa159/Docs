@@ -260,7 +260,7 @@ To load settings, just __click "Settings"-->"Load"__. Select a settings file fro
 
 __Click "Settings"-->"Default" to revert the GUI to default settings.__
 
-When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
+When in Live Mode, the GUI will load your settings automatically. Please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. _During this stage, the Dongle will blink red as it sends channel settings to the Cyton._ If loading takes more than a few seconds, there may be a connection issue with the board. An error should print at the bottom of the GUI if this happens.
 
 ## GUI Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ 
