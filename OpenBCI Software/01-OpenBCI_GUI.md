@@ -35,14 +35,14 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 
 The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
-Deprecated: There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
+*Deprecated:* There is also a CSR dongle, more information can be found on the [Setup CSR Dongle doc](/Deprecated%20Docs/Setup_CSR_Dongle.md).
 
 ### WiFi Shield
 
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
 
 ### Fix Linux Serial Port Permissions
-##### Critical for all communications between Ganglion/Cyton and your computer.
+##### This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
 <details><summary>Linux Users: Expand this dropdown for important details</summary><br>
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
