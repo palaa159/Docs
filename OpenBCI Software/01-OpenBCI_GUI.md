@@ -42,7 +42,8 @@ Deprecated: There is also a CSR dongle, more information can be found on the [Se
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
 
 ### Fix Linux Serial Port Permissions
-
+##### Critical for all communications between Ganglion/Cyton and your computer.
+<details><summary>Linux Users: Expand this dropdown for important details</summary><br>
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
 1. First, verify if the user does belong to the dialout group using the “id” command.
@@ -52,6 +53,7 @@ Before trying to connect to any OpenBCI boards on Linux, you need to make sure y
 1. Restart Ubuntu
 1. Try "id" command again
     - Repeart step one
+</details>
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
 
@@ -230,12 +232,14 @@ By default, the GUI stores the raw EEG data in a directory called "SavedData", a
 
 ## Customize Your Layout
 
-The OpenBCI GUI displays up to six customizable windows in twelve layouts! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer.
+The OpenBCI GUI displays up to six customizable windows in twelve layouts! You can choose what each window displays by clicking the dropdown menu at the upper left of each window. In the screengrab below, my GUI is showing Time Series, FFT Plot, and Accelerometer. 
+
+Also, you can see an impedance test has been started on Channel 1. See the next section "Impedance Testing" for more information.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Impedance.png?raw=true" width="100%">
 
 ## Impedance Testing
-When using Cyton, you can display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number in the Time Series Widget. When the Ohm icon is toggled on, the board sends a small current through the selected channel to obtain the impedance value. **For this reason, you won't be able to stream data on a channel and obtain the impedance value simultaneously.** See below:
+When using Cyton, you can display the impedance of individual channels by toggling the small Ohm icon to the right of each color coded channel number in the Time Series Widget. When the Ohm icon is toggled on, the board sends a small current through the selected channel to obtain the impedance value. **For this reason, you won't be able to stream data on a channel and obtain the impedance value simultaneously.**
 
 To test impedance for Ganglion, use the Ganglion Signal Widget.
 
