@@ -1,4 +1,4 @@
-# Cyton Bluetooth
+# Cyton Bluetooth (Deprecated)
 
 This discussion of the OpenBCI Bluetooth specifics applies to OpenBCI Cyton V3 (2014) Hardware. For OpenBCI V3, the Cyton board contains either a Atmel or ChipKIT microcontroller that can be programmed through the Arduino IDE. The Cyton board also contains an RFDuino. There is not currenty firmware support for BLE connection to tablets or phones with Bluetooth 4.n capability. As that changes this doc will be updated.
 
