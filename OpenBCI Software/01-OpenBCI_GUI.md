@@ -47,9 +47,11 @@ There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
 1. First, verify if the user does belong to the "dialout" group using the “id” command.
-    - Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options. Replace <username> with your Linux username. Example: `id -Gn susieQ`
+	- Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options. 
+	- Replace <username> with your Linux username. Example: `id -Gn susieQ`
 1. Next, add the user to the “dialout” supplementary group.
-    - Type `sudo usermod -a -G dialout <username>` in terminal. Example: `sudo usermod -a -G dialout susieQ`
+	- Type `sudo usermod -a -G dialout <username>` in terminal.
+	- Example: `sudo usermod -a -G dialout susieQ`
 1. Restart Ubuntu
 1. Try "id" command again
     - Repeart step one
