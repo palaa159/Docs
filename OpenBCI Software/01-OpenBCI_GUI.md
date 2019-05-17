@@ -250,7 +250,7 @@ __Click "Settings"-->"Default" to revert the GUI to default settings.__
 
 When in Live Mode, please allow 1-2 seconds to successfully apply settings to Cyton and Ganglion boards. If loading takes more than a few seconds, there may be a connection issue with the board. An error will print at the bottom of the GUI if this happens.
 
-## Other Keyboard Shortcuts
+## GUI Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ 
 
 __To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
