@@ -224,7 +224,7 @@ If you are encountering issues launching the GUI at this point, please head to t
 
 ![use gui](../assets/images/USE-GUI.JPG)
 
-Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. We are in the process of updating it to match the GUI V3! Coming Soon.
+Check out this [Youtube video](https://www.youtube.com/watch?v=agV1B2l-QLw) on how to use the OpenBCI GUI. Note: Uses an older version of the GUI.
 
 ## Customize Your Layout
 
