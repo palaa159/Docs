@@ -105,8 +105,12 @@ After launching the GUI, you can verify the Hub is running in your Windows tool 
 
 Open a terminal application and navigate to the directory (with `cd`) of the unzipped application.
 
-Then launch the Application from terminal with the command:
+Then, launch the Application from terminal with the command:
 
+```
+$ ./OpenBCI_GUI
+```
+or
 ```
 $ sudo ./OpenBCI_GUI
 ```
