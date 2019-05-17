@@ -4,7 +4,7 @@
 
 ![image](../assets/images/GUI-V4-Screenshot.jpg)
 
-The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, and streaming data from the OpenBCI Boards. It can be launched as a standalone application or launched from Processing (a Java-based programming language). In this guide, we will walk you through how to go about doing it both ways.
+The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, and streaming data from the OpenBCI Boards. It can be launched as a standalone application or as a sketch from Processing (a Java-based programming language). In this guide, we will cover both scenarios.
 
 ## Hardware/Driver Setup for OpenBCI_GUI and OpenBCIHub
 
