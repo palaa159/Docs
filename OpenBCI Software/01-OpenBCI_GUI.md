@@ -239,7 +239,7 @@ When using Cyton, you can display the impedance of individual channels by toggli
 
 To test impedance for Ganglion, use the Ganglion Signal Widget.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/ganglion_signal_widget-impedance_check.png?raw=true" width="100%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/ganglion_signal_widget-impedance_check.png?raw=true" width="50%">
 
 ## Decrease Setup Time by Saving/Loading Settings
 Starting with GUI V3, you can save and load a snapshot of nearly every setting in the GUI (ex. Layout, Time Series Channel Settings, Networking Settings, etc.) by using a dropdown menu (pictured below) or keyboard shortcuts. If you change anything during a session, save your settings or click "Stop System" before exiting. __Save with lowercase 'n'__ and __Load with capital 'N'__ on your keyboard to and from _/SavedData/Settings/_.
