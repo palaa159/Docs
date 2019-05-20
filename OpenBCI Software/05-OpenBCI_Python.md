@@ -1,247 +1,272 @@
 # OpenBCI Python
 
-OpenBCI has a Python software library designed to work with OpenBCI hardware. To use it, download our OpenBCI Python github repository: https://github.com/OpenBCI/OpenBCI_Python. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using Python.
+OpenBCI has a Python software library designed to work with OpenBCI hardware. To use it, download our OpenBCI Python github repository: https://github.com/OpenBCI/pyOpenBCI. This Python code is meant to be used by people familiar with Python and programming in general. Its purpose is to allow for programmers to interface with OpenBCI technology directly, both to acquire data and to write programs that can use that data in a live setting, using Python.
 
-Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/OpenBCI_Python) as well.
+Please direct any questions, suggestions and bug reports to the [github repo](https://github.com/OpenBCI/pyOpenBCI) as well.
 
-## Dependencies
+# pyOpenBCI
 
- 1. Python 2.7 or later (https://www.python.org/download/releases/2.7/)
- 2. Numpy 1.7 or later (http://www.numpy.org/)
- 3. pySerial (https://pythonhosted.org/pyserial/)
- 3. Yapsy -- if using plugins via `user.py`, documentation: (http://yapsy.sourceforge.net/), download: (https://pypi.python.org/pypi/Yapsy).
+<p align="center" href="">
+  Provide a stable Python driver for all OpenBCI Biosensors
+</p>
 
-For a more comprehensive requirements list, see requirments.txt: (https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
+This repo has been designed to be a more beginner friendly version of the [OpenBCI-Python](https://github.com/OpenBCI/OpenBCI_Python) repo. If there is anything you think we should add please open an issue.
 
-The OpenBCI Python API can be used with the 8 and 32 bit board with 8 or 16 channels, as well as the Ganglion.
+Using this repo provides a building block for developing with Python. The goal for the Python library is to ***provide a stable Python driver for all OpenBCI Biosensors***, that:
 
-This library includes the main "open_bci_v3" class definition that instantiates an OpenBCI Board object. This object will initialize communication with the board and get the environment ready for data streaming. This library is designed to work with iOS and Linux distributions. To use a Windows OS, change the "__init__" function in open_bci_v3.py to establish a serial connection in Windows.
+* Allows Python users to install one module and use any board they choose
+* Provides examples of using Python to port data to other apps like lab streaming layer
+* Performs the heavy lifting when extracting and transforming raw binary byte streams
+* Provides a base for the beginner users to use Python to process their OpenBCI data
 
-For additional details on connecting your OpenBCI board to your computer, see our [Getting Started Guide](http://docs.openbci.com/tutorials/01-GettingStarted).
+## To Do
+* Add Ganglion Aux Data
 
-## Installation help
+## Requirements
 
-#### pySerial
-To install pySerial, running the command:
+* Python 2.7 or 3.4+
+* Currently the Cyton works on Windows, Linux, and MacOS.
+* Ganglion works on Linux only (Linux VM with enabled Bluetooth works as well).
+* The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Note that the code avaiable here has not been tested accross all platforms.
 
-> pip install pyserial
-
-should be sufficient. You may need to use the `sudo` command to overcome permission settings.
-
-#### Yapsy
-To install Yapsy, [download](https://pypi.python.org/pypi/Yapsy) the .egg file for your Python version. Then, if you have [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions), run:
-
-> easy_install {Yapsy egg file}
-
-For example,
-
-> easy_install Yapsy-1.11.223-py2.7.egg
-
-Again, you may need to use the `sudo` command to overcome permission settings.
-
-## Functionality
-
-### Overview
-
-The startStreaming function of the Board object takes a callback function and begins streaming data from the board. Each packet it receives is then parsed as an OpenBCISample which is passed to the callback function as an argument.
-
-OpenBCISample members:
--id:
-	int from 0-255. Used to tell if packets were skipped.
-
--channel_data:
-	8 int array with current voltage value of each channel (1-8)
-
--aux_data:
-	3 int array with current auxiliary data. (0s by default)
-
-### user.py
-
-This code provides a simple user interface (called user.py) to handle various plugins and communicate with the board. To use it, connect the board to your computer using the dongle (see http://docs.openbci.com/tutorials/01-GettingStarted for details).
-
-To connect to your board, run user.py with your board's serial/COM port as an argument. In a Linux terminal, this would look like the command below. Replace `/dev/ttyUSB0` with your board's unique serial port.
-
-> $python ./user.py -p /dev/ttyUSB0
-
-If you're unsure of your board's serial port, connect to your board with the OpenBCI GUI first and locate it under SERIAL/COM PORT:
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/cyton_serial_name.png?raw=true" width="60%">
-
-Running user.py like in the command above should establish a serial connection and reset the board to default settings. When a '-->' appears, you can type a character (character map http://docs.openbci.com/software/01-OpenBCI_SDK)  that will be sent to the board using ser.write. This allows you to change the settings on the board.
-
-A good first test is to try is to type '?':
->--> ?
-
-This should output the current configuration settings on the board.
-
-Another test would be to change the board settings so that all the pins in the board are internally connected to a test (square) wave. To do this, type:
-
->--> [
-
-Alternatively, there are 6 test signals pre configured:
-
-> --> /test0 (connect all pins to ground)
-
-> --> /test1 (connect all pins to vcc)
-
-> --> /test2 (Connecting pins to low frequency 1x amp signal)
-
-> --> /test3 (Connecting pins to high frequency 1x amp signal)
-
-> --> /test4 (Connecting pins to low frequency 2x amp signal)
-
-> --> /test5 (Connecting pins to high frequency 2x amp signal)
-
-The / is used in the interface to execute a pre-configured command. Writing anything without a preceding '/' will automatically write those characters, one by one, to the board.
-
-For example, writing
-
-> -->x3020000X
-
-will do the following:
-
-‘x’ enters Channel Settings mode. Channel 3 is set up to be powered up, with gain of 2, normal input, removed from BIAS generation, removed from SRB2, removed from SRB1. The final ‘X’ latches the settings to the ADS1299 channel settings register.
-
-Pre-configured commands that use the / prefix are:
-
-test (As explained above)
-
-> --> /test4
-
-start selected plugins (see below)
-
-> --> /start
-
-Adding the argument "T:number" will set a timeout on the start command.
-
-> --> /start T:5
-
-Stop the steam to issue new commands
-
-> --> /stop
-
-#### Useful commands:
-
-Writting to SD card a high frequency square wave (test5) for 3 seconds:
-```
-$ python user.py -p /dev/ttyUSB0
-User serial interface enabled...
-Connecting to  /dev/ttyUSB0
-Serial established...
-View command map at http://docs.openbci.com.
-Type start to run. Type /exit to exit.
-
--->
-OpenBCI V3 8bit Board
-Setting ADS1299 Channel Values
-ADS1299 Device ID: 0x3E
-LIS3DH Device ID: 0x33
-Free RAM: 447
-$$$
---> /test5
-Warning: Connecting pins to high frequency 2x amp signal
-
---> a
-Corresponding SD file OBCI_18.TXT$$$
---> /start T:3
-
-```
-
-NOTES:
-
-When writing to the board and expecting a response, give the board a second. It sometimes lags and requires
-the user to hit enter on the user.py script until you get a response.
-
-### Plugins
-
-#### Use plugins
-
-Select the print plugin:
-
-> $python user.py -p /dev/ttyUSB0 --add print
-
-Plugin with optional parameter:
-
-> $python user.py -p /dev/ttyUSB0 --add csv_collect record.csv
-
-Select several plugins, e.g. streaming to OSC and displaying effective sample rate:
-
-> $python user.py -p /dev/ttyUSB0 --add streamer_osc --add sample_rate
-
-Note: type `/start` to launch the selected plugins.
-
-#### Create new plugins
-
-Add new functionalities to user.py by creating new scripts inside the `plugins` folder. You class must inherit from yapsy.IPlugin, see below a minimal example with `print` plugin:
+## Installation
+First, make sure you have the necessary dependencies.
 
 ```python
-	import plugin_interface as plugintypes
-
-	class PluginPrint(plugintypes.IPluginExtended):
-		def activate(self):
-			print "Print activated"
-
-		def deactivate(self):
-			print "Goodbye"
-
-		def show_help(self):
-			print "I do not need any parameter, just printing stuff."
-
-		# called with each new sample
-		def __call__(self, sample):
-			print "----------------"
-			print("%f" %(sample.id))
-			print sample.channel_data
-			print sample.aux_data
+pip install numpy pyserial bitstring xmltodict requests
 ```
 
-Describe your plugin with a corresponding `print.yapsy-plugin`:
+Linux users may need `bluepy` also.
 
-```
-	[Core]
-	Name = print
-	Module = print
+Then you can use pip to install the OpenBCI module.
 
-	[Documentation]
-	Author = Various
-	Version = 0.1
-	Description = Print board values on stdout
+```python
+pip install pyOpenBCI
 ```
 
+Once installed, try running the examples provided to make sure you can connect to your OpenBCI board.
 
-You're done, your plugin should be automatically detected by `user.py`.
+## Important notes
 
-#### Existing plugins
+Currently the Ganglion board can only be used with a Linux OS. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Note that the code avaiable here has not been tested accross all platforms.
 
-* `print`: Display sample values -- *verbose* output!
+### Getting Started
 
-* `csv_collect`: Export data to a csv file.
+First you need to initialize your board with one of the following commands:
 
-* `sample_rate`: Print effective sampling rate averaged over XX seconds (default: 10).
+#### For Cyton board:
 
-* `streamer_tcp`: Acts as a TCP server, using a "raw" protocol to send value.
-	* The stream can be acquired with [OpenViBE](http://openvibe.inria.fr/) acquisition server, selecting telnet, big endian, float 32 bits, forcing 250 sampling rate (125 if daisy mode is used).
-	* Default IP: localhost, default port: 12345
+```python
+# For Windows replace '*' with the port number
+board = OpenBCICyton(port='COM*')
 
-* `streamer_osc`: Data is sent through OSC (UDP layer).
-	* Default IP: localhost, default port: 12345, default stream name: `/openbci`
-	* Requires pyosc. On linux type either `pip install --pre pyosc` as root, or `pip install --pre --user`.
+# For MacOS and Linux replace '*' with the port number
+board = OpenBCICyton(port='/dev/ttyUSB*')
+```
 
-* `udp_server`: Very simple UDP server that sends data as json. Made to work with: https://github.com/OpenBCI/OpenBCI_Node
-	* Default IP: 127.0.0.1, default port: 8888
+To find the COM port you are connected to you can use the OpenBCI GUI. Otherwise you can leave the port number as None, and the function find_port() will run and connect to the first Cyton Dongle it finds.
 
-* `streamer_lsl`: Data is sent through [LSL](https://code.google.com/p/labstreaminglayer/).
-	* Default EEG stream name "OpenBCI_EEG", ID "openbci_eeg_id1"; default AUX stream name "OpenBCI_AUX", ID "openbci_aux_id1".
-	* Requires LSL library. Download last version from offcial site, e.g., ftp://sccn.ucsd.edu/pub/software/LSL/SDK/liblsl-Python-1.10.2.zip and unzip files in a "lib" folder at the same level as `user.py`.
+#### For Cyton + Daisy:
 
-Tip: Type `python user.py --list` to list available plugins and `python user.py --help [plugin_name]` to get more information.
+```python
+# For Windows replace '*' with the port number
+board = OpenBCICyton(port='COM*', daisy=True)
 
-### Scripts
+# For MacOS and Linux replace '*' with the port number
+board = OpenBCICyton(port='/dev/ttyUSB*', daisy=True)
+```
 
-In the `scripts` folder you will find code snippets that use directly the `OpenBCIBoard` class from `open_bci_v3.py`.
+To find the COM port you are connected to you can use the OpenBCI GUI. Otherwise you can leave the port number as None, and the function find_port() will run and connect to the first Cyton Dongle it finds.
 
-Note: copy `open_bci_v3.py` there if you want to run the code -- no proper package yet.
+#### For Ganglion:
 
-* `test.py`: minimal example, printing values.
-* `stream_data.py` a version of a TCP streaming server that somehow oversamples OpenBCI from 250 to 256Hz.
-* `upd_server.py` *DEPRECATED* (Use Plugin): see https://github.com/OpenBCI/OpenBCI_Node for implementation example.
+```python
+# For Linux replace '*' with the mac address.
+board = OpenBCIGanglion(mac='*')
+```
+If you need to find the Ganglion mac address you can use an app like [nRF connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en_US) to find the ganglion. Otherwise you can leave the mac address as None, and the function find_mac() will run (NOTE: You will need to run the script with sudo for this function to work).
+
+#### For Wifi Shield:
+
+```python
+board = OpenBCIWifi(shield_name='OpenBCI-2254', sample_rate=200)
+```
+
+### Sending commands
+
+Once you initialize the board you can use the commands on the OpenBCI SDKs ([Ganglion](https://docs.openbci.com/OpenBCI%20Software/06-OpenBCI_Ganglion_SDK), [Cyton](https://docs.openbci.com/OpenBCI%20Software/04-OpenBCI_Cyton_SDK), [Wifi Shield](https://docs.openbci.com/OpenBCI%20Software/08-OpenBCI_Wifi_SDK)) to send commands to the board using python (make sure your commands are strings).
+
+```python
+# Write commands to the board
+board.write_command(command)
+```
+
+Here is a table of the most common ones:
+
+|                               | Ganglion SDK | Cyton SDK       | Cyton & Daisy SDK (Additional Commands) | Wifi Shield SDK (Additional Commands)                                                                                                                                    |
+|-------------------------------|--------------|-----------------|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Turn Channels OFF             | 1 2 3 4      | 1 2 3 4 5 6 7 8 | q w e r t y u i                         |                                                                                                                                                                          |
+| Turn Channels ON              |              | ! @ # $ % ^ & * | Q W E R T Y U I                         |                                                                                                                                                                          |
+| Connect to internal GND       |              | 0               |                                         |                                                                                                                                                                          |
+| Enable Synthetic Square Wave  | [            | [               |                                         |                                                                                                                                                                          |
+| Disable Synthetic Square Wave | ]            | ]               |                                         |                                                                                                                                                                          |
+| Connect to DC Signal          |              | p               |                                         |                                                                                                                                                                          |
+| Set Channels to Default       |              | d               |                                         |                                                                                                                                                                          |
+| Start Streaming Data          | b            | b               |                                         |                                                                                                                                                                          |
+| Stop Streaming Data           | s            | s               |                                         |                                                                                                                                                                          |
+| Soft Reset                    | v            | v               |                                         | ;                                                                                                                                                                        |
+| Enable Accelerometer          | n            |                 |                                         |                                                                                                                                                                          |
+| Disable Accelerometer         | N            |                 |                                         |                                                                                                                                                                          |
+
+
+### Initializing Stream
+
+To start your stream you can use the following command with a callback function. You can look at the examples folder for some pre-written callback functions.
+
+```python
+# Start stream
+board.start_stream(callback)
+```
+The output of the start_stream function is the OpenBCISample on the callback function. The OpenBCISample object has the following attributes:
+
+* packet_id = The ID of the incomming packet.
+* channels_data = The raw EEG data of each channel. 4 for the Ganglion, 8 for the Cyton, and 16 for the Cyton + Daisy.
+* aux_data = Accelerometer data.
+
+Because the channels_data and aux_data is the raw data in counts read by the board, we need to multiply the data by a scale factor. There is a specific scale factor for each board:
+
+#### For the Cyton and Cyton + Daisy boards:
+
+Multiply uVolts_per_count to convert the channels_data to uVolts.
+
+```python
+uVolts_per_count = (4500000)/24/(2**23-1) #uV/count
+```
+Multiply accel_G_per_count to convert the aux_data to G.
+
+```python
+accel_G_per_count = 0.002 / (2**4) #G/count
+```
+#### For the Ganglion Board
+
+Multiply Volts_per_count to convert the channels_data to Volts.
+
+```python
+Volts_per_count = 1.2 * 8388607.0 * 1.5 * 51.0 #V/count
+```
+Multiply accel_G_per_count to convert the aux_data to G.
+
+```python
+accel_G_per_count = 0.032 #G/count
+```
+
+#### For the Wifi Shield
+
+The Wifi Shield already outputs the data in Volts and the aux data in G.
+
+### Example (Print Raw Data)
+
+To test this example, use `py Examples\print_raw_example.py` or `python Examples\print_raw_example.py`.
+
+```python
+from pyOpenBCI import OpenBCICyton
+
+def print_raw(sample):
+    print(sample.channels_data)
+
+board = OpenBCICyton(port='COM5', daisy=False)
+
+board.start_stream(print_raw)
+
+```
+
+### Example (Simple LSL Streamer)
+
+To run this example, use `py Examples\lsl_example.py` or `python Examples\lsl_example.py`.
+
+```python
+
+from pyOpenBCI import OpenBCICyton
+from pylsl import StreamInfo, StreamOutlet
+import numpy as np
+
+SCALE_FACTOR_EEG = (4500000)/24/(2**23-1) #uV/count
+SCALE_FACTOR_AUX = 0.002 / (2**4)
+
+
+print("Creating LSL stream for EEG. \nName: OpenBCIEEG\nID: OpenBCItestEEG\n")
+
+info_eeg = StreamInfo('OpenBCIEEG', 'EEG', 8, 250, 'float32', 'OpenBCItestEEG')
+
+print("Creating LSL stream for AUX. \nName: OpenBCIAUX\nID: OpenBCItestEEG\n")
+
+info_aux = StreamInfo('OpenBCIAUX', 'AUX', 3, 250, 'float32', 'OpenBCItestAUX')
+
+outlet_eeg = StreamOutlet(info_eeg)
+outlet_aux = StreamOutlet(info_aux)
+
+def lsl_streamers(sample):
+    outlet_eeg.push_sample(np.array(sample.channels_data)*SCALE_FACTOR_EEG)
+    outlet_aux.push_sample(np.array(sample.aux_data)*SCALE_FACTOR_AUX)
+
+board = OpenBCICyton(port='COM5', daisy=False)
+
+board.start_stream(lsl_streamers)
+
+```
+### Who are we?
+
+The founder of the OpenBCI Python repository is Jermey Frey. The Python driver is one of the most popular repositories and has the most contributors!
+
+The contributors to these repos are people using Python mainly for their data acquisition and analytics.
+
+
+### Get involved
+
+If you think you can help in any of the areas listed above (and we bet you can) or in any of the many areas that we haven't yet thought of (and here we're *sure* you can) then please check out our [contributors' guidelines](CONTRIBUTING.md) and our [roadmap](ROADMAP.md).
+
+Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our [code of conduct](CODE_OF_CONDUCT.md) in all interactions both on and offline.
+
+### Contact us
+
+If you want to report a problem or suggest an enhancement we'd love for you to [open an issue](../../issues) at this github repository because then we can get right on it. But you can also contact [AJ][link_aj_keller] by email (pushtheworldllc AT gmail DOT com) or on [twitter](https://twitter.com/aj-ptw).
+
+### Find out more
+
+You might be interested in:
+
+* Purchase a [Cyton][link_shop_cyton] | [Ganglion][link_shop_ganglion] | [WiFi Shield][link_shop_wifi_shield] from [OpenBCI][link_openbci]
+* Get taught how to use OpenBCI devices by [Push The World][link_ptw] BCI Consulting
+
+And of course, you'll want to know our:
+
+* [Contributors' guidelines](CONTRIBUTING.md)
+* [Roadmap](ROADMAP.md)
+
+### Glossary
+
+OpenBCI boards are commonly referred to as _biosensors_. A biosensor converts biological data into digital data. 
+
+The [Ganglion][link_shop_ganglion] has 4 channels, meaning the Ganglion can take four simultaneous voltage readings.
+ 
+The [Cyton][link_shop_cyton] has 8 channels and [Cyton with Daisy][link_shop_cyton_daisy] has 16 channels. 
+
+Generally speaking, the Cyton records at a high quality with less noise. Noise is anything that is not signal.
+
+### Thank you
+
+Thank you so much (Danke schön! Merci beaucoup!) for visiting the project and we do hope that you'll join us on this amazing journey to make programming with OpenBCI fun and easy.
+
+### <a name="license"></a> License:
+
+MIT
+
+[link_shop_wifi_shield]: https://shop.openbci.com/collections/frontpage/products/wifi-shield?variant=44534009550
+[link_shop_ganglion]: https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board
+[link_shop_cyton]: https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel
+[link_shop_cyton_daisy]: https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel
+[link_nodejs_cyton]: https://github.com/openbci/openbci_nodejs_cyton
+[link_nodejs_ganglion]: https://github.com/openbci/openbci_nodejs_ganglion
+[link_nodejs_wifi]: https://github.com/openbci/openbci_nodejs_wifi
+[link_javascript_utilities]: https://github.com/OpenBCI/OpenBCI_JavaScript_Utilities
+[link_openbci]: http://www.openbci.com
