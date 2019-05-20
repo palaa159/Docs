@@ -88,7 +88,7 @@ Select the `Compatibility` tab at the top of this window, and then click `Change
 
 In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`. That's it!
 
-![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPIScaling.PNG)
+![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
 
 </details>
 
