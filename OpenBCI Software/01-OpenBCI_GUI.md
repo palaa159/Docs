@@ -73,12 +73,33 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 
 ### Install OpenBCI_GUI On Windows
 Move the `OpenBCI_GUI` directory anywhere you like.
-	
-If you have a high DPI screen and are running windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly. Select `Change high DPI Settings` and on the bottom drop down box, change from `Application` to `System (Enhanced)`.
+
+<details><summary><i>Windows Users: How to run the GUI with High DPI Screens</i></summary>
+
+If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.
+
+Right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:
+
+![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)
+
+Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
+
+![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)
+
+In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`. That's it!
+
+![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
+
+</details>
 
 ### Install OpenBCI_GUI On Linux
 
 Unzip the downloaded application and place in desired location.
+
+<details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
+On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work<a>.
+
+</details>
 
 ## Running the OpenBCI_GUI
 
