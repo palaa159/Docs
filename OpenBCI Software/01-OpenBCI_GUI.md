@@ -43,7 +43,7 @@ There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on
 
 ### Fix Linux Serial Port Permissions
 
-This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
+This fix affects all communications between Ganglion/Cyton and your computer via serial ports.<br>
 
 <p><details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
 	
@@ -80,21 +80,21 @@ Move the `OpenBCI_GUI` directory anywhere you like.
 
 <details><summary><i>Windows Users: How to run the GUI with High DPI Screens</i></summary>
 
-If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.
+<br>If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.<br>
 
-1. First, close the GUI if it is open.
+1. First, close the GUI if it is open.<br>
 
-2. Next, right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:
+2. Next, right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:<br>
 
-![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)
+![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)<br>
 
-3. Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
+3. Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.<br>
 
-![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)
+![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)<br>
 
-4. In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`.
+4. In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`.<br>
 
-![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
+![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)<br>
 
 5. That's it! Once the settings have been changed, restart the GUI!
 
@@ -102,13 +102,13 @@ If you have a high DPI screen and are running Windows 10, you may notice that th
 
 ### Install OpenBCI_GUI On Linux
 
-Unzip the downloaded application and place in desired location.
+Unzip the downloaded application and place in desired location.<br>
 
-<details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
+<p><details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
 
 On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work</a>.
 
-</details>
+</details></p>
 
 ## Running the OpenBCI_GUI
 
