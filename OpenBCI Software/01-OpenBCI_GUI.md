@@ -47,17 +47,17 @@ This fix affects all communications between Ganglion/Cyton and your computer via
 
 <p><details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
 	
-Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:<br>
+Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:<br><br>
 
 1. First, verify if the user does belong to the "dialout" group using the “id” command.<br>
-<pre>- Type "id -Gn <username>" in terminal and check if it prints "dialout" as one of the options.</pre><br>
-<pre>- Replace <username> with your Linux username. Example: `id -Gn susieQ`</pre><br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Replace <username> with your Linux username. Example: `id -Gn susieQ`<br>
 2. Next, add the user to the “dialout” supplementary group.<br>
-<pre>- Type `sudo usermod -a -G dialout <username>` in terminal.</pre><br>
-<pre>- Example: `sudo usermod -a -G dialout susieQ`</pre><br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Type `sudo usermod -a -G dialout <username>` in terminal.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Example: `sudo usermod -a -G dialout susieQ`<br>
 3. Restart Ubuntu<br>
 4. Try "id" command again<br>
-<pre>- Repeart step one</pre><br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Repeart step one<br>
 </details></p>
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
