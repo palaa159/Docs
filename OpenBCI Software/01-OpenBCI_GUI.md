@@ -45,7 +45,7 @@ There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on
 
 This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
 
-<details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
+<p><details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
 	
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:<br>
 
@@ -58,7 +58,7 @@ Before trying to connect to any OpenBCI boards on Linux, you need to make sure y
 3. Restart Ubuntu<br>
 4. Try "id" command again<br>
 &ensp;- Repeart step one<br>
-</details>
+</details></p>
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
 
