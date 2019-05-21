@@ -43,7 +43,7 @@ There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on
 
 ### Fix Linux Serial Port Permissions
 ##### This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
-<details><summary>Linux Users: Expand this dropdown for important details</summary><br>
+<details><summary><i>Linux Users: Expand this dropdown for important details<i></summary><br>
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
 1. First, verify if the user does belong to the "dialout" group using the “id” command.
@@ -78,15 +78,19 @@ Move the `OpenBCI_GUI` directory anywhere you like.
 
 If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.
 
-Right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:
+1. First, close the GUI if it is open.
+
+1. Next, right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:
 
 ![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)
 
-Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
+1.Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
 
 ![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)
 
-In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`. That's it!
+1. In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`.
+
+1. That's it! Once the settings have been changed, restart the GUI!
 
 ![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
 
