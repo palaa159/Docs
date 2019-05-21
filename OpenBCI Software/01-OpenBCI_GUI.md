@@ -106,7 +106,7 @@ Unzip the downloaded application and place in desired location.
 
 <details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
 
-On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work<a>.
+On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work</a>.
 
 </details>
 
