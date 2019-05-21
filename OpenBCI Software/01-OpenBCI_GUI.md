@@ -42,7 +42,9 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
 
 ### Fix Linux Serial Port Permissions
+
 ##### This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
+
 <details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
 Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
@@ -72,6 +74,7 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 ![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
 ### Install OpenBCI_GUI On Windows
+
 Move the `OpenBCI_GUI` directory anywhere you like.
 
 <details><summary><i>Windows Users: How to run the GUI with High DPI Screens</i></summary>
@@ -101,6 +104,7 @@ If you have a high DPI screen and are running Windows 10, you may notice that th
 Unzip the downloaded application and place in desired location.
 
 <details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
+
 On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work<a>.
 
 </details>
@@ -126,7 +130,7 @@ If prompted, check both boxes:
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows.
+**As of GUI v4, the GUI will auto-launch the Hub on Windows.**
 
 After launching the GUI, you can verify the Hub is running in your Windows tool tray.
 
