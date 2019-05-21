@@ -84,15 +84,15 @@ If you have a high DPI screen and are running Windows 10, you may notice that th
 
 ![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)
 
-1.Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
+1. Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
 
 ![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)
 
 1. In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`.
 
-1. That's it! Once the settings have been changed, restart the GUI!
-
 ![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
+
+1. That's it! Once the settings have been changed, restart the GUI!
 
 </details>
 
