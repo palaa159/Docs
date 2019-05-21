@@ -295,6 +295,8 @@ When in Live Mode, the GUI will load your settings automatically. Please allow 1
 ## GUI Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ 
 
+### Expert Mode
+
 __To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
 
 ![Expert Mode Button](../assets/images/expertModeToggleHelpText.png)
