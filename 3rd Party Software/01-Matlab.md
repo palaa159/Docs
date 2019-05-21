@@ -42,7 +42,7 @@ You can also stream live OpenBCI data into MATLAB using the Lab Streaming Layer 
 
 Open the OpenBCI GUI and "Start System" with your setup as you would do. On the widget dropdown menu select "Networking". At the right upper corner of the Networking widget there is another dropdown menu, select LSL.
 
-![](https://raw.githubusercontent.com/OpenBCI/Docs/master/assets/Matlab/Networking_LSL1.gif)
+![](https://github.com/OpenBCI/Docs/raw/master/assets/Matlab/Networking_LSL1.gif?raw=true)
 
 Now you can select the OpenBCI Data you want to send, the Name of the LSL stream, the data advertised by the LSL and the number of channels you will be sending. Once you select your parameters make sure to turn on your LSL stream at the bottom of the widget. Then click start and you are ready to go.
 
