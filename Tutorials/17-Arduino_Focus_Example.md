@@ -37,7 +37,7 @@ After uploading the sketch, you can close or minimize the Arduino IDE, but keep 
 #### Open and Setup the Networking Widget
 ![Setup Networking Widget](../assets/images/gui_arduino_setupNetworkingWidgetSerial.png)
 
-#### Open the Focus Widget. Then, click "Start Data Steam" and then "Start" in the Networking Widget
+#### Open the Focus Widget. Then, click "Start Data Stream" and then "Start" in the Networking Widget
 
 ![OpenBCI Serial Not Focused](../assets/images/gui_arduino_serial_notFocused.png)
 
