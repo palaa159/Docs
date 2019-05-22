@@ -43,7 +43,7 @@ There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on
 
 ### Fix Linux Serial Port Permissions
 
-This fix affects all communications between Ganglion/Cyton and your computer via serial ports.<br>
+<p>This fix affects all communications between Ganglion/Cyton and your computer via serial ports.</p><br>
 
 <p><details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
 	
