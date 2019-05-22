@@ -80,7 +80,7 @@ Head over to the OpenBCI GUI [tutorial](https://docs.openbci.com/OpenBCI%20Softw
 * [Customize the layout](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-customize-your-layout), change the gain, toggle on/off, check impedance of individual channels of the CytonDaisy board (or any connected OpenBCI board) directly in the GUI!
 * Access built-in widgets such as Focus Widget, Band Power, Accelerometer, EEG Head Plot, and MUCH more
 
-### If you just want to visualize EEG, EMG, ECG data (and do some basic analysis) and save the data to start with, download the standalone OpenBCI [GUI](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) and connect it to an OpenBCI Cyton, CytonDaisy, or Ganglion!
+ **If you just want to visualize EEG, EMG, ECG data (and do some basic analysis) and save the data to start with, download the standalone OpenBCI [GUI](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) and connect it to an OpenBCI Cyton, CytonDaisy, or Ganglion!**
 
 
 ## Electrode Cap With Third-Party Bioamplifier Tutorial
