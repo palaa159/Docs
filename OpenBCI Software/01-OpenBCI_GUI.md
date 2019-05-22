@@ -102,7 +102,7 @@ Move the `OpenBCI_GUI` directory anywhere you like.
 
 ### Install OpenBCI_GUI On Linux
 
-Unzip the downloaded application and place in desired location.<br>
+<p>Unzip the downloaded application and place in desired location.</p><br>
 
 <p><details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
 
