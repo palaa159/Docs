@@ -61,7 +61,7 @@ The order can be left to user preference.
 
 Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-downloadinstallrun-the-openbci-gui) to prepare your computer to communicate with your Ganglion.
 
-Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI as shown in the video below!
+Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI as shown in the video below! Click on the picture to view the video on YouTube.
 
 [![](http://img.youtube.com/vi/NAM6eOA4a8Y/0.jpg)](http://www.youtube.com/watch?v=NAM6eOA4a8Y "GUI Ganglion")
 
@@ -106,16 +106,14 @@ Note, the order of electrodes on pins 1-5 can be left to user preference.
 
 Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-ii-downloadinstallrun-the-openbci-gui) to prepare your computer to communicate with your Cyton.
 
-Once you've installed the GUI by following the tutorial, fire it up like shown in the video below!
+Once you've installed the GUI by following the tutorial, fire it up as shown in the video below! Click on the picture to view the video on YouTube.
 
 [![](http://img.youtube.com/vi/XktF8OhHH4A/0.jpg)](http://www.youtube.com/watch?v=XktF8OhHH4A "GUI Cyton")
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
+Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data. The following screenshot shows an example of what your live-streamed brain data might look like.
 
-The screenshot above shows an example of your live-streamed brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
 
 For more details on the various GUI functions, scroll up to the OpenBCI Software section of the Headband-Ganglion Tutorial above and also check out the cool features section of the GUI [page](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-cool-gui-features).
 
 As always, don't hesitate to email us at support@openbci.com for assistance!
-
-Happy hacking!
