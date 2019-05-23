@@ -1,4 +1,4 @@
-# OpenBCI EEG Headband Kit
+# OpenBCI 9-channel EEG Headband Kit
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Front.JPG?raw=true" width="50%">
 
@@ -6,12 +6,12 @@
 
 When combined with our [Ganglion](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board?variant=13461804483) or [Cyton](https://shop.openbci.com/collections/frontpage/products/cyton-biosensing-board-8-channel?variant=38958638542) boards, the OpenBCI EEG Headband Kit is a low-cost tool for obtaining research-grade EEG data.
 
-This tutorial will guide you through setting up your EEG system with either board!
+This tutorial will guide you through setting up your EEG system with either board! Please read this tutorial in its entirety (ALL Ganglion and Cyton sections, even if you don't have both boards) before setting up the system. 
 
 #### Each kit includes:
 1. Two Ear-clip electrodes (left example)
 2. Three lead wires for flat EEG Snap Electrodes (right example)
-3. Two standard lead wires (middle example)
+3. Six standard lead wires (middle example)
 4. One full-length-velcro headband
 5. Replacement flat ear electrodes, replacement flat snap electrodes, and replacement 2 mm spikey electrodes
 
@@ -19,10 +19,11 @@ This tutorial will guide you through setting up your EEG system with either boar
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Electrodes.png?raw=true" width="50%">
 
 All electrode wires end in a female header termination compatible with OpenBCI biosensing boards.
+
 #### 10-20 Internationally Accepted EEG Node Placement
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/10-20%20Placement.jpg?raw=true" width="50%">
 
-The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, AF8, F8) via the 3 lead wires with flat EEG electrodes. The two leads with spikey electrodes will allow measurement at the FT7/FT8, T7/T8, TP7/TP8, P7/P8, PO7/PO8, O1/O2, and Oz nodes, depending where you insert the spikey electrodes. In total, this kit comes with FIVE electrode leads, with option to add more! If you want to add additional electrodes to the headband, please email support@openbci.com.
+The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, AF8, F8) via the 3 lead wires with flat EEG electrodes. The six leads with spikey electrodes will allow measurement at the FT7/FT8, T7/T8, TP7/TP8, P7/P8, PO7/PO8, O1/O2, and Oz nodes, depending where you insert the spikey electrodes. In total, this kit comes with NINE electrode leads.
 
 
 ## Headband-Ganglion Tutorial
@@ -52,10 +53,12 @@ See the [Ganglion Hardware page](http://docs.openbci.com/Hardware/07-Ganglion#op
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Ganglion_Headband_Pins.JPG?raw=true" width="50%">
 
-1. Connect one earclip electrode to the top D_G (driven ground) pin.
-2. Connect the second earclip electrode to the top REF pin.
+**Steps**
+1. Connect one earclip electrode to the top D_G (driven ground) pin, as shown above.
+2. Connect the second earclip electrode to the top REF pin, as shown above. 
 3. Connect the female terminations of the two flat snap electrodes and two spikey electrodes to top pins 1-4, shown above.
-The order can be left to user preference.
+
+The order of pin connections in step 3 is up to user preference.
 
 #### OpenBCI Software
 
@@ -80,7 +83,7 @@ The Ganglion Signal window in the lower left of the GUI is one of the many other
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Cyton_Front.JPG?raw=true" width="50%">
 
-The Cyton board supports eight channels of EEG/EMG/EEG input and can stream data over [bluetooth](http://docs.openbci.com/Hardware/03-Cyton_Data_Format) or [wifi](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide). In this tutorial we will show you how to obtain three frontal lobe measurements and two temporal lobe measurements using five of the eight channels and stream the data over bluetooth!
+The Cyton board supports eight channels of EEG/EMG/EEG input and can stream data over [bluetooth](http://docs.openbci.com/Hardware/03-Cyton_Data_Format) or [wifi](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide). In this tutorial we will show you how to obtain three frontal lobe measurements and five temporal lobe measurements and stream the data over bluetooth!
 
 #### Battery
 
@@ -97,10 +100,10 @@ As shown above:
 
 1. Connect one earclip electrode to the bottom BIAS pin
 2. Connect the second earclip electrode to the bottom SRB pin
-3. Connect the female terminations of the three flat snap electrodes to bottom pins 1-3
-4. Connect the female terminations of the two spikey electrodes to bottom pins 4-5
+3. Connect the female terminations of the three flat snap electrodes to bottom pins 1-3 (labeled N1P, N2P, and N3P)
+4. Connect the female terminations of the five spikey electrodes to bottom pins 4-8 (labeled N4P through N8P)
 
-Note, the order of electrodes on pins 1-5 can be left to user preference.
+Note, the order of electrodes on pins 1-8 can be left to user preference.
 
 #### OpenBCI Software
 
@@ -115,5 +118,31 @@ Play around with the vertical scale, filter, frequency range to see the effect o
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
 
 For more details on the various GUI functions, scroll up to the OpenBCI Software section of the Headband-Ganglion Tutorial above and also check out the cool features section of the GUI [page](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-cool-gui-features).
+
+For cool project ideas, head over to this [**Instructables**](https://www.instructables.com/id/Send-Focus-Data-From-OpenBCI-GUI-to-Arduino/) Page!
+
+**Use Cases for OpenBCI GUI**
+
+* OpenBCI device owners want to visualize their brainwaves!
+* Many of the researchers, hackers and students alike who purchase OpenBCI devices want to use them to acquire data as soon as their device arrives.
+* Users use macOS, Windows and Linux to acquire data
+* Users want to filter incoming data in real time
+* Users want to make their own experiments to test their awesome theories or duplicate state of the art research at home!
+* Users struggle to get prerequisites properly installed to get data on their own from OpenBCI Cyton and Ganglion.
+* Users want to stream data into their own custom applications such as MATLAB.
+
+**What You Can Do with OpenBCI GUI and Software Stack**
+
+* Visualize data from every OpenBCI device: Ganglion, Cyton, Cyton with Daisy, and the WiFi Shield
+* Playback files using GUI
+* Run as a native application on macOS, Windows, and Linux.
+* Apply filters and other data processing tools to quickly clean raw data in real time
+* Use the GUI as a networking system to move data out of GUI into other apps over UDP, OSC, [LSL](https://github.com/OpenBCI/OpenBCI_LSL), and Serial.
+* Send data to [MATLAB](https://docs.openbci.com/3rd%20Party%20Software/01-Matlab), Neuropype (using LSL), and other [third-party softwares.](https://docs.openbci.com/3rd%20Party%20Software/00-3rdPartySoftware)
+* Analyze data with Python. Links [HERE](https://github.com/OpenBCI/OpenBCI_Python) and [HERE.](https://github.com/OpenBCI/pyOpenBCI)
+* [Create a widget framework](https://docs.openbci.com/Tutorials/16-Custom_Widgets) that allows users to create their own experiments.
+* Output data into a saved file for later offline processing.
+* [Customize the layout](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-customize-your-layout), change the gain, toggle on/off, check impedance of individual channels of the CytonDaisy board (or any connected OpenBCI board) directly in the GUI!
+* Access built-in widgets such as Focus Widget, Band Power, Accelerometer, EEG Head Plot, and MUCH more
 
 As always, don't hesitate to email us at support@openbci.com for assistance!
