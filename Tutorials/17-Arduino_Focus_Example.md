@@ -1,6 +1,7 @@
 # Send Focus Data from GUI to Arduino
 
 This tutorial shows you how to get started streaming data from the OpenBCI_GUI's Focus Widget via Serial connection to an [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3).
+Head [**HERE**](https://www.instructables.com/id/Send-Focus-Data-From-OpenBCI-GUI-to-Arduino/) to find the OpenBCI/Arduino Focus Data tutorial in the updated Instructable format!
 
 ## What do I need?
 - The [OpenBCI_GUI](https://github.com/OpenBCI/OpenBCI_GUI/releases/latest) standalone app or Processing sketch
@@ -37,7 +38,7 @@ After uploading the sketch, you can close or minimize the Arduino IDE, but keep 
 #### Open and Setup the Networking Widget
 ![Setup Networking Widget](../assets/images/gui_arduino_setupNetworkingWidgetSerial.png)
 
-#### Open the Focus Widget. Then, click "Start Data Steam" and then "Start" in the Networking Widget
+#### Open the Focus Widget. Then, click "Start Data Stream" and then "Start" in the Networking Widget
 
 ![OpenBCI Serial Not Focused](../assets/images/gui_arduino_serial_notFocused.png)
 

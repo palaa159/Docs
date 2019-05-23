@@ -35,27 +35,30 @@ Alternatively, you can use a [small USB Dongle](https://shop.openbci.com/product
 
 **The OpenBCI Ganglion uses Bluetooth LE (aka Bluetooth Smart, Bluetooth 4.0) and in order to use the Ganglion, you need a [small USB Dongle](https://shop.openbci.com/products/ganglion-dongle).**
 
-*Deprecated:* The [CSR Dongle](https://github.com/OpenBCI/Docs/blob/master/Deprecated%20Docs/Setup_CSR_Dongle.md) is no longer supported. We recommend using the [newer Ganglion Dongle](https://shop.openbci.com/products/ganglion-dongle).**
+*Deprecated:* The [CSR Dongle](https://github.com/OpenBCI/Docs/blob/master/Deprecated%20Docs/Setup_CSR_Dongle.md) is no longer supported. We recommend using the [newer Ganglion Dongle](https://shop.openbci.com/products/ganglion-dongle).
 
 ### WiFi Shield
 
 There are no prerequisites for running the WiFi Shield with Cyton or Ganglion on macOS/Windows/Linux, move on to the installation section below.
 
 ### Fix Linux Serial Port Permissions
-##### This fix affects all communications between Ganglion/Cyton and your computer via serial ports.
-<details><summary>Linux Users: Expand this dropdown for important details</summary><br>
-Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:
 
-1. First, verify if the user does belong to the "dialout" group using the “id” command.
-	- Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options. 
-	- Replace <username> with your Linux username. Example: `id -Gn susieQ`
-1. Next, add the user to the “dialout” supplementary group.
-	- Type `sudo usermod -a -G dialout <username>` in terminal.
-	- Example: `sudo usermod -a -G dialout susieQ`
-1. Restart Ubuntu
-1. Try "id" command again
-    - Repeart step one
-</details>
+<p>This fix affects all communications between Ganglion/Cyton and your computer via serial ports.</p><br>
+
+<p><details><summary><i>Linux Users: Expand this dropdown for important details</i></summary><br>
+	
+Before trying to connect to any OpenBCI boards on Linux, you need to make sure you have permission to access the serial ports on your machine. Otherwise, you will get the error `Failed to connect using /dev/ttyUSB0` or similar. This can be fixed by adding the user to the `dialout` group in Ubuntu. Here is a [full explanation and fix](https://websistent.com/fix-serial-port-permission-denied-errors-linux/). Here is the short version:<br><br>
+
+1. First, verify if the user does belong to the "dialout" group using the “id” command.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Type `id -Gn <username>` in terminal and check if it prints `dialout` as one of the options.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Replace <username> with your Linux username. Example: `id -Gn susieQ`<br>
+2. Next, add the user to the “dialout” supplementary group.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Type `sudo usermod -a -G dialout <username>` in terminal.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Example: `sudo usermod -a -G dialout susieQ`<br>
+3. Restart Ubuntu<br>
+4. Try "id" command again<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Repeart step one<br>
+</details></p>
 
 ## Installing the OpenBCI GUI as a "Standalone" Application
 
@@ -72,34 +75,40 @@ Drag and drop the `OpenBCI_GUI` application to you `Applications` folder.
 ![Drag and drop application](../assets/images/gui_drag_and_drop.png)
 
 ### Install OpenBCI_GUI On Windows
+
 Move the `OpenBCI_GUI` directory anywhere you like.
 
 <details><summary><i>Windows Users: How to run the GUI with High DPI Screens</i></summary>
 
-If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.
+<br>If you have a high DPI screen and are running Windows 10, you may notice that the GUI is hard to see, and nothing seems to scale correctly.<br>
 
-Right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:
+1. First, close the GUI if it is open.<br>
 
-![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)
+2. Next, right click on `OpenBCI_GUI.exe` and select `Properties`. The following window should pop up:<br>
 
-Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.
+![gui windows properties menu](../assets/images/GUI-WindowsProperties.PNG)<br>
 
-![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)
+3. Select the `Compatibility` tab at the top of this window, and then click `Change high DPI settings`.<br>
 
-In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`. That's it!
+![gui windows properties compatibility](../assets/images/GUI_WindowsProperties_Compatibility.PNG)<br>
 
-![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)
+4. In the section labeled `High DPI scaling override`, check the box `Override high DPI scaling behavior` and change from `Application` to `System (Enhanced)`.<br>
+
+![gui windows override high dpi scaling](../assets/images/GUI_Windows_OverrideHighDPI.PNG)<br>
+
+5. That's it! Once the settings have been changed, restart the GUI!
 
 </details>
 
 ### Install OpenBCI_GUI On Linux
 
-Unzip the downloaded application and place in desired location.
+<p>Unzip the downloaded application and place in desired location.</p><br>
 
-<details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
-On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work<a>.
+<p><details><summary><i>Linux Users: How to run the GUI with High DPI Screens</i></summary>
 
-</details>
+On Linux, there is no way to force scaling. However, here is a <a href ="https://github.com/kaueraal/run_scaled">link to a script that should work</a>.
+
+</details></p>
 
 ## Running the OpenBCI_GUI
 
@@ -122,7 +131,7 @@ If prompted, check both boxes:
 
 ![accept networking](../assets/images/gui_windows_accept_networking.PNG)
 
-As of GUI v4, the GUI will auto-launch the Hub on Windows.
+**As of GUI v4, the GUI will auto-launch the Hub on Windows.**
 
 After launching the GUI, you can verify the Hub is running in your Windows tool tray.
 
@@ -285,6 +294,8 @@ When in Live Mode, the GUI will load your settings automatically. Please allow 1
 
 ## GUI Keyboard Shortcuts
 __Use the spacebar to start or stop the data stream!__ 
+
+### Expert Mode
 
 __To enable all keyboard shortcuts, set "Expert Mode On" in the settings dropdown.__
 

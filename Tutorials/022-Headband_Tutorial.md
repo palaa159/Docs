@@ -40,7 +40,7 @@ All OpenBCI boards ship with a free 2-pin standard JST compatible 4-AA battery h
 1. [Lithium ion battery](https://www.adafruit.com/product/1578) and 
 2. [USB charger](https://www.adafruit.com/product/1304)
 
-We recommend for its long battery life, compact size, and compatibility with all OpenBCI boards.
+We recommend this battery for its long battery life, compact size, and compatibility with all OpenBCI boards.
 
 #### Hardware
 
@@ -110,12 +110,10 @@ Once you've installed the GUI by following the tutorial, fire it up [as shown in
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/headband_gui_cyton.jpeg?raw=true" width="50%">
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
+Play around with the vertical scale, filter, frequency range to see the effect on the raw data. The following screenshot shows an example of what your live-streamed brain data might look like.
 
-The screenshot above shows an example of what your live-streamed brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
 
 For more details on the various GUI functions, scroll up to the OpenBCI Software section of the Headband-Ganglion Tutorial above and also check out the cool features section of the GUI [page](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI#the-openbci-gui-cool-gui-features).
 
 As always, don't hesitate to email us at support@openbci.com for assistance!
-
-Happy hacking!
