@@ -1,6 +1,9 @@
 # Cyton Radios Programming Tutorial
 
 ## Overview
+
+**Note, you do not need to do any radio module programming if you want to use the Cyton out-of-the-box. All OpenBCI boards and dongles ship already programmed, i.e. with firmware already uploaded.** If you're curious about how we do it, keep reading! If you just want to start streaming EEG/EMG/ECG data right away, head over to the [software page.](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI)
+
 The OpenBCI Cyton Boards come with a USB dongle that allows for communication between the Board and your computer. There is a BLE radio module (actually an [RFduino 22301](http://www.rfduino.com/product/rfd22301-rfduino-ble-smt/index.html)) on the Dongle and Board that make the communication happen. Here's some terms that are important to note:
 
 * The radio module on the Dongle is called the **HOST**
