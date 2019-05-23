@@ -40,7 +40,7 @@ All OpenBCI boards ship with a free 2-pin standard JST compatible 4-AA battery h
 1. [Lithium ion battery](https://www.adafruit.com/product/1578) and 
 2. [USB charger](https://www.adafruit.com/product/1304)
 
-We recommend for its long battery life, compact size, and compatibility with all OpenBCI boards.
+We recommend this battery for its long battery life, compact size, and compatibility with all OpenBCI boards.
 
 #### Hardware
 
