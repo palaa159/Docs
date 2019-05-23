@@ -61,10 +61,9 @@ The order can be left to user preference.
 
 Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-downloadinstallrun-the-openbci-gui) to prepare your computer to communicate with your Ganglion.
 
-Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI like shown in the video below!
+Once you've downloaded the GUI zip file per tutorial instructions, fire up the GUI as shown in the video below!
 
-<div style="position:relative;height:0;padding-bottom:39.38%"><iframe src="https://www.youtube.com/embed/NAM6eOA4a8Y" style="position:absolute;width:50%;height:100%;left:0" width="600" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div><br>
-
+[![](http://img.youtube.com/vi/NAM6eOA4a8Y/0.jpg)](http://www.youtube.com/watch?v=NAM6eOA4a8Y "GUI Ganglion")
 
 Notice the sharp peak-trough-peak wave behavior in the upper left time series window of the GUI. The first peak corresponds with the initiation of an eye blink, the trough immediately after shows a dip in alpha brain waves that syncs to the eye's closing for a fraction of a second! The peak immediately **after** the trough corresponds to the brain signals to the eyelid to reopen, thus concluding the blink cycle.
 
@@ -72,14 +71,14 @@ The band power window in the lower right of the GUI shows the relative strengths
 
 In the screenshot below, you'll see this analysis utilized in another built-in function, the Focus Widget! When the alpha waves are (relatively) high and beta waves are low, the GUI translates this to a focused state.
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Ganglion.png?raw=true"width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Ganglion.png?raw=true" width="70%">
 
 The Ganglion Signal window in the lower left of the GUI is one of the many other useful displays. For most bioelectrical measurements, you want the skin-electrode contact surface impedance to be low. Two of the four channels show lower impedance (these happen to be the flat snap electrodes that are touching the skin over the frontal cortex). This connection must be good, hence the green light to the left of the impedance value. If the impedance light in the GUI is red, you can improve the connection by making sure the electrodes are secured against the skin and making good contact. You may find it helpful to add a little [electrode paste](https://shop.openbci.com/collections/frontpage/products/ten20-conductive-paste-2oz-jars?variant=31373533198) to boost conductivity of the Ag-AgCl coating on the electrodes.
 
 
 ## Headband-Cyton Tutorial
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Cyton_Front.JPG?raw=true"width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Cyton_Front.JPG?raw=true" width="50%">
 
 The Cyton board supports eight channels of EEG/EMG/EEG input and can stream data over [bluetooth](http://docs.openbci.com/Hardware/03-Cyton_Data_Format) or [wifi](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide). In this tutorial we will show you how to obtain three frontal lobe measurements and two temporal lobe measurements using five of the eight channels and stream the data over bluetooth!
 
@@ -92,7 +91,7 @@ All OpenBCI boards ship with a free 2-pin standard JST compatible 4-AA battery h
 
 #### Hardware
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Cyton_Headband_Pins.JPG?raw=true"width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Cyton_Headband_Pins.JPG?raw=true" width="50%">
 
 As shown above:
 
@@ -109,10 +108,9 @@ Now that you've finished with the hardware set-up, the next step is to set up th
 
 Once you've installed the GUI by following the tutorial, fire it up like shown in the video below!
 
-<div style="position:relative;height:0;padding-bottom:39.38%"><iframe src="https://www.youtube.com/embed/XktF8OhHH4A?ecver=2" style="position:absolute;width:50%;height:100%;left:0" width="600" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div><br>
+[![](http://img.youtube.com/vi/XktF8OhHH4A/0.jpg)](http://www.youtube.com/watch?v=XktF8OhHH4A "GUI Cyton")
 
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true"width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/GUI_Cyton_B.png?raw=true" width="70%">
 
 The screenshot above shows an example of your live-streamed brain data might look like. Toggle around with the vertical scale, filter, frequency range to see the effect on the raw data.
 
