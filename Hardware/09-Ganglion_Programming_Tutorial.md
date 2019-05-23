@@ -236,6 +236,7 @@ If you ever want to re-upload a program that you already have on your phone, sel
 
 ## Setting up to Program Ganglion Using Hardware
 
+Older Ganglions (pre-2017) could only be programmed using hardware first, then over the air. Newer Ganglions can be programmed OTA or using hardware.
 
 ### What You Need
 
