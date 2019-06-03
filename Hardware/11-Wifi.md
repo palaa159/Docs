@@ -1,4 +1,4 @@
-# OpenBCI WiFi
+# OpenBCI WiFi ([BUY IT!](https://shop.openbci.com/collections/frontpage/products/wifi-shield))
 
 **[Suggest an edit to this page](https://github.com/OpenBCI/Docs/edit/master/Hardware/11-Wifi.md)**
 
