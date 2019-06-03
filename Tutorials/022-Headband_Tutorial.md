@@ -1,4 +1,4 @@
-# OpenBCI 9-channel EEG Headband Kit
+# OpenBCI EEG Headband Kit Guide
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Headband_Front.JPG?raw=true" width="50%">
 
@@ -11,7 +11,7 @@ This tutorial will guide you through setting up your EEG system with either boar
 #### Each kit includes:
 1. Two Ear-clip electrodes (left example)
 2. Three lead wires for flat EEG Snap Electrodes (right example)
-3. Six standard lead wires (middle example)
+3. Six standard lead wires, i.e. wire clip cables (middle example)
 4. One full-length-velcro headband
 5. Replacement flat ear electrodes, replacement flat snap electrodes, and replacement 2 mm spikey electrodes
 
@@ -57,6 +57,8 @@ See the [Ganglion Hardware page](http://docs.openbci.com/Hardware/07-Ganglion#op
 1. Connect one earclip electrode to the top D_G (driven ground) pin, as shown above.
 2. Connect the second earclip electrode to the top REF pin, as shown above. 
 3. Connect the female terminations of the two flat snap electrodes and two spikey electrodes to top pins 1-4, shown above.
+4. Place the velcro headband between the clip end of a colored cable and a spikey electrode, making sure to align with the hole in the headband, then snap the spikey electrode into the clip
+5. Place the velcro headband between the flap snap electrode and the snap end of a colored cable, making sure to align with the hole in the headband, then snap the electrode into place.
 
 The order of pin connections in step 3 is up to user preference.
 
@@ -102,6 +104,8 @@ As shown above:
 2. Connect the second earclip electrode to the bottom SRB pin
 3. Connect the female terminations of the three flat snap electrodes to bottom pins 1-3 (labeled N1P, N2P, and N3P)
 4. Connect the female terminations of the five spikey electrodes to bottom pins 4-8 (labeled N4P through N8P)
+5. Place the velcro headband between the clip end of a colored cable and a spikey electrode, making sure to align with the hole in the headband, then snap the spikey electrode into the clip
+6. Place the velcro headband between the flap snap electrode and the snap end of a colored cable, making sure to align with the hole in the headband, then snap the electrode into place.
 
 Note, the order of electrodes on pins 1-8 can be left to user preference.
 
