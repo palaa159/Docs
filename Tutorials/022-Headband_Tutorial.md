@@ -107,7 +107,7 @@ Note, the order of electrodes on pins 1-8 can be left to user preference.
 
 #### OpenBCI Software
 
-Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](http://docs.openbci.com/Tutorials/01-Cyton_Getting%20Started_Guide#cyton-getting-started-guide-ii-downloadinstallrun-the-openbci-gui) to prepare your computer to communicate with your Cyton.
+Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](https://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI) to prepare your computer to communicate with your Cyton.
 
 Once you've installed the GUI by following the tutorial, fire it up [as shown in this YouTube video!](http://www.youtube.com/watch?v=XktF8OhHH4A)
 
