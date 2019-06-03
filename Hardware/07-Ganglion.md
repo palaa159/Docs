@@ -1,4 +1,6 @@
-# OpenBCI Ganglion ([BUY IT!](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board))
+# OpenBCI Ganglion 
+
+## [BUY IT!](https://shop.openbci.com/collections/frontpage/products/pre-order-ganglion-board)
 
 The OpenBCI Ganglion PCBs were designed with KiCAD, an Open Source PCB capture software. You can find a link to download KiCAD in our [Ganglion design files repository](https://github.com/OpenBCI/Ganglion_Hardware_Design_Files) where you will find design files and component library files to load into KiCAD and edit, if you like, along with the full BOM for this maiden production run.
 
