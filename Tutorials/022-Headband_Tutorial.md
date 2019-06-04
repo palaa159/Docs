@@ -64,6 +64,7 @@ See the [Ganglion Hardware page](http://docs.openbci.com/Hardware/07-Ganglion#op
 
 The placement of nodes on the headband is best represented in the following image:
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Ganglion.png" width="50%">
+
 In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
 
 To attach the electrodes to the headband:
@@ -120,6 +121,7 @@ As shown above:
 
 The placement of nodes on the headband is best represented in the following image:
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Cyton.png" width="50%">
+
 In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
 
 To attach the electrodes to the headband:
