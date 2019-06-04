@@ -102,7 +102,7 @@ As shown above:
 1. Connect one earclip electrode to the bottom BIAS pin
 2. Connect the second earclip electrode to the bottom SRB pin
 3. Connect the female terminations of the three flat snap electrodes to bottom pins 1-3 (labeled N1P, N2P, and N3P). (The order of pin connections is up to user preference.)
-4. Connect the female terminations of the five spikey electrodes to bottom pins 4-8 (labeled N4P through N8P). (The order of pin connections is up to user preference.)
+4. Connect the female terminations of up to five spikey electrodes to bottom pins 4-8 (labeled N4P through N8P). (The order of pin connections is up to user preference.)
 5. Place the velcro headband between the clip end of a colored cable and a spikey electrode, making sure to align with the hole in the headband, then snap the spikey electrode into the clip
 6. Place the velcro headband between the flap snap electrode and the snap end of a colored cable, making sure to align with the hole in the headband, then snap the electrode into place.
 
