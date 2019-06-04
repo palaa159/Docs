@@ -32,9 +32,9 @@ To attach the spikey electrodes to the standard lead wires:
 4. Gently press down on the plastic part of the electrode wire to __snap__ the electrode into place.
 
 To remove spikey electrodes from the lead wires:
-1. Use precision pliars to carefully clamp the plastic end of the lead wire.
-2. Using your other thumb, press on the electrode.
-3. Carefully bend the electrode holder with pliars while pressing the electrode and it should pop out. Using excessive force may break the plastic around the end of the lead wire.
+1. Using your thumb, press on the electrode while slightly bending the electrode holder. 
+2. If that doesn't work, try using precision pliers. Carefully clamp the plastic end of the lead wire. _Using excessive force may break the plastic around the end of the lead wire._
+3. Carefully bend the electrode holder with pliers while pressing the electrode and it should pop out. 
 
 ## Headband-Ganglion Tutorial
 
