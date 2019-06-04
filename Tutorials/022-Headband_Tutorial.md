@@ -31,7 +31,7 @@ To attach the spikey electrodes to the standard lead wires:
 2. Insert exposed metal into the groove of the electrode.
 3. Gently press down on the plastic part of the electrode wire to __snap__ the electrode into place.
 
-To remove spikey electrodes from the lead wire:
+To remove spikey electrodes from the lead wires:
 1. Use precision pliars to carefully clamp the plastic end of the lead wire.
 2. Using your other thumb, press on the electrode.
 3. Carefully bend the electrode holder with pliars while pressing the electrode and it should pop out. Using excessive force may break the plastic around the end of the lead wire.
