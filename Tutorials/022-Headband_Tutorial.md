@@ -60,6 +60,16 @@ See the [Ganglion Hardware page](http://docs.openbci.com/Hardware/07-Ganglion#op
 4. Place the velcro headband between the clip end of a colored cable and a spikey electrode, making sure to align with the hole in the headband, then snap the spikey electrode into the clip
 5. Place the velcro headband between the flap snap electrode and the snap end of a colored cable, making sure to align with the hole in the headband, then snap the electrode into place.
 
+**Assembling the Headband**
+
+The placement of nodes on the headband is best represented in the following image:
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Ganglion.png" width="50%">
+In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
+
+To attach the electrodes to the headband:
+1. Place the wire head on the rough side of the velcro
+2. Place the electrode on the soft side of the velcro
+3. Snap the two pieces together, with the velcro in between, to secure them.
 
 #### OpenBCI Software
 
@@ -106,6 +116,16 @@ As shown above:
 5. Place the velcro headband between the clip end of a colored cable and a spikey electrode, making sure to align with the hole in the headband, then snap the spikey electrode into the clip
 6. Place the velcro headband between the flap snap electrode and the snap end of a colored cable, making sure to align with the hole in the headband, then snap the electrode into place.
 
+**Assembling the Headband**
+
+The placement of nodes on the headband is best represented in the following image:
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Cyton.png" width="50%">
+In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
+
+To attach the electrodes to the headband:
+1. Place the wire head on the rough side of the velcro
+2. Place the electrode on the soft side of the velcro
+3. Snap the two pieces together, with the velcro in between, to secure them.
 
 #### OpenBCI Software
 
