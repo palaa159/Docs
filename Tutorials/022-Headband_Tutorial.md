@@ -28,8 +28,8 @@ The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, A
 To attach the spikey electrodes to the standard lead wires: 
 1. Place spikey electrode spikes down on a table or hard surface.
 2. Insert electrode into desired headband location.
-2. Insert exposed metal into the groove of the electrode.
-3. Gently press down on the plastic part of the electrode wire to __snap__ the electrode into place.
+3. Insert exposed metal into the groove of the electrode.
+4. Gently press down on the plastic part of the electrode wire to __snap__ the electrode into place.
 
 To remove spikey electrodes from the lead wires:
 1. Use precision pliars to carefully clamp the plastic end of the lead wire.
