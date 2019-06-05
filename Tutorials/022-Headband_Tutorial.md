@@ -25,6 +25,16 @@ All electrode wires end in a female header termination compatible with OpenBCI b
 
 The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, AF8, F8) via the 3 lead wires with flat EEG electrodes. The six leads with spikey electrodes will allow measurement at the FT7/FT8, T7/T8, TP7/TP8, P7/P8, PO7/PO8, O1/O2, and Oz nodes, depending where you insert the spikey electrodes. In total, this kit comes with NINE electrode leads.
 
+To attach the spikey electrodes to the standard lead wires: 
+1. Place spikey electrode spikes down on a table or hard surface.
+2. Insert electrode into desired headband location.
+3. Insert exposed metal into the groove of the electrode.
+4. Gently press down on the plastic part of the electrode wire to __snap__ the electrode into place.
+
+To remove spikey electrodes from the lead wires:
+1. Using your thumb, press on the electrode while slightly bending the electrode holder. 
+2. If that doesn't work, try using precision pliers. Carefully clamp the plastic end of the lead wire. _Using excessive force may break the plastic around the end of the lead wire._
+3. Carefully bend the electrode holder with pliers while pressing the electrode and it should pop out. 
 
 ## Headband-Ganglion Tutorial
 

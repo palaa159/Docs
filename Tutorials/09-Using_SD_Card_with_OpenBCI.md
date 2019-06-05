@@ -108,7 +108,7 @@ On startup, the OpenBCI GUI will ask you for the data source you want to work wi
 
 Navigate to the OpenBCI generated file, and click **OPEN**. The GUI will convert the file you selected. The resulting file will be placed inside a file called EEG_Data in the Processing OpenBCI GUI Sketch Folder. The file naming convention is **SDconverted-Year-Month-Day-Time.txt**. Example:
 
-*Documents/GitHub/OpenBCI_GUI/OpenBCI_GUI/SavedData/SDconverted-2015-01-14_13-35-54.txt*
+*/Documents/OpenBCI_GUI/SDconverted-2015-01-14_13-35-54.txt*
 
 
 
