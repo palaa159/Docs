@@ -20,9 +20,7 @@ There are two main ways to get your OpenBCI data from the boards into MATLAB for
 
 ### Method 1: Import CSV file from the OpenBCI GUI
 
-To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. The data is saved to a folder called "SavedData" that's in the same location as your OpenBCI application:
-
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Third_party_software/saved_data_folder.png?raw=true" width="80%">
+To get started, use your OpenBCI board (like the Cyton or Ganglion board) and the OpenBCI GUI to stream some data. Whenever you stream data to the GUI, it's also automatically saved in .csv format on your computer. GUI data and recordings are saved to */Documents/OpenBCI_GUI/Settings/* on all operating systems.
 
 The OpenBCI Processing GUI saves data in text (txt) or comma separated value (csv) files. Import the CSV file into MATLAB as a matrix by using the "Import Data" wizard:
 

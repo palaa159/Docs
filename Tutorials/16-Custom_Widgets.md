@@ -125,7 +125,7 @@ If you've added any `println()` or `verbosePrint()`in your widget, you can use t
 Some objects may need to be resized, or re-positioned, when the user changes the GUI screen size. This is why the widget class has the `screenResized()` method. Something not displaying right after resize? This is where you need to add code. Typically, object x, y, width, and height are declared when the widget is instantiated, and again in `screenResized()` using relative positioning.
 
 *Settings*
-To test that everything is working, you should see the data in a settings JSON file for each data mode in the `SavedData` folder. JSON files can be viewed as text. Confirm that your new JSON object and data are being written to file. Finally, confirm that the settings work properly when configuring the widget, saving, and loading.
+To test that everything is working, you should see the data in a settings JSON file for each data mode in the `Documents/OpenBCI_GUI/Settings/` folder. JSON files can be viewed as text. Confirm that your new JSON object and data are being written to file. Finally, confirm that the settings work properly when configuring the widget, saving, and loading.
 
 *GUI Crash*
 One of the most common ways to crash the GUI with a new widget is drawing `null` data, or some other error related to `draw()`. Another common crash is an `Exception`, which will print to the console of Atom, VSCode, or Processing IDE.
