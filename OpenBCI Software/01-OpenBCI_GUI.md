@@ -181,12 +181,12 @@ On a Windows `C:\Users\Username\Documents\Processing`
 
 ![libraries folder](../assets/images/ganglion_libraries-folder.png)
 
-Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to move all of these folders into:
+Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to copy all of these folders into:
 
 On a Mac `Users/<user-name>/Documents/Processing/libraries`  
 On a Windows `C:\Users\Username\Documents\Processing\libraries`
 
-folder. If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, quit out of Processing. There's one more big step, and it means going back to the OpenBCI github repository.
+If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, close the Processing app and reopen it. If you get an error saying "Duplicate Packets", you may need to remove the `jna` package from the `Processing\libraries` folder. The next big step is to add the OpenBCI Hub (backend communication) in the data directory.
 
 ### Install OpenBCI Hub on Mac/Linux/Windows
 
