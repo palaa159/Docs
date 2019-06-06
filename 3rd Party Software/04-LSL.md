@@ -11,11 +11,12 @@ This tutorial will show you how to set up LSL using the OpenBCI Python API and t
 Python might already be installed on your computer. Type python --version to check if you have Python version 2 or 3 installed.
 3. **Install Python requirements**
 To use this program, you need the following Python packages installed:
-* pylsl (version 1.10.5 or greater)
-* pyserial (version 3.1.1 or greater)
-* numpy (version 1.11.1 or greater)
-* pyqtgraph (version 0.9.10 or greater) (optional: needded for GUI functionality only)
-* scipy (version 0.17.1 or greater) (optional: needed for GUI functionality only)
+  * pylsl (version 1.10.5 or greater)
+  * pyserial (version 3.1.1 or greater)
+  * numpy (version 1.11.1 or greater)
+  * pyqtgraph (version 0.9.10 or greater) (optional: needded for GUI functionality only)
+  * scipy (version 0.17.1 or greater) (optional: needed for GUI functionality only)
+
 To automatically install using pip, navigate to the "OpenBCI_LSL" folder on your command line and terminal, and type:
 
 ```
