@@ -4,8 +4,6 @@ Tested on:
 - Windows 7
 - Windows XP
 
-## FTDI Drivers
-
 ### I. Connecting the Board
 
 ![Device Manager](../assets/images/device-man.jpg)
