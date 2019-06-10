@@ -59,11 +59,7 @@ Come back to this guide when your GUI is running!
 
 ## III. Prepare your OpenBCI Hardware
 
-### 1. Make sure your FTDI drivers are installed and up-to-date
-
-The Cyton will not work without the VCP drivers. Please see how to get and install the VCP driver in the prerequisites section in the [the step by step guide](http://docs.openbci.com/OpenBCI%20Software/01-OpenBCI_GUI)
-
-### 2. Plug in your OpenBCI USB Dongle
+### 1. Plug in your OpenBCI USB Dongle
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/dongleConnection.png?raw=true" width="70%">
 
@@ -71,13 +67,13 @@ Plug this in (facing upwards!) and you should see a blue LED light up.
 
 **Note:** make sure your USB Dongle is switched to GPIO 6 and not RESET. The switch should be set closer to your computer as seen in the picture to the right.
 
-### 3. Plug in your 6V AA battery pack (with batteries)
+### 2. Plug in your 6V AA battery pack (with batteries)
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/batteryConnection.png?raw=true" width="70%">
 
 Cyton boards have specific input voltage ranges. These input voltage ranges can be found on the back-side of the board, next to the power supply. **BE VERY CAREFUL** to not supply your board with voltages above these ranges, or else you will damage your board's power supply. For this reason, we recommend that you always use the battery pack that came with your OpenBCI kit. There's a good reason we put this notice in here twice!
 
-### 4. Switch your Cyton board to PC (not OFF or BLE)
+### 3. Switch your Cyton board to PC (not OFF or BLE)
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/PowerUpBoard.JPG?raw=true" width="70%">
 
@@ -88,23 +84,19 @@ Make sure to move the small switch on the right side of the board from "OFF" to 
 
 ## IV. Connect to your Cyton board from the GUI
 
-### 1. Relaunch your OpenBCI GUI
-
-You may need to relaunch the OpenBCI GUI after installing the FTDI drivers.
-
-### 2. Select LIVE (from Cyton)
+### 1. Select LIVE (from Cyton)
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/serial_cyton_select_cyton.png?raw=true" width="50%">
 
 In order to connect to your Cyton, you must specify the data source to be `LIVE (from Cyton)` in the first section of the System Control Panel. Before hitting the `START SYSTEM` button, you need to configure your Cyton board (follow the steps below).
 
-### 3. Select Serial Transfer Protocol
+### 2. Select Serial Transfer Protocol
 
 Next select `Serial (from Dongle)`. If you want to use the WiFi Shield, please see the [WiFi Getting Started Guide](http://docs.openbci.com/Tutorials/03-Wifi_Getting_Started_Guide#wifi-getting-started-guide-overview)
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/serial_cyton_select_serial.png?raw=true" width="50%">
 
-### 4. Find your USB Dongle's Serial/COM port
+### 3. Find your USB Dongle's Serial/COM port
 
 In the first section of the LIVE (from Cyton) sub-panel, find your Dongle's Serial/COM port name. If you're using a Mac or Linux, its name will be in the following format:
 
@@ -120,17 +112,16 @@ Your USB Dongle's port name will likely be at the top of the list. If you don't 
 
 1. Make sure your dongle is plugged in and switched to GPIO 6 (not RESET)
 2. Click the REFRESH LIST button in the SERIAL/COM PORT section of the sub-panel
-3. Make sure you've installed the latest FTDI drivers, as described in section III.1
 
 If you're still having trouble finding your USB Dongle's port name, refer to the [Forum](http://openbci.com/index.php/forum/) about debugging your hardware connection.
 
-### 5. Select your channel count (8 or 16)
+### 4. Select your channel count (8 or 16)
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/channelCount.png?raw=true" width="50%">
 
 The CHANNEL COUNT setting is defaulted to 8. If you are working with an OpenBCI Daisy Module and Cyton board (16-channel) system, be sure to click the 16 CHANNELS button before starting your system.
 
-### 6. Optional Settings
+### 5. Optional Settings
 
 <details><summary>If you're comfortable using the GUI, use the optional settings in this dropdown section. Otherwise, skip to step 7!</summary><br>
 
