@@ -137,7 +137,10 @@ This will launch the OpenBCI_GUI and OpenBCIHub.
 
 ## Running the OpenBCI GUI From The Processing IDE
 
+**Note, most users should start by running the standalone OpenBCI GUI (see previous section). The Processing IDE is for adding features or modifying existing code.**
+
 The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so, if you are familiar with Java. If you are not, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
+
 
 The things you will need to run the OpenBCI GUI in Processing are:  
 
