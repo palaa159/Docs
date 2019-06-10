@@ -82,6 +82,15 @@ To attach the electrodes to the headband:
 2. Place the electrode on the soft side of the velcro
 3. Snap the two pieces together, with the velcro in between, to secure them.
 
+The spikey electrodes are particularly difficult to insert. To attach them to the headband:
+1. Loop the metal wire part of the connector around the neck of the electrode
+2. Press down the plastic part to snap it into place around the neck of the electrode
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg" width="30%">
+
+Note that removal of electrodes takes place in the reverse order of these steps.
+
 #### OpenBCI Software
 
 Now that you've finished with the hardware set-up, the next step is to set up the GUI! Follow the GUI [tutorial](http://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide#ganglion-getting-started-guide-downloadinstallrun-the-openbci-gui) to prepare your computer to communicate with your Ganglion.
@@ -138,6 +147,15 @@ To attach the electrodes to the headband:
 1. Place the wire head on the rough side of the velcro
 2. Place the electrode on the soft side of the velcro
 3. Snap the two pieces together, with the velcro in between, to secure them.
+
+The spikey electrodes are particularly difficult to insert. To attach them to the headband:
+1. Loop the metal wire part of the connector around the neck of the electrode
+2. Press down the plastic part to snap it into place around the neck of the electrode
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg" width="30%">
+
+Note that removal of electrodes takes place in the reverse order of these steps.
 
 #### OpenBCI Software
 
