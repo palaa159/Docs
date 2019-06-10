@@ -73,7 +73,7 @@ See the [Ganglion Hardware page](http://docs.openbci.com/Hardware/07-Ganglion#op
 **Assembling the Headband**
 
 The placement of nodes on the headband is best represented in the following image:
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Ganglion.png" width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Ganglion.png?raw=true" width="50%">
 
 In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
 
@@ -86,8 +86,8 @@ The spikey electrodes are particularly difficult to insert. To attach them to th
 1. Loop the metal wire part of the connector around the neck of the electrode
 2. Press down the plastic part to snap it into place around the neck of the electrode
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg" width="30%">
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg?raw=true" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg?raw=true" width="30%">
 
 Note that removal of electrodes takes place in the reverse order of these steps.
 
@@ -139,7 +139,7 @@ As shown above:
 **Assembling the Headband**
 
 The placement of nodes on the headband is best represented in the following image:
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Cyton.png" width="50%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/EEG%20Nodes_Updated_Cyton.png?raw=true" width="50%">
 
 In this diagram, the red circles represent areas where flat electrodes can be placed, and the blue circles represent areas where spiky electrodes can be placed. This placement is ultimately up to you, and the areas that you wish to record. However, a general suggestion for standard electrode placement is outlined in yellow.
 
@@ -152,8 +152,8 @@ The spikey electrodes are particularly difficult to insert. To attach them to th
 1. Loop the metal wire part of the connector around the neck of the electrode
 2. Press down the plastic part to snap it into place around the neck of the electrode
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg" width="30%">
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%202.jpeg?raw=true" width="30%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/Spikey%20Electrode%201.jpeg?raw=true" width="30%">
 
 Note that removal of electrodes takes place in the reverse order of these steps.
 
