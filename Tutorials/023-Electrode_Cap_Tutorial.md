@@ -10,6 +10,8 @@ or a bioamplifier of your choice.
 The placement of these electrodes is as shown in the image below:
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/electrode%20cap%20nodes_1.png?raw=true" width="50%">
 
+These electrodes map to labels on the electrodes. Please note that the cap uses older labelling, and that *T3, T4, T5, and T6* were updated to be *T7, T8, P7, and P8*, respectively. These placements are interchangeable, and while the labels on the cap use older naming, they correspond to nodes on the diagram.
+
 The Electrode Cap comes in two variants: 
 
 * 21-channel electrode cap with Ag/AgCl coated electrodes
