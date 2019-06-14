@@ -8,9 +8,8 @@
 
 const byte numChars = 32;
 char receivedChars[numChars];   // an array to store the received data
-
+String previousData = "";
 boolean newData = false;
-boolean isFocusedFromGUI = false;
 
 void setup() {
     Serial.begin(57600);
@@ -21,11 +20,6 @@ void setup() {
 void loop() {
     recvWithEndMarker();
     showNewData();
-    if (isFocusedFromGUI) {
-      digitalWrite(LED_BUILTIN, HIGH);
-    } else {
-      digitalWrite(LED_BUILTIN, LOW);
-    }
 }
 
 //Recieve data and look for the endMarker '\n' (new line)
@@ -56,16 +50,19 @@ void showNewData() {
     if (newData == true) {
         //Convert char array into string
         String s = receivedChars;
-        //Check if the string is "true" or "false"
-        if (s.equals("false")) {
-          Serial.println("Input: FALSE");
-          isFocusedFromGUI = false;
-        } else if (s.equals("true")) {
-          Serial.println("Input: TRUE");
-          isFocusedFromGUI = true;
-        } else {
-          //Otherwise print the incoming with no action
-          Serial.println("This just in ... " + s);
+        //Only perform an action when the incoming data changes
+        if (!s.equals(previousData)) {
+          //Check if the string is "true" or "false"
+          if (s.equals("false")) {
+            Serial.println("Input: FALSE");
+            digitalWrite(LED_BUILTIN, LOW);
+          } else if (s.equals("true")) {
+            Serial.println("Input: TRUE");
+            digitalWrite(LED_BUILTIN, HIGH);
+          } else {
+            //Otherwise print the incoming with no action
+            Serial.println("This just in ... " + s);
+          }
         }
         newData = false;
     }
