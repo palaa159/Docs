@@ -37,7 +37,7 @@ void receiveMoreThan64Chars() {
     
     while(Serial.available() > 0){
       // "readBytes" terminates if the determined length has been read, or it
-      // times out. It fills "Buffer" with 1 to 90 bytes of data. To change the
+      // times out. It fills "Buffer" with 1 to 96 bytes of data. To change the
       // timeout use: Serial.setTimeout() in setup(). Default timeout is 1000ms.
       Serial.readBytes(Buffer, BufferSize);
     }
@@ -45,19 +45,19 @@ void receiveMoreThan64Chars() {
     // Print out buffer contents
     //Serial.println(Buffer);
 
-    // You can use Serial.peek() to check if more than 90 chars
+    // You can use Serial.peek() to check if more than 96 chars
     // were in the serial buffer and if Buffer has truncated data.
     // This should never happen because you know what the max length of
     // the incoming data is and you have adequately sized your input buffer.
     if(Serial.peek() != -1){
-      Serial.println("90 byte Buffer Overflowed. ");
+      Serial.println("96 byte Buffer Overflowed. ");
     }
-    Buffer[sizeof(Buffer)] = '\0'; //terminate the string
+    Buffer[BufferSize] = '\0'; //overwrite the \n char with \0 to terminate the string
     newData = true;
   }
 }
   
-void parseData(char * delimiter, char* str) {
+void parseData(char* delimiter, char* str) {
     char * pch;
     pch = strtok (str,delimiter);
     int i = 0;
