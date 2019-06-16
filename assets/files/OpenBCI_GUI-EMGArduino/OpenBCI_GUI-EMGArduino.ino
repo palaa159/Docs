@@ -58,7 +58,7 @@ void receiveMoreThan64Chars() {
 }
   
 void parseData(char* delimiter, char* str) {
-    char * pch;
+    char* pch;
     pch = strtok (str,delimiter);
     int i = 0;
     while (pch != NULL) {
