@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
 //            OpenBCI_GUI to Arduino via Serial: EMG                  //
 //                                                                    //
-//   Tested 6/16/2019 using iMac, Genuine Arduino, OpenBCI_GUI 4.1.3  //
+//   Tested 6/16/2019 using iMac, Arduino UNO R3, OpenBCI_GUI 4.1.3   //
 ////////////////////////////////////////////////////////////////////////
 
 #define NUM_CHAN 16
