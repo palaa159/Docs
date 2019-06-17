@@ -5,7 +5,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 #define NUM_CHAN 16
-#define BAUD_RATE 115200
+#define BAUD_RATE 115200 //Tested with 57600 and 115200
 
 const byte BufferSize = 96;
 char Buffer[BufferSize+1];
@@ -19,12 +19,15 @@ void setup() {
 }
 
 void loop() {
+    // Data Format 4CH
+    // 0.999,0.001,0.002,0.003\n
     // Data Format 16CH
     // 0.999,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009,0.010,0.011,0.012,0.013,0.014,0.015\n
     receiveMoreThan64Chars();
     if (newData) {
       parseData(",", Buffer);
       showData();
+      showBlink();
       newData = false;
     }
 }
@@ -72,7 +75,10 @@ void showData() {
   for(int i = 0; i < NUM_CHAN; i++) {
     Serial.println(emgData[i], 3);
   }
-  if (emgData[0] > 0.5) {
+}
+
+void showBlink() {
+  if (emgData[0] > 0.500) {
     digitalWrite(LED_BUILTIN, HIGH);
   } else {
     digitalWrite(LED_BUILTIN, LOW);
