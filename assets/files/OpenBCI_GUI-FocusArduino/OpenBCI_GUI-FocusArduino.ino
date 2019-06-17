@@ -65,5 +65,6 @@ void showNewData() {
           }
         }
         newData = false;
+        previousData = s;
     }
 }
