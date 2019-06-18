@@ -4,10 +4,11 @@
 //   Tested 6/16/2019 using iMac, Arduino UNO R3, OpenBCI_GUI 4.1.3   //
 ////////////////////////////////////////////////////////////////////////
 
+//Set the number of channels being sent from the GUI
 #define NUM_CHAN 16
 #define BAUD_RATE 115200 //Tested with 57600 and 115200
 
-const byte BufferSize = 96;
+const byte BufferSize = NUM_CHAN * 6;
 char Buffer[BufferSize+1];
 boolean newData = false;
 float emgData[NUM_CHAN];
@@ -55,7 +56,7 @@ void receiveMoreThan64Chars() {
     if(Serial.peek() != -1){
       Serial.println("96 byte Buffer Overflowed. ");
     }
-    Buffer[BufferSize] = '\0'; //overwrite the \n char with \0 to terminate the string
+    Buffer[BufferSize+1] = '\0'; //overwrite the \n char with \0 to terminate the string
     newData = true;
   }
 }
