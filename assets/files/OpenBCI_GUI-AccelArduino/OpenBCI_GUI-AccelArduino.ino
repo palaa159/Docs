@@ -8,7 +8,8 @@
 #define NUM_CHAN 3
 #define BAUD_RATE 115200 //Tested with 57600 and 115200
 
-const byte BufferSize = NUM_CHAN * 7;
+const byte numChars = 7; // +0.000, or -0.001\n -- both are 7 chars
+const byte BufferSize = NUM_CHAN * numChars;
 char Buffer[BufferSize];
 boolean newData = false;
 float emgData[NUM_CHAN];
@@ -20,10 +21,8 @@ void setup() {
 }
 
 void loop() {
-    // Data Format 4CH
-    // 0.999,0.001,0.002,0.003\n
-    // Data Format 16CH
-    // 0.999,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009,0.010,0.011,0.012,0.013,0.014,0.015\n
+    // Data Format X,Y,Z
+    // +0.999,-0.001,+0.002\n
     receiveMoreThan64Chars();
     if (newData) {
       parseData(",", Buffer);
@@ -74,12 +73,13 @@ void parseData(char* delimiter, char* str) {
 
 void showData() {
   for(int i = 0; i < NUM_CHAN; i++) {
-    Serial.println(emgData[i], 3);
+    Serial.println(accelData[i], 3);
   }
 }
 
 void showBlink() {
-  if (emgData[0] > 0.500) {
+  //Blink the built-in LED if X axis reads greater than +0.5
+  if (accelData[0] > 0.500) {
     digitalWrite(LED_BUILTIN, HIGH);
   } else {
     digitalWrite(LED_BUILTIN, LOW);
