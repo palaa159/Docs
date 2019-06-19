@@ -8,11 +8,11 @@
 #define NUM_CHAN 3
 #define BAUD_RATE 115200 //Tested with 57600 and 115200
 
-const byte numChars = 7; // +0.000, or -0.001\n -- both are 7 chars
-const byte BufferSize = NUM_CHAN * numChars;
-char Buffer[BufferSize];
+const byte NUM_CHARS = 7; // +0.000, or -0.001\n -- both are 7 chars
+const byte BUFFER_SIZE = NUM_CHAN * NUM_CHARS;
+char Buffer[BUFFER_SIZE];
 boolean newData = false;
-float emgData[NUM_CHAN];
+float accelData[NUM_CHAN];
 
 void setup() {
     Serial.begin(BAUD_RATE);
@@ -36,13 +36,13 @@ void receiveMoreThan64Chars() {
   if(Serial.available() > 0){
 
     // Clear Buffer content
-    memset(Buffer, 0, BufferSize+1);
+    memset(Buffer, 0, BUFFER_SIZE+1);
     
     while(Serial.available() > 0){
       // "readBytes" terminates if the determined length has been read, or it
       // times out. It fills "Buffer" with 1 to 96 bytes of data. To change the
       // timeout use: Serial.setTimeout() in setup(). Default timeout is 1000ms.
-      Serial.readBytes(Buffer, BufferSize);
+      Serial.readBytes(Buffer, BUFFER_SIZE);
     }
 
     // Print out buffer contents
@@ -55,7 +55,7 @@ void receiveMoreThan64Chars() {
     if(Serial.peek() != -1){
       Serial.println("96 byte Buffer Overflowed. ");
     }
-    Buffer[BufferSize+1] = '\0'; //overwrite the \n char with \0 to terminate the string
+    Buffer[BUFFER_SIZE+1] = '\0'; //overwrite the \n char with \0 to terminate the string
     newData = true;
   }
 }
@@ -65,7 +65,7 @@ void parseData(char* delimiter, char* str) {
     pch = strtok (str,delimiter);
     int i = 0;
     while (pch != NULL) {
-        emgData[i] = atof(pch);    
+        accelData[i] = atof(pch);    
         pch = strtok (NULL, ",");
         i++;
     }   
