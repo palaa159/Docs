@@ -2,7 +2,11 @@
 ## Time Series
 ![TimeSeries](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
 
-The time series is the most basic widget to record biosensing data. It displays the recorded electric waves being processed [shorten to electrophysiological signal], with each line representing the voltage detected at one point in time by an electrode.It measures the [absolute] amplitude of the signal in voltage, in units of μVrms (microvolts, root mean squared).Each ultracortex comes with wires that are color coded to match the GUI, which can be a useful way of keeping track of which electrode maps to which channel.
+The time series is the most basic widget to record biosensing data. It displays the recorded electric waves being processed [shorten to electrophysiological signal], with each line representing the voltage detected at one point in time by an electrode.
+
+It measures the [absolute] amplitude of the signal in voltage, in units of μVrms (microvolts, root mean squared).
+
+Each ultracortex comes with wires that are color coded to match the GUI, which can be a useful way of keeping track of which electrode maps to which channel.
 
 ###Hardware Settings: 
 
@@ -16,7 +20,8 @@ The time series is the most basic widget to record biosensing data. It displays 
 
 **View Settings**:
 
-*Vertical Scale* — Controls the range of uV displaced in the time series. Note: Best to set to auto to avoid chopping off data and showing good peaks and troughs
+*Vertical Scale* — Controls the range of uV displaced in the time series. 
+Note: Best to set to auto to avoid chopping off data and showing good peaks and troughs
 
 *Window* — Shows the amount of time that is shown in the series.
 
@@ -24,7 +29,8 @@ The time series is the most basic widget to record biosensing data. It displays 
 These warnings show that there is no or poor signal, and that you need to check the electrodes to ensure that they are making good contact with your body.
 
 **Impedance Check**
-Sends a test current down the pin to check impedance. Information is given in kΩ.Note: Data will stop streaming automatically for the duration of the check.
+Sends a test current down the pin to check impedance. Information is given in kΩ.
+Note: Data will stop streaming automatically for the duration of the check.
 
 ## FFT Plot
 ![FFT](https://media.giphy.com/media/SuyKSrTD146qB48aLZ/giphy.gif)
@@ -43,7 +49,9 @@ Each OpenBCI board is fitted with a three-axis accelerometer, the data from whic
 **Timeline**: Displays relative xyz accelerations, color coded to match the font labels, over time.
 
 ##Head Plot
-The head plot displays which regions of the head are experiencing the most activity. The deeper the red in a region, the more brain activity there is occuring in that region.  Contour lines are also shown in order to connect various regions of similar activity levels.Each number on the digram corresponds to an electrode channel displayed in the time series widget. These numbers  correspond with the suggested assembly for the Ultracortex Mark IV, however can be dragged to different locations for custom assembly.
+The head plot displays which regions of the head are experiencing the most activity. The deeper the red in a region, the more brain activity there is occuring in that region.  Contour lines are also shown in order to connect various regions of similar activity levels.
+
+Each number on the digram corresponds to an electrode channel displayed in the time series widget. These numbers  correspond with the suggested assembly for the Ultracortex Mark IV, however can be dragged to different locations for custom assembly.
 
 ### Default Node Placement
 Based off of 10-20 model
@@ -58,7 +66,9 @@ Based off of 10-20 model
 | 6 | P8/T6*     |
 | 7 | O1         |
 | 8 | O2         |
-\* P7 and P8 are the new terminology for nodes T5 and T6
+
+
+\* P7 and P8 are the new terminology for nodes T5 and T6
 
 ### Polarity
 When compared to a reference, the pin inputs can produce a positive or negative value. Choosing "+/-" will display the true value as measured from the reference. So if the voltage is measured as lower than the reference, your value will appear negative (or blue), and if the voltage is measured to be higher the value will be positive. 
@@ -70,7 +80,13 @@ Alterntively, "+" will display only an absolute value, without regard to whether
 ![Pos](https://media.giphy.com/media/h7Xgh22BmECXfrk9rB/giphy.gif)
 
 ## Focus Widget
-The widget recognizes a focused mental state by looking at alpha and beta wave levels on channel 1 & 2. It is based on research supporting focused states aligning with alpha levels between 0.7-2.0 μV, and the beta levels between 0.0-0.7 μV. If your data outside of this ratio, the algorithm states that you are not focused.![FocusWidget](https://media.giphy.com/media/QreT8oubk4uX0poY4a/giphy.gif)*For best results, try setting smooth to 0.98 in the FFT plot.**Key Press**: When KeyPress is on, you can perform tasks and whenever you are focused, either your UP arrow or SPACE key will be pressed down. Otherwise, it will be released.
+The widget recognizes a focused mental state by looking at alpha and beta wave levels on channel 1 & 2. It is based on research supporting focused states aligning with alpha levels between 0.7-2.0 μV, and the beta levels between 0.0-0.7 μV. If your data outside of this ratio, the algorithm states that you are not focused.
+
+![FocusWidget](https://media.giphy.com/media/QreT8oubk4uX0poY4a/giphy.gif)
+
+*For best results, try setting smooth to 0.98 in the FFT plot.
+
+**Key Press**: When KeyPress is on, you can perform tasks and whenever you are focused, either your UP arrow or SPACE key will be pressed down. Otherwise, it will be released.
 
 **W_Focus Folder**: This folder contains the original data the focus widget was based on, and materials (including an example and instructions) regarding Arduino output.
 
@@ -143,6 +159,7 @@ Open Sound Control (OSC) is a protocol for networking sound synthesizers, comput
 OSC works with MaxMSP, PureData, and Resolume.
 
 ##Playback Widget
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_PlaybackHistory.png?raw=true" width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_PlaybackHistory.png
+?raw=true" width="70%">
 
 This Widget only appears when in playback mode. It allows you to select a different playback without having to “Stop System”. There is a button in the top right of the Widget that allows you to select any OpenBCI playback file (.txt or .csv). Selecting other types of files may cause an error.
