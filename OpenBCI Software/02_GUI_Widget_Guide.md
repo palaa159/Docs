@@ -8,13 +8,13 @@ It measures the [absolute] amplitude of the signal in voltage, in units of μVrm
 
 Each ultracortex comes with wires that are color coded to match the GUI, which can be a useful way of keeping track of which electrode maps to which channel.
 
-###Hardware Settings: 
+### Hardware Settings: 
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_HardwareSettings.png?raw=true" width="50%">
 
 [In Time Series widget] Opens a menu that allows you to fine tune the PGA Gain, Bias, and other hardware settings for each channel.
 
-###Other Settings:
+### Other Settings:
 
 **Channel Buttons**: These buttons represent each connected electrode channel. You can toggle them on/off to control whether or not you want to collect data from that electrode.
 
@@ -48,7 +48,7 @@ Each OpenBCI board is fitted with a three-axis accelerometer, the data from whic
 
 **Timeline**: Displays relative xyz accelerations, color coded to match the font labels, over time.
 
-##Head Plot
+## Head Plot
 The head plot displays which regions of the head are experiencing the most activity. The deeper the red in a region, the more brain activity there is occuring in that region.  Contour lines are also shown in order to connect various regions of similar activity levels.
 
 Each number on the digram corresponds to an electrode channel displayed in the time series widget. These numbers  correspond with the suggested assembly for the Ultracortex Mark IV, however can be dragged to different locations for custom assembly.
@@ -113,7 +113,7 @@ The current EMG strength is a collection of raw voltage values averaged (or smoo
 
 This pseudo-analog mapped value is represented more clearly in the bar graph off to the right of each channel’s circular visualizer. The upper threshold is constantly creeping downwards and lower threshold is constantly creeping upwards until they get the Min ΔuV away from one another. This ensures that the overall system never creates an upper/lower flex range that is too big to influence with a muscle flex. 
 
-###Options
+### Options
 The drop-downs of the widget are designed to allow you to tweak the various parameters of this relationship. There are 4 drop-downs giving us control over 4 parameters
 
 **Smooth**: This is the size of the window. If we set this value at the smallest setting of 0.01 seconds (ie lowering the smooth value), our data will be very jittery but responsive. Alternatively, if we increase the smooth and set our window to 2.0 seconds, the output will be very smooth but not as responsive. 
@@ -158,7 +158,7 @@ Open Sound Control (OSC) is a protocol for networking sound synthesizers, comput
 
 OSC works with MaxMSP, PureData, and Resolume.
 
-##Playback Widget
+## Playback Widget
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_PlaybackHistory.png
 ?raw=true" width="70%">
 
