@@ -1,4 +1,7 @@
 # GUI Widget Guide
+## What is a GUI Widget
+GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes. Examples of GUI widgets include the Time Series, the FFT widget, the Networking widget, and so on. In the upper left hand corner of every widget there is a dropdown menu that lists all of the available widgets. If you click the dropdown and select a new widget from the dropdown, it will replace the widget that currently fills the container you are inside of. You can rearrange the layout of the widget containers by clicking the “Layout” button in the upper righthand side of the GUI. Follow the rest of this tutorial to try creating your own!
+
 ## Time Series
 ![TimeSeries](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
 
@@ -163,3 +166,7 @@ OSC works with MaxMSP, PureData, and Resolume.
 ?raw=true" width="70%">
 
 This Widget only appears when in playback mode. It allows you to select a different playback without having to “Stop System”. There is a button in the top right of the Widget that allows you to select any OpenBCI playback file (.txt or .csv). Selecting other types of files may cause an error.
+
+## Custom Widget
+
+We also have made it possible for you to create your own, personalized widgets for whatever purposes you may need them! To learn how, see the custom widget tutorial [here](https://docs.openbci.com/Tutorials/16-Custom_Widgets).
