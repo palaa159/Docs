@@ -55,7 +55,7 @@ Each OpenBCI board is fitted with a three-axis accelerometer, the data from whic
 ## Head Plot
 The head plot displays which regions of the head are experiencing the most activity. The deeper the red in a region, the more brain activity there is occuring in that region.  Contour lines are also shown in order to connect various regions of similar activity levels.
 
-Each number on the digram corresponds to an electrode channel displayed in the time series widget. These numbers  correspond with the suggested assembly for the Ultracortex Mark IV, however can be dragged to different locations for custom assembly.
+Each number on the digram corresponds to an electrode channel displayed in the time series widget. These numbers  correspond with the suggested assembly for the Ultracortex Mark IV, however each can be dragged to different locations for custom configurations.
 
 ### Default Node Placement
 Based off of 10-20 model
@@ -97,7 +97,7 @@ The widget recognizes a focused mental state by looking at alpha and beta wave l
 ## Band Power
 ![BandPower](https://media.giphy.com/media/hvLu5yqkPQHAEqjWW8/giphy.gif)
 
-The band power widget shows the relative voltages of the various brain wave categories. Each type of brain wave represents a subset of frequencies, which represent different states of activity. The widget is a great at-a-glance look into your brain’s activity.
+The band power widget shows the relative voltages of the various brain wave categories. Each type of brain wave represents a subset of frequencies, which represent different states of activity. The widget is a great "at-a-glance" look into your brain’s activity.
 
 ### Types of Waves
 | Wave | Frequency (Hz)| Description |
