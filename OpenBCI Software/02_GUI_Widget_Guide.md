@@ -50,7 +50,7 @@ Each OpenBCI board is fitted with a three-axis accelerometer, the data from whic
 
 **Axis Graph**: Displays relative xyz-acceleration at the current moment visually on a graph
 
-**Timeline**: Displays relative xyz accelerations, color coded to match the font labels, over time.
+**Timeline**: Displays relative xyz accelerations over time, color coded by axis.
 
 ## Head Plot
 The head plot displays which regions of the head are experiencing the most activity. The deeper the red in a region, the more brain activity there is occuring in that region.  Contour lines are also shown in order to connect various regions of similar activity levels.
