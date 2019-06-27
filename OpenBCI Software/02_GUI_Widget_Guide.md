@@ -25,7 +25,7 @@ The Time Series widget opens a menu that allows you to fine tune the PGA Gain, B
 **View Settings**:
 
 *Vertical Scale* — Controls the range of μV displaced in the time series. 
-Note: Best to set to auto to avoid chopping off data and showing good peaks and troughs
+Note: Set to auto to avoid chopping off data and showing good peaks and troughs. Fine tune as necessary.
 
 *Window* — Shows the amount of time that is shown in the series.
 
