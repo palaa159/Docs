@@ -39,7 +39,7 @@ Note: Data will stop streaming automatically for the duration of the check.
 ## FFT Plot
 ![FFT](https://media.giphy.com/media/SuyKSrTD146qB48aLZ/giphy.gif)
 
-This is a standard data visualization     feature of biosensing tools. The x axis displays various frequencies, and the y-axis shows each frequency’s respective amplitudes in μV.  These amplitudes are displayed logarithmically by default — a reccommended setting — but this can be altered by the user.
+This is a standard data visualization     feature of biosensing tools. The x axis displays various frequencies, and the y-axis shows each frequency’s respective amplitudes in μV.  These amplitudes are displayed logarithmically by default — a reccommended setting — but you can alter this in the log/lin dropdown.
 
 *Note: Each color in the FFT Plot is color coded to match the channels in the time series.*
 
