@@ -6,17 +6,17 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes
 ## Time Series
 ![TimeSeries](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
 
-The time series is the most basic widget to record biosensing data. It displays the recorded electric waves being processed [shorten to electrophysiological signal], with each line representing the voltage detected at one point in time by an electrode.
+The time series is the most basic widget to record biosensing data. It displays the electrophysiological signal being processed, with each line representing the voltage detected at one point in time by an electrode.
 
-It measures the [absolute] amplitude of the signal in voltage, in units of μVrms (microvolts, root mean squared).
+It measures the absolute amplitude of the signal in voltage, in units of μVrms (microvolts, root mean squared).
 
 Each ultracortex comes with wires that are color coded to match the GUI, which can be a useful way of keeping track of which electrode maps to which channel.
 
-###Hardware Settings: 
+### Hardware Settings: 
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_HardwareSettings.png?raw=true" width="50%">
 
-[In Time Series widget] Opens a menu that allows you to fine tune the PGA Gain, Bias, and other hardware settings for each channel.
+The Time Series widget opens a menu that allows you to fine tune the PGA Gain, Bias, and other hardware settings for each channel.
 
 ###Other Settings:
 
