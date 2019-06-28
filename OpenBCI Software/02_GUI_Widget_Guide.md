@@ -4,7 +4,7 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes
 
 
 ## Time Series
-![TimeSeries](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
+![<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_TimeSeries.jpg?raw=true" width="50%">](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
 
 The time series is the most basic widget to record biosensing data. It displays the electrophysiological signal being processed, with each line representing the voltage detected at one point in time by an electrode.
 
