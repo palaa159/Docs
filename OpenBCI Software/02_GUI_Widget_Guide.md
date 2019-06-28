@@ -4,7 +4,7 @@ GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes
 
 
 ## Time Series
-![<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_TimeSeries.jpg?raw=true" width="50%">](https://media.giphy.com/media/RGvTGWGdBtfvTTbHyt/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_TimeSeries.jpg?raw=true" width="50%">
 
 The time series is the most basic widget to record biosensing data. It displays the electrophysiological signal being processed, with each line representing the voltage detected at one point in time by an electrode.
 
@@ -37,14 +37,14 @@ Sends a test current down the pin to check impedance. Information is given in k�
 Note: Data will stop streaming automatically for the duration of the check.
 
 ## FFT Plot
-![FFT](https://media.giphy.com/media/SuyKSrTD146qB48aLZ/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_FTT.jpg?raw=true" width="50%">
 
 This is a standard data visualization     feature of biosensing tools. The x axis displays various frequencies, and the y-axis shows each frequency’s respective amplitudes in μV.  These amplitudes are displayed logarithmically by default — a reccommended setting — but you can alter this in the log/lin dropdown.
 
 *Note: Each color in the FFT Plot is color coded to match the channels in the time series.*
 
 ## Accelerometer
-![Accel](https://media.giphy.com/media/l3rzYMPMc58ezMfQrS/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Accel.jpg?raw=true" width="50%">
 
 Each OpenBCI board is fitted with a three-axis accelerometer, the data from which is streamed to this widget. This accelerometer measures the acceleration of the board itself on an xyz-axis.
 
@@ -77,16 +77,16 @@ Based off of 10-20 model
 ### Polarity
 When compared to a reference, the pin inputs can produce a positive or negative value. Choosing "+/-" will display the true value as measured from the reference. So if the voltage is measured as lower than the reference, your value will appear negative (or blue), and if the voltage is measured to be higher the value will be positive. 
 
-![Pos/Neg](https://media.giphy.com/media/YSM8By15TxMasXKUb8/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Headplot_both.jpg?raw=true" width="50%">
 
 Alterntively, "+" will display only an absolute value, without regard to whether the signal was positive or negative.
 
-![Pos](https://media.giphy.com/media/h7Xgh22BmECXfrk9rB/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Headplot_pos.jpg?raw=true" width="50%">
 
 ## Focus Widget
 The widget recognizes a focused mental state by looking at alpha and beta wave levels on channel 1 & 2. It is based on research supporting focused states aligning with alpha levels between 0.7-2.0 μV, and the beta levels between 0.0-0.7 μV. If your data is outside of this ratio, the algorithm states that you are not focused.
 
-![FocusWidget](https://media.giphy.com/media/QreT8oubk4uX0poY4a/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_Focus.jpg?raw=true" width="50%">
 
 *For best results, try setting smooth to 0.98 in the FFT plot.
 
@@ -95,7 +95,7 @@ The widget recognizes a focused mental state by looking at alpha and beta wave l
 **W_Focus Folder**: This folder contains the original data the focus widget was based on, and materials (including an example and instructions) regarding Arduino output.
 
 ## Band Power
-![BandPower](https://media.giphy.com/media/hvLu5yqkPQHAEqjWW8/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_BandPower.jpg?raw=true" width="50%">
 
 The band power widget shows the relative voltages of the various brain wave categories. Each type of brain wave represents a subset of frequencies, which represent different states of activity. The widget is a great "at-a-glance" look into your brain’s activity.
 
@@ -109,7 +109,7 @@ The band power widget shows the relative voltages of the various brain wave cate
 | Delta | 0.5-4     |Signifies sleep, dreaming. Occurs when we enjoy restorative, deep, dreamless sleep.
 
 ## EMG
-![EMG](https://media.giphy.com/media/WpyZnDrXZxlxnwKjEz/giphy.gif)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_EMG.jpg?raw=true" width="50%">
 
 In a nutshell, we are trying to map the current flex of a muscle into the “comfortable flex range” of said muscle, and then represent that as a decimal between 0 and 1. In theory, if you relax, the value will be 0, and if you flex, the value will go to 1. 
 
