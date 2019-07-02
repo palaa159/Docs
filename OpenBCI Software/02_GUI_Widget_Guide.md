@@ -1,12 +1,12 @@
 # GUI Widget Guide
 ## What is a GUI Widget
-GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes. Examples of GUI widgets include the Time Series, the FFT widget, the Networking widget, and so on. In the upper left hand corner of every widget there is a dropdown menu that lists all of the available widgets. If you click the dropdown and select a new widget from the dropdown, it will replace the widget that currently fills the container you are inside of. You can rearrange the layout of the widget containers by clicking the “Layout” button in the upper righthand side of the GUI.
+GUI widgets are the mini tools that fit into the OpenBCI GUI’s interface panes. Examples of GUI widgets include the Time Series, the FFT widget, the Networking widget, and so on. In the upper left hand corner of every widget there is a dropdown menu that lists all of the available widgets. If you click the dropdown and select a new widget from the dropdown, it will replace the current widget in that window. You can rearrange the layout of the widgets by clicking the “Layout” button in the upper right-hand side of the GUI.
 
 
 ## Time Series
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_TimeSeries.jpg?raw=true" width="50%">
 
-The time series is the most basic widget to record biosensing data. It displays the electrophysiological signal being processed, with each line representing the voltage detected at one point in time by an electrode.
+The time series is the most basic widget to record biosensing data. It processes and displays the electrophysiological signal in real time, with each line representing the voltage detected at one point in time by an electrode.
 
 It measures the absolute amplitude of the signal in voltage, in units of μVrms (microvolts, root mean squared).
 
@@ -24,7 +24,7 @@ The Time Series widget opens a menu that allows you to fine tune the PGA Gain, B
 
 **View Settings**:
 
-*Vertical Scale* — Controls the range of μV displaced in the time series. 
+*Vertical Scale* — Controls the range of μV displayed in the time series. 
 Note: Set to auto to avoid chopping off data and showing good peaks and troughs. Fine tune as necessary.
 
 *Window* — Shows the amount of time that is shown in the series.
@@ -39,7 +39,7 @@ Note: Data will stop streaming automatically for the duration of the check.
 ## FFT Plot
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_FTT.jpg?raw=true" width="50%">
 
-This is a standard data visualization     feature of biosensing tools. The x axis displays various frequencies, and the y-axis shows each frequency’s respective amplitudes in μV.  These amplitudes are displayed logarithmically by default — a reccommended setting — but you can alter this in the log/lin dropdown.
+This is a standard data visualization feature of biosensing tools. The x axis displays various frequencies, and the y-axis shows each frequency’s respective amplitudes in μV.  These amplitudes are displayed logarithmically by default — a reccommended setting — but you can alter this in the log/ln dropdown.
 
 *Note: Each color in the FFT Plot is color coded to match the channels in the time series.*
 
