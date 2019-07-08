@@ -11,7 +11,7 @@ This tutorial will guide you through setting up your EEG system with either boar
 #### Each kit includes:
 1. Two Ear-clip electrodes (left example)
 2. Three lead wires for flat EEG Snap Electrodes (right example)
-3. Six standard lead wires, i.e. wire clip cables (middle example)
+3. Five standard lead wires, i.e. wire clip cables (middle example)
 4. One full-length-velcro headband
 5. Replacement flat ear electrodes, replacement flat snap electrodes, and replacement 2 mm spikey electrodes
 
@@ -23,7 +23,7 @@ All electrode wires end in a female header termination compatible with OpenBCI b
 #### 10-20 Internationally Accepted EEG Node Placement
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/headband-images/10-20%20Placement.jpg?raw=true" width="50%">
 
-The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, AF8, F8) via the 3 lead wires with flat EEG electrodes. The six leads with spikey electrodes will allow measurement at the FT7/FT8, T7/T8, TP7/TP8, P7/P8, PO7/PO8, O1/O2, and Oz nodes, depending where you insert the spikey electrodes. In total, this kit comes with NINE electrode leads.
+The headband allows three frontal cortex measurements (F7, AF7, Fp1, Fpz, Fp2, AF8, F8) via the 3 lead wires with flat EEG electrodes. The five leads with spikey electrodes will allow measurement at the FT7/FT8, T7/T8, TP7/TP8, P7/P8, PO7/PO8, O1/O2, and Oz nodes, depending where you insert the spikey electrodes. In total, this kit comes with EIGHT electrode leads.
 
 To attach the spikey electrodes to the standard lead wires: 
 1. Place spikey electrode spikes down on a table or hard surface.
