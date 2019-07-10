@@ -28,7 +28,9 @@ Additionally, connect the ground pin to the AGND pin.
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/EMG_Cyton_Setup.jpg?raw=true" width="50%">
 
-After trying to make these pin connections, connect the sticky electrodes to the snap electrodes **prior to applying to the skin**
+In the image above, note how the positive and negative terminals (yellow and green) are connected to the top and bottom N1P pins. When you are running the GUI, data from N1P pins will be displayed on Channel 1 within the [Time Series Widget](https://docs.openbci.com/OpenBCI%20Software/02_GUI_Widget_Guide#gui-widget-guide-what-is-a-gui-widget)
+.
+After making these pin connections, connect the sticky electrodes to the snap electrodes **prior to applying to the skin**
 
 ## 2. Electrode-Muscle Connection
 
@@ -42,7 +44,7 @@ Once you have the GUI open, turn off any channels that you have not connected to
 
 *Note: This is because ordinarily SRB2 is the reference point from which potentials are measured, however we are now having muscles reference themselves, so we do not want it to look at this pin.*
 
-Once all of your settings have been altered, press begin data stream.
+When you are happy with your GUI Time Series and Hardware settings, press "BEGIN DATA STREAM."
 
 Here is an example of what your data stream should look like as you flex and relax your muscle:
 
@@ -53,5 +55,5 @@ The OpenBCI GUI also has a widget for visualizing EMG data. To view it, click on
 <insert image>
 Each circle and box represents a channel. The circle and box fill up as the intensity of the signal on that channel increases.
 
-Look at the <media> above to see how this widget behaves when flexing and relaxing your muscle, and see the widget guide for more information.
+Look at the <media> gif above to see how this widget behaves when flexing and relaxing your muscle, and see the [GUI widget guide](https://docs.openbci.com/OpenBCI%20Software/02_GUI_Widget_Guide) for more information.
 
