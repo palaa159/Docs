@@ -12,6 +12,9 @@ The Learning Pages are separated into the following sections:
 * [3rd-Party Software](http://docs.openbci.com/3rd%20Party%20Software) - This section includes guides on how to connect the OpenBCI hardware and software to commonly used 3rd-Party Software such as Matlab, OpenVIBE, and more!
 * [FAQ](http://docs.openbci.com/FAQ) - Frequetly Asked Questions
 
+
+**Research Published With OpenBCI**
+
 We put together [The OpenBCI Citation List](https://docs.google.com/spreadsheets/d/1WvolD2-QJ5aUJy5o0Dq5wdFQtLMkMtppZT8s_ihYyA4/edit#gid=0), a collection of recently published peer-reviewed research using OpenBCI products. We're proud of how many OpenBCI-based research reports are out there!
 
 **Note:** If you are interested in contributing to the OpenBCI Learning Pages, feel free to create your own Markdown file and submit a pull request to relevant sub-directory of the [Docs repo](https://github.com/openbci/docs) on our Github! If you notice any mistakes in these guides, you can also submit issues there. 
