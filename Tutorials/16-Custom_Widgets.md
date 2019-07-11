@@ -110,6 +110,7 @@ Explore how the  existing widgets are accessing data structures internal to the 
 * Every widget has `x, y, w, h` variables that corresponds to the left edge of the widget (horizontal pixel location), the top edge of the widget (vertical pixel location), the # of pixels wide, and the # of pixels tall, respectively. These variables update automatically when the screen is resized or when the widgets are cycled through the layout containers. When adding graphics to your widget, do everything based off of these variables to ensure responsiveness.
 * Aside from setting up your widget in the widgetManager.pde file, all of your code can live inside of the W_myNewWidget.pde file (if done correctly).
 * To see how to access global data structures like FFT data and Time Series data, check out how the [other widgets](https://github.com/OpenBCI/OpenBCI_GUI/tree/master/OpenBCI_GUI) are accessing data in their `update()` functions
+* One way that we add features such as dropdowns and radio buttons to our widgets is the [ControlP5 Library](https://github.com/sojamo/controlp5). 
 * To learn more about how widgets work, look at the [widget.pde](https://github.com/OpenBCI/OpenBCI_GUI/blob/master/OpenBCI_GUI/Widget.pde) file. That said, I don't recommend changing anything!
 
 ### Step 5 - Add any dropdown settings to SoftwareSettings.pde
