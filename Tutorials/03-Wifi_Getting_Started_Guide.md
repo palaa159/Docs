@@ -17,7 +17,7 @@ The WiFi Shield increases the sample rate by transmitting the data via WiFi as o
 
 **IMPORTANT NOTE:** This product is in beta mode. The WiFi shield is known to have reliability issues across different computer configurations. Using it effectively requires advanced technical skills and programming knowledge. Please proceed at your own risk. OpenBCI cannot guarantee that the device will work with your configuration.
 
-When connecting to Cyton+WiFi or Cyton+Daisy+WiFi, you have the option of using TCP, UDP, or UDPx3. __We recommend trying to connect to Cyton+WiFi using UDPx3 protocol.__
+When connecting to Cyton+WiFi or Cyton+Daisy+WiFi using the OpenBCI GUI, you have the option of using TCP, UDP, or UDPx3. __We recommend trying to connect using UDPx3 protocol.__
 
 ## Prerequisites
 
