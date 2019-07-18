@@ -141,9 +141,9 @@ This will launch the OpenBCI_GUI and OpenBCIHub.
 
 ## Running the OpenBCI GUI From The Processing IDE
 
-**Note, most users should start by running the standalone OpenBCI GUI (see previous section). The Processing IDE is for adding features or modifying existing code.**
+**Most users should start by running the standalone OpenBCI GUI (see previous section). The Processing IDE is for adding features or modifying existing code.**
 
-The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so, if you are familiar with Java. If you are not, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
+The OpenBCI GUI was built using [Processing](https://processing.org/), a popular, Java-based creative coding framework. If you are interested in adding features or modifying the existing code, it is really easy to do so if you are familiar with Java. If you're not familiar with Java, don't fret! Processing is one of the easiest software packages to pick up as a beginner coder.
 
 
 The things you will need to run the OpenBCI GUI in Processing are:  
@@ -152,32 +152,31 @@ The things you will need to run the OpenBCI GUI in Processing are:
  * [OpenBCI GUI Sketch](https://github.com/OpenBCI/OpenBCI_GUI)
  * [OpenBCI Electron HUB](https://github.com/OpenBCI/OpenBCI_Ganglion_Electron/releases)
 
-First, go to processing.org and download the latest version of Processing.
+First, go to processing.org and download the latest version of Processing. [Here is a walkthrough on how to install Processing on Ubuntu Linux.](http://www.artsnova.com/processing/installing-processing-ubuntu-linux-tutorial.html)
 
 Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
 
  On a Mac `Users/<user-name>/Documents/Processing`  
- On a Windows `C:\Users\Username\Documents\Processing`
+ On Windows `C:\Users\<user-name>\Documents\Processing`
+ On Linux `/home/<user-name>/sketchbook`
 
 This is the location that we will move the OpenBCI GUI files that we'll download next.  
 
 ![GUI repo](../assets/images/ganglion_GUI-repo.png)
 
-The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. If you are a advanced github user, go ahead and clone it, or fork it if you like.  
+The OpenBCI GUI code repository is located on github [here](https://github.com/OpenBCI/OpenBCI_GUI). click on the `Clone or download` button in green on the right, and select `Download ZIP`. If you are a advanced GitHub user, go ahead and clone it, or fork it if you like.
 
-After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! Now move the folder `OpenBCI_GUI` and it's entire contents to your Sketch folder:
-
-On a Mac `Users/<user-name>/Documents/Processing`  
-On a Windows `C:\Users\Username\Documents\Processing`
+After the download completes and the file extracts itself, you will see the folder called `OpenBCI_GUI-master`. Change the name of this file to `OpenBCI_GUI`. If you don't change it, it won't work! You can move the folder `OpenBCI_GUI` and it's entire contents to your Sketch folder, or put it wherever you like (Mac Example: `Users/<user-name>/Documents/GitHub/OpenBCI_GUI`).
 
 ![libraries folder](../assets/images/ganglion_libraries-folder.png)
 
 Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to **copy** all of these folders into:
 
 On a Mac `Users/<user-name>/Documents/Processing/libraries`  
-On a Windows `C:\Users\Username\Documents\Processing\libraries`
+On Windows `C:\Users\Username\Documents\Processing\libraries`
+On Linux `/home/<user-name>/sketchbook/libraries`
 
-If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, close the Processing app and reopen it. If you get an error saying "Duplicate Packages", you may need to remove the `jna` package from the `Processing\libraries` folder. The next big step is to add the OpenBCI Hub (backend communication) in the data directory.
+If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, close the Processing app and reopen it. If you get an error saying "Duplicate Packages", you may need to remove the `jna` package from the `Processing\libraries` folder. _The next big step is to add the OpenBCI Hub (backend communication) in the data directory._
 
 ### Install OpenBCI Hub on Mac/Linux/Windows
 
