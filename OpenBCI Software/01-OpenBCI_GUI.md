@@ -8,6 +8,10 @@ The OpenBCI GUI is OpenBCI's default software tool for visualizing, recording, a
 
 ## Hardware/Driver Setup for OpenBCI_GUI and OpenBCIHub
 
+Shown below are the three OpenBCI Boards that can be used with the OpenBCI GUI.
+
+![image](../assets/images/labelledBoards.jpg)
+
 ### Ganglion on macOS
 Turn on your computer's Bluetooth if not already.
 
