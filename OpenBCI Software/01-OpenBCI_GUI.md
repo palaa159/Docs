@@ -157,7 +157,7 @@ First, go to processing.org and download the latest version of Processing. [Here
 Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
 
  On a Mac `Users/<user-name>/Documents/Processing`  
- On Windows `C:\Users\<user-name>\Documents\Processing`
+ On Windows `C:\Users\<user-name>\Documents\Processing`  
  On Linux `/home/<user-name>/sketchbook`  
 
 ![GUI repo](../assets/images/ganglion_GUI-repo.png)
@@ -171,7 +171,7 @@ After the download completes and the file extracts itself, you will see the fold
 Inside the `OpenBCI_GUI` folder, there is a folder called `libraries`. Theses are the 3rd party libraries that the OpenBCI GUI uses to work it's magic. You need to **copy** all of these folders into:
 
 On a Mac `Users/<user-name>/Documents/Processing/libraries`  
-On Windows `C:\Users\Username\Documents\Processing\libraries`
+On Windows `C:\Users\Username\Documents\Processing\libraries`  
 On Linux `/home/<user-name>/sketchbook/libraries`
 
 If there is no folder called `libraries` in that location, go ahead and make one. Once you have done that, close the Processing app and reopen it. If you get an error saying "Duplicate Packages", you may need to remove the `jna` package from the `Processing\libraries` folder. _The next big step is to add the OpenBCI Hub (backend communication) in the data directory._
