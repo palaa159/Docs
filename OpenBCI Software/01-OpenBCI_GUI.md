@@ -158,6 +158,7 @@ Go ahead and move it to your `Applications` folder, and launch the application. 
 
  On a Mac `Users/<user-name>/Documents/Processing`  
  On Windows `C:\Users\<user-name>\Documents\Processing`
+ 
  On Linux `/home/<user-name>/sketchbook`  
 
 ![GUI repo](../assets/images/ganglion_GUI-repo.png)
