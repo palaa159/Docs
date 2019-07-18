@@ -154,7 +154,7 @@ The things you will need to run the OpenBCI GUI in Processing are:
 
 First, go to processing.org and download the latest version of Processing. [Here is a walkthrough on how to install Processing on Ubuntu Linux.](http://www.artsnova.com/processing/installing-processing-ubuntu-linux-tutorial.html)
 
-Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder. The default location for the `Sketch` folder is in your Documents folder:  
+Go ahead and move it to your `Applications` folder, and launch the application. If this is the first time that you are running Processing, it will create what it calls it's `Sketch` folder in the following locations:  
 
  On a Mac `Users/<user-name>/Documents/Processing`  
  On Windows `C:\Users\<user-name>\Documents\Processing`  
