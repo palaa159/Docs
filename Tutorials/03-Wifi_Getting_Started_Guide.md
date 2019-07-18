@@ -73,7 +73,7 @@ The Wifi Shield and the Cyton board use only one battery by means of the JST con
 
 ## Ganglion with WiFi Shield
 
-![OpenBCI Wifi Contents](../assets/images/wifi_ganglion_what_you_need.jpg)
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/Wifi%2BGanglion.JPG?raw=true" width="70%">
 
 <details>
   <summary>Expand this section for Ganglion + WiFi Shield instructions</summary>
