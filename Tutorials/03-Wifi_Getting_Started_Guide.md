@@ -69,6 +69,16 @@ The Wifi Shield and the Cyton board use only one battery by means of the JST con
 
 ![Wifi Pass Through Power](../assets/images/wifi_pass_through_power.jpg)
 
+**NOTE ABOUT ANALOG/AUX MODE**
+
+When switching the board mode to analog/aux, the D4 light turns off. This can be done in the OpenBCI GUI, or running this in python:
+```
+      from openbci import wifi as bci
+      shield = bci.OpenBCIWiFi(ip_address = '192.168.1.141', log=True, high_speed=True)
+      shield.wifi_write('/2') #analog mode
+```
+Observe that light D4 turns off. This is normal. In order for the LED to turn on the Cyton has to set that pin as an output HIGH. When the Cyton switches into digital/analog inputs it changes the pin driving the D4 LED to INPUT, so the is no longer receiving any current to turn on.
+
 </details>
 
 ## Ganglion with WiFi Shield
