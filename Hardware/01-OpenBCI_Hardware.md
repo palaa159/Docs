@@ -4,7 +4,7 @@ Welcome to the OpenBCI Hardware documentation page. Here you will find specifica
 
 ## [Cyton](http://docs.openbci.com/Hardware/02-Cyton)
 
-The [Cyton page](http://docs.openbci.com/Hardware/02-Cyton) covers the hardware specs of our 8 channel board and Dongle, as well as our expansion Daisy Module. ALL boards, shields, and dongles ship preflashed and programmed, are ready to use out of the box!
+The [Cyton page](http://docs.openbci.com/Hardware/02-Cyton) covers the hardware specs of our 8 channel board and Dongle, as well as our expansion Daisy Module. ALL boards, shields, and dongles ship preflashed and programmed, and are ready to use out of the box!
 For hackers, we've included resources as well.
 
 The [Cyton Data Format](http://docs.openbci.com/Hardware/03-Cyton_Data_Format) page has all the information about how we package up the raw sensor data and send it wirelessly to the OpenBCI Dongle. There are two tutorials on how to [upload your custom code to the Cyton](http://docs.openbci.com/Hardware/05-Cyton_Board_Programming_Tutorial), and also how to [reprogram the Cyton Radio Modules](http://docs.openbci.com/Hardware/06-Cyton_Radios_Programming_Tutorial)
