@@ -229,8 +229,8 @@ In this quick demo, we'll be showing you how to set up 3 channels of electrophys
 
 For more information on these three signals, refer to wikipedia:
 
- * [Heart Acitivity - Electrocardiography (EKG or ECG)](http://en.wikipedia.org/wiki/Electrocardiography)
- * [Muscle Acitivity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
+ * [Heart Activity - Electrocardiography (EKG or ECG)](http://en.wikipedia.org/wiki/Electrocardiography)
+ * [Muscle Activity - Electromyography (EMG)](http://en.wikipedia.org/wiki/Electromyography)
  * [Brain Activity - Electroencephalography (EEG)](http://en.wikipedia.org/wiki/Electroencephalography)
 
 
