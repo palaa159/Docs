@@ -68,4 +68,3 @@ void showNewData() {
         previousData = s;
     }
 }
-
