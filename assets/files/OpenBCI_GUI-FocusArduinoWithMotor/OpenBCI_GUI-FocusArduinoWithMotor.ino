@@ -2,6 +2,8 @@
 //            OpenBCI_GUI to Arduino via Serial: Focus w/ Motor                        //
 //                                                                                     //
 //            - The Arduino Built-In LED blinks when the user is Focused               //
+//            - Potentiometer controls motor speed                                     //
+//            - Button on pin 7 reverses motor direction while pressed                 //
 //                                                                                     //
 //          Tested 7/27/2019 using iMac, Genuine Arduino, OpenBCI_GUI 4.1.3            //
 //    Uses https://learn.adafruit.com/adafruit-arduino-lesson-15-dc-motor-reversing/   //
