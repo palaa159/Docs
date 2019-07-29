@@ -4,8 +4,9 @@
 //            - The Arduino Built-In LED blinks when the user is Focused               //
 //        - A button on pin 7 toggles motor speed: Full, Medium, Low, and Off          //
 //                                                                                     //
-//          Tested 7/27/2019 using iMac, Genuine Arduino, OpenBCI_GUI 4.1.3            //
+//          Tested 7/29/2019 using iMac, Genuine Arduino, OpenBCI_GUI 4.1.3            //
 //    Uses https://learn.adafruit.com/adafruit-arduino-lesson-15-dc-motor-reversing/   //
+//        and https://docs.openbci.com/Tutorials/17-Arduino_Focus_Example              //
 /////////////////////////////////////////////////////////////////////////////////////////
 
 const byte numChars = 32;
