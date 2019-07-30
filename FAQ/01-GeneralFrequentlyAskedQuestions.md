@@ -8,7 +8,8 @@ Open Brain Computer Interface. We believe that science advancements will only—
 
 People working with OpenBCI regularly post about their projects on our [Community Page](http://openbci.com/community).
 
-See our weekly-updated searchable [Citation List](https://orderprinterpro.com/download/46031c7884552798d613/1625845835171264/invoice-d899.pdf), a collection of innovative OpenBCI-based research.
+See our weekly-updated searchable [Citation List](https://docs.google.com/spreadsheets/d/1WvolD2-QJ5aUJy5o0Dq5wdFQtLMkMtppZT8s_ihYyA4/edit#gid=0), a collection of innovative OpenBCI-based research.
+For even more OpenBCI-based, peer-reviewed, and independent research, search for "openbci" in [Google Scholar](scholar.google.com). We're proud of how many are out there!
 
 We've been featured in publications such as [Nature](https://www.nature.com/articles/s41598-019-41895-7)!
 
