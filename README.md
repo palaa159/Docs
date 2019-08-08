@@ -1,7 +1,5 @@
 NOTE: This repo is being migrated to https://github.com/OpenBCI/Documentation for better Markdown (.md) support. 
 
-Doing so helps resolve https://github.com/OpenBCI/Docs/issues/188.
-
 ## OpenBCI Docs
 
 All of the content that feeds the [Docs Page](http://docs.openbci.com/) of our website.
