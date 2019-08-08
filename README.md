@@ -1,10 +1,14 @@
+NOTE: This repo is being migrated to https://github.com/OpenBCI/Documentation for better Markdown (.md) support. 
+
+Doing so helps resolve https://github.com/OpenBCI/Docs/issues/188.
+
 ## OpenBCI Docs
 
 All of the content that feeds the [Docs Page](http://docs.openbci.com/) of our website.
 
 ### Attribution
 
-This is code for the OpenBCI documentation application. This code was derived using Flatdoc and ideas from Spark.io's documentation stie.  Thanks to Rico Sta. Cruz, author of Flatdoc, and  Zach and co from Spark Labs for developing this resource.
+This is code for the OpenBCI documentation application. This code was derived using Flatdoc and ideas from Spark.io's documentation site.  Thanks to Rico Sta. Cruz, author of Flatdoc, and  Zach and co from Spark Labs for developing this resource.
 
 ### License
 
