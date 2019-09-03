@@ -129,7 +129,8 @@ The drop-downs of the widget are designed to allow you to tweak the various para
 **Min ΔμV**: This value sets the minimum voltage range between the upper threshold and lower threshold. The upper threshold and lower threshold cannot get any closer than this. By making this value bigger, you will have to flex harder to go from 0 to 100% flex, after the thresholds have crept as close as they will get to one another (aka Min ΔμV).
 
 ## Networking
-The networking widget allows the streaming of data to other apps. It offers four data types: Serial, UDP, OSC, and LSL. To see how it can be used with our different apps, check out our [Third Party Software page](https://docs.openbci.com/3rd%20Party%20Software/00-3rdPartySoftware).
+The networking widget allows the streaming of data to other apps. It offers four data types: Serial, UDP, OSC, and LSL. For explanation of these four, keep reading. Head over to the [Networking Widget Output Guide](https://docs.google.com/document/u/1/d/e/2PACX-1vR_4DXPTh1nuiOwWKwIZN3NkGP3kRwpP4Hu6fQmy3jRAOaydOuEI1jket6V4V6PG4yIG15H1N7oFfdV/pub) for information on the data outputs available.
+To see how it can be used with our different apps, check out our [Third Party Software page](https://docs.openbci.com/3rd%20Party%20Software/00-3rdPartySoftware).
 
 ### Serial
 
@@ -154,6 +155,8 @@ User Datagram Protocol is used primarily for establishing low-latency and loss-t
 
 Lab Streaming Layer is a system for synchronizing streaming data for live analysis or recording. LSL is a good way to send your OpenBCI stream to applications that can record or manipulate the data, such as [Matlab](https://docs.openbci.com/3rd%20Party%20Software/01-Matlab).
 
+FFT data can now be sent over LSL, starting with [GUI v.4.1.5-beta.3](https://github.com/OpenBCI/OpenBCI_GUI/releases)
+
 ### OSC
 
 <img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_OSC.png?raw=true" width="70%">
@@ -162,12 +165,19 @@ Open Sound Control is a protocol for networking sound synthesizers, computers, a
 
 OSC works with MaxMSP, PureData, and Resolume.
 
+## SSVEP
+
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_SSVEP.png?raw=true" width="70%">
+
+The newest widget, SSVEP, is now in beta mode, for testing. It is included with [GUI v.4.1.5-beta.3](https://github.com/OpenBCI/OpenBCI_GUI/releases)
+
+For research applications of SSVEP, head to examples [here](https://link.springer.com/chapter/10.1007/978-3-642-21683-1_41) and [here.](https://www.nature.com/articles/s41598-018-32283-8)
+
 ## Playback Widget
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_PlaybackHistory.png
-?raw=true" width="70%">
+<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_PlaybackHistory.png?raw=true" width="70%">
 
 This Widget only appears when in playback mode. It allows you to select a different playback without having to “Stop System”. There is a button in the top right of the Widget that allows you to select any OpenBCI playback file (.txt or .csv). Selecting other types of files may cause an error.
 
 ## Custom Widget
 
-If your project requires additional data manipulatrion, we have also made it possible for you to create your own personalized widgets for whatever purposes you may require! To learn how, see the custom widget tutorial [here](https://docs.openbci.com/Tutorials/16-Custom_Widgets).
+If your project requires additional data manipulation, we have also made it possible for you to create your own personalized widgets for whatever purposes you may require! To learn how, see the custom widget tutorial [here](https://docs.openbci.com/Tutorials/16-Custom_Widgets).
