@@ -165,9 +165,11 @@ Open Sound Control is a protocol for networking sound synthesizers, computers, a
 
 OSC works with MaxMSP, PureData, and Resolume.
 
-## SSVEP
+## SSVEP (BETA)
 
-<img src="https://github.com/OpenBCI/Docs/blob/master/assets/images/GUI_SSVEP.png?raw=true" width="70%">
+<img src="https://raw.githubusercontent.com/OpenBCI/Docs/master/assets/images/GUI_SSVEP.png?raw=true" width="70%">
+
+It offers up to four channels of SSVEP with a range of frequencies (see screenshot above).
 
 The newest widget, SSVEP, is now in beta mode, for testing. It is included with [GUI v.4.1.5-beta.3](https://github.com/OpenBCI/OpenBCI_GUI/releases)
 
