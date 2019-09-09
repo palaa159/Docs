@@ -1,4 +1,4 @@
-NOTE: This repo is being migrated to https://github.com/OpenBCI/Documentation for better Markdown (.md) support. 
+NOTE: This repo has been migrated to https://github.com/OpenBCI/Documentation for better Markdown (.md) support. 
 
 ## OpenBCI Docs
 
